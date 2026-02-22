@@ -752,6 +752,49 @@ KST 처리 버그를 Intl.DateTimeFormat으로 수정해</code></pre>
 <span class="c"># → 즉시 방향 전환</span></code></pre>
                     </div>
                 </div>
+
+                <h3 data-i18n="s16_pro_title">Pro Tips</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th data-i18n="s16_pro_scenario">상황</th>
+                                <th data-i18n="s16_pro_model">추천 모델</th>
+                                <th data-i18n="s16_pro_effort">추론 수준</th>
+                                <th data-i18n="s16_pro_why">이유</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-i18n="s16_p1_s">빠른 코드 수정, 리팩토링</td>
+                                <td>Spark</td>
+                                <td>low</td>
+                                <td data-i18n="s16_p1_w">1000+ tok/sec. 단순 작업에 무거운 모델 비효율</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="s16_p2_s">멀티파일 기능 구현</td>
+                                <td>GPT-5.3-Codex</td>
+                                <td>medium-high</td>
+                                <td data-i18n="s16_p2_w">에이전틱 코딩 최적화. 밸런스 최고</td>
+                            </tr>
+                            <tr>
+                                <td data-i18n="s16_p3_s">코드 리뷰, QA, 아키텍처 결정</td>
+                                <td>o3</td>
+                                <td>xhigh</td>
+                                <td data-i18n="s16_p3_w">깊은 추론. 논리적 검증에 강력</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="feature-chips" style="margin-top: 16px;">
+                    <span class="chip" data-i18n="s16_pt1">Suggest → Auto-Edit → Full Auto 순으로 익숙해지기</span>
+                    <span class="chip" data-i18n="s16_pt2">항상 Git 커밋 후 작업 시작</span>
+                    <span class="chip" data-i18n="s16_pt3">검증 단계를 프롬프트에 포함</span>
+                    <span class="chip" data-i18n="s16_pt4">AGENTS.md로 컨텍스트 제공</span>
+                    <span class="chip" data-i18n="s16_pt5">긴 작업은 /compact로 컨텍스트 정리</span>
+                    <span class="chip" data-i18n="s16_pt6">Worktree로 실험 격리</span>
+                </div>
             </section>
 
             <!-- Section 17 -->
@@ -887,7 +930,6 @@ codex --search "optimize with Next.js 15"
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p data-i18n="footer_tip">Pro Tip: Suggest → Auto-Edit → Full Auto 순서로 익숙해지세요. 항상 Git으로 백업!</p>
             <p class="footer-contrib" data-i18n="footer_contrib">이 가이드는 오픈소스입니다. 오류 수정, 번역 개선, 새 팁 추가 등 <a
                     href="https://github.com/swhan0329/codex-101" target="_blank">PR을 환영합니다</a>.</p>
             <p class="footer-meta" data-i18n="footer_date">최종 업데이트: 2026년 2월 22일</p>
