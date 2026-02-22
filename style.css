@@ -537,7 +537,7 @@ kbd {
     padding: 2px 8px;
     border-radius: 10px;
     background: var(--accent);
-    color: #fff;
+    color: var(--bg);
     margin-left: 6px;
     vertical-align: middle;
 }
@@ -565,7 +565,7 @@ kbd {
     height: 32px;
     border-radius: 50%;
     background: var(--accent);
-    color: #fff;
+    color: var(--bg);
     display: flex;
     align-items: center;
     justify-content: center;
