@@ -129,7 +129,7 @@ const translations = {
         s16_t1_title: "1. 구체적이고 명확하게", s16_t2_title: "2. 단계적으로 분해",
         s16_t3_title: "3. 검증 포함", s16_t4_title: "4. Mid-Turn Steering (NEW)",
         // Pro Tips (Community)
-        s16_pro_title: "실전 Pro Tips",
+        s16_pro_title: "실전 Pro Tips (커뮤니티)",
         s16_vs_title: "Codex vs Claude Code — 최강 조합",
         s16_vs_desc: "Codex = 실제 코드 구현력이 뛰어나고 세부 놓침이 적음. Claude = 플래닝·검증·테스트·대안 제안에 강함. 추천: Claude로 설계/QA, Codex로 구현하는 슈퍼팀 구성.",
         s16_model_combo: "모델 조합 전략",
@@ -138,7 +138,7 @@ const translations = {
         s16_m2_use: "교차 검증 / 메인 코딩", s16_m2_d: "에이전틱 코딩 최적화. 멀티파일 작업의 밸런스 최고",
         s16_m3_use: "코드 리뷰, QA, 아키텍처", s16_m3_d: "깊은 추론. 복잡한 논리적 검증에 최적",
         s16_tips_title: "실전 사용 팁",
-        s16_rt1_t: "작업을 잘게 쪤개서 던지기",
+        s16_rt1_t: "작업을 잘게 쪼개서 던지기",
         s16_rt1_d: "한 번에 다 시키지 말고, 설계 → 최소 구현 → 테스트 추가 → 리팩토링 순으로 티켓처럼 나눠서 주면 성공률이 크게 올라간다.",
         s16_rt2_t: "컨텍스트 강점 활용",
         s16_rt2_d: "Claude보다 컨텍스트가 잘 유지되고, 무거운 작업에서도 늦게 차는 편. /compact(요약)도 자연스럽게 잘 된다.",
@@ -149,7 +149,7 @@ const translations = {
         s16_rt5_t: "단축키·편의 기능",
         s16_rt5_d: "Ctrl+C: 현재 프롬프트 초기화 (많은 사람이 늦게 발견). Cmd+J: 내장 터미널 토글. codex app: CLI에서 앱 실행.",
         s16_rt6_t: "빠른 프로토타이핑에 강함",
-        s16_rt6_d: '"\uc218\uc815 \u2192 \ud655\uc778 \u2192 \uc7ac\uc218\uc815" \uc0ac\uc774\ud074\uc774 \ube60\ub978 \uc791\uc5c5\uc5d0\uc11c \uccb4\uac10 \uc18d\ub3c4 \ucc28\uc774 \ud07c. \ud2b9\ud788 Spark \ubaa8\ub378\uacfc \ud568\uaed8 \uc0ac\uc6a9 \uc2dc \ud6a8\uacfc\uc801.',
+        s16_rt6_d: "\"수정 → 확인 → 재수정\" 사이클이 빠른 작업에서 체감 속도 차이 큼. 특히 Spark 모델과 함께 사용 시 효과적.",
         // Section 17
         s17_title: "고급 활용 기법",
         // Section 18
@@ -304,7 +304,7 @@ const translations = {
         s16_t1_title: "1. Be specific and clear", s16_t2_title: "2. Break into steps",
         s16_t3_title: "3. Include verification", s16_t4_title: "4. Mid-Turn Steering (NEW)",
         // Pro Tips (Community)
-        s16_pro_title: "Real-World Pro Tips (Community)",
+        s16_pro_title: "Real-World Pro Tips",
         s16_vs_title: "Codex vs Claude Code — Best Combo",
         s16_vs_desc: "Codex = strong code implementation, rarely misses details. Claude = strong at planning, verification, testing, and suggesting alternatives. Recommended: use Claude for design/QA and Codex for implementation as a super team.",
         s16_model_combo: "Model Combo Strategy",
