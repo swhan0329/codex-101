@@ -3,7 +3,7 @@ const translations = {
     ko: {
         hero_badge: "2026년 2월 기준 최신판",
         hero_title: "OpenAI Codex 완벽 가이드 101",
-        hero_sub: "CLI · macOS App · VS Code Extension · Cloud Dashboard<br/>4가지 방법으로 사용하는 에이전틱 코딩 플랫폼",
+        hero_sub: "CLI · macOS App · VS Code Extension · Web Dashboard<br/>4가지 방법으로 사용하는 에이전틱 코딩 플랫폼",
         hero_cta: "가이드 시작하기",
         toc_title: "목차",
         // Section 1
@@ -62,7 +62,7 @@ const translations = {
         // Section 6
         s6_title: "Codex App (macOS)",
         s6_intro: '2026년 2월 2일 출시. 에이전틱 코딩의 "커맨드 센터". 여러 AI 에이전트를 동시에 관리하는 macOS 전용 데스크톱 앱.',
-        s6_modes_title: "쓰레드 모드",
+        s6_modes_title: "쓰레드 모드 (Thread Modes)",
         s6_th_where: "실행 위치", s6_th_desc: "설명",
         s6_mode_local_where: "내 맥", s6_mode_local: "현재 프로젝트 디렉토리에서 직접 작업",
         s6_mode_wt_where: "내 맥", s6_mode_wt: "Git Worktree로 변경사항 격리. 병렬 작업에 적합",
@@ -71,7 +71,7 @@ const translations = {
         s6_f1: "멀티에이전트 병렬 실행", s6_f2: "내장 Git 도구 (diff, commit, PR)",
         s6_f_skills: "Skills 지원 (CLI/IDE 공유)", s6_f_auto: "Automations (정기 작업 자동화)",
         s6_f_voice: "Voice Dictation (Ctrl+M)", s6_f_float: "플로팅 팝아웃 창",
-        s6_f_sync: "IDE Extension 실시간 동기", s6_f_img: "이미지 입력 (Drag & Drop)",
+        s6_f_sync: "IDE Extension 실시간 동기화", s6_f_img: "이미지 입력 (Drag & Drop)",
         s6_f_term: "내장 터미널 (쓰레드별)", s6_f_sleep: "작업 중 절전 방지",
         img_app: "Codex macOS App — 멀티에이전트 커맨드 센터와 워크트리 관리",
         // Section 7
@@ -82,7 +82,7 @@ const translations = {
         s7_key_title: "핵심 기능",
         s7_f_context: "@file 에디터 컨텍스트 자동 참조", s7_f_cloud: "클라우드 위임 (Cloud Delegation)",
         s7_f_effort: "추론 노력 조절 (low/medium/high)", s7_f_jetbrains: "JetBrains IDE 지원",
-        s7_f_cursor: "Cursor, Windsurf 호환", s7_f_sync: "App 실시간 동기 (Auto Context)",
+        s7_f_cursor: "Cursor, Windsurf 호환", s7_f_sync: "App 실시간 동기화 (Auto Context)",
         img_ide: "Codex VS Code Extension — 마켓플레이스 (4.6M+ 다운로드)",
         // Section 8
         s8_title: "Codex Web (ChatGPT 대시보드)",
@@ -106,10 +106,10 @@ const translations = {
         s10_k1: "현재 요청 중단", s10_k2: "세션 종료", s10_k3: "터미널 클리어",
         // Section 11
         s11_title: "AGENTS.md 설정 가이드",
-        s11_intro: "Codex에게 프로젝트 맥락과 규칙을 알려주는 핵심 파일. CLI, App, IDE, Cloud 모두에서 참조합니다.",
+        s11_intro: "Codex에게 프로젝트 맥락과 규칙을 알려주는 핵심 파일. CLI, App, IDE, Web 모두에서 참조합니다.",
         s11_principles: "작성 5원칙",
         s11_p1: "전문가 역할 지정", s11_p2: "코드로 보여주기", s11_p3: "구체적 명령",
-        s11_p4: "Always / Ask / Never", s11_p5: "살아있는 문서",
+        s11_p4: "Always / Ask / Never", s11_p5: "리빙 다큐먼트 (지속 업데이트)",
         // Section 12
         s12_title: "config.toml 설정",
         // Section 13
@@ -131,7 +131,7 @@ const translations = {
         // Pro Tips
         s16_pro_title: "Pro Tips",
         s16_pro_scenario: "상황", s16_pro_model: "추천 모델", s16_pro_effort: "추론 수준", s16_pro_why: "이유",
-        s16_p1_s: "빠른 코드 수정, 리팩토링", s16_p1_w: "1000+ tok/sec. 단순 작업에 무거운 모델 비효율",
+        s16_p1_s: "빠른 코드 수정, 리팩토링", s16_p1_w: "1000+ tok/sec. 단순 작업에 무거운 모델은 비효율적",
         s16_p2_s: "멀티파일 기능 구현", s16_p2_w: "에이전틱 코딩 최적화. 밸런스 최고",
         s16_p3_s: "코드 리뷰, QA, 아키텍처 결정", s16_p3_w: "깊은 추론. 논리적 검증에 강력",
         s16_pt1: "Suggest → Auto-Edit → Full Auto 순으로 익숙해지기",
@@ -150,8 +150,8 @@ const translations = {
         cmp_multi: "멀티에이전트", cmp_price: "가격", cmp_included: "ChatGPT 포함", cmp_api: "API 기반",
         // Section 19
         s19_title: "자주 묻는 질문 (FAQ)",
-        faq1_q: "Codex CLI / App / IDE / Cloud의 차이는?",
-        faq1_a: "모두 같은 Codex App Server 프로토콜을 사용하지만 인터페이스가 다릅니다. CLI는 터미널, App은 macOS 멀티에이전트, IDE는 VS Code 통합, Cloud는 브라우저에서 GitHub 연동.",
+        faq1_q: "Codex CLI / App / IDE / Web의 차이는?",
+        faq1_a: "모두 같은 Codex App Server 프로토콜을 사용하지만 인터페이스가 다릅니다. CLI는 터미널, App은 macOS 멀티에이전트, IDE는 VS Code/JetBrains 통합, Web은 브라우저에서 GitHub 연동.",
         faq2_q: "무료로 사용할 수 있나요?",
         faq2_a: "CLI는 오픈소스이지만, OpenAI API 또는 ChatGPT Plus($20/월) 이상 구독이 필요합니다.",
         faq3_q: "Full Auto 모드가 안전한가요?",
@@ -163,7 +163,6 @@ const translations = {
         // Section 20
         s20_title: "참고 자료",
         // Footer
-        footer_tip: "Pro Tip: Suggest → Auto-Edit → Full Auto 순서로 익숙해지세요. 항상 Git으로 백업!",
         footer_contrib: '이 가이드는 오픈소스입니다. 오류 수정, 번역 개선, 새 팁 추가 등 <a href="https://github.com/swhan0329/codex-101" target="_blank">PR을 환영합니다</a>.',
         footer_date: "최종 업데이트: 2026년 2월 22일",
         // Code blocks (Korean)
