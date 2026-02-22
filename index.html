@@ -343,31 +343,70 @@ codex --cd /path/to/project
                     <figcaption data-i18n="img_app">Codex macOS App — 멀티에이전트 커맨드 센터와 워크트리 관리</figcaption>
                 </figure>
                 <p data-i18n="s6_intro">2026년 2월 2일 출시. 에이전틱 코딩의 "커맨드 센터". 여러 AI 에이전트를 동시에 관리하는 macOS 전용 데스크톱 앱.</p>
+
+                <h3 data-i18n="s6_modes_title">쓰레드 모드</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th data-i18n="th_mode">모드</th>
+                                <th data-i18n="s6_th_where">실행 위치</th>
+                                <th data-i18n="s6_th_desc">설명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Local</strong></td>
+                                <td data-i18n="s6_mode_local_where">내 맥</td>
+                                <td data-i18n="s6_mode_local">현재 프로젝트 디렉토리에서 직접 작업</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Worktree</strong></td>
+                                <td data-i18n="s6_mode_wt_where">내 맥</td>
+                                <td data-i18n="s6_mode_wt">Git Worktree로 변경사항 격리. 병렬 작업에 적합</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Cloud</strong></td>
+                                <td data-i18n="s6_mode_cloud_where">클라우드</td>
+                                <td data-i18n="s6_mode_cloud">원격 클라우드 환경에서 실행</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 data-i18n="s6_feat_title">핵심 기능</h3>
                 <div class="feature-list">
                     <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s6_f1">멀티에이전트 병렬
                             실행</span></div>
                     <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s6_f2">내장 Git
-                            워크트리</span></div>
-                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s6_f3">클라우드 샌드박스
-                            환경</span></div>
-                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s6_f4">브랜치 관리 & PR
-                            생성</span></div>
-                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s6_f5">백그라운드
-                            자동화</span></div>
-                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s6_f6">자연어
-                            인터페이스</span></div>
+                            도구 (diff, commit, PR)</span></div>
+                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s6_f_skills">Skills 지원
+                            (CLI/IDE 공유)</span></div>
+                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s6_f_auto">Automations
+                            (정기 작업 자동화)</span></div>
+                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s6_f_voice">Voice
+                            Dictation (Ctrl+M)</span></div>
+                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s6_f_float">플로팅 팝아웃
+                            창</span></div>
+                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s6_f_sync">IDE
+                            Extension 실시간 동기</span></div>
+                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s6_f_img">이미지 입력 (Drag
+                            & Drop)</span></div>
+                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s6_f_term">내장 터미널
+                            (쓰레드별)</span></div>
+                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s6_f_sleep">작업 중 절전
+                            방지</span></div>
                 </div>
             </section>
 
             <!-- Section 7 -->
             <section class="section" id="s7">
-                <h2><span class="section-num">07</span> <span data-i18n="s7_title">Codex IDE Extension (VS Code)</span>
-                </h2>
+                <h2><span class="section-num">07</span> <span data-i18n="s7_title">Codex IDE Extension</span></h2>
                 <figure class="screenshot">
                     <img src="images/codex_IDE.png" alt="Codex VS Code Extension marketplace page" loading="lazy" />
                     <figcaption data-i18n="img_ide">Codex VS Code Extension — 마켓플레이스 (4.6M+ 다운로드)</figcaption>
                 </figure>
-                <p data-i18n="s7_intro">VS Code에 직접 통합되는 AI 코딩 에이전트. 3가지 모드를 지원합니다.</p>
+                <p data-i18n="s7_intro">VS Code, Cursor, Windsurf, JetBrains IDE에 통합되는 AI 코딩 에이전트.</p>
                 <div class="table-wrap">
                     <table>
                         <thead>
@@ -399,6 +438,22 @@ codex --cd /path/to/project
                             </tr>
                         </tbody>
                     </table>
+                </div>
+
+                <h3 data-i18n="s7_key_title">핵심 기능</h3>
+                <div class="feature-list">
+                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s7_f_context">@file
+                            에디터 컨텍스트 자동 참조</span></div>
+                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s7_f_cloud">클라우드 위임
+                            (Cloud Delegation)</span></div>
+                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s7_f_effort">추론 노력 조절
+                            (low/medium/high)</span></div>
+                    <div class="feature-item"><span class="feature-icon">—</span><span
+                            data-i18n="s7_f_jetbrains">JetBrains IDE 지원</span></div>
+                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s7_f_cursor">Cursor,
+                            Windsurf 호환</span></div>
+                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s7_f_sync">App 실시간 동기
+                            (Auto Context)</span></div>
                 </div>
             </section>
 
