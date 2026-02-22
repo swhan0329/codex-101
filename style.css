@@ -155,7 +155,7 @@ img {
 
 .lang-btn.active {
     background: var(--accent);
-    color: #fff;
+    color: var(--bg);
 }
 
 .lang-btn:hover:not(.active) {
