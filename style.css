@@ -231,7 +231,32 @@ img {
 
 .btn-primary {
     background: var(--accent);
-    color: #fff;
+    color: var(--bg);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--accent);
+    border: 1.5px solid var(--accent);
+    font-weight: 600;
+}
+
+.btn-secondary:hover {
+    background: var(--accent);
+    color: var(--bg);
+}
+
+.waitlist-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.waitlist-box .btn {
+    display: inline-block;
+    text-align: center;
 }
 
 .btn-primary:hover {
