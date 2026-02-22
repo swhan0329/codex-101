@@ -753,47 +753,74 @@ KST 처리 버그를 Intl.DateTimeFormat으로 수정해</code></pre>
                     </div>
                 </div>
 
-                <h3 data-i18n="s16_pro_title">Pro Tips</h3>
+
+                <h3 data-i18n="s16_pro_title">실전 Pro Tips (커뮤니티)</h3>
+
+                <div class="callout">
+                    <strong data-i18n="s16_vs_title">Codex vs Claude Code — 최강 조합</strong>
+                    <p data-i18n="s16_vs_desc">Codex = 실제 코드 구현력이 뛰어나고 세부 놓침이 적음. Claude = 플래닝·검증·테스트·대안 제안에 강함. 추천:
+                        Claude로 설계/QA, Codex로 구현하는 슈퍼팀 구성.</p>
+                </div>
+
+                <h4 data-i18n="s16_model_combo">모델 조합 전략</h4>
                 <div class="table-wrap">
                     <table>
                         <thead>
                             <tr>
-                                <th data-i18n="s16_pro_scenario">상황</th>
                                 <th data-i18n="s16_pro_model">추천 모델</th>
-                                <th data-i18n="s16_pro_effort">추론 수준</th>
-                                <th data-i18n="s16_pro_why">이유</th>
+                                <th data-i18n="s16_pro_use">용도</th>
+                                <th data-i18n="s16_pro_detail">상세</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td data-i18n="s16_p1_s">빠른 코드 수정, 리팩토링</td>
-                                <td>Spark</td>
-                                <td>low</td>
-                                <td data-i18n="s16_p1_w">1000+ tok/sec. 단순 작업에 무거운 모델 비효율</td>
+                                <td><strong>Spark</strong></td>
+                                <td data-i18n="s16_m1_use">빠른 반복 작업</td>
+                                <td data-i18n="s16_m1_d">변수명 변경, UI 조정, 소규모 리팩토링. 1000+ tok/sec</td>
                             </tr>
                             <tr>
-                                <td data-i18n="s16_p2_s">멀티파일 기능 구현</td>
-                                <td>GPT-5.3-Codex</td>
-                                <td>medium-high</td>
-                                <td data-i18n="s16_p2_w">에이전틱 코딩 최적화. 밸런스 최고</td>
+                                <td><strong>GPT-5.3-Codex</strong></td>
+                                <td data-i18n="s16_m2_use">교차 검증 / 메인 코딩</td>
+                                <td data-i18n="s16_m2_d">에이전틱 코딩 최적화. 멀티파일 작업의 밸런스 최고</td>
                             </tr>
                             <tr>
-                                <td data-i18n="s16_p3_s">코드 리뷰, QA, 아키텍처 결정</td>
-                                <td>o3</td>
-                                <td>xhigh</td>
-                                <td data-i18n="s16_p3_w">깊은 추론. 논리적 검증에 강력</td>
+                                <td><strong>o3 xhigh</strong></td>
+                                <td data-i18n="s16_m3_use">코드 리뷰, QA, 아키텍처</td>
+                                <td data-i18n="s16_m3_d">깊은 추론. 복잡한 논리적 검증에 최적</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
-                <div class="feature-chips" style="margin-top: 16px;">
-                    <span class="chip" data-i18n="s16_pt1">Suggest → Auto-Edit → Full Auto 순으로 익숙해지기</span>
-                    <span class="chip" data-i18n="s16_pt2">항상 Git 커밋 후 작업 시작</span>
-                    <span class="chip" data-i18n="s16_pt3">검증 단계를 프롬프트에 포함</span>
-                    <span class="chip" data-i18n="s16_pt4">AGENTS.md로 컨텍스트 제공</span>
-                    <span class="chip" data-i18n="s16_pt5">긴 작업은 /compact로 컨텍스트 정리</span>
-                    <span class="chip" data-i18n="s16_pt6">Worktree로 실험 격리</span>
+                <h4 data-i18n="s16_tips_title">실전 경험 팁</h4>
+                <div class="tip-grid">
+                    <div class="tip-card">
+                        <h4 data-i18n="s16_rt1_t">작업을 잘게 쪼개서 던지기</h4>
+                        <p data-i18n="s16_rt1_d">한 번에 다 시키지 말고, 설계 → 최소 구현 → 테스트 추가 → 리팩토링 순으로 티켓처럼 나눠서 주면 성공률이 크게 올라간다.
+                        </p>
+                    </div>
+                    <div class="tip-card">
+                        <h4 data-i18n="s16_rt2_t">컨텍스트 강점 활용</h4>
+                        <p data-i18n="s16_rt2_d">Claude보다 컨텍스트가 잘 유지되고, 무거운 작업에서도 늦게 차는 편. /compact(요약)도 자연스럽게 잘 된다.</p>
+                    </div>
+                    <div class="tip-card">
+                        <h4 data-i18n="s16_rt3_t">AGENTS.md 커스터마이징 필수</h4>
+                        <p data-i18n="s16_rt3_d">목적·역할 분리·우선순위·품질 게이트·금지사항 등을 명확히 적어주면 훨씬 안정적으로 움직인다.</p>
+                    </div>
+                    <div class="tip-card">
+                        <h4 data-i18n="s16_rt4_t">병렬·멀티 에이전트 활용</h4>
+                        <p data-i18n="s16_rt4_d">여러 에이전트를 동시에 돌릴 때 Codex가 안정적이라는 의견 다수. Worktree로 격리하면 충돌 없이 병렬 작업 가능.
+                        </p>
+                    </div>
+                    <div class="tip-card">
+                        <h4 data-i18n="s16_rt5_t">단축키·편의 기능</h4>
+                        <p data-i18n="s16_rt5_d">Ctrl+C: 현재 프롬프트 초기화 (많은 사람이 늦게 발견). Cmd+J: 내장 터미널 토글. codex app: CLI에서
+                            앱 실행.</p>
+                    </div>
+                    <div class="tip-card">
+                        <h4 data-i18n="s16_rt6_t">빠른 프로토타이핑에 강함</h4>
+                        <p data-i18n="s16_rt6_d">"수정 → 확인 → 재수정" 사이클이 빠른 작업에서 체감 속도 차이 큼. 특히 Spark 모델과 함께 사용 시 효과적.</p>
+                    </div>
                 </div>
             </section>
 
