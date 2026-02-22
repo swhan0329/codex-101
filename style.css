@@ -721,6 +721,12 @@ details p {
     margin-bottom: 12px;
 }
 
+.callout-inline {
+    font-size: .85rem;
+    color: var(--text-dim);
+    margin-top: 8px;
+}
+
 /* === Scrollbar === */
 ::-webkit-scrollbar {
     width: 6px;
