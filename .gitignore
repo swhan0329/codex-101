@@ -1,3 +1,4 @@
 .omx/
 *.md
 !README.md
+!README_KO.md
