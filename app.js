@@ -2,6 +2,17 @@
 (function () {
     let currentLang = localStorage.getItem('codex101_lang') || 'ko';
 
+    function updateModelToggleLabels(lang) {
+        const t = translations[lang] || {};
+        document.querySelectorAll('.model-toggle').forEach(btn => {
+            const card = btn.closest('.model-card');
+            const expanded = card && card.classList.contains('expanded');
+            btn.textContent = expanded
+                ? (t.model_hide || 'Hide details')
+                : (t.model_show || 'Show details');
+        });
+    }
+
     // Apply translations
     function applyTranslations(lang) {
         const t = translations[lang];
@@ -23,6 +34,7 @@
                 el.innerHTML = t[key];
             }
         });
+        updateModelToggleLabels(lang);
         document.documentElement.lang = lang === 'ko' ? 'ko' : 'en';
     }
 
@@ -86,6 +98,18 @@
     document.querySelectorAll('.section').forEach(s => {
         s.classList.add('fade-in');
         observer.observe(s);
+    });
+
+    // Model card collapsible toggle
+    document.querySelectorAll('.model-toggle').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const card = btn.closest('.model-card');
+            card.classList.toggle('expanded');
+            const t = translations[currentLang];
+            btn.textContent = card.classList.contains('expanded')
+                ? (t.model_hide || 'Hide details')
+                : (t.model_show || 'Show details');
+        });
     });
 
     // Init

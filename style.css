@@ -486,9 +486,125 @@ kbd {
     gap: 24px;
 }
 
+/* === Section 11: Command Surfaces === */
+.command-guide>p {
+    color: var(--text-dim);
+    font-size: .9rem;
+}
+
+.command-surfaces {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin: 14px 0;
+}
+
+.command-surface {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 14px 14px 10px;
+}
+
+.command-surface-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 6px;
+}
+
+.command-surface-head h4 {
+    margin: 0;
+    font-size: .98rem;
+}
+
+.surface-badge {
+    font-family: var(--mono);
+    font-size: .72rem;
+    letter-spacing: .06em;
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--bg-code);
+    color: var(--accent-light);
+}
+
+.command-surface .table-wrap {
+    margin: 8px 0 6px;
+}
+
+.command-surface table {
+    font-size: .84rem;
+}
+
+.command-surface td:first-child {
+    width: 124px;
+}
+
+.command-surface td code {
+    background: var(--bg-code);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 3px 8px;
+    color: var(--accent-light);
+}
+
+.command-note {
+    margin: 4px 2px 0;
+    font-size: .82rem;
+    color: var(--text-dim);
+}
+
+.command-refs {
+    margin-top: 14px;
+    font-size: .84rem;
+    color: var(--text-dim);
+}
+
+.command-refs a {
+    display: inline-block;
+    margin: 3px 6px 3px 0;
+    padding: 4px 10px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--bg-card);
+    color: var(--text);
+}
+
+.command-refs a:hover {
+    text-decoration: none;
+    border-color: var(--accent);
+    background: var(--accent-glow);
+}
+
+.shortcut-panel {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px;
+    margin-top: 2px;
+}
+
 @media (max-width: 640px) {
     .two-col {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 1080px) {
+    .command-surfaces {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 760px) {
+    .command-surfaces {
+        grid-template-columns: 1fr;
+    }
+
+    .command-surface td:first-child {
+        width: auto;
     }
 }
 
@@ -796,6 +912,156 @@ details p {
     .section h2 {
         font-size: 1.3rem;
     }
+}
+
+/* === Model Cards === */
+.section-credit {
+    font-size: .8rem;
+    color: var(--text-dim);
+    margin: -8px 0 16px;
+    font-style: italic;
+}
+
+.model-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+    margin: 16px 0;
+}
+
+.model-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: .3s;
+}
+
+.model-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px var(--accent-glow);
+}
+
+.model-banner {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--mono);
+    font-size: .85rem;
+    font-weight: 700;
+    color: var(--accent);
+    background: var(--bg-code);
+    border-bottom: 1px solid var(--border);
+}
+
+.model-body {
+    padding: 16px 18px;
+}
+
+.model-desc {
+    font-size: .84rem;
+    color: var(--text-dim);
+    line-height: 1.55;
+    margin-bottom: 12px;
+    min-height: 48px;
+}
+
+.model-cmd {
+    font-family: var(--mono);
+    font-size: .75rem;
+    color: var(--text-dim);
+    background: var(--bg-code);
+    padding: 6px 10px;
+    border-radius: 4px;
+    margin-bottom: 14px;
+    text-align: center;
+}
+
+.model-features {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.model-feat-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 0;
+    border-top: 1px solid var(--border);
+    font-size: .8rem;
+}
+
+.model-feat-label {
+    color: var(--text);
+}
+
+.model-feat-value {
+    display: flex;
+    gap: 3px;
+    align-items: center;
+}
+
+.dot-filled {
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    color: var(--accent);
+    font-size: .75rem;
+}
+
+.dot-empty {
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    color: var(--border);
+    font-size: .75rem;
+}
+
+.check-yes {
+    color: var(--green);
+    font-size: .9rem;
+}
+
+.check-no {
+    color: var(--red);
+    font-size: .9rem;
+}
+
+.model-card.collapsible .model-features {
+    display: none;
+}
+
+.model-card.collapsible.expanded .model-features {
+    display: flex;
+}
+
+.model-toggle {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 8px 0;
+    border: none;
+    border-top: 1px solid var(--border);
+    background: transparent;
+    color: var(--text-dim);
+    font-size: .78rem;
+    font-family: var(--font);
+    cursor: pointer;
+    transition: .2s;
+}
+
+.model-toggle:hover {
+    color: var(--accent);
+    background: var(--accent-glow);
+}
+
+.section h4 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 24px 0 12px;
 }
 
 /* === Fade-in Animation === */

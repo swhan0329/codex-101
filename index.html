@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Codex 101 — OpenAI Codex Complete Guide</title>
     <meta name="description"
-        content="The definitive guide to OpenAI Codex: CLI, App, IDE Extension, and Cloud. Updated February 2026." />
+        content="The definitive guide to OpenAI Codex: CLI, App, IDE Extension, and Web. Updated February 2026." />
     <meta property="og:title" content="Codex 101 — OpenAI Codex Complete Guide" />
     <meta property="og:description"
-        content="Master OpenAI Codex: CLI, macOS App, VS Code Extension, and Cloud Dashboard. Bilingual KR/EN guide." />
+        content="Master OpenAI Codex: CLI, macOS App, IDE Extension, and Web Dashboard. Bilingual KR/EN guide." />
     <meta property="og:type" content="website" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -40,7 +40,7 @@
         <div class="container">
             <p class="hero-badge" data-i18n="hero_badge">Updated Feb 2026</p>
             <h1 class="hero-title" data-i18n="hero_title">OpenAI Codex 완벽 가이드 101</h1>
-            <p class="hero-sub" data-i18n="hero_sub">CLI · macOS App · VS Code Extension · Cloud Dashboard<br />4가지 방법으로
+            <p class="hero-sub" data-i18n="hero_sub">CLI · macOS App · IDE Extension · Web Dashboard<br />4가지 방법으로
                 사용하는 에이전틱 코딩 플랫폼</p>
             <div class="hero-cta">
                 <a href="#s1" class="btn btn-primary" data-i18n="hero_cta">가이드 시작하기</a>
@@ -82,7 +82,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>2025.04.16</td>
+                                <td>2025.04</td>
                                 <td data-i18n="tl1">Codex CLI 오픈소스 공개 (TypeScript, Apache 2.0)</td>
                             </tr>
                             <tr>
@@ -102,8 +102,8 @@
                                 <td data-i18n="tl5">GPT-5.2-Codex 출시 (멀티파일 최적화, 컨텍스트 압축)</td>
                             </tr>
                             <tr>
-                                <td>2026.01</td>
-                                <td data-i18n="tl6">Codex IDE Extension (VS Code) 출시</td>
+                                <td>2025.08.27</td>
+                                <td data-i18n="tl6">Codex IDE Extension(Visual Studio Code) 변경로그 첫 공개</td>
                             </tr>
                             <tr>
                                 <td>2026.02.02</td>
@@ -111,7 +111,11 @@
                             </tr>
                             <tr>
                                 <td>2026.02.05</td>
-                                <td data-i18n="tl8">GPT-5.3-Codex 출시, Codex-Spark 리서치 프리뷰</td>
+                                <td data-i18n="tl8">GPT-5.3-Codex 출시</td>
+                            </tr>
+                            <tr>
+                                <td>2026.02.12</td>
+                                <td data-i18n="tl9">Codex-Spark 리서치 프리뷰 공개</td>
                             </tr>
                         </tbody>
                     </table>
@@ -135,7 +139,7 @@
                     <div class="product-card">
                         <div class="product-icon">IDE</div>
                         <h3>Codex IDE Extension</h3>
-                        <p data-i18n="s2_ide">VS Code 사이드바에서 AI 코딩. 클라우드 위임 지원. 2026.01 출시.</p>
+                        <p data-i18n="s2_ide">VS Code 사이드바에서 AI 코딩. 클라우드 위임 지원. 2025.08~09 변경로그 기준 공개.</p>
                     </div>
                     <div class="product-card">
                         <div class="product-icon">Web</div>
@@ -144,53 +148,354 @@
                     </div>
                 </div>
 
-                <h3 data-i18n="s2_models_title">최신 모델 (2026.02 기준)</h3>
-                <div class="table-wrap">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th data-i18n="th_model">모델</th>
-                                <th data-i18n="th_feature">특징</th>
-                                <th data-i18n="th_use">용도</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>GPT-5.3-Codex</strong></td>
-                                <td data-i18n="m1_f">가장 강력한 에이전틱 코딩 모델, 25% 빠른 속도</td>
-                                <td data-i18n="m1_u">복잡한 실제 SW 엔지니어링</td>
-                            </tr>
-                            <tr>
-                                <td><strong>GPT-5.3-Codex-Spark</strong></td>
-                                <td data-i18n="m2_f">초고속 (1000+ tok/sec), 리서치 프리뷰</td>
-                                <td data-i18n="m2_u">실시간 코딩, 빠른 반복</td>
-                            </tr>
-                            <tr>
-                                <td><strong>GPT-5.2-Codex</strong></td>
-                                <td data-i18n="m3_f">안정적, 멀티파일 최적화</td>
-                                <td data-i18n="m3_u">일반 코딩 작업</td>
-                            </tr>
-                            <tr>
-                                <td><strong>o4-mini</strong></td>
-                                <td data-i18n="m4_f">빠른 추론</td>
-                                <td data-i18n="m4_u">간단한 작업, 코드 설명</td>
-                            </tr>
-                            <tr>
-                                <td><strong>o3</strong></td>
-                                <td data-i18n="m5_f">깊은 추론</td>
-                                <td data-i18n="m5_u">복잡한 아키텍처 결정</td>
-                            </tr>
-                        </tbody>
-                    </table>
+            </section>
+
+            <!-- Section 3: Supported Models -->
+            <section class="section" id="s3">
+                <h2><span class="section-num">03</span> <span data-i18n="s3_title">지원 모델</span></h2>
+
+                <h3 data-i18n="s3_models_title">최신 모델 (2026.02 기준)</h3>
+
+                <h4 data-i18n="s3_rec_title">⭐ 추천 모델</h4>
+                <div class="model-grid">
+                    <!-- GPT-5.3-Codex -->
+                    <div class="model-card">
+                        <div class="model-banner">gpt-5.3-codex</div>
+                        <div class="model-body">
+                            <p class="model-desc" data-i18n="m1_f">현재까지 가장 강력한 에이전틱 코딩 모델. 프론티어급 코딩 성능에 더 강화된 추론 및 전문 지식
+                                역량을 결합.</p>
+                            <div class="model-cmd">codex -m gpt-5.3-codex</div>
+                            <div class="model-features">
+                                <div class="model-feat-row"><span class="model-feat-label"
+                                        data-i18n="feat_cap">Capability</span><span class="model-feat-value"><span
+                                            class="dot-filled">✦</span><span class="dot-filled">✦</span><span
+                                            class="dot-filled">✦</span><span class="dot-filled">✦</span><span
+                                            class="dot-filled">✦</span></span></div>
+                                <div class="model-feat-row"><span class="model-feat-label"
+                                        data-i18n="feat_spd">Speed</span><span class="model-feat-value"><span
+                                            class="dot-filled">⚡</span><span class="dot-filled">⚡</span><span
+                                            class="dot-filled">⚡</span></span></div>
+                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cli">Codex
+                                        CLI & SDK</span><span class="check-yes">✅</span></div>
+                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_app">Codex
+                                        app & IDE extension</span><span class="check-yes">✅</span></div>
+                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cloud">Codex
+                                        Web</span><span class="check-yes">✅</span></div>
+                                <div class="model-feat-row"><span class="model-feat-label"
+                                        data-i18n="feat_credits">ChatGPT Credits</span><span class="check-yes">✅</span>
+                                </div>
+                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_api">API
+                                        Access</span><span class="check-no">❌</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- GPT-5.3-Codex-Spark -->
+                    <div class="model-card">
+                        <div class="model-banner">gpt-5.3-codex-spark</div>
+                        <div class="model-body">
+                            <p class="model-desc" data-i18n="m2_f">텍스트 전용 리서치 프리뷰 모델. 거의 즉각적인 실시간 코딩 반복에 최적화. ChatGPT
+                                Pro 사용자 전용.</p>
+                            <div class="model-cmd">codex -m gpt-5.3-codex-spark</div>
+                            <div class="model-features">
+                                <div class="model-feat-row"><span class="model-feat-label"
+                                        data-i18n="feat_cap">Capability</span><span class="model-feat-value"><span
+                                            class="dot-filled">✦</span><span class="dot-filled">✦</span><span
+                                            class="dot-filled">✦</span></span></div>
+                                <div class="model-feat-row"><span class="model-feat-label"
+                                        data-i18n="feat_spd">Speed</span><span class="model-feat-value"><span
+                                            class="dot-filled">⚡</span><span class="dot-filled">⚡</span><span
+                                            class="dot-filled">⚡</span><span class="dot-filled">⚡</span><span
+                                            class="dot-filled">⚡</span></span></div>
+                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cli">Codex
+                                        CLI & SDK</span><span class="check-yes">✅</span></div>
+                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_app">Codex
+                                        app & IDE extension</span><span class="check-yes">✅</span></div>
+                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cloud">Codex
+                                        Web</span><span class="check-no">❌</span></div>
+                                <div class="model-feat-row"><span class="model-feat-label"
+                                        data-i18n="feat_credits">ChatGPT Credits</span><span class="check-no">❌</span>
+                                </div>
+                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_api">API
+                                        Access</span><span class="check-no">❌</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- GPT-5.2-Codex -->
+                    <div class="model-card">
+                        <div class="model-banner">gpt-5.2-codex</div>
+                        <div class="model-body">
+                            <p class="model-desc" data-i18n="m3_f">실전 엔지니어링을 위한 고급 코딩 모델. gpt-5.3-codex로 대체됨.</p>
+                            <div class="model-cmd">codex -m gpt-5.2-codex</div>
+                            <div class="model-features">
+                                <div class="model-feat-row"><span class="model-feat-label"
+                                        data-i18n="feat_cap">Capability</span><span class="model-feat-value"><span
+                                            class="dot-filled">✦</span><span class="dot-filled">✦</span><span
+                                            class="dot-filled">✦</span><span class="dot-filled">✦</span></span></div>
+                                <div class="model-feat-row"><span class="model-feat-label"
+                                        data-i18n="feat_spd">Speed</span><span class="model-feat-value"><span
+                                            class="dot-filled">⚡</span><span class="dot-filled">⚡</span><span
+                                            class="dot-filled">⚡</span></span></div>
+                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cli">Codex
+                                        CLI & SDK</span><span class="check-yes">✅</span></div>
+                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_app">Codex
+                                        app & IDE extension</span><span class="check-yes">✅</span></div>
+                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cloud">Codex
+                                        Web</span><span class="check-yes">✅</span></div>
+                                <div class="model-feat-row"><span class="model-feat-label"
+                                        data-i18n="feat_credits">ChatGPT Credits</span><span class="check-yes">✅</span>
+                                </div>
+                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_api">API
+                                        Access</span><span class="check-yes">✅</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="callout">
+                    <p data-i18n="s3_rec_note">💡 대부분의 작업에는 gpt-5.3-codex를 권장합니다. App, CLI, IDE, Web 모두에서 사용 가능. API
+                        접근은 곧 제공 예정. Spark는 Pro 구독자 전용 리서치 프리뷰.</p>
+                </div>
+
+                <h4 data-i18n="s3_alt_title">🔄 대안 모델</h4>
+                <div class="model-grid">
+                    <!-- GPT-5.2 -->
+                    <div class="model-card collapsible">
+                        <div class="model-banner">gpt-5.2</div>
+                        <div class="model-body">
+                            <p class="model-desc" data-i18n="m4_f">산업과 도메인 전반의 다양한 작업을 위한 최고의 범용 에이전틱 모델.</p>
+                            <div class="model-cmd">codex -m gpt-5.2</div>
+                            <div class="model-features">
+                                <div class="model-feat-row"><span class="model-feat-label"
+                                        data-i18n="feat_cap">Capability</span><span class="model-feat-value"><span
+                                            class="dot-filled">✦</span><span class="dot-filled">✦</span><span
+                                            class="dot-filled">✦</span><span class="dot-filled">✦</span></span></div>
+                                <div class="model-feat-row"><span class="model-feat-label"
+                                        data-i18n="feat_spd">Speed</span><span class="model-feat-value"><span
+                                            class="dot-filled">⚡</span><span class="dot-filled">⚡</span><span
+                                            class="dot-filled">⚡</span></span></div>
+                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cli">Codex
+                                        CLI & SDK</span><span class="check-yes">✅</span></div>
+                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_app">Codex
+                                        app & IDE extension</span><span class="check-yes">✅</span></div>
+                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cloud">Codex
+                                        Web</span><span class="check-no">❌</span></div>
+                                <div class="model-feat-row"><span class="model-feat-label"
+                                        data-i18n="feat_credits">ChatGPT Credits</span><span class="check-yes">✅</span>
+                                </div>
+                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_api">API
+                                        Access</span><span class="check-yes">✅</span></div>
+                            </div>
+                        </div>
+                        <button class="model-toggle" data-i18n="model_show">Show details</button>
+                    </div>
+                    <!-- GPT-5.1-Codex-Max -->
+                    <div class="model-card collapsible">
+                        <div class="model-banner">gpt-5.1-codex-max</div>
+                        <div class="model-body">
+                            <p class="model-desc" data-i18n="m5_f">Codex에서 장기간 에이전틱 코딩 작업에 최적화된 모델.</p>
+                            <div class="model-cmd">codex -m gpt-5.1-codex-max</div>
+                            <div class="model-features">
+                                <div class="model-feat-row"><span class="model-feat-label"
+                                        data-i18n="feat_cap">Capability</span><span class="model-feat-value"><span
+                                            class="dot-filled">✦</span><span class="dot-filled">✦</span><span
+                                            class="dot-filled">✦</span></span></div>
+                                <div class="model-feat-row"><span class="model-feat-label"
+                                        data-i18n="feat_spd">Speed</span><span class="model-feat-value"><span
+                                            class="dot-filled">⚡</span><span class="dot-filled">⚡</span><span
+                                            class="dot-filled">⚡</span></span></div>
+                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cli">Codex
+                                        CLI & SDK</span><span class="check-yes">✅</span></div>
+                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_app">Codex
+                                        app & IDE extension</span><span class="check-yes">✅</span></div>
+                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cloud">Codex
+                                        Web</span><span class="check-no">❌</span></div>
+                                <div class="model-feat-row"><span class="model-feat-label"
+                                        data-i18n="feat_credits">ChatGPT Credits</span><span class="check-yes">✅</span>
+                                </div>
+                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_api">API
+                                        Access</span><span class="check-yes">✅</span></div>
+                            </div>
+                        </div>
+                        <button class="model-toggle" data-i18n="model_show">Show details</button>
+                    </div>
+                    <!-- GPT-5.1 -->
+                    <div class="model-card collapsible">
+                        <div class="model-banner">gpt-5.1</div>
+                        <div class="model-body">
+                            <p class="model-desc" data-i18n="m6_f">다양한 도메인의 코딩 및 에이전틱 작업에 뛰어남. gpt-5.2로 대체됨.</p>
+                            <div class="model-cmd">codex -m gpt-5.1</div>
+                            <div class="model-features">
+                                <div class="model-feat-row"><span class="model-feat-label"
+                                        data-i18n="feat_cap">Capability</span><span class="model-feat-value"><span
+                                            class="dot-filled">✦</span><span class="dot-filled">✦</span><span
+                                            class="dot-filled">✦</span></span></div>
+                                <div class="model-feat-row"><span class="model-feat-label"
+                                        data-i18n="feat_spd">Speed</span><span class="model-feat-value"><span
+                                            class="dot-filled">⚡</span><span class="dot-filled">⚡</span><span
+                                            class="dot-filled">⚡</span></span></div>
+                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cli">Codex
+                                        CLI & SDK</span><span class="check-yes">✅</span></div>
+                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_app">Codex
+                                        app & IDE extension</span><span class="check-yes">✅</span></div>
+                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cloud">Codex
+                                        Web</span><span class="check-no">❌</span></div>
+                                <div class="model-feat-row"><span class="model-feat-label"
+                                        data-i18n="feat_credits">ChatGPT Credits</span><span class="check-yes">✅</span>
+                                </div>
+                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_api">API
+                                        Access</span><span class="check-yes">✅</span></div>
+                            </div>
+                        </div>
+                        <button class="model-toggle" data-i18n="model_show">Show details</button>
+                    </div>
+                    <!-- GPT-5.1-Codex -->
+                    <div class="model-card collapsible">
+                        <div class="model-banner">gpt-5.1-codex</div>
+                        <div class="model-body">
+                            <p class="model-desc" data-i18n="m7_f">Codex에서 장시간 실행되는 에이전틱 코딩 작업에 최적화. gpt-5.1-codex-max로
+                                대체됨.</p>
+                            <div class="model-cmd">codex -m gpt-5.1-codex</div>
+                            <div class="model-features">
+                                <div class="model-feat-row"><span class="model-feat-label"
+                                        data-i18n="feat_cap">Capability</span><span class="model-feat-value"><span
+                                            class="dot-filled">✦</span><span class="dot-filled">✦</span><span
+                                            class="dot-filled">✦</span></span></div>
+                                <div class="model-feat-row"><span class="model-feat-label"
+                                        data-i18n="feat_spd">Speed</span><span class="model-feat-value"><span
+                                            class="dot-filled">⚡</span><span class="dot-filled">⚡</span><span
+                                            class="dot-filled">⚡</span></span></div>
+                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cli">Codex
+                                        CLI & SDK</span><span class="check-yes">✅</span></div>
+                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_app">Codex
+                                        app & IDE extension</span><span class="check-yes">✅</span></div>
+                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cloud">Codex
+                                        Web</span><span class="check-yes">✅</span></div>
+                                <div class="model-feat-row"><span class="model-feat-label"
+                                        data-i18n="feat_credits">ChatGPT Credits</span><span class="check-yes">✅</span>
+                                </div>
+                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_api">API
+                                        Access</span><span class="check-yes">✅</span></div>
+                            </div>
+                        </div>
+                        <button class="model-toggle" data-i18n="model_show">Show details</button>
+                    </div>
+                    <!-- GPT-5-Codex -->
+                    <div class="model-card collapsible">
+                        <div class="model-banner">gpt-5-codex</div>
+                        <div class="model-body">
+                            <p class="model-desc" data-i18n="m8_f">Codex에서 장시간 실행되는 에이전틱 코딩 작업에 최적화. gpt-5.1-codex-max로
+                                대체됨.</p>
+                            <div class="model-cmd">codex -m gpt-5-codex</div>
+                            <div class="model-features">
+                                <div class="model-feat-row"><span class="model-feat-label"
+                                        data-i18n="feat_cap">Capability</span><span class="model-feat-value"><span
+                                            class="dot-filled">✦</span><span class="dot-filled">✦</span><span
+                                            class="dot-filled">✦</span></span></div>
+                                <div class="model-feat-row"><span class="model-feat-label"
+                                        data-i18n="feat_spd">Speed</span><span class="model-feat-value"><span
+                                            class="dot-filled">⚡</span><span class="dot-filled">⚡</span><span
+                                            class="dot-filled">⚡</span></span></div>
+                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cli">Codex
+                                        CLI & SDK</span><span class="check-yes">✅</span></div>
+                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_app">Codex
+                                        app & IDE extension</span><span class="check-yes">✅</span></div>
+                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cloud">Codex
+                                        Web</span><span class="check-no">❌</span></div>
+                                <div class="model-feat-row"><span class="model-feat-label"
+                                        data-i18n="feat_credits">ChatGPT Credits</span><span class="check-yes">✅</span>
+                                </div>
+                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_api">API
+                                        Access</span><span class="check-yes">✅</span></div>
+                            </div>
+                        </div>
+                        <button class="model-toggle" data-i18n="model_show">Show details</button>
+                    </div>
+                    <!-- GPT-5-Codex-Mini -->
+                    <div class="model-card collapsible">
+                        <div class="model-banner">gpt-5-codex-mini</div>
+                        <div class="model-body">
+                            <p class="model-desc" data-i18n="m9_f">GPT-5-Codex의 소형·비용 효율적 버전. gpt-5.1-codex-mini로 대체됨.
+                            </p>
+                            <div class="model-cmd">codex -m gpt-5-codex-mini</div>
+                            <div class="model-features">
+                                <div class="model-feat-row"><span class="model-feat-label"
+                                        data-i18n="feat_cap">Capability</span><span class="model-feat-value"><span
+                                            class="dot-filled">✦</span><span class="dot-filled">✦</span></span></div>
+                                <div class="model-feat-row"><span class="model-feat-label"
+                                        data-i18n="feat_spd">Speed</span><span class="model-feat-value"><span
+                                            class="dot-filled">⚡</span><span class="dot-filled">⚡</span><span
+                                            class="dot-filled">⚡</span><span class="dot-filled">⚡</span></span></div>
+                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cli">Codex
+                                        CLI & SDK</span><span class="check-yes">✅</span></div>
+                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_app">Codex
+                                        app & IDE extension</span><span class="check-yes">✅</span></div>
+                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cloud">Codex
+                                        Web</span><span class="check-no">❌</span></div>
+                                <div class="model-feat-row"><span class="model-feat-label"
+                                        data-i18n="feat_credits">ChatGPT Credits</span><span class="check-yes">✅</span>
+                                </div>
+                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_api">API
+                                        Access</span><span class="check-no">❌</span></div>
+                            </div>
+                        </div>
+                        <button class="model-toggle" data-i18n="model_show">Show details</button>
+                    </div>
+                    <!-- GPT-5 -->
+                    <div class="model-card collapsible">
+                        <div class="model-banner">gpt-5</div>
+                        <div class="model-body">
+                            <p class="model-desc" data-i18n="m10_f">다양한 도메인의 코딩 및 에이전틱 작업을 위한 추론 모델. gpt-5.1로 대체됨.</p>
+                            <div class="model-cmd">codex -m gpt-5</div>
+                            <div class="model-features">
+                                <div class="model-feat-row"><span class="model-feat-label"
+                                        data-i18n="feat_cap">Capability</span><span class="model-feat-value"><span
+                                            class="dot-filled">✦</span><span class="dot-filled">✦</span><span
+                                            class="dot-filled">✦</span></span></div>
+                                <div class="model-feat-row"><span class="model-feat-label"
+                                        data-i18n="feat_spd">Speed</span><span class="model-feat-value"><span
+                                            class="dot-filled">⚡</span><span class="dot-filled">⚡</span><span
+                                            class="dot-filled">⚡</span></span></div>
+                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cli">Codex
+                                        CLI & SDK</span><span class="check-yes">✅</span></div>
+                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_app">Codex
+                                        app & IDE extension</span><span class="check-yes">✅</span></div>
+                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cloud">Codex
+                                        Web</span><span class="check-no">❌</span></div>
+                                <div class="model-feat-row"><span class="model-feat-label"
+                                        data-i18n="feat_credits">ChatGPT Credits</span><span class="check-yes">✅</span>
+                                </div>
+                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_api">API
+                                        Access</span><span class="check-yes">✅</span></div>
+                            </div>
+                        </div>
+                        <button class="model-toggle" data-i18n="model_show">Show details</button>
+                    </div>
+                </div>
+                <div class="callout">
+                    <p data-i18n="s3_other_note">⚠️ Codex는 위 모델들과 가장 잘 작동합니다. Chat Completions 또는 Responses API를 지원하는 다른
+                        모델도 사용 가능하지만, Chat Completions API 지원은 향후 제거 예정입니다.</p>
+                </div>
+
+                <h4 data-i18n="s3_cfg_title">🛠️ 모델 설정 팁</h4>
+                <div class="callout">
+                    <p data-i18n="s3_cfg_default">config.toml에서 기본 모델을 설정할 수 있습니다. 지정하지 않으면 추천 모델이 기본값입니다.</p>
+                </div>
+                <pre><code>model = "gpt-5.3-codex"</code></pre>
+                <div class="callout">
+                    <p data-i18n="s3_cfg_temp">CLI에서 <code>/model</code> 명령 또는 <code>codex -m 모델명</code> 플래그로 임시 변경 가능.
+                        IDE에서는 입력창 아래 모델 선택기 사용.</p>
+                </div>
+                <pre><code>codex -m gpt-5.3-codex</code></pre>
+                <div class="callout">
+                    <p data-i18n="s3_cfg_cloud">Codex Web 작업의 기본 모델은 현재 변경할 수 없습니다.</p>
                 </div>
             </section>
 
             <!-- Section 3 -->
-            <section class="section" id="s3">
-                <h2><span class="section-num">03</span> <span data-i18n="s3_title">시스템 요구사항 & 가격</span></h2>
+            <section class="section" id="s4">
+                <h2><span class="section-num">04</span> <span data-i18n="s4_title">시스템 요구사항 & 가격</span></h2>
                 <div class="two-col">
                     <div>
-                        <h3 data-i18n="s3_req_title">시스템 요구사항</h3>
+                        <h3 data-i18n="s4_req_title">시스템 요구사항</h3>
                         <div class="table-wrap">
                             <table>
                                 <tbody>
@@ -204,18 +509,18 @@
                                     </tr>
                                     <tr>
                                         <td><strong>Git</strong></td>
-                                        <td data-i18n="s3_git">강력히 권장</td>
+                                        <td data-i18n="s4_git">강력히 권장</td>
                                     </tr>
                                     <tr>
-                                        <td data-i18n="s3_acct_label"><strong>계정</strong></td>
-                                        <td>ChatGPT Plus / Pro / Business / Edu / Enterprise</td>
+                                        <td data-i18n="s4_acct_label"><strong>계정</strong></td>
+                                        <td>ChatGPT Free / Go / Plus / Pro / Business / Edu / Enterprise</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
                     <div>
-                        <h3 data-i18n="s3_price_title">ChatGPT 구독 요금 (2026.02)</h3>
+                        <h3 data-i18n="s4_price_title">ChatGPT 구독 요금 (2026.02)</h3>
                         <div class="table-wrap">
                             <table>
                                 <thead>
@@ -229,46 +534,48 @@
                                     <tr>
                                         <td>Free</td>
                                         <td>$0</td>
-                                        <td>❌</td>
+                                        <td>✅*</td>
                                     </tr>
                                     <tr>
                                         <td>Go</td>
                                         <td>$8/mo</td>
-                                        <td>❌</td>
+                                        <td>✅*</td>
                                     </tr>
                                     <tr>
                                         <td>Plus</td>
                                         <td>$20/mo</td>
-                                        <td>✅</td>
+                                        <td>✅**</td>
                                     </tr>
                                     <tr>
                                         <td>Pro</td>
                                         <td>$200/mo</td>
-                                        <td>✅</td>
+                                        <td>✅**</td>
                                     </tr>
                                     <tr>
                                         <td>Business</td>
                                         <td>$25~30/user/mo</td>
-                                        <td>✅</td>
+                                        <td>✅**</td>
                                     </tr>
                                     <tr>
                                         <td>Enterprise</td>
-                                        <td data-i18n="s3_custom">맞춤 가격</td>
-                                        <td>✅</td>
+                                        <td data-i18n="s4_custom">맞춤 가격</td>
+                                        <td>✅**</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
+                        <p class="callout-inline" data-i18n="s4_note_access">* Free/Go도 한시적으로 Codex 접근 가능. ** Plus 이상(및
+                            Edu/Enterprise) 한시적 2x Codex rate limits 제공.</p>
                     </div>
                 </div>
             </section>
 
             <!-- Section 4 -->
-            <section class="section" id="s4">
-                <h2><span class="section-num">04</span> <span data-i18n="s4_title">설치 및 인증</span></h2>
+            <section class="section" id="s5">
+                <h2><span class="section-num">05</span> <span data-i18n="s5_title">설치 및 인증</span></h2>
                 <div class="code-tabs">
-                    <h3 data-i18n="s4_cli_install">CLI 설치</h3>
-                    <pre data-i18n-html="code_s4_install"><code><span class="c"># npm</span>
+                    <h3 data-i18n="s5_cli_install">CLI 설치</h3>
+                    <pre data-i18n-html="code_s5_install"><code><span class="c"># npm</span>
 npm install -g @openai/codex
 
 <span class="c"># Homebrew (macOS)</span>
@@ -277,43 +584,43 @@ brew install codex
 <span class="c"># Update</span>
 npm update -g @openai/codex</code></pre>
 
-                    <h3 data-i18n="s4_auth">인증</h3>
-                    <pre data-i18n-html="code_s4_auth"><code><span class="c"># ChatGPT 계정 로그인 (권장)</span>
+                    <h3 data-i18n="s5_auth">인증</h3>
+                    <pre data-i18n-html="code_s5_auth"><code><span class="c"># ChatGPT 계정 로그인 (권장)</span>
 codex login
 
 <span class="c"># 또는 API 키 사용</span>
 export OPENAI_API_KEY="your-api-key-here"</code></pre>
 
-                    <h3 data-i18n="s4_app_install">macOS App 설치</h3>
+                    <h3 data-i18n="s5_app_install">macOS App 설치</h3>
                     <ol>
-                        <li data-i18n="s4_app1">openai.com/codex 에서 다운로드</li>
-                        <li data-i18n="s4_app2">.dmg 파일 실행 → Applications 폴더로 이동</li>
-                        <li data-i18n="s4_app3">ChatGPT 계정 또는 API 키로 로그인</li>
+                        <li data-i18n="s5_app1">openai.com/codex 에서 다운로드</li>
+                        <li data-i18n="s5_app2">.dmg 파일 실행 → Applications 폴더로 이동</li>
+                        <li data-i18n="s5_app3">ChatGPT 계정 또는 API 키로 로그인</li>
                     </ol>
                     <div class="callout waitlist-box">
-                        <p data-i18n="s4_waitlist_text">현재 macOS App만 사용 가능합니다. Windows는 WSL 가상환경으로 CLI 사용 가능.</p>
+                        <p data-i18n="s5_waitlist_text">현재 macOS App만 사용 가능합니다. Windows는 WSL 가상환경으로 CLI 사용 가능.</p>
                         <a href="https://openai.com/form/codex-app/" target="_blank" class="btn btn-secondary"
-                            data-i18n="s4_waitlist_btn">Windows/Linux App Waitlist 등록</a>
+                            data-i18n="s5_waitlist_btn">Windows/Linux App Waitlist 등록</a>
                     </div>
 
-                    <h3 data-i18n="s4_vsc_install">VS Code Extension 설치</h3>
+                    <h3 data-i18n="s5_vsc_install">IDE Extension 설치</h3>
                     <ol>
-                        <li data-i18n="s4_vsc1">VS Code 확장 마켓플레이스에서 "OpenAI Codex" 검색</li>
-                        <li data-i18n="s4_vsc2">설치 후 사이드바에서 Codex 패널 활성화</li>
-                        <li data-i18n="s4_vsc3">ChatGPT 계정으로 인증</li>
+                        <li data-i18n="s5_vsc1">VS Code 확장 마켓플레이스에서 "OpenAI Codex" 검색</li>
+                        <li data-i18n="s5_vsc2">설치 후 사이드바에서 Codex 패널 활성화</li>
+                        <li data-i18n="s5_vsc3">ChatGPT 계정으로 인증</li>
                     </ol>
                 </div>
             </section>
 
             <!-- Section 5 -->
-            <section class="section" id="s5">
-                <h2><span class="section-num">05</span> <span data-i18n="s5_title">Codex CLI 사용법</span></h2>
+            <section class="section" id="s6">
+                <h2><span class="section-num">06</span> <span data-i18n="s6_title">Codex CLI 사용법</span></h2>
                 <figure class="screenshot">
                     <img src="images/codex_cli.png" alt="Codex CLI v0.104 running in terminal" loading="lazy" />
                     <figcaption data-i18n="img_cli">Codex CLI v0.104.0 — 터미널에서 GPT-5.3-Codex xhigh 모델로 코드 작업
                     </figcaption>
                 </figure>
-                <pre data-i18n-html="code_s5_usage"><code><span class="c"># 인터랙티브 모드</span>
+                <pre data-i18n-html="code_s6_usage"><code><span class="c"># 인터랙티브 모드</span>
 codex
 
 <span class="c"># 프롬프트와 함께</span>
@@ -328,90 +635,90 @@ codex --cd /path/to/project
 <span class="c"># 쉘 명령어 실행</span>
 !npm test</code></pre>
 
-                <h3 data-i18n="s5_new_title">2026.02 신기능</h3>
+                <h3 data-i18n="s6_new_title">2026.02 신기능</h3>
                 <div class="feature-chips">
-                    <span class="chip" data-i18n="s5_f1">Mid-Turn Steering</span>
-                    <span class="chip" data-i18n="s5_f2">Memory 슬래시 명령어</span>
-                    <span class="chip" data-i18n="s5_f3">퍼지 파일 검색</span>
-                    <span class="chip" data-i18n="s5_f4">모든 파일 타입 첨부</span>
-                    <span class="chip" data-i18n="s5_f5">향상된 리뷰 패인</span>
-                    <span class="chip" data-i18n="s5_f6">WebSocket 프록시</span>
-                    <span class="chip" data-i18n="s5_f7">실험적 JS REPL</span>
+                    <span class="chip" data-i18n="s6_f1">Mid-Turn Steering</span>
+                    <span class="chip" data-i18n="s6_f2">/feedback 슬래시 명령어</span>
+                    <span class="chip" data-i18n="s6_f3">퍼지 파일 검색</span>
+                    <span class="chip" data-i18n="s6_f4">모든 파일 타입 첨부</span>
+                    <span class="chip" data-i18n="s6_f5">향상된 리뷰 패인</span>
+                    <span class="chip" data-i18n="s6_f6">WebSocket 프록시</span>
+                    <span class="chip" data-i18n="s6_f7">실험적 JS REPL</span>
                 </div>
             </section>
 
             <!-- Section 6 -->
-            <section class="section" id="s6">
-                <h2><span class="section-num">06</span> <span data-i18n="s6_title">Codex App (macOS)</span></h2>
+            <section class="section" id="s7">
+                <h2><span class="section-num">07</span> <span data-i18n="s7_title">Codex App (macOS)</span></h2>
                 <figure class="screenshot">
                     <img src="images/codex_app.png" alt="Codex macOS App interface" loading="lazy" />
                     <figcaption data-i18n="img_app">Codex macOS App — 멀티에이전트 커맨드 센터와 워크트리 관리</figcaption>
                 </figure>
-                <p data-i18n="s6_intro">2026년 2월 2일 출시. 에이전틱 코딩의 "커맨드 센터". 여러 AI 에이전트를 동시에 관리하는 macOS 전용 데스크톱 앱.</p>
+                <p data-i18n="s7_intro">2026년 2월 2일 출시. 에이전틱 코딩의 "커맨드 센터". 여러 AI 에이전트를 동시에 관리하는 macOS 전용 데스크톱 앱.</p>
 
-                <h3 data-i18n="s6_modes_title">쓰레드 모드</h3>
+                <h3 data-i18n="s7_modes_title">쓰레드 모드</h3>
                 <div class="table-wrap">
                     <table>
                         <thead>
                             <tr>
                                 <th data-i18n="th_mode">모드</th>
-                                <th data-i18n="s6_th_where">실행 위치</th>
-                                <th data-i18n="s6_th_desc">설명</th>
+                                <th data-i18n="s7_th_where">실행 위치</th>
+                                <th data-i18n="s7_th_desc">설명</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td><strong>Local</strong></td>
-                                <td data-i18n="s6_mode_local_where">내 맥</td>
-                                <td data-i18n="s6_mode_local">현재 프로젝트 디렉토리에서 직접 작업</td>
+                                <td data-i18n="s7_mode_local_where">내 맥</td>
+                                <td data-i18n="s7_mode_local">현재 프로젝트 디렉토리에서 직접 작업</td>
                             </tr>
                             <tr>
                                 <td><strong>Worktree</strong></td>
-                                <td data-i18n="s6_mode_wt_where">내 맥</td>
-                                <td data-i18n="s6_mode_wt">Git Worktree로 변경사항 격리. 병렬 작업에 적합</td>
+                                <td data-i18n="s7_mode_wt_where">내 맥</td>
+                                <td data-i18n="s7_mode_wt">Git Worktree로 변경사항 격리. 병렬 작업에 적합</td>
                             </tr>
                             <tr>
                                 <td><strong>Cloud</strong></td>
-                                <td data-i18n="s6_mode_cloud_where">클라우드</td>
-                                <td data-i18n="s6_mode_cloud">원격 클라우드 환경에서 실행</td>
+                                <td data-i18n="s7_mode_cloud_where">클라우드</td>
+                                <td data-i18n="s7_mode_cloud">원격 클라우드 환경에서 실행</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
-                <h3 data-i18n="s6_feat_title">핵심 기능</h3>
+                <h3 data-i18n="s7_feat_title">핵심 기능</h3>
                 <div class="feature-list">
-                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s6_f1">멀티에이전트 병렬
+                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s7_f1">멀티에이전트 병렬
                             실행</span></div>
-                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s6_f2">내장 Git
+                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s7_f2">내장 Git
                             도구 (diff, commit, PR)</span></div>
-                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s6_f_skills">Skills 지원
+                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s7_f_skills">Skills 지원
                             (CLI/IDE 공유)</span></div>
-                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s6_f_auto">Automations
+                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s7_f_auto">Automations
                             (정기 작업 자동화)</span></div>
-                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s6_f_voice">Voice
+                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s7_f_voice">Voice
                             Dictation (Ctrl+M)</span></div>
-                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s6_f_float">플로팅 팝아웃
+                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s7_f_float">플로팅 팝아웃
                             창</span></div>
-                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s6_f_sync">IDE
+                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s7_f_sync">IDE
                             Extension 실시간 동기</span></div>
-                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s6_f_img">이미지 입력 (Drag
+                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s7_f_img">이미지 입력 (Drag
                             & Drop)</span></div>
-                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s6_f_term">내장 터미널
+                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s7_f_term">내장 터미널
                             (쓰레드별)</span></div>
-                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s6_f_sleep">작업 중 절전
+                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s7_f_sleep">작업 중 절전
                             방지</span></div>
                 </div>
             </section>
 
             <!-- Section 7 -->
-            <section class="section" id="s7">
-                <h2><span class="section-num">07</span> <span data-i18n="s7_title">Codex IDE Extension</span></h2>
+            <section class="section" id="s8">
+                <h2><span class="section-num">08</span> <span data-i18n="s8_title">Codex IDE Extension</span></h2>
                 <figure class="screenshot">
-                    <img src="images/codex_IDE.png" alt="Codex VS Code Extension marketplace page" loading="lazy" />
-                    <figcaption data-i18n="img_ide">Codex VS Code Extension — 마켓플레이스 (4.6M+ 다운로드)</figcaption>
+                    <img src="images/codex_IDE.png" alt="Codex VS Extension marketplace page" loading="lazy" />
+                    <figcaption data-i18n="img_ide">Codex VS Extension — 마켓플레이스 (4.6M+ 다운로드)</figcaption>
                 </figure>
-                <p data-i18n="s7_intro">VS Code, Cursor, Windsurf, JetBrains IDE에 통합되는 AI 코딩 에이전트.</p>
+                <p data-i18n="s8_intro">VS Code, Cursor, Windsurf, JetBrains IDE에 통합되는 AI 코딩 에이전트.</p>
                 <div class="table-wrap">
                     <table>
                         <thead>
@@ -425,15 +732,15 @@ codex --cd /path/to/project
                         <tbody>
                             <tr>
                                 <td><strong>Chat</strong></td>
-                                <td>❌</td>
+                                <td data-i18n="s8_chat_file">△ 수동 컨텍스트만 (@file/열린 파일/선택 영역)</td>
                                 <td>❌</td>
                                 <td>❌</td>
                             </tr>
                             <tr>
                                 <td><strong>Agent</strong></td>
                                 <td>✅</td>
-                                <td data-i18n="s7_approval">✅ (승인 필요)</td>
-                                <td data-i18n="s7_approval2">✅ (승인 필요)</td>
+                                <td data-i18n="s8_approval">✅ (승인 필요)</td>
+                                <td data-i18n="s8_approval2">✅ (승인 필요)</td>
                             </tr>
                             <tr>
                                 <td><strong>Agent (Full Access)</strong></td>
@@ -444,54 +751,56 @@ codex --cd /path/to/project
                         </tbody>
                     </table>
                 </div>
+                <p class="callout-inline" data-i18n="s8_mode_note">Chat 모드는 자동으로 파일을 탐색/수정하지 않지만, @file·열린 파일·선택 영역을
+                    컨텍스트로 포함해 질문할 수 있습니다.</p>
 
-                <h3 data-i18n="s7_key_title">핵심 기능</h3>
+                <h3 data-i18n="s8_key_title">핵심 기능</h3>
                 <div class="feature-list">
-                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s7_f_context">@file
+                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s8_f_context">@file
                             에디터 컨텍스트 자동 참조</span></div>
-                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s7_f_cloud">클라우드 위임
+                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s8_f_cloud">클라우드 위임
                             (Cloud Delegation)</span></div>
-                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s7_f_effort">추론 노력 조절
+                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s8_f_effort">추론 노력 조절
                             (low/medium/high)</span></div>
                     <div class="feature-item"><span class="feature-icon">—</span><span
-                            data-i18n="s7_f_jetbrains">JetBrains
+                            data-i18n="s8_f_jetbrains">JetBrains
                             IDE 지원</span></div>
-                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s7_f_cursor">Cursor,
+                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s8_f_cursor">Cursor,
                             Windsurf 호환</span></div>
-                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s7_f_sync">App 실시간 동기
+                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s8_f_sync">App 실시간 동기
                             (Auto Context)</span></div>
                 </div>
             </section>
 
             <!-- Section 8 -->
-            <section class="section" id="s8">
-                <h2><span class="section-num">08</span> <span data-i18n="s8_title">Codex Web (ChatGPT
+            <section class="section" id="s9">
+                <h2><span class="section-num">09</span> <span data-i18n="s9_title">Codex Web (ChatGPT
                         대시보드)</span></h2>
                 <figure class="screenshot">
                     <img src="images/codex_cloud.png" alt="Codex Web Dashboard in ChatGPT" loading="lazy" />
-                    <figcaption data-i18n="img_cloud">Codex Web — ChatGPT 웹 대시보드에서 GitHub 연동 작업</figcaption>
+                    <figcaption data-i18n="img_cloud">Codex Web - ChatGPT 웹 대시보드에서 GitHub 연동 작업</figcaption>
                 </figure>
-                <p data-i18n="s8_intro">ChatGPT 웹 인터페이스에서 Codex를 사용하여 클라우드 환경에서 코딩 작업을 할 수 있습니다.</p>
+                <p data-i18n="s9_intro">ChatGPT 웹 인터페이스에서 Codex를 사용하여 클라우드 환경에서 코딩 작업을 할 수 있습니다.</p>
                 <div class="steps">
-                    <div class="step"><span class="step-num">1</span><span data-i18n="s8_s1">GitHub 계정 연결 → 레포 선택</span>
+                    <div class="step"><span class="step-num">1</span><span data-i18n="s9_s1">GitHub 계정 연결 → 레포 선택</span>
                     </div>
-                    <div class="step"><span class="step-num">2</span><span data-i18n="s8_s2">작업 설명 입력</span></div>
-                    <div class="step"><span class="step-num">3</span><span data-i18n="s8_s3">클라우드 샌드박스에서 자동 작업</span>
+                    <div class="step"><span class="step-num">2</span><span data-i18n="s9_s2">작업 설명 입력</span></div>
+                    <div class="step"><span class="step-num">3</span><span data-i18n="s9_s3">클라우드 샌드박스에서 자동 작업</span>
                     </div>
-                    <div class="step"><span class="step-num">4</span><span data-i18n="s8_s4">결과 diff 확인</span></div>
-                    <div class="step"><span class="step-num">5</span><span data-i18n="s8_s5">GitHub PR로 제안 또는 머지</span>
+                    <div class="step"><span class="step-num">4</span><span data-i18n="s9_s4">결과 diff 확인</span></div>
+                    <div class="step"><span class="step-num">5</span><span data-i18n="s9_s5">GitHub PR로 제안 또는 머지</span>
                     </div>
                 </div>
                 <div class="callout">
-                    <strong data-i18n="s8_auto_title">자동 코드 리뷰</strong>
-                    <p data-i18n="s8_auto_desc">Codex 설정에서 "Automatic reviews" 활성화 → 새 PR마다 자동 리뷰. AGENTS.md 규칙 기반
-                        커스터마이징.</p>
+                    <strong data-i18n="s9_auto_title">자동 코드 리뷰</strong>
+                    <p data-i18n="s9_auto_desc">Codex Web에서 GitHub 연결 후 리뷰 대상 저장소를 선택하고 "Automatic reviews"를 활성화하면 새
+                        PR마다 자동 리뷰됩니다. AGENTS.md 규칙 기반 커스터마이징 가능.</p>
                 </div>
             </section>
 
             <!-- Section 9 -->
-            <section class="section" id="s9">
-                <h2><span class="section-num">09</span> <span data-i18n="s9_title">승인 모드 (Approval Modes)</span></h2>
+            <section class="section" id="s10">
+                <h2><span class="section-num">10</span> <span data-i18n="s10_title">승인 모드 (Approval Modes)</span></h2>
                 <div class="table-wrap">
                     <table>
                         <thead>
@@ -532,104 +841,198 @@ codex --cd /path/to/project
                 <pre><code>codex --approval-mode suggest
 codex --approval-mode auto-edit
 codex --approval-mode full-auto</code></pre>
-                <p data-i18n="s9_sandbox">보안: macOS는 Apple Seatbelt, Linux는 Docker 컨테이너 샌드박싱. Full Auto에서도 네트워크 기본 차단.
+                <p data-i18n="s10_sandbox">보안: macOS는 Apple Seatbelt, Linux는 Docker 컨테이너 샌드박싱. Full Auto에서도 네트워크 기본 차단.
                 </p>
             </section>
 
             <!-- Section 10 -->
-            <section class="section" id="s10">
-                <h2><span class="section-num">10</span> <span data-i18n="s10_title">슬래시 명령어 & 단축키</span></h2>
-                <div class="two-col">
-                    <div>
-                        <h3 data-i18n="s10_cmd_title">슬래시 명령어</h3>
+            <section class="section" id="s11">
+                <h2><span class="section-num">11</span> <span data-i18n="s11_title">슬래시 명령어 & 단축키</span></h2>
+                <div class="command-guide">
+                    <h3 data-i18n="s11_cmd_title">플랫폼별 슬래시 명령어</h3>
+                    <p data-i18n="s11_scope_note">아래 목록은 CLI / IDE / App 공식 문서를 교차 확인해 분리한 명령어입니다. 서로 이름이 비슷해도
+                        동작이 다를 수 있습니다.</p>
+                    <div class="command-surfaces">
+                            <article class="command-surface">
+                                <div class="command-surface-head">
+                                    <h4 data-i18n="s11_cli_title">CLI (터미널)</h4>
+                                    <span class="surface-badge">CLI</span>
+                                </div>
+                                <div class="table-wrap">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td><code>/model</code></td>
+                                                <td data-i18n="s11_cli_c1">활성 모델 변경 (가능한 경우 reasoning effort 포함)</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>/permissions</code></td>
+                                                <td data-i18n="s11_cli_c2">승인/권한 정책 변경</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>/agent</code></td>
+                                                <td data-i18n="s11_cli_c3">활성 에이전트 스레드 전환</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>/plan</code></td>
+                                                <td data-i18n="s11_cli_c4">플랜 모드 전환 (선택적으로 인라인 프롬프트 포함)</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>/compact</code></td>
+                                                <td data-i18n="s11_cli_c5">대화 요약으로 컨텍스트 토큰 절약</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>/status</code></td>
+                                                <td data-i18n="s11_cli_c6">세션 설정/토큰 사용량 확인</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>/review</code></td>
+                                                <td data-i18n="s11_cli_c7">워크트리 코드 리뷰 실행</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>/feedback</code></td>
+                                                <td data-i18n="s11_cli_c8">진단 로그와 피드백 전송</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <p class="command-note" data-i18n="s11_cli_note">CLI에는 이외에도 /personality, /experimental, /init,
+                                    /mention, /mcp, /diff, /fork, /resume, /new, /quit 등이 있습니다. /approvals는 별칭으로 동작하지만
+                                    팝업 목록에는 표시되지 않습니다.</p>
+                            </article>
+
+                            <article class="command-surface">
+                                <div class="command-surface-head">
+                                    <h4 data-i18n="s11_ide_title">IDE Extension</h4>
+                                    <span class="surface-badge">IDE</span>
+                                </div>
+                                <div class="table-wrap">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td><code>/auto-context</code></td>
+                                                <td data-i18n="s11_ide_c1">자동 컨텍스트 포함 토글</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>/cloud</code></td>
+                                                <td data-i18n="s11_ide_c2">클라우드 모드로 전환</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>/cloud-environment</code></td>
+                                                <td data-i18n="s11_ide_c3">클라우드 환경 선택 (cloud 모드에서만)</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>/local</code></td>
+                                                <td data-i18n="s11_ide_c4">로컬 모드로 전환</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>/review</code></td>
+                                                <td data-i18n="s11_ide_c5">변경사항 리뷰 모드 시작</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>/status</code></td>
+                                                <td data-i18n="s11_ide_c6">스레드 ID/컨텍스트/레이트리밋 확인</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>/feedback</code></td>
+                                                <td data-i18n="s11_ide_c7">피드백 다이얼로그 열기</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </article>
+
+                            <article class="command-surface">
+                                <div class="command-surface-head">
+                                    <h4 data-i18n="s11_app_title">Codex App (macOS)</h4>
+                                    <span class="surface-badge">APP</span>
+                                </div>
+                                <div class="table-wrap">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td><code>/plan-mode</code></td>
+                                                <td data-i18n="s11_app_c1">멀티스텝 계획용 plan mode 토글</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>/mcp</code></td>
+                                                <td data-i18n="s11_app_c2">연결된 MCP 서버 상태 열기</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>/review</code></td>
+                                                <td data-i18n="s11_app_c3">변경사항 리뷰 모드 시작</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>/status</code></td>
+                                                <td data-i18n="s11_app_c4">스레드 ID/컨텍스트/레이트리밋 확인</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>/feedback</code></td>
+                                                <td data-i18n="s11_app_c5">피드백 다이얼로그 열기</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <p class="command-note" data-i18n="s11_app_note">App 문서 기준으로 명령은 환경/권한에 따라 달라질 수 있으며,
+                                    활성화된 skill은 슬래시 목록에 추가될 수 있습니다.</p>
+                            </article>
+                    </div>
+                    <div class="shortcut-panel">
+                        <h3 data-i18n="s11_key_title">키보드 단축키 (CLI)</h3>
+                        <p class="command-note" data-i18n="s11_key_scope">아래 단축키는 CLI(TUI) 기준입니다. App은 Cmd 기반 단축키를, IDE는 각 IDE
+                            키맵을 사용합니다.</p>
                         <div class="table-wrap">
                             <table>
                                 <tbody>
                                     <tr>
-                                        <td><code>/model</code></td>
-                                        <td data-i18n="s10_c1">모델 및 추론 수준 변경</td>
+                                        <td><kbd>Esc</kbd> ×2</td>
+                                        <td data-i18n="s11_k1">입력창이 비었을 때 이전 사용자 메시지 편집</td>
                                     </tr>
                                     <tr>
-                                        <td><code>/approvals</code></td>
-                                        <td data-i18n="s10_c2">승인 모드 변경</td>
+                                        <td><kbd>Ctrl+C</kbd></td>
+                                        <td data-i18n="s11_k2">세션 종료 (/exit)</td>
                                     </tr>
                                     <tr>
-                                        <td><code>/new</code></td>
-                                        <td data-i18n="s10_c3">새 세션 시작</td>
-                                    </tr>
-                                    <tr>
-                                        <td><code>/compact</code></td>
-                                        <td data-i18n="s10_c4">컨텍스트 압축</td>
-                                    </tr>
-                                    <tr>
-                                        <td><code>/diff</code></td>
-                                        <td data-i18n="s10_c5">git diff 보기</td>
-                                    </tr>
-                                    <tr>
-                                        <td><code>/status</code></td>
-                                        <td data-i18n="s10_c6">토큰 사용량 확인</td>
-                                    </tr>
-                                    <tr>
-                                        <td><code>/memory</code></td>
-                                        <td data-i18n="s10_c7">NEW — 기억 관리</td>
-                                    </tr>
-                                    <tr>
-                                        <td><code>/quit</code></td>
-                                        <td data-i18n="s10_c8">세션 종료</td>
+                                        <td><kbd>Ctrl+G</kbd></td>
+                                        <td data-i18n="s11_k3">프롬프트 에디터 열기 (VISUAL/EDITOR)</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
-                    <div>
-                        <h3 data-i18n="s10_key_title">키보드 단축키</h3>
-                        <div class="table-wrap">
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <td><kbd>Esc</kbd></td>
-                                        <td data-i18n="s10_k1">현재 요청 중단</td>
-                                    </tr>
-                                    <tr>
-                                        <td><kbd>Ctrl+C</kbd> ×2</td>
-                                        <td data-i18n="s10_k2">세션 종료</td>
-                                    </tr>
-                                    <tr>
-                                        <td><kbd>Ctrl+K</kbd></td>
-                                        <td data-i18n="s10_k3">터미널 클리어</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+                    <p class="command-refs" data-i18n-html="s11_refs">공식 문서: <a
+                            href="https://developers.openai.com/codex/cli/slash-commands/" target="_blank">CLI slash
+                            commands</a> · <a href="https://developers.openai.com/codex/ide/slash-commands"
+                            target="_blank">IDE slash commands</a> · <a href="https://developers.openai.com/codex/app/commands"
+                            target="_blank">App commands</a></p>
                 </div>
             </section>
 
             <!-- Section 11 -->
-            <section class="section" id="s11">
-                <h2><span class="section-num">11</span> <span data-i18n="s11_title">AGENTS.md 설정 가이드</span></h2>
-                <p data-i18n="s11_intro">Codex에게 프로젝트 맥락과 규칙을 알려주는 핵심 파일. CLI, App, IDE, Cloud 모두에서 참조합니다.</p>
-                <pre data-i18n-html="code_s11_loc"><code><span class="c"># AGENTS.md 위치 및 우선순위</span>
+            <section class="section" id="s12">
+                <h2><span class="section-num">12</span> <span data-i18n="s12_title">AGENTS.md 설정 가이드</span></h2>
+                <p data-i18n="s12_intro">Codex에게 프로젝트 맥락과 규칙을 알려주는 핵심 파일. CLI, App, IDE, Web 모두에서 참조합니다.</p>
+                <pre data-i18n-html="code_s12_loc"><code><span class="c"># AGENTS.md 위치 및 우선순위</span>
 AGENTS.override.md  → 최우선
 ./AGENTS.md         → 가장 가까운 파일
 ../AGENTS.md        → 상위 디렉토리
 ~/.codex/AGENTS.md  → 전역 개인 설정</code></pre>
-                <h3 data-i18n="s11_principles">작성 5원칙</h3>
+                <h3 data-i18n="s12_principles">작성 5원칙</h3>
                 <div class="feature-chips">
-                    <span class="chip" data-i18n="s11_p1">전문가 역할 지정</span>
-                    <span class="chip" data-i18n="s11_p2">코드로 보여주기</span>
-                    <span class="chip" data-i18n="s11_p3">구체적 명령</span>
-                    <span class="chip" data-i18n="s11_p4">Always / Ask / Never</span>
-                    <span class="chip" data-i18n="s11_p5">살아있는 문서</span>
+                    <span class="chip" data-i18n="s12_p1">전문가 역할 지정</span>
+                    <span class="chip" data-i18n="s12_p2">코드로 보여주기</span>
+                    <span class="chip" data-i18n="s12_p3">구체적 명령</span>
+                    <span class="chip" data-i18n="s12_p4">Always / Ask / Never</span>
+                    <span class="chip" data-i18n="s12_p5">살아있는 문서</span>
                 </div>
-                <pre data-i18n-html="code_s11_init"><code><span class="c"># 자동 생성</span>
+                <pre data-i18n-html="code_s12_init"><code><span class="c"># 자동 생성</span>
 codex init</code></pre>
             </section>
 
             <!-- Section 12 -->
-            <section class="section" id="s12">
-                <h2><span class="section-num">12</span> <span data-i18n="s12_title">config.toml 설정</span></h2>
-                <pre data-i18n-html="code_s12_config"><code><span class="c"># ~/.codex/config.toml</span>
+            <section class="section" id="s13">
+                <h2><span class="section-num">13</span> <span data-i18n="s13_title">config.toml 설정</span></h2>
+                <pre data-i18n-html="code_s13_config"><code><span class="c"># ~/.codex/config.toml</span>
 model = "gpt-5.3-codex"
 model_provider = "openai"
 approval_policy = "on-request"
@@ -642,18 +1045,18 @@ model = "gpt-5.3-codex-spark"
 model_reasoning_effort = "low"
 
 [profiles.deep]
-model = "o3"
-model_reasoning_effort = "xhigh"</code></pre>
+model = "gpt-5.3-codex"
+model_reasoning_effort = "high"</code></pre>
                 <pre><code>codex --profile fast
 codex --profile deep</code></pre>
             </section>
 
             <!-- Section 13 -->
-            <section class="section" id="s13">
-                <h2><span class="section-num">13</span> <span data-i18n="s13_title">MCP (Model Context Protocol)</span>
+            <section class="section" id="s14">
+                <h2><span class="section-num">14</span> <span data-i18n="s14_title">MCP (Model Context Protocol)</span>
                 </h2>
-                <p data-i18n="s13_intro">AI 모델과 외부 도구(브라우저, DB, 파일시스템 등)를 연결하는 표준 프로토콜.</p>
-                <pre data-i18n-html="code_s13_mcp"><code><span class="c"># MCP 서버 추가</span>
+                <p data-i18n="s14_intro">AI 모델과 외부 도구(브라우저, DB, 파일시스템 등)를 연결하는 표준 프로토콜.</p>
+                <pre data-i18n-html="code_s14_mcp"><code><span class="c"># MCP 서버 추가</span>
 codex mcp add playwright -- npx @playwright/mcp
 
 <span class="c"># config.toml</span>
@@ -701,141 +1104,161 @@ args = ["@playwright/mcp"]</code></pre>
             </section>
 
             <!-- Section 14 -->
-            <section class="section" id="s14">
-                <h2><span class="section-num">14</span> <span data-i18n="s14_title">세션 관리</span></h2>
-                <pre data-i18n-html="code_s14_session"><code>codex resume --last     <span class="c"># 마지막 세션</span>
+            <section class="section" id="s15">
+                <h2><span class="section-num">15</span> <span data-i18n="s15_title">세션 관리</span></h2>
+                <pre data-i18n-html="code_s15_session"><code>codex resume --last     <span class="c"># 마지막 세션</span>
 codex resume            <span class="c"># 목록에서 선택</span>
 codex resume &lt;ID&gt;       <span class="c"># 특정 세션</span>
 
 <span class="c"># 세션 내 명령</span>
-/sessions  /new  /status  /compact  /memory</code></pre>
+/permissions  /mcp  /status  /review  /feedback  /compact</code></pre>
             </section>
 
             <!-- Section 15 -->
-            <section class="section" id="s15">
-                <h2><span class="section-num">15</span> <span data-i18n="s15_title">비대화형 자동화 & CI/CD</span></h2>
-                <pre data-i18n-html="code_s15_exec"><code><span class="c"># codex exec - 실행 후 자동 종료</span>
+            <section class="section" id="s16">
+                <h2><span class="section-num">16</span> <span data-i18n="s16_title">비대화형 자동화 & CI/CD</span></h2>
+                <pre data-i18n-html="code_s16_exec"><code><span class="c"># codex exec - 실행 후 자동 종료</span>
 codex exec "Review this PR" --output stdout
 codex exec "Fix all TODOs" --approval-mode full-auto</code></pre>
                 <div class="callout">
-                    <strong data-i18n="s15_cloud_title">Cloud 자동 리뷰</strong>
-                    <p data-i18n="s15_cloud_desc">GitHub 연결 후 "Automatic reviews" 활성화 → 새 PR마다 자동 리뷰, AGENTS.md 규칙 기반
-                        커스터마이징.</p>
+                    <strong data-i18n="s16_cloud_title">Codex Web 자동 리뷰</strong>
+                    <p data-i18n="s16_cloud_desc">GitHub 연결 + 리뷰 대상 저장소 선택 후 "Automatic reviews" 활성화 → 새 PR마다 자동 리뷰,
+                        AGENTS.md 규칙 기반 커스터마이징.</p>
                 </div>
             </section>
 
             <!-- Section 16 -->
-            <section class="section" id="s16">
-                <h2><span class="section-num">16</span> <span data-i18n="s16_title">프롬프트 엔지니어링 팁</span></h2>
+            <section class="section" id="s17">
+                <h2><span class="section-num">17</span> <span data-i18n="s17_title">프롬프트 엔지니어링 팁</span></h2>
+                <p class="section-credit" data-i18n="s17_credit">@reach_vb (Vaibhav Srivastav, OpenAI DevRel) 포스팅 기반 정리
+                </p>
+
+                <!-- 1. 기본 설정 및 모델 선택 -->
+                <h3 data-i18n="s17_c1_title">⚙️ 기본 설정 및 모델 선택</h3>
                 <div class="tip-grid">
                     <div class="tip-card">
-                        <h4 data-i18n="s16_t1_title">1. 구체적이고 명확하게</h4>
-                        <pre data-i18n-html="code_s16_t1"><code><span class="c"># ❌</span> 코드를 고쳐줘
-<span class="c"># ✅</span> @src/utils/date.ts 의 formatDate에서
-KST 처리 버그를 Intl.DateTimeFormat으로 수정해</code></pre>
-                    </div>
-                    <div class="tip-card">
-                        <h4 data-i18n="s16_t2_title">2. 단계적으로 분해</h4>
-                        <pre data-i18n-html="code_s16_t2"><code><span class="c"># 1단계:</span> User 모델과 타입 정의
-<span class="c"># 2단계:</span> CRUD API 엔드포인트
-<span class="c"># 3단계:</span> 인증 미들웨어</code></pre>
-                    </div>
-                    <div class="tip-card">
-                        <h4 data-i18n="s16_t3_title">3. 검증 포함</h4>
-                        <pre data-i18n-html="code_s16_t3"><code>이 기능을 구현하고 단위 테스트도 작성해.
-린팅 통과 확인하고 기존 테스트도 돌려봐.</code></pre>
-                    </div>
-                    <div class="tip-card">
-                        <h4 data-i18n="s16_t4_title">4. Mid-Turn Steering (NEW)</h4>
-                        <pre data-i18n-html="code_s16_t4"><code><span class="c"># Codex 작업 중 방향 전환</span>
-&gt; 잠깐, Zod 스키마를 대신 사용해줘
-<span class="c"># → 즉시 방향 전환</span></code></pre>
-                    </div>
-                </div>
-
-
-                <h3 data-i18n="s16_pro_title">실전 Pro Tips (커뮤니티)</h3>
-
-                <div class="callout">
-                    <strong data-i18n="s16_vs_title">Codex vs Claude Code — 최강 조합</strong>
-                    <p data-i18n="s16_vs_desc">Codex = 실제 코드 구현력이 뛰어나고 세부 놓침이 적음. Claude = 플래닝·검증·테스트·대안 제안에 강함. 추천:
-                        Claude로 설계/QA, Codex로 구현하는 슈퍼팀 구성.</p>
-                </div>
-
-                <h4 data-i18n="s16_model_combo">모델 조합 전략</h4>
-                <div class="table-wrap">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th data-i18n="s16_pro_model">추천 모델</th>
-                                <th data-i18n="s16_pro_use">용도</th>
-                                <th data-i18n="s16_pro_detail">상세</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>Spark</strong></td>
-                                <td data-i18n="s16_m1_use">빠른 반복 작업</td>
-                                <td data-i18n="s16_m1_d">변수명 변경, UI 조정, 소규모 리팩토링. 1000+ tok/sec</td>
-                            </tr>
-                            <tr>
-                                <td><strong>GPT-5.3-Codex</strong></td>
-                                <td data-i18n="s16_m2_use">교차 검증 / 메인 코딩</td>
-                                <td data-i18n="s16_m2_d">에이전틱 코딩 최적화. 멀티파일 작업의 밸런스 최고</td>
-                            </tr>
-                            <tr>
-                                <td><strong>o3 xhigh</strong></td>
-                                <td data-i18n="s16_m3_use">코드 리뷰, QA, 아키텍처</td>
-                                <td data-i18n="s16_m3_d">깊은 추론. 복잡한 논리적 검증에 최적</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <h4 data-i18n="s16_tips_title">실전 경험 팁</h4>
-                <div class="tip-grid">
-                    <div class="tip-card">
-                        <h4 data-i18n="s16_rt1_t">작업을 잘게 쪼개서 던지기</h4>
-                        <p data-i18n="s16_rt1_d">한 번에 다 시키지 말고, 설계 → 최소 구현 → 테스트 추가 → 리팩토링 순으로 티켓처럼 나눠서 주면 성공률이 크게 올라간다.
+                        <h4 data-i18n="s17_c1_t1_t">AGENTS.md 생성 필수</h4>
+                        <p data-i18n="s17_c1_t1_d">프로젝트마다 AGENTS.md를 생성하세요. 핵심 지침을 저장하면 모델이 읽어 컨텍스트를 유지합니다.
+                            <code>/init</code>으로 자동 생성 가능.
                         </p>
                     </div>
                     <div class="tip-card">
-                        <h4 data-i18n="s16_rt2_t">컨텍스트 강점 활용</h4>
-                        <p data-i18n="s16_rt2_d">Claude보다 컨텍스트가 잘 유지되고, 무거운 작업에서도 늦게 차는 편. /compact(요약)도 자연스럽게 잘 된다.</p>
+                        <h4 data-i18n="s17_c1_t2_t">Reasoning Effort 전략</h4>
+                        <p data-i18n="s17_c1_t2_d"><strong>복잡한 계획/설계</strong>: High 또는 XHigh. <strong>구현/반복 작업</strong>:
+                            Medium 또는 Low로 속도와 비용 최적화.</p>
                     </div>
                     <div class="tip-card">
-                        <h4 data-i18n="s16_rt3_t">AGENTS.md 커스터마이징 필수</h4>
-                        <p data-i18n="s16_rt3_d">목적·역할 분리·우선순위·품질 게이트·금지사항 등을 명확히 적어주면 훨씬 안정적으로 움직인다.</p>
+                        <h4 data-i18n="s17_c1_t3_t">모델 조합 전략</h4>
+                        <p data-i18n="s17_c1_t3_d"><strong>gpt-5.3-codex-spark</strong>: 짧은 반복 작업과 빠른 시도에 적합한 리서치
+                            프리뷰.<br><strong>gpt-5.3-codex</strong>: 멀티파일 에이전틱 코딩의 메인 모델.</p>
+                    </div>
+                </div>
+
+                <!-- 2. 워크플로 및 계획 -->
+                <h3 data-i18n="s17_c2_title">📋 워크플로 및 계획</h3>
+                <div class="tip-grid">
+                    <div class="tip-card">
+                        <h4 data-i18n="s17_c2_t1_t">기본부터 시작, 반복적 빌드</h4>
+                        <p data-i18n="s17_c2_t1_d">복잡한 작업은 단순하게 시작하고 점진 확장. Codex에게 결과를 <strong>검증(Verify)</strong>하도록
+                            요청하면 최적 성능.</p>
                     </div>
                     <div class="tip-card">
-                        <h4 data-i18n="s16_rt4_t">병렬·멀티 에이전트 활용</h4>
-                        <p data-i18n="s16_rt4_d">여러 에이전트를 동시에 돌릴 때 Codex가 안정적이라는 의견 다수. Worktree로 격리하면 충돌 없이 병렬 작업 가능.
+                        <h4 data-i18n="s17_c2_t2_t">/plan(/plan-mode) → 실행 → /review</h4>
+                        <p data-i18n="s17_c2_t2_d"><code>/plan</code>(CLI) 또는 <code>/plan-mode</code>(App)로 계획을 세운 뒤 작업을 실행하고,
+                            마지막에 <code>/review</code>로 결과를 점검하세요.
                         </p>
                     </div>
                     <div class="tip-card">
-                        <h4 data-i18n="s16_rt5_t">단축키·편의 기능</h4>
-                        <p data-i18n="s16_rt5_d">Ctrl+C: 현재 프롬프트 초기화 (많은 사람이 늦게 발견). Cmd+J: 내장 터미널 토글. codex app: CLI에서
-                            앱 실행.</p>
+                        <h4 data-i18n="s17_c2_t3_t">큐잉 & 병렬 처리</h4>
+                        <p data-i18n="s17_c2_t3_d">아이디어가 떠오를 때마다 Codex에 큐를 쌓아 병렬 처리. 여러 에이전트를 동시 투입하면 거의 모든 것을 달성 가능.
+                        </p>
                     </div>
                     <div class="tip-card">
-                        <h4 data-i18n="s16_rt6_t">빠른 프로토타이핑에 강함</h4>
-                        <p data-i18n="s16_rt6_d">"수정 → 확인 → 재수정" 사이클이 빠른 작업에서 체감 속도 차이 큼. 특히 Spark 모델과 함께 사용 시 효과적.</p>
+                        <h4 data-i18n="s17_c2_t4_t">AGENTS.md 적극 업데이트</h4>
+                        <p data-i18n="s17_c2_t4_d">Codex가 실수할 때마다 즉시 AGENTS.md 업데이트. 압축(Compaction) 후에도 모델이 다시 읽어 컨텍스트
+                            유지. 문서가 곧 기억.</p>
+                    </div>
+                </div>
+
+                <!-- 3. 스킬 및 도구 -->
+                <h3 data-i18n="s17_c3_title">🔧 스킬 및 도구 통합</h3>
+                <div class="tip-grid">
+                    <div class="tip-card">
+                        <h4 data-i18n="s17_c3_t1_t">추천 스킬</h4>
+                        <p data-i18n="s17_c3_t1_d">프로젝트 성격에 맞는 스킬을 우선 사용하세요. 예: <strong>Playwright</strong>(브라우저 자동화),
+                            <strong>code-review</strong>(리뷰 품질 강화), <strong>tdd</strong>(테스트 우선 개발).
+                        </p>
+                    </div>
+                    <div class="tip-card">
+                        <h4 data-i18n="s17_c3_t2_t">워크트리 & 백그라운드</h4>
+                        <p data-i18n="s17_c3_t2_d">워크트리 모드로 변경 격리, 병렬 작업 시 충돌 방지. 백그라운드 터미널에서 테스트/린트/Git 실행. 결과를 인박스로
+                            전달.</p>
+                    </div>
+                    <div class="tip-card">
+                        <h4 data-i18n="s17_c3_t3_t">IDE 싱크 & Git 리뷰</h4>
+                        <p data-i18n="s17_c3_t3_d">현재 보고 있는 파일에 자동 컨텍스트 제공. 내장 Git 리뷰로 Diff 확인, hunk 스테이징/되돌리기, 인라인 댓글
+                            가능.</p>
+                    </div>
+                </div>
+
+                <!-- 4. 앱/CLI/웹 팁 -->
+                <h3 data-i18n="s17_c4_title">💻 앱 / CLI / 웹 팁</h3>
+                <div class="tip-grid">
+                    <div class="tip-card">
+                        <h4 data-i18n="s17_c4_t1_t">CLI 우선 빌드</h4>
+                        <p data-i18n="s17_c4_t1_d">에이전트가 검증하기 쉬운 CLI부터 시작하고, UI 등 다른 표면을 추가. 코드가 일회성이라면 아이디어 테스트 후 브랜치
+                            폐기.</p>
+                    </div>
+                    <div class="tip-card">
+                        <h4 data-i18n="s17_c4_t2_t">앱 편의 기능</h4>
+                        <p data-i18n="s17_c4_t2_d">여러 프로젝트/스레드를 하나의 앱에서 관리. <strong>Ctrl+M</strong>으로 음성 입력.
+                            <code>/persona</code>로 응답 스타일 조정.
+                        </p>
+                    </div>
+                    <div class="tip-card">
+                        <h4 data-i18n="s17_c4_t3_t">웹 활용</h4>
+                        <p data-i18n="s17_c4_t3_d">Codex Web에서 GitHub를 연결하고 자동 PR 리뷰를 활성화하면 비동기 검증 흐름을 만들기 좋습니다.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 5. 고급 조언 -->
+                <h3 data-i18n="s17_c5_title">🚀 고급 조언</h3>
+                <div class="tip-grid">
+                    <div class="tip-card">
+                        <h4 data-i18n="s17_c5_t1_t">구체적이고 명확한 프롬프트</h4>
+                        <p data-i18n="s17_c5_t1_d">❌ "코드를 고쳐줘" → ✅ "@src/utils/date.ts의 formatDate에서 KST 처리 버그를
+                            Intl.DateTimeFormat으로 수정해"</p>
+                    </div>
+                    <div class="tip-card">
+                        <h4 data-i18n="s17_c5_t2_t">검증 포함 요청</h4>
+                        <p data-i18n="s17_c5_t2_d">"이 기능을 구현하고 단위 테스트도 작성해. 린팅 통과 확인하고 기존 테스트도 돌려봐." - 검증을 포함하면 성공률 대폭
+                            상승.</p>
+                    </div>
+                    <div class="tip-card">
+                        <h4 data-i18n="s17_c5_t3_t">Mid-Turn Steering</h4>
+                        <p data-i18n="s17_c5_t3_d">Codex 작업 중 "잠깐, Zod 스키마를 대신 사용해줘"처럼 추가 지시를 보내면 작업 방향을 중간에 조정할 수
+                            있습니다.</p>
+                    </div>
+                    <div class="tip-card">
+                        <h4 data-i18n="s17_c5_t4_t">프로토타이핑에 강함</h4>
+                        <p data-i18n="s17_c5_t4_d">"수정 → 확인 → 재수정" 사이클이 빠른 작업에서 Codex가 특히 효율적입니다. Spark 모델은 빠른 반복 실험에
+                            유리합니다.</p>
                     </div>
                 </div>
             </section>
 
             <!-- Section 17 -->
-            <section class="section" id="s17">
-                <h2><span class="section-num">17</span> <span data-i18n="s17_title">고급 활용 기법</span></h2>
-                <pre data-i18n-html="code_s17_adv"><code><span class="c"># 추론 수준 조절</span>
+            <section class="section" id="s18">
+                <h2><span class="section-num">18</span> <span data-i18n="s18_title">고급 활용 기법</span></h2>
+                <pre data-i18n-html="code_s18_adv"><code><span class="c"># 추론 수준 조절</span>
 /model gpt-5.3-codex-spark  <span class="c"># 초고속</span>
 /model gpt-5.3-codex        <span class="c"># 복잡한 작업</span>
-/model o3                   <span class="c"># 가장 깊은 추론</span>
 
 <span class="c"># 멀티 디렉토리</span>
 codex --add-dir /path/to/libs
 
-<span class="c"># 웹 검색</span>
+<span class="c"># 웹 검색(인터랙티브에서 --search 전역 옵션 사용)</span>
 codex --search "optimize with Next.js 15"
 
 <span class="c"># 컨텍스트 압축</span>
@@ -843,8 +1266,8 @@ codex --search "optimize with Next.js 15"
             </section>
 
             <!-- Section 18 -->
-            <section class="section" id="s18">
-                <h2><span class="section-num">18</span> <span data-i18n="s18_title">Codex vs Cursor vs Claude
+            <section class="section" id="s19">
+                <h2><span class="section-num">19</span> <span data-i18n="s19_title">Codex vs Cursor vs Claude
                         Code</span></h2>
                 <div class="table-wrap">
                     <table>
@@ -859,9 +1282,9 @@ codex --search "optimize with Next.js 15"
                         <tbody>
                             <tr>
                                 <td data-i18n="cmp_interface">인터페이스</td>
-                                <td>CLI+App+IDE+Cloud</td>
-                                <td>IDE</td>
-                                <td data-i18n="cmp_terminal">터미널</td>
+                                <td>CLI+App+IDE+Web</td>
+                                <td>CLI(beta) + IDE + Background Agents</td>
+                                <td data-i18n="cmp_terminal">CLI + IDE + Web/iOS(리서치 프리뷰) + Slack</td>
                             </tr>
                             <tr>
                                 <td data-i18n="cmp_oss">오픈소스</td>
@@ -872,38 +1295,38 @@ codex --search "optimize with Next.js 15"
                             <tr>
                                 <td data-i18n="cmp_model">주요 모델</td>
                                 <td>GPT-5.3-Codex</td>
-                                <td>Claude, GPT</td>
-                                <td>Claude Opus 4.5</td>
+                                <td data-i18n="cmp_cursor_model">선택한 제공 모델에 따라 다름</td>
+                                <td data-i18n="cmp_claude_model">Claude Opus/Sonnet/Haiku 계열 (플랜별)</td>
                             </tr>
                             <tr>
                                 <td data-i18n="cmp_cloud">클라우드 실행</td>
                                 <td>✅</td>
-                                <td>❌</td>
-                                <td>❌</td>
+                                <td data-i18n="cmp_plan_varies">✅ Cloud/Background Agents</td>
+                                <td data-i18n="cmp_plan_varies2">✅ Web/iOS(리서치 프리뷰) + GitHub/GitLab CI 러너</td>
                             </tr>
                             <tr>
                                 <td data-i18n="cmp_gh">GitHub 통합</td>
                                 <td data-i18n="cmp_gh_auto">✅ 자동 PR/리뷰</td>
-                                <td data-i18n="cmp_basic">기본</td>
-                                <td data-i18n="cmp_basic2">기본</td>
+                                <td data-i18n="cmp_basic">✅ GitHub App</td>
+                                <td data-i18n="cmp_basic2">✅ GitHub Actions + GitLab CI/CD</td>
                             </tr>
                             <tr>
                                 <td data-i18n="cmp_multi">멀티에이전트</td>
                                 <td>✅ (App)</td>
-                                <td>❌</td>
-                                <td>❌</td>
+                                <td data-i18n="cmp_plan_varies3">✅ 비동기 Background Agents</td>
+                                <td data-i18n="cmp_plan_varies4">✅ Subagents(위임형 멀티에이전트)</td>
                             </tr>
                             <tr>
                                 <td>MCP</td>
                                 <td>✅</td>
-                                <td>✅</td>
-                                <td>✅</td>
+                                <td data-i18n="cmp_mcp_varies">✅</td>
+                                <td data-i18n="cmp_mcp_varies2">✅</td>
                             </tr>
                             <tr>
                                 <td data-i18n="cmp_price">가격</td>
-                                <td data-i18n="cmp_included">ChatGPT 포함</td>
-                                <td>$20/mo~</td>
-                                <td data-i18n="cmp_api">API 기반</td>
+                                <td data-i18n="cmp_included">ChatGPT 플랜 포함(사용량 한도)</td>
+                                <td>Hobby Free, Pro $20, Pro+ $60, Ultra $200, Teams $40/user, Enterprise custom</td>
+                                <td data-i18n="cmp_api">Pro/Max/Team/Enterprise 포함 또는 Console API 종량제</td>
                             </tr>
                         </tbody>
                     </table>
@@ -911,17 +1334,18 @@ codex --search "optimize with Next.js 15"
             </section>
 
             <!-- Section 19 -->
-            <section class="section" id="s19">
-                <h2><span class="section-num">19</span> <span data-i18n="s19_title">FAQ</span></h2>
+            <section class="section" id="s20">
+                <h2><span class="section-num">20</span> <span data-i18n="s20_title">FAQ</span></h2>
                 <div class="faq-list">
                     <details>
-                        <summary data-i18n="faq1_q">Codex CLI / App / IDE / Cloud의 차이는?</summary>
+                        <summary data-i18n="faq1_q">Codex CLI / App / IDE / Web의 차이는?</summary>
                         <p data-i18n="faq1_a">모두 같은 Codex App Server 프로토콜을 사용하지만 인터페이스가 다릅니다. CLI는 터미널, App은 macOS
                             멀티에이전트, IDE는 VS Code 통합, Cloud는 브라우저에서 GitHub 연동.</p>
                     </details>
                     <details>
                         <summary data-i18n="faq2_q">무료로 사용할 수 있나요?</summary>
-                        <p data-i18n="faq2_a">CLI는 오픈소스이지만, OpenAI API 또는 ChatGPT Plus($20/월) 이상 구독이 필요합니다.</p>
+                        <p data-i18n="faq2_a">네! ChatGPT 무료 계정으로도 Codex CLI, App, Web 모두 한시적 무료 접근이 가능합니다 (5시간당 약
+                            10~30회). 안정적 사용을 위해서는 Plus($20/월) 이상을 권장하며, API Key 종량제도 지원됩니다.</p>
                     </details>
                     <details>
                         <summary data-i18n="faq3_q">Full Auto 모드가 안전한가요?</summary>
@@ -929,18 +1353,21 @@ codex --search "optimize with Next.js 15"
                     </details>
                     <details>
                         <summary data-i18n="faq4_q">GPT-5.3-Codex-Spark는 뭔가요?</summary>
-                        <p data-i18n="faq4_a">2026.02 리서치 프리뷰로, 초당 1000+ 토큰의 초고속 코딩 모델입니다.</p>
+                        <p data-i18n="faq4_a">2026.02 리서치 프리뷰로 공개된 텍스트 중심 코딩 모델입니다. 빠른 반복 작업에 초점을 둔 옵션이며, 최신 제공 범위는
+                            플랜/문서 기준으로 확인하세요.
+                        </p>
                     </details>
                     <details>
                         <summary data-i18n="faq5_q">오프라인에서 사용 가능한가요?</summary>
-                        <p data-i18n="faq5_a">MCP로 로컬 모델(Ollama 등)을 연결하면 가능하지만, 품질은 OpenAI 모델보다 떨어집니다.</p>
+                        <p data-i18n="faq5_a">Codex CLI는 오픈소스(Rust)이며, 타사 모델 프로바이더(Ollama 등)를 연결할 수 있지만, 품질은 OpenAI 모델보다
+                            떨어집니다.</p>
                     </details>
                 </div>
             </section>
 
             <!-- Section 20 -->
-            <section class="section" id="s20">
-                <h2><span class="section-num">20</span> <span data-i18n="s20_title">참고 자료</span></h2>
+            <section class="section" id="s21">
+                <h2><span class="section-num">21</span> <span data-i18n="s21_title">참고 자료</span></h2>
                 <div class="link-grid">
                     <a href="https://openai.com/codex" target="_blank" class="link-card">OpenAI Codex</a>
                     <a href="https://github.com/openai/codex" target="_blank" class="link-card">GitHub Repo</a>
