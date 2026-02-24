@@ -1,2 +1,3 @@
 .omx/
 *.md
+!README.md
