@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Codex 101 — OpenAI Codex Complete Guide</title>
     <meta name="description"
-        content="The definitive guide to OpenAI Codex: CLI, App, IDE Extension, and Web. Updated February 2026." />
+        content="The definitive guide to OpenAI Codex: CLI, Desktop App (macOS/Windows), IDE Extension, and Web. Updated March 2026." />
     <meta property="og:title" content="Codex 101 — OpenAI Codex Complete Guide" />
     <meta property="og:description"
-        content="Master OpenAI Codex: CLI, macOS App, IDE Extension, and Web Dashboard. Bilingual KR/EN guide." />
+        content="Master OpenAI Codex: CLI, Desktop App (macOS/Windows), IDE Extension, and Web Dashboard. Bilingual KR/EN guide." />
     <meta property="og:type" content="website" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,9 +38,9 @@
     <header class="hero">
         <div class="hero-glow"></div>
         <div class="container">
-            <p class="hero-badge" data-i18n="hero_badge">Updated Feb 2026</p>
+            <p class="hero-badge" data-i18n="hero_badge">Updated Mar 2026</p>
             <h1 class="hero-title" data-i18n="hero_title">OpenAI Codex 완벽 가이드 101</h1>
-            <p class="hero-sub" data-i18n="hero_sub">CLI · macOS App · IDE Extension · Web Dashboard<br />4가지 방법으로
+            <p class="hero-sub" data-i18n="hero_sub">CLI · Desktop App (macOS/Windows) · IDE Extension · Web Dashboard<br />4가지 방법으로
                 사용하는 에이전틱 코딩 플랫폼</p>
             <div class="hero-cta">
                 <a href="#s1" class="btn btn-primary" data-i18n="hero_cta">가이드 시작하기</a>
@@ -117,6 +117,10 @@
                                 <td>2026.02.12</td>
                                 <td data-i18n="tl9">Codex-Spark 리서치 프리뷰 공개</td>
                             </tr>
+                            <tr>
+                                <td>2026.03.04</td>
+                                <td data-i18n="tl10">Codex Windows App 공개</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -134,7 +138,7 @@
                     <div class="product-card">
                         <div class="product-icon">App</div>
                         <h3>Codex App</h3>
-                        <p data-i18n="s2_app">macOS 데스크톱 앱. 멀티에이전트 커맨드 센터, 내장 워크트리. 2026.02 출시.</p>
+                        <p data-i18n="s2_app">데스크톱 앱(macOS + Windows). 멀티에이전트 커맨드 센터, 내장 워크트리. macOS(2026.02.02)·Windows(2026.03.04) 공개.</p>
                     </div>
                     <div class="product-card">
                         <div class="product-icon">IDE</div>
@@ -154,7 +158,7 @@
             <section class="section" id="s3">
                 <h2><span class="section-num">03</span> <span data-i18n="s3_title">지원 모델</span></h2>
 
-                <h3 data-i18n="s3_models_title">최신 모델 (2026.02 기준)</h3>
+                <h3 data-i18n="s3_models_title">최신 모델 (2026.03 기준)</h3>
 
                 <h4 data-i18n="s3_rec_title">⭐ 추천 모델</h4>
                 <div class="model-grid">
@@ -501,7 +505,7 @@
                                 <tbody>
                                     <tr>
                                         <td><strong>OS</strong></td>
-                                        <td>macOS 12+, Ubuntu 20.04+, Windows 11 (WSL2)</td>
+                                        <td>macOS 12+, Ubuntu 20.04+, Windows 11 (CLI: WSL2, App: Native)</td>
                                     </tr>
                                     <tr>
                                         <td><strong>Node.js</strong></td>
@@ -591,16 +595,16 @@ codex login
 <span class="c"># 또는 API 키 사용</span>
 export OPENAI_API_KEY="your-api-key-here"</code></pre>
 
-                    <h3 data-i18n="s5_app_install">macOS App 설치</h3>
+                    <h3 data-i18n="s5_app_install">Desktop App 설치 (macOS/Windows)</h3>
                     <ol>
-                        <li data-i18n="s5_app1">openai.com/codex 에서 다운로드</li>
-                        <li data-i18n="s5_app2">.dmg 파일 실행 → Applications 폴더로 이동</li>
-                        <li data-i18n="s5_app3">ChatGPT 계정 또는 API 키로 로그인</li>
+                        <li data-i18n="s5_app1">macOS: openai.com/codex 에서 다운로드 (.dmg)</li>
+                        <li data-i18n="s5_app2">Windows: Microsoft Store에서 "Codex" 설치 (공식 문서 링크 참고)</li>
+                        <li data-i18n="s5_app3">앱 실행 후 ChatGPT 계정 또는 API 키로 로그인</li>
                     </ol>
                     <div class="callout waitlist-box">
-                        <p data-i18n="s5_waitlist_text">현재 macOS App만 사용 가능합니다. Windows는 WSL 가상환경으로 CLI 사용 가능.</p>
-                        <a href="https://openai.com/form/codex-app/" target="_blank" class="btn btn-secondary"
-                            data-i18n="s5_waitlist_btn">Windows/Linux App Waitlist 등록</a>
+                        <p data-i18n="s5_waitlist_text">업데이트(2026.03.04): Codex Windows 앱이 공개되었습니다. 현재는 미국/영문 지역 및 x86 장치에서 지원됩니다.</p>
+                        <a href="https://developers.openai.com/codex/app/windows" target="_blank" class="btn btn-secondary"
+                            data-i18n="s5_waitlist_btn">Windows App 공식 문서 보기</a>
                     </div>
 
                     <h3 data-i18n="s5_vsc_install">IDE Extension 설치</h3>
@@ -649,12 +653,12 @@ codex --cd /path/to/project
 
             <!-- Section 6 -->
             <section class="section" id="s7">
-                <h2><span class="section-num">07</span> <span data-i18n="s7_title">Codex App (macOS)</span></h2>
+                <h2><span class="section-num">07</span> <span data-i18n="s7_title">Codex App (macOS + Windows)</span></h2>
                 <figure class="screenshot">
-                    <img src="images/codex_app.png" alt="Codex macOS App interface" loading="lazy" />
-                    <figcaption data-i18n="img_app">Codex macOS App — 멀티에이전트 커맨드 센터와 워크트리 관리</figcaption>
+                    <img src="images/codex_app.png" alt="Codex Desktop App interface" loading="lazy" />
+                    <figcaption data-i18n="img_app">Codex Desktop App — 멀티에이전트 커맨드 센터와 워크트리 관리</figcaption>
                 </figure>
-                <p data-i18n="s7_intro">2026년 2월 2일 출시. 에이전틱 코딩의 "커맨드 센터". 여러 AI 에이전트를 동시에 관리하는 macOS 전용 데스크톱 앱.</p>
+                <p data-i18n="s7_intro">macOS 앱은 2026년 2월 2일 출시, Windows 앱은 2026년 3월 4일 업데이트로 공개되었습니다. 멀티에이전트 작업을 위한 데스크톱 커맨드 센터입니다.</p>
 
                 <h3 data-i18n="s7_modes_title">쓰레드 모드</h3>
                 <div class="table-wrap">
@@ -841,7 +845,7 @@ codex --cd /path/to/project
                 <pre><code>codex --approval-mode suggest
 codex --approval-mode auto-edit
 codex --approval-mode full-auto</code></pre>
-                <p data-i18n="s10_sandbox">보안: macOS는 Apple Seatbelt, Linux는 Docker 컨테이너 샌드박싱. Full Auto에서도 네트워크 기본 차단.
+                <p data-i18n="s10_sandbox">보안: macOS는 Apple Seatbelt, Windows는 Windows Sandbox, Linux는 Docker 컨테이너 샌드박싱. Full Auto에서도 네트워크 기본 차단.
                 </p>
             </section>
 
@@ -944,7 +948,7 @@ codex --approval-mode full-auto</code></pre>
 
                             <article class="command-surface">
                                 <div class="command-surface-head">
-                                    <h4 data-i18n="s11_app_title">Codex App (macOS)</h4>
+                                    <h4 data-i18n="s11_app_title">Codex App (Desktop)</h4>
                                     <span class="surface-badge">APP</span>
                                 </div>
                                 <div class="table-wrap">
@@ -979,7 +983,7 @@ codex --approval-mode full-auto</code></pre>
                     </div>
                     <div class="shortcut-panel">
                         <h3 data-i18n="s11_key_title">키보드 단축키 (CLI)</h3>
-                        <p class="command-note" data-i18n="s11_key_scope">아래 단축키는 CLI(TUI) 기준입니다. App은 Cmd 기반 단축키를, IDE는 각 IDE
+                        <p class="command-note" data-i18n="s11_key_scope">아래 단축키는 CLI(TUI) 기준입니다. App은 OS별 단축키(macOS Cmd, Windows Ctrl)를, IDE는 각 IDE
                             키맵을 사용합니다.</p>
                         <div class="table-wrap">
                             <table>
@@ -1132,6 +1136,15 @@ codex exec "Fix all TODOs" --approval-mode full-auto</code></pre>
                 <h2><span class="section-num">17</span> <span data-i18n="s17_title">프롬프트 엔지니어링 팁</span></h2>
                 <p class="section-credit" data-i18n="s17_credit">@reach_vb (Vaibhav Srivastav, OpenAI DevRel) 포스팅 기반 정리
                 </p>
+                <div class="callout">
+                    <strong data-i18n="s17_pg_title">GPT-5 Codex Prompting Guide - Quick Tips</strong>
+                    <p data-i18n="s17_pg_tips">1) 프롬프트는 길게 쓰기보다 목표/제약을 짧고 명확하게 작성하세요.<br>2) 관련 파일·함수·인터페이스를 명시하고, 반복 규칙은 AGENTS.md에 모아두세요.<br>3) 테스트/린트 실행과 실패 시 재시도까지 포함해 검증 루프를 요청하세요.<br>4) Codex API 작업은 Responses API 사용이 권장됩니다.</p>
+                    <p class="callout-inline" data-i18n="s17_pg_ref">레퍼런스: <a
+                            href="https://developers.openai.com/cookbook/examples/gpt-5/codex_prompting_guide"
+                            target="_blank">GPT-5 Codex Prompting Guide</a> · <a
+                            href="https://github.com/openai/openai-cookbook/blob/main/examples/gpt-5/codex_prompting_guide.ipynb"
+                            target="_blank">Source Notebook</a></p>
+                </div>
 
                 <!-- 1. 기본 설정 및 모델 선택 -->
                 <h3 data-i18n="s17_c1_title">⚙️ 기본 설정 및 모델 선택</h3>
@@ -1339,8 +1352,7 @@ codex --search "optimize with Next.js 15"
                 <div class="faq-list">
                     <details>
                         <summary data-i18n="faq1_q">Codex CLI / App / IDE / Web의 차이는?</summary>
-                        <p data-i18n="faq1_a">모두 같은 Codex App Server 프로토콜을 사용하지만 인터페이스가 다릅니다. CLI는 터미널, App은 macOS
-                            멀티에이전트, IDE는 VS Code 통합, Cloud는 브라우저에서 GitHub 연동.</p>
+                        <p data-i18n="faq1_a">모두 같은 Codex App Server 프로토콜을 사용하지만 인터페이스가 다릅니다. CLI는 터미널, App은 macOS/Windows 데스크톱 멀티에이전트, IDE는 VS Code 통합, Web은 브라우저에서 GitHub 연동.</p>
                     </details>
                     <details>
                         <summary data-i18n="faq2_q">무료로 사용할 수 있나요?</summary>
@@ -1371,8 +1383,12 @@ codex --search "optimize with Next.js 15"
                 <div class="link-grid">
                     <a href="https://openai.com/codex" target="_blank" class="link-card">OpenAI Codex</a>
                     <a href="https://github.com/openai/codex" target="_blank" class="link-card">GitHub Repo</a>
+                    <a href="https://developers.openai.com/codex/app/windows" target="_blank" class="link-card">Codex App for Windows (Official Docs)</a>
+                    <a href="https://openai.com/index/introducing-codex/" target="_blank" class="link-card">Introducing Codex (Mar 4, 2026 update)</a>
                     <a href="https://github.com/openai/codex/releases" target="_blank" class="link-card">Release
                         Notes</a>
+                    <a href="https://developers.openai.com/cookbook/examples/gpt-5/codex_prompting_guide"
+                        target="_blank" class="link-card">GPT-5 Codex Prompting Guide</a>
                     <a href="https://agents.md" target="_blank" class="link-card">agents.md Spec</a>
                     <a href="https://mcpmarket.com" target="_blank" class="link-card">MCP Marketplace</a>
                 </div>
@@ -1386,7 +1402,7 @@ codex --search "optimize with Next.js 15"
         <div class="container">
             <p class="footer-contrib" data-i18n="footer_contrib">이 가이드는 오픈소스입니다. 오류 수정, 번역 개선, 새 팁 추가 등 <a
                     href="https://github.com/swhan0329/codex-101" target="_blank">PR을 환영합니다</a>.</p>
-            <p class="footer-meta" data-i18n="footer_date">최종 업데이트: 2026년 2월 22일</p>
+            <p class="footer-meta" data-i18n="footer_date">최종 업데이트: 2026년 3월 5일</p>
             <p class="footer-meta">Made by <a href="https://github.com/swhan0329" target="_blank">@swhan0329</a></p>
         </div>
     </footer>
