@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Codex 101 — OpenAI Codex Complete Guide</title>
     <meta name="description"
-        content="The definitive guide to OpenAI Codex: CLI, Desktop App (macOS/Windows), IDE Extension, and Web. Updated March 2026." />
+        content="The definitive guide to OpenAI Codex: CLI, Desktop App (macOS/Windows), IDE Extension, and Web. Updated March 6, 2026 with GPT-5.4." />
     <meta property="og:title" content="Codex 101 — OpenAI Codex Complete Guide" />
     <meta property="og:description"
         content="Master OpenAI Codex: CLI, Desktop App (macOS/Windows), IDE Extension, and Web Dashboard. Bilingual KR/EN guide." />
@@ -38,7 +38,7 @@
     <header class="hero">
         <div class="hero-glow"></div>
         <div class="container">
-            <p class="hero-badge" data-i18n="hero_badge">Updated Mar 2026</p>
+            <p class="hero-badge" data-i18n="hero_badge">최신 업데이트: 2026년 3월 6일</p>
             <h1 class="hero-title" data-i18n="hero_title">OpenAI Codex 완벽 가이드 101</h1>
             <p class="hero-sub" data-i18n="hero_sub">CLI · Desktop App (macOS/Windows) · IDE Extension · Web Dashboard<br />4가지 방법으로
                 사용하는 에이전틱 코딩 플랫폼</p>
@@ -66,8 +66,8 @@
             <!-- Section 1 -->
             <section class="section" id="s1">
                 <h2><span class="section-num">01</span> <span data-i18n="s1_title">Codex 에코시스템 개요</span></h2>
-                <p data-i18n="s1_intro">OpenAI Codex는 2025년 5월에 codex-1(o3 기반)으로 재출시된 후, 2026년 2월 현재 GPT-5.3-Codex까지 진화한
-                    에이전틱 코딩 플랫폼입니다.</p>
+                <p data-i18n="s1_intro">OpenAI Codex는 2025년 5월 codex-1(o3 기반)으로 재출시된 뒤, 2026년 3월 현재 대부분의 작업에 gpt-5.4를 기본 권장 모델로 쓰고
+                    gpt-5.3-codex를 전문 코딩 모델로 함께 제공하는 에이전틱 코딩 플랫폼으로 발전했습니다.</p>
                 <blockquote data-i18n="s1_philosophy">"단순 코드 생성 → 소프트웨어 엔지니어 팀원"</blockquote>
                 <p data-i18n="s1_desc">Codex는 코드 자동완성 도구가 아닙니다. 여러 파일을 동시에 수정하고, 테스트를 실행하고, 결과를 검증하며, 스스로 디버깅하는 자율
                     에이전트입니다.</p>
@@ -94,16 +94,16 @@
                                 <td data-i18n="tl3">Codex CLI Rust 리라이트 베타 공개</td>
                             </tr>
                             <tr>
+                                <td>2025.08.27</td>
+                                <td data-i18n="tl6">Codex IDE Extension(Visual Studio Code) 변경로그 첫 공개</td>
+                            </tr>
+                            <tr>
                                 <td>2025.10.06</td>
                                 <td data-i18n="tl4">DevDay 2025에서 GPT-5 Codex GA 발표</td>
                             </tr>
                             <tr>
                                 <td>2025.12.18</td>
                                 <td data-i18n="tl5">GPT-5.2-Codex 출시 (멀티파일 최적화, 컨텍스트 압축)</td>
-                            </tr>
-                            <tr>
-                                <td>2025.08.27</td>
-                                <td data-i18n="tl6">Codex IDE Extension(Visual Studio Code) 변경로그 첫 공개</td>
                             </tr>
                             <tr>
                                 <td>2026.02.02</td>
@@ -120,6 +120,10 @@
                             <tr>
                                 <td>2026.03.04</td>
                                 <td data-i18n="tl10">Codex Windows App 공개</td>
+                            </tr>
+                            <tr>
+                                <td>2026.03.05</td>
+                                <td data-i18n="tl11">GPT-5.4 공개 및 Codex 추천 기본 모델로 반영</td>
                             </tr>
                         </tbody>
                     </table>
@@ -158,16 +162,47 @@
             <section class="section" id="s3">
                 <h2><span class="section-num">03</span> <span data-i18n="s3_title">지원 모델</span></h2>
 
-                <h3 data-i18n="s3_models_title">최신 모델 (2026.03 기준)</h3>
+                <h3 data-i18n="s3_models_title">최신 모델 (2026년 3월 6일 업데이트)</h3>
 
                 <h4 data-i18n="s3_rec_title">⭐ 추천 모델</h4>
                 <div class="model-grid">
+                    <!-- GPT-5.4 -->
+                    <div class="model-card">
+                        <div class="model-banner">gpt-5.4</div>
+                        <div class="model-body">
+                            <p class="model-desc" data-i18n="m1_f">전문 작업용 플래그십 프론티어 모델. GPT-5.3-Codex의 업계 최고 코딩 역량에 더 강한 추론, 도구
+                                사용, 에이전틱 워크플로를 결합합니다.</p>
+                            <div class="model-cmd">codex -m gpt-5.4</div>
+                            <div class="model-features">
+                                <div class="model-feat-row"><span class="model-feat-label"
+                                        data-i18n="feat_cap">Capability</span><span class="model-feat-value"><span
+                                            class="dot-filled">✦</span><span class="dot-filled">✦</span><span
+                                            class="dot-filled">✦</span><span class="dot-filled">✦</span><span
+                                            class="dot-filled">✦</span></span></div>
+                                <div class="model-feat-row"><span class="model-feat-label"
+                                        data-i18n="feat_spd">Speed</span><span class="model-feat-value"><span
+                                            class="dot-filled">⚡</span><span class="dot-filled">⚡</span><span
+                                            class="dot-filled">⚡</span></span></div>
+                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cli">Codex
+                                        CLI & SDK</span><span class="check-yes">✅</span></div>
+                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_app">Codex
+                                        app & IDE extension</span><span class="check-yes">✅</span></div>
+                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cloud">Codex
+                                        Cloud</span><span class="check-no">❌</span></div>
+                                <div class="model-feat-row"><span class="model-feat-label"
+                                        data-i18n="feat_credits">ChatGPT Credits</span><span class="check-yes">✅</span>
+                                </div>
+                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_api">API
+                                        Access</span><span class="check-yes">✅</span></div>
+                            </div>
+                        </div>
+                    </div>
                     <!-- GPT-5.3-Codex -->
                     <div class="model-card">
                         <div class="model-banner">gpt-5.3-codex</div>
                         <div class="model-body">
-                            <p class="model-desc" data-i18n="m1_f">현재까지 가장 강력한 에이전틱 코딩 모델. 프론티어급 코딩 성능에 더 강화된 추론 및 전문 지식
-                                역량을 결합.</p>
+                            <p class="model-desc" data-i18n="m2_f">복잡한 소프트웨어 엔지니어링을 위한 업계 최고 코딩 모델. 이 모델의 코딩 역량이 이제 GPT-5.4에도
+                                반영됩니다.</p>
                             <div class="model-cmd">codex -m gpt-5.3-codex</div>
                             <div class="model-features">
                                 <div class="model-feat-row"><span class="model-feat-label"
@@ -184,12 +219,12 @@
                                 <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_app">Codex
                                         app & IDE extension</span><span class="check-yes">✅</span></div>
                                 <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cloud">Codex
-                                        Web</span><span class="check-yes">✅</span></div>
+                                        Cloud</span><span class="check-yes">✅</span></div>
                                 <div class="model-feat-row"><span class="model-feat-label"
                                         data-i18n="feat_credits">ChatGPT Credits</span><span class="check-yes">✅</span>
                                 </div>
                                 <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_api">API
-                                        Access</span><span class="check-no">❌</span></div>
+                                        Access</span><span class="check-yes">✅</span></div>
                             </div>
                         </div>
                     </div>
@@ -197,8 +232,8 @@
                     <div class="model-card">
                         <div class="model-banner">gpt-5.3-codex-spark</div>
                         <div class="model-body">
-                            <p class="model-desc" data-i18n="m2_f">텍스트 전용 리서치 프리뷰 모델. 거의 즉각적인 실시간 코딩 반복에 최적화. ChatGPT
-                                Pro 사용자 전용.</p>
+                            <p class="model-desc" data-i18n="m3_f">텍스트 전용 리서치 프리뷰 모델. 거의 즉각적인 실시간 코딩 반복에 최적화되었으며 ChatGPT Pro
+                                사용자에게 제공됩니다.</p>
                             <div class="model-cmd">codex -m gpt-5.3-codex-spark</div>
                             <div class="model-features">
                                 <div class="model-feat-row"><span class="model-feat-label"
@@ -215,7 +250,7 @@
                                 <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_app">Codex
                                         app & IDE extension</span><span class="check-yes">✅</span></div>
                                 <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cloud">Codex
-                                        Web</span><span class="check-no">❌</span></div>
+                                        Cloud</span><span class="check-no">❌</span></div>
                                 <div class="model-feat-row"><span class="model-feat-label"
                                         data-i18n="feat_credits">ChatGPT Credits</span><span class="check-no">❌</span>
                                 </div>
@@ -224,39 +259,10 @@
                             </div>
                         </div>
                     </div>
-                    <!-- GPT-5.2-Codex -->
-                    <div class="model-card">
-                        <div class="model-banner">gpt-5.2-codex</div>
-                        <div class="model-body">
-                            <p class="model-desc" data-i18n="m3_f">실전 엔지니어링을 위한 고급 코딩 모델. gpt-5.3-codex로 대체됨.</p>
-                            <div class="model-cmd">codex -m gpt-5.2-codex</div>
-                            <div class="model-features">
-                                <div class="model-feat-row"><span class="model-feat-label"
-                                        data-i18n="feat_cap">Capability</span><span class="model-feat-value"><span
-                                            class="dot-filled">✦</span><span class="dot-filled">✦</span><span
-                                            class="dot-filled">✦</span><span class="dot-filled">✦</span></span></div>
-                                <div class="model-feat-row"><span class="model-feat-label"
-                                        data-i18n="feat_spd">Speed</span><span class="model-feat-value"><span
-                                            class="dot-filled">⚡</span><span class="dot-filled">⚡</span><span
-                                            class="dot-filled">⚡</span></span></div>
-                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cli">Codex
-                                        CLI & SDK</span><span class="check-yes">✅</span></div>
-                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_app">Codex
-                                        app & IDE extension</span><span class="check-yes">✅</span></div>
-                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cloud">Codex
-                                        Web</span><span class="check-yes">✅</span></div>
-                                <div class="model-feat-row"><span class="model-feat-label"
-                                        data-i18n="feat_credits">ChatGPT Credits</span><span class="check-yes">✅</span>
-                                </div>
-                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_api">API
-                                        Access</span><span class="check-yes">✅</span></div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <div class="callout">
-                    <p data-i18n="s3_rec_note">💡 대부분의 작업에는 gpt-5.3-codex를 권장합니다. App, CLI, IDE, Web 모두에서 사용 가능. API
-                        접근은 곧 제공 예정. Spark는 Pro 구독자 전용 리서치 프리뷰.</p>
+                    <p data-i18n="s3_rec_note">💡 Codex의 대부분 작업은 gpt-5.4부터 시작하는 것이 좋습니다. 강한 코딩, 추론, 네이티브 컴퓨터 사용, 더 넓은 전문
+                        워크플로를 한 모델에 결합합니다. gpt-5.3-codex-spark는 ChatGPT Pro용 리서치 프리뷰로, 거의 즉각적인 코딩 반복에 최적화되어 있습니다.</p>
                 </div>
 
                 <h4 data-i18n="s3_alt_title">🔄 대안 모델</h4>
@@ -265,7 +271,7 @@
                     <div class="model-card collapsible">
                         <div class="model-banner">gpt-5.2</div>
                         <div class="model-body">
-                            <p class="model-desc" data-i18n="m4_f">산업과 도메인 전반의 다양한 작업을 위한 최고의 범용 에이전틱 모델.</p>
+                            <p class="model-desc" data-i18n="m4_f">코딩과 에이전틱 작업 전반을 위한 이전 범용 모델. 현재는 GPT-5.4로 대체되었습니다.</p>
                             <div class="model-cmd">codex -m gpt-5.2</div>
                             <div class="model-features">
                                 <div class="model-feat-row"><span class="model-feat-label"
@@ -483,14 +489,14 @@
                 <div class="callout">
                     <p data-i18n="s3_cfg_default">config.toml에서 기본 모델을 설정할 수 있습니다. 지정하지 않으면 추천 모델이 기본값입니다.</p>
                 </div>
-                <pre><code>model = "gpt-5.3-codex"</code></pre>
+                <pre><code>model = "gpt-5.4"</code></pre>
                 <div class="callout">
                     <p data-i18n="s3_cfg_temp">CLI에서 <code>/model</code> 명령 또는 <code>codex -m 모델명</code> 플래그로 임시 변경 가능.
                         IDE에서는 입력창 아래 모델 선택기 사용.</p>
                 </div>
-                <pre><code>codex -m gpt-5.3-codex</code></pre>
+                <pre><code>codex -m gpt-5.4</code></pre>
                 <div class="callout">
-                    <p data-i18n="s3_cfg_cloud">Codex Web 작업의 기본 모델은 현재 변경할 수 없습니다.</p>
+                    <p data-i18n="s3_cfg_cloud">Codex 클라우드 작업의 기본 모델은 현재 변경할 수 없습니다.</p>
                 </div>
             </section>
 
@@ -524,7 +530,7 @@
                         </div>
                     </div>
                     <div>
-                        <h3 data-i18n="s4_price_title">ChatGPT 구독 요금 (2026.02)</h3>
+                        <h3 data-i18n="s4_price_title">ChatGPT 구독 요금</h3>
                         <div class="table-wrap">
                             <table>
                                 <thead>
@@ -621,7 +627,7 @@ export OPENAI_API_KEY="your-api-key-here"</code></pre>
                 <h2><span class="section-num">06</span> <span data-i18n="s6_title">Codex CLI 사용법</span></h2>
                 <figure class="screenshot">
                     <img src="images/codex_cli.png" alt="Codex CLI v0.104 running in terminal" loading="lazy" />
-                    <figcaption data-i18n="img_cli">Codex CLI v0.104.0 — 터미널에서 GPT-5.3-Codex xhigh 모델로 코드 작업
+                    <figcaption data-i18n="img_cli">Codex CLI v0.104.0 — 터미널 기반 에이전틱 코딩 워크플로
                     </figcaption>
                 </figure>
                 <pre data-i18n-html="code_s6_usage"><code><span class="c"># 인터랙티브 모드</span>
@@ -1037,7 +1043,7 @@ codex init</code></pre>
             <section class="section" id="s13">
                 <h2><span class="section-num">13</span> <span data-i18n="s13_title">config.toml 설정</span></h2>
                 <pre data-i18n-html="code_s13_config"><code><span class="c"># ~/.codex/config.toml</span>
-model = "gpt-5.3-codex"
+model = "gpt-5.4"
 model_provider = "openai"
 approval_policy = "on-request"
 sandbox_mode = "workspace-write"
@@ -1049,7 +1055,7 @@ model = "gpt-5.3-codex-spark"
 model_reasoning_effort = "low"
 
 [profiles.deep]
-model = "gpt-5.3-codex"
+model = "gpt-5.4"
 model_reasoning_effort = "high"</code></pre>
                 <pre><code>codex --profile fast
 codex --profile deep</code></pre>
@@ -1162,8 +1168,9 @@ codex exec "Fix all TODOs" --approval-mode full-auto</code></pre>
                     </div>
                     <div class="tip-card">
                         <h4 data-i18n="s17_c1_t3_t">모델 조합 전략</h4>
-                        <p data-i18n="s17_c1_t3_d"><strong>gpt-5.3-codex-spark</strong>: 짧은 반복 작업과 빠른 시도에 적합한 리서치
-                            프리뷰.<br><strong>gpt-5.3-codex</strong>: 멀티파일 에이전틱 코딩의 메인 모델.</p>
+                        <p data-i18n="s17_c1_t3_d"><strong>gpt-5.4</strong>: 대부분의 Codex 작업과 넓은 전문 워크플로의 기본 선택.<br><strong>gpt-5.3-codex</strong>:
+                            코딩 비중이 큰 복잡한 소프트웨어 엔지니어링 작업에 적합.<br><strong>gpt-5.3-codex-spark</strong>: 짧은 반복 작업과 빠른 시도에 적합한
+                            리서치 프리뷰.</p>
                     </div>
                 </div>
 
@@ -1266,7 +1273,7 @@ codex exec "Fix all TODOs" --approval-mode full-auto</code></pre>
                 <h2><span class="section-num">18</span> <span data-i18n="s18_title">고급 활용 기법</span></h2>
                 <pre data-i18n-html="code_s18_adv"><code><span class="c"># 추론 수준 조절</span>
 /model gpt-5.3-codex-spark  <span class="c"># 초고속</span>
-/model gpt-5.3-codex        <span class="c"># 복잡한 작업</span>
+/model gpt-5.4              <span class="c"># 대부분의 복잡한 작업</span>
 
 <span class="c"># 멀티 디렉토리</span>
 codex --add-dir /path/to/libs
@@ -1307,7 +1314,7 @@ codex --search "optimize with Next.js 15"
                             </tr>
                             <tr>
                                 <td data-i18n="cmp_model">주요 모델</td>
-                                <td>GPT-5.3-Codex</td>
+                                <td>GPT-5.4</td>
                                 <td data-i18n="cmp_cursor_model">선택한 제공 모델에 따라 다름</td>
                                 <td data-i18n="cmp_claude_model">Claude Opus/Sonnet/Haiku 계열 (플랜별)</td>
                             </tr>
@@ -1383,6 +1390,9 @@ codex --search "optimize with Next.js 15"
                 <div class="link-grid">
                     <a href="https://openai.com/codex" target="_blank" class="link-card">OpenAI Codex</a>
                     <a href="https://github.com/openai/codex" target="_blank" class="link-card">GitHub Repo</a>
+                    <a href="https://openai.com/index/introducing-gpt-5-4/" target="_blank" class="link-card">Introducing GPT-5.4</a>
+                    <a href="https://developers.openai.com/api/docs/models/gpt-5.4" target="_blank" class="link-card">GPT-5.4 Model Docs</a>
+                    <a href="https://developers.openai.com/codex/models/" target="_blank" class="link-card">Codex Models (Official)</a>
                     <a href="https://developers.openai.com/codex/app/windows" target="_blank" class="link-card">Codex App for Windows (Official Docs)</a>
                     <a href="https://openai.com/index/introducing-codex/" target="_blank" class="link-card">Introducing Codex (Mar 4, 2026 update)</a>
                     <a href="https://github.com/openai/codex/releases" target="_blank" class="link-card">Release
@@ -1402,7 +1412,7 @@ codex --search "optimize with Next.js 15"
         <div class="container">
             <p class="footer-contrib" data-i18n="footer_contrib">이 가이드는 오픈소스입니다. 오류 수정, 번역 개선, 새 팁 추가 등 <a
                     href="https://github.com/swhan0329/codex-101" target="_blank">PR을 환영합니다</a>.</p>
-            <p class="footer-meta" data-i18n="footer_date">최종 업데이트: 2026년 3월 5일</p>
+            <p class="footer-meta" data-i18n="footer_date">최종 업데이트: 2026년 3월 6일</p>
             <p class="footer-meta">Made by <a href="https://github.com/swhan0329" target="_blank">@swhan0329</a></p>
         </div>
     </footer>

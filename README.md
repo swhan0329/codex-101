@@ -6,7 +6,12 @@
 
 <p align="center">
   <strong>The definitive bilingual (🇰🇷 KR / 🇺🇸 EN) guide to OpenAI Codex</strong><br/>
-  CLI · macOS App · IDE Extension · Web Dashboard
+  CLI · Desktop App (macOS/Windows) · IDE Extension · Web Dashboard
+</p>
+
+<p align="center">
+  <strong>Last updated: March 6, 2026</strong><br/>
+  Includes GPT-5.4 and the latest Codex model guidance.
 </p>
 
 <p align="center">

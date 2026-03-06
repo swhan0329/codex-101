@@ -6,7 +6,12 @@
 
 <p align="center">
   <strong>다국어(🇰🇷 한국어 / 🇺🇸 English) OpenAI Codex 종합 가이드</strong><br/>
-  CLI · macOS App · IDE Extension · Web Dashboard
+  CLI · Desktop App (macOS/Windows) · IDE Extension · Web Dashboard
+</p>
+
+<p align="center">
+  <strong>최종 업데이트: 2026년 3월 6일</strong><br/>
+  GPT-5.4 및 최신 Codex 모델 가이드를 반영했습니다.
 </p>
 
 <p align="center">
