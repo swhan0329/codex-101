@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 3월 6일</strong><br/>
+  <strong>최종 업데이트: 2026년 3월 7일</strong><br/>
   GPT-5.4 및 최신 Codex 모델 가이드를 반영했습니다.
 </p>
 
@@ -36,7 +36,7 @@
 | 06–09 | CLI, App, IDE Extension, Web 사용법 |
 | 10–14 | 승인 모드, 슬래시 명령어, AGENTS.md, config.toml, MCP |
 | 15–16 | 세션 관리, CI/CD 자동화 |
-| 17 | 프롬프트 엔지니어링 팁 (@reach_vb 기반) |
+| 17 | Prompting GPT-5.4 개요, 실행 계약, 워크플로, 플레이북 |
 | 18–19 | 고급 활용, Codex vs Cursor vs Claude Code 비교 |
 | 20–21 | FAQ, 참고 자료 |
 
@@ -95,11 +95,11 @@ git push origin fix/my-improvement
 
 ```
 codex-101/
-├── index.html   # 메인 페이지 (21개 섹션)
-├── style.css    # 스타일 (다크/라이트 테마)
-├── app.js       # 인터랙션 (TOC, 모델 토글, 테마 등)
-├── i18n.js      # 다국어 번역 (KR/EN)
-└── images/      # 스크린샷
+├── index.html      # 메인 페이지 (챕터 맵 + 21개 섹션, Prompting GPT-5.4 포함)
+├── style.css       # 스타일 (다크/라이트 테마)
+├── app.js          # 인터랙션 (테마, 언어, 섹션 네비게이션)
+├── i18n.js         # 다국어 번역 (KR/EN)
+└── images/         # 스크린샷
 ```
 
 ---

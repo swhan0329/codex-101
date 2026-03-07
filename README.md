@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: March 6, 2026</strong><br/>
+  <strong>Last updated: March 7, 2026</strong><br/>
   Includes GPT-5.4 and the latest Codex model guidance.
 </p>
 
@@ -36,7 +36,7 @@ Based on the [official OpenAI documentation](https://developers.openai.com/codex
 | 06–09 | CLI, App, IDE Extension, Web usage |
 | 10–14 | Approval modes, slash commands, AGENTS.md, config.toml, MCP |
 | 15–16 | Session management, CI/CD automation |
-| 17 | Prompt engineering tips (curated from @reach_vb) |
+| 17 | Prompting GPT-5.4 overview with embedded contracts, workflows, and playbooks |
 | 18–19 | Advanced techniques, Codex vs Cursor vs Claude Code |
 | 20–21 | FAQ, references |
 
@@ -95,11 +95,11 @@ git push origin fix/my-improvement
 
 ```
 codex-101/
-├── index.html   # Main page (21 sections)
-├── style.css    # Styles (dark/light theme)
-├── app.js       # Interactions (TOC, model toggle, theme, etc.)
-├── i18n.js      # Translations (KR/EN)
-└── images/      # Screenshots
+├── index.html      # Main page (chapter-map overview + 21 sections, including Prompting GPT-5.4)
+├── style.css       # Styles (dark/light theme)
+├── app.js          # Interactions (theme, language, section navigation)
+├── i18n.js         # Translations (KR/EN)
+└── images/         # Screenshots
 ```
 
 ---
