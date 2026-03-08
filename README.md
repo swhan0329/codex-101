@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: March 7, 2026</strong><br/>
+  <strong>Last updated: March 8, 2026</strong><br/>
   Includes GPT-5.4 and the latest Codex model guidance.
 </p>
 
@@ -26,6 +26,28 @@
 **Codex 101** is a comprehensive guide covering OpenAI's agentic coding platform **Codex** from start to finish.
 
 Based on the [official OpenAI documentation](https://developers.openai.com/codex/), the initial draft was assembled with AI assistance, then **manually reviewed and verified** before publication.
+
+## 🚀 Quick Paths (Beginner / Pro)
+
+### Beginner path (first 30-60 min)
+
+1. Installation and auth first (`Sections 04-05`)
+2. First local CLI task (`Section 06`)
+3. Approval and sandbox safety (`Section 10`)
+
+### Professional path (production usage)
+
+1. Context and tool design with `AGENTS.md`, `config.toml`, MCP (`Sections 12-14`)
+2. Session operations and automation/CI (`Sections 15-16`)
+3. Execution-contract prompting playbook (`Section 17`)
+
+## ✅ Official-doc updates reflected (March 8, 2026)
+
+- Recommended model guidance is aligned to official `Codex Models` (`gpt-5.4` first for most tasks).
+- IDE section reflects current support wording (VS Code-family + JetBrains integration, Windows experimental with WSL guidance).
+- Security explanation is aligned to `Sandbox mode + Approval policy` rather than OS-specific assumptions only.
+- CLI slash-command notes are aligned (including `/permissions`, `/plan`, and `/approvals` alias behavior).
+- MCP integration guidance reflects shared `config.toml` behavior across App, CLI, and IDE extension.
 
 ### What's Covered
 

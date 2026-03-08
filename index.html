@@ -39,7 +39,7 @@
     <header class="hero">
         <div class="hero-glow"></div>
         <div class="container">
-            <p class="hero-badge" data-i18n="hero_badge">공식 문서 검수 · 2026년 3월 7일</p>
+            <p class="hero-badge" data-i18n="hero_badge">공식 문서 검수 · 2026년 3월 8일</p>
             <h1 class="hero-title" data-i18n="hero_title">OpenAI Codex를<br />한국 실무에 바로 붙이는 가이드</h1>
             <p class="hero-sub" data-i18n="hero_sub">CLI · Desktop App (macOS/Windows) · IDE Extension · Web Dashboard<br />최신 공식 문서를 직접 검수해 어디서 시작할지부터 AGENTS.md · MCP · 자동화까지 바로 적용할 수 있게 정리했습니다.</p>
             <div class="hero-cta">
@@ -97,6 +97,33 @@
             </aside>
 
             <div class="guide-main home-main">
+
+            <section class="section quickstart-section" id="paths">
+                <h2><span class="section-num">00</span> <span data-i18n="paths_title">처음/실무 사용자 빠른 시작</span></h2>
+                <p data-i18n="paths_intro">처음 쓰는 사용자와 실무 사용자가 바로 다른 경로로 들어갈 수 있게 시작 흐름을 분리했습니다.</p>
+                <div class="card-grid quickstart-grid">
+                    <article class="product-card quickstart-card">
+                        <div class="product-icon" data-i18n="paths_beginner_badge">BEGINNER</div>
+                        <h3 data-i18n="paths_beginner_title">처음 쓰는 사용자 경로 (30-60분)</h3>
+                        <p data-i18n="paths_beginner_desc">설치/인증부터 안전한 승인 모드로 첫 작업까지 빠르게 익히는 경로입니다.</p>
+                        <p class="quickstart-steps" data-i18n="paths_beginner_steps">1) 섹션 04-05에서 설치 · 인증<br/>2) 섹션 06에서 CLI 첫 작업<br/>3) 섹션 10에서 승인 모드 안전 설정</p>
+                        <div class="quickstart-actions">
+                            <a class="btn btn-ghost btn-small" href="#s4" data-i18n="paths_beginner_cta_1">설치부터 보기</a>
+                            <a class="btn btn-ghost btn-small" href="#s10" data-i18n="paths_beginner_cta_2">승인 모드 보기</a>
+                        </div>
+                    </article>
+                    <article class="product-card quickstart-card">
+                        <div class="product-icon" data-i18n="paths_pro_badge">PRO</div>
+                        <h3 data-i18n="paths_pro_title">전문 사용자 경로 (업무 적용)</h3>
+                        <p data-i18n="paths_pro_desc">AGENTS.md, config.toml, MCP, 자동화, prompting까지 한 번에 묶어 운영하는 경로입니다.</p>
+                        <p class="quickstart-steps" data-i18n="paths_pro_steps">1) 섹션 12-14에서 컨텍스트/도구 설계<br/>2) 섹션 15-16에서 자동화/CI 연동<br/>3) 섹션 17에서 실행 계약 중심 프롬프팅</p>
+                        <div class="quickstart-actions">
+                            <a class="btn btn-ghost btn-small" href="#s12" data-i18n="paths_pro_cta_1">도구 설계 보기</a>
+                            <a class="btn btn-ghost btn-small" href="#s17" data-i18n="paths_pro_cta_2">프롬프팅 보기</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
 
             <!-- Section 1 -->
             <section class="section" id="s1">
@@ -650,9 +677,9 @@ export OPENAI_API_KEY="your-api-key-here"</code></pre>
                         <div class="callout waitlist-box">
                             <div class="setup-meta" aria-hidden="true">
                                 <span class="setup-chip" data-i18n="s5_waitlist_tag">Windows App</span>
-                                <span class="setup-chip" data-i18n="s5_waitlist_scope">미국/영문 · x86</span>
+                                <span class="setup-chip" data-i18n="s5_waitlist_scope">Microsoft Store</span>
                             </div>
-                            <p data-i18n="s5_waitlist_text">업데이트(2026.03.04): Codex Windows 앱이 공개되었습니다. 현재는 미국/영문 지역 및 x86 장치에서 지원됩니다.</p>
+                            <p data-i18n="s5_waitlist_text">업데이트(2026.03.04): Codex Windows 앱이 공개되었습니다. 최신 지원 범위와 요구사항은 공식 Windows 문서를 확인하세요.</p>
                             <a href="https://developers.openai.com/codex/app/windows" target="_blank" class="btn btn-secondary"
                                 data-i18n="s5_waitlist_btn">Windows App 공식 문서 보기</a>
                         </div>
@@ -692,16 +719,6 @@ codex --cd /path/to/project
 <span class="c"># 쉘 명령어 실행</span>
 !npm test</code></pre>
 
-                <h3 data-i18n="s6_new_title">2026.02 신기능</h3>
-                <div class="feature-chips">
-                    <span class="chip" data-i18n="s6_f1">Mid-Turn Steering</span>
-                    <span class="chip" data-i18n="s6_f2">/feedback 슬래시 명령어</span>
-                    <span class="chip" data-i18n="s6_f3">퍼지 파일 검색</span>
-                    <span class="chip" data-i18n="s6_f4">모든 파일 타입 첨부</span>
-                    <span class="chip" data-i18n="s6_f5">향상된 리뷰 패인</span>
-                    <span class="chip" data-i18n="s6_f6">WebSocket 프록시</span>
-                    <span class="chip" data-i18n="s6_f7">실험적 JS REPL</span>
-                </div>
             </section>
 
             <!-- Section 6 -->
@@ -1628,7 +1645,7 @@ codex --search "optimize with Next.js 15"
         <div class="container">
             <p class="footer-contrib" data-i18n="footer_contrib">이 가이드는 오픈소스입니다. 오류 수정, 번역 개선, 새 팁 추가 등 <a
                     href="https://github.com/swhan0329/codex-101" target="_blank">PR을 환영합니다</a>.</p>
-            <p class="footer-meta" data-i18n="footer_date">최종 업데이트: 2026년 3월 7일</p>
+            <p class="footer-meta" data-i18n="footer_date">최종 업데이트: 2026년 3월 8일</p>
             <p class="footer-meta">Made by <a href="https://github.com/swhan0329" target="_blank">@swhan0329</a></p>
         </div>
     </footer>

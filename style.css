@@ -376,6 +376,11 @@ img {
     text-decoration: none;
 }
 
+.btn-small {
+    padding: 7px 12px;
+    font-size: .82rem;
+}
+
 /* === TOC === */
 .toc-section {
     padding: 60px 0;
@@ -1065,6 +1070,31 @@ kbd {
 
 .prompt-guide-card {
     min-height: auto;
+}
+
+.quickstart-section {
+    margin-top: 6px;
+}
+
+.quickstart-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.quickstart-card {
+    min-height: 250px;
+    gap: 12px;
+}
+
+.quickstart-steps {
+    font-size: .9rem;
+    color: var(--text);
+}
+
+.quickstart-actions {
+    margin-top: auto;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
 }
 
 /* === Two-Column === */
@@ -2022,6 +2052,10 @@ details p {
     }
 
     .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quickstart-grid {
         grid-template-columns: 1fr;
     }
 
