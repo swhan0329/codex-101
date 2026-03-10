@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: March 8, 2026</strong><br/>
+  <strong>Last updated: March 10, 2026</strong><br/>
   Includes GPT-5.4 and the latest Codex model guidance.
 </p>
 
@@ -41,13 +41,14 @@ Based on the [official OpenAI documentation](https://developers.openai.com/codex
 2. Session operations and automation/CI (`Sections 15-16`)
 3. Execution-contract prompting playbook (`Section 17`)
 
-## ✅ Official-doc updates reflected (March 8, 2026)
+## ✅ Official-doc updates reflected (March 10, 2026)
 
 - Recommended model guidance is aligned to official `Codex Models` (`gpt-5.4` first for most tasks).
 - IDE section reflects current support wording (VS Code-family + JetBrains integration, Windows experimental with WSL guidance).
 - Security explanation is aligned to `Sandbox mode + Approval policy` rather than OS-specific assumptions only.
 - CLI slash-command notes are aligned (including `/permissions`, `/plan`, and `/approvals` alias behavior).
 - MCP integration guidance reflects shared `config.toml` behavior across App, CLI, and IDE extension.
+- Added KR/EN chapter-level practical tips (sections 06/10/12/15/17) aligned to Derrick Choi's `quick wins → repeatable workflows` guidance, with explicit source links.
 
 ### What's Covered
 

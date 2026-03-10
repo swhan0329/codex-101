@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 3월 8일</strong><br/>
+  <strong>최종 업데이트: 2026년 3월 10일</strong><br/>
   GPT-5.4 및 최신 Codex 모델 가이드를 반영했습니다.
 </p>
 
@@ -41,13 +41,14 @@
 2. 세션 운영 + 자동화/CI 연동 (`15-16`)
 3. 실행 계약 중심 프롬프팅 플레이북 (`17`)
 
-## ✅ 공식 문서 기준 반영 사항 (2026년 3월 8일)
+## ✅ 공식 문서 기준 반영 사항 (2026년 3월 10일)
 
 - 모델 권장 기준을 공식 `Codex Models`와 맞춰 `gpt-5.4` 우선 시작 원칙 반영
 - IDE 확장 설명을 최신 지원 범위로 정리 (VS Code 계열 + JetBrains, Windows 실험적/WSL 권장)
 - 보안 설명을 `Sandbox mode + Approval policy` 중심으로 업데이트
 - CLI 슬래시 명령어 설명을 최신 목록 기준으로 정리 (`/permissions`, `/plan`, `/approvals` 별칭 포함)
 - MCP 설정이 App/CLI/IDE에서 `config.toml`을 공유한다는 점 반영
+- Derrick Choi의 X 쓰레드(quick wins → repeatable workflows) 맥락을 섹션 06/10/12/15/17 실전 팁에 반영하고 출처 링크를 명시
 
 ### 다루는 내용
 

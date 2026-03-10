@@ -1097,6 +1097,43 @@ kbd {
     flex-wrap: wrap;
 }
 
+.quickstart-verify {
+    margin-top: 14px;
+    padding: 16px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: linear-gradient(180deg, rgba(255, 255, 255, .03), rgba(255, 255, 255, .01));
+}
+
+.quickstart-verify h3 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.quickstart-verify p {
+    color: var(--text-dim);
+    font-size: .88rem;
+}
+
+.quickstart-verify-list {
+    margin-top: 10px;
+    padding-left: 18px;
+    display: grid;
+    gap: 6px;
+    color: var(--text);
+    font-size: .9rem;
+}
+
+.chapter-tip {
+    margin-top: 14px;
+}
+
+.chapter-tip-ref {
+    margin-top: 8px;
+    font-size: .84rem;
+    color: var(--text-dim);
+}
+
 /* === Two-Column === */
 .two-col {
     display: grid;

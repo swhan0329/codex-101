@@ -39,7 +39,7 @@
     <header class="hero">
         <div class="hero-glow"></div>
         <div class="container">
-            <p class="hero-badge" data-i18n="hero_badge">공식 문서 검수 · 2026년 3월 8일</p>
+            <p class="hero-badge" data-i18n="hero_badge">공식 문서 검수 · 2026년 3월 10일</p>
             <h1 class="hero-title" data-i18n="hero_title">OpenAI Codex를<br />한국 실무에 바로 붙이는 가이드</h1>
             <p class="hero-sub" data-i18n="hero_sub">CLI · Desktop App (macOS/Windows) · IDE Extension · Web Dashboard<br />최신 공식 문서를 직접 검수해 어디서 시작할지부터 AGENTS.md · MCP · 자동화까지 바로 적용할 수 있게 정리했습니다.</p>
             <div class="hero-cta">
@@ -122,6 +122,16 @@
                             <a class="btn btn-ghost btn-small" href="#s17" data-i18n="paths_pro_cta_2">프롬프팅 보기</a>
                         </div>
                     </article>
+                </div>
+                <div class="quickstart-verify">
+                    <h3 data-i18n="paths_verify_title">오늘 기준 공식 문서 검증 포인트</h3>
+                    <p data-i18n="paths_verify_intro">아래 항목은 OpenAI Docs MCP로 2026-03-10에 재확인한 내용입니다.</p>
+                    <ul class="quickstart-verify-list">
+                        <li data-i18n="paths_verify_item_1">Codex Models: 대부분 작업은 gpt-5.4부터 시작 권장</li>
+                        <li data-i18n="paths_verify_item_2">IDE Extension: VS Code/Cursor/Windsurf + JetBrains, Windows는 실험적(WSL 권장)</li>
+                        <li data-i18n="paths_verify_item_3">CLI Slash Commands: /permissions, /plan, /approvals(alias) 동작 최신화</li>
+                        <li data-i18n="paths_verify_item_4">Config Scope: ~/.codex/config.toml + .codex/config.toml 레이어 동작</li>
+                    </ul>
                 </div>
             </section>
 
@@ -224,7 +234,7 @@
             <section class="section" id="s3">
                 <h2><span class="section-num">03</span> <span data-i18n="s3_title">지원 모델</span></h2>
 
-                <h3 data-i18n="s3_models_title">최신 모델 (2026년 3월 6일 업데이트)</h3>
+                <h3 data-i18n="s3_models_title">최신 모델 (2026년 3월 10일 공식 문서 기준)</h3>
 
                 <h4 data-i18n="s3_rec_title">⭐ 추천 모델</h4>
                 <div class="model-grid">
@@ -718,6 +728,11 @@ codex --cd /path/to/project
 
 <span class="c"># 쉘 명령어 실행</span>
 !npm test</code></pre>
+                <div class="callout chapter-tip">
+                    <strong data-i18n="tip_ext_s6_title">실전 팁: 첫 성공을 반복 가능한 루틴으로 바꾸기</strong>
+                    <p data-i18n="tip_ext_s6_body">처음에는 한 파일/한 테스트 단위의 작은 작업으로 빠르게 성공을 만들고, 그다음 프롬프트·검증 순서를 템플릿화해 반복 가능한 CLI 작업 흐름으로 고정하세요.</p>
+                    <p class="chapter-tip-ref" data-i18n-html="tip_ext_ref">Reference: <a href="https://x.com/derrickcchoi/status/2031023512534634758" target="_blank">X post</a> · <a href="https://x.com/derrickcchoi/status/2031024731013439650" target="_blank">follow-up summary</a> · <a href="https://x.com/i/article/2030089070479548416" target="_blank">shared article</a></p>
+                </div>
 
             </section>
 
@@ -917,6 +932,11 @@ codex --approval-mode auto-edit
 codex --approval-mode full-auto</code></pre>
                 <p data-i18n="s10_sandbox">보안: macOS는 Apple Seatbelt, Windows는 Windows Sandbox, Linux는 Docker 컨테이너 샌드박싱. Full Auto에서도 네트워크 기본 차단.
                 </p>
+                <div class="callout chapter-tip">
+                    <strong data-i18n="tip_ext_s10_title">실전 팁: 승인 모드도 단계적으로 고정하기</strong>
+                    <p data-i18n="tip_ext_s10_body">신규 팀은 Suggest로 시작해 Auto-Edit를 거친 뒤 Full Auto로 올리는 식으로 운영 규칙을 단계화하면, 빠른 성과와 안전한 확장을 동시에 가져가기 쉽습니다.</p>
+                    <p class="chapter-tip-ref" data-i18n-html="tip_ext_ref">Reference: <a href="https://x.com/derrickcchoi/status/2031023512534634758" target="_blank">X post</a> · <a href="https://x.com/derrickcchoi/status/2031024731013439650" target="_blank">follow-up summary</a> · <a href="https://x.com/i/article/2030089070479548416" target="_blank">shared article</a></p>
+                </div>
             </section>
 
             <!-- Section 10 -->
@@ -1101,6 +1121,11 @@ AGENTS.override.md  → 최우선
                 </div>
                 <pre data-i18n-html="code_s12_init"><code><span class="c"># 자동 생성</span>
 codex init</code></pre>
+                <div class="callout chapter-tip">
+                    <strong data-i18n="tip_ext_s12_title">실전 팁: 성공 패턴을 AGENTS.md로 승격</strong>
+                    <p data-i18n="tip_ext_s12_body">몇 번 반복해서 잘 맞았던 작업 방식(예: 테스트 우선, 커밋 규칙, 금지 작업)은 즉시 AGENTS.md에 올려 팀 공통 규칙으로 만들면 재현성이 크게 올라갑니다.</p>
+                    <p class="chapter-tip-ref" data-i18n-html="tip_ext_ref">Reference: <a href="https://x.com/derrickcchoi/status/2031023512534634758" target="_blank">X post</a> · <a href="https://x.com/derrickcchoi/status/2031024731013439650" target="_blank">follow-up summary</a> · <a href="https://x.com/i/article/2030089070479548416" target="_blank">shared article</a></p>
+                </div>
             </section>
 
             <!-- Section 12 -->
@@ -1218,6 +1243,11 @@ codex resume &lt;ID&gt;       <span class="c"># 특정 세션</span>
 
 <span class="c"># 세션 내 명령</span>
 /permissions  /mcp  /status  /review  /feedback  /compact</code></pre>
+                <div class="callout chapter-tip">
+                    <strong data-i18n="tip_ext_s15_title">실전 팁: 세션 기록을 운영 자산으로 축적</strong>
+                    <p data-i18n="tip_ext_s15_body">일회성 해결로 끝내지 말고, 재사용 가능한 세션 패턴(입력 형식, 점검 순서, 종료 기준)을 남겨 다음 작업의 시작 비용을 줄이세요.</p>
+                    <p class="chapter-tip-ref" data-i18n-html="tip_ext_ref">Reference: <a href="https://x.com/derrickcchoi/status/2031023512534634758" target="_blank">X post</a> · <a href="https://x.com/derrickcchoi/status/2031024731013439650" target="_blank">follow-up summary</a> · <a href="https://x.com/i/article/2030089070479548416" target="_blank">shared article</a></p>
+                </div>
             </section>
 
             <!-- Section 15 -->
@@ -1275,6 +1305,11 @@ codex exec "Fix all TODOs" --approval-mode full-auto</code></pre>
                         <div class="prompt-inline-note">
                             <strong data-i18n="pg_s1_callout_t">기본은 강하게, 보강은 실패 모드 기준으로</strong>
                             <p data-i18n="pg_s1_callout_d">가장 작은 프롬프트로 시작하고, incomplete execution, format drift, citation hallucination처럼 실제로 관측한 실패를 고치기 위해서만 블록을 추가하세요.</p>
+                        </div>
+                        <div class="callout chapter-tip">
+                            <strong data-i18n="tip_ext_s17_title">실전 팁: 프롬프트를 계약 템플릿으로 전환</strong>
+                            <p data-i18n="tip_ext_s17_body">빠른 성공 프롬프트는 개인 노하우로 두지 말고, output contract와 verification 루프를 포함한 팀 템플릿으로 바꿔야 재현 가능한 품질을 만들 수 있습니다.</p>
+                            <p class="chapter-tip-ref" data-i18n-html="tip_ext_ref">Reference: <a href="https://x.com/derrickcchoi/status/2031023512534634758" target="_blank">X post</a> · <a href="https://x.com/derrickcchoi/status/2031024731013439650" target="_blank">follow-up summary</a> · <a href="https://x.com/i/article/2030089070479548416" target="_blank">shared article</a></p>
                         </div>
                     </article>
 
@@ -1645,7 +1680,7 @@ codex --search "optimize with Next.js 15"
         <div class="container">
             <p class="footer-contrib" data-i18n="footer_contrib">이 가이드는 오픈소스입니다. 오류 수정, 번역 개선, 새 팁 추가 등 <a
                     href="https://github.com/swhan0329/codex-101" target="_blank">PR을 환영합니다</a>.</p>
-            <p class="footer-meta" data-i18n="footer_date">최종 업데이트: 2026년 3월 8일</p>
+            <p class="footer-meta" data-i18n="footer_date">최종 업데이트: 2026년 3월 10일</p>
             <p class="footer-meta">Made by <a href="https://github.com/swhan0329" target="_blank">@swhan0329</a></p>
         </div>
     </footer>
