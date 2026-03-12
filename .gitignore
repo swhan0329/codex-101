@@ -2,3 +2,4 @@
 *.md
 !README.md
 !README_KO.md
+.vercel
