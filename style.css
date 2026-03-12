@@ -204,6 +204,11 @@ img {
     margin-bottom: 20px;
 }
 
+.live-date {
+    font-family: var(--mono);
+    color: var(--text);
+}
+
 .hero-title {
     font-size: clamp(2rem, 5vw, 3.2rem);
     font-weight: 800;
@@ -376,9 +381,195 @@ img {
     text-decoration: none;
 }
 
-.btn-small {
-    padding: 7px 12px;
-    font-size: .82rem;
+/* === Start Here === */
+.overview-section {
+    position: relative;
+    overflow: hidden;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, .03), transparent 26%);
+}
+
+[data-theme="light"] .overview-section {
+    background:
+        linear-gradient(180deg, rgba(15, 23, 42, .03), transparent 26%);
+}
+
+.overview-kicker {
+    font-family: var(--mono);
+    font-size: .74rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 12px;
+}
+
+.overview-lead {
+    max-width: 760px;
+    color: var(--text-dim);
+    margin-bottom: 24px;
+}
+
+.overview-track-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin: 24px 0;
+}
+
+.track-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-height: 100%;
+    padding: 24px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    background:
+        radial-gradient(circle at top right, rgba(56, 189, 248, .14), transparent 38%),
+        linear-gradient(180deg, rgba(255, 255, 255, .02), transparent 48%),
+        var(--bg-card);
+    box-shadow: 0 18px 44px rgba(0, 0, 0, .16);
+}
+
+.track-card-pro {
+    background:
+        radial-gradient(circle at top right, rgba(245, 158, 11, .16), transparent 38%),
+        linear-gradient(180deg, rgba(255, 255, 255, .02), transparent 48%),
+        var(--bg-card);
+}
+
+.track-card h3 {
+    font-size: 1.18rem;
+    line-height: 1.35;
+}
+
+.track-card p {
+    margin: 0;
+    color: var(--text-dim);
+}
+
+.overview-list {
+    list-style: none;
+    display: grid;
+    gap: 10px;
+    margin: 4px 0 6px;
+    padding: 0;
+}
+
+.overview-list li {
+    position: relative;
+    padding-left: 18px;
+    color: var(--text-dim);
+    font-size: .92rem;
+    line-height: 1.6;
+}
+
+.overview-list li::before {
+    content: "";
+    position: absolute;
+    top: .72rem;
+    left: 0;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+}
+
+.track-card .btn {
+    margin-top: auto;
+}
+
+.overview-fact-panel {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--bg-card);
+    padding: 24px;
+}
+
+.overview-fact-head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 18px;
+}
+
+.overview-fact-head h3 {
+    margin: 4px 0 0;
+    font-size: 1.2rem;
+}
+
+.overview-fact-date {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    font-size: .84rem;
+    color: var(--text-dim);
+}
+
+.overview-fact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.fact-card {
+    padding: 18px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+    background: var(--bg);
+}
+
+[data-theme="light"] .fact-card {
+    background: #ffffff;
+}
+
+.fact-card h4 {
+    margin: 0 0 8px;
+    font-size: .98rem;
+}
+
+.fact-card p {
+    margin: 0;
+    font-size: .9rem;
+    line-height: 1.6;
+    color: var(--text-dim);
+}
+
+.overview-sources-label {
+    margin: 18px 0 10px;
+    font-family: var(--mono);
+    font-size: .74rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+}
+
+.overview-source-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.source-chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 12px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, .02);
+    color: var(--text);
+    font-size: .84rem;
+    transition: .2s;
+}
+
+.source-chip:hover {
+    text-decoration: none;
+    border-color: var(--accent);
+    background: var(--accent-glow);
+    transform: translateY(-1px);
 }
 
 /* === TOC === */
@@ -1070,68 +1261,6 @@ kbd {
 
 .prompt-guide-card {
     min-height: auto;
-}
-
-.quickstart-section {
-    margin-top: 6px;
-}
-
-.quickstart-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.quickstart-card {
-    min-height: 250px;
-    gap: 12px;
-}
-
-.quickstart-steps {
-    font-size: .9rem;
-    color: var(--text);
-}
-
-.quickstart-actions {
-    margin-top: auto;
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-}
-
-.quickstart-verify {
-    margin-top: 14px;
-    padding: 16px;
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    background: linear-gradient(180deg, rgba(255, 255, 255, .03), rgba(255, 255, 255, .01));
-}
-
-.quickstart-verify h3 {
-    font-size: 1rem;
-    margin-bottom: 8px;
-}
-
-.quickstart-verify p {
-    color: var(--text-dim);
-    font-size: .88rem;
-}
-
-.quickstart-verify-list {
-    margin-top: 10px;
-    padding-left: 18px;
-    display: grid;
-    gap: 6px;
-    color: var(--text);
-    font-size: .9rem;
-}
-
-.chapter-tip {
-    margin-top: 14px;
-}
-
-.chapter-tip-ref {
-    margin-top: 8px;
-    font-size: .84rem;
-    color: var(--text-dim);
 }
 
 /* === Two-Column === */
@@ -2079,6 +2208,18 @@ details p {
 }
 
 /* === Responsive === */
+@media (max-width: 900px) {
+    .overview-track-grid,
+    .overview-fact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .overview-fact-head {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
 @media (max-width: 640px) {
     .hero {
         padding: 70px 0 50px;
@@ -2092,8 +2233,22 @@ details p {
         grid-template-columns: 1fr;
     }
 
-    .quickstart-grid {
+    .overview-track-grid,
+    .overview-fact-grid {
         grid-template-columns: 1fr;
+    }
+
+    .overview-fact-head {
+        align-items: flex-start;
+    }
+
+    .overview-source-links {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .source-chip {
+        width: 100%;
     }
 
     .toc-grid {

@@ -10,8 +10,8 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 3월 10일</strong><br/>
-  GPT-5.4 및 최신 Codex 모델 가이드를 반영했습니다.
+  <strong>최종 업데이트: 2026년 3월 9일</strong><br/>
+  라이브 사이트는 보는 사람의 당일 날짜를 자동으로 표시하며, 최신 Codex 모델 가이드를 공식 문서 기준으로 반영합니다.
 </p>
 
 <p align="center">
@@ -23,37 +23,15 @@
 
 ## 📖 소개
 
-**Codex 101**은 OpenAI의 에이전틱 코딩 플랫폼 **Codex**를 처음부터 끝까지 다루는 가이드입니다.
+**Codex 101**은 OpenAI의 코딩 에이전트 **Codex**를 처음 사용하는 사용자와 실무 사용자 모두를 위해 다시 정리한 가이드입니다.
 
-[OpenAI 공식 문서](https://developers.openai.com/codex/)를 기반으로 AI를 활용하여 초안을 작성한 뒤, **직접 검수를 거쳐** 최종 배포했습니다.
-
-## 🚀 빠른 학습 경로 (입문 / 실무)
-
-### 입문 경로 (처음 30-60분)
-
-1. 설치/인증 먼저 보기 (`04-05`)
-2. CLI로 첫 로컬 작업 실행 (`06`)
-3. 승인 모드/샌드박스 안전 설정 (`10`)
-
-### 실무 경로 (업무 적용)
-
-1. `AGENTS.md`, `config.toml`, MCP로 컨텍스트/도구 설계 (`12-14`)
-2. 세션 운영 + 자동화/CI 연동 (`15-16`)
-3. 실행 계약 중심 프롬프팅 플레이북 (`17`)
-
-## ✅ 공식 문서 기준 반영 사항 (2026년 3월 10일)
-
-- 모델 권장 기준을 공식 `Codex Models`와 맞춰 `gpt-5.4` 우선 시작 원칙 반영
-- IDE 확장 설명을 최신 지원 범위로 정리 (VS Code 계열 + JetBrains, Windows 실험적/WSL 권장)
-- 보안 설명을 `Sandbox mode + Approval policy` 중심으로 업데이트
-- CLI 슬래시 명령어 설명을 최신 목록 기준으로 정리 (`/permissions`, `/plan`, `/approvals` 별칭 포함)
-- MCP 설정이 App/CLI/IDE에서 `config.toml`을 공유한다는 점 반영
-- Derrick Choi의 X 쓰레드(quick wins → repeatable workflows) 맥락을 섹션 06/10/12/15/17 실전 팁에 반영하고 출처 링크를 명시
+[OpenAI 공식 문서](https://developers.openai.com/codex/)와 OpenAI Docs MCP 조회 결과를 바탕으로 정리하고, **직접 검수를 거쳐** 최종 배포했습니다.
 
 ### 다루는 내용
 
 | 섹션 | 주제 |
 |------|------|
+| Start Here | 처음 사용자용 빠른 시작 경로와 실무 운영 경로 |
 | 01–03 | 에코시스템 개요, 제품군, 지원 모델 |
 | 04–05 | 시스템 요구사항 & 가격, 설치 및 인증 |
 | 06–09 | CLI, App, IDE Extension, Web 사용법 |

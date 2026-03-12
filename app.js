@@ -90,6 +90,20 @@
         });
     }
 
+    function renderLiveDates(lang) {
+        const locale = lang === 'ko' ? 'ko-KR' : 'en-US';
+        const formatter = new Intl.DateTimeFormat(locale, {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+        });
+        const today = formatter.format(new Date());
+
+        document.querySelectorAll('.live-date').forEach((el) => {
+            el.textContent = today;
+        });
+    }
+
     // Apply translations
     function applyTranslations(lang) {
         const t = translations[lang];
@@ -112,6 +126,7 @@
             }
         });
         updateModelToggleLabels(lang);
+        renderLiveDates(lang);
         document.documentElement.lang = lang === 'ko' ? 'ko' : 'en';
     }
 
