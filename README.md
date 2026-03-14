@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: March 9, 2026</strong><br/>
+  <strong>Last updated: March 14, 2026</strong><br/>
   The live site displays the viewer's current date automatically and reflects the latest Codex model guidance reviewed from official docs.
 </p>
 

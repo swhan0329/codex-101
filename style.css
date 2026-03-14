@@ -416,6 +416,72 @@ img {
     margin: 24px 0;
 }
 
+.overview-action-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin: 0 0 24px;
+}
+
+.overview-action-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-height: 100%;
+    padding: 20px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+}
+
+.overview-action-card-pro {
+    background:
+        radial-gradient(circle at top right, rgba(245, 158, 11, .12), transparent 35%),
+        var(--bg-card);
+}
+
+.overview-action-kicker {
+    font-family: var(--mono);
+    font-size: .74rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+}
+
+.overview-action-card h3 {
+    font-size: 1.05rem;
+    line-height: 1.35;
+}
+
+.overview-action-list {
+    list-style: none;
+    display: grid;
+    gap: 8px;
+}
+
+.overview-action-list li {
+    position: relative;
+    padding-left: 18px;
+    color: var(--text-dim);
+    font-size: .9rem;
+    line-height: 1.6;
+}
+
+.overview-action-list li::before {
+    content: "";
+    position: absolute;
+    top: .7rem;
+    left: 0;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+}
+
+.overview-action-card .btn {
+    margin-top: auto;
+}
+
 .track-card {
     display: flex;
     flex-direction: column;
@@ -2209,6 +2275,7 @@ details p {
 
 /* === Responsive === */
 @media (max-width: 900px) {
+    .overview-action-grid,
     .overview-track-grid,
     .overview-fact-grid {
         grid-template-columns: 1fr;
@@ -2233,6 +2300,7 @@ details p {
         grid-template-columns: 1fr;
     }
 
+    .overview-action-grid,
     .overview-track-grid,
     .overview-fact-grid {
         grid-template-columns: 1fr;

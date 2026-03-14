@@ -42,7 +42,7 @@
             <p class="hero-badge">
                 <span data-i18n="hero_badge_prefix">공식 문서 기준 재검수</span>
                 <span aria-hidden="true"> · </span>
-                <span class="live-date" data-date-format="long">2026년 3월 9일</span>
+                <span class="live-date" data-date-format="long">2026년 3월 14일</span>
             </p>
             <h1 class="hero-title" data-i18n="hero_title">OpenAI Codex를<br />한국 실무에 바로 붙이는 가이드</h1>
             <p class="hero-sub" data-i18n="hero_sub">CLI · Desktop App (macOS/Windows) · IDE Extension · Web · Mobile · SDK automation<br />최신 공식 문서를 기준으로 제품 면 선택, 모델 선택, 샌드박스/승인, MCP, 자동화를 처음 사용자와 실무 사용자 모두 읽기 쉽도록 다시 정리했습니다.</p>
@@ -133,6 +133,29 @@
                     </article>
                 </div>
 
+                <div class="overview-action-grid">
+                    <article class="overview-action-card">
+                        <p class="overview-action-kicker" data-i18n="overview_action_beginner_kicker">처음 사용자 10분 플랜</p>
+                        <h3 data-i18n="overview_action_beginner_title">설치 후 바로 확인할 3가지</h3>
+                        <ul class="overview-action-list">
+                            <li data-i18n="overview_action_beginner_1">codex 실행 후 현재 프로젝트 경로가 맞는지 먼저 확인합니다.</li>
+                            <li data-i18n="overview_action_beginner_2">sandbox/approval을 기본값으로 두고 첫 요청은 작은 수정부터 시작합니다.</li>
+                            <li data-i18n="overview_action_beginner_3">작업 전후 Git 체크포인트를 남겨 되돌리기 경로를 확보합니다.</li>
+                        </ul>
+                        <a href="#s5" class="btn btn-ghost" data-i18n="overview_action_beginner_cta">초보 체크리스트 따라가기</a>
+                    </article>
+                    <article class="overview-action-card overview-action-card-pro">
+                        <p class="overview-action-kicker" data-i18n="overview_action_pro_kicker">실무 사용자 운영 플랜</p>
+                        <h3 data-i18n="overview_action_pro_title">팀에 붙일 때 먼저 고정할 3가지</h3>
+                        <ul class="overview-action-list">
+                            <li data-i18n="overview_action_pro_1">AGENTS.md에 역할, 금지사항, 완료 조건을 명확히 선언합니다.</li>
+                            <li data-i18n="overview_action_pro_2">config.toml에서 모델, reasoning effort, 권한 정책을 팀 기본값으로 통일합니다.</li>
+                            <li data-i18n="overview_action_pro_3">OpenAI Docs MCP를 연결해 제품/API 질의는 문서 기반으로 답하도록 고정합니다.</li>
+                        </ul>
+                        <a href="#s12" class="btn btn-ghost" data-i18n="overview_action_pro_cta">실무 체크리스트 따라가기</a>
+                    </article>
+                </div>
+
                 <div class="overview-fact-panel">
                     <div class="overview-fact-head">
                         <div>
@@ -141,7 +164,7 @@
                         </div>
                         <p class="overview-fact-date">
                             <span data-i18n="overview_fact_date_prefix">확인 기준일</span>
-                            <span class="live-date" data-date-format="long">2026년 3월 9일</span>
+                            <span class="live-date" data-date-format="long">2026년 3월 14일</span>
                         </p>
                     </div>
 
@@ -167,7 +190,7 @@
                     <p class="overview-sources-label" data-i18n="overview_sources_label">근거 문서</p>
                     <div class="overview-source-links">
                         <a href="https://developers.openai.com/codex/quickstart/" target="_blank" class="source-chip" data-i18n="overview_source_1">Codex Quickstart</a>
-                        <a href="https://developers.openai.com/api/docs/guides/code-generation/" target="_blank" class="source-chip" data-i18n="overview_source_2">Code Generation Guide</a>
+                        <a href="https://developers.openai.com/codex/models/" target="_blank" class="source-chip" data-i18n="overview_source_2">Codex Models</a>
                         <a href="https://developers.openai.com/codex/concepts/sandboxing/" target="_blank" class="source-chip" data-i18n="overview_source_3">Sandboxing</a>
                         <a href="https://developers.openai.com/api/docs/guides/prompt-guidance/" target="_blank" class="source-chip" data-i18n="overview_source_4">Prompt Guidance for GPT-5.4</a>
                         <a href="https://developers.openai.com/codex/pricing/" target="_blank" class="source-chip" data-i18n="overview_source_5">Codex Pricing</a>
@@ -726,9 +749,9 @@ export OPENAI_API_KEY="your-api-key-here"</code></pre>
                         <div class="callout waitlist-box">
                             <div class="setup-meta" aria-hidden="true">
                                 <span class="setup-chip" data-i18n="s5_waitlist_tag">Windows App</span>
-                                <span class="setup-chip" data-i18n="s5_waitlist_scope">미국/영문 · x86</span>
+                                <span class="setup-chip" data-i18n="s5_waitlist_scope">지원 범위는 수시 변경</span>
                             </div>
-                            <p data-i18n="s5_waitlist_text">업데이트(2026.03.04): Codex Windows 앱이 공개되었습니다. 현재는 미국/영문 지역 및 x86 장치에서 지원됩니다.</p>
+                            <p data-i18n="s5_waitlist_text">업데이트(2026.03.14 기준): Codex Windows 앱은 공식 배포 상태입니다. 최신 지원 범위는 공식 설치 문서에서 확인하세요.</p>
                             <a href="https://developers.openai.com/codex/app/windows" target="_blank" class="btn btn-secondary"
                                 data-i18n="s5_waitlist_btn">Windows App 공식 문서 보기</a>
                         </div>
@@ -1841,7 +1864,7 @@ codex --search "optimize with Next.js 15"
                     href="https://github.com/swhan0329/codex-101" target="_blank">PR을 환영합니다</a>.</p>
             <p class="footer-meta">
                 <span data-i18n="footer_date_prefix">최종 업데이트</span>:
-                <span class="live-date" data-date-format="long">2026년 3월 9일</span>
+                <span class="live-date" data-date-format="long">2026년 3월 14일</span>
             </p>
             <p class="footer-meta">Made by <a href="https://github.com/swhan0329" target="_blank">@swhan0329</a></p>
         </div>
