@@ -423,6 +423,37 @@ img {
     margin: 0 0 24px;
 }
 
+.overview-bridge-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin: 0 0 24px;
+}
+
+.overview-bridge-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-height: 100%;
+    padding: 20px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    background:
+        radial-gradient(circle at top right, rgba(34, 197, 94, .12), transparent 38%),
+        var(--bg-card);
+}
+
+.overview-bridge-card-pro {
+    background:
+        radial-gradient(circle at top right, rgba(59, 130, 246, .13), transparent 38%),
+        var(--bg-card);
+}
+
+.overview-bridge-card h3 {
+    font-size: 1.05rem;
+    line-height: 1.35;
+}
+
 .overview-action-card {
     display: flex;
     flex-direction: column;
@@ -2276,6 +2307,7 @@ details p {
 /* === Responsive === */
 @media (max-width: 900px) {
     .overview-action-grid,
+    .overview-bridge-grid,
     .overview-track-grid,
     .overview-fact-grid {
         grid-template-columns: 1fr;
@@ -2301,6 +2333,7 @@ details p {
     }
 
     .overview-action-grid,
+    .overview-bridge-grid,
     .overview-track-grid,
     .overview-fact-grid {
         grid-template-columns: 1fr;

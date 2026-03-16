@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: March 15, 2026</strong><br/>
+  <strong>Last updated: March 16, 2026</strong><br/>
   The live site displays the viewer's current date automatically and reflects the latest Codex model guidance reviewed from official docs.
 </p>
 
@@ -32,12 +32,18 @@ Based on the [official OpenAI documentation](https://developers.openai.com/codex
 - **First-time users**: Start with sections **04-06** (setup, sign-in, first run), then **10** (approval/sandbox basics), and **14** (OpenAI Docs MCP).
 - **Professional users**: Start with sections **12-14** (AGENTS.md, config.toml, MCP), then **15-17** (session strategy, automation, prompting contracts).
 
-### Daily MCP Verification Snapshot (2026-03-15)
+### Daily MCP Verification Snapshot (2026-03-16)
 
 - Codex usage surfaces are documented across app, IDE extension, CLI, and cloud quickstart flows.
 - Codex pricing and usage/credits are now plan-specific and model-specific, including GPT-5.4 and GPT-5.3-Codex tiers.
 - `config.toml` remains the primary control layer for `approval_policy`, `sandbox_mode`, profiles, and MCP servers.
 - Security behavior is explicitly separated into sandbox boundaries and approval policies.
+- Current CLI/IDE docs still treat Windows support as experimental and recommend WSL workspaces for best experience.
+
+### Audience Quick Use
+
+- **First-time users (10 minutes)**: install/sign in (`04-06`) → keep default sandbox/approval (`10`) → run one small edit task with Git checkpoint.
+- **Professional users (team rollout)**: lock AGENTS.md + `.codex/config.toml` (`12-14`) → standardize `codex exec`/review flow (`15-16`) → adopt section `17` prompt contract as team baseline.
 
 ### What's Covered
 

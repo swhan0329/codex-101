@@ -42,7 +42,7 @@
             <p class="hero-badge">
                 <span data-i18n="hero_badge_prefix">공식 문서 기준 재검수</span>
                 <span aria-hidden="true"> · </span>
-                <span class="live-date" data-date-format="long">2026년 3월 15일</span>
+                <span class="live-date" data-date-format="long">2026년 3월 16일</span>
             </p>
             <h1 class="hero-title" data-i18n="hero_title">OpenAI Codex를<br />한국 실무에 바로 붙이는 가이드</h1>
             <p class="hero-sub" data-i18n="hero_sub">CLI · Desktop App (macOS/Windows) · IDE Extension · Web · Mobile · SDK automation<br />최신 공식 문서를 기준으로 제품 면 선택, 모델 선택, 샌드박스/승인, MCP, 자동화를 처음 사용자와 실무 사용자 모두 읽기 쉽도록 다시 정리했습니다.</p>
@@ -133,6 +133,27 @@
                     </article>
                 </div>
 
+                <div class="overview-bridge-grid">
+                    <article class="overview-bridge-card">
+                        <p class="overview-action-kicker" data-i18n="overview_bridge_beginner_kicker">처음 사용자 용어 가이드</p>
+                        <h3 data-i18n="overview_bridge_beginner_title">이렇게 읽으면 헷갈리지 않습니다</h3>
+                        <ul class="overview-action-list">
+                            <li data-i18n="overview_bridge_beginner_1">Local은 내 컴퓨터에서 실행, Cloud는 원격 환경에서 실행입니다.</li>
+                            <li data-i18n="overview_bridge_beginner_2">Sandbox는 접근 범위, Approval은 실행 전 멈춤 기준입니다.</li>
+                            <li data-i18n="overview_bridge_beginner_3">MCP는 문서/도구를 연결해 답변 근거를 강화하는 레이어입니다.</li>
+                        </ul>
+                    </article>
+                    <article class="overview-bridge-card overview-bridge-card-pro">
+                        <p class="overview-action-kicker" data-i18n="overview_bridge_pro_kicker">실무 사용자 운영 포인트</p>
+                        <h3 data-i18n="overview_bridge_pro_title">팀 기준으로 보면 중요한 지점</h3>
+                        <ul class="overview-action-list">
+                            <li data-i18n="overview_bridge_pro_1">프로젝트 신뢰 경계는 sandbox_mode와 writable_roots로 먼저 고정합니다.</li>
+                            <li data-i18n="overview_bridge_pro_2">작업 중 승인 개입 빈도는 approval_policy와 규칙으로 조정합니다.</li>
+                            <li data-i18n="overview_bridge_pro_3">질의 품질 일관성은 AGENTS.md와 Docs MCP 기본화로 확보합니다.</li>
+                        </ul>
+                    </article>
+                </div>
+
                 <div class="overview-action-grid">
                     <article class="overview-action-card">
                         <p class="overview-action-kicker" data-i18n="overview_action_beginner_kicker">처음 사용자 10분 플랜</p>
@@ -164,7 +185,7 @@
                         </div>
                         <p class="overview-fact-date">
                             <span data-i18n="overview_fact_date_prefix">확인 기준일</span>
-                            <span class="live-date" data-date-format="long">2026년 3월 15일</span>
+                            <span class="live-date" data-date-format="long">2026년 3월 16일</span>
                         </p>
                     </div>
 
@@ -182,8 +203,12 @@
                             <p data-i18n="overview_fact_3_desc">샌드박스는 명령 실행 경계를 정하고, approvals는 그 경계를 넘어갈 때 멈출지를 결정합니다.</p>
                         </article>
                         <article class="fact-card">
-                            <h4 data-i18n="overview_fact_4_title">Sign-in caveat</h4>
-                            <p data-i18n="overview_fact_4_desc">App은 ChatGPT 계정이나 API 키로 로그인할 수 있지만, API 키 로그인에서는 cloud threads 일부 기능이 제한될 수 있습니다.</p>
+                            <h4 data-i18n="overview_fact_4_title">Platform caveat</h4>
+                            <p data-i18n="overview_fact_4_desc">CLI와 IDE Extension은 macOS/Linux 중심이며 Windows에서는 WSL 워크스페이스 사용이 권장됩니다.</p>
+                        </article>
+                        <article class="fact-card">
+                            <h4 data-i18n="overview_fact_5_title">Sign-in caveat</h4>
+                            <p data-i18n="overview_fact_5_desc">App은 ChatGPT 계정이나 API 키로 로그인할 수 있지만, API 키 로그인에서는 cloud threads 일부 기능이 제한될 수 있습니다.</p>
                         </article>
                     </div>
 
@@ -194,6 +219,7 @@
                         <a href="https://developers.openai.com/codex/concepts/sandboxing/" target="_blank" class="source-chip" data-i18n="overview_source_3">Sandboxing</a>
                         <a href="https://developers.openai.com/codex/config-reference/" target="_blank" class="source-chip" data-i18n="overview_source_4">Codex Config Reference</a>
                         <a href="https://developers.openai.com/codex/pricing/" target="_blank" class="source-chip" data-i18n="overview_source_5">Codex Pricing</a>
+                        <a href="https://developers.openai.com/codex/ide/#extension-setup" target="_blank" class="source-chip" data-i18n="overview_source_6">IDE Extension setup</a>
                     </div>
                 </div>
             </section>
@@ -1864,7 +1890,7 @@ codex --search "optimize with Next.js 15"
                     href="https://github.com/swhan0329/codex-101" target="_blank">PR을 환영합니다</a>.</p>
             <p class="footer-meta">
                 <span data-i18n="footer_date_prefix">최종 업데이트</span>:
-                <span class="live-date" data-date-format="long">2026년 3월 15일</span>
+                <span class="live-date" data-date-format="long">2026년 3월 16일</span>
             </p>
             <p class="footer-meta">Made by <a href="https://github.com/swhan0329" target="_blank">@swhan0329</a></p>
         </div>
