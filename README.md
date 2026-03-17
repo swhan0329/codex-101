@@ -39,6 +39,7 @@ Based on the [official OpenAI documentation](https://developers.openai.com/codex
 - `config.toml` remains the primary control layer for `approval_policy`, `sandbox_mode`, profiles, and MCP servers.
 - Security behavior is explicitly separated into sandbox boundaries and approval policies.
 - CLI/IDE docs still treat Windows support as experimental and recommend WSL workspaces, while the Windows app supports both native Windows sandboxing and WSL agent mode.
+- Subagent workflows are centered on delegated `sub-agents` (`spawn_agent`, `wait_agent`, `spawn_agents_on_csv`) rather than older multi-team wording.
 
 ### Audience Quick Use
 

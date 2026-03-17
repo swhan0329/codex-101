@@ -39,6 +39,7 @@
 - `config.toml`은 `approval_policy`, `sandbox_mode`, 프로필, MCP 서버를 고정하는 핵심 제어 레이어입니다.
 - 보안 모델은 sandbox 경계와 approval 정책을 분리해 운영하도록 명시됩니다.
 - CLI/IDE 문서는 여전히 Windows를 실험적 지원으로 안내하고 WSL 워크스페이스를 권장하지만, Windows 앱은 PowerShell 기반 네이티브 샌드박스와 WSL 에이전트 모드를 모두 지원합니다.
+- Subagent 워크플로는 `sub-agent` 위임(`spawn_agent`, `wait_agent`, `spawn_agents_on_csv`) 중심으로 안내되며, 기존 multi-team 표현보다 이 용어가 기준입니다.
 
 ### 사용자별 즉시 적용 요약
 
