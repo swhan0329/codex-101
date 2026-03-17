@@ -42,7 +42,7 @@
             <p class="hero-badge">
                 <span data-i18n="hero_badge_prefix">공식 문서 기준 재검수</span>
                 <span aria-hidden="true"> · </span>
-                <span class="live-date" data-date-format="long">2026년 3월 16일</span>
+                <span class="live-date" data-date-format="long">2026년 3월 17일</span>
             </p>
             <h1 class="hero-title" data-i18n="hero_title">OpenAI Codex를<br />한국 실무에 바로 붙이는 가이드</h1>
             <p class="hero-sub" data-i18n="hero_sub">CLI · Desktop App (macOS/Windows) · IDE Extension · Web · Mobile · SDK automation<br />최신 공식 문서를 기준으로 제품 면 선택, 모델 선택, 샌드박스/승인, MCP, 자동화를 처음 사용자와 실무 사용자 모두 읽기 쉽도록 다시 정리했습니다.</p>
@@ -106,6 +106,29 @@
                 <p class="overview-kicker" data-i18n="overview_kicker">Start here</p>
                 <h2 data-i18n="overview_title">처음 사용자와 실무 사용자를 위한 읽기 경로</h2>
                 <p class="overview-lead" data-i18n="overview_lead">OpenAI 공식 문서에서 현재 확인되는 핵심 사실을 먼저 압축하고, 그 다음 이 페이지를 초보자용 흐름과 실무 운영 흐름으로 나눠서 읽을 수 있게 정리했습니다.</p>
+
+                <div class="overview-lens-grid">
+                    <article class="overview-lens-card">
+                        <p class="overview-action-kicker" data-i18n="overview_lens_beginner_kicker">처음 사용자 한눈 요약</p>
+                        <h3 data-i18n="overview_lens_beginner_title">오늘 바로 실행할 최소 경로</h3>
+                        <p data-i18n="overview_lens_beginner_desc">설치 이후 어디까지 해야 시작이 끝나는지 먼저 고정합니다.</p>
+                        <ul class="overview-list">
+                            <li data-i18n="overview_lens_beginner_s1">Quickstart 기준으로 앱/IDE/CLI 중 한 표면만 먼저 고릅니다.</li>
+                            <li data-i18n="overview_lens_beginner_s2">Local + 기본 sandbox/approval로 첫 작업 1건을 완료합니다.</li>
+                        </ul>
+                        <p class="overview-lens-outcome" data-i18n="overview_lens_beginner_outcome">결과: 첫 작업 성공 + 되돌릴 수 있는 Git 체크포인트</p>
+                    </article>
+                    <article class="overview-lens-card overview-lens-card-pro">
+                        <p class="overview-action-kicker" data-i18n="overview_lens_pro_kicker">실무 사용자 한눈 요약</p>
+                        <h3 data-i18n="overview_lens_pro_title">팀 운영 기준을 먼저 고정</h3>
+                        <p data-i18n="overview_lens_pro_desc">개인 설정이 아니라 프로젝트 규칙으로 행동을 통일합니다.</p>
+                        <ul class="overview-list">
+                            <li data-i18n="overview_lens_pro_s1">AGENTS.md와 .codex/config.toml로 모델·권한·완료 기준을 명시합니다.</li>
+                            <li data-i18n="overview_lens_pro_s2">Docs MCP를 기본 연결해 제품/API 답변을 문서 근거 기반으로 유지합니다.</li>
+                        </ul>
+                        <p class="overview-lens-outcome" data-i18n="overview_lens_pro_outcome">결과: 팀별 재현 가능한 실행/리뷰/자동화 흐름</p>
+                    </article>
+                </div>
 
                 <div class="overview-track-grid">
                     <article class="track-card">
@@ -185,7 +208,7 @@
                         </div>
                         <p class="overview-fact-date">
                             <span data-i18n="overview_fact_date_prefix">확인 기준일</span>
-                            <span class="live-date" data-date-format="long">2026년 3월 16일</span>
+                            <span class="live-date" data-date-format="long">2026년 3월 17일</span>
                         </p>
                     </div>
 
@@ -204,7 +227,7 @@
                         </article>
                         <article class="fact-card">
                             <h4 data-i18n="overview_fact_4_title">Platform caveat</h4>
-                            <p data-i18n="overview_fact_4_desc">CLI와 IDE Extension은 macOS/Linux 중심이며 Windows에서는 WSL 워크스페이스 사용이 권장됩니다.</p>
+                            <p data-i18n="overview_fact_4_desc">CLI/IDE는 Windows에서 여전히 실험적 지원으로 안내되며 WSL이 권장되지만, Windows 앱은 PowerShell 네이티브 샌드박스와 WSL 에이전트 모드를 모두 지원합니다.</p>
                         </article>
                         <article class="fact-card">
                             <h4 data-i18n="overview_fact_5_title">Sign-in caveat</h4>
@@ -220,6 +243,7 @@
                         <a href="https://developers.openai.com/codex/config-reference/" target="_blank" class="source-chip" data-i18n="overview_source_4">Codex Config Reference</a>
                         <a href="https://developers.openai.com/codex/pricing/" target="_blank" class="source-chip" data-i18n="overview_source_5">Codex Pricing</a>
                         <a href="https://developers.openai.com/codex/ide/#extension-setup" target="_blank" class="source-chip" data-i18n="overview_source_6">IDE Extension setup</a>
+                        <a href="https://developers.openai.com/codex/app/windows/" target="_blank" class="source-chip" data-i18n="overview_source_7">Windows App guide</a>
                     </div>
                 </div>
             </section>
@@ -1890,7 +1914,7 @@ codex --search "optimize with Next.js 15"
                     href="https://github.com/swhan0329/codex-101" target="_blank">PR을 환영합니다</a>.</p>
             <p class="footer-meta">
                 <span data-i18n="footer_date_prefix">최종 업데이트</span>:
-                <span class="live-date" data-date-format="long">2026년 3월 16일</span>
+                <span class="live-date" data-date-format="long">2026년 3월 17일</span>
             </p>
             <p class="footer-meta">Made by <a href="https://github.com/swhan0329" target="_blank">@swhan0329</a></p>
         </div>

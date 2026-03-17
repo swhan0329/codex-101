@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 3월 16일</strong><br/>
+  <strong>최종 업데이트: 2026년 3월 17일</strong><br/>
   라이브 사이트는 보는 사람의 당일 날짜를 자동으로 표시하며, 최신 Codex 모델 가이드를 공식 문서 기준으로 반영합니다.
 </p>
 
@@ -32,13 +32,13 @@
 - **처음 사용하는 사용자**: **04-06**(설치/로그인/첫 실행) → **10**(approval/sandbox 기초) → **14**(OpenAI Docs MCP) 순서로 읽는 것을 권장합니다.
 - **실무 사용자**: **12-14**(AGENTS.md/config.toml/MCP) → **15-17**(세션 운영/자동화/프롬프트 실행 계약) 순서로 읽으면 팀 운영 기준을 빠르게 잡을 수 있습니다.
 
-### 일일 MCP 검증 스냅샷 (2026-03-16)
+### 일일 MCP 검증 스냅샷 (2026-03-17)
 
 - Codex 사용 표면은 app, IDE extension, CLI, cloud quickstart 기준으로 공식 문서에서 일관되게 안내됩니다.
 - 가격/사용량/크레딧 정책은 플랜별, 모델별로 분기되며 GPT-5.4와 GPT-5.3-Codex 기준이 함께 제공됩니다.
 - `config.toml`은 `approval_policy`, `sandbox_mode`, 프로필, MCP 서버를 고정하는 핵심 제어 레이어입니다.
 - 보안 모델은 sandbox 경계와 approval 정책을 분리해 운영하도록 명시됩니다.
-- 현재 CLI/IDE 문서는 Windows를 실험적 지원으로 안내하며, 안정적 사용 경로로 WSL 워크스페이스를 권장합니다.
+- CLI/IDE 문서는 여전히 Windows를 실험적 지원으로 안내하고 WSL 워크스페이스를 권장하지만, Windows 앱은 PowerShell 기반 네이티브 샌드박스와 WSL 에이전트 모드를 모두 지원합니다.
 
 ### 사용자별 즉시 적용 요약
 

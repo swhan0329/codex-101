@@ -409,6 +409,52 @@ img {
     margin-bottom: 24px;
 }
 
+.overview-lens-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin: 0 0 24px;
+}
+
+.overview-lens-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-height: 100%;
+    padding: 20px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    background:
+        radial-gradient(circle at top right, rgba(99, 102, 241, .16), transparent 38%),
+        var(--bg-card);
+}
+
+.overview-lens-card p {
+    margin: 0;
+    color: var(--text-dim);
+}
+
+.overview-lens-card h3 {
+    font-size: 1.08rem;
+    line-height: 1.35;
+}
+
+.overview-lens-card-pro {
+    background:
+        radial-gradient(circle at top right, rgba(16, 185, 129, .16), transparent 38%),
+        var(--bg-card);
+}
+
+.overview-lens-outcome {
+    margin-top: auto;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 10px 12px;
+    font-size: .88rem;
+    color: var(--text);
+    background: rgba(255, 255, 255, .02);
+}
+
 .overview-track-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2306,6 +2352,7 @@ details p {
 
 /* === Responsive === */
 @media (max-width: 900px) {
+    .overview-lens-grid,
     .overview-action-grid,
     .overview-bridge-grid,
     .overview-track-grid,
@@ -2332,6 +2379,7 @@ details p {
         grid-template-columns: 1fr;
     }
 
+    .overview-lens-grid,
     .overview-action-grid,
     .overview-bridge-grid,
     .overview-track-grid,
