@@ -625,8 +625,12 @@ img {
 .overview-fact-panel {
     border: 1px solid var(--border);
     border-radius: var(--radius);
-    background: var(--bg-card);
+    background:
+        radial-gradient(circle at top right, rgba(14, 165, 233, .12), transparent 34%),
+        linear-gradient(180deg, rgba(255, 255, 255, .02), transparent 42%),
+        var(--bg-card);
     padding: 24px;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, .14);
 }
 
 .overview-fact-head {
@@ -661,7 +665,9 @@ img {
     padding: 18px;
     border-radius: var(--radius-sm);
     border: 1px solid var(--border);
-    background: var(--bg);
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, .02), transparent 55%),
+        var(--bg);
 }
 
 [data-theme="light"] .fact-card {
@@ -671,6 +677,7 @@ img {
 .fact-card h4 {
     margin: 0 0 8px;
     font-size: .98rem;
+    line-height: 1.35;
 }
 
 .fact-card p {

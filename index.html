@@ -158,6 +158,14 @@
                             <h4 data-i18n="overview_fact_3_title">인트로 간소화</h4>
                             <p data-i18n="overview_fact_3_desc">Start Here 인트로를 줄이고 초보/실무 시작 경로와 당일 업데이트만 보이도록 정리했습니다.</p>
                         </article>
+                        <article class="fact-card">
+                            <h4 data-i18n="overview_fact_4_title">플랫폼 차이 명확화</h4>
+                            <p data-i18n="overview_fact_4_desc">CLI/IDE의 Windows 조건과 Windows 앱의 네이티브 sandbox 지원 범위를 분리해 설명했습니다.</p>
+                        </article>
+                        <article class="fact-card">
+                            <h4 data-i18n="overview_fact_5_title">로그인 제한 사항 추가</h4>
+                            <p data-i18n="overview_fact_5_desc">ChatGPT 로그인과 API 키 로그인 차이, 특히 cloud threads 제한 가능성을 상단에 명시했습니다.</p>
+                        </article>
                     </div>
 
                     <p class="overview-sources-label" data-i18n="overview_sources_label">근거 문서</p>
@@ -646,39 +654,44 @@
                                     <tr>
                                         <th data-i18n="th_plan">플랜</th>
                                         <th data-i18n="th_price">가격</th>
-                                        <th>Codex</th>
+                                        <th data-i18n="th_codex">Codex 범위</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td>Free</td>
                                         <td>$0</td>
-                                        <td>✅*</td>
+                                        <td data-i18n="s4_codex_free">웹/CLI/IDE/모바일 한시 제공*</td>
                                     </tr>
                                     <tr>
                                         <td>Go</td>
                                         <td>$8/mo</td>
-                                        <td>✅*</td>
+                                        <td data-i18n="s4_codex_go">웹/CLI/IDE/모바일 한시 제공*</td>
                                     </tr>
                                     <tr>
                                         <td>Plus</td>
                                         <td>$20/mo</td>
-                                        <td>✅**</td>
+                                        <td data-i18n="s4_codex_plus">최신 모델 + credits 확장 가능</td>
                                     </tr>
                                     <tr>
                                         <td>Pro</td>
                                         <td>$200/mo</td>
-                                        <td>✅**</td>
+                                        <td data-i18n="s4_codex_pro">Spark 리서치 프리뷰 + 높은 한도</td>
                                     </tr>
                                     <tr>
                                         <td>Business</td>
-                                        <td>$25~30/user/mo</td>
-                                        <td>✅**</td>
+                                        <td>$30/user/mo</td>
+                                        <td data-i18n="s4_codex_business">대형 VM, credits, 관리 기능</td>
                                     </tr>
                                     <tr>
-                                        <td>Enterprise</td>
+                                        <td>Enterprise & Edu</td>
                                         <td data-i18n="s4_custom">맞춤 가격</td>
-                                        <td>✅**</td>
+                                        <td data-i18n="s4_codex_enterprise">크레딧 기반 확장, 보안/감사 제어</td>
+                                    </tr>
+                                    <tr>
+                                        <td>API Key</td>
+                                        <td data-i18n="s4_usage_based">사용량 기반</td>
+                                        <td data-i18n="s4_codex_api">CLI/IDE/SDK 전용, 클라우드 기능 없음</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -1177,21 +1190,33 @@ model = "gpt-5.4"
 model_provider = "openai"
 approval_policy = "on-request"
 sandbox_mode = "workspace-write"
+sandbox_workspace_write.network_access = false
 model_reasoning_effort = "medium"
+model_instructions_file = "~/.codex/instructions.md"
+web_search = "cached"
 
 <span class="c"># 프로필</span>
 [profiles.fast]
-model = "gpt-5.3-codex-spark"
+model = "gpt-5.1-codex-mini"
 model_reasoning_effort = "low"
 
 [profiles.deep]
 model = "gpt-5.4"
-model_reasoning_effort = "high"</code></pre>
+model_reasoning_effort = "high"
+
+<span class="c"># OpenAI Docs MCP</span>
+[mcp_servers.openaiDeveloperDocs]
+url = "https://developers.openai.com/mcp"
+required = true</code></pre>
                 <pre><code>codex --profile fast
 codex --profile deep</code></pre>
                 <div class="callout">
                     <strong data-i18n="s13_callout_t">권장 설정 계층</strong>
                     <p data-i18n="s13_callout_d">개인 기본값은 <code>~/.codex/config.toml</code>, 저장소별 동작은 <code>.codex/config.toml</code>, 일회성 실험은 CLI override로 분리하는 패턴이 가장 안정적입니다.</p>
+                </div>
+                <div class="callout">
+                    <strong data-i18n="s13_beginner_t">처음 사용자라면 이렇게 이해하면 됩니다</strong>
+                    <p data-i18n="s13_beginner_d"><code>model</code>은 두뇌, <code>sandbox_mode</code>는 작업 범위, <code>approval_policy</code>는 언제 멈춰서 묻는지, <code>model_instructions_file</code>은 항상 따라야 할 개인 기본 지침입니다.</p>
                 </div>
                 <div class="tip-grid">
                     <div class="tip-card">

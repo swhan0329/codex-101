@@ -34,12 +34,12 @@
 
 ### 일일 MCP 검증 스냅샷 (2026-03-17)
 
-- Codex 사용 표면은 app, IDE extension, CLI, cloud quickstart 기준으로 공식 문서에서 일관되게 안내됩니다.
-- 가격/사용량/크레딧 정책은 플랜별, 모델별로 분기되며 GPT-5.4와 GPT-5.3-Codex 기준이 함께 제공됩니다.
-- `config.toml`은 `approval_policy`, `sandbox_mode`, 프로필, MCP 서버를 고정하는 핵심 제어 레이어입니다.
-- 보안 모델은 sandbox 경계와 approval 정책을 분리해 운영하도록 명시됩니다.
-- CLI/IDE 문서는 여전히 Windows를 실험적 지원으로 안내하고 WSL 워크스페이스를 권장하지만, Windows 앱은 PowerShell 기반 네이티브 샌드박스와 WSL 에이전트 모드를 모두 지원합니다.
-- Subagent 워크플로는 `sub-agent` 위임(`spawn_agent`, `wait_agent`, `spawn_agents_on_csv`) 중심으로 안내되며, 기존 multi-team 표현보다 이 용어가 기준입니다.
+- Quickstart는 이제 App, IDE Extension, CLI, Cloud 경로를 더 분명히 나누고, 첫 작업 전후 Git 체크포인트를 강조합니다.
+- 가격/사용량/크레딧 정책은 모델별로 더 명확해졌고 GPT-5.4, GPT-5.3-Codex, GPT-5.1-Codex-Mini 기준 usage window와 credits 설명이 함께 제공됩니다.
+- `config.toml`은 여전히 핵심 제어 레이어지만, `model_instructions_file`, `web_search`, `sandbox_workspace_write.network_access`, MCP 서버 세부 제어 같은 최신 키도 같이 확인할 가치가 있습니다.
+- 보안 가이드는 sandbox 경계와 approval 정책을 분리해서 설명하고, cloud/CLI·IDE/Windows App의 동작 차이도 더 명확히 안내합니다.
+- Windows 가이드는 표면별로 다릅니다. Windows 앱은 PowerShell 네이티브 sandbox 또는 WSL 에이전트 모드를 지원하지만, IDE의 Windows agent mode는 현재 WSL이 필요합니다.
+- 앱은 ChatGPT 계정 또는 API 키로 로그인할 수 있지만, API 키 로그인에서는 cloud threads 같은 일부 기능이 제한될 수 있습니다.
 
 ### 사용자별 즉시 적용 요약
 

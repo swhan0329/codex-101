@@ -34,12 +34,12 @@ Based on the [official OpenAI documentation](https://developers.openai.com/codex
 
 ### Daily MCP Verification Snapshot (2026-03-17)
 
-- Codex usage surfaces are documented across app, IDE extension, CLI, and cloud quickstart flows.
-- Codex pricing and usage/credits are now plan-specific and model-specific, including GPT-5.4 and GPT-5.3-Codex tiers.
-- `config.toml` remains the primary control layer for `approval_policy`, `sandbox_mode`, profiles, and MCP servers.
-- Security behavior is explicitly separated into sandbox boundaries and approval policies.
-- CLI/IDE docs still treat Windows support as experimental and recommend WSL workspaces, while the Windows app supports both native Windows sandboxing and WSL agent mode.
-- Subagent workflows are centered on delegated `sub-agents` (`spawn_agent`, `wait_agent`, `spawn_agents_on_csv`) rather than older multi-team wording.
+- Quickstart now clearly splits setup into App, IDE extension, CLI, and Cloud paths, with Git checkpoints emphasized for first tasks.
+- Pricing guidance is explicitly model-specific and plan-specific, including GPT-5.4, GPT-5.3-Codex, and GPT-5.1-Codex-Mini usage windows and credits.
+- `config.toml` has newer operational keys worth surfacing, including `model_instructions_file`, `web_search`, `sandbox_workspace_write.network_access`, and stricter MCP server controls.
+- Security guidance separates sandbox boundaries from approval policy, and clarifies different behavior for cloud, CLI/IDE, and the Windows app.
+- Windows guidance differs by surface: the Windows app supports native PowerShell sandboxing or WSL agent mode, while IDE agent mode on Windows currently requires WSL.
+- App sign-in with a ChatGPT account or API key is still supported, but API-key sign-in may restrict features such as cloud threads.
 
 ### Audience Quick Use
 
