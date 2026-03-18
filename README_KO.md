@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 3월 17일</strong><br/>
+  <strong>최종 업데이트: 2026년 3월 18일</strong><br/>
   라이브 사이트는 보는 사람의 당일 날짜를 자동으로 표시하며, 최신 Codex 모델 가이드를 공식 문서 기준으로 반영합니다.
 </p>
 
@@ -32,14 +32,15 @@
 - **처음 사용하는 사용자**: **04-06**(설치/로그인/첫 실행) → **10**(approval/sandbox 기초) → **14**(OpenAI Docs MCP) 순서로 읽는 것을 권장합니다.
 - **실무 사용자**: **12-14**(AGENTS.md/config.toml/MCP) → **15-17**(세션 운영/자동화/프롬프트 실행 계약) 순서로 읽으면 팀 운영 기준을 빠르게 잡을 수 있습니다.
 
-### 일일 MCP 검증 스냅샷 (2026-03-17)
+### 일일 MCP 검증 스냅샷 (2026-03-18)
 
-- Quickstart는 이제 App, IDE Extension, CLI, Cloud 경로를 더 분명히 나누고, 첫 작업 전후 Git 체크포인트를 강조합니다.
-- 가격/사용량/크레딧 정책은 모델별로 더 명확해졌고 GPT-5.4, GPT-5.3-Codex, GPT-5.1-Codex-Mini 기준 usage window와 credits 설명이 함께 제공됩니다.
-- `config.toml`은 여전히 핵심 제어 레이어지만, `model_instructions_file`, `web_search`, `sandbox_workspace_write.network_access`, MCP 서버 세부 제어 같은 최신 키도 같이 확인할 가치가 있습니다.
-- 보안 가이드는 sandbox 경계와 approval 정책을 분리해서 설명하고, cloud/CLI·IDE/Windows App의 동작 차이도 더 명확히 안내합니다.
-- Windows 가이드는 표면별로 다릅니다. Windows 앱은 PowerShell 네이티브 sandbox 또는 WSL 에이전트 모드를 지원하지만, IDE의 Windows agent mode는 현재 WSL이 필요합니다.
-- 앱은 ChatGPT 계정 또는 API 키로 로그인할 수 있지만, API 키 로그인에서는 cloud threads 같은 일부 기능이 제한될 수 있습니다.
+- Codex models 페이지에는 이제 `gpt-5.4-mini`가 추천 모델로 명시되어 있으므로, 가이드도 이를 누락 없이 추천 모델로 다뤄야 합니다.
+- Quickstart는 App, IDE Extension, CLI, Cloud 네 가지 온보딩 경로를 더 전면에 두고, 첫 작업 전후 Git 체크포인트를 명시적으로 권장합니다.
+- Codex 접근 범위 안내에는 이제 ChatGPT Free/Go의 한시 체험과 Plus, Pro, Business, Enterprise 구독의 2x Codex rate limit 문구가 함께 반영됩니다.
+- `config.toml` 설명은 `review_model`, top-level `web_search`, config schema 검증, 네트워크 제어, MCP/app 제어 항목까지 포함해야 최신 문서 흐름과 맞습니다.
+- Windows 설정은 표면별로 더 분명합니다. 앱은 Windows에서 가장 쉬운 기본 경로이며 네이티브 sandbox를 지원하고, CLI는 PowerShell 또는 WSL에서 쓸 수 있고, IDE의 Windows agent mode는 현재 WSL이 필요합니다.
+- Best practices는 `AGENTS.md`, MCP, skills, automations, thread-per-task 운영을 더 강하게 권장합니다.
+- 앱은 ChatGPT 계정 또는 API 키로 로그인할 수 있지만, API 키 로그인에서는 cloud threads 같은 일부 기능이 여전히 제한될 수 있습니다.
 
 ### 사용자별 즉시 적용 요약
 
