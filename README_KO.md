@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 3월 18일</strong><br/>
+  <strong>최종 업데이트: 2026년 3월 19일</strong><br/>
   라이브 사이트는 보는 사람의 당일 날짜를 자동으로 표시하며, 최신 Codex 모델 가이드를 공식 문서 기준으로 반영합니다.
 </p>
 
@@ -32,15 +32,15 @@
 - **처음 사용하는 사용자**: **04-06**(설치/로그인/첫 실행) → **10**(approval/sandbox 기초) → **14**(OpenAI Docs MCP) 순서로 읽는 것을 권장합니다.
 - **실무 사용자**: **12-14**(AGENTS.md/config.toml/MCP) → **15-17**(세션 운영/자동화/프롬프트 실행 계약) 순서로 읽으면 팀 운영 기준을 빠르게 잡을 수 있습니다.
 
-### 일일 MCP 검증 스냅샷 (2026-03-18)
+### 일일 MCP 검증 스냅샷 (2026-03-19)
 
-- Codex models 페이지에는 이제 `gpt-5.4-mini`가 추천 모델로 명시되어 있으므로, 가이드도 이를 누락 없이 추천 모델로 다뤄야 합니다.
-- Quickstart는 App, IDE Extension, CLI, Cloud 네 가지 온보딩 경로를 더 전면에 두고, 첫 작업 전후 Git 체크포인트를 명시적으로 권장합니다.
-- Codex 접근 범위 안내에는 이제 ChatGPT Free/Go의 한시 체험과 Plus, Pro, Business, Enterprise 구독의 2x Codex rate limit 문구가 함께 반영됩니다.
-- `config.toml` 설명은 `review_model`, top-level `web_search`, config schema 검증, 네트워크 제어, MCP/app 제어 항목까지 포함해야 최신 문서 흐름과 맞습니다.
-- Windows 설정은 표면별로 더 분명합니다. 앱은 Windows에서 가장 쉬운 기본 경로이며 네이티브 sandbox를 지원하고, CLI는 PowerShell 또는 WSL에서 쓸 수 있고, IDE의 Windows agent mode는 현재 WSL이 필요합니다.
-- Best practices는 `AGENTS.md`, MCP, skills, automations, thread-per-task 운영을 더 강하게 권장합니다.
-- 앱은 ChatGPT 계정 또는 API 키로 로그인할 수 있지만, API 키 로그인에서는 cloud threads 같은 일부 기능이 여전히 제한될 수 있습니다.
+- `codex/models`는 이제 세 축으로 읽는 편이 정확합니다. 기본 시작점은 `gpt-5.4`, 빠른 로컬 작업이나 subagent용은 `gpt-5.4-mini`, Codex-특화 대안이면서 Codex Cloud까지 쓰려면 `gpt-5.3-codex`를 봐야 합니다.
+- OpenAI의 `Introducing GPT-5.4` 발표는 GPT-5.4가 GPT-5.3-Codex급 코딩 강점과 더 강한 추론·도구 사용을 결합했다고 설명하며, Codex에서 `model_context_window`와 `model_auto_compact_token_limit`로 실험적 1M context를 시도할 수 있다고 안내합니다.
+- 가격/접근 범위 설명도 더 세밀해야 합니다. Plus는 최신 모델과 credits 확장을 포함하고, Pro는 GPT-5.3-Codex-Spark·우선 처리·더 높은 한도를 제공하며, API 키 인증은 클라우드 기능이 없고 새 모델 접근이 늦을 수 있습니다.
+- IDE 문서는 VS Code만이 아니라 Cursor, Windsurf, JetBrains까지 공식 범위에 포함합니다. 반면 Windows에서 IDE agent mode는 아직 실험적이고 현재 WSL 경로가 사실상 기본입니다.
+- Windows 문서는 “지원됨” 수준을 넘어, 앱의 네이티브 Windows sandbox, PowerShell/WSL 전환, Microsoft Store와 `winget` 설치 경로까지 분리해 설명합니다.
+- `config.toml`과 보안 문서는 `review_model`, top-level `web_search`, JSON schema, granular approval, 로컬 OS sandbox와 Codex Cloud의 2-phase runtime 구분을 더 중요하게 다룹니다.
+- Best practices의 큰 방향은 유지됩니다. `AGENTS.md`로 반복 규칙을 고정하고, MCP는 실제 반복 수작업을 줄일 때만 연결하고, 안정화된 반복 작업만 skill/automation으로 끌어올리는 흐름이 핵심입니다.
 
 ### 사용자별 즉시 적용 요약
 

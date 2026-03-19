@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: March 18, 2026</strong><br/>
+  <strong>Last updated: March 19, 2026</strong><br/>
   The live site displays the viewer's current date automatically and reflects the latest Codex model guidance reviewed from official docs.
 </p>
 
@@ -32,15 +32,15 @@ Based on the [official OpenAI documentation](https://developers.openai.com/codex
 - **First-time users**: Start with sections **04-06** (setup, sign-in, first run), then **10** (approval/sandbox basics), and **14** (OpenAI Docs MCP).
 - **Professional users**: Start with sections **12-14** (AGENTS.md, config.toml, MCP), then **15-17** (session strategy, automation, prompting contracts).
 
-### Daily MCP Verification Snapshot (2026-03-18)
+### Daily MCP Verification Snapshot (2026-03-19)
 
-- The Codex models page now lists `gpt-5.4-mini` as a recommended model, so the guide should treat it as a first-class recommendation rather than an omitted alternative.
-- Quickstart now foregrounds four onboarding paths, App, IDE extension, CLI, and Cloud, and explicitly recommends Git checkpoints before and after early tasks.
-- Codex access guidance now includes limited-time availability in ChatGPT Free and Go, plus 2x Codex rate-limit messaging for Plus, Pro, Business, and Enterprise subscriptions.
-- `config.toml` coverage has expanded meaningfully: `review_model`, top-level `web_search`, config schema validation, network controls, and stronger MCP/app configuration deserve first-class mention.
-- Windows setup is more clearly split by surface: the app is the easiest default on Windows with native sandbox support, the CLI can run from PowerShell or WSL, and IDE agent mode on Windows currently requires WSL.
-- Best-practices guidance leans harder into reusable operational layers: `AGENTS.md`, MCP, skills, automations, and one-thread-per-task discipline.
-- App sign-in with a ChatGPT account or API key remains supported, but API-key sign-in may still limit functionality such as cloud threads.
+- `codex/models` now needs to be read as a three-part recommendation set: `gpt-5.4` for the default starting point, `gpt-5.4-mini` for faster lower-cost local or subagent work, and `gpt-5.3-codex` as the main Codex-specific alternative that still supports Codex Cloud.
+- The OpenAI `Introducing GPT-5.4` post says GPT-5.4 brings GPT-5.3-Codex-level coding strength together with stronger reasoning and tool use, and mentions experimental 1M context support in Codex via `model_context_window` and `model_auto_compact_token_limit`.
+- Pricing now needs more nuance at the top level: Plus includes the latest models and credits, Pro adds GPT-5.3-Codex-Spark plus priority processing and higher limits, and API-key auth still excludes cloud features and may lag on new-model access.
+- IDE guidance is broader than before: official docs now cover VS Code, Cursor, Windsurf, and JetBrains, while Windows support in the IDE remains experimental and agent mode currently points users toward WSL.
+- Windows guidance is no longer just “supported”: the app has a native Windows sandbox in PowerShell mode, can switch the agent into WSL, and documents Store and `winget` installation paths.
+- `config.toml` and security guidance now emphasize `review_model`, top-level `web_search`, JSON schema validation, granular approvals, and the distinction between local OS sandboxing and Codex Cloud’s two-phase runtime.
+- Best-practices guidance still reinforces the same durable operating model: use `AGENTS.md`, connect MCP only where it removes real manual loops, turn repeated prompts into skills, and schedule only stable workflows as automations.
 
 ### Audience Quick Use
 
