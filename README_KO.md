@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 3월 19일</strong><br/>
+  <strong>최종 업데이트: 2026년 3월 20일</strong><br/>
   라이브 사이트는 보는 사람의 당일 날짜를 자동으로 표시하며, 최신 Codex 모델 가이드를 공식 문서 기준으로 반영합니다.
 </p>
 
@@ -32,14 +32,14 @@
 - **처음 사용하는 사용자**: **04-06**(설치/로그인/첫 실행) → **10**(approval/sandbox 기초) → **14**(OpenAI Docs MCP) 순서로 읽는 것을 권장합니다.
 - **실무 사용자**: **12-14**(AGENTS.md/config.toml/MCP) → **15-17**(세션 운영/자동화/프롬프트 실행 계약) 순서로 읽으면 팀 운영 기준을 빠르게 잡을 수 있습니다.
 
-### 일일 MCP 검증 스냅샷 (2026-03-19)
+### 일일 MCP 검증 스냅샷 (2026-03-20)
 
-- `codex/models`는 이제 세 축으로 읽는 편이 정확합니다. 기본 시작점은 `gpt-5.4`, 빠른 로컬 작업이나 subagent용은 `gpt-5.4-mini`, Codex-특화 대안이면서 Codex Cloud까지 쓰려면 `gpt-5.3-codex`를 봐야 합니다.
-- OpenAI의 `Introducing GPT-5.4` 발표는 GPT-5.4가 GPT-5.3-Codex급 코딩 강점과 더 강한 추론·도구 사용을 결합했다고 설명하며, Codex에서 `model_context_window`와 `model_auto_compact_token_limit`로 실험적 1M context를 시도할 수 있다고 안내합니다.
-- 가격/접근 범위 설명도 더 세밀해야 합니다. Plus는 최신 모델과 credits 확장을 포함하고, Pro는 GPT-5.3-Codex-Spark·우선 처리·더 높은 한도를 제공하며, API 키 인증은 클라우드 기능이 없고 새 모델 접근이 늦을 수 있습니다.
-- IDE 문서는 VS Code만이 아니라 Cursor, Windsurf, JetBrains까지 공식 범위에 포함합니다. 반면 Windows에서 IDE agent mode는 아직 실험적이고 현재 WSL 경로가 사실상 기본입니다.
-- Windows 문서는 “지원됨” 수준을 넘어, 앱의 네이티브 Windows sandbox, PowerShell/WSL 전환, Microsoft Store와 `winget` 설치 경로까지 분리해 설명합니다.
-- `config.toml`과 보안 문서는 `review_model`, top-level `web_search`, JSON schema, granular approval, 로컬 OS sandbox와 Codex Cloud의 2-phase runtime 구분을 더 중요하게 다룹니다.
+- `codex/models`는 이제 네 갈래 추천 세트로 읽는 편이 가장 정확합니다. 기본 시작점은 `gpt-5.4`, 빠른 로컬 작업이나 subagent용은 `gpt-5.4-mini`, Codex Cloud와 복잡한 엔지니어링은 `gpt-5.3-codex`, 거의 즉각적인 반복은 `gpt-5.3-codex-spark`입니다.
+- OpenAI의 `Introducing GPT-5.4` 발표는 GPT-5.4가 GPT-5.3-Codex급 코딩 강점에 더 강한 추론·도구 사용·네이티브 컴퓨터 사용을 결합했다고 설명하며, Codex에서 최대 1M context를 지원한다고 명시합니다.
+- 가격/접근 범위 설명도 더 넓게 잡아야 합니다. Plus, Pro, Business, Edu, Enterprise는 Codex를 포함하고, Free/Go는 한시 체험 경로이며, Plus는 최신 모델과 클라우드 연동을 포함하고, Pro는 Spark·우선 처리·더 높은 한도를 제공합니다. API 키 인증은 클라우드 기능이 없고 새 모델 접근이 늦을 수 있습니다.
+- IDE 문서는 VS Code만이 아니라 Cursor, Windsurf, JetBrains까지 공식 범위에 포함합니다. 반면 Windows에서 IDE agent mode는 아직 실험적이고 현재 가장 안정적인 경로는 WSL입니다.
+- Windows 문서는 “지원됨” 수준을 넘어, 앱의 PowerShell 기반 네이티브 Windows sandbox, WSL agent 전환, Microsoft Store와 `winget` 설치 경로까지 분리해 설명합니다.
+- `config.toml`과 보안 문서는 `review_model`, top-level `web_search`, JSON schema, `approval_policy = { granular = ... }`, `windows.sandbox`, 보호 경로, 로컬 OS sandbox와 Codex Cloud의 2-phase runtime 구분을 더 중요하게 다룹니다.
 - Best practices의 큰 방향은 유지됩니다. `AGENTS.md`로 반복 규칙을 고정하고, MCP는 실제 반복 수작업을 줄일 때만 연결하고, 안정화된 반복 작업만 skill/automation으로 끌어올리는 흐름이 핵심입니다.
 
 ### 사용자별 즉시 적용 요약
