@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: March 20, 2026</strong><br/>
+  <strong>Last updated: March 23, 2026</strong><br/>
   The live site displays the viewer's current date automatically and reflects the latest Codex model guidance reviewed from official docs.
 </p>
 
@@ -32,15 +32,15 @@ Based on the [official OpenAI documentation](https://developers.openai.com/codex
 - **First-time users**: Start with sections **04-06** (setup, sign-in, first run), then **10** (approval/sandbox basics), and **14** (OpenAI Docs MCP).
 - **Professional users**: Start with sections **12-14** (AGENTS.md, config.toml, MCP), then **15-17** (session strategy, automation, prompting contracts).
 
-### Daily MCP Verification Snapshot (2026-03-20)
+### Daily MCP Verification Snapshot (2026-03-23)
 
-- `codex/models` now reads most accurately as a four-lane recommendation set: `gpt-5.4` for the default starting point, `gpt-5.4-mini` for faster lower-cost local or subagent work, `gpt-5.3-codex` for Codex Cloud and complex engineering, and `gpt-5.3-codex-spark` for near-instant Pro-only iteration.
-- The OpenAI `Introducing GPT-5.4` post says GPT-5.4 combines GPT-5.3-Codex-level coding with stronger reasoning, tool use, and native computer use, and it explicitly calls out up to 1M context in Codex.
-- Pricing needs a broader top-level explanation now: Plus, Pro, Business, Edu, and Enterprise include Codex, Free/Go remain limited-time entry points, Plus includes cloud integrations and the latest models, Pro adds Spark plus priority processing and higher limits, and API-key auth still excludes cloud features and may lag on new-model access.
-- IDE guidance is broader than before: official docs cover VS Code, Cursor, Windsurf, and JetBrains, while Windows support in the IDE remains experimental and agent mode is still best through WSL.
-- Windows guidance is now more operational: the app has a native PowerShell-based Windows sandbox, supports switching the agent into WSL, and documents both Microsoft Store and `winget` installation paths.
-- `config.toml` and security guidance now emphasize `review_model`, top-level `web_search`, JSON schema validation, `approval_policy = { granular = ... }`, `windows.sandbox`, protected writable-root paths, and the distinction between local OS sandboxing and Codex Cloud’s two-phase runtime.
-- Best-practices guidance still reinforces the same durable operating model: use `AGENTS.md`, connect MCP only where it removes real manual loops, turn repeated prompts into skills, and schedule only stable workflows as automations.
+- `codex/models` still recommends a four-lane primary set, but the current page also makes the alternative ladder clearer: `gpt-5.4` first, `gpt-5.4-mini` for faster local/subagent work, `gpt-5.3-codex` for Codex Cloud and complex engineering, `gpt-5.3-codex-spark` for near-instant Pro-only iteration, then the GPT-5.2/5.1 family as fallback options.
+- The OpenAI `Introducing GPT-5.4` post still matters for positioning: GPT-5.4 combines GPT-5.3-Codex-class coding with stronger reasoning, tool use, and agentic workflows, and OpenAI explicitly calls out up to 1M context in Codex.
+- Pricing is more specific than the earlier summary: Free/Go remain limited-time entry points, eligible paid plans currently advertise temporary 2x Codex rate limits, GPT-5.4-mini materially stretches local-message quotas, and API-key auth still excludes cloud features and can lag on new-model access.
+- IDE guidance is broader and more explicit: official docs now cover VS Code, Cursor, Windsurf, and JetBrains, while the extension remains primarily documented for macOS/Linux and Windows agent mode is still best through WSL.
+- Windows guidance is now split cleanly between the general setup page and the dedicated app page: the app supports Microsoft Store and `winget` installation, a native PowerShell sandbox, optional WSL agent switching, and separate integrated-terminal choices.
+- `config.toml` and security guidance now emphasize `review_model`, top-level `web_search`, JSON schema validation, `approval_policy = { granular = { ... } }`, `windows.sandbox`, protected `.git` / `.codex` / `.agents` paths, and the distinction between local OS sandboxing and Codex Cloud’s two-phase runtime.
+- Best-practices guidance remains stable but is worth restating more clearly for both beginners and power users: use `AGENTS.md` for durable repo guidance, keep MCP scoped to real external-context needs, turn repeated workflows into skills, and automate only workflows that are already reliable manually.
 
 ### Audience Quick Use
 

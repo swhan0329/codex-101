@@ -42,7 +42,7 @@
             <p class="hero-badge">
                 <span data-i18n="hero_badge_prefix">공식 문서 기준 재검수</span>
                 <span aria-hidden="true"> · </span>
-                <span class="live-date" data-date-format="long">2026년 3월 20일</span>
+                <span class="live-date" data-date-format="long">2026년 3월 23일</span>
             </p>
             <h1 class="hero-title" data-i18n="hero_title">OpenAI Codex를<br />한국 실무에 바로 붙이는 가이드</h1>
             <p class="hero-sub" data-i18n="hero_sub">CLI · Desktop App (macOS/Windows) · IDE Extension · Web · Mobile · SDK automation<br />최신 공식 문서를 기준으로 제품 면 선택, 모델 선택, 샌드박스/승인, MCP, 자동화를 처음 사용자와 실무 사용자 모두 읽기 쉽도록 다시 정리했습니다.</p>
@@ -115,7 +115,7 @@
                         </div>
                         <p class="overview-fact-date">
                             <span data-i18n="overview_fact_date_prefix">업데이트 기준일</span>
-                            <span class="live-date" data-date-format="long">2026년 3월 20일</span>
+                            <span class="live-date" data-date-format="long">2026년 3월 23일</span>
                         </p>
                     </div>
 
@@ -757,8 +757,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <p class="callout-inline" data-i18n="s4_note_access">* Free/Go도 한시적으로 Codex 접근 가능. ** Plus 이상(및
-                            Edu/Enterprise) 한시적 2x Codex rate limits 제공.</p>
+                        <p class="callout-inline" data-i18n="s4_note_access">* Free/Go는 한시 제공입니다. Plus/Pro/Business/Enterprise에는 한시적으로 2x rate limits가 적용될 수 있고, 실제 한도는 모델과 작업 크기에 따라 달라지므로 항상 Codex Pricing과 usage dashboard를 함께 확인하세요.</p>
                     </div>
                 </div>
             </section>
@@ -995,7 +994,7 @@ codex --cd /path/to/project
 
             <!-- Section 9 -->
             <section class="section" id="s10">
-                <h2><span class="section-num">10</span> <span data-i18n="s10_title">승인 모드 (Approval Modes)</span></h2>
+                <h2><span class="section-num">10</span> <span data-i18n="s10_title">승인 + 샌드박스 조합</span></h2>
                 <div class="table-wrap">
                     <table>
                         <thead>
@@ -1009,7 +1008,7 @@ codex --cd /path/to/project
                         </thead>
                         <tbody>
                             <tr>
-                                <td><strong>Suggest</strong> <span class="badge" data-i18n="default_badge">기본</span>
+                                <td><strong>Read-only</strong>
                                 </td>
                                 <td>✅</td>
                                 <td>❌</td>
@@ -1017,26 +1016,34 @@ codex --cd /path/to/project
                                 <td>❌</td>
                             </tr>
                             <tr>
-                                <td><strong>Auto-Edit</strong></td>
+                                <td><strong>Auto</strong> <span class="badge" data-i18n="default_badge">기본</span></td>
                                 <td>✅</td>
                                 <td>✅</td>
-                                <td>❌</td>
+                                <td>✅</td>
                                 <td>❌</td>
                             </tr>
                             <tr>
-                                <td><strong>Full Auto</strong></td>
+                                <td><strong>Workspace-write + untrusted</strong></td>
                                 <td>✅</td>
                                 <td>✅</td>
-                                <td>✅</td>
+                                <td>△ trusted commands only</td>
                                 <td>❌</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Danger-full-access</strong></td>
+                                <td>✅</td>
+                                <td>✅</td>
+                                <td>✅</td>
+                                <td>✅</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-                <pre><code>codex --approval-mode suggest
-codex --approval-mode auto-edit
-codex --approval-mode full-auto</code></pre>
-                <p data-i18n="s10_sandbox">보안: 로컬 Codex는 OS 수준 sandbox를 사용합니다. macOS는 Seatbelt, Linux는 bubblewrap + seccomp, Windows는 네이티브 sandbox 또는 WSL 경로를 사용하며 기본 `workspace-write`에서는 네트워크가 꺼져 있습니다. Cloud는 setup 후 agent phase가 기본 오프라인인 분리 런타임입니다.
+                <pre><code>codex --sandbox read-only --ask-for-approval on-request
+codex --full-auto
+codex --sandbox workspace-write --ask-for-approval untrusted
+codex --dangerously-bypass-approvals-and-sandbox</code></pre>
+                <p data-i18n="s10_sandbox">보안: 로컬 Codex는 OS 수준 sandbox를 사용합니다. macOS는 Seatbelt, Linux는 bubblewrap + seccomp, Windows는 네이티브 sandbox 또는 WSL을 사용합니다. 기본 `workspace-write`에서는 네트워크가 꺼져 있고 `.git`·`.codex`·`.agents`는 보호 경로로 읽기 전용입니다. Cloud는 setup 단계와 offline agent 단계를 분리한 런타임입니다.
                 </p>
             </section>
 
@@ -1430,7 +1437,7 @@ codex resume &lt;ID&gt;       <span class="c"># 특정 세션</span>
                 <h2><span class="section-num">16</span> <span data-i18n="s16_title">비대화형 자동화 & CI/CD</span></h2>
                 <pre data-i18n-html="code_s16_exec"><code><span class="c"># codex exec - 실행 후 자동 종료</span>
 codex exec "Review this PR" --output stdout
-codex exec "Fix all TODOs" --approval-mode full-auto</code></pre>
+codex exec "Fix all TODOs" --full-auto</code></pre>
                 <div class="callout">
                     <strong data-i18n="s16_cloud_title">Codex Web 자동 리뷰</strong>
                     <p data-i18n="s16_cloud_desc">GitHub 연결 + 리뷰 대상 저장소 선택 후 "Automatic reviews" 활성화 → 새 PR마다 자동 리뷰,
