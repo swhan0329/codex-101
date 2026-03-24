@@ -42,7 +42,7 @@
             <p class="hero-badge">
                 <span data-i18n="hero_badge_prefix">공식 문서 기준 재검수</span>
                 <span aria-hidden="true"> · </span>
-                <span class="live-date" data-date-format="long">2026년 3월 23일</span>
+                <span class="live-date" data-date-format="long">2026년 3월 24일</span>
             </p>
             <h1 class="hero-title" data-i18n="hero_title">OpenAI Codex를<br />한국 실무에 바로 붙이는 가이드</h1>
             <p class="hero-sub" data-i18n="hero_sub">CLI · Desktop App (macOS/Windows) · IDE Extension · Web · Mobile · SDK automation<br />최신 공식 문서를 기준으로 제품 면 선택, 모델 선택, 샌드박스/승인, MCP, 자동화를 처음 사용자와 실무 사용자 모두 읽기 쉽도록 다시 정리했습니다.</p>
@@ -115,30 +115,34 @@
                         </div>
                         <p class="overview-fact-date">
                             <span data-i18n="overview_fact_date_prefix">업데이트 기준일</span>
-                            <span class="live-date" data-date-format="long">2026년 3월 23일</span>
+                            <span class="live-date" data-date-format="long">2026년 3월 24일</span>
                         </p>
                     </div>
 
                     <div class="overview-fact-grid">
                         <article class="fact-card">
                             <h4 data-i18n="overview_fact_1_title">모델 추천 재정렬</h4>
-                            <p data-i18n="overview_fact_1_desc">`codex/models` 기준으로 추천 모델을 네 갈래로 다시 정리했습니다. 기본 시작점은 `gpt-5.4`, 빠른 로컬/서브에이전트는 `gpt-5.4-mini`, Codex Cloud와 복잡한 엔지니어링은 `gpt-5.3-codex`, 거의 즉각적인 반복은 `gpt-5.3-codex-spark`입니다.</p>
+                            <p data-i18n="overview_fact_1_desc">`codex/models` 기준으로 추천 모델과 대안 모델 계층을 다시 점검했습니다. 기본 시작점은 `gpt-5.4`, 빠른 로컬 작업이나 보조 에이전트는 `gpt-5.4-mini`, Codex Cloud와 복잡한 엔지니어링 작업은 `gpt-5.3-codex`, 거의 즉각적인 반복 작업은 `gpt-5.3-codex-spark`입니다. Spark는 별도 사용 한도로 운영되는 Pro 전용 프리뷰 모델입니다.</p>
                         </article>
                         <article class="fact-card">
                             <h4 data-i18n="overview_fact_2_title">GPT-5.4 발표 내용 반영</h4>
-                            <p data-i18n="overview_fact_2_desc">OpenAI 발표 기준으로 GPT-5.4가 GPT-5.3-Codex의 코딩 강점과 더 강한 추론·도구 사용을 결합했다는 점, Codex에서 실험적 1M context 옵션이 있다는 점을 소개에 반영했습니다.</p>
+                            <p data-i18n="overview_fact_2_desc">OpenAI 발표 기준으로 GPT-5.4가 GPT-5.3-Codex급 코딩 역량에 더 강한 추론·도구 사용을 결합했다는 점을 넘어서, Codex에서 컴퓨터를 직접 다루는 기능, 더 강한 도구 검색, 최대 100만 토큰 문맥을 지원한다는 설명을 반영했습니다.</p>
                         </article>
                         <article class="fact-card">
                             <h4 data-i18n="overview_fact_3_title">플랜/접근 범위 보강</h4>
-                            <p data-i18n="overview_fact_3_desc">Quickstart와 Pricing 기준으로 Free/Go 한시 체험, Plus/Pro/Business/Enterprise의 포함 범위, Plus의 최신 모델·클라우드 연동, Pro의 Spark·우선 처리·더 높은 한도, API 키 로그인 시 클라우드 기능 제한을 다시 맞췄습니다.</p>
+                            <p data-i18n="overview_fact_3_desc">Quickstart와 Pricing 기준으로 Free/Go도 Codex를 쓸 수 있다는 점, Plus/Pro/Business/Enterprise/Edu의 포함 범위, Plus의 최신 모델·클라우드 연동, Pro의 Spark·우선 처리·로컬/클라우드 6배 한도·코드 리뷰 10배, 크레딧 확장, API 키 로그인 시 클라우드 기능 제한을 다시 맞췄습니다.</p>
                         </article>
                         <article class="fact-card">
                             <h4 data-i18n="overview_fact_4_title">IDE·Windows 경로 재정리</h4>
-                            <p data-i18n="overview_fact_4_desc">IDE와 Windows 문서 기준으로 VS Code/Cursor/Windsurf/JetBrains 경로를 보강하고, Windows에서는 앱이 기본 경로이며 Microsoft Store와 `winget` 설치, PowerShell 네이티브 sandbox, 선택적 WSL agent 전환까지 반영했습니다.</p>
+                            <p data-i18n="overview_fact_4_desc">IDE와 Windows 문서 기준으로 VS Code/Cursor/Windsurf/JetBrains 경로를 보강하고, JetBrains 로그인 방식, Windows 앱의 Microsoft Store/`winget` 설치, `elevated`/`unelevated` 샌드박스, 전용 데스크톱 격리 기본값, 선택적 WSL 전환까지 반영했습니다.</p>
                         </article>
                         <article class="fact-card">
                             <h4 data-i18n="overview_fact_5_title">config/security 흐름 갱신</h4>
-                            <p data-i18n="overview_fact_5_desc">`review_model`, top-level `web_search`, config schema, `approval_policy = { granular = ... }`, `windows.sandbox`, 보호 경로, 로컬 OS sandbox와 cloud 2-phase runtime 같은 최신 보안/설정 설명을 반영했습니다.</p>
+                            <p data-i18n="overview_fact_5_desc">`review_model`, top-level `web_search`, `tools.web_search`, config schema, `approval_policy = { granular = ... }`, `windows.sandbox`, `windows.sandbox_private_desktop`, 보호 경로, 로컬 OS 샌드박스와 클라우드 2단계 런타임 같은 최신 보안·설정 설명을 반영했습니다.</p>
+                        </article>
+                        <article class="fact-card">
+                            <h4 data-i18n="overview_fact_6_title">관련 가이드·프로그램 범위 확대</h4>
+                            <p data-i18n="overview_fact_6_desc">`Codex for Open Source`와 `Building an AI-Native Engineering Team`도 함께 대조해, Codex의 적용 범위가 개인 사용을 넘어 오픈소스 메인테이너 지원과 팀 단위 개발 운영 가이드까지 넓어졌다는 점을 반영했습니다.</p>
                         </article>
                     </div>
 
@@ -153,6 +157,9 @@
                         <a href="https://developers.openai.com/codex/ide/" target="_blank" class="source-chip" data-i18n="overview_source_6">IDE extension</a>
                         <a href="https://developers.openai.com/codex/windows/" target="_blank" class="source-chip" data-i18n="overview_source_7">Windows guide</a>
                         <a href="https://openai.com/index/introducing-gpt-5-4/" target="_blank" class="source-chip" data-i18n="overview_source_9">GPT-5.4 announcement</a>
+                        <a href="https://openai.com/index/introducing-gpt-5-3-codex-spark/" target="_blank" class="source-chip" data-i18n="overview_source_10">GPT-5.3-Codex-Spark announcement</a>
+                        <a href="https://developers.openai.com/codex/community/codex-for-oss/" target="_blank" class="source-chip" data-i18n="overview_source_11">Codex for OSS</a>
+                        <a href="https://developers.openai.com/codex/guides/build-ai-native-engineering-team/" target="_blank" class="source-chip" data-i18n="overview_source_12">AI-Native Engineering Team</a>
                     </div>
                 </div>
 
@@ -186,7 +193,7 @@
             <!-- Section 1 -->
             <section class="section" id="s1">
                 <h2><span class="section-num">01</span> <span data-i18n="s1_title">Codex 에코시스템 개요</span></h2>
-                <p data-i18n="s1_intro">OpenAI Codex는 소프트웨어 개발을 위한 코딩 에이전트입니다. 공식 문서는 Codex를 앱, IDE, CLI, 웹/iOS, SDK 기반 자동화에서 사용할 수 있다고 설명하며, 대부분의 작업은 `gpt-5.4`부터 시작하고 빠른 로컬 작업이나 subagent에는 `gpt-5.4-mini`, Codex Cloud와 복잡한 엔지니어링에는 `gpt-5.3-codex`, 거의 즉각적인 반복에는 `gpt-5.3-codex-spark`를 보라고 안내합니다.</p>
+                <p data-i18n="s1_intro">OpenAI Codex는 소프트웨어 개발을 위한 코딩 에이전트입니다. 공식 문서는 Codex를 앱, IDE, CLI, 웹/iOS, SDK 기반 자동화에서 사용할 수 있다고 설명하며, 대부분의 작업은 `gpt-5.4`부터 시작하고 빠른 로컬 작업이나 보조 에이전트에는 `gpt-5.4-mini`, Codex Cloud와 복잡한 엔지니어링 작업에는 `gpt-5.3-codex`, 거의 즉각적인 반복 작업에는 `gpt-5.3-codex-spark`를 보라고 안내합니다. 최근 공식 가이드는 여기서 더 나아가 Codex를 오픈소스 유지보수와 팀 단위 개발 운영까지 확장하는 흐름도 함께 제시합니다.</p>
                 <blockquote data-i18n="s1_philosophy">"단순 코드 생성 → 소프트웨어 엔지니어 팀원"</blockquote>
                 <p data-i18n="s1_desc">Codex는 코드 자동완성 도구가 아닙니다. 여러 파일을 동시에 수정하고, 테스트를 실행하고, 결과를 검증하며, 스스로 디버깅하는 자율
                     에이전트입니다.</p>
@@ -722,12 +729,12 @@
                                     <tr>
                                         <td>Free</td>
                                         <td>$0</td>
-                                        <td data-i18n="s4_codex_free">웹/CLI/IDE/모바일 한시 제공*</td>
+                                        <td data-i18n="s4_codex_free">웹/CLI/IDE/모바일 사용 가능</td>
                                     </tr>
                                     <tr>
                                         <td>Go</td>
                                         <td>$8/mo</td>
-                                        <td data-i18n="s4_codex_go">웹/CLI/IDE/모바일 한시 제공*</td>
+                                        <td data-i18n="s4_codex_go">웹/CLI/IDE/모바일 사용 가능</td>
                                     </tr>
                                     <tr>
                                         <td>Plus</td>
@@ -757,7 +764,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <p class="callout-inline" data-i18n="s4_note_access">* Free/Go는 한시 제공입니다. Plus/Pro/Business/Enterprise에는 한시적으로 2x rate limits가 적용될 수 있고, 실제 한도는 모델과 작업 크기에 따라 달라지므로 항상 Codex Pricing과 usage dashboard를 함께 확인하세요.</p>
+                        <p class="callout-inline" data-i18n="s4_note_access">Free와 Go에서도 Codex를 쓸 수 있습니다. 플랜 차이는 주로 사용 한도와 클라우드 기능 범위에 있습니다. 일부 유료 플랜에는 한시적으로 2배 rate limit가 적용될 수 있습니다. 실제 한도는 모델과 작업 크기에 따라 달라지므로 항상 Codex Pricing과 usage dashboard를 함께 확인하세요.</p>
                     </div>
                 </div>
             </section>
@@ -808,7 +815,7 @@ export OPENAI_API_KEY="your-api-key-here"</code></pre>
                     <article class="setup-block">
                         <h3 data-i18n="s5_vsc_install">IDE Extension 설치</h3>
                         <ol class="setup-steps">
-                            <li data-i18n="s5_vsc1">VS Code/Cursor/Windsurf는 확장 설치, JetBrains는 전용 통합 경로 사용</li>
+                            <li data-i18n="s5_vsc1">VS Code/Cursor/Windsurf는 확장을 설치하고, JetBrains는 전용 통합을 사용합니다. JetBrains 쪽은 ChatGPT, API 키, JetBrains AI 로그인 방식을 지원합니다.</li>
                             <li data-i18n="s5_vsc2">설치 후 사이드바에서 Codex 패널 활성화</li>
                             <li data-i18n="s5_vsc3">ChatGPT 계정으로 인증</li>
                         </ol>
@@ -912,7 +919,7 @@ codex --cd /path/to/project
                     <img src="images/codex_IDE.png" alt="Codex VS Extension marketplace page" loading="lazy" />
                     <figcaption data-i18n="img_ide">Codex VS Extension — 마켓플레이스 (4.6M+ 다운로드)</figcaption>
                 </figure>
-                <p data-i18n="s8_intro">VS Code, Cursor, Windsurf, JetBrains IDE에 통합되는 AI 코딩 에이전트입니다. Windows 지원은 아직 실험적이며, 가장 안정적인 경로는 WSL 워크스페이스에서 agent mode를 쓰는 것입니다.</p>
+                <p data-i18n="s8_intro">VS Code, Cursor, Windsurf, JetBrains IDE에 통합되는 AI 코딩 에이전트입니다. JetBrains 통합은 ChatGPT 계정, API 키, JetBrains AI로 로그인할 수 있습니다. VS Code 계열 확장은 macOS/Linux 중심으로 문서화되어 있고, Windows 지원은 아직 실험적이며 가장 안정적인 경로는 WSL 워크스페이스에서 에이전트 모드를 쓰는 것입니다.</p>
                 <div class="table-wrap">
                     <table>
                         <thead>
@@ -1255,13 +1262,16 @@ codex init</code></pre>
                 <h2><span class="section-num">13</span> <span data-i18n="s13_title">config.toml 설정</span></h2>
                 <pre data-i18n-html="code_s13_config"><code><span class="c"># ~/.codex/config.toml</span>
 model = "gpt-5.4"
+review_model = "gpt-5.4"
 model_provider = "openai"
 approval_policy = "on-request"
 sandbox_mode = "workspace-write"
-sandbox_workspace_write.network_access = false
+web_search = "cached"
 model_reasoning_effort = "medium"
 model_instructions_file = "~/.codex/instructions.md"
-web_search = "cached"
+
+[sandbox_workspace_write]
+network_access = false
 
 <span class="c"># 프로필</span>
 [profiles.fast]
@@ -1271,6 +1281,10 @@ model_reasoning_effort = "low"
 [profiles.deep]
 model = "gpt-5.4"
 model_reasoning_effort = "high"
+
+[windows]
+sandbox = "elevated"
+sandbox_private_desktop = true
 
 <span class="c"># OpenAI Docs MCP</span>
 [mcp_servers.openaiDeveloperDocs]
@@ -1289,7 +1303,7 @@ codex --profile deep</code></pre>
                 <div class="tip-grid">
                     <div class="tip-card">
                         <h4 data-i18n="s13_c1_t">무엇을 고정할까</h4>
-                        <p data-i18n="s13_c1_d">모델, reasoning effort, sandbox mode, approval policy, profile, MCP 서버처럼 세션마다 흔들리면 품질 차이가 큰 항목부터 기본값으로 고정하세요.</p>
+                        <p data-i18n="s13_c1_d">모델, review_model, reasoning effort, sandbox mode, approval policy, web_search, profile, MCP 서버처럼 세션마다 흔들리면 품질 차이가 큰 항목부터 기본값으로 고정하세요. 필요하면 Windows 전용 `windows.sandbox`와 `windows.sandbox_private_desktop`도 함께 고정하세요.</p>
                     </div>
                     <div class="tip-card">
                         <h4 data-i18n="s13_c2_t">권한은 좁게 시작</h4>

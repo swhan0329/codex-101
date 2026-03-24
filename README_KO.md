@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 3월 23일</strong><br/>
+  <strong>최종 업데이트: 2026년 3월 24일</strong><br/>
   라이브 사이트는 보는 사람의 당일 날짜를 자동으로 표시하며, 최신 Codex 모델 가이드를 공식 문서 기준으로 반영합니다.
 </p>
 
@@ -32,15 +32,15 @@
 - **처음 사용하는 사용자**: **04-06**(설치/로그인/첫 실행) → **10**(approval/sandbox 기초) → **14**(OpenAI Docs MCP) 순서로 읽는 것을 권장합니다.
 - **실무 사용자**: **12-14**(AGENTS.md/config.toml/MCP) → **15-17**(세션 운영/자동화/프롬프트 실행 계약) 순서로 읽으면 팀 운영 기준을 빠르게 잡을 수 있습니다.
 
-### 일일 MCP 검증 스냅샷 (2026-03-23)
+### 일일 MCP 검증 스냅샷 (2026-03-24)
 
-- `codex/models`는 여전히 네 갈래 추천 세트가 중심이지만, 현재 페이지는 대안 모델 계층도 더 선명하게 보여줍니다. 기본 시작점은 `gpt-5.4`, 빠른 로컬 작업이나 subagent용은 `gpt-5.4-mini`, Codex Cloud와 복잡한 엔지니어링은 `gpt-5.3-codex`, 거의 즉각적인 반복은 `gpt-5.3-codex-spark`, 그 아래 대안은 GPT-5.2/5.1 계열입니다.
-- OpenAI의 `Introducing GPT-5.4` 발표는 GPT-5.4가 GPT-5.3-Codex급 코딩 강점에 더 강한 추론·도구 사용·에이전틱 워크플로를 결합했다고 설명하며, Codex에서 최대 1M context를 언급합니다.
-- 가격/접근 범위 설명은 더 구체적으로 바뀌었습니다. Free/Go는 한시 체험 경로이고, 유료 플랜 일부는 현재 한시적으로 2x Codex rate limits를 안내하며, `gpt-5.4-mini`는 로컬 메시지 한도를 더 오래 쓰게 해주고, API 키 인증은 여전히 클라우드 기능이 없고 새 모델 접근이 늦을 수 있습니다.
-- IDE 문서는 VS Code뿐 아니라 Cursor, Windsurf, JetBrains까지 공식 범위에 포함합니다. 다만 확장 문서는 여전히 macOS/Linux 중심으로 읽는 편이 자연스럽고, Windows에서 agent mode는 현재 WSL 워크스페이스가 가장 안정적입니다.
-- Windows 문서는 일반 가이드와 앱 전용 가이드가 분리되어 있습니다. 앱의 PowerShell 기반 네이티브 Windows sandbox, WSL agent 전환, Microsoft Store와 `winget` 설치, 통합 터미널 선택을 각각 더 명확하게 설명합니다.
-- `config.toml`과 보안 문서는 `review_model`, top-level `web_search`, JSON schema, `approval_policy = { granular = { ... } }`, `windows.sandbox`, 보호 경로(`.git`/`.codex`/`.agents`), 로컬 OS sandbox와 Codex Cloud의 2-phase runtime 구분을 더 중요하게 다룹니다.
-- Best practices의 큰 방향은 유지됩니다. `AGENTS.md`로 반복 규칙을 고정하고, MCP는 실제 반복 수작업을 줄일 때만 연결하고, 반복되는 작업은 skill로 묶고, 충분히 안정화된 뒤에만 automation으로 올리는 흐름이 핵심입니다.
+- `codex/models`는 여전히 네 갈래 추천 체계를 중심으로 설명하지만, 오늘 기준 페이지는 각 모델을 어디에 쓰면 좋은지도 더 분명하게 적습니다. 기본 시작점은 `gpt-5.4`, 빠른 로컬 작업이나 보조 에이전트용은 `gpt-5.4-mini`, Codex Cloud와 복잡한 엔지니어링 작업은 `gpt-5.3-codex`, 거의 즉각적인 반복 작업은 `gpt-5.3-codex-spark`입니다. Spark는 별도 사용 한도로 운영되는 ChatGPT Pro 전용 프리뷰 모델입니다.
+- OpenAI의 `Introducing GPT-5.4` 발표에서 지금 특히 중요한 포인트는 “코딩이 더 강하다”를 넘는다는 점입니다. GPT-5.4는 Codex에서 컴퓨터를 직접 다루는 기능, 더 강한 도구 검색, 최대 100만 토큰 문맥을 지원하는 첫 범용 모델로 설명됩니다.
+- 가격/접근 범위 설명은 일반론으로 적으면 금방 낡습니다. Free와 Go 사용자도 Codex를 쓸 수 있고, 유료 플랜은 주로 사용 한도와 클라우드 기능이 더 넓습니다. 일부 유료 플랜은 현재 한시적으로 2배 rate limit를 안내합니다. Plus는 GPT-5.4/GPT-5.3-Codex와 클라우드 연동을, Pro는 Spark와 우선 처리, 로컬·클라우드 6배 한도, 코드 리뷰 10배를, Enterprise/Edu는 고정 한도보다 크레딧 확장을 더 분명하게 보여줍니다.
+- IDE 문서는 이제 VS Code뿐 아니라 Cursor, Windsurf, JetBrains까지 공식 범위에 포함합니다. JetBrains 통합은 ChatGPT 계정, API 키, JetBrains AI로 로그인할 수 있다고 명시합니다. 반면 VS Code 계열 확장은 여전히 macOS/Linux 중심으로 읽는 편이 자연스럽고, Windows 에이전트 모드는 현재 WSL 워크스페이스가 가장 안정적입니다.
+- Windows 문서는 예전보다 훨씬 구체적입니다. 기본 경로는 앱 사용이며, Microsoft Store와 `winget` 설치, `elevated`/`unelevated` 네이티브 샌드박스, 전용 데스크톱 격리가 기본이라는 점, 네이티브 제약이 있을 때 WSL로 우회하는 방법까지 더 명확하게 설명합니다.
+- `config.toml` 최신화 포인트도 늘었습니다. 현재 기준 문서는 `review_model`, top-level `web_search`, `tools.web_search`, JSON schema, `approval_policy = { granular = { ... } }`, `windows.sandbox`, `windows.sandbox_private_desktop`, 그리고 `experimental_instructions_file`을 `model_instructions_file`로 바꿔야 한다는 점을 중요하게 다룹니다.
+- 관련 Codex 생태계 페이지도 이제 함께 보는 편이 좋습니다. `Codex for Open Source`는 오픈소스 메인테이너에게 6개월 Pro + Codex와 조건부 Codex Security/API 크레딧 지원을 안내하고, `Building an AI-Native Engineering Team`은 팀이 계획·구현·테스트·리뷰·운영 전반에 코딩 에이전트를 붙이는 방법을 공식적으로 정리합니다.
 
 ### 사용자별 즉시 적용 요약
 
