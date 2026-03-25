@@ -42,7 +42,7 @@
             <p class="hero-badge">
                 <span data-i18n="hero_badge_prefix">공식 문서 기준 재검수</span>
                 <span aria-hidden="true"> · </span>
-                <span class="live-date" data-date-format="long">2026년 3월 24일</span>
+                <span class="live-date" data-date-format="long">2026년 3월 25일</span>
             </p>
             <h1 class="hero-title" data-i18n="hero_title">OpenAI Codex를<br />한국 실무에 바로 붙이는 가이드</h1>
             <p class="hero-sub" data-i18n="hero_sub">CLI · Desktop App (macOS/Windows) · IDE Extension · Web · Mobile · SDK automation<br />최신 공식 문서를 기준으로 제품 면 선택, 모델 선택, 샌드박스/승인, MCP, 자동화를 처음 사용자와 실무 사용자 모두 읽기 쉽도록 다시 정리했습니다.</p>
@@ -115,14 +115,14 @@
                         </div>
                         <p class="overview-fact-date">
                             <span data-i18n="overview_fact_date_prefix">업데이트 기준일</span>
-                            <span class="live-date" data-date-format="long">2026년 3월 24일</span>
+                            <span class="live-date" data-date-format="long">2026년 3월 25일</span>
                         </p>
                     </div>
 
                     <div class="overview-fact-grid">
                         <article class="fact-card">
                             <h4 data-i18n="overview_fact_1_title">모델 추천 재정렬</h4>
-                            <p data-i18n="overview_fact_1_desc">`codex/models` 기준으로 추천 모델과 대안 모델 계층을 다시 점검했습니다. 기본 시작점은 `gpt-5.4`, 빠른 로컬 작업이나 보조 에이전트는 `gpt-5.4-mini`, Codex Cloud와 복잡한 엔지니어링 작업은 `gpt-5.3-codex`, 거의 즉각적인 반복 작업은 `gpt-5.3-codex-spark`입니다. Spark는 별도 사용 한도로 운영되는 Pro 전용 프리뷰 모델입니다.</p>
+                            <p data-i18n="overview_fact_1_desc">`codex/models` 기준으로 추천 모델과 대안 모델 계층을 다시 점검했습니다. 기본 시작점은 `gpt-5.4`, 빠른 로컬 작업이나 보조 에이전트는 `gpt-5.4-mini`, Codex Cloud와 복잡한 엔지니어링 작업은 `gpt-5.3-codex`, 거의 즉각적인 반복 작업은 `gpt-5.3-codex-spark`입니다. Spark는 ChatGPT Pro 전용 연구 프리뷰이며 API 접근은 없습니다.</p>
                         </article>
                         <article class="fact-card">
                             <h4 data-i18n="overview_fact_2_title">GPT-5.4 발표 내용 반영</h4>
@@ -130,7 +130,7 @@
                         </article>
                         <article class="fact-card">
                             <h4 data-i18n="overview_fact_3_title">플랜/접근 범위 보강</h4>
-                            <p data-i18n="overview_fact_3_desc">Quickstart와 Pricing 기준으로 Free/Go도 Codex를 쓸 수 있다는 점, Plus/Pro/Business/Enterprise/Edu의 포함 범위, Plus의 최신 모델·클라우드 연동, Pro의 Spark·우선 처리·로컬/클라우드 6배 한도·코드 리뷰 10배, 크레딧 확장, API 키 로그인 시 클라우드 기능 제한을 다시 맞췄습니다.</p>
+                            <p data-i18n="overview_fact_3_desc">Quickstart와 Pricing 기준으로 유료 플랜의 정식 포함 범위와 Free/Go 접근 설명을 다시 맞췄습니다. Plus의 최신 모델·클라우드 연동·GPT-5.4-mini 로컬 한도 확장, Pro의 Spark·우선 처리·로컬/클라우드 6배 한도·코드 리뷰 10배, Enterprise/Edu의 크레딧 기반 확장, API 키 로그인 시 클라우드 기능 제한도 함께 정리했습니다.</p>
                         </article>
                         <article class="fact-card">
                             <h4 data-i18n="overview_fact_4_title">IDE·Windows 경로 재정리</h4>
@@ -138,7 +138,7 @@
                         </article>
                         <article class="fact-card">
                             <h4 data-i18n="overview_fact_5_title">config/security 흐름 갱신</h4>
-                            <p data-i18n="overview_fact_5_desc">`review_model`, top-level `web_search`, `tools.web_search`, config schema, `approval_policy = { granular = ... }`, `windows.sandbox`, `windows.sandbox_private_desktop`, 보호 경로, 로컬 OS 샌드박스와 클라우드 2단계 런타임 같은 최신 보안·설정 설명을 반영했습니다.</p>
+                            <p data-i18n="overview_fact_5_desc">`review_model`, top-level `web_search`, `tools.web_search`, config schema, `windows.sandbox`, `windows.sandbox_private_desktop`, 보호 경로, 로컬 OS 샌드박스와 클라우드 2단계 런타임 같은 최신 보안·설정 설명을 반영했습니다.</p>
                         </article>
                         <article class="fact-card">
                             <h4 data-i18n="overview_fact_6_title">관련 가이드·프로그램 범위 확대</h4>
@@ -764,7 +764,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <p class="callout-inline" data-i18n="s4_note_access">Free와 Go에서도 Codex를 쓸 수 있습니다. 플랜 차이는 주로 사용 한도와 클라우드 기능 범위에 있습니다. 일부 유료 플랜에는 한시적으로 2배 rate limit가 적용될 수 있습니다. 실제 한도는 모델과 작업 크기에 따라 달라지므로 항상 Codex Pricing과 usage dashboard를 함께 확인하세요.</p>
+                        <p class="callout-inline" data-i18n="s4_note_access">현재 공식 문서는 유료 플랜에 Codex가 포함된다고 설명하며, Free와 Go 접근도 함께 안내합니다. 플랜 차이는 주로 사용 한도와 클라우드 기능 범위에 있으며, 일부 유료 플랜에는 한시적으로 2배 rate limit가 적용될 수 있습니다. 실제 한도는 모델과 작업 크기에 따라 달라지므로 항상 Codex Pricing과 usage dashboard를 함께 확인하세요.</p>
                     </div>
                 </div>
             </section>
@@ -828,7 +828,7 @@ export OPENAI_API_KEY="your-api-key-here"</code></pre>
                 <h2><span class="section-num">06</span> <span data-i18n="s6_title">Codex CLI 사용법</span></h2>
                 <figure class="screenshot">
                     <img src="images/codex_cli.png" alt="Codex CLI v0.104 running in terminal" loading="lazy" />
-                    <figcaption data-i18n="img_cli">Codex CLI v0.104.0 — 터미널 기반 에이전틱 코딩 워크플로
+                    <figcaption data-i18n="img_cli">Codex CLI — 터미널 기반 에이전틱 코딩 워크플로
                     </figcaption>
                 </figure>
                 <pre data-i18n-html="code_s6_usage"><code><span class="c"># 인터랙티브 모드</span>
@@ -1260,7 +1260,8 @@ codex init</code></pre>
             <!-- Section 12 -->
             <section class="section" id="s13">
                 <h2><span class="section-num">13</span> <span data-i18n="s13_title">config.toml 설정</span></h2>
-                <pre data-i18n-html="code_s13_config"><code><span class="c"># ~/.codex/config.toml</span>
+                <pre data-i18n-html="code_s13_config"><code><span class="c">#:schema https://developers.openai.com/codex/config-schema.json</span>
+<span class="c"># ~/.codex/config.toml</span>
 model = "gpt-5.4"
 review_model = "gpt-5.4"
 model_provider = "openai"
@@ -1272,6 +1273,9 @@ model_instructions_file = "~/.codex/instructions.md"
 
 [sandbox_workspace_write]
 network_access = false
+
+[tools]
+web_search = { context_size = "medium" }
 
 <span class="c"># 프로필</span>
 [profiles.fast]
@@ -1285,6 +1289,15 @@ model_reasoning_effort = "high"
 [windows]
 sandbox = "elevated"
 sandbox_private_desktop = true
+
+<span class="c"># 필요한 경우 세밀 승인 정책</span>
+# approval_policy = { granular = {
+#   sandbox_approval = true,
+#   rules = true,
+#   mcp_elicitations = true,
+#   request_permissions = false,
+#   skill_approval = false
+# } }
 
 <span class="c"># OpenAI Docs MCP</span>
 [mcp_servers.openaiDeveloperDocs]
