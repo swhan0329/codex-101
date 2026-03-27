@@ -42,7 +42,7 @@
             <p class="hero-badge">
                 <span data-i18n="hero_badge_prefix">공식 문서 기준 재검수</span>
                 <span aria-hidden="true"> · </span>
-                <span class="live-date" data-date-format="long">2026년 3월 25일</span>
+                <span class="live-date" data-date-format="long">2026년 3월 27일</span>
             </p>
             <h1 class="hero-title" data-i18n="hero_title">OpenAI Codex를<br />한국 실무에 바로 붙이는 가이드</h1>
             <p class="hero-sub" data-i18n="hero_sub">CLI · Desktop App (macOS/Windows) · IDE Extension · Web · Mobile · SDK automation<br />최신 공식 문서를 기준으로 제품 면 선택, 모델 선택, 샌드박스/승인, MCP, 자동화를 처음 사용자와 실무 사용자 모두 읽기 쉽도록 다시 정리했습니다.</p>
@@ -115,14 +115,14 @@
                         </div>
                         <p class="overview-fact-date">
                             <span data-i18n="overview_fact_date_prefix">업데이트 기준일</span>
-                            <span class="live-date" data-date-format="long">2026년 3월 25일</span>
+                            <span class="live-date" data-date-format="long">2026년 3월 27일</span>
                         </p>
                     </div>
 
                     <div class="overview-fact-grid">
                         <article class="fact-card">
                             <h4 data-i18n="overview_fact_1_title">모델 추천 재정렬</h4>
-                            <p data-i18n="overview_fact_1_desc">`codex/models` 기준으로 추천 모델과 대안 모델 계층을 다시 점검했습니다. 기본 시작점은 `gpt-5.4`, 빠른 로컬 작업이나 보조 에이전트는 `gpt-5.4-mini`, Codex Cloud와 복잡한 엔지니어링 작업은 `gpt-5.3-codex`, 거의 즉각적인 반복 작업은 `gpt-5.3-codex-spark`입니다. Spark는 ChatGPT Pro 전용 연구 프리뷰이며 API 접근은 없습니다.</p>
+                            <p data-i18n="overview_fact_1_desc">`codex/models` 기준 네 갈래 추천 체계는 유지되지만 설명이 더 분명해졌습니다. 기본 시작점은 `gpt-5.4`, 빠른 로컬 작업이나 보조 에이전트는 `gpt-5.4-mini`, Codex Cloud와 복잡한 엔지니어링 작업은 `gpt-5.3-codex`, 거의 즉각적인 반복 작업은 `gpt-5.3-codex-spark`입니다. Spark는 표준 모델 문서에서는 일반 API 접근을 지원하지 않는 것으로 표시되고, 별도 발표문에서는 소수 디자인 파트너 대상 제한적 API 테스트를 언급합니다.</p>
                         </article>
                         <article class="fact-card">
                             <h4 data-i18n="overview_fact_2_title">GPT-5.4 발표 내용 반영</h4>
@@ -130,7 +130,7 @@
                         </article>
                         <article class="fact-card">
                             <h4 data-i18n="overview_fact_3_title">플랜/접근 범위 보강</h4>
-                            <p data-i18n="overview_fact_3_desc">Quickstart와 Pricing 기준으로 유료 플랜의 정식 포함 범위와 Free/Go 접근 설명을 다시 맞췄습니다. Plus의 최신 모델·클라우드 연동·GPT-5.4-mini 로컬 한도 확장, Pro의 Spark·우선 처리·로컬/클라우드 6배 한도·코드 리뷰 10배, Enterprise/Edu의 크레딧 기반 확장, API 키 로그인 시 클라우드 기능 제한도 함께 정리했습니다.</p>
+                            <p data-i18n="overview_fact_3_desc">Quickstart와 Pricing 기준으로 플랜 설명뿐 아니라 실제 한도 읽는 법도 다시 맞췄습니다. 가격 페이지는 이제 모델별 로컬/클라우드/코드 리뷰 범위와 평균 크레딧 비용까지 보여줍니다. 실무적으로는 `gpt-5.4`와 `gpt-5.4-mini`가 로컬 중심이고, 클라우드 작업과 GitHub 코드 리뷰는 `gpt-5.3-codex` 축으로 읽는 것이 가장 정확합니다.</p>
                         </article>
                         <article class="fact-card">
                             <h4 data-i18n="overview_fact_4_title">IDE·Windows 경로 재정리</h4>
@@ -141,8 +141,8 @@
                             <p data-i18n="overview_fact_5_desc">`review_model`, top-level `web_search`, `tools.web_search`, config schema, `windows.sandbox`, `windows.sandbox_private_desktop`, 보호 경로, 로컬 OS 샌드박스와 클라우드 2단계 런타임 같은 최신 보안·설정 설명을 반영했습니다.</p>
                         </article>
                         <article class="fact-card">
-                            <h4 data-i18n="overview_fact_6_title">관련 가이드·프로그램 범위 확대</h4>
-                            <p data-i18n="overview_fact_6_desc">`Codex for Open Source`와 `Building an AI-Native Engineering Team`도 함께 대조해, Codex의 적용 범위가 개인 사용을 넘어 오픈소스 메인테이너 지원과 팀 단위 개발 운영 가이드까지 넓어졌다는 점을 반영했습니다.</p>
+                            <h4 data-i18n="overview_fact_6_title">Plugins 계층 반영</h4>
+                            <p data-i18n="overview_fact_6_desc">공식 `plugins` 문서를 반영해, plugin을 skill·선택적 app 연동·MCP 설정을 함께 담는 설치 가능한 배포 단위로 정리했습니다. 즉, skill은 만드는 형식이고 plugin은 팀과 프로젝트에 배포하는 공유 단위라는 점을 문서에 추가했습니다.</p>
                         </article>
                     </div>
 
@@ -764,7 +764,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <p class="callout-inline" data-i18n="s4_note_access">현재 공식 문서는 유료 플랜에 Codex가 포함된다고 설명하며, Free와 Go 접근도 함께 안내합니다. 플랜 차이는 주로 사용 한도와 클라우드 기능 범위에 있으며, 일부 유료 플랜에는 한시적으로 2배 rate limit가 적용될 수 있습니다. 실제 한도는 모델과 작업 크기에 따라 달라지므로 항상 Codex Pricing과 usage dashboard를 함께 확인하세요.</p>
+                        <p class="callout-inline" data-i18n="s4_note_access">현재 공식 문서는 유료 플랜에 Codex가 포함된다고 설명하며, Free와 Go 접근도 함께 안내합니다. 중요한 점은 가격 페이지가 이제 모델별 5시간 로컬/클라우드 한도와 주간 코드 리뷰 범위, 평균 크레딧 비용까지 보여준다는 것입니다. 실제 체감 한도는 모델과 작업 크기에 따라 달라지므로 항상 Codex Pricing과 usage dashboard를 함께 확인하세요.</p>
                     </div>
                 </div>
             </section>
@@ -893,8 +893,7 @@ codex --cd /path/to/project
                             실행</span></div>
                     <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s7_f2">내장 Git
                             도구 (diff, commit, PR)</span></div>
-                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s7_f_skills">Skills 지원
-                            (CLI/IDE 공유)</span></div>
+                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s7_f_skills">Skills & Plugins 지원</span></div>
                     <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s7_f_auto">Automations
                             (정기 작업 자동화)</span></div>
                     <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s7_f_voice">Voice
@@ -1311,7 +1310,7 @@ codex --profile deep</code></pre>
                 </div>
                 <div class="callout">
                     <strong data-i18n="s13_beginner_t">처음 사용자라면 이렇게 이해하면 됩니다</strong>
-                    <p data-i18n="s13_beginner_d"><code>model</code>은 두뇌, <code>sandbox_mode</code>는 작업 범위, <code>approval_policy</code>는 언제 멈춰서 묻는지, <code>model_instructions_file</code>은 항상 따라야 할 개인 기본 지침입니다.</p>
+                    <p data-i18n="s13_beginner_d"><code>model</code>은 기본 두뇌, <code>review_model</code>은 리뷰 전용 두뇌, <code>sandbox_mode</code>는 작업 범위, <code>approval_policy</code>는 언제 멈춰서 묻는지, <code>web_search</code>는 웹 최신성 모드, <code>model_instructions_file</code>은 항상 따라야 할 개인 기본 지침입니다.</p>
                 </div>
                 <div class="tip-grid">
                     <div class="tip-card">
@@ -1773,10 +1772,13 @@ Research contract:
             <!-- Section 17 -->
             <section class="section" id="s18">
                 <h2><span class="section-num">18</span> <span data-i18n="s18_title">고급 활용 기법</span></h2>
-                <p data-i18n="s18_intro">best practices 문서는 장기적으로 잘 쓰는 사용자가 하는 일을 세 가지로 요약합니다. 반복되는 프롬프트는 skill로 바꾸고, 장기 작업은 bounded delegation으로 나누고, 자주 생기는 실패는 명시적으로 피합니다.</p>
+                <p data-i18n="s18_intro">최신 best practices와 customization 문서를 같이 보면 장기적으로 잘 쓰는 사용자는 반복 작업을 skill로 만들고, 팀에 공유할 때는 plugin으로 묶고, 외부 시스템 연결은 MCP로 붙이고, 장기 작업은 bounded delegation으로 나눕니다.</p>
                 <pre data-i18n-html="code_s18_adv"><code><span class="c"># 모델 선택</span>
 /model gpt-5.4         <span class="c"># 기본 추천</span>
 /model gpt-5.3-codex   <span class="c"># Codex-특화 비교용</span>
+
+<span class="c"># 플러그인 디렉터리 (CLI)</span>
+/plugins
 
 <span class="c"># 멀티 디렉토리</span>
 codex --add-dir /path/to/libs
@@ -1788,21 +1790,21 @@ codex --search "optimize with Next.js 15"
 /compact</code></pre>
                 <div class="tip-grid">
                     <div class="tip-card">
-                        <h4 data-i18n="s18_c1_t">Skills로 재사용 가능한 작업 만들기</h4>
-                        <p data-i18n="s18_c1_d">같은 프롬프트나 같은 수정 지시를 반복한다면 skill로 승격하세요. 입력과 출력이 명확한 한 가지 작업에 집중시키는 것이 가장 잘 작동합니다.</p>
+                        <h4 data-i18n="s18_c1_t">Skills 먼저, Plugins는 공유 단계</h4>
+                        <p data-i18n="s18_c1_d">같은 프롬프트나 같은 수정 지시를 반복한다면 먼저 skill로 정리하세요. 그 workflow를 팀이나 여러 프로젝트에 배포하고 싶어지면 plugin으로 묶어 skill, 선택적 app 연동, MCP 설정을 한 번에 설치 가능하게 만드는 방식이 현재 공식 구조와 맞습니다.</p>
                     </div>
                     <div class="tip-card">
                         <h4 data-i18n="s18_c2_t">병렬 agent는 읽기 중심 작업부터</h4>
                         <p data-i18n="s18_c2_d">메인 에이전트는 핵심 의사결정에 남기고, 탐색, 테스트, 로그 트리아지, 릴리스 초안 같은 bounded work부터 병렬화하면 결과를 통합하기 쉽습니다.</p>
                     </div>
                     <div class="tip-card">
-                        <h4 data-i18n="s18_c3_t">대표적인 반복 작업</h4>
-                        <p data-i18n="s18_c3_d">로그 트리아지, PR 체크리스트 리뷰, 마이그레이션 계획, incident summary, 표준 디버깅 플로우는 skill과 automation으로 전환하기 좋은 후보입니다.</p>
+                        <h4 data-i18n="s18_c3_t">Plugin으로 묶기 좋은 반복 작업</h4>
+                        <p data-i18n="s18_c3_d">로그 트리아지, PR 체크리스트 리뷰, 마이그레이션 계획, incident summary, 표준 디버깅 플로우처럼 skill 하나로 끝나지 않고 app 연동이나 MCP가 함께 필요한 workflow는 plugin으로 묶기 좋은 후보입니다.</p>
                     </div>
                 </div>
                 <div class="callout">
-                    <strong data-i18n="s18_callout_t">자동화 전에 수동 신뢰도를 먼저 만드세요</strong>
-                    <p data-i18n="s18_callout_d">반복 작업이 아직 많이 흔들리면 automation보다 skill이 먼저입니다. 안정화되지 않은 흐름을 바로 스케줄링하면 노이즈만 늘어납니다.</p>
+                    <strong data-i18n="s18_callout_t">로컬 skill로 검증하고 plugin으로 공유하세요</strong>
+                    <p data-i18n="s18_callout_d">반복 작업이 아직 많이 흔들리면 automation보다 skill이 먼저입니다. 수동으로 안정화된 뒤 plugin으로 패키징하고, 그 다음 자동화를 얹는 순서가 가장 안전합니다.</p>
                 </div>
                 <div class="feature-list">
                     <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s18_m1">지속 규칙을 프롬프트에만 길게 넣고 AGENTS.md나 skill로 옮기지 않는 실수</span></div>
@@ -1811,7 +1813,7 @@ codex --search "optimize with Next.js 15"
                     <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s18_m4">워크트리 없이 같은 파일에 여러 live thread를 동시에 붙이는 실수</span></div>
                     <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s18_m5">프로젝트 하나에 스레드 하나만 유지해 문맥을 비대하게 만드는 실수</span></div>
                 </div>
-                <p class="command-refs" data-i18n-html="s18_refs">출처: <a href="https://developers.openai.com/codex/learn/best-practices/" target="_blank">Codex Best practices</a> · <a href="https://developers.openai.com/codex/skills" target="_blank">Skills</a> · <a href="https://developers.openai.com/codex/concepts/multi-agents/" target="_blank">Multi-agents</a></p>
+                <p class="command-refs" data-i18n-html="s18_refs">출처: <a href="https://developers.openai.com/codex/learn/best-practices/" target="_blank">Codex Best practices</a> · <a href="https://developers.openai.com/codex/concepts/customization/" target="_blank">Customization</a> · <a href="https://developers.openai.com/codex/skills" target="_blank">Skills</a> · <a href="https://developers.openai.com/codex/plugins/" target="_blank">Plugins</a> · <a href="https://developers.openai.com/codex/concepts/multi-agents/" target="_blank">Multi-agents</a></p>
             </section>
 
             <!-- Section 18 -->
@@ -1894,7 +1896,7 @@ codex --search "optimize with Next.js 15"
                     </details>
                     <details>
                         <summary data-i18n="faq2_q">무료로 사용할 수 있나요?</summary>
-                        <p data-i18n="faq2_a">네. ChatGPT Free와 Go에서도 한시적으로 Codex를 체험할 수 있지만, 정확한 사용 한도와 rate limit은 시점과 플랜에 따라 달라질 수 있습니다. 안정적 사용은 Plus 이상과 공식 가격표 확인을 권장합니다.</p>
+                        <p data-i18n="faq2_a">네. ChatGPT Free와 Go에서도 한시적으로 Codex를 체험할 수 있습니다. 다만 정확한 사용 한도와 rate limit은 모델과 시점에 따라 달라지며, 안정적으로 쓰려면 Plus 이상과 공식 가격표·usage dashboard를 함께 보는 편이 좋습니다.</p>
                     </details>
                     <details>
                         <summary data-i18n="faq3_q">Full Auto 모드가 안전한가요?</summary>
@@ -1902,9 +1904,7 @@ codex --search "optimize with Next.js 15"
                     </details>
                     <details>
                         <summary data-i18n="faq4_q">GPT-5.3-Codex-Spark는 뭔가요?</summary>
-                        <p data-i18n="faq4_a">2026.02 리서치 프리뷰로 공개된 텍스트 중심 코딩 모델입니다. 빠른 반복 작업에 초점을 둔 옵션이며, 최신 제공 범위는
-                            플랜/문서 기준으로 확인하세요.
-                        </p>
+                        <p data-i18n="faq4_a">2026년 2월 12일 공개된 텍스트 중심 초고속 코딩 모델입니다. ChatGPT Pro 연구 프리뷰가 기본 경로이고, 공식 모델 문서에서는 일반 API 접근을 제공하지 않는 것으로 표시됩니다. 별도 발표문은 소수 디자인 파트너 대상 제한적 API 테스트를 언급합니다.</p>
                     </details>
                     <details>
                         <summary data-i18n="faq5_q">오프라인에서 사용 가능한가요?</summary>

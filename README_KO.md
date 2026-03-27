@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 3월 25일</strong><br/>
+  <strong>최종 업데이트: 2026년 3월 27일</strong><br/>
   라이브 사이트는 보는 사람의 당일 날짜를 자동으로 표시하며, 최신 Codex 모델 가이드를 공식 문서 기준으로 반영합니다.
 </p>
 
@@ -32,15 +32,16 @@
 - **처음 사용하는 사용자**: **04-06**(설치/로그인/첫 실행) → **10**(approval/sandbox 기초) → **14**(OpenAI Docs MCP) 순서로 읽는 것을 권장합니다.
 - **실무 사용자**: **12-14**(AGENTS.md/config.toml/MCP) → **15-17**(세션 운영/자동화/프롬프트 실행 계약) 순서로 읽으면 팀 운영 기준을 빠르게 잡을 수 있습니다.
 
-### 일일 MCP 검증 스냅샷 (2026-03-25)
+### 일일 MCP 검증 스냅샷 (2026-03-27)
 
-- `codex/models`는 여전히 네 갈래 추천 체계를 중심으로 설명하지만, 오늘 기준 페이지는 각 모델이 실제로 어디서 동작하는지도 더 분명하게 적습니다. 기본 시작점은 `gpt-5.4`, 빠른 로컬 작업이나 보조 에이전트용은 `gpt-5.4-mini`, Codex Cloud와 복잡한 엔지니어링 작업은 `gpt-5.3-codex`, 거의 즉각적인 반복 작업은 `gpt-5.3-codex-spark`입니다. Spark는 ChatGPT Pro 전용 연구 프리뷰이고 API 접근은 없습니다.
+- `codex/models`의 네 갈래 추천 체계는 그대로 유지됩니다. 기본 시작점은 `gpt-5.4`, 빠른 로컬 작업이나 보조 에이전트용은 `gpt-5.4-mini`, Codex Cloud와 복잡한 엔지니어링 작업은 `gpt-5.3-codex`, 거의 즉각적인 반복 작업은 `gpt-5.3-codex-spark`입니다. 다만 Spark는 모델 문서의 표준 매트릭스에서는 여전히 API 미지원으로 보이고, 별도 발표문에서는 소수 디자인 파트너 대상 제한적 API 테스트를 언급합니다.
 - OpenAI의 `Introducing GPT-5.4` 발표에서 지금 특히 중요한 포인트는 “코딩이 더 강하다”를 넘는다는 점입니다. GPT-5.4는 GPT-5.3-Codex급 코딩 성능에 더 강한 추론, 도구 사용, 컴퓨터 사용, 최대 100만 토큰 문맥을 결합한 플래그십 모델로 설명됩니다.
-- 가격/접근 범위 설명은 일반론으로 적으면 금방 낡습니다. 현재는 유료 플랜이 Codex를 정식 포함하고, Free와 Go 접근도 공식 문서에 반영되어 있습니다. Plus는 GPT-5.4/GPT-5.3-Codex, 클라우드 연동, GPT-5.4-mini 로컬 한도 확장을, Pro는 Spark와 우선 처리, 로컬·클라우드 6배 한도, 코드 리뷰 10배를, Enterprise/Edu는 고정 캡보다 크레딧 확장을 더 분명하게 보여줍니다.
-- IDE 문서는 이제 VS Code뿐 아니라 Cursor, Windsurf, JetBrains까지 공식 범위에 포함합니다. JetBrains 통합은 ChatGPT 계정, API 키, JetBrains AI로 로그인할 수 있다고 명시합니다. 반면 VS Code 계열 확장은 여전히 macOS/Linux 중심으로 읽는 편이 자연스럽고, Windows 에이전트 모드는 현재 WSL 워크스페이스가 가장 안정적입니다.
-- Windows 문서는 예전보다 훨씬 구체적입니다. 기본 경로는 앱 사용이며, Microsoft Store와 `winget` 설치, `elevated`/`unelevated` 네이티브 샌드박스, 전용 데스크톱 격리가 기본이라는 점, 네이티브 제약이 있을 때 WSL로 우회하는 방법까지 더 명확하게 설명합니다.
-- `config.toml` 최신화 포인트도 늘었습니다. 현재 기준 문서는 `review_model`, top-level `web_search`, `tools.web_search`, JSON schema, `windows.sandbox`, `windows.sandbox_private_desktop`, 그리고 `experimental_instructions_file`을 `model_instructions_file`로 바꿔야 한다는 점을 중요하게 다룹니다.
-- 관련 Codex 생태계 페이지도 이제 함께 보는 편이 좋습니다. `Codex for Open Source`는 오픈소스 메인테이너에게 6개월 Pro + Codex와 조건부 Codex Security/API 크레딧 지원을 안내하고, `Building an AI-Native Engineering Team`은 팀이 계획·구현·테스트·리뷰·운영 전반에 코딩 에이전트를 붙이는 방법을 공식적으로 정리합니다.
+- 가격/접근 범위는 예전보다 훨씬 구체적입니다. 공식 가격 페이지는 이제 모델별 로컬/클라우드/코드 리뷰 한도 범위와 평균 크레딧 비용까지 보여줍니다. 실무적으로 보면 `gpt-5.4`와 `gpt-5.4-mini`는 로컬 메시지 중심이고, 클라우드 작업과 GitHub 코드 리뷰는 여전히 `gpt-5.3-codex` 축으로 읽는 것이 정확합니다. Spark는 Pro 전용 별도 연구 프리뷰 한도를 가집니다.
+- Quickstart와 IDE 문서는 표면별 경로를 더 분명하게 설명합니다. 앱은 여전히 초보자에게 가장 쉬운 경로이고, Linux는 아직 “알림 받기” 단계이며, IDE는 VS Code, Cursor, Windsurf, JetBrains까지 공식 범위에 포함됩니다. JetBrains 통합은 ChatGPT 계정, API 키, JetBrains AI 로그인을 지원합니다.
+- Windows 문서는 예전보다 훨씬 실전적입니다. 기본 경로는 앱 사용이며, Microsoft Store와 `winget` 설치, `elevated`/`unelevated` 네이티브 샌드박스, 전용 데스크톱 격리 기본값, IDE 에이전트 작업에서의 WSL 우선 경로까지 더 분명하게 설명합니다.
+- `config.toml` 최신화 포인트도 계속 늘고 있습니다. 현재 기준 문서는 `review_model`, top-level `web_search`, `tools.web_search`, JSON schema, `windows.sandbox`, `windows.sandbox_private_desktop`, 그리고 `experimental_instructions_file`을 `model_instructions_file`로 바꿔야 한다는 점을 중요하게 다룹니다.
+- customization 흐름도 더 명확해졌습니다. skill은 반복 작업을 만드는 형식이고, plugin은 skill·선택적 app 연동·MCP 설정을 함께 묶어 팀과 프로젝트에 배포하는 설치 단위로 설명됩니다.
+- 관련 Codex 생태계 페이지도 계속 함께 볼 가치가 있습니다. `Codex for Open Source`는 오픈소스 메인테이너에게 6개월 Pro + Codex와 조건부 Codex Security/API 크레딧 지원을 안내하고, `Building an AI-Native Engineering Team`은 팀 단위 SDLC에 코딩 에이전트를 붙이는 운영 가이드를 공식적으로 정리합니다.
 
 ### 사용자별 즉시 적용 요약
 

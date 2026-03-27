@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: March 25, 2026</strong><br/>
+  <strong>Last updated: March 27, 2026</strong><br/>
   The live site displays the viewer's current date automatically and reflects the latest Codex model guidance reviewed from official docs.
 </p>
 
@@ -32,15 +32,16 @@ Based on the [official OpenAI documentation](https://developers.openai.com/codex
 - **First-time users**: Start with sections **04-06** (setup, sign-in, first run), then **10** (approval/sandbox basics), and **14** (OpenAI Docs MCP).
 - **Professional users**: Start with sections **12-14** (AGENTS.md, config.toml, MCP), then **15-17** (session strategy, automation, prompting contracts).
 
-### Daily MCP Verification Snapshot (2026-03-25)
+### Daily MCP Verification Snapshot (2026-03-27)
 
-- `codex/models` still recommends a four-lane primary set, but today’s page is even more explicit about surface availability: `gpt-5.4` is the default start, `gpt-5.4-mini` is the faster/lower-cost local and subagent option, `gpt-5.3-codex` is still the key complex-engineering and Codex Cloud model, and `gpt-5.3-codex-spark` remains the near-instant ChatGPT Pro research preview with no API access at launch.
-- The OpenAI `Introducing GPT-5.4` framing is still broader than “better coding”: GPT-5.4 is positioned as the flagship professional model that combines GPT-5.3-Codex-class coding with stronger reasoning, tool use, native computer use, and up to 1M tokens of context.
-- Pricing and access details are now specific enough that generic summaries age badly: paid plans officially include Codex, and Free and Go access is also reflected in the current docs. Plus highlights GPT-5.4/GPT-5.3-Codex, cloud integrations, and higher GPT-5.4-mini local limits; Pro adds Spark + 6x local/cloud limits + 10x code reviews; Enterprise/Edu usage increasingly routes through credits instead of simple flat caps.
-- IDE guidance is wider than a VS Code-only story now. The official IDE docs cover VS Code, Cursor, Windsurf, and JetBrains, and the JetBrains path explicitly supports ChatGPT sign-in, API-key auth, or a JetBrains AI subscription. The VS Code-style extension is still primarily documented for macOS/Linux, and Windows agent mode is still best treated as WSL-first.
-- Windows guidance is materially more detailed than earlier revisions: the app path is now the default recommendation, installation is documented through both Microsoft Store and `winget`, native Windows sandboxing distinguishes `elevated` vs `unelevated`, and docs now call out the private-desktop default plus WSL as the fallback when native constraints get in the way.
-- `config.toml` drift is one of the biggest update risks now. The current reference emphasizes `review_model`, top-level `web_search`, `tools.web_search`, JSON schema validation, `windows.sandbox`, `windows.sandbox_private_desktop`, and the rename from `experimental_instructions_file` to `model_instructions_file`.
-- Related Codex ecosystem pages are now worth surfacing explicitly: `Codex for Open Source` introduces a six-month Pro + Codex path plus conditional Codex Security/API-credit support for maintainers, and `Building an AI-Native Engineering Team` is now a strong official guide for teams moving from ad hoc use to end-to-end SDLC delegation patterns.
+- `codex/models` still recommends the same four-lane set: `gpt-5.4` as the default start, `gpt-5.4-mini` for faster local or subagent work, `gpt-5.3-codex` for Codex Cloud and complex engineering, and `gpt-5.3-codex-spark` for near-instant iteration. The docs still mark Spark API access as unavailable in the standard matrix, while the launch post separately notes limited API access for a small set of design partners.
+- The `Introducing GPT-5.4` framing is still broader than “better coding”: GPT-5.4 is positioned as the flagship professional model combining GPT-5.3-Codex-level coding with stronger reasoning, tool use, native computer use, and up to 1M tokens of context.
+- Pricing is more concrete than before. The official page now shows model-specific local/cloud/code-review ranges and average credit costs. In practice, `gpt-5.4` and `gpt-5.4-mini` are the main local-message choices, while cloud tasks and GitHub code reviews are still centered on `gpt-5.3-codex`; Spark has its own separate research-preview limit for Pro.
+- Quickstart and IDE setup are clearer about surfaces: the app remains the beginner-friendly path, Linux is still “get notified”, and the IDE story now explicitly covers VS Code, Cursor, Windsurf, and JetBrains with ChatGPT/API-key/JetBrains-AI sign-in options.
+- Windows guidance is more operationally detailed than older revisions: the app path is the default recommendation, installation is documented through Microsoft Store and `winget`, native Windows sandboxing distinguishes `elevated` vs `unelevated`, the private desktop is the default, and WSL remains the preferred fallback for IDE agent work.
+- `config.toml` drift is still one of the highest-risk areas. The current reference emphasizes `review_model`, top-level `web_search`, `tools.web_search`, JSON schema validation, `windows.sandbox`, `windows.sandbox_private_desktop`, and the rename from `experimental_instructions_file` to `model_instructions_file`.
+- Customization guidance now has a clearer distribution layer: skills are the authoring format for repeatable workflows, while plugins are the installable bundle that can package skills, optional app integrations, and MCP config together for team rollout.
+- Related Codex ecosystem pages remain worth surfacing: `Codex for Open Source` offers six months of Pro + Codex plus conditional Codex Security and API-credit support for maintainers, and `Building an AI-Native Engineering Team` now serves as an official SDLC adoption guide for team-scale rollout.
 
 ### Audience Quick Use
 
