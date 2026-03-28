@@ -661,6 +661,40 @@ img {
     gap: 14px;
 }
 
+.overview-update-strip {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    margin: 0 0 18px;
+}
+
+.update-pill {
+    padding: 14px 16px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, .05), transparent 60%),
+        rgba(255, 255, 255, .02);
+}
+
+[data-theme="light"] .update-pill {
+    background: #ffffff;
+}
+
+.update-pill-title {
+    margin: 0 0 6px;
+    font-size: .83rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.update-pill-desc {
+    margin: 0;
+    font-size: .82rem;
+    line-height: 1.55;
+    color: var(--text-dim);
+}
+
 .fact-card {
     padding: 18px;
     border-radius: var(--radius-sm);
@@ -2364,6 +2398,10 @@ details p {
     .overview-bridge-grid,
     .overview-track-grid,
     .overview-fact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .overview-update-strip {
         grid-template-columns: 1fr;
     }
 
