@@ -42,10 +42,10 @@
             <p class="hero-badge">
                 <span data-i18n="hero_badge_prefix">공식 문서 기준 재검수</span>
                 <span aria-hidden="true"> · </span>
-                <span class="live-date" data-date-format="long">2026년 3월 28일</span>
+                <span class="live-date" data-date-format="long">2026년 3월 29일</span>
             </p>
             <h1 class="hero-title" data-i18n="hero_title">OpenAI Codex를<br />한국 실무에 바로 붙이는 가이드</h1>
-            <p class="hero-sub" data-i18n="hero_sub">CLI · Desktop App (macOS/Windows) · IDE Extension · Web · Mobile · SDK automation<br />최신 공식 문서를 기준으로 제품 면 선택, 모델 선택, 샌드박스/승인, MCP, 자동화를 처음 사용자와 실무 사용자 모두 읽기 쉽도록 다시 정리했습니다.</p>
+            <p class="hero-sub" data-i18n="hero_sub">CLI · Desktop App (macOS/Windows) · IDE Extension · Web · Mobile · SDK automation<br />최신 공식 문서를 기준으로 무엇이 오늘 바뀌었는지 먼저 보여주고, 그 다음 처음 사용자와 실무 사용자가 각각 어떤 표면과 모델을 고르면 되는지 이해하기 쉽게 다시 정리했습니다.</p>
             <div class="hero-cta">
                 <a href="#start-here" class="btn btn-primary" data-i18n="hero_cta">빠른 시작 경로 보기</a>
                 <a href="#s17" class="btn btn-ghost" data-i18n="hero_cta_secondary">Prompting 실전 가이드</a>
@@ -115,18 +115,18 @@
                         </div>
                         <p class="overview-fact-date">
                             <span data-i18n="overview_fact_date_prefix">업데이트 기준일</span>
-                            <span class="live-date" data-date-format="long">2026년 3월 28일</span>
+                            <span class="live-date" data-date-format="long">2026년 3월 29일</span>
                         </p>
                     </div>
 
                     <div class="overview-update-strip" aria-label="Today update summary">
                         <article class="update-pill">
-                            <p class="update-pill-title" data-i18n="overview_update_1_title">기본 모델 다시 확인</p>
-                            <p class="update-pill-desc" data-i18n="overview_update_1_desc">지금도 기본 시작점은 `gpt-5.4`이며, 대안 모델군도 함께 다시 대조했습니다.</p>
+                            <p class="update-pill-title" data-i18n="overview_update_1_title">모델 라인업 재검증</p>
+                            <p class="update-pill-desc" data-i18n="overview_update_1_desc">`codex/models` 기준 기본 시작점은 여전히 `gpt-5.4`입니다. 2026년 3월 17일 발표된 `GPT-5.4 mini/nano` 중 Codex에서 지금 직접 고르는 축은 `mini`라는 점도 함께 반영했습니다.</p>
                         </article>
                         <article class="update-pill">
-                            <p class="update-pill-title" data-i18n="overview_update_2_title">플랜/한도 읽는 법 갱신</p>
-                            <p class="update-pill-desc" data-i18n="overview_update_2_desc">Free/Go 체험, 유료 플랜 2x 한도, 모델별 5시간/주간 범위를 다시 맞췄습니다.</p>
+                            <p class="update-pill-title" data-i18n="overview_update_2_title">플랜/한도 설명 보강</p>
+                            <p class="update-pill-desc" data-i18n="overview_update_2_desc">Free/Go 체험, 유료 플랜 2x 한도, 모델별 5시간/주간 범위와 평균 credits에 더해 `gpt-5.4-mini`가 Codex에서 `gpt-5.4` 쿼터의 30%만 쓴다는 점까지 정리했습니다.</p>
                         </article>
                         <article class="update-pill">
                             <p class="update-pill-title" data-i18n="overview_update_3_title">표면별 추천 경로 정리</p>
@@ -141,7 +141,7 @@
                     <div class="overview-fact-grid">
                         <article class="fact-card">
                             <h4 data-i18n="overview_fact_1_title">모델 추천 재정렬</h4>
-                            <p data-i18n="overview_fact_1_desc">`codex/models` 기준 네 갈래 추천 체계는 유지되지만 설명이 더 분명해졌습니다. 기본 시작점은 `gpt-5.4`, 빠른 로컬 작업이나 보조 에이전트는 `gpt-5.4-mini`, Codex Cloud와 복잡한 엔지니어링 작업은 `gpt-5.3-codex`, 거의 즉각적인 반복 작업은 `gpt-5.3-codex-spark`입니다. Spark는 표준 모델 문서에서는 일반 API 접근을 지원하지 않는 것으로 표시되고, 별도 발표문에서는 소수 디자인 파트너 대상 제한적 API 테스트를 언급합니다.</p>
+                            <p data-i18n="overview_fact_1_desc">`codex/models`를 다시 확인한 결과, 추천 모델은 여전히 `gpt-5.4`, `gpt-5.4-mini`, `gpt-5.3-codex`, `gpt-5.3-codex-spark` 4개 축입니다. 동시에 2026년 3월 17일 공개된 `GPT-5.4 mini/nano` 발표와 대조해 보면, 현재 Codex 가이드에는 `mini`만 직접 반영되고 `nano`는 API 중심 모델로 남아 있습니다. `gpt-5.3-codex`에는 “그 코딩 역량이 GPT-5.4에도 쓰인다”는 설명도 공식 문구로 붙습니다.</p>
                         </article>
                         <article class="fact-card">
                             <h4 data-i18n="overview_fact_2_title">GPT-5.4 발표 내용 반영</h4>
@@ -149,7 +149,7 @@
                         </article>
                         <article class="fact-card">
                             <h4 data-i18n="overview_fact_3_title">플랜/접근 범위 보강</h4>
-                            <p data-i18n="overview_fact_3_desc">Quickstart와 Pricing 기준으로 플랜 설명뿐 아니라 실제 한도 읽는 법도 다시 맞췄습니다. 가격 페이지는 이제 모델별 로컬/클라우드/코드 리뷰 범위와 평균 크레딧 비용까지 보여줍니다. 실무적으로는 `gpt-5.4`와 `gpt-5.4-mini`가 로컬 중심이고, 클라우드 작업과 GitHub 코드 리뷰는 `gpt-5.3-codex` 축으로 읽는 것이 가장 정확합니다.</p>
+                            <p data-i18n="overview_fact_3_desc">Quickstart와 Pricing 기준으로 Free/Go 체험, Plus 이상 유료 플랜의 2x rate limit, 모델별 5시간 로컬/클라우드 범위, 주간 코드 리뷰 범위, 평균 크레딧 비용까지 다시 맞췄습니다. 여기에 2026년 3월 17일 발표 기준 `gpt-5.4-mini`가 Codex에서 `gpt-5.4` 쿼터의 30%만 사용한다는 설명도 더했습니다. 읽는 요령은 `gpt-5.4`/`gpt-5.4-mini`는 로컬 중심, 클라우드 작업과 GitHub 리뷰는 `gpt-5.3-codex` 중심입니다.</p>
                         </article>
                         <article class="fact-card">
                             <h4 data-i18n="overview_fact_4_title">IDE·Windows 경로 재정리</h4>
@@ -178,6 +178,7 @@
                         <a href="https://openai.com/index/introducing-gpt-5-4/" target="_blank" class="source-chip" data-i18n="overview_source_9">GPT-5.4 announcement</a>
                         <a href="https://openai.com/index/introducing-gpt-5-3-codex-spark/" target="_blank" class="source-chip" data-i18n="overview_source_10">GPT-5.3-Codex-Spark announcement</a>
                         <a href="https://openai.com/index/introducing-the-codex-app/" target="_blank" class="source-chip" data-i18n="overview_source_13">Codex App announcement</a>
+                        <a href="https://openai.com/index/introducing-gpt-5-4-mini-and-nano/" target="_blank" class="source-chip" data-i18n="overview_source_14">GPT-5.4 mini & nano announcement</a>
                         <a href="https://developers.openai.com/codex/community/codex-for-oss/" target="_blank" class="source-chip" data-i18n="overview_source_11">Codex for OSS</a>
                         <a href="https://developers.openai.com/codex/guides/build-ai-native-engineering-team/" target="_blank" class="source-chip" data-i18n="overview_source_12">AI-Native Engineering Team</a>
                     </div>
@@ -981,7 +982,7 @@ codex --cd /path/to/project
                     <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s8_f_cloud">클라우드 위임
                             (Cloud Delegation)</span></div>
                     <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s8_f_effort">추론 노력 조절
-                            (low/medium/high/xhigh)</span></div>
+                            (low/medium/high)</span></div>
                     <div class="feature-item"><span class="feature-icon">—</span><span
                             data-i18n="s8_f_jetbrains">JetBrains
                             IDE 지원</span></div>
@@ -1970,7 +1971,7 @@ codex --search "optimize with Next.js 15"
                     href="https://github.com/swhan0329/codex-101" target="_blank">PR을 환영합니다</a>.</p>
             <p class="footer-meta">
                 <span data-i18n="footer_date_prefix">최종 업데이트</span>:
-                <span class="live-date" data-date-format="long">2026년 3월 19일</span>
+                <span class="live-date" data-date-format="long">2026년 3월 29일</span>
             </p>
             <p class="footer-meta">Made by <a href="https://github.com/swhan0329" target="_blank">@swhan0329</a></p>
         </div>
