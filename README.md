@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: March 28, 2026</strong><br/>
+  <strong>Last updated: March 30, 2026</strong><br/>
   The live site displays the viewer's current date automatically and reflects the latest Codex model guidance reviewed from official docs.
 </p>
 
@@ -32,16 +32,16 @@ Based on the [official OpenAI documentation](https://developers.openai.com/codex
 - **First-time users**: Start with sections **04-06** (setup, sign-in, first run), then **10** (approval/sandbox basics), and **14** (OpenAI Docs MCP).
 - **Professional users**: Start with sections **12-14** (AGENTS.md, config.toml, MCP), then **15-17** (session strategy, automation, prompting contracts).
 
-### Daily MCP Verification Snapshot (2026-03-28)
+### Daily MCP Verification Snapshot (2026-03-30)
 
-- Re-checking `codex/models` shows the same four recommended lanes: `gpt-5.4`, `gpt-5.4-mini`, `gpt-5.3-codex`, and `gpt-5.3-codex-spark`. The alternative-model list is also broader than a casual summary would suggest: `gpt-5.2-codex`, `gpt-5.2`, `gpt-5.1-codex-max`, `gpt-5.1`, `gpt-5.1-codex`, `gpt-5-codex`, `gpt-5-codex-mini`, and `gpt-5` still appear as supported alternatives. The current page also explicitly says the coding capabilities of `gpt-5.3-codex` now power GPT-5.4.
-- The `Introducing GPT-5.4` framing is broader than “better coding”: GPT-5.4 is positioned as the flagship professional model combining GPT-5.3-Codex-level coding with stronger reasoning, tool use, native computer use, stronger tool search, and up to 1M tokens of context.
-- Pricing and access are more specific than before. Quickstart and Pricing currently show limited-time Free and Go access, plus a 2x rate-limit promotion on paid plans. The pricing page also exposes model-specific five-hour local/cloud/code-review ranges and average credit costs. In practice, `gpt-5.4` and `gpt-5.4-mini` remain the main local-message choices, while cloud tasks and GitHub code reviews are still centered on `gpt-5.3-codex`.
-- Quickstart, IDE, and Windows setup are clearer about surfaces: the app remains the beginner-friendly path, macOS app setup is Apple Silicon-first, Linux is still “get notified,” and the IDE story explicitly covers VS Code, Cursor, Windsurf, and JetBrains with ChatGPT/API-key/JetBrains-AI sign-in options.
-- Windows guidance is more operationally detailed than older revisions: the app path is the default recommendation, installation is documented through Microsoft Store and `winget`, native Windows sandboxing distinguishes `elevated` vs `unelevated`, the private desktop is the default, and WSL remains the preferred fallback for IDE agent work.
-- The `Introducing the Codex app` launch post now matters to this guide too. It foregrounds the app as a command center for agents with worktrees, skills, Automations, and `/personality`, so the top of this guide now surfaces those workflows much earlier.
-- `config.toml` drift remains one of the highest-risk areas. The current reference emphasizes `review_model`, top-level `web_search`, `tools.web_search`, `service_tier`, `personality`, `default_permissions`, JSON schema validation, `windows.sandbox`, `windows.sandbox_private_desktop`, and `model_instructions_file`.
-- Customization guidance also has a clearer distribution layer: skills are the authoring format for repeatable workflows, while plugins are the installable bundle that can package skills, optional app integrations, and MCP config together for team rollout. `Codex for Open Source` and `Building an AI-Native Engineering Team` remain useful official companion pages for maintainers and team adoption.
+- Re-checking `codex/models` still shows the same four recommended lanes: `gpt-5.4`, `gpt-5.4-mini`, `gpt-5.3-codex`, and `gpt-5.3-codex-spark`. What changed is the emphasis: `gpt-5.4-mini` is now described more explicitly as the fast local model for responsive coding tasks and subagents, while `gpt-5.3-codex` remains the cloud-capable complex-engineering lane whose coding strengths also power GPT-5.4.
+- Broader OpenAI model pages now also spotlight GPT-5.4 mini and GPT-5.4 nano for API builders. That matters because new users can easily confuse the platform-wide catalog with Codex defaults, but the Codex-specific recommendation set itself has not changed.
+- The `Introducing GPT-5.4` framing is still broader than “better coding”: GPT-5.4 remains the flagship professional model combining GPT-5.3-Codex-level coding with stronger reasoning, tool use, native computer use, stronger tool search, and up to 1M tokens of context.
+- Pricing and access are more actionable than older revisions. Quickstart and Pricing still show limited-time Free and Go access plus the paid-plan promotion, but the practical update is how strongly `gpt-5.4-mini` stretches local usage: the pricing page shows roughly 2.5x to 3.3x more local capacity than `gpt-5.4`, with an average local cost of about 2 credits instead of about 7.
+- Windows and IDE setup are now clearer at the workflow level. The Codex app for Windows is documented through both Microsoft Store and `winget`, native Windows agent mode is PowerShell-based with sandboxing, and WSL is now a more explicit “choose this when your workflow already lives in Linux” path rather than a vague fallback.
+- Codex app docs now make automation behavior much more concrete: recurring runs add findings to the inbox, can auto-archive when there is nothing to report, and can run either in your main checkout or in a dedicated worktree. The app feature pages also now foreground the integrated terminal, voice dictation, and project-by-project multitasking.
+- `config.toml` drift is still one of the biggest sources of outdated guidance. The current reference now centers not only on `review_model`, top-level `web_search`, `tools.web_search`, `service_tier`, `personality`, and `model_instructions_file`, but also on `approval_policy.granular.*`, connector/app controls, named permission profiles, and Windows sandbox keys.
+- Customization guidance continues to sharpen the packaging story: skills are still the authoring unit for repeatable workflows, plugins are still the installable bundle for sharing those workflows, and `Codex for Open Source` now more clearly highlights six months of ChatGPT Pro with Codex plus conditional Codex Security access for eligible maintainers.
 
 ### Audience Quick Use
 
