@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: March 28, 2026</strong><br/>
+  <strong>Last updated: March 31, 2026</strong><br/>
   The live site displays the viewer's current date automatically and reflects the latest Codex model guidance reviewed from official docs.
 </p>
 
@@ -32,16 +32,16 @@ Based on the [official OpenAI documentation](https://developers.openai.com/codex
 - **First-time users**: Start with sections **04-06** (setup, sign-in, first run), then **10** (approval/sandbox basics), and **14** (OpenAI Docs MCP).
 - **Professional users**: Start with sections **12-14** (AGENTS.md, config.toml, MCP), then **15-17** (session strategy, automation, prompting contracts).
 
-### Daily MCP Verification Snapshot (2026-03-28)
+### Daily MCP Verification Snapshot (2026-03-31)
 
-- Re-checking `codex/models` shows the same four recommended lanes: `gpt-5.4`, `gpt-5.4-mini`, `gpt-5.3-codex`, and `gpt-5.3-codex-spark`. The alternative-model list is also broader than a casual summary would suggest: `gpt-5.2-codex`, `gpt-5.2`, `gpt-5.1-codex-max`, `gpt-5.1`, `gpt-5.1-codex`, `gpt-5-codex`, `gpt-5-codex-mini`, and `gpt-5` still appear as supported alternatives. The current page also explicitly says the coding capabilities of `gpt-5.3-codex` now power GPT-5.4.
-- The `Introducing GPT-5.4` framing is broader than “better coding”: GPT-5.4 is positioned as the flagship professional model combining GPT-5.3-Codex-level coding with stronger reasoning, tool use, native computer use, stronger tool search, and up to 1M tokens of context.
-- Pricing and access are more specific than before. Quickstart and Pricing currently show limited-time Free and Go access, plus a 2x rate-limit promotion on paid plans. The pricing page also exposes model-specific five-hour local/cloud/code-review ranges and average credit costs. In practice, `gpt-5.4` and `gpt-5.4-mini` remain the main local-message choices, while cloud tasks and GitHub code reviews are still centered on `gpt-5.3-codex`.
+- Re-checking `codex/models` shows the same four recommended lanes today: `gpt-5.4`, `gpt-5.4-mini`, `gpt-5.3-codex`, and `gpt-5.3-codex-spark`. The alternative-model list still includes `gpt-5.2-codex`, `gpt-5.2`, `gpt-5.1-codex-max`, `gpt-5.1`, `gpt-5.1-codex`, `gpt-5-codex`, `gpt-5-codex-mini`, and `gpt-5`, and the page still explicitly says the coding capabilities of `gpt-5.3-codex` now power GPT-5.4.
+- Reading `Introducing GPT-5.4` together with `Introducing GPT-5.4 mini and nano` sharpens the model story. In Codex itself, `gpt-5.4` and `gpt-5.4-mini` are the direct surface-level choices; `nano` is not currently listed on the Codex models page as a recommended or alternative Codex model, so this guide now treats it as an API-side lightweight helper model rather than a primary Codex surface pick.
+- Pricing and access remain more specific than older revisions. Quickstart and Pricing currently show limited-time Free and Go access, plus a 2x rate-limit promotion on paid plans. The pricing page also exposes model-specific five-hour local/cloud/code-review ranges and average credit costs. In practice, `gpt-5.4` and `gpt-5.4-mini` remain the main local-message choices, while cloud tasks and GitHub code reviews are still centered on `gpt-5.3-codex`.
 - Quickstart, IDE, and Windows setup are clearer about surfaces: the app remains the beginner-friendly path, macOS app setup is Apple Silicon-first, Linux is still “get notified,” and the IDE story explicitly covers VS Code, Cursor, Windsurf, and JetBrains with ChatGPT/API-key/JetBrains-AI sign-in options.
 - Windows guidance is more operationally detailed than older revisions: the app path is the default recommendation, installation is documented through Microsoft Store and `winget`, native Windows sandboxing distinguishes `elevated` vs `unelevated`, the private desktop is the default, and WSL remains the preferred fallback for IDE agent work.
-- The `Introducing the Codex app` launch post now matters to this guide too. It foregrounds the app as a command center for agents with worktrees, skills, Automations, and `/personality`, so the top of this guide now surfaces those workflows much earlier.
-- `config.toml` drift remains one of the highest-risk areas. The current reference emphasizes `review_model`, top-level `web_search`, `tools.web_search`, `service_tier`, `personality`, `default_permissions`, JSON schema validation, `windows.sandbox`, `windows.sandbox_private_desktop`, and `model_instructions_file`.
-- Customization guidance also has a clearer distribution layer: skills are the authoring format for repeatable workflows, while plugins are the installable bundle that can package skills, optional app integrations, and MCP config together for team rollout. `Codex for Open Source` and `Building an AI-Native Engineering Team` remain useful official companion pages for maintainers and team adoption.
+- The Codex app story is broader now than “desktop shell for threads.” The app/features docs emphasize worktrees, multi-agent coordination, voice dictation, pop-out windows, IDE sync, image input, Automations, and `/personality`, so the guide now surfaces that operating model earlier.
+- Plugins are also much more concrete than before. The official `Plugins` page now documents the plugin directory in the app and the CLI `/plugins` flow, and defines plugins as the bundle layer for skills, app integrations, and MCP servers.
+- `config.toml` drift remains one of the highest-risk areas. The current reference emphasizes `review_model`, top-level `web_search`, `tools.web_search`, `service_tier`, `personality`, `default_permissions`, JSON schema validation, `windows.sandbox`, `windows.sandbox_private_desktop`, `model_instructions_file`, granular approvals, app permission controls, and named permissions profiles.
 
 ### Audience Quick Use
 

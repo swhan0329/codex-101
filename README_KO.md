@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 3월 28일</strong><br/>
+  <strong>최종 업데이트: 2026년 3월 31일</strong><br/>
   라이브 사이트는 보는 사람의 당일 날짜를 자동으로 표시하며, 최신 Codex 모델 가이드를 공식 문서 기준으로 반영합니다.
 </p>
 
@@ -32,16 +32,16 @@
 - **처음 사용하는 사용자**: **04-06**(설치/로그인/첫 실행) → **10**(approval/sandbox 기초) → **14**(OpenAI Docs MCP) 순서로 읽는 것을 권장합니다.
 - **실무 사용자**: **12-14**(AGENTS.md/config.toml/MCP) → **15-17**(세션 운영/자동화/프롬프트 실행 계약) 순서로 읽으면 팀 운영 기준을 빠르게 잡을 수 있습니다.
 
-### 일일 MCP 검증 스냅샷 (2026-03-28)
+### 일일 MCP 검증 스냅샷 (2026-03-31)
 
-- `codex/models`를 다시 대조한 결과, 추천 모델은 여전히 `gpt-5.4`, `gpt-5.4-mini`, `gpt-5.3-codex`, `gpt-5.3-codex-spark`의 4개 축입니다. 동시에 대안 모델군은 `gpt-5.2-codex`, `gpt-5.2`, `gpt-5.1-codex-max`, `gpt-5.1`, `gpt-5.1-codex`, `gpt-5-codex`, `gpt-5-codex-mini`, `gpt-5`까지 유지되고 있고, `gpt-5.3-codex`는 이제 그 코딩 역량이 GPT-5.4에도 쓰인다는 설명이 공식 문구로 붙습니다.
-- OpenAI의 `Introducing GPT-5.4` 발표에서 지금 중요한 포인트는 “코딩이 더 강하다”를 넘는다는 점입니다. GPT-5.4는 GPT-5.3-Codex급 코딩 성능에 더 강한 추론, 도구 사용, native computer use, tool search, 최대 100만 토큰 문맥을 결합한 플래그십 모델로 설명됩니다.
-- 가격/접근 범위는 더 구체적입니다. Quickstart와 Pricing은 한시적 Free/Go 접근과 유료 플랜 2x rate limit 프로모션을 함께 안내하고, 가격 페이지는 모델별 5시간 로컬/클라우드 한도, 주간 코드 리뷰 범위, 평균 크레딧 비용까지 보여줍니다. 실무적으로는 `gpt-5.4`와 `gpt-5.4-mini`가 로컬 중심이고, 클라우드 작업과 GitHub 리뷰는 여전히 `gpt-5.3-codex` 축으로 읽는 것이 정확합니다.
-- Quickstart, IDE, Windows 문서는 표면별 경로를 더 분명하게 설명합니다. 앱은 여전히 초보자에게 가장 쉬운 경로이고, macOS는 Apple Silicon 기준으로 안내되며, IDE는 VS Code, Cursor, Windsurf, JetBrains까지 공식 범위에 포함됩니다. JetBrains 통합은 ChatGPT 계정, API 키, JetBrains AI 로그인을 지원합니다.
+- `codex/models`를 다시 대조한 결과, 추천 모델은 오늘도 `gpt-5.4`, `gpt-5.4-mini`, `gpt-5.3-codex`, `gpt-5.3-codex-spark`의 4개 축입니다. 대안 모델군은 `gpt-5.2-codex`, `gpt-5.2`, `gpt-5.1-codex-max`, `gpt-5.1`, `gpt-5.1-codex`, `gpt-5-codex`, `gpt-5-codex-mini`, `gpt-5`까지 유지되고 있고, `gpt-5.3-codex`는 그 코딩 역량이 GPT-5.4에도 쓰인다는 설명이 계속 붙어 있습니다.
+- `Introducing GPT-5.4`와 `Introducing GPT-5.4 mini and nano`를 함께 대조하면 해석이 더 정확해집니다. Codex 표면에서는 `gpt-5.4`와 `gpt-5.4-mini`가 직접적인 기본 선택지이고, `nano`는 현재 Codex 모델 페이지의 추천/대안 목록에 없으므로 API 쪽 경량 보조 모델로 이해하는 편이 맞습니다.
+- 가격/접근 범위는 계속 공식 가격표 기준으로 읽어야 합니다. Quickstart와 Pricing은 한시적 Free/Go 체험, 유료 플랜 2x rate limit 프로모션, 모델별 5시간 로컬/클라우드 한도, 주간 코드 리뷰 범위, 평균 크레딧 비용까지 보여줍니다. 실무적으로는 `gpt-5.4`와 `gpt-5.4-mini`가 로컬 중심이고, 클라우드 작업과 GitHub 리뷰는 여전히 `gpt-5.3-codex` 축입니다.
+- Quickstart, IDE, Windows 문서는 표면별 경로를 더 분명하게 설명합니다. 앱은 여전히 초보자에게 가장 쉬운 경로이고, macOS는 Apple Silicon 기준이며, IDE는 VS Code, Cursor, Windsurf, JetBrains까지 공식 범위에 포함됩니다. JetBrains 통합은 ChatGPT 계정, API 키, JetBrains AI 로그인을 지원합니다.
 - Windows 문서는 예전보다 훨씬 실전적입니다. 기본 경로는 앱 사용이며, Microsoft Store와 `winget` 설치, `elevated`/`unelevated` 네이티브 샌드박스, 전용 데스크톱 격리 기본값, IDE 에이전트 작업에서의 WSL 우선 경로까지 더 분명하게 설명합니다.
-- `Introducing the Codex app` 발표도 이제 문서 반영에 중요합니다. app은 multi-agent command center, worktrees, skills, Automations, `/personality` 흐름을 전면에 내세우고 있고, 이 가이드도 그 운영 관점을 상단부터 드러내도록 업데이트했습니다.
-- `config.toml` 최신화 포인트도 계속 늘고 있습니다. 현재 기준 문서는 `review_model`, top-level `web_search`, `tools.web_search`, `service_tier`, `personality`, `default_permissions`, JSON schema, `windows.sandbox`, `windows.sandbox_private_desktop`, 그리고 `model_instructions_file`을 중요한 최신 키로 다룹니다.
-- customization 흐름도 더 명확해졌습니다. skill은 반복 작업을 만드는 형식이고, plugin은 skill·선택적 app 연동·MCP 설정을 함께 묶어 팀과 프로젝트에 배포하는 설치 단위로 설명됩니다. `Codex for Open Source`, `Building an AI-Native Engineering Team` 같은 관련 페이지도 계속 함께 볼 가치가 있습니다.
+- `Introducing the Codex app`와 현재 app/features 문서를 보면 app은 worktrees, 멀티에이전트 운영, voice dictation, pop-out window, IDE sync, image input, Automations, `/personality`까지 한 데 모은 command center로 정리됩니다.
+- Plugins도 이제 문서상 훨씬 명확합니다. 공식 `Plugins` 페이지는 app의 plugin directory와 CLI의 `/plugins` 흐름을 분리해 설명하고, plugin을 skills·app integrations·MCP servers를 함께 묶는 배포 단위로 정의합니다.
+- `config.toml` 최신화 포인트는 더 늘어났습니다. 현재 기준 문서는 `review_model`, top-level `web_search`, `tools.web_search`, `service_tier`, `personality`, `default_permissions`, JSON schema, `windows.sandbox`, `windows.sandbox_private_desktop`, `model_instructions_file`, granular approval policy, app 권한 제어, permissions profile까지 함께 다룹니다.
 
 ### 사용자별 즉시 적용 요약
 
