@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: April 3, 2026</strong><br/>
+  <strong>Last updated: April 6, 2026</strong><br/>
   The live site displays the viewer's current date automatically and reflects the latest Codex model guidance reviewed from official docs.
 </p>
 
@@ -32,16 +32,16 @@ Based on the [official OpenAI documentation](https://developers.openai.com/codex
 - **First-time users**: Start with sections **04-06** (setup, sign-in, first run), then **10** (approval/sandbox basics), and **14** (OpenAI Docs MCP).
 - **Professional users**: Start with sections **12-14** (AGENTS.md, config.toml, MCP), then **15-17** (session strategy, automation, prompting contracts).
 
-### Daily MCP Verification Snapshot (2026-04-03)
+### Daily MCP Verification Snapshot (2026-04-06)
 
-- Re-checking `codex/models` still shows the same four recommended lanes: `gpt-5.4`, `gpt-5.4-mini`, `gpt-5.3-codex`, and `gpt-5.3-codex-spark`. The alternative-model list is still `gpt-5.2-codex`, `gpt-5.2`, `gpt-5.1-codex-max`, `gpt-5.1`, `gpt-5.1-codex`, `gpt-5-codex`, `gpt-5-codex-mini`, and `gpt-5`. The most important official wording to preserve is that the coding capabilities of `gpt-5.3-codex` now power GPT-5.4.
-- Reading `Introducing GPT-5.4` together with `Introducing GPT-5.4 mini and nano` sharpens the model story further: `gpt-5.4` is the flagship professional model for Codex, `gpt-5.4-mini` is the fast local/subagent choice, and `nano` still does not appear on the Codex models page as a recommended or alternative Codex surface model.
-- Quickstart and Pricing changed materially since the last draft. Quickstart now says every ChatGPT plan includes Codex, and the April 2, 2026 OpenAI pricing announcement adds a new team lens: Business and Enterprise can add Codex-only pay-as-you-go seats with no fixed seat fee, plus eligible Business workspaces can earn up to $500 in credits. The pricing page is also moving teams toward token-based billing while still showing model-specific five-hour local/cloud/code-review ranges.
+- Re-checking `codex/models` still shows the same four recommended lanes: `gpt-5.4`, `gpt-5.4-mini`, `gpt-5.3-codex`, and `gpt-5.3-codex-spark`. The practical distinction to preserve is that `gpt-5.4` and `gpt-5.4-mini` are the default local-first paths, while `gpt-5.3-codex` is still the only recommended lane with Codex Cloud enabled.
+- Reading `Introducing GPT-5.4` together with `Introducing GPT-5.4 mini and nano` still sharpens the model story: `gpt-5.4` is the flagship professional model for Codex, `gpt-5.4-mini` is the fast local/subagent choice, and `nano` still does not appear on the Codex models page as a recommended or alternative Codex surface model.
+- Quickstart currently says every ChatGPT plan includes Codex. Pricing now needs to be read in two layers: individuals look at Free/Go/Plus/Pro usage bands, while teams should also account for Business and Enterprise usage-based seats, credit promotions, and the ongoing move toward token-based billing.
 - The setup story is clearer than older revisions: Quickstart treats the app as the easiest starting path, the IDE surface explicitly covers VS Code, Cursor, Windsurf, and JetBrains, and API-key sign-in is still allowed but can limit features such as cloud threads.
-- Windows guidance is now split more cleanly between the general Windows page and the dedicated Windows app page. The default recommendation is the native app, installable from Microsoft Store or `winget`, with `elevated` sandbox preferred over `unelevated`, a private desktop on by default, and WSL positioned as the right option when your workflow already lives in Linux or the IDE agent path needs it.
-- The Codex app docs are broader than a simple desktop shell. The current app and app/features pages emphasize built-in worktrees, Automations, Git tools, integrated terminal, voice dictation, pop-out windows, IDE sync, image input, notifications, and sleep prevention, so the guide now surfaces that operating model earlier.
-- Plugins are now documented as a real packaging layer, not just a passing mention. The official `Plugins` page clearly defines plugins as bundles of skills, app integrations, and MCP servers, and documents both the app plugin directory and the CLI `/plugins` flow.
-- `config.toml` is still the area most likely to drift. The current reference gives more weight to `review_model`, top-level `web_search`, `tools.web_search`, `personality`, `service_tier`, `default_permissions`, `tools.view_image`, `windows.sandbox`, `windows.sandbox_private_desktop`, `model_instructions_file`, granular approvals, app permissions, feature flags, and named permission profiles.
+- Windows guidance is now split more cleanly between the general Windows page and the dedicated Windows app page. The default recommendation is the native app, installable from Microsoft Store or `winget`, with `elevated` sandbox preferred over `unelevated`, private desktop isolation on by default, and WSL positioned as the right option when your workflow already lives in Linux or when IDE agent mode on Windows needs the most reliable path.
+- The Codex app docs are broader than a simple desktop shell. The current app/features page emphasizes built-in worktrees, Automations, Git tools, an integrated terminal, voice dictation, pop-out windows, IDE sync, image input, notifications, and sleep prevention, so the guide now surfaces that operating model earlier.
+- Plugins are now documented as a real packaging layer. The official `Plugins` page clearly defines plugins as bundles of skills, app integrations, and MCP servers, and documents both the app plugin directory and the CLI `/plugins` flow.
+- `config.toml` is still the area most likely to drift. The current config basics page makes the precedence rules, `web_search = "cached"` default, `personality`, `shell_environment_policy`, feature flags, `windows.sandbox`, `windows.sandbox_private_desktop`, and granular approvals worth surfacing more clearly.
 
 ### Audience Quick Use
 
