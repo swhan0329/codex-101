@@ -42,7 +42,7 @@
             <p class="hero-badge">
                 <span data-i18n="hero_badge_prefix">공식 문서 기준 재검수</span>
                 <span aria-hidden="true"> · </span>
-                <span class="live-date" data-date-format="long">2026년 4월 3일</span>
+                <span class="live-date" data-date-format="long">2026년 4월 9일</span>
             </p>
             <h1 class="hero-title" data-i18n="hero_title">OpenAI Codex를<br />한국 실무에 바로 붙이는 가이드</h1>
             <p class="hero-sub" data-i18n="hero_sub">CLI · Desktop App (macOS/Windows) · IDE Extension · Web · iOS · SDK automation<br />최신 공식 문서를 기준으로 제품 면 선택, 모델 선택, 샌드박스/승인, MCP, 자동화를 처음 사용자와 실무 사용자 모두 읽기 쉽도록 다시 정리했습니다.</p>
@@ -115,7 +115,7 @@
                         </div>
                         <p class="overview-fact-date">
                             <span data-i18n="overview_fact_date_prefix">업데이트 기준일</span>
-                            <span class="live-date" data-date-format="long">2026년 4월 3일</span>
+                            <span class="live-date" data-date-format="long">2026년 4월 9일</span>
                         </p>
                     </div>
 
@@ -141,7 +141,7 @@
                     <div class="overview-fact-grid">
                         <article class="fact-card">
                             <h4 data-i18n="overview_fact_1_title">모델 추천 재정렬</h4>
-                            <p data-i18n="overview_fact_1_desc">`codex/models` 기준 네 갈래 추천 체계는 유지되지만 설명이 더 분명해졌습니다. 기본 시작점은 `gpt-5.4`, 빠른 로컬 작업이나 보조 에이전트는 `gpt-5.4-mini`, Codex Cloud와 복잡한 엔지니어링 작업은 `gpt-5.3-codex`, 거의 즉각적인 반복 작업은 `gpt-5.3-codex-spark`입니다. Spark는 표준 모델 문서에서는 일반 API 접근을 지원하지 않는 것으로 표시되고, 별도 발표문에서는 소수 디자인 파트너 대상 제한적 API 테스트를 언급합니다.</p>
+                            <p data-i18n="overview_fact_1_desc">`codex/models` 기준 추천 모델 네 갈래는 유지되지만, 예전 문서와 달리 현재 대안 모델 표면은 사실상 `gpt-5.2`만 남았습니다. 기본 시작점은 `gpt-5.4`, 빠른 로컬 작업이나 보조 에이전트는 `gpt-5.4-mini`, Codex Cloud와 복잡한 엔지니어링 작업은 `gpt-5.3-codex`, 거의 즉각적인 반복 작업은 `gpt-5.3-codex-spark`입니다.</p>
                         </article>
                         <article class="fact-card">
                             <h4 data-i18n="overview_fact_2_title">GPT-5.4 발표 내용 반영</h4>
@@ -153,15 +153,15 @@
                         </article>
                         <article class="fact-card">
                             <h4 data-i18n="overview_fact_4_title">IDE·Windows 경로 재정리</h4>
-                            <p data-i18n="overview_fact_4_desc">IDE와 Windows 문서 기준으로 VS Code/Cursor/Windsurf/JetBrains 경로를 보강하고, JetBrains 로그인 방식, Windows 앱의 Microsoft Store/`winget` 설치, `elevated`/`unelevated` 샌드박스, 전용 데스크톱 격리 기본값, 그리고 Windows에서는 네이티브 앱 기본 경로와 WSL 대안 경로를 함께 반영했습니다.</p>
+                            <p data-i18n="overview_fact_4_desc">Quickstart, IDE, app/windows, Windows 문서를 다시 맞추면서 VS Code/Cursor/Windsurf/VS Code Insiders/JetBrains 경로를 보강하고, JetBrains 로그인 방식, Windows 앱의 Microsoft Store/`winget` 설치, `elevated`/`unelevated` 샌드박스, 전용 데스크톱 격리 기본값, 그리고 Windows IDE agent mode는 WSL 워크스페이스가 가장 안정적이라는 흐름을 함께 반영했습니다.</p>
                         </article>
                         <article class="fact-card">
                             <h4 data-i18n="overview_fact_5_title">App 운영 흐름 반영</h4>
-                            <p data-i18n="overview_fact_5_desc">`Introducing the Codex app` 발표와 현재 app/features·app/windows·plugins 문서를 함께 반영해, worktrees, built-in Git, integrated terminal, skills, Automations, `/personality`, plugin directory, Windows App 경로를 문서 상단부터 더 분명하게 드러냈습니다.</p>
+                            <p data-i18n="overview_fact_5_desc">`Introducing the Codex app` 발표와 현재 app/features·app/windows·plugins 문서를 함께 반영해, worktrees, built-in Git, integrated terminal, skills, Automations, voice dictation, pop-out window, IDE sync, image input, notifications, plugin directory, Windows App 경로를 문서 상단부터 더 분명하게 드러냈습니다.</p>
                         </article>
                         <article class="fact-card">
                             <h4 data-i18n="overview_fact_6_title">config/plugins/security 흐름 갱신</h4>
-                            <p data-i18n="overview_fact_6_desc">`review_model`, top-level `web_search`, `tools.web_search`, `tools.view_image`, `service_tier`, `personality`, `default_permissions`, `windows.sandbox`, `windows.sandbox_private_desktop`, JSON schema, feature flag, plugin 배포 계층, 로컬 OS 샌드박스와 cloud split runtime 설명을 함께 최신 기준으로 맞췄습니다.</p>
+                            <p data-i18n="overview_fact_6_desc">`review_model`, top-level `web_search`, `tools.web_search`, `tools.view_image`, `service_tier`, `personality`, `default_permissions`, `windows.sandbox`, `windows.sandbox_private_desktop`, JSON schema, feature flag, requirements.toml 제약, plugin 배포 계층, 로컬 OS 샌드박스와 cloud split runtime 설명을 함께 최신 기준으로 맞췄습니다.</p>
                         </article>
                     </div>
 
@@ -444,36 +444,6 @@
 
                 <h4 data-i18n="s3_alt_title">🔄 대안 모델</h4>
                 <div class="model-grid">
-                    <!-- GPT-5.2-Codex -->
-                    <div class="model-card collapsible">
-                        <div class="model-banner">gpt-5.2-codex</div>
-                        <div class="model-body">
-                            <p class="model-desc" data-i18n="m4b_f">실전 엔지니어링을 위한 고급 코딩 모델입니다. 현재는 GPT-5.3-Codex로 대체되었습니다.</p>
-                            <div class="model-cmd">codex -m gpt-5.2-codex</div>
-                            <div class="model-features">
-                                <div class="model-feat-row"><span class="model-feat-label"
-                                        data-i18n="feat_cap">Capability</span><span class="model-feat-value"><span
-                                            class="dot-filled">✦</span><span class="dot-filled">✦</span><span
-                                            class="dot-filled">✦</span><span class="dot-filled">✦</span></span></div>
-                                <div class="model-feat-row"><span class="model-feat-label"
-                                        data-i18n="feat_spd">Speed</span><span class="model-feat-value"><span
-                                            class="dot-filled">⚡</span><span class="dot-filled">⚡</span><span
-                                            class="dot-filled">⚡</span></span></div>
-                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cli">Codex
-                                        CLI & SDK</span><span class="check-yes">✅</span></div>
-                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_app">Codex
-                                        app & IDE extension</span><span class="check-yes">✅</span></div>
-                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cloud">Codex
-                                        Cloud</span><span class="check-yes">✅</span></div>
-                                <div class="model-feat-row"><span class="model-feat-label"
-                                        data-i18n="feat_credits">ChatGPT Credits</span><span class="check-yes">✅</span>
-                                </div>
-                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_api">API
-                                        Access</span><span class="check-yes">✅</span></div>
-                            </div>
-                        </div>
-                        <button class="model-toggle" data-i18n="model_show">Show details</button>
-                    </div>
                     <!-- GPT-5.2 -->
                     <div class="model-card collapsible">
                         <div class="model-banner">gpt-5.2</div>
@@ -494,189 +464,7 @@
                                 <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_app">Codex
                                         app & IDE extension</span><span class="check-yes">✅</span></div>
                                 <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cloud">Codex
-                                        Web</span><span class="check-no">❌</span></div>
-                                <div class="model-feat-row"><span class="model-feat-label"
-                                        data-i18n="feat_credits">ChatGPT Credits</span><span class="check-yes">✅</span>
-                                </div>
-                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_api">API
-                                        Access</span><span class="check-yes">✅</span></div>
-                            </div>
-                        </div>
-                        <button class="model-toggle" data-i18n="model_show">Show details</button>
-                    </div>
-                    <!-- GPT-5.1-Codex-Max -->
-                    <div class="model-card collapsible">
-                        <div class="model-banner">gpt-5.1-codex-max</div>
-                        <div class="model-body">
-                            <p class="model-desc" data-i18n="m5_f">Codex에서 장기간 에이전틱 코딩 작업에 최적화된 모델.</p>
-                            <div class="model-cmd">codex -m gpt-5.1-codex-max</div>
-                            <div class="model-features">
-                                <div class="model-feat-row"><span class="model-feat-label"
-                                        data-i18n="feat_cap">Capability</span><span class="model-feat-value"><span
-                                            class="dot-filled">✦</span><span class="dot-filled">✦</span><span
-                                            class="dot-filled">✦</span></span></div>
-                                <div class="model-feat-row"><span class="model-feat-label"
-                                        data-i18n="feat_spd">Speed</span><span class="model-feat-value"><span
-                                            class="dot-filled">⚡</span><span class="dot-filled">⚡</span><span
-                                            class="dot-filled">⚡</span></span></div>
-                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cli">Codex
-                                        CLI & SDK</span><span class="check-yes">✅</span></div>
-                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_app">Codex
-                                        app & IDE extension</span><span class="check-yes">✅</span></div>
-                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cloud">Codex
-                                        Web</span><span class="check-no">❌</span></div>
-                                <div class="model-feat-row"><span class="model-feat-label"
-                                        data-i18n="feat_credits">ChatGPT Credits</span><span class="check-yes">✅</span>
-                                </div>
-                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_api">API
-                                        Access</span><span class="check-yes">✅</span></div>
-                            </div>
-                        </div>
-                        <button class="model-toggle" data-i18n="model_show">Show details</button>
-                    </div>
-                    <!-- GPT-5.1 -->
-                    <div class="model-card collapsible">
-                        <div class="model-banner">gpt-5.1</div>
-                        <div class="model-body">
-                            <p class="model-desc" data-i18n="m6_f">다양한 도메인의 코딩 및 에이전틱 작업에 뛰어남. gpt-5.2로 대체됨.</p>
-                            <div class="model-cmd">codex -m gpt-5.1</div>
-                            <div class="model-features">
-                                <div class="model-feat-row"><span class="model-feat-label"
-                                        data-i18n="feat_cap">Capability</span><span class="model-feat-value"><span
-                                            class="dot-filled">✦</span><span class="dot-filled">✦</span><span
-                                            class="dot-filled">✦</span></span></div>
-                                <div class="model-feat-row"><span class="model-feat-label"
-                                        data-i18n="feat_spd">Speed</span><span class="model-feat-value"><span
-                                            class="dot-filled">⚡</span><span class="dot-filled">⚡</span><span
-                                            class="dot-filled">⚡</span></span></div>
-                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cli">Codex
-                                        CLI & SDK</span><span class="check-yes">✅</span></div>
-                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_app">Codex
-                                        app & IDE extension</span><span class="check-yes">✅</span></div>
-                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cloud">Codex
-                                        Web</span><span class="check-no">❌</span></div>
-                                <div class="model-feat-row"><span class="model-feat-label"
-                                        data-i18n="feat_credits">ChatGPT Credits</span><span class="check-yes">✅</span>
-                                </div>
-                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_api">API
-                                        Access</span><span class="check-yes">✅</span></div>
-                            </div>
-                        </div>
-                        <button class="model-toggle" data-i18n="model_show">Show details</button>
-                    </div>
-                    <!-- GPT-5.1-Codex -->
-                    <div class="model-card collapsible">
-                        <div class="model-banner">gpt-5.1-codex</div>
-                        <div class="model-body">
-                            <p class="model-desc" data-i18n="m7_f">Codex에서 장시간 실행되는 에이전틱 코딩 작업에 최적화. gpt-5.1-codex-max로
-                                대체됨.</p>
-                            <div class="model-cmd">codex -m gpt-5.1-codex</div>
-                            <div class="model-features">
-                                <div class="model-feat-row"><span class="model-feat-label"
-                                        data-i18n="feat_cap">Capability</span><span class="model-feat-value"><span
-                                            class="dot-filled">✦</span><span class="dot-filled">✦</span><span
-                                            class="dot-filled">✦</span></span></div>
-                                <div class="model-feat-row"><span class="model-feat-label"
-                                        data-i18n="feat_spd">Speed</span><span class="model-feat-value"><span
-                                            class="dot-filled">⚡</span><span class="dot-filled">⚡</span><span
-                                            class="dot-filled">⚡</span></span></div>
-                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cli">Codex
-                                        CLI & SDK</span><span class="check-yes">✅</span></div>
-                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_app">Codex
-                                        app & IDE extension</span><span class="check-yes">✅</span></div>
-                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cloud">Codex
-                                        Web</span><span class="check-yes">✅</span></div>
-                                <div class="model-feat-row"><span class="model-feat-label"
-                                        data-i18n="feat_credits">ChatGPT Credits</span><span class="check-yes">✅</span>
-                                </div>
-                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_api">API
-                                        Access</span><span class="check-yes">✅</span></div>
-                            </div>
-                        </div>
-                        <button class="model-toggle" data-i18n="model_show">Show details</button>
-                    </div>
-                    <!-- GPT-5-Codex -->
-                    <div class="model-card collapsible">
-                        <div class="model-banner">gpt-5-codex</div>
-                        <div class="model-body">
-                            <p class="model-desc" data-i18n="m8_f">Codex에서 장시간 실행되는 에이전틱 코딩 작업에 최적화. gpt-5.1-codex-max로
-                                대체됨.</p>
-                            <div class="model-cmd">codex -m gpt-5-codex</div>
-                            <div class="model-features">
-                                <div class="model-feat-row"><span class="model-feat-label"
-                                        data-i18n="feat_cap">Capability</span><span class="model-feat-value"><span
-                                            class="dot-filled">✦</span><span class="dot-filled">✦</span><span
-                                            class="dot-filled">✦</span></span></div>
-                                <div class="model-feat-row"><span class="model-feat-label"
-                                        data-i18n="feat_spd">Speed</span><span class="model-feat-value"><span
-                                            class="dot-filled">⚡</span><span class="dot-filled">⚡</span><span
-                                            class="dot-filled">⚡</span></span></div>
-                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cli">Codex
-                                        CLI & SDK</span><span class="check-yes">✅</span></div>
-                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_app">Codex
-                                        app & IDE extension</span><span class="check-yes">✅</span></div>
-                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cloud">Codex
-                                        Web</span><span class="check-no">❌</span></div>
-                                <div class="model-feat-row"><span class="model-feat-label"
-                                        data-i18n="feat_credits">ChatGPT Credits</span><span class="check-yes">✅</span>
-                                </div>
-                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_api">API
-                                        Access</span><span class="check-yes">✅</span></div>
-                            </div>
-                        </div>
-                        <button class="model-toggle" data-i18n="model_show">Show details</button>
-                    </div>
-                    <!-- GPT-5-Codex-Mini -->
-                    <div class="model-card collapsible">
-                        <div class="model-banner">gpt-5-codex-mini</div>
-                        <div class="model-body">
-                            <p class="model-desc" data-i18n="m9_f">GPT-5-Codex의 소형·비용 효율적 버전. gpt-5.1-codex-mini로 대체됨.
-                            </p>
-                            <div class="model-cmd">codex -m gpt-5-codex-mini</div>
-                            <div class="model-features">
-                                <div class="model-feat-row"><span class="model-feat-label"
-                                        data-i18n="feat_cap">Capability</span><span class="model-feat-value"><span
-                                            class="dot-filled">✦</span><span class="dot-filled">✦</span></span></div>
-                                <div class="model-feat-row"><span class="model-feat-label"
-                                        data-i18n="feat_spd">Speed</span><span class="model-feat-value"><span
-                                            class="dot-filled">⚡</span><span class="dot-filled">⚡</span><span
-                                            class="dot-filled">⚡</span><span class="dot-filled">⚡</span></span></div>
-                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cli">Codex
-                                        CLI & SDK</span><span class="check-yes">✅</span></div>
-                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_app">Codex
-                                        app & IDE extension</span><span class="check-yes">✅</span></div>
-                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cloud">Codex
-                                        Web</span><span class="check-no">❌</span></div>
-                                <div class="model-feat-row"><span class="model-feat-label"
-                                        data-i18n="feat_credits">ChatGPT Credits</span><span class="check-yes">✅</span>
-                                </div>
-                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_api">API
-                                        Access</span><span class="check-no">❌</span></div>
-                            </div>
-                        </div>
-                        <button class="model-toggle" data-i18n="model_show">Show details</button>
-                    </div>
-                    <!-- GPT-5 -->
-                    <div class="model-card collapsible">
-                        <div class="model-banner">gpt-5</div>
-                        <div class="model-body">
-                            <p class="model-desc" data-i18n="m10_f">다양한 도메인의 코딩 및 에이전틱 작업을 위한 추론 모델. gpt-5.1로 대체됨.</p>
-                            <div class="model-cmd">codex -m gpt-5</div>
-                            <div class="model-features">
-                                <div class="model-feat-row"><span class="model-feat-label"
-                                        data-i18n="feat_cap">Capability</span><span class="model-feat-value"><span
-                                            class="dot-filled">✦</span><span class="dot-filled">✦</span><span
-                                            class="dot-filled">✦</span></span></div>
-                                <div class="model-feat-row"><span class="model-feat-label"
-                                        data-i18n="feat_spd">Speed</span><span class="model-feat-value"><span
-                                            class="dot-filled">⚡</span><span class="dot-filled">⚡</span><span
-                                            class="dot-filled">⚡</span></span></div>
-                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cli">Codex
-                                        CLI & SDK</span><span class="check-yes">✅</span></div>
-                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_app">Codex
-                                        app & IDE extension</span><span class="check-yes">✅</span></div>
-                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cloud">Codex
-                                        Web</span><span class="check-no">❌</span></div>
+                                        Cloud</span><span class="check-no">❌</span></div>
                                 <div class="model-feat-row"><span class="model-feat-label"
                                         data-i18n="feat_credits">ChatGPT Credits</span><span class="check-yes">✅</span>
                                 </div>
@@ -1982,7 +1770,7 @@ codex --search "optimize with Next.js 15"
                     href="https://github.com/swhan0329/codex-101" target="_blank">PR을 환영합니다</a>.</p>
             <p class="footer-meta">
                 <span data-i18n="footer_date_prefix">최종 업데이트</span>:
-                <span class="live-date" data-date-format="long">2026년 4월 3일</span>
+                <span class="live-date" data-date-format="long">2026년 4월 9일</span>
             </p>
             <p class="footer-meta">Made by <a href="https://github.com/swhan0329" target="_blank">@swhan0329</a></p>
         </div>
