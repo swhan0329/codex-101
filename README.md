@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: April 10, 2026</strong><br/>
+  <strong>Last updated: April 13, 2026</strong><br/>
   The live site displays the viewer's current date automatically and reflects the latest Codex model guidance reviewed from official docs.
 </p>
 
@@ -32,16 +32,16 @@ Based on the [official OpenAI documentation](https://developers.openai.com/codex
 - **First-time users**: Start with sections **04-06** (setup, sign-in, first run), then **10** (approval/sandbox basics), and **14** (OpenAI Docs MCP).
 - **Professional users**: Start with sections **12-14** (AGENTS.md, config.toml, MCP), then **15-17** (session strategy, automation, prompting contracts).
 
-### Daily MCP Verification Snapshot (2026-04-10)
+### Daily MCP Verification Snapshot (2026-04-13)
 
-- Re-checking `codex/models` still shows the same four recommended lanes: `gpt-5.4`, `gpt-5.4-mini`, `gpt-5.3-codex`, and `gpt-5.3-codex-spark`. The important change for this repo is that the official fallback story is now much simpler: the models page currently keeps `gpt-5.2` as the main alternative instead of a long legacy list.
-- Reading `Introducing GPT-5.4` together with `Introducing GPT-5.4 mini and nano` keeps the model framing sharp: `gpt-5.4` is still the default professional starting point, `gpt-5.4-mini` is the fast local/subagent option, and `nano` still does not appear on the Codex models page as a recommended or alternative Codex model.
-- Quickstart and Pricing still matter most for access changes. Quickstart says every ChatGPT plan includes Codex, while Pricing now clearly shows Pro as starting at `$100/month` with 5x or 20x higher rate-limit paths, plus the Business/Enterprise Codex-only pay-as-you-go seat path and credits model.
-- The setup story remains clearer than older revisions: Quickstart treats the app as the easiest starting path, the IDE surface explicitly covers VS Code, Cursor, Windsurf, and JetBrains, and API-key sign-in is still allowed but can limit cloud features such as cloud threads.
-- Windows guidance is now best read through both the general Windows page and the dedicated Windows app page. The default recommendation is still the native app via Microsoft Store or `winget`, with `elevated` preferred over `unelevated`, private-desktop isolation on by default, and WSL positioned as the right choice when your workflow already lives in Linux or when IDE agent mode needs it.
-- The Codex app docs continue to describe a broader operating surface, not just a desktop shell. The current app and app/features pages emphasize worktrees, Automations, Git tools, the integrated terminal, voice dictation, pop-out windows, IDE sync, image input, notifications, and sleep prevention.
-- Plugins are now documented as a real packaging layer, not just a passing mention. The official `Plugins` page defines plugins as bundles of skills, app integrations, and MCP servers, and documents both the app plugin directory and the CLI `/plugins` flow.
-- `config.toml` remains the easiest place for documentation drift. The current reference still puts weight on `review_model`, top-level `web_search`, `tools.web_search`, `personality`, `service_tier`, `default_permissions`, `tools.view_image`, `windows.sandbox`, `windows.sandbox_private_desktop`, `model_instructions_file`, granular approvals, app permissions, feature flags, and named permission profiles.
+- Re-checking `codex/models` still shows the same four recommended lanes: `gpt-5.4`, `gpt-5.4-mini`, `gpt-5.3-codex`, and `gpt-5.3-codex-spark`. The main change versus the older draft is that the alternative-model list is now effectively just `gpt-5.2`.
+- Reading `Introducing GPT-5.4` together with `Introducing GPT-5.4 mini and nano` still sharpens the model story: `gpt-5.4` is the flagship professional model for Codex, `gpt-5.4-mini` is the fast local/subagent choice, and `nano` still does not appear on the Codex models page as a recommended or alternative Codex surface model.
+- Quickstart still says every ChatGPT plan includes Codex, but Pricing is more specific than older revisions. The main operational split is now individual five-hour usage bands versus Business token-based credits and Enterprise/Edu flexible billing behavior. Pro is currently shown in two tiers starting at $100/month, while code review usage remains centered on `gpt-5.3-codex`.
+- The setup story is clearer than older revisions: Quickstart treats the app as the easiest starting path, the IDE surface explicitly covers VS Code, Cursor, Windsurf, and JetBrains, and API-key sign-in is still allowed but can limit features such as cloud threads.
+- Windows guidance is now split more cleanly between the general Windows page and the dedicated Windows app page. The default recommendation is the native app, installable from Microsoft Store or `winget`, with `elevated` sandbox preferred over `unelevated`, a private desktop on by default, and WSL positioned as the right option when your workflow already lives in Linux or the IDE agent path needs it.
+- The Codex app docs are broader than a simple desktop shell. The current app, app/features, app/review, and app/automations pages emphasize built-in worktrees, Automations inbox flows, Git tools, integrated terminal, review pane behavior, voice dictation, pop-out windows, IDE sync, image input, notifications, and sleep prevention, so the guide now surfaces that operating model earlier.
+- Plugins are now documented as a real packaging layer, not just a passing mention. The official `Plugins` page clearly defines plugins as bundles of skills, app integrations, and MCP servers, and documents both the app plugin directory and the CLI `/plugins` flow.
+- `config.toml` is still the area most likely to drift. The current reference gives more weight to `review_model`, top-level `web_search`, `tools.web_search`, `personality`, `service_tier`, `default_permissions`, `tools.view_image`, `windows.sandbox`, `windows.sandbox_private_desktop`, `model_instructions_file`, granular approvals, app permissions, feature flags, and named permission profiles.
 
 ### Audience Quick Use
 
