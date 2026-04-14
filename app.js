@@ -90,6 +90,18 @@
         });
     }
 
+    function updateOverviewToggleLabel(lang) {
+        const t = translations[lang] || {};
+        const btn = document.getElementById('overview-toggle');
+        const details = document.getElementById('overview-fact-details');
+        if (!btn || !details) return;
+        const expanded = !details.hasAttribute('hidden');
+        btn.textContent = expanded
+            ? (t.overview_toggle_hide || 'Hide today\'s updates')
+            : (t.overview_toggle_show || 'Show today\'s updates');
+        btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+    }
+
     function renderLiveDates(lang) {
         const locale = lang === 'ko' ? 'ko-KR' : 'en-US';
         const formatter = new Intl.DateTimeFormat(locale, {
@@ -126,8 +138,27 @@
             }
         });
         updateModelToggleLabels(lang);
+        updateOverviewToggleLabel(lang);
         renderLiveDates(lang);
         document.documentElement.lang = lang === 'ko' ? 'ko' : 'en';
+    }
+
+    function setupOverviewToggle() {
+        const btn = document.getElementById('overview-toggle');
+        const details = document.getElementById('overview-fact-details');
+        if (!btn || !details) return;
+
+        btn.addEventListener('click', () => {
+            const expanded = !details.hasAttribute('hidden');
+            if (expanded) {
+                details.setAttribute('hidden', '');
+            } else {
+                details.removeAttribute('hidden');
+            }
+            updateOverviewToggleLabel(currentLang);
+        });
+
+        updateOverviewToggleLabel(currentLang);
     }
 
     // Build TOC
@@ -432,6 +463,7 @@
 
     // Init
     applyTheme(theme);
+    setupOverviewToggle();
     setLang(currentLang);
     setupHomeSidebarPin();
 })();
