@@ -2309,6 +2309,30 @@ details p {
     font-size: .9rem;
 }
 
+.overview-update-log {
+    margin-bottom: 18px;
+}
+
+.overview-update-log summary {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+}
+
+.overview-update-log-title {
+    color: var(--text);
+}
+
+.overview-update-log-hint {
+    color: var(--text-dim);
+    font-size: .85rem;
+    font-weight: 500;
+}
+
+.overview-update-log .overview-update-strip {
+    padding: 0 18px 18px;
+}
+
 /* === Links Grid === */
 .link-grid {
     display: grid;
