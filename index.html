@@ -15,9 +15,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css?v=20260416-ui-refresh-2" />
 </head>
 
 <body data-page="home">
@@ -33,55 +33,100 @@
                 </div>
             </div>
         </div>
+        <div class="reading-progress" aria-hidden="true">
+            <span id="reading-progress-bar" class="reading-progress-bar"></span>
+        </div>
     </nav>
 
     <!-- Hero -->
     <header class="hero">
         <div class="hero-glow"></div>
         <div class="container">
-            <p class="hero-badge">
-                <span data-i18n="hero_badge_prefix">공식 문서 기준 재검수</span>
-                <span aria-hidden="true"> · </span>
-                <span class="live-date" data-date-format="long">2026년 4월 16일</span>
-            </p>
-            <h1 class="hero-title" data-i18n="hero_title">OpenAI Codex를<br />한국 실무에 바로 붙이는 가이드</h1>
-            <p class="hero-sub" data-i18n="hero_sub">CLI · Desktop App (macOS/Windows) · IDE Extension · Web · iOS · SDK automation<br />최신 공식 문서를 기준으로 제품 면 선택, 모델 선택, 샌드박스/승인, MCP, 자동화를 처음 사용자와 실무 사용자 모두 읽기 쉽도록 다시 정리했습니다.</p>
-            <div class="hero-cta">
-                <a href="#start-here" class="btn btn-primary" data-i18n="hero_cta">빠른 시작 경로 보기</a>
-                <a href="#s17" class="btn btn-ghost" data-i18n="hero_cta_secondary">Prompting 실전 가이드</a>
-            </div>
-            <div class="hero-jump-wrap" id="chapter-jumps">
-                <p class="hero-jump-kicker" data-i18n="hero_jump_label">챕터 바로가기</p>
-                <div class="hero-jump-list" aria-label="Chapter quick jumps">
-                    <a href="#s1" class="hero-jump">
-                        <span class="hero-jump-num">01-03</span>
-                        <span class="hero-jump-text" data-i18n="toc_home_1_t">Foundations</span>
-                    </a>
-                    <a href="#s4" class="hero-jump">
-                        <span class="hero-jump-num">04-09</span>
-                        <span class="hero-jump-text" data-i18n="toc_home_2_t">Setup and Surfaces</span>
-                    </a>
-                    <a href="#s10" class="hero-jump">
-                        <span class="hero-jump-num">10-11</span>
-                        <span class="hero-jump-text" data-i18n="toc_home_3_t">Execution Model</span>
-                    </a>
-                    <a href="#s12" class="hero-jump">
-                        <span class="hero-jump-num">12-14</span>
-                        <span class="hero-jump-text" data-i18n="toc_home_4_t">Context and Tools</span>
-                    </a>
-                    <a href="#s15" class="hero-jump">
-                        <span class="hero-jump-num">15-16</span>
-                        <span class="hero-jump-text" data-i18n="toc_home_5_t">Sessions and Automation</span>
-                    </a>
-                    <a href="#s17" class="hero-jump">
-                        <span class="hero-jump-num">17</span>
-                        <span class="hero-jump-text" data-i18n="toc_home_6_t">Prompting GPT-5.4</span>
-                    </a>
-                    <a href="#s18" class="hero-jump">
-                        <span class="hero-jump-num">18-21</span>
-                        <span class="hero-jump-text" data-i18n="toc_home_7_t">Decision Help</span>
-                    </a>
+            <div class="hero-layout">
+                <div class="hero-copy">
+                    <p class="hero-badge">
+                        <span data-i18n="hero_badge_prefix">공식 문서 기준 재검수</span>
+                        <span aria-hidden="true"> · </span>
+                        <span class="live-date" data-date-format="long">2026년 4월 18일</span>
+                    </p>
+                    <h1 class="hero-title" data-i18n="hero_title">OpenAI Codex를<br />한국 실무에 바로 붙이는 가이드</h1>
+                    <p class="hero-sub" data-i18n="hero_sub">CLI · Desktop App (macOS/Windows) · IDE Extension · Web · iOS · SDK automation<br />최신 공식 문서를 기준으로 제품 면 선택, 모델 선택, 샌드박스/승인, MCP, 자동화를 처음 사용자와 실무 사용자 모두 읽기 쉽도록 다시 정리했습니다.</p>
+                    <div class="hero-cta">
+                        <a href="#start-here" class="btn btn-primary" data-i18n="hero_cta">빠른 시작 경로 보기</a>
+                        <a href="#s17" class="btn btn-ghost" data-i18n="hero_cta_secondary">Prompting 실전 가이드</a>
+                    </div>
+                    <div class="hero-jump-wrap" id="chapter-jumps">
+                        <p class="hero-jump-kicker" data-i18n="hero_jump_label">챕터 바로가기</p>
+                        <div class="hero-jump-list" aria-label="Chapter quick jumps">
+                            <a href="#s1" class="hero-jump">
+                                <span class="hero-jump-num">01-03</span>
+                                <span class="hero-jump-text" data-i18n="toc_home_1_t">Foundations</span>
+                            </a>
+                            <a href="#s4" class="hero-jump">
+                                <span class="hero-jump-num">04-09</span>
+                                <span class="hero-jump-text" data-i18n="toc_home_2_t">Setup and Surfaces</span>
+                            </a>
+                            <a href="#s10" class="hero-jump">
+                                <span class="hero-jump-num">10-11</span>
+                                <span class="hero-jump-text" data-i18n="toc_home_3_t">Execution Model</span>
+                            </a>
+                            <a href="#s12" class="hero-jump">
+                                <span class="hero-jump-num">12-14</span>
+                                <span class="hero-jump-text" data-i18n="toc_home_4_t">Context and Tools</span>
+                            </a>
+                            <a href="#s15" class="hero-jump">
+                                <span class="hero-jump-num">15-16</span>
+                                <span class="hero-jump-text" data-i18n="toc_home_5_t">Sessions and Automation</span>
+                            </a>
+                            <a href="#s17" class="hero-jump">
+                                <span class="hero-jump-num">17</span>
+                                <span class="hero-jump-text" data-i18n="toc_home_6_t">Prompting GPT-5.4</span>
+                            </a>
+                            <a href="#s18" class="hero-jump">
+                                <span class="hero-jump-num">18-21</span>
+                                <span class="hero-jump-text" data-i18n="toc_home_7_t">Decision Help</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
+                <aside class="hero-rail" aria-label="Guide launch points">
+                    <div class="hero-rail-card hero-rail-intro">
+                        <p class="hero-rail-kicker" data-i18n="hero_panel_kicker">Launch paths</p>
+                        <h2 class="hero-rail-title" data-i18n="hero_panel_title">지금 필요한 흐름부터 바로 들어가기</h2>
+                        <p class="hero-rail-desc" data-i18n="hero_panel_desc">처음 실행, 팀 운영, 프롬프팅 실전 중 현재 목적에 맞는 경로를 먼저 잡고 아래 섹션으로 내려가면 훨씬 덜 헤맵니다.</p>
+                    </div>
+                    <div class="hero-path-grid">
+                        <a href="#s5" class="hero-path-card">
+                            <span class="hero-path-tag" data-i18n="hero_path_1_tag">First run</span>
+                            <strong class="hero-path-title" data-i18n="hero_path_1_title">10분 안에 설치와 첫 작업</strong>
+                            <span class="hero-path-desc" data-i18n="hero_path_1_desc">앱 설치, 로그인, 첫 로컬 작업, Git 체크포인트까지 빠르게 훑습니다.</span>
+                        </a>
+                        <a href="#s12" class="hero-path-card">
+                            <span class="hero-path-tag" data-i18n="hero_path_2_tag">Team setup</span>
+                            <strong class="hero-path-title" data-i18n="hero_path_2_title">프로젝트 규칙과 도구 접근 고정</strong>
+                            <span class="hero-path-desc" data-i18n="hero_path_2_desc">AGENTS.md, config.toml, MCP, 승인 정책을 팀 기준으로 맞춥니다.</span>
+                        </a>
+                        <a href="#s17" class="hero-path-card">
+                            <span class="hero-path-tag" data-i18n="hero_path_3_tag">Prompting</span>
+                            <strong class="hero-path-title" data-i18n="hero_path_3_title">긴 작업이 덜 흔들리는 프롬프트 계약</strong>
+                            <span class="hero-path-desc" data-i18n="hero_path_3_desc">tool loop, verification, runtime tuning을 한 번에 정리합니다.</span>
+                        </a>
+                    </div>
+                    <div class="hero-signal-row" aria-label="Guide snapshot">
+                        <div class="hero-signal">
+                            <span class="hero-signal-value">21</span>
+                            <span class="hero-signal-label" data-i18n="hero_signal_1">chapters</span>
+                        </div>
+                        <div class="hero-signal">
+                            <span class="hero-signal-value">KR/EN</span>
+                            <span class="hero-signal-label" data-i18n="hero_signal_2">live language toggle</span>
+                        </div>
+                        <div class="hero-signal">
+                            <span class="hero-signal-value">Daily</span>
+                            <span class="hero-signal-label" data-i18n="hero_signal_3">official-doc review</span>
+                        </div>
+                    </div>
+                </aside>
             </div>
         </div>
     </header>
@@ -115,7 +160,7 @@
                         </div>
                         <p class="overview-fact-date">
                             <span data-i18n="overview_fact_date_prefix">업데이트 기준일</span>
-                            <span class="live-date" data-date-format="long">2026년 4월 16일</span>
+                            <span class="live-date" data-date-format="long">2026년 4월 18일</span>
                         </p>
                     </div>
 
@@ -131,15 +176,19 @@
                             </article>
                             <article class="update-pill">
                                 <p class="update-pill-title" data-i18n="overview_update_2_title">요금제/크레딧 구조 재정리</p>
-                                <p class="update-pill-desc" data-i18n="overview_update_2_desc">개인 플랜 한도뿐 아니라 Business·Enterprise의 pay-as-you-go 팀 경로, Pro 프로모션, 토큰 기반 크레딧 구조까지 반영했습니다.</p>
+                                <p class="update-pill-desc" data-i18n="overview_update_2_desc">개인 플랜 한도뿐 아니라 Business·Enterprise의 pay-as-you-go 팀 경로, Pro `$100`/`$200` 티어 차이, 토큰 기반 크레딧 구조까지 반영했습니다.</p>
                             </article>
                             <article class="update-pill">
                                 <p class="update-pill-title" data-i18n="overview_update_3_title">Quickstart·IDE 경로 정리</p>
                                 <p class="update-pill-desc" data-i18n="overview_update_3_desc">처음 사용자는 App 중심, 전문 사용자는 IDE/CLI + Docs MCP 중심으로 읽히도록 시작 경로와 설명 밀도를 조정했습니다.</p>
                             </article>
                             <article class="update-pill">
-                                <p class="update-pill-title" data-i18n="overview_update_4_title">App·Windows·Plugins 경로 보강</p>
-                                <p class="update-pill-desc" data-i18n="overview_update_4_desc">app/features·app/windows·plugins 문서를 다시 확인해 worktrees, thread automations, plugin directory, WSL 전환, PowerShell sandbox 흐름을 상단부터 정리했습니다.</p>
+                                <p class="update-pill-title" data-i18n="overview_update_4_title">App·Automations·Windows 경로 보강</p>
+                                <p class="update-pill-desc" data-i18n="overview_update_4_desc">app/features·app/automations·app/windows·plugins 문서를 다시 확인해 thread automation과 standalone automation의 차이, 앱 실행 조건, WSL 전환, PowerShell sandbox, plugin directory 흐름을 상단부터 정리했습니다.</p>
+                            </article>
+                            <article class="update-pill">
+                                <p class="update-pill-title" data-i18n="overview_update_5_title">관련 문서/발표 전체 재점검</p>
+                                <p class="update-pill-desc" data-i18n="overview_update_5_desc">`developers.openai.com/codex`와 `openai.com/index`의 관련 하위 페이지를 다시 훑어보며 새 제품·모델·앱·가이드 발표가 지금 구조를 뒤집을 정도인지 확인했고, 오늘은 App + Docs MCP + 모델 선택 축을 유지하되 링크와 설명만 최신화하는 편이 가장 정확하다고 판단했습니다.</p>
                             </article>
                         </div>
                     </details>
@@ -155,7 +204,7 @@
                         </article>
                         <article class="fact-card">
                             <h4 data-i18n="overview_fact_3_title">플랜/팀 요금제 보강</h4>
-                            <p data-i18n="overview_fact_3_desc">Quickstart는 모든 ChatGPT 플랜에 Codex가 포함된다고 설명합니다. Pricing 기준으로 Plus는 최신 모델과 클라우드 리뷰를 포함하고, Pro는 현재 `$100` tier에서 2026년 5월 31일까지 10x, `$200` tier에서 같은 날짜까지 25x 수준의 한도 부스트가 반영됩니다. 팀 쪽은 Business·Enterprise의 Codex-only pay-as-you-go seat, 최대 `$500` 크레딧 프로모션, 토큰 기반 크레딧 전환을 함께 읽어야 현재 상태와 맞습니다.</p>
+                            <p data-i18n="overview_fact_3_desc">Quickstart는 모든 ChatGPT 플랜에 Codex가 포함된다고 설명합니다. Pricing 기준으로 Plus는 최신 모델과 클라우드 리뷰를 포함하고, Pro는 현재 `$100` tier가 2026년 5월 31일까지 10x, `$200` tier가 상시 20x에 같은 날짜까지 25x 5시간 한도 부스트를 반영합니다. 팀 쪽은 Business·Enterprise의 Codex-only pay-as-you-go seat, 최대 `$500` 크레딧 프로모션, 토큰 기반 크레딧 전환을 함께 읽어야 현재 상태와 맞습니다.</p>
                         </article>
                         <article class="fact-card">
                             <h4 data-i18n="overview_fact_4_title">IDE·Windows 경로 재정리</h4>
@@ -163,7 +212,7 @@
                         </article>
                         <article class="fact-card">
                             <h4 data-i18n="overview_fact_5_title">App 운영 흐름 반영</h4>
-                            <p data-i18n="overview_fact_5_desc">`Introducing the Codex app` 발표와 현재 `app/features` 문서를 다시 대조해 worktrees, built-in Git, integrated terminal, skills, Automations, thread automations, chats, in-app browser, artifact preview, image generation, `/personality`, plugin directory 흐름을 더 앞쪽에서 이해할 수 있게 재배치했습니다.</p>
+                            <p data-i18n="overview_fact_5_desc">`Introducing the Codex app` 발표와 현재 `app/features`·`app/automations` 문서를 다시 대조해 worktrees, built-in Git, integrated terminal, skills, Automations, thread automations, standalone automations, chats, in-app browser, artifact preview, image generation, `/personality`, plugin directory 흐름을 더 앞쪽에서 이해할 수 있게 재배치했습니다.</p>
                         </article>
                         <article class="fact-card">
                             <h4 data-i18n="overview_fact_6_title">config/plugins/security 흐름 갱신</h4>
@@ -174,6 +223,7 @@
                     <p class="overview-sources-label" data-i18n="overview_sources_label">근거 문서</p>
                     <div class="overview-source-links">
                         <a href="https://developers.openai.com/codex/quickstart/" target="_blank" class="source-chip" data-i18n="overview_source_1">Codex Quickstart</a>
+                        <a href="https://developers.openai.com/codex/" target="_blank" class="source-chip" data-i18n="overview_source_16">Codex Overview</a>
                         <a href="https://developers.openai.com/codex/models/" target="_blank" class="source-chip" data-i18n="overview_source_8">Codex Models</a>
                         <a href="https://developers.openai.com/codex/pricing/" target="_blank" class="source-chip" data-i18n="overview_source_2">Codex Pricing</a>
                         <a href="https://developers.openai.com/codex/learn/best-practices/" target="_blank" class="source-chip" data-i18n="overview_source_3">Codex Best practices</a>
@@ -185,6 +235,7 @@
                         <a href="https://openai.com/index/introducing-gpt-5-4-mini-and-nano/" target="_blank" class="source-chip" data-i18n="overview_source_14">GPT-5.4 mini and nano announcement</a>
                         <a href="https://openai.com/index/introducing-gpt-5-3-codex-spark/" target="_blank" class="source-chip" data-i18n="overview_source_10">GPT-5.3-Codex-Spark announcement</a>
                         <a href="https://openai.com/index/introducing-the-codex-app/" target="_blank" class="source-chip" data-i18n="overview_source_13">Codex App announcement</a>
+                        <a href="https://developers.openai.com/codex/app/automations" target="_blank" class="source-chip" data-i18n="overview_source_17">Codex App Automations</a>
                         <a href="https://developers.openai.com/codex/plugins/" target="_blank" class="source-chip" data-i18n="overview_source_15">Codex Plugins</a>
                         <a href="https://developers.openai.com/codex/community/codex-for-oss/" target="_blank" class="source-chip" data-i18n="overview_source_11">Codex for OSS</a>
                         <a href="https://developers.openai.com/codex/guides/build-ai-native-engineering-team/" target="_blank" class="source-chip" data-i18n="overview_source_12">AI-Native Engineering Team</a>
@@ -558,8 +609,8 @@
                                     </tr>
                                     <tr>
                                         <td>Pro</td>
-                                        <td>$200/mo</td>
-                                        <td data-i18n="s4_codex_pro">Spark 리서치 프리뷰 + 우선 처리 + 6x 한도 + 10x 코드 리뷰</td>
+                                        <td>From $100/mo</td>
+                                        <td data-i18n="s4_codex_pro">Spark 리서치 프리뷰 + 우선 처리 + Pro `$100` 10x / Pro `$200` 20x(+한시적 25x) + 더 큰 코드 리뷰 범위</td>
                                     </tr>
                                     <tr>
                                         <td>Business</td>
@@ -579,7 +630,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <p class="callout-inline" data-i18n="s4_note_access">현재 공식 문서는 모든 ChatGPT 플랜에 Codex가 포함된다고 설명합니다. 개인 사용자는 Free/Go/Plus/Pro 한도를 보면 되고, Pro는 현재 `$100` tier 10x, `$200` tier 25x 수준의 한도 부스트가 2026년 5월 31일까지 반영됩니다. 팀은 Business·Enterprise에서 Codex-only pay-as-you-go seat, 최대 `$500` 크레딧 프로모션, 토큰 기반 과금 전환 여부를 함께 확인해야 정확합니다. 가격 페이지는 모델별 5시간 로컬/클라우드 한도, 주간 코드 리뷰 범위, 그리고 플랜별 크레딧 소비 구조를 보여주므로 실제 체감 한도는 항상 Codex Pricing과 usage dashboard를 같이 확인하세요.</p>
+                        <p class="callout-inline" data-i18n="s4_note_access">현재 공식 문서는 모든 ChatGPT 플랜에 Codex가 포함된다고 설명합니다. 개인 사용자는 Free/Go/Plus/Pro 한도를 보면 되고, Pro는 현재 `$100` tier가 2026년 5월 31일까지 10x, `$200` tier가 상시 20x에 같은 날짜까지 25x 5시간 한도 부스트를 반영합니다. 팀은 Business·Enterprise에서 Codex-only pay-as-you-go seat, 최대 `$500` 크레딧 프로모션, 토큰 기반 과금 전환 여부를 함께 확인해야 정확합니다. 가격 페이지는 모델별 5시간 로컬/클라우드 한도, 주간 코드 리뷰 범위, 그리고 플랜별 크레딧 소비 구조를 보여주므로 실제 체감 한도는 항상 Codex Pricing과 usage dashboard를 같이 확인하세요.</p>
                     </div>
                 </div>
             </section>
@@ -621,7 +672,7 @@ export OPENAI_API_KEY="your-api-key-here"</code></pre>
                                 <span class="setup-chip" data-i18n="s5_waitlist_tag">Windows App</span>
                                 <span class="setup-chip" data-i18n="s5_waitlist_scope">지원 범위는 수시 변경</span>
                             </div>
-                            <p data-i18n="s5_waitlist_text">업데이트: Windows에서는 Codex 앱이 가장 쉬운 기본 경로입니다. Microsoft Store나 `winget`로 설치할 수 있고, 앱은 PowerShell 기반 네이티브 Windows sandbox를 지원하며 필요하면 WSL agent로 전환할 수 있습니다. IDE의 Windows agent mode는 현재 WSL이 권장됩니다.</p>
+                            <p data-i18n="s5_waitlist_text">업데이트: Windows에서는 Codex 앱이 가장 쉬운 기본 경로입니다. Microsoft Store나 `winget`로 설치할 수 있고, PowerShell 기반 네이티브 Windows sandbox를 지원합니다. 필요하면 agent를 WSL로 전환할 수 있지만 재시작이 필요하며, IDE의 Windows agent mode는 여전히 WSL 워크스페이스가 가장 안정적입니다.</p>
                             <a href="https://developers.openai.com/codex/app/windows" target="_blank" class="btn btn-secondary"
                                 data-i18n="s5_waitlist_btn">Windows App 공식 문서 보기</a>
                         </div>
@@ -1338,7 +1389,7 @@ codex exec "Fix all TODOs" --full-auto</code></pre>
                     </div>
                     <div class="tip-card">
                         <h4 data-i18n="s16_c3_t">자동화 후보를 고르는 법</h4>
-                        <p data-i18n="s16_c3_d">최근 커밋 요약, 버그 스캔, 릴리스 노트 초안, CI 실패 점검, 스탠드업 요약처럼 이미 수동으로 안정화된 반복 작업부터 자동화하세요. 필요하면 dedicated worktree에서 돌리세요.</p>
+                        <p data-i18n="s16_c3_d">최근 커밋 요약, 버그 스캔, 릴리스 노트 초안, CI 실패 점검, 스탠드업 요약처럼 이미 수동으로 안정화된 반복 작업부터 자동화하세요. 같은 스레드를 이어야 하면 thread automation, 매번 새로 시작해야 하면 standalone automation이 맞고, 프로젝트 스코프 자동화는 앱이 실행 중이어야 합니다.</p>
                     </div>
                 </div>
                 <div class="callout">
@@ -1808,14 +1859,14 @@ codex --search "optimize with Next.js 15"
                     href="https://github.com/swhan0329/codex-101" target="_blank">PR을 환영합니다</a>.</p>
             <p class="footer-meta">
                 <span data-i18n="footer_date_prefix">최종 업데이트</span>:
-                <span class="live-date" data-date-format="long">2026년 4월 16일</span>
+                <span class="live-date" data-date-format="long">2026년 4월 18일</span>
             </p>
             <p class="footer-meta">Made by <a href="https://github.com/swhan0329" target="_blank">@swhan0329</a></p>
         </div>
     </footer>
 
-    <script src="i18n.js"></script>
-    <script src="app.js"></script>
+    <script src="i18n.js?v=20260418-docs-refresh"></script>
+    <script src="app.js?v=20260418-docs-refresh"></script>
 </body>
 
 </html>

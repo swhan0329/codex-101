@@ -365,6 +365,32 @@
         });
     }
 
+    function setupReadingProgress() {
+        const bar = document.getElementById('reading-progress-bar');
+        if (!bar) return;
+
+        const update = () => {
+            const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = scrollable <= 0 ? 0 : Math.min(1, window.scrollY / scrollable);
+            bar.style.transform = `scaleX(${progress})`;
+        };
+
+        let ticking = false;
+        const onScroll = () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    update();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        };
+
+        window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', update);
+        update();
+    }
+
     // Language switch
     function setLang(lang) {
         currentLang = lang;
@@ -440,4 +466,5 @@
     applyTheme(theme);
     setLang(currentLang);
     setupHomeSidebarPin();
+    setupReadingProgress();
 })();
