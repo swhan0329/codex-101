@@ -664,6 +664,84 @@ img {
     margin: 24px 0;
 }
 
+.overview-visual-card {
+    display: grid;
+    grid-template-columns: minmax(260px, .78fr) minmax(0, 1.22fr);
+    gap: 22px;
+    align-items: center;
+    margin: 12px 0 28px;
+    padding: 22px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    background:
+        radial-gradient(circle at top left, rgba(255, 255, 255, .05), transparent 32%),
+        linear-gradient(135deg, rgba(22, 163, 74, .08), transparent 42%),
+        var(--bg-card);
+}
+
+.overview-visual-card-intro {
+    margin: 20px 0 24px;
+}
+
+.overview-visual-copy {
+    display: grid;
+    gap: 12px;
+}
+
+.overview-visual-copy h3 {
+    font-size: 1.22rem;
+    line-height: 1.25;
+}
+
+.overview-visual-copy p:last-child {
+    color: var(--text-dim);
+    font-size: .96rem;
+}
+
+.overview-visual-meta {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    padding: 8px 12px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, .04);
+    color: var(--text-dim);
+    font-size: .82rem;
+    line-height: 1.5;
+}
+
+.overview-visual-figure {
+    display: grid;
+    gap: 10px;
+}
+
+.overview-visual-figure .overview-lang-visual {
+    display: none;
+}
+
+html[lang="ko"] .overview-visual-figure .overview-lang-visual-ko {
+    display: block;
+}
+
+html[lang="en"] .overview-visual-figure .overview-lang-visual-en {
+    display: block;
+}
+
+.overview-visual-figure img {
+    display: block;
+    width: 100%;
+    border-radius: calc(var(--radius) - 2px);
+    border: 1px solid rgba(255, 255, 255, .08);
+    box-shadow: 0 22px 40px rgba(0, 0, 0, .24);
+}
+
+.overview-visual-figure figcaption {
+    color: var(--text-dim);
+    font-size: .84rem;
+    line-height: 1.6;
+}
+
 .overview-action-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2678,6 +2756,11 @@ details p {
     .overview-track-grid,
     .overview-fact-grid {
         grid-template-columns: 1fr;
+    }
+
+    .overview-visual-card {
+        grid-template-columns: 1fr;
+        padding: 18px;
     }
 
     .overview-update-strip {
