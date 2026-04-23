@@ -12,7 +12,7 @@
             { href: '#s12', label: '12-14', titleKey: 'toc_home_4_t', descKey: 'toc_home_4_d' },
             { href: '#s15', label: '15-16', titleKey: 'toc_home_5_t', descKey: 'toc_home_5_d' },
             { href: '#s17', label: '17', titleKey: 'toc_home_6_t', descKey: 'toc_home_6_d' },
-            { href: '#s18', label: '18-21', titleKey: 'toc_home_7_t', descKey: 'toc_home_7_d' },
+            { href: '#s18', label: '18-20', titleKey: 'toc_home_7_t', descKey: 'toc_home_7_d' },
         ],
     };
     const homeNavGroups = [
@@ -78,9 +78,8 @@
             titleKey: 'toc_home_7_t',
             items: [
                 { href: '#s18', label: '18', titleKey: 's18_title' },
-                { href: '#s19', label: '19', titleKey: 's19_title' },
-                { href: '#s20', label: '20', titleKey: 's20_title' },
-                { href: '#s21', label: '21', titleKey: 's21_title' },
+                { href: '#s20', label: '19', titleKey: 's20_title' },
+                { href: '#s21', label: '20', titleKey: 's21_title' },
             ],
         },
     ];

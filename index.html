@@ -166,6 +166,25 @@
                     </figure>
                 </div>
 
+                <div class="overview-bridge-grid">
+                    <article class="overview-bridge-card">
+                        <p class="overview-action-kicker" data-i18n="overview_plain_kicker">Plain language</p>
+                        <h3 data-i18n="overview_plain_title">전문 용어를 일단 이렇게 생각하면 쉽습니다</h3>
+                        <ul class="overview-list">
+                            <li data-i18n="overview_plain_1">`Local`은 내 컴퓨터에서 일하는 것, `Cloud`는 원격 작업실에 맡기는 것이라고 보면 됩니다.</li>
+                            <li data-i18n="overview_plain_2">`Sandbox`는 작업 울타리, `Approval`은 울타리 밖으로 나가기 전에 한 번 더 묻는 버튼입니다.</li>
+                            <li data-i18n="overview_plain_3">`AGENTS.md`는 “이 프로젝트에서는 이렇게 일해 주세요”라고 적어두는 작업 설명서입니다.</li>
+                            <li data-i18n="overview_plain_4">`MCP`는 문서, 브라우저, 외부 도구를 Codex와 연결해 주는 케이블에 가깝습니다.</li>
+                        </ul>
+                    </article>
+
+                    <article class="overview-bridge-card overview-bridge-card-pro">
+                        <p class="overview-action-kicker" data-i18n="overview_analogy_kicker">Analogy</p>
+                        <h3 data-i18n="overview_analogy_title">Codex를 “옆자리 개발 보조”처럼 생각해도 됩니다</h3>
+                        <p data-i18n="overview_analogy_desc">코드를 대신 전부 알아서 만드는 마법 상자라고 보기보다, 파일을 읽고 수정하고 테스트까지 도와주는 꽤 유능한 보조 개발자라고 생각하면 이해가 쉽습니다. 그래서 처음에는 작은 일부터 맡기고, 안전 장치와 프로젝트 규칙을 같이 붙이는 흐름이 가장 자연스럽습니다.</p>
+                    </article>
+                </div>
+
                 <div class="overview-fact-panel">
                     <div class="overview-fact-head">
                         <div>
@@ -326,6 +345,10 @@
                                 <td>2026.03.05</td>
                                 <td data-i18n="tl11">GPT-5.4 공개 및 Codex 추천 기본 모델로 반영</td>
                             </tr>
+                            <tr>
+                                <td>2026.04.23</td>
+                                <td data-i18n="tl12">GPT-5.5 공개 및 Codex 최우선 추천 모델로 승격</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -460,8 +483,7 @@
                     <div class="model-card">
                         <div class="model-banner">gpt-5.3-codex</div>
                         <div class="model-body">
-                            <p class="model-desc" data-i18n="m2_f">복잡한 소프트웨어 엔지니어링을 위한 업계 최고 코딩 모델. 이 모델의 코딩 역량이 이제 GPT-5.4에도
-                                반영됩니다.</p>
+                            <p class="model-desc" data-i18n="m2_f">복잡한 소프트웨어 엔지니어링에 강한 업계 최고 수준의 코딩 모델입니다. 이 모델의 코딩 역량은 현재 GPT-5.4에도 반영되어 있습니다.</p>
                             <div class="model-cmd">codex -m gpt-5.3-codex</div>
                             <div class="model-features">
                                 <div class="model-feat-row"><span class="model-feat-label"
@@ -520,7 +542,7 @@
                     </div>
                 </div>
                 <div class="callout">
-                    <p data-i18n="s3_rec_note">💡 최신 `codex/models` 기준 공식 가이드는 모델 선택기에서 `gpt-5.5`가 보이면 대부분의 작업을 거기서 시작하라고 권장합니다. 아직 rollout되지 않았거나 API key 경로라면 `gpt-5.4`가 기본 fallback입니다. 더 빠르고 가벼운 코딩 작업이나 subagent에는 `gpt-5.4-mini`, Codex Cloud와 클라우드 리뷰에는 `gpt-5.3-codex`, 거의 즉각적인 반복에는 `gpt-5.3-codex-spark`를 검토하세요. 현재 대표 대안 모델은 `gpt-5.2`입니다.</p>
+                    <p data-i18n="s3_rec_note">💡 최신 `codex/models` 기준 공식 가이드는 모델 선택기에서 `gpt-5.5`가 보이면 대부분의 작업을 거기서 시작하라고 권장합니다. 아직 rollout되지 않았거나 API key 경로라면 `gpt-5.4`를 계속 사용하면 됩니다. 더 빠르고 가벼운 코딩 작업이나 subagent에는 `gpt-5.4-mini`, 복잡한 소프트웨어 엔지니어링과 현재 Codex Cloud에는 `gpt-5.3-codex`, 거의 즉각적인 반복에는 `gpt-5.3-codex-spark`를 검토하세요. 현재 대표 대안 모델은 `gpt-5.2`입니다.</p>
                 </div>
 
                 <h4 data-i18n="s3_alt_title">🔄 대안 모델</h4>
@@ -807,14 +829,32 @@ codex --cd /path/to/project
 
                 <h3 data-i18n="s7_playbook_title">이번 대규모 업데이트 기능 실전 가이드</h3>
                 <p class="callout-inline" data-i18n="s7_playbook_intro">아래 블록은 단순 소개가 아니라 “언제 쓰고, 어떻게 시작하고, 무엇을 주의해야 하는지”를 기능별로 압축한 실전 챕터입니다. 이번 릴리스에서 중요도가 큰 기능부터 읽으면 됩니다.</p>
+
+                <div class="overview-visual-card computer-use-spotlight" id="s7-computer-use">
+                    <div class="overview-visual-copy">
+                        <p class="overview-action-kicker" data-i18n="computer_use_kicker">Computer use</p>
+                        <h3 data-i18n="computer_use_title">Computer use를 하나의 기능 챕터로 이해하기</h3>
+                        <p data-i18n="computer_use_desc">공식 문서 기준으로 `gpt-5.4`는 첫 mainline built-in computer use 모델입니다. 즉, 화면을 보고 다음 행동을 정하고, 클릭이나 입력을 실행하고, 바뀐 화면을 다시 확인하는 루프를 모델 자체가 더 잘 돌 수 있게 됐다는 뜻입니다.</p>
+                        <ul class="overview-list">
+                            <li data-i18n="computer_use_p1">단순 채팅형 답변보다 “직접 UI를 보면서 작업”하는 자동화에 더 잘 맞습니다.</li>
+                            <li data-i18n="computer_use_p2">핵심 흐름은 `screenshot → action → screenshot → verify/fix` 입니다.</li>
+                            <li data-i18n="computer_use_p3">브라우저 테스트, 폼 입력, 단계가 많은 업무 플로우 검증에서 특히 설명이 쉬워집니다.</li>
+                            <li data-i18n="computer_use_p4">`Plugins`가 외부 서비스를 연결하는 도구 상자라면, `computer use`는 눈과 손으로 화면을 직접 다루는 기능에 가깝습니다.</li>
+                            <li data-i18n="computer_use_p5">`Skills`는 일을 하는 방법을 설명하는 설명서이고, `computer use`는 그 설명서를 따라 실제 버튼을 누르고 입력하는 실행 수단입니다.</li>
+                        </ul>
+                        <a href="https://developers.openai.com/api/docs/guides/tools-computer-use" target="_blank" class="btn btn-secondary" data-i18n="computer_use_cta">공식 Computer use 가이드 보기</a>
+                    </div>
+                    <figure class="overview-visual-figure">
+                        <img class="overview-lang-visual overview-lang-visual-ko" src="images/computer_use_ko.png" alt="Korean explainer for GPT-5.4 computer use" loading="lazy" />
+                        <img class="overview-lang-visual overview-lang-visual-en" src="images/computer_use_openai_en.png" alt="OpenAI computer use diagram" loading="lazy" />
+                        <figcaption data-i18n="computer_use_caption">영어는 OpenAI 공식 다이어그램, 한국어는 이해를 돕기 위한 설명 그림입니다.</figcaption>
+                    </figure>
+                </div>
+
                 <div class="tip-grid">
                     <div class="tip-card" id="s7-browser">
                         <h4 data-i18n="s7_pb_browser_t">In-app browser</h4>
                         <p data-i18n="s7_pb_browser_d">로컬 개발 서버나 공개 페이지를 렌더 상태 그대로 검토할 때 씁니다. 로그인 없는 URL만 열고, 브라우저 코멘트로 특정 요소를 찍은 뒤 “이 코멘트만 반영해 달라”고 좁게 요청하는 흐름이 가장 안정적입니다.</p>
-                    </div>
-                    <div class="tip-card" id="s7-computer-use">
-                        <h4 data-i18n="s7_pb_computer_t">Computer use</h4>
-                        <p data-i18n="s7_pb_computer_d">CLI나 plugin으로 다루기 어려운 GUI 작업에 씁니다. macOS에서 plugin 설치 후 Screen Recording과 Accessibility 권한을 주고, 한 번에 한 앱·한 플로우만 맡기는 식으로 범위를 좁혀야 안전합니다.</p>
                     </div>
                     <div class="tip-card" id="s7-image-generation">
                         <h4 data-i18n="s7_pb_image_t">Image generation</h4>
@@ -1750,79 +1790,9 @@ codex --search "optimize with Next.js 15"
                 <p class="command-refs" data-i18n-html="s18_refs">출처: <a href="https://developers.openai.com/codex/learn/best-practices/" target="_blank">Codex Best practices</a> · <a href="https://developers.openai.com/codex/concepts/customization/" target="_blank">Customization</a> · <a href="https://developers.openai.com/codex/skills" target="_blank">Skills</a> · <a href="https://developers.openai.com/codex/plugins/" target="_blank">Plugins</a> · <a href="https://developers.openai.com/codex/concepts/multi-agents/" target="_blank">Multi-agents</a></p>
             </section>
 
-            <!-- Section 18 -->
-            <section class="section" id="s19">
-                <h2><span class="section-num">19</span> <span data-i18n="s19_title">Codex vs Cursor vs Claude
-                        Code</span></h2>
-                <div class="table-wrap">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th data-i18n="th_feature">특성</th>
-                                <th>Codex</th>
-                                <th>Cursor</th>
-                                <th>Claude Code</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td data-i18n="cmp_interface">인터페이스</td>
-                                <td>CLI+App+IDE+Web</td>
-                                <td data-i18n="cmp_cursor_interface">IDE + Background Agents</td>
-                                <td data-i18n="cmp_terminal">CLI + IDE 연동 + GitHub Actions 자동화</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="cmp_oss">오픈소스</td>
-                                <td>✅ (CLI)</td>
-                                <td>❌</td>
-                                <td>❌</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="cmp_model">주요 모델</td>
-                                <td>GPT-5.4</td>
-                                <td data-i18n="cmp_cursor_model">선택한 제공 모델에 따라 다름</td>
-                                <td data-i18n="cmp_claude_model">Claude Opus/Sonnet/Haiku 계열 (플랜별)</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="cmp_cloud">클라우드 실행</td>
-                                <td>✅</td>
-                                <td data-i18n="cmp_plan_varies">✅ Background Agents 지원(플랜별)</td>
-                                <td data-i18n="cmp_plan_varies2">✅ 원격 자동화는 GitHub Actions 중심</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="cmp_gh">GitHub 통합</td>
-                                <td data-i18n="cmp_gh_auto">✅ Codex Cloud 기준 자동 PR 리뷰</td>
-                                <td data-i18n="cmp_basic">✅ 공식 GitHub 앱(세부는 플랜/문서 확인)</td>
-                                <td data-i18n="cmp_basic2">✅ GitHub Actions 연동(문서 기준)</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="cmp_multi">병렬 위임(agent/subagent)</td>
-                                <td>✅ (CLI + App)</td>
-                                <td data-i18n="cmp_plan_varies3">✅ 병렬 Background Agents</td>
-                                <td data-i18n="cmp_plan_varies4">✅ bounded parallel workflow 지원</td>
-                            </tr>
-                            <tr>
-                                <td>MCP</td>
-                                <td>✅</td>
-                                <td data-i18n="cmp_mcp_varies">공식 문서 기준 확인</td>
-                                <td data-i18n="cmp_mcp_varies2">✅ 공식 문서 기준 지원</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="cmp_price">가격</td>
-                                <td data-i18n="cmp_included">ChatGPT 플랜/크레딧 기준 (공식 가격표 확인)</td>
-                                <td data-i18n="cmp_cursor_price">Cursor 공식 가격표 기준 (수시 변경)</td>
-                                <td data-i18n="cmp_api">API 토큰 사용량 기준 과금(Anthropic Console 기준)</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <p class="command-note" data-i18n="cmp_compare_note">비교표는 자주 바뀌는 영역입니다. 실제 구매/도입 전에는 각 공식 문서와 가격 페이지를 반드시 재확인하세요.</p>
-                <p class="command-refs" data-i18n-html="cmp_compare_sources">출처: OpenAI Codex docs · Cursor docs/pricing · Anthropic Claude Code docs</p>
-            </section>
-
-            <!-- Section 19 -->
+            <!-- Section 19 removed -->
             <section class="section" id="s20">
-                <h2><span class="section-num">20</span> <span data-i18n="s20_title">FAQ</span></h2>
+                <h2><span class="section-num">19</span> <span data-i18n="s20_title">FAQ</span></h2>
                 <div class="faq-list">
                     <details>
                         <summary data-i18n="faq1_q">Codex CLI / App / IDE / Web의 차이는?</summary>
@@ -1850,7 +1820,7 @@ codex --search "optimize with Next.js 15"
 
             <!-- Section 20 -->
             <section class="section" id="s21">
-                <h2><span class="section-num">21</span> <span data-i18n="s21_title">참고 자료</span></h2>
+                <h2><span class="section-num">20</span> <span data-i18n="s21_title">참고 자료</span></h2>
                 <div class="link-grid">
                     <a href="https://openai.com/codex" target="_blank" class="link-card">OpenAI Codex</a>
                     <a href="https://github.com/openai/codex" target="_blank" class="link-card">GitHub Repo</a>

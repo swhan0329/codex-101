@@ -683,6 +683,14 @@ img {
     margin: 20px 0 24px;
 }
 
+.computer-use-spotlight {
+    margin: 18px 0 28px;
+    background:
+        radial-gradient(circle at top left, rgba(59, 130, 246, .08), transparent 36%),
+        linear-gradient(135deg, rgba(56, 189, 248, .08), transparent 42%),
+        var(--bg-card);
+}
+
 .overview-visual-copy {
     display: grid;
     gap: 12px;
