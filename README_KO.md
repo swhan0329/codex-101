@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 4월 19일</strong><br/>
+  <strong>최종 업데이트: 2026년 4월 22일</strong><br/>
   라이브 사이트는 보는 사람의 당일 날짜를 자동으로 표시하며, 최신 Codex 모델 가이드를 공식 문서 기준으로 반영합니다.
 </p>
 
@@ -32,16 +32,17 @@
 - **처음 사용하는 사용자**: **04-06**(설치/로그인/첫 실행) → **10**(approval/sandbox 기초) → **14**(OpenAI Docs MCP) 순서로 읽는 것을 권장합니다.
 - **실무 사용자**: **12-14**(AGENTS.md/config.toml/MCP) → **15-17**(세션 운영/자동화/프롬프트 실행 계약) 순서로 읽으면 팀 운영 기준을 빠르게 잡을 수 있습니다.
 
-### 일일 MCP 검증 스냅샷 (2026-04-19)
+### 일일 MCP 검증 스냅샷 (2026-04-22)
 
 - `codex/models`를 다시 대조한 결과, 추천 모델은 오늘도 `gpt-5.4`, `gpt-5.4-mini`, `gpt-5.3-codex`, `gpt-5.3-codex-spark`의 4개 축입니다. 다만 현재 Codex 모델 페이지의 대안 모델은 사실상 `gpt-5.2` 하나로 좁아졌고, `gpt-5.3-codex`는 그 코딩 역량이 GPT-5.4에도 쓰인다는 설명이 공식 문구로 붙어 있습니다.
-- `Introducing GPT-5.4`와 `Introducing GPT-5.4 mini and nano`를 함께 보면 모델 해석이 더 분명해집니다. Codex 표면에서 기본 선택지는 여전히 `gpt-5.4`와 `gpt-5.4-mini`이고, `nano`는 현재 Codex 모델 페이지의 추천/대안 목록에 없으므로 API 쪽 경량 보조 모델로 이해하는 편이 맞습니다.
-- 가격/접근 범위는 여전히 Quickstart와 Pricing을 같이 봐야 정확합니다. Quickstart는 모든 ChatGPT 플랜에 Codex가 포함된다고 설명하고, Pricing은 현재 Pro `$100`가 2026년 5월 31일까지 10x, Pro `$200`이 상시 20x에 같은 날짜까지 25x 5시간 한도 부스트를 반영합니다. 팀 관점에서는 Business·Enterprise의 Codex-only pay-as-you-go 좌석, 최대 $500 크레딧 프로모션, 토큰 기반 과금 전환을 함께 읽어야 최신 상태와 맞습니다.
-- 설치 흐름은 예전보다 더 분명해졌습니다. Quickstart는 앱을 가장 쉬운 시작 경로로 두고, IDE는 VS Code, Cursor, Windsurf, JetBrains를 함께 다루며, API 키 로그인도 가능하지만 cloud threads 같은 기능은 제한될 수 있다고 안내합니다.
+- `Introducing GPT-5.4`와 `Introducing GPT-5.4 mini and nano`를 함께 보면 모델 해석이 더 분명해집니다. Codex 표면에서 기본 선택지는 여전히 `gpt-5.4`와 `gpt-5.4-mini`이고, `gpt-5.4`는 native computer use·tool search·최대 100만 토큰 문맥을 결합한 기본 선택지이며, `gpt-5.4-mini`는 Codex에서 `gpt-5.4` quota의 30%만 사용한다고 설명됩니다. `nano`는 현재 Codex 모델 페이지의 추천/대안 목록에 없으므로 API 쪽 경량 보조 모델로 이해하는 편이 맞습니다.
+- 가격/접근 범위는 여전히 Quickstart와 Pricing을 같이 봐야 정확합니다. Quickstart는 모든 ChatGPT 플랜에 Codex가 포함된다고 설명하고 데스크톱에서는 App 경로를 우선 보여주며, Pricing은 이제 `Free $0`, `Go $8`, `Plus $20`, `Pro from $100`까지 더 직접적으로 드러냅니다. 현재 Pro `$100`는 2026년 5월 31일까지 10x, Pro `$200`은 상시 20x에 같은 날짜까지 25x 5시간 한도 부스트를 반영합니다. 팀 관점에서는 Business·Enterprise의 Codex-only pay-as-you-go 좌석, 최대 $500 크레딧 프로모션, 토큰 기반 과금 전환을 함께 읽어야 최신 상태와 맞고, 로컬 한도를 더 오래 쓰고 싶을 때는 Plus 기준 GPT-5.4보다 최대 3.3배까지 더 넓은 로컬 사용량을 보여주는 `gpt-5.4-mini`가 가장 분명한 선택지로 제시됩니다.
+- 설치 흐름은 예전보다 더 분명해졌습니다. Quickstart는 앱을 가장 쉬운 시작 경로로 두고, IDE는 VS Code, Cursor, Windsurf, JetBrains를 함께 다루며, API 키 로그인도 가능하지만 cloud threads와 일부 credits 기반 기능은 제한될 수 있다고 안내합니다.
 - Windows 문서는 이제 일반 Windows 가이드와 전용 Windows App 문서가 역할을 나눕니다. 기본 권장은 네이티브 앱이고, Microsoft Store나 `winget`로 설치할 수 있으며, `elevated` 샌드박스를 우선 쓰고 `unelevated`는 대안으로 봅니다. 전용 데스크톱 격리가 기본이고, 워크플로가 Linux 중심이거나 IDE 에이전트 작업이 필요할 때 WSL이 적절한 선택지로 정리됩니다.
-- 현재 app, app/features, app/automations 문서를 보면 Codex App은 단순한 데스크톱 셸이 아니라 worktrees, Automations, thread/standalone automation 분기, Git 도구, 내장 terminal, voice dictation, pop-out window, IDE sync, image input, chats, artifact preview, 로컬 작업 기본 cached web search, notifications, 절전 방지까지 묶은 작업 허브로 설명됩니다. 또한 project-scoped automation은 앱이 실행 중이어야 하고 프로젝트가 디스크에 있어야 하며, unattended automation은 정책이 허용하면 `approval_policy = "never"`를 쓰려 한다는 점도 지금 문서에 더 명확히 적혀 있습니다.
-- Plugins도 문서상 훨씬 명확해졌습니다. 공식 `Plugins` 페이지는 app의 plugin directory와 CLI의 `/plugins` 흐름을 분리해 설명하고, plugin을 skills·app integrations·MCP servers를 함께 묶는 배포 단위로 정의합니다.
-- `config.toml` 최신화 포인트도 더 넓어졌습니다. 현재 reference는 `review_model`, top-level `web_search`, `tools.web_search`, `personality`, `service_tier`, `default_permissions`, `tools.view_image`, `windows.sandbox`, `windows.sandbox_private_desktop`, `model_instructions_file`, granular approval policy, app 권한 제어, feature flag, permissions profile까지 함께 다룹니다.
+- 현재 app, app/features, app/automations 문서를 보면 Codex App은 단순한 데스크톱 셸이 아니라 worktrees, Automations, thread/standalone automation 분기, Git 도구, 내장 terminal, voice dictation, pop-out window, IDE sync, image input, chats, artifact preview, 로컬 작업 기본 cached web search, notifications, 절전 방지까지 묶은 작업 허브로 설명됩니다. 출시 글의 “command center for agents” 관점도 이제 기능 문서와 거의 같은 방향으로 맞물립니다. 여기에 가격 문서를 함께 보면 내장 이미지 생성은 일반 Codex 한도를 공유하면서 평균적으로 3-5배 더 빠르게 소모하고, Fast mode는 적용되는 모델에서 크레딧을 2배 더 소모한다는 점도 같이 이해해야 합니다.
+- Plugins와 Skills의 역할도 더 선명해졌습니다. 공식 `Plugins` 페이지는 plugin을 skills·app integrations·MCP servers를 함께 묶는 배포 단위로 정의하고, `Skills` 페이지는 progressive disclosure 방식으로 필요할 때만 `SKILL.md`를 여는 구조를 더 명확히 설명합니다.
+- Docs MCP는 여전히 가장 효과가 큰 기본 연결입니다. 현재 `developers.openai.com/learn/docs-mcp` 가이드는 `https://developers.openai.com/mcp` 서버 URL, CLI와 IDE의 설정 공유, 그리고 OpenAI 관련 질문에서 문서 MCP를 자동으로 우선 사용하게 만드는 `AGENTS.md` 유도 문구까지 함께 안내합니다.
+- `config.toml` 최신화 포인트도 더 넓어졌습니다. 현재 reference는 `review_model`, top-level `web_search`, `tools.web_search`, `personality`, `service_tier`, `default_permissions`, `tools.view_image`, `windows.sandbox`, `windows.sandbox_private_desktop`, `model_instructions_file`, `memories.disable_on_external_context`, granular approval policy, app 권한 제어, feature flag, permissions profile까지 함께 다룹니다.
 - `developers.openai.com/codex`와 `openai.com/index`의 관련 하위 페이지도 폭넓게 다시 훑어봤지만, 오늘 기준으로는 완전히 새로운 상위 챕터를 추가하기보다 App 중심 온보딩, Docs MCP, 모델 선택 가이드를 상단에 유지하고 Codex for OSS, AI-native engineering team, 출시 발표 글을 보조 근거로 두는 편이 가장 정확했습니다. 특히 Codex for OSS 페이지는 현재 eligible maintainer에게 6개월 ChatGPT Pro with Codex와 조건부 Codex Security 접근을 강조하므로 보조 레퍼런스로 둘 가치가 더 커졌습니다.
 
 ### 사용자별 즉시 적용 요약
