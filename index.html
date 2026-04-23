@@ -47,7 +47,7 @@
                     <p class="hero-badge">
                         <span data-i18n="hero_badge_prefix">공식 문서 기준 재검수</span>
                         <span aria-hidden="true"> · </span>
-                        <span class="live-date" data-date-format="long">2026년 4월 22일</span>
+                        <span class="live-date" data-date-format="long">2026년 4월 23일</span>
                     </p>
                     <h1 class="hero-title" data-i18n="hero_title">OpenAI Codex를<br />한국 실무에 바로 붙이는 가이드</h1>
                     <p class="hero-sub" data-i18n="hero_sub">CLI · Desktop App (macOS/Windows) · IDE Extension · Web · iOS · SDK automation<br />최신 공식 문서를 기준으로 제품 면 선택, 모델 선택, 샌드박스/승인, MCP, 자동화를 처음 사용자와 실무 사용자 모두 읽기 쉽도록 다시 정리했습니다.</p>
@@ -80,7 +80,7 @@
                             </a>
                             <a href="#s17" class="hero-jump">
                                 <span class="hero-jump-num">17</span>
-                                <span class="hero-jump-text" data-i18n="toc_home_6_t">Prompting GPT-5.4</span>
+                                <span class="hero-jump-text" data-i18n="toc_home_6_t">Prompting Codex Agents</span>
                             </a>
                             <a href="#s18" class="hero-jump">
                                 <span class="hero-jump-num">18-21</span>
@@ -160,7 +160,7 @@
                         </div>
                         <p class="overview-fact-date">
                             <span data-i18n="overview_fact_date_prefix">업데이트 기준일</span>
-                            <span class="live-date" data-date-format="long">2026년 4월 22일</span>
+                            <span class="live-date" data-date-format="long">2026년 4월 23일</span>
                         </p>
                     </div>
 
@@ -171,24 +171,24 @@
                         </summary>
                         <div class="overview-update-strip" aria-label="Today update summary">
                             <article class="update-pill">
-                                <p class="update-pill-title" data-i18n="overview_update_1_title">기본 모델 다시 확인</p>
-                                <p class="update-pill-desc" data-i18n="overview_update_1_desc">`codex/models`를 우선 확인해 추천 모델과 대안 모델이 바뀌었는지 다시 대조했고, 오늘도 시작 기본값이 `gpt-5.4`인지 확인했습니다.</p>
+                                <p class="update-pill-title" data-i18n="overview_update_1_title">모델/표면 매트릭스 재확인</p>
+                                <p class="update-pill-desc" data-i18n="overview_update_1_desc">`codex/models`를 우선 확인해 오늘은 `gpt-5.5`가 최우선 추천 모델로 올라왔는지, `gpt-5.4`가 fallback이 되었는지, `gpt-5.4-mini`와 `gpt-5.3-codex`의 역할이 어떻게 갈리는지까지 다시 대조했습니다.</p>
                             </article>
                             <article class="update-pill">
                                 <p class="update-pill-title" data-i18n="overview_update_2_title">요금제/크레딧 구조 재정리</p>
-                                <p class="update-pill-desc" data-i18n="overview_update_2_desc">개인 플랜 한도뿐 아니라 `Free $0`·`Go $8`·`Plus $20`·`Pro from $100`, Business·Enterprise의 pay-as-you-go 팀 경로, 토큰 기반 크레딧 구조, `gpt-5.4-mini`의 경량 소비 포인트까지 반영했습니다.</p>
+                                <p class="update-pill-desc" data-i18n="overview_update_2_desc">개인 플랜 한도뿐 아니라 `GPT-5.5` 사용량 표, `Free $0`·`Go $8`·`Plus $20`·`Pro from $100`, Business·Enterprise의 pay-as-you-go 팀 경로, 토큰 기반 크레딧 구조를 다시 반영했습니다.</p>
                             </article>
                             <article class="update-pill">
                                 <p class="update-pill-title" data-i18n="overview_update_3_title">Quickstart·IDE 경로 정리</p>
                                 <p class="update-pill-desc" data-i18n="overview_update_3_desc">처음 사용자는 App 중심, 전문 사용자는 IDE/CLI + Docs MCP 중심으로 읽히도록 시작 경로를 유지하되, API 키 로그인 제한과 Windows/WSL 설명을 더 분명하게 다듬었습니다.</p>
                             </article>
                             <article class="update-pill">
-                                <p class="update-pill-title" data-i18n="overview_update_4_title">App·Automations·Windows 경로 보강</p>
-                                <p class="update-pill-desc" data-i18n="overview_update_4_desc">app/features·app/automations·app/windows·plugins 문서를 다시 확인해 thread automation과 standalone automation의 차이, 앱 실행 조건, 프로젝트 자동화의 실행 전제, WSL 전환, PowerShell sandbox, plugin directory 흐름을 상단부터 다시 정리했습니다.</p>
+                                <p class="update-pill-title" data-i18n="overview_update_4_title">4월 App 업데이트 반영</p>
+                                <p class="update-pill-desc" data-i18n="overview_update_4_desc">2026년 4월 16일 `Codex for (almost) everything` 발표와 `app/features`·`app/automations`를 함께 대조해 background computer use, 더 많은 plugins, multiple terminal tabs, SSH devbox, richer artifact/sidebar 흐름을 현재 문서 구조에 맞게 다시 묶었습니다.</p>
                             </article>
                             <article class="update-pill">
-                                <p class="update-pill-title" data-i18n="overview_update_5_title">관련 문서/발표 전체 재점검</p>
-                                <p class="update-pill-desc" data-i18n="overview_update_5_desc">`developers.openai.com/codex`와 `openai.com/index`의 관련 하위 페이지를 다시 훑어보며 새 제품·모델·앱·가이드 발표가 지금 구조를 뒤집을 정도인지 확인했고, 오늘은 App + Docs MCP + 모델 선택 축을 유지하되 GPT-5.4/GPT-5.4 mini, Codex App, Codex for OSS, AI-native engineering team의 최신 포인트를 링크와 설명에 반영하는 편이 가장 정확하다고 판단했습니다.</p>
+                                <p class="update-pill-title" data-i18n="overview_update_5_title">관련 발표 전체 재점검</p>
+                                <p class="update-pill-desc" data-i18n="overview_update_5_desc">`developers.openai.com/codex`, `openai.com/index`, `openai.com/codex`를 함께 다시 훑어보며 2026년 4월 23일 `Introducing GPT-5.5`, 4월 16일 App 확장 발표, 4월 2일 팀용 pay-as-you-go 좌석 업데이트가 지금 구조를 바꿀 수준인지 확인했고, 이번에는 상단 업데이트 토글과 모델/가격 설명에 직접 반영하는 편이 가장 정확하다고 판단했습니다.</p>
                             </article>
                             <article class="update-pill">
                                 <p class="update-pill-title" data-i18n="overview_update_6_title">Docs MCP·설정 기준 재점검</p>
@@ -199,24 +199,24 @@
 
                     <div class="overview-fact-grid">
                         <article class="fact-card">
-                            <h4 data-i18n="overview_fact_1_title">모델 추천 재정렬</h4>
-                            <p data-i18n="overview_fact_1_desc">`codex/models`를 오늘 다시 확인한 결과, 추천 모델은 여전히 `gpt-5.4`, `gpt-5.4-mini`, `gpt-5.3-codex`, `gpt-5.3-codex-spark` 네 갈래입니다. 다만 현재 Codex 모델 페이지의 대안 모델은 사실상 `gpt-5.2`만 남아 있고, `gpt-5.3-codex`는 “그 코딩 역량이 GPT-5.4에도 쓰인다”는 설명이 공식 문구로 붙어 있습니다.</p>
+                            <h4 data-i18n="overview_fact_1_title">모델 추천과 실행 면 정렬</h4>
+                            <p data-i18n="overview_fact_1_desc">`codex/models`를 오늘 다시 확인한 결과, 최우선 추천 모델은 이제 `gpt-5.5`입니다. `gpt-5.5`는 ChatGPT 로그인 경로에서 strongest default로 올라왔고, rollout 중에는 `gpt-5.4`를 fallback으로 계속 사용합니다. `gpt-5.4-mini`는 빠르고 저렴한 로컬/subagent 선택지이고, Codex Cloud는 여전히 `gpt-5.3-codex` 축에 남아 있으며, 대안 모델은 `gpt-5.2`입니다.</p>
                         </article>
                         <article class="fact-card">
-                            <h4 data-i18n="overview_fact_2_title">GPT-5.4 계열 해석 보강</h4>
-                            <p data-i18n="overview_fact_2_desc">`Introducing GPT-5.4`와 `GPT-5.4 mini and nano` 발표를 함께 보면, Codex에서 중요한 포인트는 세 가지입니다. `gpt-5.4`는 컴퓨터 사용·tool search·최대 100만 토큰 문맥을 갖춘 기본 선택지이고, `gpt-5.4-mini`는 Codex 전 표면에서 쓰이며 더 가벼운 작업과 subagent에 적합하고 Codex에서 `gpt-5.4` quota의 30%만 사용하도록 설명되며, `gpt-5.4-nano`는 현재 Codex 모델 페이지에 직접 올라와 있지 않고 발표문도 API 전용으로 설명하므로 API 쪽 경량 모델로 따로 이해하는 편이 정확합니다.</p>
+                            <h4 data-i18n="overview_fact_2_title">GPT-5.5 승격과 fallback 구조</h4>
+                            <p data-i18n="overview_fact_2_desc">오늘 공개된 `Introducing GPT-5.5`와 최신 `codex/models` 기준으로 보면, Codex의 기본 읽는 법이 바뀌었습니다. `gpt-5.5`가 복잡한 코딩·computer use·knowledge work·research workflow의 최우선 추천 모델이고, ChatGPT 로그인 경로에서만 우선 제공됩니다. `gpt-5.4`는 여전히 강력한 fallback이며 API 접근이 가능한 기본 선택지이고, `gpt-5.4-mini`는 빠른 작업과 subagent용 효율 모델로 남아 있습니다.</p>
                         </article>
                         <article class="fact-card">
                             <h4 data-i18n="overview_fact_3_title">플랜/팀 요금제 보강</h4>
-                            <p data-i18n="overview_fact_3_desc">Quickstart는 모든 ChatGPT 플랜에 Codex가 포함된다고 설명합니다. Pricing 기준으로 `Free $0`, `Go $8`, `Plus $20`, `Pro from $100`이 더 직접적으로 표시되고, Plus는 최신 모델과 클라우드 리뷰를 포함합니다. Pro는 현재 `$100` tier가 2026년 5월 31일까지 10x, `$200` tier가 상시 20x에 같은 날짜까지 25x 5시간 한도 부스트를 반영합니다. 팀 쪽은 Business·Enterprise의 Codex-only pay-as-you-go seat, 최대 `$500` 크레딧 프로모션, 그리고 현재 토큰 기반 크레딧 전환이 새/기존 Business와 신규 Enterprise부터 적용된다는 점까지 함께 읽어야 상태를 정확히 이해할 수 있습니다. 가격 문서는 또 `gpt-5.4-mini`가 Plus 기준 GPT-5.4보다 최대 3.3배까지 더 넓은 로컬 한도를 보여주는 선택지라는 점도 분명히 보여줍니다.</p>
+                            <p data-i18n="overview_fact_3_desc">Quickstart는 모든 ChatGPT 플랜에 Codex가 포함된다고 설명합니다. Pricing은 이제 `GPT-5.5` 사용량/크레딧 표까지 포함하며, Plus 기준 로컬 메시지 범위는 `gpt-5.5` 15-80, `gpt-5.4` 20-100, `gpt-5.4-mini` 60-350, `gpt-5.3-codex` 30-150으로 제시됩니다. 문서는 `gpt-5.5`가 더 적은 토큰으로 더 나은 결과를 내 usage를 효율적으로 쓴다고 설명하고, 동시에 API key 경로에서는 아직 `gpt-5.5`를 쓸 수 없다는 점도 분명히 합니다.</p>
                         </article>
                         <article class="fact-card">
                             <h4 data-i18n="overview_fact_4_title">IDE·Windows 경로 재정리</h4>
-                            <p data-i18n="overview_fact_4_desc">IDE 문서는 macOS·Linux 기본 지원, Windows 실험 지원, 그리고 Windows에서는 WSL 워크스페이스를 가장 안정적인 경로로 보라고 안내합니다. Windows 문서는 Microsoft Store/`winget` 설치, `elevated`/`unelevated` 샌드박스, private desktop 기본값, 앱에서 agent를 WSL로 전환하려면 재시작이 필요하다는 점까지 더 분명하게 설명합니다.</p>
+                            <p data-i18n="overview_fact_4_desc">IDE 문서는 이제 VS Code 계열과 JetBrains 모두를 정식 경로로 다루고, macOS·Windows·Linux 사용을 함께 설명합니다. 다만 Windows에서는 여전히 WSL2 워크스페이스가 가장 안정적인 agent 경로이고, Windows 가이드는 Microsoft Store/`winget` 설치, `elevated` 우선·`unelevated` 대안, private desktop 기본값, 그리고 네이티브 성능이 중요하면 Windows sandbox, Linux 툴체인이 중요하면 WSL2를 고르라고 더 분명하게 정리합니다.</p>
                         </article>
                         <article class="fact-card">
                             <h4 data-i18n="overview_fact_5_title">App 운영 흐름 반영</h4>
-                            <p data-i18n="overview_fact_5_desc">`Introducing the Codex app` 발표와 현재 `app/features`·`app/automations` 문서를 다시 대조해 worktrees, built-in Git, integrated terminal, skills, Automations, thread automations, standalone automations, chats, in-app browser, artifact preview, image generation, cached web search, `/personality`, plugin directory 흐름을 더 앞쪽에서 이해할 수 있게 재배치했습니다. App 소개 글의 “command center for agents” 관점과 문서상의 운영 기능 설명이 이제 거의 같은 방향으로 정렬됩니다.</p>
+                            <p data-i18n="overview_fact_5_desc">`Introducing the Codex app`와 2026년 4월 16일 `Codex for (almost) everything` 발표, 현재 `app/features`·`app/automations`를 다시 대조해 worktrees, built-in Git, integrated terminal, skills, Automations, thread automations, chats, in-app browser, artifact preview, image generation뿐 아니라 background computer use, 더 넓어진 plugin 생태계, multiple terminal tabs, SSH devbox, summary pane 흐름까지 앞쪽에서 이해할 수 있게 재배치했습니다.</p>
                         </article>
                         <article class="fact-card">
                             <h4 data-i18n="overview_fact_6_title">config/plugins/security 흐름 갱신</h4>
@@ -236,7 +236,7 @@
                         <a href="https://developers.openai.com/codex/ide/" target="_blank" class="source-chip" data-i18n="overview_source_6">IDE extension</a>
                         <a href="https://developers.openai.com/codex/windows/" target="_blank" class="source-chip" data-i18n="overview_source_7">Windows guide</a>
                         <a href="https://developers.openai.com/learn/docs-mcp" target="_blank" class="source-chip" data-i18n="overview_source_20">Docs MCP</a>
-                        <a href="https://openai.com/index/introducing-gpt-5-4/" target="_blank" class="source-chip" data-i18n="overview_source_9">GPT-5.4 announcement</a>
+                        <a href="https://openai.com/index/introducing-gpt-5-5/" target="_blank" class="source-chip" data-i18n="overview_source_9">GPT-5.5 announcement</a>
                         <a href="https://openai.com/index/introducing-gpt-5-4-mini-and-nano/" target="_blank" class="source-chip" data-i18n="overview_source_14">GPT-5.4 mini and nano announcement</a>
                         <a href="https://openai.com/index/introducing-gpt-5-3-codex-spark/" target="_blank" class="source-chip" data-i18n="overview_source_10">GPT-5.3-Codex-Spark announcement</a>
                         <a href="https://openai.com/index/introducing-the-codex-app/" target="_blank" class="source-chip" data-i18n="overview_source_13">Codex App announcement</a>
@@ -280,7 +280,7 @@
             <!-- Section 1 -->
             <section class="section" id="s1">
                 <h2><span class="section-num">01</span> <span data-i18n="s1_title">Codex 에코시스템 개요</span></h2>
-                <p data-i18n="s1_intro">OpenAI Codex는 소프트웨어 개발을 위한 코딩 에이전트입니다. 공식 문서는 Codex를 앱, IDE, CLI, 웹/iOS, SDK 기반 자동화에서 사용할 수 있다고 설명하며, 대부분의 작업은 `gpt-5.4`부터 시작하고 빠른 로컬 작업이나 보조 에이전트에는 `gpt-5.4-mini`, Codex Cloud와 복잡한 엔지니어링 작업에는 `gpt-5.3-codex`, 거의 즉각적인 반복 작업에는 `gpt-5.3-codex-spark`를 보라고 안내합니다. 여기에 GPT-5.4 출시 글을 함께 보면 `gpt-5.4`는 GPT-5.3-Codex급 코딩 역량에 native computer use, tool search, 최대 100만 토큰 문맥을 결합한 기본 선택지이고, `gpt-5.4-mini`는 더 빠른 하위 작업과 subagent에 맞는 실전 경량 선택지입니다. 현재 `codex/models` 기준 대안 모델은 `gpt-5.2`가 대표적이며, 최근 공식 가이드는 여기서 더 나아가 Codex를 팀 단위 운영, skills, automations, plugins까지 확장하는 흐름도 함께 제시합니다.</p>
+                <p data-i18n="s1_intro">OpenAI Codex는 소프트웨어 개발을 위한 코딩 에이전트입니다. 최신 공식 문서는 Codex를 앱, IDE, CLI, 웹/iOS, SDK 기반 자동화에서 사용할 수 있다고 설명하며, 지금은 모델 선택기에서 `gpt-5.5`가 보이면 대부분의 작업을 거기서 시작하라고 권장합니다. `gpt-5.5`는 복잡한 코딩·computer use·knowledge work·research workflow용 최신 프론티어 모델이지만 현재 ChatGPT 로그인 경로에서 우선 제공되고 API key 경로에서는 아직 사용할 수 없습니다. 따라서 `gpt-5.4`는 여전히 가장 중요한 fallback이고, 빠른 로컬 작업이나 보조 에이전트에는 `gpt-5.4-mini`, Codex Cloud와 클라우드 리뷰에는 `gpt-5.3-codex`, 거의 즉각적인 반복에는 `gpt-5.3-codex-spark`, 대안 모델로는 `gpt-5.2`를 보면 됩니다.</p>
                 <blockquote data-i18n="s1_philosophy">"단순 코드 생성 → 소프트웨어 엔지니어 팀원"</blockquote>
                 <p data-i18n="s1_desc">Codex는 코드 자동완성 도구가 아닙니다. 여러 파일을 동시에 수정하고, 테스트를 실행하고, 결과를 검증하며, 스스로 디버깅하는 자율
                     에이전트입니다.</p>
@@ -379,12 +379,41 @@
 
                 <h4 data-i18n="s3_rec_title">⭐ 추천 모델</h4>
                 <div class="model-grid">
+                    <!-- GPT-5.5 -->
+                    <div class="model-card">
+                        <div class="model-banner">gpt-5.5</div>
+                        <div class="model-body">
+                            <p class="model-desc" data-i18n="m0_f">복잡한 코딩, computer use, 지식 작업, 리서치 워크플로를 위한 최신 프론티어 모델. ChatGPT로 로그인한 Codex에서 최우선 추천 모델입니다.</p>
+                            <div class="model-cmd">codex -m gpt-5.5</div>
+                            <div class="model-features">
+                                <div class="model-feat-row"><span class="model-feat-label"
+                                        data-i18n="feat_cap">Capability</span><span class="model-feat-value"><span
+                                            class="dot-filled">✦</span><span class="dot-filled">✦</span><span
+                                            class="dot-filled">✦</span><span class="dot-filled">✦</span><span
+                                            class="dot-filled">✦</span></span></div>
+                                <div class="model-feat-row"><span class="model-feat-label"
+                                        data-i18n="feat_spd">Speed</span><span class="model-feat-value"><span
+                                            class="dot-filled">⚡</span><span class="dot-filled">⚡</span><span
+                                            class="dot-filled">⚡</span></span></div>
+                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cli">Codex
+                                        CLI & SDK</span><span class="check-yes">✅</span></div>
+                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_app">Codex
+                                        app & IDE extension</span><span class="check-yes">✅</span></div>
+                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cloud">Codex
+                                        Cloud</span><span class="check-no">❌</span></div>
+                                <div class="model-feat-row"><span class="model-feat-label"
+                                        data-i18n="feat_credits">ChatGPT Credits</span><span class="check-yes">✅</span>
+                                </div>
+                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_api">API
+                                        Access</span><span class="check-no">❌</span></div>
+                            </div>
+                        </div>
+                    </div>
                     <!-- GPT-5.4 -->
                     <div class="model-card">
                         <div class="model-banner">gpt-5.4</div>
                         <div class="model-body">
-                            <p class="model-desc" data-i18n="m1_f">전문 작업용 플래그십 프론티어 모델. GPT-5.3-Codex의 업계 최고 코딩 역량에 더 강한 추론, 도구
-                                사용, 에이전틱 워크플로를 결합합니다.</p>
+                            <p class="model-desc" data-i18n="m1_f">GPT-5.5가 아직 보이지 않거나 API key 경로를 써야 할 때의 기본 fallback 플래그십입니다. 강한 코딩·추론·tool use 균형이 계속 장점입니다.</p>
                             <div class="model-cmd">codex -m gpt-5.4</div>
                             <div class="model-features">
                                 <div class="model-feat-row"><span class="model-feat-label"
@@ -503,7 +532,7 @@
                     </div>
                 </div>
                 <div class="callout">
-                    <p data-i18n="s3_rec_note">💡 `codex/models` 기준 공식 가이드는 여전히 대부분의 작업을 `gpt-5.4`부터 시작하라고 권장합니다. 더 빠르고 가벼운 코딩 작업이나 subagent에는 `gpt-5.4-mini`, Codex Cloud와 복잡한 엔지니어링에는 `gpt-5.3-codex`, 거의 즉각적인 반복에는 `gpt-5.3-codex-spark`를 검토하세요. 별도 발표 기준으로 `gpt-5.4-mini`는 Codex 전 표면에서 쓰이고 `gpt-5.4` quota의 30%만 사용하도록 설명되지만, `GPT-5.4 nano`는 현재 Codex 모델 페이지의 추천/대안 표면에는 없고 발표문도 API 전용으로 설명합니다. 대안 모델은 현재 `gpt-5.2`가 대표적으로 남아 있습니다.</p>
+                    <p data-i18n="s3_rec_note">💡 최신 `codex/models` 기준 공식 가이드는 모델 선택기에서 `gpt-5.5`가 보이면 대부분의 작업을 거기서 시작하라고 권장합니다. 아직 rollout되지 않았거나 API key 경로라면 `gpt-5.4`가 기본 fallback입니다. 더 빠르고 가벼운 코딩 작업이나 subagent에는 `gpt-5.4-mini`, Codex Cloud와 클라우드 리뷰에는 `gpt-5.3-codex`, 거의 즉각적인 반복에는 `gpt-5.3-codex-spark`를 검토하세요. 현재 대표 대안 모델은 `gpt-5.2`입니다.</p>
                 </div>
 
                 <h4 data-i18n="s3_alt_title">🔄 대안 모델</h4>
@@ -512,7 +541,7 @@
                     <div class="model-card collapsible">
                         <div class="model-banner">gpt-5.2</div>
                         <div class="model-body">
-                            <p class="model-desc" data-i18n="m4_f">코딩과 에이전틱 작업 전반을 위한 이전 범용 모델. 현재는 GPT-5.4로 대체되었습니다.</p>
+                            <p class="model-desc" data-i18n="m4_f">코딩과 에이전틱 작업 전반을 위한 이전 범용 모델. 현재는 `gpt-5.5`/`gpt-5.4` 조합 아래의 대안 모델로 보는 편이 맞습니다.</p>
                             <div class="model-cmd">codex -m gpt-5.2</div>
                             <div class="model-features">
                                 <div class="model-feat-row"><span class="model-feat-label"
@@ -548,12 +577,12 @@
                 <div class="callout">
                     <p data-i18n="s3_cfg_default">config.toml에서 기본 모델을 설정할 수 있습니다. 지정하지 않으면 추천 모델이 기본값입니다.</p>
                 </div>
-                <pre><code>model = "gpt-5.4"</code></pre>
+                <pre><code>model = "gpt-5.5"</code></pre>
                 <div class="callout">
                     <p data-i18n="s3_cfg_temp">CLI에서 <code>/model</code> 명령 또는 <code>codex -m 모델명</code> 플래그로 임시 변경 가능.
                         IDE에서는 입력창 아래 모델 선택기 사용.</p>
                 </div>
-                <pre><code>codex -m gpt-5.4</code></pre>
+                <pre><code>codex -m gpt-5.5</code></pre>
                 <div class="callout">
                     <p data-i18n="s3_cfg_cloud">Codex 클라우드 작업의 기본 모델은 현재 변경할 수 없습니다.</p>
                 </div>
@@ -672,7 +701,7 @@ export OPENAI_API_KEY="your-api-key-here"</code></pre>
                         <h3 data-i18n="s5_app_install">Desktop App 설치 (macOS/Windows)</h3>
                         <ol class="setup-steps">
                             <li data-i18n="s5_app1">macOS: openai.com/codex 에서 다운로드 (.dmg)</li>
-                            <li data-i18n="s5_app2">Windows: Microsoft Store에서 "Codex" 설치 (공식 문서 링크 참고)</li>
+                            <li data-i18n="s5_app2">Windows: Microsoft Store에서 설치하거나 `winget install Codex -s msstore` 사용</li>
                             <li data-i18n="s5_app3">앱 실행 후 ChatGPT 계정 또는 API 키로 로그인 (API 키 로그인은 cloud threads와 일부 credits 기반 기능이 제한될 수 있음)</li>
                         </ol>
                         <div class="callout waitlist-box">
@@ -680,7 +709,7 @@ export OPENAI_API_KEY="your-api-key-here"</code></pre>
                                 <span class="setup-chip" data-i18n="s5_waitlist_tag">Windows App</span>
                                 <span class="setup-chip" data-i18n="s5_waitlist_scope">지원 범위는 수시 변경</span>
                             </div>
-                            <p data-i18n="s5_waitlist_text">업데이트: Windows에서는 Codex 앱이 가장 쉬운 기본 경로입니다. Microsoft Store나 `winget`로 설치할 수 있고, PowerShell 기반 네이티브 Windows sandbox를 지원합니다. 필요하면 agent를 WSL로 전환할 수 있지만 재시작이 필요하며, IDE의 Windows agent mode는 여전히 WSL 워크스페이스가 가장 안정적입니다.</p>
+                            <p data-i18n="s5_waitlist_text">업데이트: Windows에서는 Codex 앱이 가장 쉬운 기본 경로입니다. Microsoft Store나 `winget`로 설치할 수 있고, `elevated` Windows sandbox가 기본 권장값이며 `unelevated`는 차선책입니다. 네이티브 성능이 중요하면 Windows sandbox를, Linux 툴체인이 중요하면 WSL2를 고르고, 앱에서 agent를 WSL로 전환할 때는 재시작이 필요합니다.</p>
                             <a href="https://developers.openai.com/codex/app/windows" target="_blank" class="btn btn-secondary"
                                 data-i18n="s5_waitlist_btn">Windows App 공식 문서 보기</a>
                         </div>
@@ -729,7 +758,7 @@ codex --cd /path/to/project
                     <img src="images/codex_app.png" alt="Codex Desktop App interface" loading="lazy" />
                     <figcaption data-i18n="img_app">Codex Desktop App — 멀티에이전트 커맨드 센터와 워크트리 관리</figcaption>
                 </figure>
-                <p data-i18n="s7_intro">Codex App은 여러 프로젝트를 넘나들며 병렬 agent thread를 운영하고, built-in Git와 integrated terminal로 결과를 리뷰하고, chats·artifact preview·computer use·in-app browser·image generation·memories·thread automations까지 한곳에서 다루는 데 가장 적합한 데스크톱 표면입니다. 로컬 작업은 기본적으로 cached web search를 함께 쓰고, Windows에서는 PowerShell 기반 네이티브 sandbox를 쓰거나 설정에서 agent를 WSL로 전환해 Linux 경로로 운영할 수 있습니다.</p>
+                <p data-i18n="s7_intro">Codex App은 여러 프로젝트를 넘나들며 병렬 agent thread를 운영하고, built-in Git와 integrated terminal로 결과를 리뷰하며, chats·artifact preview·computer use·in-app browser·image generation·memories·thread automations를 한곳에서 다루는 데 가장 적합한 데스크톱 표면입니다. 최신 App 문서와 2026년 4월 업데이트 기준으로 multiple terminal tabs, richer summary/sidebar, 더 넓어진 plugins, SSH devbox 흐름까지 함께 보는 것이 현재 상태에 가깝고, 로컬 작업은 기본적으로 cached web search를 쓰며 Windows에서는 네이티브 sandbox 또는 WSL2 경로를 선택할 수 있습니다.</p>
 
                 <h3 data-i18n="s7_modes_title">쓰레드 모드</h3>
                 <div class="table-wrap">
@@ -825,7 +854,7 @@ codex --cd /path/to/project
                     <img src="images/codex_IDE.png" alt="Codex VS Extension marketplace page" loading="lazy" />
                     <figcaption data-i18n="img_ide">Codex VS Extension — 마켓플레이스 (4.6M+ 다운로드)</figcaption>
                 </figure>
-                <p data-i18n="s8_intro">VS Code, Cursor, Windsurf, JetBrains IDE에 통합되는 AI 코딩 에이전트입니다. JetBrains 통합은 ChatGPT 계정, API 키, JetBrains AI로 로그인할 수 있습니다. VS Code 계열 확장은 macOS/Linux 중심으로 문서화되어 있고, Windows 지원은 아직 실험적이며 가장 안정적인 경로는 WSL 워크스페이스에서 에이전트 모드를 쓰는 것입니다.</p>
+                <p data-i18n="s8_intro">VS Code, Cursor, Windsurf, JetBrains IDE에 통합되는 AI 코딩 에이전트입니다. 일반적으로 설치 후 Agent mode가 기본이며, JetBrains 통합은 ChatGPT 계정, API 키, JetBrains AI로 로그인할 수 있습니다. 현재 공식 문서는 IDE 통합이 macOS·Windows·Linux에 걸쳐 제공된다고 설명하지만, Windows에서 agent mode 안정성을 우선하면 여전히 WSL2 워크스페이스가 가장 무난한 경로입니다.</p>
                 <div class="table-wrap">
                     <table>
                         <thead>
@@ -1168,7 +1197,7 @@ AGENTS.override.md  → 최우선
                 <h2><span class="section-num">13</span> <span data-i18n="s13_title">config.toml 설정</span></h2>
                 <pre data-i18n-html="code_s13_config"><code><span class="c">#:schema https://developers.openai.com/codex/config-schema.json</span>
 <span class="c"># ~/.codex/config.toml</span>
-model = "gpt-5.4"
+model = "gpt-5.5"
 review_model = "gpt-5.4"
 model_provider = "openai"
 approval_policy = "on-request"
@@ -1199,7 +1228,7 @@ model = "gpt-5.4-mini"
 model_reasoning_effort = "low"
 
 [profiles.deep]
-model = "gpt-5.4"
+model = "gpt-5.5"
 model_reasoning_effort = "high"
 
 [windows]
@@ -1409,7 +1438,7 @@ codex exec "Fix all TODOs" --full-auto</code></pre>
 
             <!-- Section 16 -->
             <section class="section" id="s17">
-                <h2><span class="section-num">17</span> <span data-i18n="s17_title">Prompting GPT-5.4</span></h2>
+                <h2><span class="section-num">17</span> <span data-i18n="s17_title">Prompting Codex Agents</span></h2>
                 <div class="prompt-inline-guide">
                     <article class="prompt-inline-section prompt-inline-overview">
                         <div class="prompt-inline-header">
@@ -1419,9 +1448,9 @@ codex exec "Fix all TODOs" --full-auto</code></pre>
                                 <p class="section-credit" data-i18n="s17_credit">이제 프롬프트는 문장 요령보다 에이전트 계약을 설계하는 일에 가깝습니다.</p>
                             </div>
                         </div>
-                        <p data-i18n="s17_intro_desc">GPT-5.4는 기본 성능이 강하지만, 실제 차이는 출력 형식, 도구 사용 기대치, 완료 기준, 검증 루프를 얼마나 명확히 정의하느냐에서 납니다.</p>
-                        <p class="prompt-inline-ref" data-i18n-html="s17_intro_ref">레퍼런스: <a href="https://developers.openai.com/codex/learn/best-practices/" target="_blank">Codex Best practices</a> · <a href="https://developers.openai.com/api/docs/guides/prompt-guidance/" target="_blank">Prompt guidance for GPT-5.4</a> · <a href="https://developers.openai.com/api/docs/guides/prompt-engineering" target="_blank">Prompt engineering</a></p>
-                        <p data-i18n="pg_s1_intro">GPT-5.4의 프롬프팅은 말을 예쁘게 하는 기술보다, 에이전트가 어떤 방식으로 끝까지 일해야 하는지 계약을 설계하는 쪽에 더 가깝습니다.</p>
+                        <p data-i18n="s17_intro_desc">최근 Codex 모델은 기본 성능이 강하지만, 실제 차이는 출력 형식, 도구 사용 기대치, 완료 기준, 검증 루프를 얼마나 명확히 정의하느냐에서 납니다.</p>
+                        <p class="prompt-inline-ref" data-i18n-html="s17_intro_ref">레퍼런스: <a href="https://developers.openai.com/codex/learn/best-practices/" target="_blank">Codex Best practices</a> · <a href="https://developers.openai.com/api/docs/guides/prompt-engineering" target="_blank">Prompt engineering</a> · <a href="https://openai.com/index/introducing-gpt-5-5/" target="_blank">Introducing GPT-5.5</a></p>
+                        <p data-i18n="pg_s1_intro">지금의 Codex 프롬프팅은 말을 예쁘게 하는 기술보다, 에이전트가 어떤 방식으로 끝까지 일해야 하는지 계약을 설계하는 쪽에 더 가깝습니다.</p>
                         <div class="two-col">
                             <div class="callout">
                                 <strong data-i18n="s17_first_use_t">Strong first use: 네 가지를 먼저 주세요</strong>
@@ -1837,14 +1866,12 @@ codex --search "optimize with Next.js 15"
                 <div class="link-grid">
                     <a href="https://openai.com/codex" target="_blank" class="link-card">OpenAI Codex</a>
                     <a href="https://github.com/openai/codex" target="_blank" class="link-card">GitHub Repo</a>
-                    <a href="https://openai.com/index/introducing-gpt-5-4/" target="_blank" class="link-card">Introducing GPT-5.4</a>
-                    <a href="https://developers.openai.com/api/docs/models/gpt-5.4" target="_blank" class="link-card">GPT-5.4 Model Docs</a>
-                    <a href="#s17" class="link-card" data-i18n="s21_prompt_guide">Prompting GPT-5.4 Section</a>
-                    <a href="https://developers.openai.com/api/docs/guides/prompt-guidance/" target="_blank" class="link-card">Prompt Guidance for GPT-5.4</a>
+                    <a href="https://openai.com/index/introducing-gpt-5-5/" target="_blank" class="link-card">Introducing GPT-5.5</a>
+                    <a href="https://developers.openai.com/codex/models/" target="_blank" class="link-card">Codex Models (Official)</a>
+                    <a href="#s17" class="link-card" data-i18n="s21_prompt_guide">Prompting Codex Agents Section</a>
                     <a href="https://developers.openai.com/api/docs/guides/prompt-engineering" target="_blank" class="link-card">Prompt Engineering</a>
                     <a href="https://developers.openai.com/api/docs/guides/compaction" target="_blank" class="link-card">Compaction Guide</a>
                     <a href="https://developers.openai.com/codex/learn/best-practices/" target="_blank" class="link-card">Codex Best practices</a>
-                    <a href="https://developers.openai.com/codex/models/" target="_blank" class="link-card">Codex Models (Official)</a>
                     <a href="https://developers.openai.com/codex/app/windows" target="_blank" class="link-card">Codex App for Windows (Official Docs)</a>
                     <a href="https://openai.com/index/introducing-codex/" target="_blank" class="link-card">Introducing Codex (Mar 4, 2026 update)</a>
                     <a href="https://github.com/openai/codex/releases" target="_blank" class="link-card">Release
@@ -1867,7 +1894,7 @@ codex --search "optimize with Next.js 15"
                     href="https://github.com/swhan0329/codex-101" target="_blank">PR을 환영합니다</a>.</p>
             <p class="footer-meta">
                 <span data-i18n="footer_date_prefix">최종 업데이트</span>:
-                <span class="live-date" data-date-format="long">2026년 4월 22일</span>
+                <span class="live-date" data-date-format="long">2026년 4월 23일</span>
             </p>
             <p class="footer-meta">Made by <a href="https://github.com/swhan0329" target="_blank">@swhan0329</a></p>
         </div>
