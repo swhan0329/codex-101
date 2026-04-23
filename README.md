@@ -38,6 +38,7 @@ Based on the [official OpenAI documentation](https://developers.openai.com/codex
 - The latest model guidance is more nuanced than a simple replacement story. `gpt-5.5` is currently a ChatGPT-authenticated Codex model rather than an API-key path model, so `gpt-5.4` is still the most important broadly available flagship and the practical default when GPT-5.5 has not rolled out to an account yet.
 - Quickstart and Pricing remain the most important moving pieces. Quickstart still says every ChatGPT plan includes Codex and prefers the App path on desktop platforms, while Pricing now includes `GPT-5.5` usage and credit tables. On Plus, the published local-message ranges are `gpt-5.5` 15-80, `gpt-5.4` 20-100, `gpt-5.4-mini` 60-350, and `gpt-5.3-codex` 30-150. The docs also explicitly note that GPT-5.5 is more token-efficient for comparable work, but that API-key sign-in still does not expose GPT-5.5.
 - A broader sweep across recent official launch posts still matters. `Introducing GPT-5.5` (April 23, 2026) changes the top-line model recommendation, `Codex now offers pay-as-you-go pricing for teams` (April 2, 2026) reinforces the Business/Enterprise Codex-only seat path and token billing rollout, and `Codex for (almost) everything` (April 16, 2026) continues to expand the app story with background computer use, more plugins, multiple terminal tabs, SSH devbox support, and richer artifact/sidebar workflows.
+- The guide itself also changed structurally today. The intro now includes localized onboarding visuals, the Codex App screenshots were refreshed to April 23, 2026 captures, section 19 (the tool-comparison chapter) was removed, and `computer use` is now explained as a standalone feature chapter inside the App section instead of only being mentioned as a model-side capability.
 - The setup story is clearer than older revisions: Quickstart treats the app as the easiest starting path, the IDE surface explicitly covers VS Code, Cursor, Windsurf, and JetBrains, and API-key sign-in is still allowed but can limit features such as cloud threads and some credits-based functionality.
 - Windows guidance is now split more cleanly between the general Windows page and the dedicated Windows app page. The default recommendation is the native app, installable from Microsoft Store or `winget`, with `elevated` sandbox preferred over `unelevated`, a private desktop on by default, and WSL2 positioned as the right option when your workflow already lives in Linux or the IDE agent path needs it.
 - The Codex app docs are broader than a simple desktop shell. The current app, app/features, and app/automations pages emphasize built-in worktrees, Automations, thread-vs-standalone automation choices, Git tools, integrated terminal, voice dictation, pop-out windows, IDE sync, image input, chats, artifact preview, cached web search by default for local tasks, notifications, and sleep prevention. The latest April update also brings background computer use, more plugin coverage, multiple terminal tabs, SSH devbox support, and a richer summary pane into the core app story. Pricing still matters here too: built-in image generation uses general Codex limits and tends to consume them 3-5x faster, while Fast mode doubles credit consumption where it applies.
@@ -62,8 +63,8 @@ Based on the [official OpenAI documentation](https://developers.openai.com/codex
 | 10–14 | Approval modes, slash commands, AGENTS.md, config.toml, MCP |
 | 15–16 | Session management, CI/CD automation |
 | 17 | Prompting Codex agents with embedded contracts, workflows, and playbooks |
-| 18–19 | Advanced techniques, Codex vs Cursor vs Claude Code |
-| 20–21 | FAQ, references |
+| 18 | Advanced techniques |
+| 19–20 | FAQ, references |
 
 ---
 
@@ -120,11 +121,11 @@ git push origin fix/my-improvement
 
 ```
 codex-101/
-├── index.html      # Main page (chapter-map overview + 21 sections, including Prompting Codex Agents)
-├── style.css       # Styles (dark/light theme)
+├── index.html      # Main page (chapter-map overview + 20 sections)
+├── style.css       # Styles (dark/light theme + intro/computer-use feature blocks)
 ├── app.js          # Interactions (theme, language, section navigation)
 ├── i18n.js         # Translations (KR/EN)
-└── images/         # Screenshots
+└── images/         # Refreshed screenshots + localized explainer visuals
 ```
 
 ---

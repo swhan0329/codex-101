@@ -38,6 +38,7 @@
 - 이번 모델 업데이트는 단순 교체보다 “접근 경로 분화”를 더 잘 이해해야 정확합니다. `gpt-5.5`는 현재 ChatGPT 로그인 경로에서 우선 제공되는 최신 프론티어 모델이고, API key 경로에서는 아직 쓸 수 없습니다. 그래서 `gpt-5.4`는 여전히 가장 중요한 범용 fallback이자 API 접근 가능한 기본 플래그십입니다.
 - 가격/접근 범위는 여전히 Quickstart와 Pricing을 같이 봐야 정확합니다. Quickstart는 모든 ChatGPT 플랜에 Codex가 포함된다고 설명하고 데스크톱에서는 App 경로를 우선 보여주며, Pricing은 이제 `GPT-5.5` 사용량/크레딧 표까지 포함합니다. Plus 기준 로컬 메시지 범위는 `gpt-5.5` 15-80, `gpt-5.4` 20-100, `gpt-5.4-mini` 60-350, `gpt-5.3-codex` 30-150으로 제시되며, 문서는 GPT-5.5가 더 적은 토큰으로 더 나은 결과를 내 usage를 효율적으로 쓴다고 설명합니다.
 - 여기에 최신 공식 발표도 같이 봐야 정확도가 올라갑니다. 2026년 4월 23일 `Introducing GPT-5.5`는 최상단 모델 추천을 바꾸고, 4월 2일 `Codex now offers pay-as-you-go pricing for teams`는 Business·Enterprise 팀의 Codex-only seat와 토큰 기반 과금 전환을 더 분명하게 설명하며, 4월 16일 `Codex for (almost) everything`는 background computer use, 더 많은 plugins, multiple terminal tabs, SSH devbox, richer artifact/sidebar 흐름을 App 중심 이야기로 끌어올렸습니다.
+- 가이드 구조도 오늘 조금 바뀌었습니다. 인트로에는 언어별 온보딩 그림이 들어갔고, Codex CLI/App/Web 스크린샷도 2026년 4월 23일 기준 캡처로 다시 교체했습니다. 또 비교 챕터였던 섹션 19는 제거했고, `computer use`는 모델 설명의 보조 문장보다 App 섹션 안의 독립 기능 챕터처럼 읽히도록 재배치했습니다.
 - 설치 흐름은 예전보다 더 분명해졌습니다. Quickstart는 앱을 가장 쉬운 시작 경로로 두고, IDE는 VS Code, Cursor, Windsurf, JetBrains를 함께 다루며, API 키 로그인도 가능하지만 cloud threads와 일부 credits 기반 기능은 제한될 수 있다고 안내합니다.
 - Windows 문서는 이제 일반 Windows 가이드와 전용 Windows App 문서가 역할을 나눕니다. 기본 권장은 네이티브 앱이고, Microsoft Store나 `winget`로 설치할 수 있으며, `elevated` 샌드박스를 우선 쓰고 `unelevated`는 대안으로 봅니다. 전용 데스크톱 격리가 기본이고, 워크플로가 Linux 중심이거나 IDE 에이전트 작업이 필요할 때 WSL2가 적절한 선택지로 정리됩니다.
 - 현재 app, app/features, app/automations 문서를 보면 Codex App은 단순한 데스크톱 셸이 아니라 worktrees, Automations, thread/standalone automation 분기, Git 도구, 내장 terminal, voice dictation, pop-out window, IDE sync, image input, chats, artifact preview, 로컬 작업 기본 cached web search, notifications, 절전 방지까지 묶은 작업 허브로 설명됩니다. 2026년 4월 업데이트 기준으로 background computer use, 더 많은 plugins, multiple terminal tabs, SSH devbox, richer summary pane도 핵심 흐름으로 올라왔습니다. 출시 글의 “command center for agents” 관점도 이제 기능 문서와 거의 같은 방향으로 맞물립니다. 여기에 가격 문서를 함께 보면 내장 이미지 생성은 일반 Codex 한도를 공유하면서 평균적으로 3-5배 더 빠르게 소모하고, Fast mode는 적용되는 모델에서 크레딧을 2배 더 소모한다는 점도 같이 이해해야 합니다.
@@ -62,8 +63,8 @@
 | 10–14 | 승인 모드, 슬래시 명령어, AGENTS.md, config.toml, MCP |
 | 15–16 | 세션 관리, CI/CD 자동화 |
 | 17 | Prompting Codex agents 개요, 실행 계약, 워크플로, 플레이북 |
-| 18–19 | 고급 활용, Codex vs Cursor vs Claude Code 비교 |
-| 20–21 | FAQ, 참고 자료 |
+| 18 | 고급 활용 |
+| 19–20 | FAQ, 참고 자료 |
 
 ---
 
@@ -120,11 +121,11 @@ git push origin fix/my-improvement
 
 ```
 codex-101/
-├── index.html      # 메인 페이지 (챕터 맵 + 21개 섹션, Prompting Codex Agents 포함)
-├── style.css       # 스타일 (다크/라이트 테마)
+├── index.html      # 메인 페이지 (챕터 맵 + 20개 섹션)
+├── style.css       # 스타일 (다크/라이트 테마 + 인트로/feature 블록)
 ├── app.js          # 인터랙션 (테마, 언어, 섹션 네비게이션)
 ├── i18n.js         # 다국어 번역 (KR/EN)
-└── images/         # 스크린샷
+└── images/         # 최신 스크린샷 + 언어별 설명 그림
 ```
 
 ---
