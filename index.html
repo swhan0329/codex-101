@@ -197,33 +197,6 @@
                         </div>
                     </details>
 
-                    <div class="overview-fact-grid">
-                        <article class="fact-card">
-                            <h4 data-i18n="overview_fact_1_title">모델 추천과 실행 면 정렬</h4>
-                            <p data-i18n="overview_fact_1_desc">`codex/models`를 오늘 다시 확인한 결과, 최우선 추천 모델은 이제 `gpt-5.5`입니다. `gpt-5.5`는 ChatGPT 로그인 경로에서 strongest default로 올라왔고, rollout 중에는 `gpt-5.4`를 fallback으로 계속 사용합니다. `gpt-5.4-mini`는 빠르고 저렴한 로컬/subagent 선택지이고, Codex Cloud는 여전히 `gpt-5.3-codex` 축에 남아 있으며, 대안 모델은 `gpt-5.2`입니다.</p>
-                        </article>
-                        <article class="fact-card">
-                            <h4 data-i18n="overview_fact_2_title">GPT-5.5 승격과 fallback 구조</h4>
-                            <p data-i18n="overview_fact_2_desc">오늘 공개된 `Introducing GPT-5.5`와 최신 `codex/models` 기준으로 보면, Codex의 기본 읽는 법이 바뀌었습니다. `gpt-5.5`가 복잡한 코딩·computer use·knowledge work·research workflow의 최우선 추천 모델이고, ChatGPT 로그인 경로에서만 우선 제공됩니다. `gpt-5.4`는 여전히 강력한 fallback이며 API 접근이 가능한 기본 선택지이고, `gpt-5.4-mini`는 빠른 작업과 subagent용 효율 모델로 남아 있습니다.</p>
-                        </article>
-                        <article class="fact-card">
-                            <h4 data-i18n="overview_fact_3_title">플랜/팀 요금제 보강</h4>
-                            <p data-i18n="overview_fact_3_desc">Quickstart는 모든 ChatGPT 플랜에 Codex가 포함된다고 설명합니다. Pricing은 이제 `GPT-5.5` 사용량/크레딧 표까지 포함하며, Plus 기준 로컬 메시지 범위는 `gpt-5.5` 15-80, `gpt-5.4` 20-100, `gpt-5.4-mini` 60-350, `gpt-5.3-codex` 30-150으로 제시됩니다. 문서는 `gpt-5.5`가 더 적은 토큰으로 더 나은 결과를 내 usage를 효율적으로 쓴다고 설명하고, 동시에 API key 경로에서는 아직 `gpt-5.5`를 쓸 수 없다는 점도 분명히 합니다.</p>
-                        </article>
-                        <article class="fact-card">
-                            <h4 data-i18n="overview_fact_4_title">IDE·Windows 경로 재정리</h4>
-                            <p data-i18n="overview_fact_4_desc">IDE 문서는 이제 VS Code 계열과 JetBrains 모두를 정식 경로로 다루고, macOS·Windows·Linux 사용을 함께 설명합니다. 다만 Windows에서는 여전히 WSL2 워크스페이스가 가장 안정적인 agent 경로이고, Windows 가이드는 Microsoft Store/`winget` 설치, `elevated` 우선·`unelevated` 대안, private desktop 기본값, 그리고 네이티브 성능이 중요하면 Windows sandbox, Linux 툴체인이 중요하면 WSL2를 고르라고 더 분명하게 정리합니다.</p>
-                        </article>
-                        <article class="fact-card">
-                            <h4 data-i18n="overview_fact_5_title">App 운영 흐름 반영</h4>
-                            <p data-i18n="overview_fact_5_desc">`Introducing the Codex app`와 2026년 4월 16일 `Codex for (almost) everything` 발표, 현재 `app/features`·`app/automations`를 다시 대조해 worktrees, built-in Git, integrated terminal, skills, Automations, thread automations, chats, in-app browser, artifact preview, image generation뿐 아니라 background computer use, 더 넓어진 plugin 생태계, multiple terminal tabs, SSH devbox, summary pane 흐름까지 앞쪽에서 이해할 수 있게 재배치했습니다.</p>
-                        </article>
-                        <article class="fact-card">
-                            <h4 data-i18n="overview_fact_6_title">config/plugins/security 흐름 갱신</h4>
-                            <p data-i18n="overview_fact_6_desc">`review_model`, `approval_policy.granular`, `approvals_reviewer`, top-level `web_search`, `tools.web_search`, `tools.view_image`, `service_tier`, `personality`, `default_permissions`, `windows.sandbox`, `windows.sandbox_private_desktop`, `model_instructions_file`, plugin/app 제어 키, JSON schema, protected paths, 로컬 OS 샌드박스와 cloud split runtime 설명을 함께 최신 기준으로 맞췄습니다.</p>
-                        </article>
-                    </div>
-
                     <p class="overview-sources-label" data-i18n="overview_sources_label">근거 문서</p>
                     <div class="overview-source-links">
                         <a href="https://developers.openai.com/codex/quickstart/" target="_blank" class="source-chip" data-i18n="overview_source_1">Codex Quickstart</a>
