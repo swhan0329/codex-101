@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 4월 23일</strong><br/>
+  <strong>최종 업데이트: 2026년 4월 24일</strong><br/>
   라이브 사이트는 보는 사람의 당일 날짜를 자동으로 표시하며, 최신 Codex 모델 가이드를 공식 문서 기준으로 반영합니다.
 </p>
 
@@ -32,12 +32,13 @@
 - **처음 사용하는 사용자**: **04-06**(설치/로그인/첫 실행) → **10**(approval/sandbox 기초) → **14**(OpenAI Docs MCP) 순서로 읽는 것을 권장합니다.
 - **실무 사용자**: **12-14**(AGENTS.md/config.toml/MCP) → **15-17**(세션 운영/자동화/프롬프트 실행 계약) 순서로 읽으면 팀 운영 기준을 빠르게 잡을 수 있습니다.
 
-### 일일 MCP 검증 스냅샷 (2026-04-23)
+### 일일 MCP 검증 스냅샷 (2026-04-24)
 
 - `codex/models`를 다시 대조한 결과, 오늘의 가장 큰 변화는 `gpt-5.5`가 최우선 추천 모델로 올라왔다는 점입니다. rollout 중에는 `gpt-5.4`가 fallback으로 남고, `gpt-5.4-mini`는 빠른 로컬/subagent 축, `gpt-5.3-codex`는 cloud/code review 축, `gpt-5.2`는 대표 대안 모델로 정리하는 편이 맞습니다.
 - 이번 모델 업데이트는 단순 교체보다 “접근 경로 분화”를 더 잘 이해해야 정확합니다. `gpt-5.5`는 현재 ChatGPT 로그인 경로에서 우선 제공되는 최신 프론티어 모델이고, API key 경로에서는 아직 쓸 수 없습니다. 그래서 `gpt-5.4`는 여전히 가장 중요한 범용 fallback이자 API 접근 가능한 기본 플래그십입니다.
-- 가격/접근 범위는 여전히 Quickstart와 Pricing을 같이 봐야 정확합니다. Quickstart는 모든 ChatGPT 플랜에 Codex가 포함된다고 설명하고 데스크톱에서는 App 경로를 우선 보여주며, Pricing은 이제 `GPT-5.5` 사용량/크레딧 표까지 포함합니다. Plus 기준 로컬 메시지 범위는 `gpt-5.5` 15-80, `gpt-5.4` 20-100, `gpt-5.4-mini` 60-350, `gpt-5.3-codex` 30-150으로 제시되며, 문서는 GPT-5.5가 더 적은 토큰으로 더 나은 결과를 내 usage를 효율적으로 쓴다고 설명합니다.
-- 여기에 최신 공식 발표도 같이 봐야 정확도가 올라갑니다. 2026년 4월 23일 `Introducing GPT-5.5`는 최상단 모델 추천을 바꾸고, 4월 2일 `Codex now offers pay-as-you-go pricing for teams`는 Business·Enterprise 팀의 Codex-only seat와 토큰 기반 과금 전환을 더 분명하게 설명하며, 4월 16일 `Codex for (almost) everything`는 background computer use, 더 많은 plugins, multiple terminal tabs, SSH devbox, richer artifact/sidebar 흐름을 App 중심 이야기로 끌어올렸습니다.
+- 가격/접근 범위는 여전히 Quickstart와 Pricing을 같이 봐야 정확합니다. Quickstart는 모든 ChatGPT 플랜에 Codex가 포함된다고 설명하고 데스크톱에서는 App 경로를 우선 보여주며, Pricing은 `GPT-5.5` 사용량 표를 유지합니다. Plus 기준 로컬 메시지 범위는 `gpt-5.5` 15-80, `gpt-5.4` 20-100, `gpt-5.4-mini` 60-350, `gpt-5.3-codex` 30-150으로 제시되며, 문서는 GPT-5.5가 더 적은 토큰으로 더 나은 결과를 내 usage를 효율적으로 쓴다고 설명합니다.
+- 다만 가격 설명은 오늘 공식 최신 자료 기준으로 한 번 더 바로잡아야 했습니다. 최신 Codex rate card 도움말 문서는 2026년 4월 24일 기준 대부분의 Plus·Pro·Business·Enterprise·Edu·Gov·Health 고객이 이제 메시지 평균표보다 토큰 기반 크레딧 표를 우선 봐야 한다고 설명합니다. 이번 실행에서 가장 중요한 outdated 수정 포인트가 이 부분입니다.
+- 여기에 최신 공식 발표도 같이 봐야 정확도가 올라갑니다. 2026년 4월 23일 `Introducing GPT-5.5`는 최상단 모델 추천을 바꾸고, 4월 2일 `Codex now offers pay-as-you-go pricing for teams`는 Business·Enterprise 팀의 Codex-only seat와 토큰 기반 과금 전환을 더 분명하게 설명하며, 4월 16일 `Codex for (almost) everything`는 background computer use, 더 많은 plugins, multiple terminal tabs, SSH devbox, IDE sync, projectless chats, richer artifact/sidebar 흐름을 App 중심 이야기로 끌어올렸습니다.
 - 가이드 구조도 오늘 조금 바뀌었습니다. 인트로에는 언어별 온보딩 그림이 들어갔고, Codex CLI/App/Web 스크린샷도 2026년 4월 23일 기준 캡처로 다시 교체했습니다. 또 비교 챕터였던 섹션 19는 제거했고, `computer use`는 모델 설명의 보조 문장보다 App 섹션 안의 독립 기능 챕터처럼 읽히도록 재배치했습니다.
 - 설치 흐름은 예전보다 더 분명해졌습니다. Quickstart는 앱을 가장 쉬운 시작 경로로 두고, IDE는 VS Code, Cursor, Windsurf, JetBrains를 함께 다루며, API 키 로그인도 가능하지만 cloud threads와 일부 credits 기반 기능은 제한될 수 있다고 안내합니다.
 - Windows 문서는 이제 일반 Windows 가이드와 전용 Windows App 문서가 역할을 나눕니다. 기본 권장은 네이티브 앱이고, Microsoft Store나 `winget`로 설치할 수 있으며, `elevated` 샌드박스를 우선 쓰고 `unelevated`는 대안으로 봅니다. 전용 데스크톱 격리가 기본이고, 워크플로가 Linux 중심이거나 IDE 에이전트 작업이 필요할 때 WSL2가 적절한 선택지로 정리됩니다.

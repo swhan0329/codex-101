@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: April 23, 2026</strong><br/>
+  <strong>Last updated: April 24, 2026</strong><br/>
   The live site displays the viewer's current date automatically and reflects the latest Codex model guidance reviewed from official docs.
 </p>
 
@@ -32,12 +32,13 @@ Based on the [official OpenAI documentation](https://developers.openai.com/codex
 - **First-time users**: Start with sections **04-06** (setup, sign-in, first run), then **10** (approval/sandbox basics), and **14** (OpenAI Docs MCP).
 - **Professional users**: Start with sections **12-14** (AGENTS.md, config.toml, MCP), then **15-17** (session strategy, automation, prompting contracts).
 
-### Daily MCP Verification Snapshot (2026-04-23)
+### Daily MCP Verification Snapshot (2026-04-24)
 
 - Re-checking `codex/models` shows the main change today: `gpt-5.5` is now the top recommended Codex model when it appears in your model picker. During rollout, `gpt-5.4` remains the fallback, `gpt-5.4-mini` stays the fast local/subagent lane, `gpt-5.3-codex` remains the cloud/code-review lane, and `gpt-5.2` is still the main alternative model.
 - The latest model guidance is more nuanced than a simple replacement story. `gpt-5.5` is currently a ChatGPT-authenticated Codex model rather than an API-key path model, so `gpt-5.4` is still the most important broadly available flagship and the practical default when GPT-5.5 has not rolled out to an account yet.
-- Quickstart and Pricing remain the most important moving pieces. Quickstart still says every ChatGPT plan includes Codex and prefers the App path on desktop platforms, while Pricing now includes `GPT-5.5` usage and credit tables. On Plus, the published local-message ranges are `gpt-5.5` 15-80, `gpt-5.4` 20-100, `gpt-5.4-mini` 60-350, and `gpt-5.3-codex` 30-150. The docs also explicitly note that GPT-5.5 is more token-efficient for comparable work, but that API-key sign-in still does not expose GPT-5.5.
-- A broader sweep across recent official launch posts still matters. `Introducing GPT-5.5` (April 23, 2026) changes the top-line model recommendation, `Codex now offers pay-as-you-go pricing for teams` (April 2, 2026) reinforces the Business/Enterprise Codex-only seat path and token billing rollout, and `Codex for (almost) everything` (April 16, 2026) continues to expand the app story with background computer use, more plugins, multiple terminal tabs, SSH devbox support, and richer artifact/sidebar workflows.
+- Quickstart and Pricing remain the most important moving pieces. Quickstart still says every ChatGPT plan includes Codex and prefers the App path on desktop platforms, while Pricing now includes `GPT-5.5` usage tables too. On Plus, the published local-message ranges are `gpt-5.5` 15-80, `gpt-5.4` 20-100, `gpt-5.4-mini` 60-350, and `gpt-5.3-codex` 30-150. The docs also explicitly note that GPT-5.5 is more token-efficient for comparable work, but that API-key sign-in still does not expose GPT-5.5.
+- The pricing explanation needed a same-day correction from newer official material. The current Codex rate card help article says that as of April 24, 2026, most Plus, Pro, Business, Enterprise, Edu, Gov, and Health customers should read the token-based credit table rather than only the older message-based averages. That is the biggest outdated detail fixed in this run.
+- A broader sweep across recent official launch posts still matters. `Introducing GPT-5.5` (April 23, 2026) changes the top-line model recommendation, `Codex now offers pay-as-you-go pricing for teams` (April 2, 2026) reinforces the Business/Enterprise Codex-only seat path and token billing rollout, and `Codex for (almost) everything` (April 16, 2026) continues to expand the app story with background computer use, more plugins, multiple terminal tabs, SSH devbox support, IDE sync, projectless chats, and richer artifact/sidebar workflows.
 - The guide itself also changed structurally today. The intro now includes localized onboarding visuals, the Codex App screenshots were refreshed to April 23, 2026 captures, section 19 (the tool-comparison chapter) was removed, and `computer use` is now explained as a standalone feature chapter inside the App section instead of only being mentioned as a model-side capability.
 - The setup story is clearer than older revisions: Quickstart treats the app as the easiest starting path, the IDE surface explicitly covers VS Code, Cursor, Windsurf, and JetBrains, and API-key sign-in is still allowed but can limit features such as cloud threads and some credits-based functionality.
 - Windows guidance is now split more cleanly between the general Windows page and the dedicated Windows app page. The default recommendation is the native app, installable from Microsoft Store or `winget`, with `elevated` sandbox preferred over `unelevated`, a private desktop on by default, and WSL2 positioned as the right option when your workflow already lives in Linux or the IDE agent path needs it.
