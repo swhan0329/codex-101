@@ -32,14 +32,21 @@ Based on the [official OpenAI documentation](https://developers.openai.com/codex
 - **First-time users**: Start with sections **04-06** (setup, sign-in, first run), then **10** (approval/sandbox basics), and **14** (OpenAI Docs MCP).
 - **Professional users**: Start with sections **12-14** (AGENTS.md, config.toml, MCP), then **15-17** (session strategy, automation, prompting contracts).
 
+### Reader-Focused Structure
+
+- **Non-technical or first-time readers** now get a stronger “first win” path before model, pricing, and MCP details: install the app, complete one small local task, and leave a Git checkpoint.
+- **Technical readers** get a compact decision table for choosing App/CLI/IDE/Web, model fallback, and the next section based on the job at hand.
+- The intro now points readers to the [OpenAI Developer Showcase](https://developers.openai.com/showcase) so they can scan real Codex-built examples and prompt ideas before diving into the guide.
+- The daily update log now lives at the bottom as a compact Changelog section, with source-tracing detail tucked behind a disclosure.
+
 ### Daily MCP Verification Snapshot (2026-04-24)
 
 - Re-checking `codex/models` shows the main change today: `gpt-5.5` is now the top recommended Codex model when it appears in your model picker. During rollout, `gpt-5.4` remains the fallback, `gpt-5.4-mini` stays the fast local/subagent lane, `gpt-5.3-codex` remains the cloud/code-review lane, and `gpt-5.2` is still the main alternative model.
-- The latest model guidance is more nuanced than a simple replacement story. `gpt-5.5` is currently a ChatGPT-authenticated Codex model rather than an API-key path model, so `gpt-5.4` is still the most important broadly available flagship and the practical default when GPT-5.5 has not rolled out to an account yet.
-- Quickstart and Pricing remain the most important moving pieces. Quickstart still says every ChatGPT plan includes Codex and prefers the App path on desktop platforms, while Pricing now includes `GPT-5.5` usage tables too. On Plus, the published local-message ranges are `gpt-5.5` 15-80, `gpt-5.4` 20-100, `gpt-5.4-mini` 60-350, and `gpt-5.3-codex` 30-150. The docs also explicitly note that GPT-5.5 is more token-efficient for comparable work, but that API-key sign-in still does not expose GPT-5.5.
+- The latest model guidance is more nuanced than a simple replacement story. In the Codex model picker, start with `gpt-5.5` when it appears and use `gpt-5.4` when it has not rolled out to the account yet. In the API, the official Models docs list `gpt-5.5`, and `gpt-5.5-pro` is available for Responses API requests, including through the Batch API.
+- Quickstart and Pricing remain the most important moving pieces. Quickstart still says every ChatGPT plan includes Codex and prefers the App path on desktop platforms, while Pricing now includes `GPT-5.5` usage tables too. On Plus, the published local-message ranges are `gpt-5.5` 15-80, `gpt-5.4` 20-100, `gpt-5.4-mini` 60-350, and `gpt-5.3-codex` 30-150. The docs also explicitly note that GPT-5.5 is more token-efficient for comparable work. API pricing should be read separately for `gpt-5.5` and `gpt-5.5-pro`.
 - The pricing explanation needed a same-day correction from newer official material. The current Codex rate card help article says that as of April 24, 2026, most Plus, Pro, Business, Enterprise, Edu, Gov, and Health customers should read the token-based credit table rather than only the older message-based averages. That is the biggest outdated detail fixed in this run.
 - A broader sweep across recent official launch posts still matters. `Introducing GPT-5.5` (April 23, 2026) changes the top-line model recommendation, `Codex now offers pay-as-you-go pricing for teams` (April 2, 2026) reinforces the Business/Enterprise Codex-only seat path and token billing rollout, and `Codex for (almost) everything` (April 16, 2026) continues to expand the app story with background computer use, more plugins, multiple terminal tabs, SSH devbox support, IDE sync, projectless chats, and richer artifact/sidebar workflows.
-- The guide itself also changed structurally today. The intro now includes localized onboarding visuals, the Codex App screenshots were refreshed to April 23, 2026 captures, section 19 (the tool-comparison chapter) was removed, and `computer use` is now explained as a standalone feature chapter inside the App section instead of only being mentioned as a model-side capability.
+- The guide itself also changed structurally today. The intro now includes localized onboarding visuals plus a Developer Showcase callout, the Codex App screenshots were refreshed to April 23, 2026 captures, section 19 (the tool-comparison chapter) was removed, and both `browser use` and `computer use` are explained as standalone feature chapters inside the App section instead of only being mentioned as model/app-side capabilities.
 - The setup story is clearer than older revisions: Quickstart treats the app as the easiest starting path, the IDE surface explicitly covers VS Code, Cursor, Windsurf, and JetBrains, and API-key sign-in is still allowed but can limit features such as cloud threads and some credits-based functionality.
 - Windows guidance is now split more cleanly between the general Windows page and the dedicated Windows app page. The default recommendation is the native app, installable from Microsoft Store or `winget`, with `elevated` sandbox preferred over `unelevated`, a private desktop on by default, and WSL2 positioned as the right option when your workflow already lives in Linux or the IDE agent path needs it.
 - The Codex app docs are broader than a simple desktop shell. The current app, app/features, and app/automations pages emphasize built-in worktrees, Automations, thread-vs-standalone automation choices, Git tools, integrated terminal, voice dictation, pop-out windows, IDE sync, image input, chats, artifact preview, cached web search by default for local tasks, notifications, and sleep prevention. The latest April update also brings background computer use, more plugin coverage, multiple terminal tabs, SSH devbox support, and a richer summary pane into the core app story. Pricing still matters here too: built-in image generation uses general Codex limits and tends to consume them 3-5x faster, while Fast mode doubles credit consumption where it applies.
@@ -53,6 +60,19 @@ Based on the [official OpenAI documentation](https://developers.openai.com/codex
 - **First-time users (10 minutes)**: install/sign in (`04-06`) → keep default sandbox/approval (`10`) → run one small edit task with Git checkpoint.
 - **Professional users (team rollout)**: lock AGENTS.md + `.codex/config.toml` (`12-14`) → standardize `codex exec`/review flow (`15-16`) → adopt section `17` prompt contract as team baseline.
 
+### OpenAI Practitioner Tips Added
+
+Section **21** now folds in practical patterns from OpenAI Developer Experience and Codex practitioners including Gabriel Chua, Vaibhav “VB” Srivastav, Tibo, Katia Gil Guzman, Dominik Kundel, and Romain Huet:
+
+- Read Codex changes as **Model + Harness + Surfaces**, not just “a new model.”
+- Use Codex as a second-pass reviewer beside other coding agents: normal review, adversarial review, and rescue each serve different risk levels.
+- Start subagents with read-heavy parallel work such as security review, test-gap scans, maintainability checks, and log triage.
+- Treat Codex as an AI teammate that explains PRs, runs checks, and keeps work reviewable, not just as vibe-coding autocomplete.
+- Make tasks verifiable by naming commands, screens, failure stops, expected outputs, and sources.
+- Treat Automations, plugins, connectors, Browser use, and app integrations as a work hub pattern, not only a coding pattern.
+
+Sources used for this addition include Gabriel Chua's [How I Think About Codex](https://www.linkedin.com/pulse/how-i-think-codex-gabriel-chua-ukhic), OpenAI's [Codex agent loop](https://openai.com/index/unrolling-the-codex-agent-loop/), [openai/codex-plugin-cc](https://github.com/openai/codex-plugin-cc), official [Codex Subagents](https://developers.openai.com/codex/subagents), public profiles/posts for [VB](https://x.com/reach_vb), [Tibo](https://x.com/thsottiaux), [Katia](https://x.com/kagigz), [Dominik Kundel](https://x.com/dkundel/status/2018436269907603590), and [Romain Huet](https://vivatech.com/speakers/e5bb6392-2f32-f011-8b3d-6045bd903b46/).
+
 ### What's Covered
 
 | Section | Topic |
@@ -63,9 +83,9 @@ Based on the [official OpenAI documentation](https://developers.openai.com/codex
 | 06–09 | CLI, App, IDE Extension, Web usage |
 | 10–14 | Approval modes, slash commands, AGENTS.md, config.toml, MCP |
 | 15–16 | Session management, CI/CD automation |
-| 17 | Prompting Codex agents with embedded contracts, workflows, and playbooks |
+| 17 | Prompting Codex agents with output contracts, workflows, and playbooks |
 | 18 | Advanced techniques |
-| 19–20 | FAQ, references |
+| 19–21 | FAQ, references, OpenAI practitioner tips |
 
 ---
 
@@ -122,8 +142,8 @@ git push origin fix/my-improvement
 
 ```
 codex-101/
-├── index.html      # Main page (chapter-map overview + 20 sections)
-├── style.css       # Styles (dark/light theme + intro/computer-use feature blocks)
+├── index.html      # Main page (chapter-map overview + 21 sections)
+├── style.css       # Styles (dark/light theme + intro/browser-use/computer-use feature blocks)
 ├── app.js          # Interactions (theme, language, section navigation)
 ├── i18n.js         # Translations (KR/EN)
 └── images/         # Refreshed screenshots + localized explainer visuals

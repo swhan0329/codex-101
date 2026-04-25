@@ -30,16 +30,23 @@
 ### 사용자별 빠른 읽기 경로
 
 - **처음 사용하는 사용자**: **04-06**(설치/로그인/첫 실행) → **10**(approval/sandbox 기초) → **14**(OpenAI Docs MCP) 순서로 읽는 것을 권장합니다.
-- **실무 사용자**: **12-14**(AGENTS.md/config.toml/MCP) → **15-17**(세션 운영/자동화/프롬프트 실행 계약) 순서로 읽으면 팀 운영 기준을 빠르게 잡을 수 있습니다.
+- **실무 사용자**: **12-14**(AGENTS.md/config.toml/MCP) → **15-17**(세션 운영/자동화/요청·검증 규칙) 순서로 읽으면 팀 운영 기준을 빠르게 잡을 수 있습니다.
+
+### 독자별 첫 반응을 줄이는 구조
+
+- **비전공자/처음 사용자**는 모델·요금·MCP를 모두 읽기 전에, 앱 설치 → 작은 로컬 작업 1건 → Git 체크포인트까지 “첫 성공 경험”을 먼저 완료하도록 상단 경로를 재구성했습니다.
+- **전공자/실무 사용자**는 긴 설명을 읽기 전에 상황별 선택표에서 App/CLI/IDE/Web, 대체 모델, 다음 섹션을 바로 고를 수 있게 했습니다.
+- 인트로에는 [OpenAI Developer Showcase](https://developers.openai.com/showcase) 안내를 추가해, Codex로 만든 실제 예시와 바로 실행해볼 만한 프롬프트 감을 먼저 잡을 수 있게 했습니다.
+- 최신 변경 로그는 첫 독서 흐름을 방해하지 않도록 맨 아래 Changelog 섹션으로 옮기고, 근거 문서는 접어서 볼 수 있게 낮췄습니다.
 
 ### 일일 MCP 검증 스냅샷 (2026-04-24)
 
-- `codex/models`를 다시 대조한 결과, 오늘의 가장 큰 변화는 `gpt-5.5`가 최우선 추천 모델로 올라왔다는 점입니다. rollout 중에는 `gpt-5.4`가 fallback으로 남고, `gpt-5.4-mini`는 빠른 로컬/subagent 축, `gpt-5.3-codex`는 cloud/code review 축, `gpt-5.2`는 대표 대안 모델로 정리하는 편이 맞습니다.
-- 이번 모델 업데이트는 단순 교체보다 “접근 경로 분화”를 더 잘 이해해야 정확합니다. `gpt-5.5`는 현재 ChatGPT 로그인 경로에서 우선 제공되는 최신 프론티어 모델이고, API key 경로에서는 아직 쓸 수 없습니다. 그래서 `gpt-5.4`는 여전히 가장 중요한 범용 fallback이자 API 접근 가능한 기본 플래그십입니다.
-- 가격/접근 범위는 여전히 Quickstart와 Pricing을 같이 봐야 정확합니다. Quickstart는 모든 ChatGPT 플랜에 Codex가 포함된다고 설명하고 데스크톱에서는 App 경로를 우선 보여주며, Pricing은 `GPT-5.5` 사용량 표를 유지합니다. Plus 기준 로컬 메시지 범위는 `gpt-5.5` 15-80, `gpt-5.4` 20-100, `gpt-5.4-mini` 60-350, `gpt-5.3-codex` 30-150으로 제시되며, 문서는 GPT-5.5가 더 적은 토큰으로 더 나은 결과를 내 usage를 효율적으로 쓴다고 설명합니다.
+- `codex/models`를 다시 대조한 결과, 오늘의 가장 큰 변화는 `gpt-5.5`가 최우선 추천 모델로 올라왔다는 점입니다. rollout 중에는 `gpt-5.4`가 대체 선택지로 남고, `gpt-5.4-mini`는 빠른 로컬/subagent 축, `gpt-5.3-codex`는 cloud/code review 축, `gpt-5.2`는 대표 대안 모델로 정리하는 편이 맞습니다.
+- 이번 모델 업데이트는 단순 교체보다 “접근 경로 분화”를 더 잘 이해해야 정확합니다. Codex 모델 선택기에서는 `gpt-5.5`가 보이면 대부분의 작업을 거기서 시작하고, 아직 계정에 보이지 않으면 `gpt-5.4`를 대체 선택지로 보면 됩니다. API에서는 공식 Models 문서 기준으로 `gpt-5.5`를 사용할 수 있고, 더 높은 정확도가 필요한 작업에는 `gpt-5.5-pro`도 Responses API와 Batch API에서 사용할 수 있습니다.
+- 가격/접근 범위는 여전히 Quickstart와 Pricing을 같이 봐야 정확합니다. Quickstart는 모든 ChatGPT 플랜에 Codex가 포함된다고 설명하고 데스크톱에서는 App 경로를 우선 보여주며, Pricing은 `GPT-5.5` 사용량 표를 유지합니다. Plus 기준 로컬 메시지 범위는 `gpt-5.5` 15-80, `gpt-5.4` 20-100, `gpt-5.4-mini` 60-350, `gpt-5.3-codex` 30-150으로 제시되며, 문서는 GPT-5.5가 더 적은 토큰으로 더 나은 결과를 내 usage를 효율적으로 쓴다고 설명합니다. API 가격은 별도 Models/Pricing 페이지 기준으로 `gpt-5.5`와 `gpt-5.5-pro`를 구분해서 봐야 합니다.
 - 다만 가격 설명은 오늘 공식 최신 자료 기준으로 한 번 더 바로잡아야 했습니다. 최신 Codex rate card 도움말 문서는 2026년 4월 24일 기준 대부분의 Plus·Pro·Business·Enterprise·Edu·Gov·Health 고객이 이제 메시지 평균표보다 토큰 기반 크레딧 표를 우선 봐야 한다고 설명합니다. 이번 실행에서 가장 중요한 outdated 수정 포인트가 이 부분입니다.
 - 여기에 최신 공식 발표도 같이 봐야 정확도가 올라갑니다. 2026년 4월 23일 `Introducing GPT-5.5`는 최상단 모델 추천을 바꾸고, 4월 2일 `Codex now offers pay-as-you-go pricing for teams`는 Business·Enterprise 팀의 Codex-only seat와 토큰 기반 과금 전환을 더 분명하게 설명하며, 4월 16일 `Codex for (almost) everything`는 background computer use, 더 많은 plugins, multiple terminal tabs, SSH devbox, IDE sync, projectless chats, richer artifact/sidebar 흐름을 App 중심 이야기로 끌어올렸습니다.
-- 가이드 구조도 오늘 조금 바뀌었습니다. 인트로에는 언어별 온보딩 그림이 들어갔고, Codex CLI/App/Web 스크린샷도 2026년 4월 23일 기준 캡처로 다시 교체했습니다. 또 비교 챕터였던 섹션 19는 제거했고, `computer use`는 모델 설명의 보조 문장보다 App 섹션 안의 독립 기능 챕터처럼 읽히도록 재배치했습니다.
+- 가이드 구조도 오늘 조금 바뀌었습니다. 인트로에는 언어별 온보딩 그림과 Developer Showcase 안내가 들어갔고, Codex CLI/App/Web 스크린샷도 2026년 4월 23일 기준 캡처로 다시 교체했습니다. 또 비교 챕터였던 섹션 19는 제거했고, `browser use`와 `computer use`는 App 섹션 안의 독립 기능 챕터처럼 읽히도록 재배치했습니다.
 - 설치 흐름은 예전보다 더 분명해졌습니다. Quickstart는 앱을 가장 쉬운 시작 경로로 두고, IDE는 VS Code, Cursor, Windsurf, JetBrains를 함께 다루며, API 키 로그인도 가능하지만 cloud threads와 일부 credits 기반 기능은 제한될 수 있다고 안내합니다.
 - Windows 문서는 이제 일반 Windows 가이드와 전용 Windows App 문서가 역할을 나눕니다. 기본 권장은 네이티브 앱이고, Microsoft Store나 `winget`로 설치할 수 있으며, `elevated` 샌드박스를 우선 쓰고 `unelevated`는 대안으로 봅니다. 전용 데스크톱 격리가 기본이고, 워크플로가 Linux 중심이거나 IDE 에이전트 작업이 필요할 때 WSL2가 적절한 선택지로 정리됩니다.
 - 현재 app, app/features, app/automations 문서를 보면 Codex App은 단순한 데스크톱 셸이 아니라 worktrees, Automations, thread/standalone automation 분기, Git 도구, 내장 terminal, voice dictation, pop-out window, IDE sync, image input, chats, artifact preview, 로컬 작업 기본 cached web search, notifications, 절전 방지까지 묶은 작업 허브로 설명됩니다. 2026년 4월 업데이트 기준으로 background computer use, 더 많은 plugins, multiple terminal tabs, SSH devbox, richer summary pane도 핵심 흐름으로 올라왔습니다. 출시 글의 “command center for agents” 관점도 이제 기능 문서와 거의 같은 방향으로 맞물립니다. 여기에 가격 문서를 함께 보면 내장 이미지 생성은 일반 Codex 한도를 공유하면서 평균적으로 3-5배 더 빠르게 소모하고, Fast mode는 적용되는 모델에서 크레딧을 2배 더 소모한다는 점도 같이 이해해야 합니다.
@@ -51,7 +58,20 @@
 ### 사용자별 즉시 적용 요약
 
 - **처음 사용자 (10분)**: `04-06` 설치/로그인 → `10`에서 기본 sandbox/approval 유지 → 작은 수정 1건 + Git 체크포인트.
-- **실무 사용자 (팀 롤아웃)**: `12-14`에서 AGENTS.md + `.codex/config.toml` 고정 → `15-16` 자동 실행/리뷰 흐름 표준화 → `17` 프롬프트 계약을 팀 기본값으로 채택.
+- **실무 사용자 (팀 롤아웃)**: `12-14`에서 AGENTS.md + `.codex/config.toml` 정리 → `15-16` 자동 실행/리뷰 흐름 표준화 → `17` 요청/검증 방식을 팀 기본값으로 채택.
+
+### OpenAI 담당자 실전 팁 추가
+
+섹션 **21**에 Gabriel Chua, Vaibhav “VB” Srivastav, Tibo, Katia Gil Guzman, Dominik Kundel, Romain Huet 등 OpenAI Developer Experience와 Codex 담당자들이 공개적으로 공유한 운영 패턴을 녹였습니다.
+
+- Codex 업데이트를 단순히 “새 모델”로 보지 말고 **Model + Harness + Surfaces**로 나눠 읽습니다.
+- 다른 코딩 에이전트 옆에 Codex를 세컨드 패스 리뷰어로 붙입니다. 일반 review, adversarial review, rescue는 각각 다른 위험 단계에 씁니다.
+- Subagent는 보안 리뷰, 테스트 공백, 유지보수성 점검, 로그 트리아지처럼 읽기 중심 병렬 작업부터 시작합니다.
+- Codex를 vibe coding 자동완성보다 PR을 설명하고 테스트를 돌리고 리뷰 가능한 단위로 나누는 AI teammate로 다룹니다.
+- 실행할 명령, 확인할 화면, 실패 시 멈출 기준, 기대 출력, 출처를 프롬프트에 넣어 작업을 검증 가능하게 만듭니다.
+- Automations, plugins, connectors, Browser use, app integrations는 코딩뿐 아니라 반복 업무 준비까지 묶는 작업 허브 패턴으로 봅니다.
+
+이번 추가에 사용한 출처는 Gabriel Chua의 [How I Think About Codex](https://www.linkedin.com/pulse/how-i-think-codex-gabriel-chua-ukhic), OpenAI의 [Codex agent loop](https://openai.com/index/unrolling-the-codex-agent-loop/), [openai/codex-plugin-cc](https://github.com/openai/codex-plugin-cc), 공식 [Codex Subagents](https://developers.openai.com/codex/subagents), 그리고 [VB](https://x.com/reach_vb), [Tibo](https://x.com/thsottiaux), [Katia](https://x.com/kagigz), [Dominik Kundel](https://x.com/dkundel/status/2018436269907603590), [Romain Huet](https://vivatech.com/speakers/e5bb6392-2f32-f011-8b3d-6045bd903b46/)의 공개 글/프로필입니다.
 
 ### 다루는 내용
 
@@ -63,9 +83,9 @@
 | 06–09 | CLI, App, IDE Extension, Web 사용법 |
 | 10–14 | 승인 모드, 슬래시 명령어, AGENTS.md, config.toml, MCP |
 | 15–16 | 세션 관리, CI/CD 자동화 |
-| 17 | Prompting Codex agents 개요, 실행 계약, 워크플로, 플레이북 |
+| 17 | Prompting Codex agents 개요, 요청·검증 규칙, 워크플로, 플레이북 |
 | 18 | 고급 활용 |
-| 19–20 | FAQ, 참고 자료 |
+| 19–21 | FAQ, 참고 자료, OpenAI 담당자 실전 팁 |
 
 ---
 
@@ -122,8 +142,8 @@ git push origin fix/my-improvement
 
 ```
 codex-101/
-├── index.html      # 메인 페이지 (챕터 맵 + 20개 섹션)
-├── style.css       # 스타일 (다크/라이트 테마 + 인트로/feature 블록)
+├── index.html      # 메인 페이지 (챕터 맵 + 21개 섹션)
+├── style.css       # 스타일 (다크/라이트 테마 + 인트로/browser-use/computer-use feature 블록)
 ├── app.js          # 인터랙션 (테마, 언어, 섹션 네비게이션)
 ├── i18n.js         # 다국어 번역 (KR/EN)
 └── images/         # 최신 스크린샷 + 언어별 설명 그림
