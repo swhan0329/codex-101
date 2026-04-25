@@ -49,8 +49,8 @@
                         <span aria-hidden="true"> · </span>
                         <span class="live-date" data-date-format="long">2026년 4월 24일</span>
                     </p>
-                    <h1 class="hero-title" data-i18n="hero_title">OpenAI Codex를<br />한국 실무에 바로 붙이는 가이드</h1>
-                    <p class="hero-sub" data-i18n="hero_sub">CLI · Desktop App (macOS/Windows) · IDE Extension · Web · iOS · SDK automation<br />최신 공식 문서를 기준으로 제품 면 선택, 모델 선택, 샌드박스/승인, MCP, 자동화를 처음 사용자와 실무 사용자 모두 읽기 쉽도록 다시 정리했습니다.</p>
+                    <h1 class="hero-title" data-i18n="hero_title">OpenAI Codex를<br />실무에 바로 붙이는 가이드</h1>
+                    <p class="hero-sub" data-i18n="hero_sub">CLI · Desktop App (macOS/Windows) · IDE Extension · Web · iOS · SDK automation<br />최신 공식 문서를 기준으로 어디서 시작할지, 어떤 모델을 쓸지, 샌드박스/승인, MCP, 자동화를 처음 사용자와 실무 사용자 모두 읽기 쉽도록 다시 정리했습니다.</p>
                     <div class="hero-cta">
                         <a href="#start-here" class="btn btn-primary" data-i18n="hero_cta">빠른 시작 경로 보기</a>
                         <a href="#s17" class="btn btn-ghost" data-i18n="hero_cta_secondary">Prompting 실전 가이드</a>
@@ -103,13 +103,13 @@
                         </a>
                         <a href="#s12" class="hero-path-card">
                             <span class="hero-path-tag" data-i18n="hero_path_2_tag">Team setup</span>
-                            <strong class="hero-path-title" data-i18n="hero_path_2_title">프로젝트 규칙과 도구 접근 고정</strong>
-                            <span class="hero-path-desc" data-i18n="hero_path_2_desc">AGENTS.md, config.toml, MCP, 승인 정책을 팀 기준으로 맞춥니다.</span>
+                            <strong class="hero-path-title" data-i18n="hero_path_2_title">프로젝트 규칙과 도구 권한 정리</strong>
+                            <span class="hero-path-desc" data-i18n="hero_path_2_desc">AGENTS.md, config.toml, MCP, 승인 방식을 팀 기준에 맞게 정합니다.</span>
                         </a>
                         <a href="#s17" class="hero-path-card">
                             <span class="hero-path-tag" data-i18n="hero_path_3_tag">Prompting</span>
-                            <strong class="hero-path-title" data-i18n="hero_path_3_title">긴 작업이 덜 흔들리는 프롬프트 계약</strong>
-                            <span class="hero-path-desc" data-i18n="hero_path_3_desc">tool loop, verification, runtime tuning을 한 번에 정리합니다.</span>
+                            <strong class="hero-path-title" data-i18n="hero_path_3_title">긴 작업이 덜 흔들리는 요청 방식</strong>
+                            <span class="hero-path-desc" data-i18n="hero_path_3_desc">도구 사용, 결과 검증, 실행 설정을 한 번에 정리합니다.</span>
                         </a>
                     </div>
                     <div class="hero-signal-row" aria-label="Guide snapshot">
@@ -138,7 +138,7 @@
                 <div class="guide-sidebar-inner home-sidebar-inner">
                     <p class="guide-sidebar-kicker" data-i18n="home_nav_kicker">Guide map</p>
                     <h2 class="guide-sidebar-title" data-i18n="home_nav_title">Codex 101 chapters</h2>
-                    <p class="guide-sidebar-lead" data-i18n="home_nav_lead">최신 사실 확인부터 시작 표면 선택, 실행 규칙, 자동화, prompting까지 실무 적용 순서대로 묶었습니다.</p>
+                    <p class="guide-sidebar-lead" data-i18n="home_nav_lead">최신 사실 확인부터 시작 방식 선택, 실행 규칙, 자동화, prompting까지 실무 적용 순서대로 묶었습니다.</p>
                     <nav class="home-nav" id="home-nav" aria-label="Codex 101 sections">
                         <!-- JS injects home nav groups -->
                     </nav>
@@ -150,19 +150,98 @@
             <section class="section overview-section" id="start-here">
                 <p class="overview-kicker" data-i18n="overview_kicker">Start here</p>
                 <h2 data-i18n="overview_title">처음 사용자와 실무 사용자를 위한 읽기 경로</h2>
-                <p class="overview-lead" data-i18n="overview_lead">OpenAI 공식 문서에서 현재 확인되는 핵심 사실을 먼저 압축하고, 그 다음 이 페이지를 초보자용 흐름과 실무 운영 흐름으로 나눠서 읽을 수 있게 정리했습니다.</p>
+                <p class="overview-lead" data-i18n="overview_lead">이 페이지는 먼저 세 가지를 보여줍니다. 오늘 공식 문서 기준으로 무엇이 바뀌었는지, 지금 어떤 모델과 사용 방식을 고르면 되는지, 그리고 처음 사용자와 실무 사용자가 어디서부터 읽으면 좋은지입니다.</p>
+
+                <div class="showcase-card">
+                    <div>
+                        <p class="overview-action-kicker" data-i18n="showcase_kicker">Built with Codex</p>
+                        <h3 data-i18n="showcase_title">Codex로 만든 실제 결과물을 먼저 둘러보세요</h3>
+                        <p data-i18n="showcase_desc">OpenAI Developer Showcase에는 Codex로 만든 앱, 게임, 랜딩 페이지, 데이터 시각화 예제가 모여 있습니다. 어떤 결과물이 가능한지 먼저 둘러보고, 바로 실행해볼 수 있는 예시 프롬프트의 감도 함께 잡아보세요.</p>
+                    </div>
+                    <a href="https://developers.openai.com/showcase" target="_blank" class="btn btn-secondary" data-i18n="showcase_cta">Showcase 보기</a>
+                </div>
+
+                <div class="overview-lens-grid">
+                    <article class="overview-lens-card">
+                        <p class="overview-action-kicker" data-i18n="overview_lens_beginner_kicker">처음 사용자 한눈 요약</p>
+                        <h3 data-i18n="overview_lens_beginner_title">오늘 바로 실행할 최소 경로</h3>
+                        <p data-i18n="overview_lens_beginner_desc">설치 이후 어디까지 해야 시작이 끝나는지 먼저 고정합니다.</p>
+                        <ul class="overview-action-list">
+                            <li data-i18n="overview_lens_beginner_s1">Quickstart 기준으로 앱/IDE/CLI 중 하나만 먼저 고릅니다.</li>
+                            <li data-i18n="overview_lens_beginner_s2">Local + 기본 sandbox/approval로 첫 작업 1건을 완료합니다.</li>
+                        </ul>
+                        <p class="overview-lens-outcome" data-i18n="overview_lens_beginner_outcome">결과: 첫 작업 성공 + 되돌릴 수 있는 Git 체크포인트</p>
+                    </article>
+
+                    <article class="overview-lens-card overview-lens-card-pro">
+                        <p class="overview-action-kicker" data-i18n="overview_lens_pro_kicker">실무 사용자 한눈 요약</p>
+                        <h3 data-i18n="overview_lens_pro_title">팀 운영 기준을 먼저 고정</h3>
+                        <p data-i18n="overview_lens_pro_desc">개인 설정이 아니라 프로젝트 규칙으로 행동을 통일합니다.</p>
+                        <ul class="overview-action-list">
+                            <li data-i18n="overview_lens_pro_s1">AGENTS.md와 .codex/config.toml로 모델·권한·완료 기준을 명시합니다.</li>
+                            <li data-i18n="overview_lens_pro_s2">Docs MCP를 기본 연결해 제품/API 답변을 문서 근거 기반으로 유지합니다.</li>
+                        </ul>
+                        <p class="overview-lens-outcome" data-i18n="overview_lens_pro_outcome">결과: 팀별 재현 가능한 실행/리뷰/자동화 흐름</p>
+                    </article>
+                </div>
+
+                <div class="overview-decision-card">
+                    <div class="overview-decision-head">
+                        <p class="overview-action-kicker" data-i18n="overview_decision_kicker">Decision first</p>
+                        <h3 data-i18n="overview_decision_title">전공자가 바로 고를 수 있는 상황별 선택표</h3>
+                        <p data-i18n="overview_decision_desc">긴 설명을 읽기 전에, 지금 하려는 작업에 맞는 사용 방식과 모델을 먼저 고를 수 있게 압축했습니다.</p>
+                    </div>
+                    <div class="table-wrap">
+                        <table class="overview-decision-table">
+                            <thead>
+                                <tr>
+                                    <th data-i18n="overview_decision_th_case">상황</th>
+                                    <th data-i18n="overview_decision_th_surface">추천 사용 방식</th>
+                                    <th data-i18n="overview_decision_th_model">모델 기준</th>
+                                    <th data-i18n="overview_decision_th_next">바로 읽을 곳</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-i18n="overview_decision_local_case">내 프로젝트에서 작은 수정</td>
+                                    <td data-i18n="overview_decision_local_surface">App Local 또는 CLI</td>
+                                    <td data-i18n="overview_decision_local_model">gpt-5.5, 없으면 gpt-5.4</td>
+                                    <td><a href="#s5" data-i18n="overview_decision_local_next">05-06 설치와 첫 실행</a></td>
+                                </tr>
+                                <tr>
+                                    <td data-i18n="overview_decision_ide_case">IDE 안에서 계속 코딩</td>
+                                    <td data-i18n="overview_decision_ide_surface">IDE Extension</td>
+                                    <td data-i18n="overview_decision_ide_model">기본 추천 모델 + 프로젝트 컨텍스트</td>
+                                    <td><a href="#s8" data-i18n="overview_decision_ide_next">08 IDE Extension</a></td>
+                                </tr>
+                                <tr>
+                                    <td data-i18n="overview_decision_team_case">팀 규칙과 자동화 도입</td>
+                                    <td data-i18n="overview_decision_team_surface">CLI/App + AGENTS.md + MCP</td>
+                                    <td data-i18n="overview_decision_team_model">gpt-5.5/gpt-5.4, 빠른 보조 작업은 mini</td>
+                                    <td><a href="#s12" data-i18n="overview_decision_team_next">12-16 운영 설정</a></td>
+                                </tr>
+                                <tr>
+                                    <td data-i18n="overview_decision_review_case">PR 리뷰와 클라우드 작업</td>
+                                    <td data-i18n="overview_decision_review_surface">Web/Cloud</td>
+                                    <td data-i18n="overview_decision_review_model">Cloud/review 경로 기준 모델</td>
+                                    <td><a href="#s9" data-i18n="overview_decision_review_next">09 Web + 16 자동화</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
 
                 <div class="overview-visual-card overview-visual-card-intro">
                     <div class="overview-visual-copy">
                         <p class="overview-action-kicker" data-i18n="overview_visual_kicker">Visual guide</p>
                         <h3 data-i18n="overview_visual_title">그림으로 먼저 이해하는 Codex 시작 흐름</h3>
-                        <p data-i18n="overview_visual_desc">처음 보는 사용자라면 이 그림만 먼저 훑어도 됩니다. 어떤 표면에서 시작할지 고르고, 작은 작업으로 시작하고, sandbox와 Git으로 안전하게 진행한 다음, AGENTS.md와 Docs MCP로 점점 더 똑똑하게 쓰는 흐름을 한 장에 압축했습니다.</p>
+                        <p data-i18n="overview_visual_desc">처음 보는 사용자라면 이 그림만 먼저 훑어도 됩니다. 어디서 시작할지 고르고, 작은 작업으로 시작하고, sandbox와 Git으로 안전하게 진행한 다음, AGENTS.md와 Docs MCP로 점점 더 똑똑하게 쓰는 흐름을 한 장에 압축했습니다.</p>
                         <p class="overview-visual-meta" data-i18n="overview_visual_meta">이 안내 그림은 ImageGen으로 제작했고, 언어 전환에 따라 영어/한국어 버전이 다르게 보입니다.</p>
                     </div>
                     <figure class="overview-visual-figure">
                         <img class="overview-lang-visual overview-lang-visual-ko" src="images/codex_beginner_map_ko.png" alt="Korean beginner-friendly Codex onboarding illustration" loading="lazy" />
                         <img class="overview-lang-visual overview-lang-visual-en" src="images/codex_beginner_map.png" alt="English beginner-friendly Codex onboarding illustration" loading="lazy" />
-                        <figcaption data-i18n="overview_visual_caption">초보자용 요약 그림: 표면 선택 → 작은 작업 → 안전하게 실행 → AGENTS.md와 Docs MCP로 확장</figcaption>
+                        <figcaption data-i18n="overview_visual_caption">초보자용 요약 그림: 시작 방식 선택 → 작은 작업 → 안전하게 실행 → AGENTS.md와 Docs MCP로 확장</figcaption>
                     </figure>
                 </div>
 
@@ -185,78 +264,6 @@
                     </article>
                 </div>
 
-                <div class="overview-fact-panel">
-                    <div class="overview-fact-head">
-                        <div>
-                            <p class="overview-kicker" data-i18n="overview_fact_kicker">Officially verified today</p>
-                            <h3 data-i18n="overview_fact_title">오늘의 업데이트</h3>
-                        </div>
-                        <p class="overview-fact-date">
-                            <span data-i18n="overview_fact_date_prefix">업데이트 기준일</span>
-                            <span class="live-date" data-date-format="long">2026년 4월 24일</span>
-                        </p>
-                    </div>
-
-                    <details class="overview-update-log" open>
-                        <summary>
-                            <span class="overview-update-log-title" data-i18n="overview_update_toggle_title">오늘 반영한 변경 보기</span>
-                            <span class="overview-update-log-hint" data-i18n="overview_update_toggle_hint">매 실행마다 먼저 확인한 공식 변경 사항</span>
-                        </summary>
-                        <div class="overview-update-strip" aria-label="Today update summary">
-                            <article class="update-pill">
-                                <p class="update-pill-title" data-i18n="overview_update_1_title">모델/표면 매트릭스 재확인</p>
-                                <p class="update-pill-desc" data-i18n="overview_update_1_desc">`codex/models`를 우선 확인해 오늘은 `gpt-5.5`가 최우선 추천 모델로 올라왔는지, `gpt-5.4`가 fallback이 되었는지, `gpt-5.4-mini`와 `gpt-5.3-codex`의 역할이 어떻게 갈리는지까지 다시 대조했습니다.</p>
-                            </article>
-                            <article class="update-pill">
-                                <p class="update-pill-title" data-i18n="overview_update_2_title">요금제/크레딧 구조 재정리</p>
-                                <p class="update-pill-desc" data-i18n="overview_update_2_desc">개인 플랜 한도뿐 아니라 `GPT-5.5` 사용량 표, `Free $0`·`Go $8`·`Plus $20`·`Pro from $100`, Business·Enterprise의 pay-as-you-go 팀 경로, 그리고 2026년 4월 24일 기준 대부분 플랜이 토큰 기반 rate card로 이동한 흐름까지 다시 반영했습니다.</p>
-                            </article>
-                            <article class="update-pill">
-                                <p class="update-pill-title" data-i18n="overview_update_3_title">Quickstart·IDE 경로 정리</p>
-                                <p class="update-pill-desc" data-i18n="overview_update_3_desc">처음 사용자는 App 중심, 전문 사용자는 IDE/CLI + Docs MCP 중심으로 읽히도록 시작 경로를 유지하되, API 키 로그인 제한과 Windows/WSL 설명을 더 분명하게 다듬었습니다.</p>
-                            </article>
-                            <article class="update-pill">
-                                <p class="update-pill-title" data-i18n="overview_update_4_title">4월 App 업데이트 반영</p>
-                                <p class="update-pill-desc" data-i18n="overview_update_4_desc">2026년 4월 16일 `Codex for (almost) everything` 발표와 `app/features`·`app/automations`를 함께 대조해 background computer use, 더 많은 plugins, multiple terminal tabs, SSH devbox, richer artifact/sidebar 흐름을 현재 문서 구조에 맞게 다시 묶었습니다.</p>
-                            </article>
-                            <article class="update-pill">
-                                <p class="update-pill-title" data-i18n="overview_update_5_title">관련 발표 전체 재점검</p>
-                                <p class="update-pill-desc" data-i18n="overview_update_5_desc">`developers.openai.com/codex`, `openai.com/index`, `openai.com/codex`, 그리고 최신 Codex rate card 도움말 문서를 함께 다시 훑어보며 2026년 4월 23일 `Introducing GPT-5.5`, 4월 16일 App 확장 발표, 4월 2일 팀용 pay-as-you-go 좌석 업데이트, 4월 23일 기존 Enterprise까지 토큰 과금 전환된 내용을 대조했고 이를 상단 토글과 가격 설명에 직접 반영했습니다.</p>
-                            </article>
-                            <article class="update-pill">
-                                <p class="update-pill-title" data-i18n="overview_update_6_title">Docs MCP·설정 기준 재점검</p>
-                                <p class="update-pill-desc" data-i18n="overview_update_6_desc">Docs MCP 가이드를 다시 확인해 `developers.openai.com/learn/docs-mcp`와 서버 URL `https://developers.openai.com/mcp`, CLI/IDE 설정 공유, AGENTS.md 유도 문구를 최신 흐름에 맞췄고, config reference 기준으로 `review_model`, granular approvals, `web_search`, permissions profile, apps/plugins/skills 제어 키도 함께 다시 맞췄습니다.</p>
-                            </article>
-                        </div>
-                    </details>
-
-                    <p class="overview-sources-label" data-i18n="overview_sources_label">근거 문서</p>
-                    <div class="overview-source-links">
-                        <a href="https://developers.openai.com/codex/quickstart/" target="_blank" class="source-chip" data-i18n="overview_source_1">Codex Quickstart</a>
-                        <a href="https://developers.openai.com/codex/" target="_blank" class="source-chip" data-i18n="overview_source_16">Codex Overview</a>
-                        <a href="https://developers.openai.com/codex/models/" target="_blank" class="source-chip" data-i18n="overview_source_8">Codex Models</a>
-                        <a href="https://developers.openai.com/codex/pricing/" target="_blank" class="source-chip" data-i18n="overview_source_2">Codex Pricing</a>
-                        <a href="https://developers.openai.com/codex/learn/best-practices/" target="_blank" class="source-chip" data-i18n="overview_source_3">Codex Best practices</a>
-                        <a href="https://developers.openai.com/codex/config-reference/" target="_blank" class="source-chip" data-i18n="overview_source_4">Codex Config Reference</a>
-                        <a href="https://developers.openai.com/codex/agent-approvals-security/" target="_blank" class="source-chip" data-i18n="overview_source_5">Agent approvals & security</a>
-                        <a href="https://developers.openai.com/codex/ide/" target="_blank" class="source-chip" data-i18n="overview_source_6">IDE extension</a>
-                        <a href="https://developers.openai.com/codex/windows/" target="_blank" class="source-chip" data-i18n="overview_source_7">Windows guide</a>
-                        <a href="https://developers.openai.com/learn/docs-mcp" target="_blank" class="source-chip" data-i18n="overview_source_20">Docs MCP</a>
-                        <a href="https://openai.com/index/introducing-gpt-5-5/" target="_blank" class="source-chip" data-i18n="overview_source_9">GPT-5.5 announcement</a>
-                        <a href="https://openai.com/index/introducing-gpt-5-4-mini-and-nano/" target="_blank" class="source-chip" data-i18n="overview_source_14">GPT-5.4 mini and nano announcement</a>
-                        <a href="https://openai.com/index/introducing-gpt-5-3-codex-spark/" target="_blank" class="source-chip" data-i18n="overview_source_10">GPT-5.3-Codex-Spark announcement</a>
-                        <a href="https://openai.com/index/introducing-the-codex-app/" target="_blank" class="source-chip" data-i18n="overview_source_13">Codex App announcement</a>
-                        <a href="https://developers.openai.com/codex/app/automations" target="_blank" class="source-chip" data-i18n="overview_source_17">Codex App Automations</a>
-                        <a href="https://developers.openai.com/codex/app/features" target="_blank" class="source-chip" data-i18n="overview_source_18">Codex App Features</a>
-                        <a href="https://developers.openai.com/codex/app/windows" target="_blank" class="source-chip" data-i18n="overview_source_19">Codex Windows App</a>
-                        <a href="https://developers.openai.com/codex/plugins/" target="_blank" class="source-chip" data-i18n="overview_source_15">Codex Plugins</a>
-                        <a href="https://developers.openai.com/codex/skills" target="_blank" class="source-chip" data-i18n="overview_source_21">Codex Skills</a>
-                        <a href="https://help.openai.com/en/articles/20001106-codex-rate-card" target="_blank" class="source-chip" data-i18n="overview_source_22">Codex rate card</a>
-                        <a href="https://developers.openai.com/codex/community/codex-for-oss/" target="_blank" class="source-chip" data-i18n="overview_source_11">Codex for OSS</a>
-                        <a href="https://developers.openai.com/codex/guides/build-ai-native-engineering-team/" target="_blank" class="source-chip" data-i18n="overview_source_12">AI-Native Engineering Team</a>
-                    </div>
-                </div>
-
                 <div class="overview-track-grid">
                     <article class="track-card">
                         <span class="product-icon" data-i18n="overview_beginner_tag">처음 시작</span>
@@ -275,9 +282,9 @@
                         <h3 data-i18n="overview_pro_title">팀 규칙과 자동화까지</h3>
                         <p data-i18n="overview_pro_desc">AGENTS.md, config.toml, 세션 운영, non-interactive 실행, 웹 리뷰 자동화를 연결해서 팀 작업 방식으로 확장하는 경로입니다.</p>
                         <ul class="overview-list">
-                            <li data-i18n="overview_pro_p1">12-14에서 규칙, 설정, 도구 접근을 프로젝트 단위로 고정합니다.</li>
-                            <li data-i18n="overview_pro_p2">15-16에서 resume, codex exec, PR 리뷰 자동화를 한 흐름으로 묶습니다.</li>
-                            <li data-i18n="overview_pro_p3">17에서 output contract, tool loop, verification을 팀 표준 프롬프트로 정리합니다.</li>
+                            <li data-i18n="overview_pro_p1">12-14에서 규칙, 설정, 연결할 도구와 권한을 프로젝트 단위로 정합니다.</li>
+                            <li data-i18n="overview_pro_p2">15-16에서 이어서 작업하기, codex exec, PR 리뷰 자동화를 한 흐름으로 묶습니다.</li>
+                            <li data-i18n="overview_pro_p3">17에서 출력 형식, 도구 사용, 검증 방식을 팀 표준 프롬프트로 정리합니다.</li>
                         </ul>
                         <a href="#s12" class="btn btn-secondary" data-i18n="overview_pro_cta">운영 가이드 보기</a>
                     </article>
@@ -288,7 +295,7 @@
             <!-- Section 1 -->
             <section class="section" id="s1">
                 <h2><span class="section-num">01</span> <span data-i18n="s1_title">Codex 에코시스템 개요</span></h2>
-                <p data-i18n="s1_intro">OpenAI Codex는 소프트웨어 개발을 위한 코딩 에이전트입니다. 최신 공식 문서는 Codex를 앱, IDE, CLI, 웹/iOS, SDK 기반 자동화에서 사용할 수 있다고 설명하며, 지금은 모델 선택기에서 `gpt-5.5`가 보이면 대부분의 작업을 거기서 시작하라고 권장합니다. `gpt-5.5`는 복잡한 코딩·computer use·knowledge work·research workflow용 최신 프론티어 모델이지만 현재 ChatGPT 로그인 경로에서 우선 제공되고 API key 경로에서는 아직 사용할 수 없습니다. 따라서 `gpt-5.4`는 여전히 가장 중요한 fallback이고, 빠른 로컬 작업이나 보조 에이전트에는 `gpt-5.4-mini`, Codex Cloud와 클라우드 리뷰에는 `gpt-5.3-codex`, 거의 즉각적인 반복에는 `gpt-5.3-codex-spark`, 대안 모델로는 `gpt-5.2`를 보면 됩니다.</p>
+                <p data-i18n="s1_intro">OpenAI Codex는 소프트웨어 개발을 위한 코딩 에이전트입니다. 최신 공식 문서는 Codex를 앱, IDE, CLI, 웹/iOS, SDK 기반 자동화에서 사용할 수 있다고 설명하며, 지금은 모델 선택기에서 `gpt-5.5`가 보이면 대부분의 작업을 거기서 시작하라고 권장합니다. API에서는 공식 Models 문서 기준으로 `gpt-5.5`를 사용할 수 있고, 더 높은 정확도가 필요한 작업에는 `gpt-5.5-pro`도 Responses API와 Batch API에서 사용할 수 있습니다. 빠른 로컬 작업이나 보조 에이전트에는 `gpt-5.4-mini`, Codex Cloud와 클라우드 리뷰에는 `gpt-5.3-codex`, 거의 즉각적인 반복에는 `gpt-5.3-codex-spark`, 대안 모델로는 `gpt-5.2`를 보면 됩니다.</p>
                 <blockquote data-i18n="s1_philosophy">"단순 코드 생성 → 소프트웨어 엔지니어 팀원"</blockquote>
                 <p data-i18n="s1_desc">Codex는 코드 자동완성 도구가 아닙니다. 여러 파일을 동시에 수정하고, 테스트를 실행하고, 결과를 검증하며, 스스로 디버깅하는 자율
                     에이전트입니다.</p>
@@ -425,7 +432,7 @@
                     <div class="model-card">
                         <div class="model-banner">gpt-5.4</div>
                         <div class="model-body">
-                            <p class="model-desc" data-i18n="m1_f">GPT-5.5가 아직 보이지 않거나 API key 경로를 써야 할 때의 기본 fallback 플래그십입니다. 강한 코딩·추론·tool use 균형이 계속 장점입니다.</p>
+                            <p class="model-desc" data-i18n="m1_f">GPT-5.5가 아직 모델 선택기에 보이지 않거나 비용/속도 균형이 더 중요할 때의 기본 대체 모델입니다. 강한 코딩·추론·도구 사용 균형이 계속 장점입니다.</p>
                             <div class="model-cmd">codex -m gpt-5.4</div>
                             <div class="model-features">
                                 <div class="model-feat-row"><span class="model-feat-label"
@@ -543,7 +550,7 @@
                     </div>
                 </div>
                 <div class="callout">
-                    <p data-i18n="s3_rec_note">💡 최신 `codex/models` 기준 공식 가이드는 모델 선택기에서 `gpt-5.5`가 보이면 대부분의 작업을 거기서 시작하라고 권장합니다. 아직 rollout되지 않았거나 API key 경로라면 `gpt-5.4`를 계속 사용하면 됩니다. 더 빠르고 가벼운 코딩 작업이나 subagent에는 `gpt-5.4-mini`, 복잡한 소프트웨어 엔지니어링과 현재 Codex Cloud에는 `gpt-5.3-codex`, 거의 즉각적인 반복에는 `gpt-5.3-codex-spark`를 검토하세요. 현재 대표 대안 모델은 `gpt-5.2`입니다.</p>
+                    <p data-i18n="s3_rec_note">💡 최신 `codex/models` 기준 공식 가이드는 모델 선택기에서 `gpt-5.5`가 보이면 대부분의 작업을 거기서 시작하라고 권장합니다. 아직 rollout되지 않았거나 비용/속도 균형이 중요하면 `gpt-5.4`를 계속 사용하면 됩니다. API에서는 `gpt-5.5`와 `gpt-5.5-pro`를 사용할 수 있으며, Pro는 더 높은 정확도가 필요한 Responses API/Batch API 작업에 적합합니다. 더 빠르고 가벼운 코딩 작업이나 subagent에는 `gpt-5.4-mini`, 복잡한 소프트웨어 엔지니어링과 현재 Codex Cloud에는 `gpt-5.3-codex`, 거의 즉각적인 반복에는 `gpt-5.3-codex-spark`를 검토하세요. 현재 대표 대안 모델은 `gpt-5.2`입니다.</p>
                 </div>
 
                 <h4 data-i18n="s3_alt_title">🔄 대안 모델</h4>
@@ -673,12 +680,12 @@
                                     <tr>
                                         <td>API Key</td>
                                         <td data-i18n="s4_usage_based">토큰 사용량 기반</td>
-                                        <td data-i18n="s4_codex_api">CLI/IDE/SDK 전용, 클라우드 기능 없음, 최신 모델 접근 지연 가능</td>
+                                        <td data-i18n="s4_codex_api">CLI/IDE/SDK 전용, 클라우드 기능 없음, API 모델은 `gpt-5.5`/`gpt-5.5-pro` 포함</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
-                        <p class="callout-inline" data-i18n="s4_note_access">현재 공식 문서는 모든 ChatGPT 플랜에 Codex가 포함된다고 설명합니다. 처음 보는 사용자라면 `Free $0`, `Go $8`, `Plus $20`, `Pro from $100` 순으로 보면 이해가 쉽고, 팀 사용자는 Business·Enterprise의 Codex-only pay-as-you-go seat를 같이 보면 됩니다. Pricing 페이지는 여전히 모델별 5시간 한도와 사용량 범위를 보여주고, 최신 공식 Codex rate card는 2026년 4월 24일 기준 대부분 Plus·Pro·Business·Enterprise·Edu·Gov·Health 고객이 토큰 기반 크레딧 표를 사용한다고 설명합니다. 즉 이제는 대략적인 메시지 수만 보는 것보다 입력 토큰, cached input, 출력 토큰이 크레딧을 어떻게 쓰는지 함께 보는 편이 더 정확합니다. Plus 기준 로컬 메시지 범위는 `gpt-5.5` 15-80, `gpt-5.4` 20-100, `gpt-5.4-mini` 60-350, `gpt-5.3-codex` 30-150이며, `gpt-5.5`는 더 적은 토큰으로 비슷하거나 더 나은 결과를 내도록 설명됩니다. 다만 API key 경로에는 아직 `gpt-5.5`가 없고, 이미지 생성은 일반 Codex 한도를 평균 3-5배 더 빨리 쓰며 Fast mode는 지원 모델에서 더 높은 비율로 크레딧을 소모합니다. 실제 체감 한도는 Pricing과 usage dashboard를 항상 같이 확인하세요.</p>
+                        <p class="callout-inline" data-i18n="s4_note_access">현재 공식 문서는 모든 ChatGPT 플랜에 Codex가 포함된다고 설명합니다. 처음 보는 사용자라면 `Free $0`, `Go $8`, `Plus $20`, `Pro from $100` 순으로 보면 이해가 쉽고, 팀 사용자는 Business·Enterprise의 Codex-only pay-as-you-go seat를 같이 보면 됩니다. Pricing 페이지는 여전히 모델별 5시간 한도와 사용량 범위를 보여주고, 최신 공식 Codex rate card는 2026년 4월 24일 기준 대부분 Plus·Pro·Business·Enterprise·Edu·Gov·Health 고객이 토큰 기반 크레딧 표를 사용한다고 설명합니다. 즉 이제는 대략적인 메시지 수만 보는 것보다 입력 토큰, cached input, 출력 토큰이 크레딧을 어떻게 쓰는지 함께 보는 편이 더 정확합니다. Plus 기준 로컬 메시지 범위는 `gpt-5.5` 15-80, `gpt-5.4` 20-100, `gpt-5.4-mini` 60-350, `gpt-5.3-codex` 30-150이며, `gpt-5.5`는 더 적은 토큰으로 비슷하거나 더 나은 결과를 내도록 설명됩니다. API에서는 `gpt-5.5`와 `gpt-5.5-pro`가 별도 모델로 제공되므로 API 가격/한도는 Models와 Pricing 페이지를 따로 확인해야 합니다. 이미지 생성은 일반 Codex 한도를 평균 3-5배 더 빨리 쓰며 Fast mode는 지원 모델에서 더 높은 비율로 크레딧을 소모합니다. 실제 체감 한도는 Pricing과 usage dashboard를 항상 같이 확인하세요.</p>
                     </div>
                 </div>
             </section>
@@ -818,7 +825,7 @@ codex --cd /path/to/project
                             Extension 실시간 동기</span></div>
                     <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s7_f_img">이미지 입력 (Drag
                             & Drop)</span></div>
-                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s7_f_browser">In-app browser와 브라우저 코멘트</span></div>
+                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s7_f_browser">In-app browser, Browser use, 브라우저 코멘트</span></div>
                     <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s7_f_computer">Computer use (GUI 조작)</span></div>
                     <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s7_f_imagegen">이미지 생성/편집</span></div>
                     <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s7_f_memory">Memories & thread automations</span></div>
@@ -830,6 +837,27 @@ codex --cd /path/to/project
 
                 <h3 data-i18n="s7_playbook_title">이번 대규모 업데이트 기능 실전 가이드</h3>
                 <p class="callout-inline" data-i18n="s7_playbook_intro">아래 블록은 단순 소개가 아니라 “언제 쓰고, 어떻게 시작하고, 무엇을 주의해야 하는지”를 기능별로 압축한 실전 챕터입니다. 이번 릴리스에서 중요도가 큰 기능부터 읽으면 됩니다.</p>
+
+                <div class="overview-visual-card browser-use-spotlight" id="s7-browser-use">
+                    <div class="overview-visual-copy">
+                        <p class="overview-action-kicker" data-i18n="browser_use_kicker">Browser use</p>
+                        <h3 data-i18n="browser_use_title">Codex가 인앱 브라우저를 직접 조작하게 하기</h3>
+                        <p data-i18n="browser_use_desc">Browser use는 In-app browser 위에서 Codex가 직접 클릭, 입력, 렌더 상태 검사, 스크린샷, 수정 검증까지 수행하게 하는 기능입니다. 로컬 개발 서버나 파일 기반 프리뷰처럼 로그인 없이 열 수 있는 페이지에서 프론트엔드 버그를 재현하고 고칠 때 가장 실전적입니다.</p>
+                        <ul class="overview-list">
+                            <li data-i18n="browser_use_p1">In-app browser는 함께 보는 화면이고, Browser use는 Codex가 그 화면을 직접 다루는 실행 모드입니다.</li>
+                            <li data-i18n="browser_use_p2">Browser 플러그인을 설치·활성화한 뒤 작업에서 `@Browser`를 명시하거나 “브라우저를 사용해서 확인해줘”라고 요청합니다.</li>
+                            <li data-i18n="browser_use_p3">로그인, 쿠키, 확장 프로그램, 기존 브라우저 프로필이 필요한 페이지에는 맞지 않습니다. 인증 없는 localhost, file preview, 공개 페이지에 쓰세요.</li>
+                            <li data-i18n="browser_use_p4">요청에는 URL, 관심 상태(loading/empty/error/success), 고칠 요소, 검증할 화면 크기를 같이 적는 것이 좋습니다.</li>
+                        </ul>
+                        <a href="https://developers.openai.com/codex/app/browser" target="_blank" class="btn btn-secondary" data-i18n="browser_use_cta">공식 Browser use 문서 보기</a>
+                    </div>
+                    <div class="browser-use-recipe">
+                        <p class="overview-action-kicker" data-i18n="browser_use_recipe_kicker">Example prompt</p>
+                        <pre data-i18n-html="browser_use_example"><code>Use @Browser to open http://localhost:3000/settings.
+Reproduce the mobile overflow bug at 390px width, fix only the overflowing controls,
+then verify the page again and attach the screenshot result.</code></pre>
+                    </div>
+                </div>
 
                 <div class="overview-visual-card computer-use-spotlight" id="s7-computer-use">
                     <div class="overview-visual-copy">
@@ -856,6 +884,10 @@ codex --cd /path/to/project
                     <div class="tip-card" id="s7-browser">
                         <h4 data-i18n="s7_pb_browser_t">In-app browser</h4>
                         <p data-i18n="s7_pb_browser_d">로컬 개발 서버나 공개 페이지를 렌더 상태 그대로 검토할 때 씁니다. 로그인 없는 URL만 열고, 브라우저 코멘트로 특정 요소를 찍은 뒤 “이 코멘트만 반영해 달라”고 좁게 요청하는 흐름이 가장 안정적입니다.</p>
+                    </div>
+                    <div class="tip-card">
+                        <h4 data-i18n="s7_pb_browser_use_t">Browser use</h4>
+                        <p data-i18n="s7_pb_browser_use_d">Codex가 직접 브라우저를 열고 클릭·입력·검증해야 할 때 씁니다. Browser 플러그인과 사이트 허용 설정이 필요하고, 작업은 한 URL·한 상태·한 버그처럼 작게 잘라야 결과를 검토하기 쉽습니다.</p>
                     </div>
                     <div class="tip-card" id="s7-image-generation">
                         <h4 data-i18n="s7_pb_image_t">Image generation</h4>
@@ -1473,13 +1505,13 @@ codex exec "Fix all TODOs" --full-auto</code></pre>
                         <div class="prompt-inline-header">
                             <span class="prompt-inline-num">17.0</span>
                             <div>
-                                <h3 data-i18n="s17_intro_title">팁 모음에서 실행 계약으로</h3>
-                                <p class="section-credit" data-i18n="s17_credit">이제 프롬프트는 문장 요령보다 에이전트 계약을 설계하는 일에 가깝습니다.</p>
+                                <h3 data-i18n="s17_intro_title">팁 모음에서 작업 규칙으로</h3>
+                                <p class="section-credit" data-i18n="s17_credit">이제 프롬프트는 문장 요령보다 작업 규칙을 분명히 정하는 일이 더 중요합니다.</p>
                             </div>
                         </div>
                         <p data-i18n="s17_intro_desc">최근 Codex 모델은 기본 성능이 강하지만, 실제 차이는 출력 형식, 도구 사용 기대치, 완료 기준, 검증 루프를 얼마나 명확히 정의하느냐에서 납니다.</p>
                         <p class="prompt-inline-ref" data-i18n-html="s17_intro_ref">레퍼런스: <a href="https://developers.openai.com/codex/learn/best-practices/" target="_blank">Codex Best practices</a> · <a href="https://developers.openai.com/api/docs/guides/prompt-engineering" target="_blank">Prompt engineering</a> · <a href="https://openai.com/index/introducing-gpt-5-5/" target="_blank">Introducing GPT-5.5</a></p>
-                        <p data-i18n="pg_s1_intro">지금의 Codex 프롬프팅은 말을 예쁘게 하는 기술보다, 에이전트가 어떤 방식으로 끝까지 일해야 하는지 계약을 설계하는 쪽에 더 가깝습니다.</p>
+                        <p data-i18n="pg_s1_intro">지금의 Codex 프롬프팅은 말을 예쁘게 하는 기술보다, 에이전트가 어떤 방식으로 끝까지 일해야 하는지 작업 규칙을 정하는 쪽에 더 가깝습니다.</p>
                         <div class="two-col">
                             <div class="callout">
                                 <strong data-i18n="s17_first_use_t">Strong first use: 네 가지를 먼저 주세요</strong>
@@ -1498,7 +1530,7 @@ codex exec "Fix all TODOs" --full-auto</code></pre>
                         </div>
                         <div class="tip-grid prompt-summary-grid">
                             <div class="tip-card prompt-summary-card">
-                                <h4 data-i18n="s17_c1_t">1. Output Contract</h4>
+                                <h4 data-i18n="s17_c1_t">1. 출력 형식 규칙</h4>
                                 <p data-i18n="s17_c1_d">길게 지시하는 것보다 무엇을 어떤 순서와 형식으로 반환해야 하는지 고정하는 편이 더 큰 효과를 냅니다.</p>
                             </div>
                             <div class="tip-card prompt-summary-card">
@@ -1511,13 +1543,13 @@ codex exec "Fix all TODOs" --full-auto</code></pre>
                             </div>
                             <div class="tip-card prompt-summary-card">
                                 <h4 data-i18n="s17_c4_t">4. Reasoning Last</h4>
-                                <p data-i18n="s17_c4_d">품질이 부족할 때 무조건 reasoning effort부터 올리기보다, 먼저 계약과 검증 규칙을 보강하는 것이 더 효율적입니다.</p>
+                                <p data-i18n="s17_c4_d">품질이 부족할 때 무조건 reasoning effort부터 올리기보다, 먼저 요청 방식과 검증 규칙을 보강하는 것이 더 효율적입니다.</p>
                             </div>
                         </div>
                         <div class="feature-list">
                             <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="pg_s1_f1">긴 작업에서도 스타일과 목표를 덜 잃고, 다단계 흐름을 더 안정적으로 유지합니다.</span></div>
                             <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="pg_s1_f2">장문 컨텍스트와 여러 도구 결과를 합쳐 증거 중심으로 요약하는 능력이 강합니다.</span></div>
-                            <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="pg_s1_f3">명시적인 블록 구조와 modular contract를 주면 instruction adherence가 더 좋아집니다.</span></div>
+                            <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="pg_s1_f3">명시적인 블록 구조와 모듈식 요청 규칙을 주면 지시를 더 잘 따릅니다.</span></div>
                             <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="pg_s1_f4">그래도 세션 초반의 tool routing, 의존성 체크, 고위험 작업 전 검증은 명시적으로 적는 편이 안전합니다.</span></div>
                         </div>
                         <div class="prompt-inline-note">
@@ -1529,12 +1561,12 @@ codex exec "Fix all TODOs" --full-auto</code></pre>
                     <article class="prompt-inline-section" id="s17-contracts">
                         <div class="prompt-inline-header">
                             <span class="prompt-inline-num">17.1</span>
-                            <h3 data-i18n="pg_s2_title">Core Contracts</h3>
+                            <h3 data-i18n="pg_s2_title">핵심 요청 규칙</h3>
                         </div>
-                        <p data-i18n="pg_s2_intro">가장 큰 개선 효과는 출력 형식, 자율 진행 기준, 충돌하는 지시의 우선순위를 짧고 명확한 계약으로 적는 데서 나옵니다.</p>
+                        <p data-i18n="pg_s2_intro">가장 큰 개선 효과는 출력 형식, 자율 진행 기준, 충돌하는 지시의 우선순위를 짧고 명확한 규칙으로 적는 데서 나옵니다.</p>
                         <div class="tip-grid">
                             <div class="tip-card">
-                                <h4 data-i18n="pg_s2_c1_t">Output contract</h4>
+                                <h4 data-i18n="pg_s2_c1_t">출력 형식 규칙</h4>
                                 <p data-i18n="pg_s2_c1_d">무엇을 몇 개 섹션으로 어떤 순서와 포맷으로 반환할지 먼저 고정하세요.</p>
                             </div>
                             <div class="tip-card">
@@ -1550,14 +1582,14 @@ codex exec "Fix all TODOs" --full-auto</code></pre>
                                 <p data-i18n="pg_s2_c4_d">중간에 지시가 바뀌면 이번 응답에만 적용되는지, 남은 세션 전체에 적용되는지 범위를 적어 주세요.</p>
                             </div>
                         </div>
-                        <pre><code>&lt;assistant_contract&gt;
+                        <pre><code>&lt;assistant_rules&gt;
 - Return exactly the requested sections, in the requested order.
 - Keep progress updates short and outcome-focused.
 - If the next step is reversible and low risk, continue without asking.
 - Ask first for destructive changes, production writes, purchases, sending, or deletions.
 - If a newer user instruction conflicts with an older one, follow the newer one.
 - Preserve earlier instructions that still do not conflict.
-&lt;/assistant_contract&gt;</code></pre>
+&lt;/assistant_rules&gt;</code></pre>
                         <p class="callout-inline" data-i18n="pg_s2_note">모든 블록을 항상 넣지 말고, 실제로 실패를 줄여주는 조합만 남기는 편이 좋습니다.</p>
                     </article>
 
@@ -1566,7 +1598,7 @@ codex exec "Fix all TODOs" --full-auto</code></pre>
                             <span class="prompt-inline-num">17.2</span>
                             <h3 data-i18n="pg_s3_title">Agent Loops</h3>
                         </div>
-                        <p data-i18n="pg_s3_intro">긴 작업에서 흔한 실패는 “대충 끝난 것처럼 보이지만 실제로는 덜 끝난 상태”입니다. tool persistence와 verification을 같이 설계해야 합니다.</p>
+                        <p data-i18n="pg_s3_intro">긴 작업에서 흔한 실패는 “대충 끝난 것처럼 보이지만 실제로는 덜 끝난 상태”입니다. 도구를 어디까지 계속 쓸지와 결과를 어떻게 검증할지를 같이 정해야 합니다.</p>
                         <div class="tip-grid">
                             <div class="tip-card">
                                 <h4 data-i18n="pg_s3_c1_t">Tool persistence</h4>
@@ -1581,7 +1613,7 @@ codex exec "Fix all TODOs" --full-auto</code></pre>
                                 <p data-i18n="pg_s3_c3_d">독립적인 조회만 병렬화하고, 앞 단계 결과가 다음 행동을 바꾸는 경우는 순차 실행으로 남겨야 합니다.</p>
                             </div>
                             <div class="tip-card">
-                                <h4 data-i18n="pg_s3_c4_t">Completeness contract</h4>
+                                <h4 data-i18n="pg_s3_c4_t">완료 기준</h4>
                                 <p data-i18n="pg_s3_c4_d">배치, 목록, 페이지네이션 작업이라면 예상 범위와 처리 상태를 내부적으로 추적하도록 요구하세요.</p>
                             </div>
                             <div class="tip-card">
@@ -1603,7 +1635,7 @@ codex exec "Fix all TODOs" --full-auto</code></pre>
                             <span class="prompt-inline-num">17.3</span>
                             <h3 data-i18n="pg_s4_title">Specialized Workflows</h3>
                         </div>
-                        <p data-i18n="pg_s4_intro">공식 가이드의 핵심은 모든 작업에 같은 프롬프트를 쓰지 말고, task shape별로 계약을 다르게 잡으라는 점입니다.</p>
+                        <p data-i18n="pg_s4_intro">공식 가이드의 핵심은 모든 작업에 같은 프롬프트를 쓰지 말고, 작업 유형별로 요청 규칙을 다르게 잡으라는 점입니다.</p>
                         <div class="tip-grid">
                             <div class="tip-card">
                                 <h4 data-i18n="pg_s4_c1_t">Research and citations</h4>
@@ -1635,13 +1667,13 @@ codex exec "Fix all TODOs" --full-auto</code></pre>
                             </div>
                             <div>
                                 <h3 data-i18n="pg_s4_block2_t">Coding agent starter</h3>
-                                <pre><code>&lt;coding_agent_contract&gt;
+                                <pre><code>&lt;coding_agent_rules&gt;
 - Persist until the requested change is implemented and verified.
 - Use tools when they improve correctness, not just convenience.
 - Give the user short updates only at phase changes.
 - Run the lightest relevant test, build, or lint step before stopping.
 - Report what changed, what was verified, and what remains risky.
-&lt;/coding_agent_contract&gt;</code></pre>
+&lt;/coding_agent_rules&gt;</code></pre>
                             </div>
                         </div>
                     </article>
@@ -1651,7 +1683,7 @@ codex exec "Fix all TODOs" --full-auto</code></pre>
                             <span class="prompt-inline-num">17.4</span>
                             <h3 data-i18n="pg_s5_title">Runtime and Tuning</h3>
                         </div>
-                        <p data-i18n="pg_s5_intro">reasoning effort는 첫 번째 해결책이 아니라 마지막 미세 조정 노브에 가깝습니다. 프롬프트 계약과 검증을 먼저 손보는 편이 더 값집니다.</p>
+                        <p data-i18n="pg_s5_intro">reasoning effort는 첫 번째 해결책이 아니라 마지막 미세 조정 노브에 가깝습니다. 요청 방식과 검증 흐름을 먼저 손보는 편이 더 값집니다.</p>
                         <div class="table-wrap">
                             <table>
                                 <thead>
@@ -1686,8 +1718,8 @@ codex exec "Fix all TODOs" --full-auto</code></pre>
                             <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="pg_s5_f3">GPT-5.4 마이그레이션은 모델만 먼저 바꾸고 reasoning을 고정한 뒤 eval로 차이를 보는 one-change-at-a-time 방식이 낫습니다.</span></div>
                         </div>
                         <div class="callout">
-                            <strong data-i18n="pg_s5_callout_t">먼저 contract, 그 다음 reasoning</strong>
-                            <p data-i18n="pg_s5_callout_d">품질이 너무 literal하거나 중간에 멈춘다면 reasoning을 올리기 전에 completeness, tool persistence, verification, citation rules를 먼저 붙여 보세요.</p>
+                            <strong data-i18n="pg_s5_callout_t">먼저 요청 방식, 그 다음 reasoning</strong>
+                            <p data-i18n="pg_s5_callout_d">품질이 너무 문자 그대로이거나 중간에 멈춘다면 reasoning을 올리기 전에 완료 기준, 도구 사용 기준, 검증, 인용 규칙을 먼저 붙여 보세요.</p>
                         </div>
                     </article>
 
@@ -1707,7 +1739,7 @@ Constraints:
 - Keep the final response concise.
 - If the request is clear and low risk, proceed without asking.
 
-Execution contract:
+Execution rules:
 - Do prerequisite lookups before editing.
 - Persist until the change is implemented and verified.
 - Run the lightest relevant verification step before finalizing.
@@ -1717,7 +1749,7 @@ Execution contract:
                                 <h3 data-i18n="pg_s6_block2_t">Research task prompt</h3>
                                 <pre><code>Answer this question with evidence: [question]
 
-Research contract:
+Research rules:
 - Break it into 3-5 sub-questions.
 - Search each one and retry once if results are thin.
 - Cite only sources retrieved in this run.
@@ -1826,12 +1858,15 @@ codex --search "optimize with Next.js 15"
                     <a href="https://openai.com/codex" target="_blank" class="link-card">OpenAI Codex</a>
                     <a href="https://github.com/openai/codex" target="_blank" class="link-card">GitHub Repo</a>
                     <a href="https://openai.com/index/introducing-gpt-5-5/" target="_blank" class="link-card">Introducing GPT-5.5</a>
+                    <a href="https://developers.openai.com/api/docs/models" target="_blank" class="link-card">OpenAI API Models</a>
+                    <a href="https://developers.openai.com/api/docs/models/gpt-5.5-pro" target="_blank" class="link-card">GPT-5.5 pro API Model</a>
                     <a href="https://developers.openai.com/codex/models/" target="_blank" class="link-card">Codex Models (Official)</a>
                     <a href="#s17" class="link-card" data-i18n="s21_prompt_guide">Prompting Codex Agents Section</a>
                     <a href="https://developers.openai.com/api/docs/guides/prompt-engineering" target="_blank" class="link-card">Prompt Engineering</a>
                     <a href="https://developers.openai.com/api/docs/guides/compaction" target="_blank" class="link-card">Compaction Guide</a>
                     <a href="https://developers.openai.com/codex/learn/best-practices/" target="_blank" class="link-card">Codex Best practices</a>
                     <a href="https://developers.openai.com/codex/app/windows" target="_blank" class="link-card">Codex App for Windows (Official Docs)</a>
+                    <a href="https://developers.openai.com/codex/app/browser" target="_blank" class="link-card">Codex In-app Browser & Browser use</a>
                     <a href="https://openai.com/index/introducing-codex/" target="_blank" class="link-card">Introducing Codex (Mar 4, 2026 update)</a>
                     <a href="https://github.com/openai/codex/releases" target="_blank" class="link-card">Release
                         Notes</a>
@@ -1840,6 +1875,113 @@ codex --search "optimize with Next.js 15"
                     <a href="https://agents.md" target="_blank" class="link-card">agents.md Spec</a>
                     <a href="https://mcpmarket.com" target="_blank" class="link-card">MCP Marketplace</a>
                 </div>
+            </section>
+
+            <section class="section field-tips-section" id="openai-field-tips">
+                <h2><span class="section-num">21</span> <span data-i18n="field_tips_title">OpenAI 담당자들이 전하는 팁</span></h2>
+                <p data-i18n="field_tips_intro">OpenAI Developer Experience와 Codex 담당자들의 공개 글, X 원글/미러, 인터뷰, 공식 저장소를 대조해 실무자가 바로 적용할 수 있는 운영 습관만 추렸습니다.</p>
+                <div class="field-tip-grid">
+                    <article class="field-tip-card">
+                        <span class="field-tip-person">Gabriel Chua</span>
+                        <h3 data-i18n="field_tip_1_t">Codex를 Model + Harness + Surfaces로 나눠 읽기</h3>
+                        <p data-i18n="field_tip_1_d">새 모델 발표만 보지 말고, 모델 자체가 바뀐 것인지, 하네스의 도구 실행/검증 루프가 바뀐 것인지, App·CLI·IDE·Web 표면이 바뀐 것인지 분리해서 보세요. 업데이트를 훨씬 덜 헷갈리게 읽을 수 있습니다.</p>
+                    </article>
+                    <article class="field-tip-card">
+                        <span class="field-tip-person">VB</span>
+                        <h3 data-i18n="field_tip_2_t">다른 에이전트 옆에 Codex 리뷰어 붙이기</h3>
+                        <p data-i18n="field_tip_2_d">Codex Plugin for Claude Code 흐름처럼, 한 에이전트가 만든 변경을 Codex가 읽기 전용 리뷰·adversarial review·rescue 모드로 다시 보게 하세요. 큰 변경일수록 두 번째 관점이 버그와 설계 공백을 잘 잡습니다.</p>
+                    </article>
+                    <article class="field-tip-card">
+                        <span class="field-tip-person">Tibo</span>
+                        <h3 data-i18n="field_tip_3_t">Subagent는 읽기 중심 병렬 작업부터</h3>
+                        <p data-i18n="field_tip_3_d">보안, 테스트 공백, 유지보수성처럼 독립적으로 검토할 수 있는 항목에 subagent를 붙이면 main thread가 깔끔하게 유지됩니다. 처음에는 수정 작업보다 조사·리뷰·요약 작업에 쓰는 편이 안정적입니다.</p>
+                    </article>
+                    <article class="field-tip-card">
+                        <span class="field-tip-person">Katia Gil Guzman</span>
+                        <h3 data-i18n="field_tip_4_t">Vibe coding보다 AI teammate + PR review</h3>
+                        <p data-i18n="field_tip_4_d">인터뷰에서 반복되는 메시지는 단순 자동완성보다 협업 방식입니다. Codex를 PR을 설명하고, 테스트를 돌리고, 리뷰 가능한 단위로 변경을 나누는 팀원처럼 다루면 결과 품질이 안정됩니다.</p>
+                    </article>
+                    <article class="field-tip-card">
+                        <span class="field-tip-person">Dominik Kundel</span>
+                        <h3 data-i18n="field_tip_5_t">작업을 검증 가능하게 만들기</h3>
+                        <p data-i18n="field_tip_5_d">잘 되는 에이전트 작업은 “해줘”보다 완료 조건이 분명합니다. 실행할 명령, 확인할 화면, 실패 시 멈출 기준, 출처를 남기는 방식을 프롬프트에 넣으면 Codex가 더 좋은 루프를 만듭니다.</p>
+                    </article>
+                    <article class="field-tip-card">
+                        <span class="field-tip-person">Romain Huet + OpenAI DevEx</span>
+                        <h3 data-i18n="field_tip_6_t">Codex를 하나의 command center로 보기</h3>
+                        <p data-i18n="field_tip_6_d">Developer Experience 쪽 사례들은 Codex를 코드 생성기 하나로 보지 않습니다. Slack, Gmail, Calendar, 브라우저, 문서, 저장소를 연결해 반복되는 준비·조사·리뷰 업무까지 묶는 운영 허브로 보는 편이 맞습니다.</p>
+                    </article>
+                </div>
+                <div class="field-source-block" aria-label="OpenAI practitioner sources">
+                    <p class="field-source-label" data-i18n="field_tips_sources_label">원글 및 근거</p>
+                    <div class="field-source-list">
+                        <a href="https://x.com/gabrielchua" target="_blank" rel="noopener noreferrer">Gabriel Chua X</a>
+                        <a href="https://www.linkedin.com/pulse/how-i-think-codex-gabriel-chua-ukhic" target="_blank" rel="noopener noreferrer">How I Think About Codex</a>
+                        <a href="https://x.com/reach_vb" target="_blank" rel="noopener noreferrer">VB X</a>
+                        <a href="https://x.com/reach_vb/status/2039251986357338257" target="_blank" rel="noopener noreferrer">VB Codex plugin post</a>
+                        <a href="https://github.com/openai/codex-plugin-cc" target="_blank" rel="noopener noreferrer">openai/codex-plugin-cc</a>
+                        <a href="https://x.com/thsottiaux" target="_blank" rel="noopener noreferrer">Tibo X</a>
+                        <a href="https://developers.openai.com/codex/subagents" target="_blank" rel="noopener noreferrer">Codex Subagents</a>
+                        <a href="https://x.com/kagigz" target="_blank" rel="noopener noreferrer">Katia X</a>
+                        <a href="https://www.computingdeutschland.de/interview/2025/developer-experience-mit-openai" target="_blank" rel="noopener noreferrer">Katia DevEx interview</a>
+                        <a href="https://x.com/dkundel/status/2018436269907603590" target="_blank" rel="noopener noreferrer">Dominik Kundel X post</a>
+                        <a href="https://vivatech.com/speakers/e5bb6392-2f32-f011-8b3d-6045bd903b46/" target="_blank" rel="noopener noreferrer">Romain Huet profile</a>
+                        <a href="https://openai.com/index/unrolling-the-codex-agent-loop/" target="_blank" rel="noopener noreferrer">Unrolling the Codex agent loop</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="changelog-section" id="changelog">
+                <div class="changelog-head">
+                    <div>
+                        <p class="overview-kicker" data-i18n="changelog_kicker">Changelog</p>
+                        <h2 data-i18n="changelog_title">오늘의 업데이트</h2>
+                    </div>
+                    <p class="overview-fact-date">
+                        <span data-i18n="overview_fact_date_prefix">업데이트 기준일</span>
+                        <span class="live-date" data-date-format="long">2026년 4월 24일</span>
+                    </p>
+                </div>
+                <ol class="changelog-list" aria-label="Today update summary">
+                    <li>
+                        <strong data-i18n="overview_update_1_title">모델/사용 방식 매트릭스 재확인</strong>
+                        <span data-i18n="changelog_item_1">`gpt-5.5` 우선 추천과 `gpt-5.5-pro` API 지원, `gpt-5.4` 대체 선택지, mini/cloud 모델 역할을 다시 정리했습니다.</span>
+                    </li>
+                    <li>
+                        <strong data-i18n="overview_update_2_title">요금제·크레딧 구조 재정리</strong>
+                        <span data-i18n="changelog_item_2">개인/팀 플랜과 토큰 기반 rate card 흐름을 간단히 반영했습니다.</span>
+                    </li>
+                    <li>
+                        <strong data-i18n="overview_update_3_title">Quickstart·IDE 경로 정리</strong>
+                        <span data-i18n="changelog_item_3">처음 사용자는 App 중심, 실무 사용자는 IDE/CLI + Docs MCP 중심으로 읽히게 다듬었습니다.</span>
+                    </li>
+                    <li>
+                        <strong data-i18n="overview_update_4_title">4월 App 업데이트 반영</strong>
+                        <span data-i18n="changelog_item_4">browser use, computer use, plugins, terminal tabs, SSH devbox, artifact/sidebar 흐름을 App 섹션에 보강했습니다.</span>
+                    </li>
+                    <li>
+                        <strong data-i18n="overview_update_6_title">Docs MCP·설정 기준 재점검</strong>
+                        <span data-i18n="changelog_item_5">Docs MCP URL, AGENTS.md 유도 문구, config reference 주요 키를 다시 맞췄습니다.</span>
+                    </li>
+                </ol>
+                <details class="changelog-sources">
+                    <summary data-i18n="changelog_sources_toggle">근거 문서 보기</summary>
+                    <div class="overview-source-links">
+                        <a href="https://developers.openai.com/codex/quickstart/" target="_blank" class="source-chip" data-i18n="overview_source_1">Codex Quickstart</a>
+                        <a href="https://developers.openai.com/codex/" target="_blank" class="source-chip" data-i18n="overview_source_16">Codex Overview</a>
+                        <a href="https://developers.openai.com/codex/models/" target="_blank" class="source-chip" data-i18n="overview_source_8">Codex Models</a>
+                        <a href="https://developers.openai.com/codex/pricing/" target="_blank" class="source-chip" data-i18n="overview_source_2">Codex Pricing</a>
+                        <a href="https://developers.openai.com/codex/config-reference/" target="_blank" class="source-chip" data-i18n="overview_source_4">Codex Config Reference</a>
+                        <a href="https://developers.openai.com/learn/docs-mcp" target="_blank" class="source-chip" data-i18n="overview_source_20">Docs MCP</a>
+                        <a href="https://openai.com/index/introducing-gpt-5-5/" target="_blank" class="source-chip" data-i18n="overview_source_9">GPT-5.5 announcement</a>
+                        <a href="https://developers.openai.com/api/docs/models" target="_blank" class="source-chip" data-i18n="overview_source_23">OpenAI API Models</a>
+                        <a href="https://developers.openai.com/api/docs/models/gpt-5.5-pro" target="_blank" class="source-chip" data-i18n="overview_source_24">GPT-5.5 pro API Model</a>
+                        <a href="https://developers.openai.com/codex/app/features" target="_blank" class="source-chip" data-i18n="overview_source_18">Codex App Features</a>
+                        <a href="https://developers.openai.com/codex/app/browser" target="_blank" class="source-chip" data-i18n="overview_source_25">Codex In-app Browser</a>
+                        <a href="https://developers.openai.com/codex/app/automations" target="_blank" class="source-chip" data-i18n="overview_source_17">Codex App Automations</a>
+                        <a href="https://help.openai.com/en/articles/20001106-codex-rate-card" target="_blank" class="source-chip" data-i18n="overview_source_22">Codex rate card</a>
+                    </div>
+                </details>
             </section>
 
             </div>
