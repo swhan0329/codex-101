@@ -17,7 +17,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=20260416-ui-refresh-2" />
+    <link rel="stylesheet" href="style.css?v=20260428-docs-refresh" />
 </head>
 
 <body data-page="home">
@@ -47,7 +47,7 @@
                     <p class="hero-badge">
                         <span data-i18n="hero_badge_prefix">공식 문서 기준 재검수</span>
                         <span aria-hidden="true"> · </span>
-                        <span class="live-date" data-date-format="long">2026년 4월 24일</span>
+                        <span class="live-date" data-date-format="long">2026년 4월 28일</span>
                     </p>
                     <h1 class="hero-title" data-i18n="hero_title">OpenAI Codex를<br />실무에 바로 붙이는 가이드</h1>
                     <p class="hero-sub" data-i18n="hero_sub">CLI · Desktop App (macOS/Windows) · IDE Extension · Web · iOS · SDK automation<br />최신 공식 문서를 기준으로 어디서 시작할지, 어떤 모델을 쓸지, 샌드박스/승인, MCP, 자동화를 처음 사용자와 실무 사용자 모두 읽기 쉽도록 다시 정리했습니다.</p>
@@ -295,7 +295,7 @@
             <!-- Section 1 -->
             <section class="section" id="s1">
                 <h2><span class="section-num">01</span> <span data-i18n="s1_title">Codex 에코시스템 개요</span></h2>
-                <p data-i18n="s1_intro">OpenAI Codex는 소프트웨어 개발을 위한 코딩 에이전트입니다. 최신 공식 문서는 Codex를 앱, IDE, CLI, 웹/iOS, SDK 기반 자동화에서 사용할 수 있다고 설명하며, 지금은 모델 선택기에서 `gpt-5.5`가 보이면 대부분의 작업을 거기서 시작하라고 권장합니다. API에서는 공식 Models 문서 기준으로 `gpt-5.5`를 사용할 수 있고, 더 높은 정확도가 필요한 작업에는 `gpt-5.5-pro`도 Responses API와 Batch API에서 사용할 수 있습니다. 빠른 로컬 작업이나 보조 에이전트에는 `gpt-5.4-mini`, Codex Cloud와 클라우드 리뷰에는 `gpt-5.3-codex`, 거의 즉각적인 반복에는 `gpt-5.3-codex-spark`, 대안 모델로는 `gpt-5.2`를 보면 됩니다.</p>
+                <p data-i18n="s1_intro">OpenAI Codex는 소프트웨어 개발을 위한 코딩 에이전트입니다. 최신 공식 문서는 Codex를 앱, IDE, CLI, 웹/iOS, SDK 기반 자동화에서 사용할 수 있다고 설명하며, 지금은 모델 선택기에서 `gpt-5.5`가 보이면 대부분의 작업을 거기서 시작하라고 권장합니다. 다만 Codex 안에서 `gpt-5.5`는 현재 ChatGPT 로그인 경로에서만 제공되고 API 키 로그인에서는 아직 나오지 않습니다. API에서는 공식 Models 문서 기준으로 `gpt-5.5`를 사용할 수 있고, 더 높은 정확도가 필요한 작업에는 `gpt-5.5-pro`도 Responses API와 Batch API에서 사용할 수 있습니다. 빠른 로컬 작업이나 보조 에이전트에는 `gpt-5.4-mini`, Codex Cloud와 클라우드 리뷰에는 `gpt-5.3-codex`, 거의 즉각적인 반복에는 `gpt-5.3-codex-spark`, 대안 모델로는 `gpt-5.2`를 보면 됩니다.</p>
                 <blockquote data-i18n="s1_philosophy">"단순 코드 생성 → 소프트웨어 엔지니어 팀원"</blockquote>
                 <p data-i18n="s1_desc">Codex는 코드 자동완성 도구가 아닙니다. 여러 파일을 동시에 수정하고, 테스트를 실행하고, 결과를 검증하며, 스스로 디버깅하는 자율
                     에이전트입니다.</p>
@@ -360,6 +360,7 @@
                         </tbody>
                     </table>
                 </div>
+                <p class="command-refs" data-i18n-html="s1_refs">출처: <a href="https://developers.openai.com/codex/" target="_blank">Codex overview</a> · <a href="https://developers.openai.com/codex/models/" target="_blank">Codex models</a> · <a href="https://developers.openai.com/api/docs/models" target="_blank">OpenAI API Models</a> · <a href="https://openai.com/index/introducing-gpt-5-5/" target="_blank">Introducing GPT-5.5</a></p>
             </section>
 
             <!-- Section 2 -->
@@ -387,6 +388,7 @@
                         <p data-i18n="s2_cloud">ChatGPT 웹 대시보드. GitHub 연동, 자동 PR/코드 리뷰, Slack·Linear발 클라우드 작업까지 연결합니다.</p>
                     </div>
                 </div>
+                <p class="command-refs" data-i18n-html="s2_refs">출처: <a href="https://developers.openai.com/codex/quickstart/" target="_blank">Quickstart</a> · <a href="https://developers.openai.com/codex/app" target="_blank">Codex app</a> · <a href="https://developers.openai.com/codex/ide" target="_blank">IDE extension</a> · <a href="https://developers.openai.com/codex/cli" target="_blank">Codex CLI</a></p>
 
             </section>
 
@@ -604,6 +606,7 @@
                 <div class="callout">
                     <p data-i18n="s3_cfg_cloud">Codex 클라우드 작업의 기본 모델은 현재 변경할 수 없습니다.</p>
                 </div>
+                <p class="command-refs" data-i18n-html="s3_refs">출처: <a href="https://developers.openai.com/codex/models/" target="_blank">Codex models</a> · <a href="https://developers.openai.com/codex/pricing/" target="_blank">Codex pricing</a> · <a href="https://developers.openai.com/api/docs/models" target="_blank">OpenAI API Models</a> · <a href="https://developers.openai.com/api/docs/models/gpt-5.5-pro" target="_blank">GPT-5.5 pro API model</a></p>
             </section>
 
             <!-- Section 3 -->
@@ -665,7 +668,7 @@
                                     <tr>
                                         <td>Pro</td>
                                         <td>From $100/mo</td>
-                                        <td data-i18n="s4_codex_pro">Spark 리서치 프리뷰 + 우선 처리 + Pro `$100` 10x / Pro `$200` 20x(+한시적 25x) + 더 큰 코드 리뷰 범위</td>
+                                        <td data-i18n="s4_codex_pro">Spark 리서치 프리뷰 + priority processing + Pro 5x / Pro 20x 표 + 2026년 5월 31일까지 한시적 사용량 부스트</td>
                                     </tr>
                                     <tr>
                                         <td>Business</td>
@@ -685,7 +688,8 @@
                                 </tbody>
                             </table>
                         </div>
-                        <p class="callout-inline" data-i18n="s4_note_access">현재 공식 문서는 모든 ChatGPT 플랜에 Codex가 포함된다고 설명합니다. 처음 보는 사용자라면 `Free $0`, `Go $8`, `Plus $20`, `Pro from $100` 순으로 보면 이해가 쉽고, 팀 사용자는 Business·Enterprise의 Codex-only pay-as-you-go seat를 같이 보면 됩니다. Pricing 페이지는 여전히 모델별 5시간 한도와 사용량 범위를 보여주고, 최신 공식 Codex rate card는 2026년 4월 24일 기준 대부분 Plus·Pro·Business·Enterprise·Edu·Gov·Health 고객이 토큰 기반 크레딧 표를 사용한다고 설명합니다. 즉 이제는 대략적인 메시지 수만 보는 것보다 입력 토큰, cached input, 출력 토큰이 크레딧을 어떻게 쓰는지 함께 보는 편이 더 정확합니다. Plus 기준 로컬 메시지 범위는 `gpt-5.5` 15-80, `gpt-5.4` 20-100, `gpt-5.4-mini` 60-350, `gpt-5.3-codex` 30-150이며, `gpt-5.5`는 더 적은 토큰으로 비슷하거나 더 나은 결과를 내도록 설명됩니다. API에서는 `gpt-5.5`와 `gpt-5.5-pro`가 별도 모델로 제공되므로 API 가격/한도는 Models와 Pricing 페이지를 따로 확인해야 합니다. 이미지 생성은 일반 Codex 한도를 평균 3-5배 더 빨리 쓰며 Fast mode는 지원 모델에서 더 높은 비율로 크레딧을 소모합니다. 실제 체감 한도는 Pricing과 usage dashboard를 항상 같이 확인하세요.</p>
+                        <p class="callout-inline" data-i18n="s4_note_access">현재 공식 문서는 모든 ChatGPT 플랜에 Codex가 포함된다고 설명합니다. 처음 보는 사용자라면 `Free $0`, `Go $8`, `Plus $20`, `Pro from $100` 순으로 보면 이해가 쉽고, 팀 사용자는 Business·Enterprise의 Codex-only pay-as-you-go seat를 같이 보면 됩니다. Pricing 페이지는 여전히 모델별 5시간 한도와 사용량 범위를 보여주고, 현재 토큰 기반 크레딧 표는 새/기존 Business와 새 Enterprise에 우선 적용되며 다른 플랜은 아직 메시지 기반 평균표를 함께 보라고 설명합니다. 즉 팀/워크스페이스 종류에 따라 메시지 표와 토큰 표를 나눠 읽어야 합니다. Plus 기준 로컬 메시지 범위는 `gpt-5.5` 15-80, `gpt-5.4` 20-100, `gpt-5.4-mini` 60-350, `gpt-5.3-codex` 30-150이며, `gpt-5.5`는 더 적은 토큰으로 비슷하거나 더 나은 결과를 내도록 설명됩니다. API에서는 `gpt-5.5`와 `gpt-5.5-pro`가 별도 모델로 제공되므로 API 가격/한도는 Models와 Pricing 페이지를 따로 확인해야 합니다. 이미지 생성은 일반 Codex 한도를 평균 3-5배 더 빨리 쓰며 Fast mode는 지원 모델에서 더 높은 비율로 크레딧을 소모합니다. 실제 체감 한도는 Pricing과 usage dashboard를 항상 같이 확인하세요.</p>
+                        <p class="command-refs" data-i18n-html="s4_refs">출처: <a href="https://developers.openai.com/codex/quickstart/" target="_blank">Quickstart</a> · <a href="https://developers.openai.com/codex/pricing/" target="_blank">Codex pricing</a> · <a href="https://developers.openai.com/codex/speed" target="_blank">Speed</a> · <a href="https://openai.com/index/codex-now-offers-pay-as-you-go-pricing-for-teams/" target="_blank">Pay-as-you-go pricing for teams</a></p>
                     </div>
                 </div>
             </section>
@@ -742,6 +746,7 @@ export OPENAI_API_KEY="your-api-key-here"</code></pre>
                         </ol>
                     </article>
                 </div>
+                <p class="command-refs" data-i18n-html="s5_refs">출처: <a href="https://developers.openai.com/codex/quickstart/" target="_blank">Quickstart</a> · <a href="https://developers.openai.com/codex/windows" target="_blank">Windows guide</a> · <a href="https://developers.openai.com/codex/app/windows" target="_blank">Windows app</a> · <a href="https://developers.openai.com/codex/ide" target="_blank">IDE extension</a></p>
             </section>
 
             <!-- Section 5 -->
@@ -766,6 +771,7 @@ codex --cd /path/to/project
 
 <span class="c"># 쉘 명령어 실행</span>
 !npm test</code></pre>
+                <p class="command-refs" data-i18n-html="s6_refs">출처: <a href="https://developers.openai.com/codex/quickstart/" target="_blank">Quickstart</a> · <a href="https://developers.openai.com/codex/cli" target="_blank">Codex CLI</a> · <a href="https://developers.openai.com/codex/cli/slash-commands/" target="_blank">CLI slash commands</a></p>
 
             </section>
 
@@ -906,6 +912,7 @@ then verify the page again and attach the screenshot result.</code></pre>
                         <p data-i18n="s7_pb_plugin_d">skills, app integrations, MCP server를 묶어 배포하는 단위입니다. 반복 프롬프트가 안정화된 뒤 팀에 공유할 때 plugin으로 올리고, 설치 후에는 작업 설명만 하거나 `@plugin`으로 특정 workflow를 직접 호출하는 방식이 좋습니다.</p>
                     </div>
                 </div>
+                <p class="command-refs" data-i18n-html="s7_refs">출처: <a href="https://developers.openai.com/codex/app" target="_blank">Codex app</a> · <a href="https://developers.openai.com/codex/app/features" target="_blank">App features</a> · <a href="https://developers.openai.com/codex/app/browser" target="_blank">In-app browser</a> · <a href="https://developers.openai.com/codex/app/automations" target="_blank">App automations</a> · <a href="https://openai.com/index/codex-for-almost-everything/" target="_blank">Codex for (almost) everything</a></p>
             </section>
 
             <!-- Section 7 -->
@@ -967,6 +974,7 @@ then verify the page again and attach the screenshot result.</code></pre>
                     <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s8_f_sync">App 실시간 동기
                             (Auto Context)</span></div>
                 </div>
+                <p class="command-refs" data-i18n-html="s8_refs">출처: <a href="https://developers.openai.com/codex/ide" target="_blank">IDE extension</a> · <a href="https://developers.openai.com/codex/ide/features" target="_blank">IDE features</a> · <a href="https://developers.openai.com/codex/ide/slash-commands" target="_blank">IDE slash commands</a> · <a href="https://developers.openai.com/codex/windows" target="_blank">Windows guide</a></p>
             </section>
 
             <!-- Section 8 -->
@@ -993,6 +1001,7 @@ then verify the page again and attach the screenshot result.</code></pre>
                     <p data-i18n="s9_auto_desc">Codex Web에서 GitHub 연결 후 리뷰 대상 저장소를 선택하고 "Automatic reviews"를 활성화하면 새
                         PR마다 자동 리뷰됩니다. AGENTS.md 규칙 기반 커스터마이징 가능.</p>
                 </div>
+                <p class="command-refs" data-i18n-html="s9_refs">출처: <a href="https://developers.openai.com/codex/quickstart/" target="_blank">Quickstart</a> · <a href="https://developers.openai.com/codex/cloud" target="_blank">Codex cloud</a> · <a href="https://developers.openai.com/codex/integrations/github" target="_blank">GitHub integration</a></p>
             </section>
 
             <!-- Section 9 -->
@@ -1048,6 +1057,7 @@ codex --sandbox workspace-write --ask-for-approval untrusted
 codex --dangerously-bypass-approvals-and-sandbox</code></pre>
                 <p data-i18n="s10_sandbox">보안: 로컬 Codex는 OS 수준 sandbox를 사용합니다. macOS는 Seatbelt, Linux는 bubblewrap + seccomp, Windows는 네이티브 sandbox 또는 WSL을 사용합니다. 기본 `workspace-write`에서는 네트워크가 꺼져 있고 `.git`·`.codex`·`.agents`는 보호 경로로 읽기 전용입니다. Cloud는 setup 단계와 offline agent 단계를 분리한 런타임입니다.
                 </p>
+                <p class="command-refs" data-i18n-html="s10_refs">출처: <a href="https://developers.openai.com/codex/agent-approvals-security" target="_blank">Agent approvals &amp; security</a> · <a href="https://developers.openai.com/codex/config-reference/" target="_blank">Config reference</a> · <a href="https://developers.openai.com/codex/windows" target="_blank">Windows guide</a></p>
             </section>
 
             <!-- Section 10 -->
@@ -1939,49 +1949,31 @@ codex --search "optimize with Next.js 15"
                     </div>
                     <p class="overview-fact-date">
                         <span data-i18n="overview_fact_date_prefix">업데이트 기준일</span>
-                        <span class="live-date" data-date-format="long">2026년 4월 24일</span>
+                        <span class="live-date" data-date-format="long">2026년 4월 28일</span>
                     </p>
                 </div>
                 <ol class="changelog-list" aria-label="Today update summary">
                     <li>
                         <strong data-i18n="overview_update_1_title">모델/사용 방식 매트릭스 재확인</strong>
-                        <span data-i18n="changelog_item_1">`gpt-5.5` 우선 추천과 `gpt-5.5-pro` API 지원, `gpt-5.4` 대체 선택지, mini/cloud 모델 역할을 다시 정리했습니다.</span>
+                        <span data-i18n="changelog_item_1">`gpt-5.5` 우선 추천을 다시 확인하고, Codex에서는 ChatGPT 로그인일 때만 보인다는 점과 `gpt-5.5-pro` API 지원을 함께 명시했습니다.</span>
                     </li>
                     <li>
                         <strong data-i18n="overview_update_2_title">요금제·크레딧 구조 재정리</strong>
-                        <span data-i18n="changelog_item_2">개인/팀 플랜과 토큰 기반 rate card 흐름을 간단히 반영했습니다.</span>
+                        <span data-i18n="changelog_item_2">가격 설명을 Plus / Pro 5x / Pro 20x / Business / API Key 읽는 법에 맞게 고치고, 메시지 표와 토큰 크레딧 표를 구분했습니다.</span>
                     </li>
                     <li>
                         <strong data-i18n="overview_update_3_title">Quickstart·IDE 경로 정리</strong>
-                        <span data-i18n="changelog_item_3">처음 사용자는 App 중심, 실무 사용자는 IDE/CLI + Docs MCP 중심으로 읽히게 다듬었습니다.</span>
+                        <span data-i18n="changelog_item_3">Quickstart·IDE·Windows 문서를 다시 대조해 App-first 시작 경로와 JetBrains/WSL2 설명을 더 또렷하게 정리했습니다.</span>
                     </li>
                     <li>
                         <strong data-i18n="overview_update_4_title">4월 App 업데이트 반영</strong>
-                        <span data-i18n="changelog_item_4">browser use, computer use, plugins, terminal tabs, SSH devbox, artifact/sidebar 흐름을 App 섹션에 보강했습니다.</span>
+                        <span data-i18n="changelog_item_4">`Codex for (almost) everything`와 App 문서를 기준으로 browser use, computer use, plugins, terminal tabs, SSH devbox, artifact/sidebar 흐름을 다시 정리했습니다.</span>
                     </li>
                     <li>
                         <strong data-i18n="overview_update_6_title">Docs MCP·설정 기준 재점검</strong>
-                        <span data-i18n="changelog_item_5">Docs MCP URL, AGENTS.md 유도 문구, config reference 주요 키를 다시 맞췄습니다.</span>
+                        <span data-i18n="changelog_item_5">Docs MCP, best practices, config, plugins, skills 문서를 다시 확인해 AGENTS.md·설정 키·반복 작업 운영 설명을 최신화했습니다.</span>
                     </li>
                 </ol>
-                <details class="changelog-sources">
-                    <summary data-i18n="changelog_sources_toggle">근거 문서 보기</summary>
-                    <div class="overview-source-links">
-                        <a href="https://developers.openai.com/codex/quickstart/" target="_blank" class="source-chip" data-i18n="overview_source_1">Codex Quickstart</a>
-                        <a href="https://developers.openai.com/codex/" target="_blank" class="source-chip" data-i18n="overview_source_16">Codex Overview</a>
-                        <a href="https://developers.openai.com/codex/models/" target="_blank" class="source-chip" data-i18n="overview_source_8">Codex Models</a>
-                        <a href="https://developers.openai.com/codex/pricing/" target="_blank" class="source-chip" data-i18n="overview_source_2">Codex Pricing</a>
-                        <a href="https://developers.openai.com/codex/config-reference/" target="_blank" class="source-chip" data-i18n="overview_source_4">Codex Config Reference</a>
-                        <a href="https://developers.openai.com/learn/docs-mcp" target="_blank" class="source-chip" data-i18n="overview_source_20">Docs MCP</a>
-                        <a href="https://openai.com/index/introducing-gpt-5-5/" target="_blank" class="source-chip" data-i18n="overview_source_9">GPT-5.5 announcement</a>
-                        <a href="https://developers.openai.com/api/docs/models" target="_blank" class="source-chip" data-i18n="overview_source_23">OpenAI API Models</a>
-                        <a href="https://developers.openai.com/api/docs/models/gpt-5.5-pro" target="_blank" class="source-chip" data-i18n="overview_source_24">GPT-5.5 pro API Model</a>
-                        <a href="https://developers.openai.com/codex/app/features" target="_blank" class="source-chip" data-i18n="overview_source_18">Codex App Features</a>
-                        <a href="https://developers.openai.com/codex/app/browser" target="_blank" class="source-chip" data-i18n="overview_source_25">Codex In-app Browser</a>
-                        <a href="https://developers.openai.com/codex/app/automations" target="_blank" class="source-chip" data-i18n="overview_source_17">Codex App Automations</a>
-                        <a href="https://help.openai.com/en/articles/20001106-codex-rate-card" target="_blank" class="source-chip" data-i18n="overview_source_22">Codex rate card</a>
-                    </div>
-                </details>
             </section>
 
             </div>
@@ -1995,14 +1987,14 @@ codex --search "optimize with Next.js 15"
                     href="https://github.com/swhan0329/codex-101" target="_blank">PR을 환영합니다</a>.</p>
             <p class="footer-meta">
                 <span data-i18n="footer_date_prefix">최종 업데이트</span>:
-                <span class="live-date" data-date-format="long">2026년 4월 24일</span>
+                <span class="live-date" data-date-format="long">2026년 4월 28일</span>
             </p>
             <p class="footer-meta">Made by <a href="https://github.com/swhan0329" target="_blank">@swhan0329</a></p>
         </div>
     </footer>
 
-    <script src="i18n.js?v=20260422-docs-refresh"></script>
-    <script src="app.js?v=20260422-docs-refresh"></script>
+    <script src="i18n.js?v=20260428-docs-refresh"></script>
+    <script src="app.js?v=20260428-docs-refresh"></script>
 </body>
 
 </html>
