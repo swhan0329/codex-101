@@ -1567,29 +1567,29 @@ codex exec "Fix all TODOs" --full-auto</code></pre>
                                 <p class="section-credit" data-i18n="s17_credit">이제 프롬프트는 문장 요령보다 작업 규칙을 분명히 정하는 일이 더 중요합니다.</p>
                             </div>
                         </div>
-                        <p data-i18n="s17_intro_desc">최근 Codex 모델은 기본 성능이 강하지만, 실제 차이는 출력 형식, 도구 사용 기대치, 완료 기준, 검증 루프를 얼마나 명확히 정의하느냐에서 납니다.</p>
-                        <p class="prompt-inline-ref" data-i18n-html="s17_intro_ref">레퍼런스: <a href="https://developers.openai.com/codex/learn/best-practices/" target="_blank">Codex Best practices</a> · <a href="https://developers.openai.com/api/docs/guides/prompt-engineering" target="_blank">Prompt engineering</a> · <a href="https://openai.com/index/introducing-gpt-5-5/" target="_blank">Introducing GPT-5.5</a></p>
-                        <p data-i18n="pg_s1_intro">지금의 Codex 프롬프팅은 말을 예쁘게 하는 기술보다, 에이전트가 어떤 방식으로 끝까지 일해야 하는지 작업 규칙을 정하는 쪽에 더 가깝습니다.</p>
+                        <p data-i18n="s17_intro_desc">GPT-5.5 기준의 핵심은 세세한 절차를 모두 적는 것보다 목표 결과, 성공 기준, 제약, 사용할 수 있는 근거를 분명히 주고 모델이 적절한 경로를 고르게 하는 데 있습니다.</p>
+                        <p class="prompt-inline-ref" data-i18n-html="s17_intro_ref">레퍼런스: <a href="https://developers.openai.com/codex/learn/best-practices/" target="_blank">Codex Best practices</a> · <a href="https://developers.openai.com/api/docs/guides/prompt-guidance?model=gpt-5.5" target="_blank">GPT-5.5 Prompt guidance</a> · <a href="https://openai.com/index/introducing-gpt-5-5/" target="_blank">Introducing GPT-5.5</a></p>
+                        <p data-i18n="pg_s1_intro">GPT-5.5 프롬프팅은 모든 단계를 과하게 지정하는 방식보다, 원하는 결과와 성공 기준을 선명하게 두고 필요한 도구·추론·검증 경로를 모델이 고르게 하는 쪽에 가깝습니다.</p>
                         <div class="two-col">
                             <div class="callout">
-                                <strong data-i18n="s17_first_use_t">Strong first use: 네 가지를 먼저 주세요</strong>
-                                <p data-i18n="s17_first_use_d">큰 저장소나 중요한 작업일수록 Goal, Context, Constraints, Done when을 먼저 주면 Codex가 범위를 덜 벗어나고 리뷰 가능한 결과를 더 잘 냅니다.</p>
+                                <strong data-i18n="s17_first_use_t">Strong first use: 결과와 멈춤 기준을 먼저 주세요</strong>
+                                <p data-i18n="s17_first_use_d">큰 저장소나 중요한 작업일수록 Goal, Context, Constraints, Success criteria, Stop rules를 짧게 주면 Codex가 불필요한 루프 없이 더 검증 가능한 결과를 냅니다.</p>
                             </div>
                             <div class="callout">
                                 <strong data-i18n="s17_reasoning_t">reasoning은 난이도 기준으로 고르세요</strong>
-                                <p data-i18n="s17_reasoning_d">작고 명확한 작업은 low, 복잡한 변경과 디버깅은 medium 또는 high, 장시간 에이전트 작업은 extra high를 시험해 보되 작업별로 무엇이 가장 잘 맞는지 직접 비교하는 편이 좋습니다.</p>
+                                <p data-i18n="s17_reasoning_d">작고 명확한 작업은 낮은 설정에서 시작하고, 복잡한 변경과 디버깅은 medium/high로 올립니다. 품질이 부족할 때는 reasoning을 올리기 전에 완료 기준, 검증, 근거 규칙을 먼저 점검하세요.</p>
                             </div>
                         </div>
                         <div class="feature-list">
                             <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s17_g1">Goal: 무엇을 바꾸거나 만들고 싶은지 한 문장으로 못 박습니다.</span></div>
                             <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s17_g2">Context: 관련 파일, 폴더, 문서, 에러 로그, 예시를 함께 지정합니다.</span></div>
                             <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s17_g3">Constraints: 아키텍처, 안전 기준, 코딩 컨벤션, 금지 규칙을 분명히 합니다.</span></div>
-                            <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s17_g4">Done when: 테스트 통과, 버그 재현 해소, 기대 동작 확인처럼 종료 조건을 명시합니다.</span></div>
+                            <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s17_g4">Success + Stop rules: 테스트, 기대 동작, 필요한 근거, 멈출 조건을 함께 명시합니다.</span></div>
                         </div>
                         <div class="tip-grid prompt-summary-grid">
                             <div class="tip-card prompt-summary-card">
-                                <h4 data-i18n="s17_c1_t">1. 출력 형식 규칙</h4>
-                                <p data-i18n="s17_c1_d">길게 지시하는 것보다 무엇을 어떤 순서와 형식으로 반환해야 하는지 고정하는 편이 더 큰 효과를 냅니다.</p>
+                                <h4 data-i18n="s17_c1_t">1. Outcome-first contract</h4>
+                                <p data-i18n="s17_c1_d">절차를 길게 잠그기보다 목표 결과, 필수 출력 필드, 성공 기준, 부족한 근거가 있을 때의 행동을 먼저 고정하세요.</p>
                             </div>
                             <div class="tip-card prompt-summary-card">
                                 <h4 data-i18n="s17_c2_t">2. Follow-through</h4>
@@ -1597,7 +1597,7 @@ codex exec "Fix all TODOs" --full-auto</code></pre>
                             </div>
                             <div class="tip-card prompt-summary-card">
                                 <h4 data-i18n="s17_c3_t">3. Tool Loops</h4>
-                                <p data-i18n="s17_c3_d">정확성이 중요하면 도구를 한 번 쓰고 멈추지 않게 하고, 선행 조회, 빈 결과 복구, 완료 판정까지 묶어줘야 합니다.</p>
+                                <p data-i18n="s17_c3_d">정확성이 중요하면 도구를 한 번 쓰고 멈추지 않게 하고, 선행 조회, 빈 결과 복구, 검색 예산, 완료 판정까지 묶어줘야 합니다.</p>
                             </div>
                             <div class="tip-card prompt-summary-card">
                                 <h4 data-i18n="s17_c4_t">4. Reasoning Last</h4>
@@ -1605,14 +1605,14 @@ codex exec "Fix all TODOs" --full-auto</code></pre>
                             </div>
                         </div>
                         <div class="feature-list">
-                            <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="pg_s1_f1">긴 작업에서도 스타일과 목표를 덜 잃고, 다단계 흐름을 더 안정적으로 유지합니다.</span></div>
-                            <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="pg_s1_f2">장문 컨텍스트와 여러 도구 결과를 합쳐 증거 중심으로 요약하는 능력이 강합니다.</span></div>
-                            <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="pg_s1_f3">명시적인 블록 구조와 모듈식 요청 규칙을 주면 지시를 더 잘 따릅니다.</span></div>
-                            <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="pg_s1_f4">그래도 세션 초반의 tool routing, 의존성 체크, 고위험 작업 전 검증은 명시적으로 적는 편이 안전합니다.</span></div>
+                            <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="pg_s1_f1">긴 작업에서는 짧은 preamble으로 첫 단계와 진행 방향을 보여주면 체감 응답성이 좋아집니다.</span></div>
+                            <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="pg_s1_f2">출력 형식은 잘 따르지만, 무거운 구조는 필요한 결과물이나 UI 안정성이 있을 때만 쓰는 편이 좋습니다.</span></div>
+                            <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="pg_s1_f3">검색과 인용이 필요한 답변은 retrieval budget, 충분한 근거 기준, 근거가 없을 때의 행동을 같이 정해야 합니다.</span></div>
+                            <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="pg_s1_f4">검증 가능한 작업은 테스트, lint, build, 렌더 확인처럼 실제 확인 도구를 프롬프트에 포함할수록 안정적입니다.</span></div>
                         </div>
                         <div class="prompt-inline-note">
-                            <strong data-i18n="pg_s1_callout_t">기본은 강하게, 보강은 실패 모드 기준으로</strong>
-                            <p data-i18n="pg_s1_callout_d">가장 작은 프롬프트로 시작하고, incomplete execution, format drift, citation hallucination처럼 실제로 관측한 실패를 고치기 위해서만 블록을 추가하세요.</p>
+                            <strong data-i18n="pg_s1_callout_t">목표를 먼저, 절차는 필요한 만큼만</strong>
+                            <p data-i18n="pg_s1_callout_d">Goal, success criteria, constraints, output, stop rules를 짧게 고정하고, incomplete execution, format drift, 약한 citation처럼 관측한 실패를 고칠 때만 추가 블록을 붙이세요.</p>
                         </div>
                     </article>
 
@@ -1621,11 +1621,11 @@ codex exec "Fix all TODOs" --full-auto</code></pre>
                             <span class="prompt-inline-num">17.1</span>
                             <h3 data-i18n="pg_s2_title">핵심 요청 규칙</h3>
                         </div>
-                        <p data-i18n="pg_s2_intro">가장 큰 개선 효과는 출력 형식, 자율 진행 기준, 충돌하는 지시의 우선순위를 짧고 명확한 규칙으로 적는 데서 나옵니다.</p>
+                        <p data-i18n="pg_s2_intro">가장 큰 개선 효과는 목표 결과, 성공 기준, 자율 진행 기준, 충돌하는 지시의 우선순위를 짧고 명확한 규칙으로 적는 데서 나옵니다.</p>
                         <div class="tip-grid">
                             <div class="tip-card">
-                                <h4 data-i18n="pg_s2_c1_t">출력 형식 규칙</h4>
-                                <p data-i18n="pg_s2_c1_d">무엇을 몇 개 섹션으로 어떤 순서와 포맷으로 반환할지 먼저 고정하세요.</p>
+                                <h4 data-i18n="pg_s2_c1_t">Outcome contract</h4>
+                                <p data-i18n="pg_s2_c1_d">무엇을 달성해야 하는지, 성공은 무엇으로 판단하는지, 필수 출력 필드는 무엇인지 먼저 고정하세요.</p>
                             </div>
                             <div class="tip-card">
                                 <h4 data-i18n="pg_s2_c2_t">Default follow-through</h4>
@@ -1656,7 +1656,7 @@ codex exec "Fix all TODOs" --full-auto</code></pre>
                             <span class="prompt-inline-num">17.2</span>
                             <h3 data-i18n="pg_s3_title">Agent Loops</h3>
                         </div>
-                        <p data-i18n="pg_s3_intro">긴 작업에서 흔한 실패는 “대충 끝난 것처럼 보이지만 실제로는 덜 끝난 상태”입니다. 도구를 어디까지 계속 쓸지와 결과를 어떻게 검증할지를 같이 정해야 합니다.</p>
+                        <p data-i18n="pg_s3_intro">긴 작업에서 흔한 실패는 “대충 끝난 것처럼 보이지만 실제로는 덜 끝난 상태”입니다. 도구를 어디까지 계속 쓸지, 빈 결과를 어떻게 복구할지, 결과를 어떻게 검증할지를 같이 정해야 합니다.</p>
                         <div class="tip-grid">
                             <div class="tip-card">
                                 <h4 data-i18n="pg_s3_c1_t">Tool persistence</h4>
@@ -1676,7 +1676,7 @@ codex exec "Fix all TODOs" --full-auto</code></pre>
                             </div>
                             <div class="tip-card">
                                 <h4 data-i18n="pg_s3_c5_t">Verification loop</h4>
-                                <p data-i18n="pg_s3_c5_d">끝나기 전에 요구사항 커버리지, grounding, 포맷, 안전성 체크를 한 번 더 돌리게 하세요.</p>
+                                <p data-i18n="pg_s3_c5_d">끝나기 전에 요구사항 커버리지, grounding, 포맷, 안전성, 되돌리기 어려운 부작용 여부를 한 번 더 확인하게 하세요.</p>
                             </div>
                         </div>
                         <pre><code>&lt;agent_execution_loop&gt;
@@ -1697,7 +1697,7 @@ codex exec "Fix all TODOs" --full-auto</code></pre>
                         <div class="tip-grid">
                             <div class="tip-card">
                                 <h4 data-i18n="pg_s4_c1_t">Research and citations</h4>
-                                <p data-i18n="pg_s4_c1_d">검색과 합성이 필요한 작업은 sub-question 분해, 재검색, citation gating을 따로 줘야 합니다.</p>
+                                <p data-i18n="pg_s4_c1_d">검색과 합성이 필요한 작업은 sub-question 분해, retrieval budget, 재검색 조건, citation gating을 따로 줘야 합니다.</p>
                             </div>
                             <div class="tip-card">
                                 <h4 data-i18n="pg_s4_c2_t">Strict structured outputs</h4>
@@ -1716,20 +1716,24 @@ codex exec "Fix all TODOs" --full-auto</code></pre>
                             <div>
                                 <h3 data-i18n="pg_s4_block1_t">Research mode starter</h3>
                                 <pre><code>&lt;research_mode&gt;
+- Define the core question and success criteria before searching.
 - Break the question into 3-5 sub-questions.
-- Search each sub-question and follow one deeper lead if needed.
+- Use the smallest retrieval budget that can answer with evidence.
+- Search again only when a required fact, date, owner, or source is missing.
 - Cite only sources retrieved in this run.
 - If results are thin, retry once with a broader query before concluding.
-- Stop only when more search is unlikely to change the answer.
+- Stop when more search is unlikely to change the answer.
 &lt;/research_mode&gt;</code></pre>
                             </div>
                             <div>
                                 <h3 data-i18n="pg_s4_block2_t">Coding agent starter</h3>
                                 <pre><code>&lt;coding_agent_rules&gt;
+- Start from the target outcome, success criteria, constraints, and stop rules.
 - Persist until the requested change is implemented and verified.
 - Use tools when they improve correctness, not just convenience.
 - Give the user short updates only at phase changes.
 - Run the lightest relevant test, build, or lint step before stopping.
+- If validation cannot run, explain why and name the next best check.
 - Report what changed, what was verified, and what remains risky.
 &lt;/coding_agent_rules&gt;</code></pre>
                             </div>
@@ -1771,9 +1775,9 @@ codex exec "Fix all TODOs" --full-auto</code></pre>
                             </table>
                         </div>
                         <div class="feature-list">
-                            <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="pg_s5_f1">Responses API의 <code>phase</code>는 preamble과 final answer를 구분해 긴 도구 작업의 조기 종료를 줄이는 데 도움을 줍니다.</span></div>
+                            <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="pg_s5_f1">Responses API의 <code>phase</code>는 preamble 같은 중간 업데이트와 final answer를 구분합니다. assistant item을 수동 재전송한다면 기존 <code>phase</code> 값을 그대로 보존해야 합니다.</span></div>
                             <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="pg_s5_f2">Compaction을 쓸 때는 milestone 이후에만 압축하고, 압축 전후 프롬프트의 기능적 의미를 바꾸지 않는 편이 안전합니다.</span></div>
-                            <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="pg_s5_f3">GPT-5.4 마이그레이션은 모델만 먼저 바꾸고 reasoning을 고정한 뒤 eval로 차이를 보는 one-change-at-a-time 방식이 낫습니다.</span></div>
+                            <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="pg_s5_f3">GPT-5.5 마이그레이션은 모델만 먼저 바꾸고 reasoning을 고정한 뒤 eval로 차이를 보는 one-change-at-a-time 방식이 낫습니다.</span></div>
                         </div>
                         <div class="callout">
                             <strong data-i18n="pg_s5_callout_t">먼저 요청 방식, 그 다음 reasoning</strong>
@@ -1786,11 +1790,14 @@ codex exec "Fix all TODOs" --full-auto</code></pre>
                             <span class="prompt-inline-num">17.5</span>
                             <h3 data-i18n="pg_s6_title">Starter Playbooks</h3>
                         </div>
-                        <p data-i18n="pg_s6_intro">아래 템플릿은 Codex 101에서 바로 가져다 쓸 수 있는 최소 골격입니다. 필요 없는 블록은 빼고, 실측 failure mode가 있는 블록만 추가하세요.</p>
+                        <p data-i18n="pg_s6_intro">아래 템플릿은 Codex 101에서 바로 가져다 쓸 수 있는 최소 골격입니다. outcome, success criteria, constraints, output, stop rules를 먼저 두고, 필요 없는 블록은 빼세요.</p>
                         <div class="two-col">
                             <div>
                                 <h3 data-i18n="pg_s6_block1_t">Coding task prompt</h3>
-                                <pre><code>Update this codebase to [goal].
+                                <pre><code>Update this codebase to [target outcome].
+
+Success criteria:
+- [observable behavior, test result, or deliverable]
 
 Constraints:
 - Work only in the files that are relevant.
@@ -1801,15 +1808,21 @@ Execution rules:
 - Do prerequisite lookups before editing.
 - Persist until the change is implemented and verified.
 - Run the lightest relevant verification step before finalizing.
+- If validation cannot run, explain why and name the next best check.
 - If blocked, say exactly what is missing.</code></pre>
                             </div>
                             <div>
                                 <h3 data-i18n="pg_s6_block2_t">Research task prompt</h3>
                                 <pre><code>Answer this question with evidence: [question]
 
+Success criteria:
+- The answer distinguishes supported facts from inference.
+- Factual claims cite sources retrieved in this run.
+
 Research rules:
 - Break it into 3-5 sub-questions.
-- Search each one and retry once if results are thin.
+- Search each one with the smallest useful retrieval budget.
+- Search again only if a required fact, date, owner, or source is missing.
 - Cite only sources retrieved in this run.
 - Distinguish supported facts from inference.
 - Stop only when more search is unlikely to change the conclusion.</code></pre>
@@ -1828,8 +1841,8 @@ Research rules:
                     <article class="product-card prompt-guide-card">
                         <div class="product-icon" data-i18n="s17_link2_kicker">Official</div>
                         <h3 data-i18n="s17_link2_title">OpenAI Prompt Guidance</h3>
-                        <p data-i18n="s17_link2_desc">모델 동작, reasoning effort, phase, compaction, research/citation 규칙까지 포함한 공식 기준 문서를 같이 보세요.</p>
-                        <a href="https://developers.openai.com/api/docs/guides/prompt-guidance/" target="_blank" class="btn btn-ghost" data-i18n="s17_link2_cta">공식 문서 보기</a>
+                        <p data-i18n="s17_link2_desc">GPT-5.5의 outcome-first prompting, reasoning effort, phase, compaction, validation, research/citation 규칙까지 포함한 공식 기준 문서를 같이 보세요.</p>
+                        <a href="https://developers.openai.com/api/docs/guides/prompt-guidance?model=gpt-5.5" target="_blank" class="btn btn-ghost" data-i18n="s17_link2_cta">공식 문서 보기</a>
                     </article>
                 </div>
             </section>

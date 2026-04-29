@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: April 28, 2026</strong><br/>
+  <strong>Last updated: April 29, 2026</strong><br/>
   The live site displays the viewer's current date automatically and reflects the latest Codex model guidance reviewed from official docs.
 </p>
 
@@ -39,7 +39,7 @@ Based on the [official OpenAI documentation](https://developers.openai.com/codex
 - The intro now points readers to the [OpenAI Developer Showcase](https://developers.openai.com/showcase) so they can scan real Codex-built examples and prompt ideas before diving into the guide.
 - The daily update log now lives at the bottom as a compact Changelog section, with source-tracing detail tucked behind a disclosure.
 
-### Daily MCP Verification Snapshot (2026-04-28)
+### Daily MCP Verification Snapshot (2026-04-29)
 
 - Re-checking `codex/models` confirms that `gpt-5.5` is still the top recommended Codex model when it appears in your picker. During rollout, `gpt-5.4` remains the fallback, `gpt-5.4-mini` stays the fast local/subagent lane, `gpt-5.3-codex` remains the cloud/code-review lane, `gpt-5.3-codex-spark` stays the near-instant research-preview lane for ChatGPT Pro, and `gpt-5.2` is still the main alternative model.
 - The latest model guidance is more nuanced than a simple replacement story. In the Codex model picker, start with `gpt-5.5` when it appears and use `gpt-5.4` when it has not rolled out to the account yet. One important clarification from the current models page is that `gpt-5.5` is available in Codex only when you sign in with ChatGPT, not with API-key authentication. In the API, the official Models docs list `gpt-5.5`, and `gpt-5.5-pro` is available for Responses API requests, including through the Batch API.
@@ -53,6 +53,7 @@ Based on the [official OpenAI documentation](https://developers.openai.com/codex
 - Plugins and skills are now documented as a tighter pair. The official `Plugins` page defines plugins as bundles of skills, app integrations, and MCP servers, while the `Skills` page makes the progressive-disclosure loading model much more explicit and clarifies that plugins are the installable distribution unit.
 - Docs MCP remains one of the highest-leverage setup steps. The current guide at `developers.openai.com/learn/docs-mcp` still uses the server URL `https://developers.openai.com/mcp`, confirms that CLI and IDE configuration are shared, and recommends adding an AGENTS.md steering line so Codex consults the docs server automatically for OpenAI-related questions.
 - `config.toml` is still the area most likely to drift. The current reference gives more weight to `review_model`, top-level `web_search`, `tools.web_search`, `personality`, `service_tier`, `default_permissions`, `tools.view_image`, `windows.sandbox`, `windows.sandbox_private_desktop`, `model_instructions_file`, `memories.disable_on_external_context`, granular approvals, app permissions, feature flags, and named permission profiles.
+- Section 17 now reflects the current GPT-5.5 Prompt Guidance: prefer outcome-first prompts with explicit success criteria, constraints, output expectations, and stop rules; use short preambles for long tool-heavy tasks; define retrieval budgets and missing-evidence behavior for grounded answers; preserve Responses API `phase` values when manually replaying assistant items; and ask for concrete validation checks before finalizing coding or visual work.
 - A wider sweep across `developers.openai.com/codex` and `openai.com/index` still did not justify a new top-level chapter today, but it did confirm that the guide should keep App-first onboarding, Docs MCP grounding, and model-selection guidance at the top while using Codex for OSS, the AI-native engineering team guide, and launch posts as supporting references. The OSS page is now especially worth noting because it highlights six months of ChatGPT Pro with Codex plus conditional Codex Security access for eligible maintainers.
 
 ### Audience Quick Use
