@@ -17,7 +17,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=20260430-docs-refresh" />
+    <link rel="stylesheet" href="style.css?v=20260504-docs-refresh" />
 </head>
 
 <body data-page="home">
@@ -47,7 +47,7 @@
                     <p class="hero-badge">
                         <span data-i18n="hero_badge_prefix">공식 문서 기준 재검수</span>
                         <span aria-hidden="true"> · </span>
-                        <span class="live-date" data-date-format="long">2026년 4월 30일</span>
+                        <span class="live-date" data-date-format="long">2026년 5월 4일</span>
                     </p>
                     <h1 class="hero-title" data-i18n="hero_title">OpenAI Codex를<br />실무에 바로 붙이는 가이드</h1>
                     <p class="hero-sub" data-i18n="hero_sub">CLI · Desktop App (macOS/Windows) · IDE Extension · Web · iOS · SDK automation<br />최신 공식 문서를 기준으로 어디서 시작할지, 어떤 모델을 쓸지, 샌드박스/승인, MCP, plugins, automations를 처음 사용자와 실무 사용자 모두 읽기 쉽도록 다시 정리했습니다.</p>
@@ -168,11 +168,11 @@
                         </article>
                         <article class="update-pill">
                             <p class="update-pill-title" data-i18n="overview_fact_3_title">플랜과 팀 과금 구조 정리</p>
-                            <p class="update-pill-desc" data-i18n="overview_fact_3_desc">Quickstart는 여전히 모든 ChatGPT 플랜에 Codex가 포함된다고 설명합니다. 현재 `codex/pricing`은 `GPT-5.5` 사용량 표와 Plus의 로컬 메시지 범위(`gpt-5.5` 15-80, `gpt-5.4` 20-100, `gpt-5.4-mini` 60-350, `gpt-5.3-codex` 30-150)를 유지하면서, 토큰 기반 크레딧 표는 새/기존 Business와 새 Enterprise 고객에게 먼저 적용된다고 명시합니다. 다른 플랜은 아직 메시지 기반 평균표를 함께 읽어야 하고, Pro 프로모션도 2026년 5월 31일까지 이어집니다. API 가격과 한도는 `gpt-5.5` / `gpt-5.5-pro`를 별도로 봐야 합니다.</p>
+                            <p class="update-pill-desc" data-i18n="overview_fact_3_desc">Quickstart는 여전히 모든 ChatGPT 플랜에 Codex가 포함된다고 설명합니다. `codex/pricing`은 오늘도 Plus / Pro 5x / Pro 20x / Business / API Key 표와 Plus 로컬 메시지 범위(`gpt-5.5` 15-80, `gpt-5.4` 20-100, `gpt-5.4-mini` 60-350, `gpt-5.3-codex` 30-150)를 유지합니다. 다만 OpenAI Help Center의 최신 Codex rate card는 2026년 4월 23일 이후 대부분의 Plus, Pro, Business, Enterprise/Edu/Gov/Health 고객이 토큰 기반 rate card를 써야 한다고 더 넓게 설명합니다. 따라서 실무 문서는 사용량 표와 token credit 표를 함께 보여주고, 실제 과금/한도 판단은 usage dashboard와 rate card를 같이 확인하도록 고쳤습니다.</p>
                         </article>
                         <article class="update-pill">
                             <p class="update-pill-title" data-i18n="overview_fact_4_title">IDE와 Windows 경로 명확화</p>
-                            <p class="update-pill-desc" data-i18n="overview_fact_4_desc">IDE 문서는 이제 VS Code 계열과 JetBrains를 macOS·Windows·Linux 전반에 걸쳐 설명합니다. 실전 가이드는 여전히 Windows agent mode를 WSL2 워크스페이스에서 가장 안정적으로 보되, Windows 문서는 Microsoft Store / `winget` 설치, `elevated` / `unelevated` sandbox, private desktop 기본값, 네이티브 Windows 성능과 Linux-native WSL2 툴체인 사이의 선택을 더 분명히 구분합니다.</p>
+                            <p class="update-pill-desc" data-i18n="overview_fact_4_desc">IDE 문서는 이제 VS Code 계열과 JetBrains를 macOS·Windows·Linux 전반에 걸쳐 설명합니다. Windows 문서는 네이티브 Windows 실행을 기본 축으로 두고 `elevated` sandbox를 우선 권장하며, `unelevated`는 관리자 승인이나 정책 때문에 elevated 설정이 막힐 때의 대안으로 설명합니다. WSL2는 Linux-native 툴체인이 필요하거나 기존 개발 워크플로가 이미 WSL2에 있을 때 고르는 경로로 분리했습니다.</p>
                         </article>
                         <article class="update-pill">
                             <p class="update-pill-title" data-i18n="overview_fact_5_title">앱 워크플로 최신화</p>
@@ -180,7 +180,7 @@
                         </article>
                         <article class="update-pill">
                             <p class="update-pill-title" data-i18n="overview_fact_6_title">설정·플러그인·보안 기준 재점검</p>
-                            <p class="update-pill-desc" data-i18n="overview_fact_6_desc">가이드는 이제 `review_model`, granular approvals, `approvals_reviewer`, top-level `web_search`, `tools.web_search`, `tools.view_image`, `service_tier`, `personality`, `default_permissions`, Windows sandbox 키, `model_instructions_file`, `memories.disable_on_external_context`, protected paths, JSON schema, app connector 제어, feature flags, permissions profile, plugin packaging, cloud/runtime 분리를 최신 문서 기준으로 맞춥니다. Docs MCP는 `https://developers.openai.com/mcp`를 쓰고 CLI와 IDE 설정이 공유된다는 점도 상단 설명에 다시 맞췄습니다.</p>
+                            <p class="update-pill-desc" data-i18n="overview_fact_6_desc">가이드는 이제 `review_model`, granular approvals, `approvals_reviewer`, top-level `web_search`, `tools.web_search`, `tools.view_image`, `service_tier`, `personality`, `default_permissions`, Windows sandbox 키, `model_instructions_file`, `memories.disable_on_external_context`, protected paths, JSON schema, app connector 제어, feature flags, permissions profile, plugin packaging, cloud/runtime 분리를 최신 문서 기준으로 맞춥니다. 오늘은 2026년 4월 28일 AWS limited preview 발표와 4월 30일 Advanced Account Security 발표도 함께 반영해 Bedrock provider 경로와 ChatGPT 로그인 보안이 Codex 운영 고려사항에 들어간다는 점을 추가했습니다.</p>
                         </article>
                     </div>
                     <p class="overview-sources-label" data-i18n="overview_sources_label">출처 문서</p>
@@ -197,6 +197,9 @@
                         <a href="https://openai.com/index/introducing-gpt-5-5/" target="_blank" data-i18n="overview_source_9">GPT-5.5 announcement</a>
                         <a href="https://openai.com/index/codex-for-almost-everything/" target="_blank" data-i18n="overview_source_22">Codex for (almost) everything</a>
                         <a href="https://openai.com/index/codex-flexible-pricing-for-teams/" target="_blank" data-i18n="overview_source_26">Pay-as-you-go pricing for teams</a>
+                        <a href="https://help.openai.com/en/articles/20001106-codex-rate-card" target="_blank" data-i18n="overview_source_27">Codex rate card</a>
+                        <a href="https://openai.com/index/openai-on-aws/" target="_blank" data-i18n="overview_source_28">OpenAI on AWS</a>
+                        <a href="https://openai.com/index/advanced-account-security/" target="_blank" data-i18n="overview_source_29">Advanced Account Security</a>
                     </div>
                 </details>
 
@@ -736,8 +739,8 @@
                                 </tbody>
                             </table>
                         </div>
-                        <p class="callout-inline" data-i18n="s4_note_access">현재 공식 문서는 모든 ChatGPT 플랜에 Codex가 포함된다고 설명합니다. 처음 보는 사용자라면 `Free $0`, `Go $8`, `Plus $20`, `Pro from $100` 순으로 보면 이해가 쉽고, 팀 사용자는 Business·Enterprise의 Codex-only pay-as-you-go seat를 같이 보면 됩니다. Pricing 페이지는 여전히 모델별 5시간 한도와 사용량 범위를 보여주고, 현재 토큰 기반 크레딧 표는 새/기존 Business와 새 Enterprise에 우선 적용되며 다른 플랜은 아직 메시지 기반 평균표를 함께 보라고 설명합니다. 즉 팀/워크스페이스 종류에 따라 메시지 표와 토큰 표를 나눠 읽어야 합니다. Plus 기준 로컬 메시지 범위는 `gpt-5.5` 15-80, `gpt-5.4` 20-100, `gpt-5.4-mini` 60-350, `gpt-5.3-codex` 30-150이며, `gpt-5.5`는 더 적은 토큰으로 비슷하거나 더 나은 결과를 내도록 설명됩니다. API에서는 `gpt-5.5`와 `gpt-5.5-pro`가 별도 모델로 제공되므로 API 가격/한도는 Models와 Pricing 페이지를 따로 확인해야 합니다. 이미지 생성은 일반 Codex 한도를 평균 3-5배 더 빨리 쓰며 Fast mode는 지원 모델에서 더 높은 비율로 크레딧을 소모합니다. 실제 체감 한도는 Pricing과 usage dashboard를 항상 같이 확인하세요.</p>
-                        <p class="command-refs" data-i18n-html="s4_refs">출처: <a href="https://developers.openai.com/codex/quickstart/" target="_blank">Quickstart</a> · <a href="https://developers.openai.com/codex/pricing/" target="_blank">Codex pricing</a> · <a href="https://developers.openai.com/codex/speed" target="_blank">Speed</a> · <a href="https://openai.com/index/codex-flexible-pricing-for-teams/" target="_blank">Pay-as-you-go pricing for teams</a></p>
+                        <p class="callout-inline" data-i18n="s4_note_access">현재 공식 문서는 모든 ChatGPT 플랜에 Codex가 포함된다고 설명합니다. 처음 보는 사용자라면 `Free $0`, `Go $8`, `Plus $20`, `Pro from $100` 순으로 보면 이해가 쉽고, 팀 사용자는 Business·Enterprise의 Codex-only pay-as-you-go seat를 같이 보면 됩니다. Pricing 페이지는 Plus / Pro 5x / Pro 20x / Business / API Key 표와 모델별 5시간 한도를 보여주며, Plus 기준 로컬 메시지 범위는 `gpt-5.5` 15-80, `gpt-5.4` 20-100, `gpt-5.4-mini` 60-350, `gpt-5.3-codex` 30-150입니다. 다만 최신 Help Center rate card는 대부분의 Plus, Pro, Business, Enterprise/Edu/Gov/Health 고객도 토큰 기반 rate card를 쓰도록 마이그레이션됐다고 설명합니다. 그래서 실제 비용 판단은 메시지/작업 한도, token credit rate card, usage dashboard를 함께 봐야 합니다. Codex 안에서 API 키 로그인은 `gpt-5.5`를 아직 제공하지 않고, OpenAI API 자체에서는 `gpt-5.5`와 `gpt-5.5-pro`가 별도 모델로 제공됩니다. 이미지 생성은 일반 Codex 한도를 평균 3-5배 더 빨리 쓰며 Fast mode는 지원 모델에서 더 높은 비율로 크레딧을 소모합니다.</p>
+                        <p class="command-refs" data-i18n-html="s4_refs">출처: <a href="https://developers.openai.com/codex/quickstart/" target="_blank">Quickstart</a> · <a href="https://developers.openai.com/codex/pricing/" target="_blank">Codex pricing</a> · <a href="https://help.openai.com/en/articles/20001106-codex-rate-card" target="_blank">Codex rate card</a> · <a href="https://developers.openai.com/codex/speed" target="_blank">Speed</a> · <a href="https://openai.com/index/codex-flexible-pricing-for-teams/" target="_blank">Pay-as-you-go pricing for teams</a></p>
                     </div>
                 </div>
             </section>
@@ -772,7 +775,7 @@ export OPENAI_API_KEY="your-api-key-here"</code></pre>
                         <ol class="setup-steps">
                             <li data-i18n="s5_app1">macOS: openai.com/codex 에서 다운로드 (.dmg)</li>
                             <li data-i18n="s5_app2">Windows: Microsoft Store에서 설치하거나 `winget install Codex -s msstore` 사용</li>
-                            <li data-i18n="s5_app3">앱 실행 후 ChatGPT 계정 또는 API 키로 로그인 (API 키 로그인은 cloud threads와 일부 credits 기반 기능이 제한될 수 있음)</li>
+                            <li data-i18n="s5_app3">앱 실행 후 ChatGPT 계정 또는 API 키로 로그인 (API 키 로그인은 cloud threads와 일부 credits 기반 기능이 제한될 수 있음). 고위험 계정이나 민감한 프로젝트라면 ChatGPT 웹 보안 설정에서 Advanced Account Security도 검토하세요.</li>
                         </ol>
                         <div class="callout waitlist-box">
                             <div class="setup-meta" aria-hidden="true">
@@ -794,7 +797,7 @@ export OPENAI_API_KEY="your-api-key-here"</code></pre>
                         </ol>
                     </article>
                 </div>
-                <p class="command-refs" data-i18n-html="s5_refs">출처: <a href="https://developers.openai.com/codex/quickstart/" target="_blank">Quickstart</a> · <a href="https://developers.openai.com/codex/windows" target="_blank">Windows guide</a> · <a href="https://developers.openai.com/codex/app/windows" target="_blank">Windows app</a> · <a href="https://developers.openai.com/codex/ide" target="_blank">IDE extension</a></p>
+                <p class="command-refs" data-i18n-html="s5_refs">출처: <a href="https://developers.openai.com/codex/quickstart/" target="_blank">Quickstart</a> · <a href="https://developers.openai.com/codex/windows" target="_blank">Windows guide</a> · <a href="https://developers.openai.com/codex/app/windows" target="_blank">Windows app</a> · <a href="https://developers.openai.com/codex/ide" target="_blank">IDE extension</a> · <a href="https://openai.com/index/advanced-account-security/" target="_blank">Advanced Account Security</a></p>
             </section>
 
             <!-- Section 5 -->
@@ -970,7 +973,7 @@ then verify the page again and attach the screenshot result.</code></pre>
                     <img src="images/codex_IDE.png" alt="Codex VS Extension marketplace page" loading="lazy" />
                     <figcaption data-i18n="img_ide">Codex VS Extension — 마켓플레이스 (4.6M+ 다운로드)</figcaption>
                 </figure>
-                <p data-i18n="s8_intro">VS Code, Cursor, Windsurf, JetBrains IDE에 통합되는 AI 코딩 에이전트입니다. 일반적으로 설치 후 Agent mode가 기본이며, JetBrains 통합은 ChatGPT 계정, API 키, JetBrains AI로 로그인할 수 있습니다. 현재 공식 문서는 IDE 통합이 macOS·Windows·Linux에 걸쳐 제공된다고 설명하지만, Windows에서 agent mode 안정성을 우선하면 여전히 WSL2 워크스페이스가 가장 무난한 경로입니다.</p>
+                <p data-i18n="s8_intro">VS Code, Cursor, Windsurf, JetBrains IDE에 통합되는 AI 코딩 에이전트입니다. 일반적으로 설치 후 Agent mode가 기본이며, JetBrains 통합은 ChatGPT 계정, API 키, JetBrains AI로 로그인할 수 있습니다. 현재 공식 문서는 IDE 통합이 macOS·Windows·Linux에 걸쳐 제공된다고 설명합니다. Windows에서는 네이티브 sandbox를 기본 경로로 두고, Linux-native 도구나 이미 WSL2에 있는 저장소가 중요할 때 WSL2 워크스페이스를 선택하세요.</p>
                 <div class="table-wrap">
                     <table>
                         <thead>
@@ -1380,7 +1383,7 @@ codex --profile deep</code></pre>
                 <div class="tip-grid">
                     <div class="tip-card">
                         <h4 data-i18n="s13_c1_t">무엇을 고정할까</h4>
-                        <p data-i18n="s13_c1_d">모델, review_model, reasoning effort, sandbox mode, approval policy, web_search, profile, MCP 서버처럼 세션마다 흔들리면 품질 차이가 큰 항목부터 기본값으로 고정하세요. 필요하면 Windows 전용 `windows.sandbox`와 `windows.sandbox_private_desktop`도 함께 고정하세요.</p>
+                        <p data-i18n="s13_c1_d">모델, model_provider, review_model, reasoning effort, sandbox mode, approval policy, web_search, profile, MCP 서버처럼 세션마다 흔들리면 품질 차이가 큰 항목부터 기본값으로 고정하세요. AWS limited preview처럼 Bedrock 경로를 쓰는 팀은 provider 설정도 운영 표준에 포함해야 합니다. 필요하면 Windows 전용 `windows.sandbox`와 `windows.sandbox_private_desktop`도 함께 고정하세요.</p>
                     </div>
                     <div class="tip-card">
                         <h4 data-i18n="s13_c2_t">권한은 좁게 시작</h4>
@@ -1391,7 +1394,7 @@ codex --profile deep</code></pre>
                         <p data-i18n="s13_c3_d">품질 문제가 보이면 프롬프트보다 먼저 작업 디렉토리, 쓰기 권한, 기본 모델, 필요한 도구 연결이 맞는지 확인하세요. 많은 실패는 setup mismatch에서 나옵니다.</p>
                     </div>
                 </div>
-                <p class="command-refs" data-i18n-html="s13_refs">출처: <a href="https://developers.openai.com/codex/learn/best-practices/" target="_blank">Codex Best practices</a> · <a href="https://developers.openai.com/codex/config-reference/" target="_blank">config reference</a> · <a href="https://developers.openai.com/codex/concepts/sandboxing/" target="_blank">sandboxing</a></p>
+                <p class="command-refs" data-i18n-html="s13_refs">출처: <a href="https://developers.openai.com/codex/learn/best-practices/" target="_blank">Codex Best practices</a> · <a href="https://developers.openai.com/codex/config-reference/" target="_blank">config reference</a> · <a href="https://developers.openai.com/codex/concepts/sandboxing/" target="_blank">sandboxing</a> · <a href="https://openai.com/index/openai-on-aws/" target="_blank">OpenAI on AWS</a></p>
             </section>
 
             <!-- Section 13 -->
@@ -2010,7 +2013,7 @@ codex --search "optimize with Next.js 15"
                     </div>
                     <p class="overview-fact-date">
                         <span data-i18n="overview_fact_date_prefix">업데이트 기준일</span>
-                        <span class="live-date" data-date-format="long">2026년 4월 30일</span>
+                        <span class="live-date" data-date-format="long">2026년 5월 4일</span>
                     </p>
                 </div>
                 <ol class="changelog-list" aria-label="Today update summary">
@@ -2048,14 +2051,14 @@ codex --search "optimize with Next.js 15"
                     href="https://github.com/swhan0329/codex-101" target="_blank">PR을 환영합니다</a>.</p>
             <p class="footer-meta">
                 <span data-i18n="footer_date_prefix">최종 업데이트</span>:
-                <span class="live-date" data-date-format="long">2026년 4월 30일</span>
+                        <span class="live-date" data-date-format="long">2026년 5월 4일</span>
             </p>
             <p class="footer-meta">Made by <a href="https://github.com/swhan0329" target="_blank">@swhan0329</a></p>
         </div>
     </footer>
 
-    <script src="i18n.js?v=20260430-docs-refresh"></script>
-    <script src="app.js?v=20260430-docs-refresh"></script>
+    <script src="i18n.js?v=20260504-docs-refresh"></script>
+    <script src="app.js?v=20260504-docs-refresh"></script>
 </body>
 
 </html>
