@@ -1982,6 +1982,90 @@ kbd {
     line-height: 1.68;
 }
 
+.pet-recording-card {
+    display: grid;
+    grid-template-columns: minmax(220px, .72fr) minmax(0, 1fr);
+    gap: 20px;
+    align-items: stretch;
+    margin: 22px 0;
+    padding: 14px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: linear-gradient(135deg, rgba(255, 255, 255, .05), rgba(255, 255, 255, .018));
+    color: var(--text);
+    overflow: hidden;
+    transition: border-color .2s, background .2s, transform .2s;
+}
+
+.pet-recording-card:hover {
+    text-decoration: none;
+    border-color: rgba(255, 255, 255, .34);
+    background: linear-gradient(135deg, rgba(255, 255, 255, .075), rgba(255, 255, 255, .026));
+    transform: translateY(-1px);
+}
+
+.pet-recording-thumb {
+    position: relative;
+    display: block;
+    min-height: 190px;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    background: var(--bg-code);
+}
+
+.pet-recording-thumb::after {
+    content: "";
+    position: absolute;
+    inset: 50% auto auto 50%;
+    width: 54px;
+    height: 38px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, .92);
+    transform: translate(-50%, -50%);
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+    opacity: .9;
+}
+
+.pet-recording-thumb img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 190px;
+    object-fit: cover;
+}
+
+.pet-recording-copy {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 6px 6px 6px 0;
+}
+
+.pet-recording-copy strong {
+    font-size: clamp(1.28rem, 2.2vw, 1.8rem);
+    line-height: 1.15;
+    letter-spacing: 0;
+}
+
+.pet-recording-copy span:not(.field-tip-person):not(.pet-recording-cta) {
+    color: var(--text-dim);
+    line-height: 1.65;
+}
+
+.pet-recording-cta {
+    align-self: flex-start;
+    margin-top: 4px;
+    padding: 8px 12px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-size: .84rem;
+    font-weight: 700;
+    color: var(--text);
+    background: rgba(255, 255, 255, .045);
+}
+
 .field-source-block {
     margin-top: 18px;
 }
@@ -3050,6 +3134,14 @@ details p {
 
     .field-tip-grid {
         grid-template-columns: 1fr;
+    }
+
+    .pet-recording-card {
+        grid-template-columns: 1fr;
+    }
+
+    .pet-recording-copy {
+        padding: 0;
     }
 }
 
