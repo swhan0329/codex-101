@@ -17,7 +17,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=20260504-docs-refresh" />
+    <link rel="stylesheet" href="style.css?v=20260505-docs-refresh" />
 </head>
 
 <body data-page="home">
@@ -47,7 +47,7 @@
                     <p class="hero-badge">
                         <span data-i18n="hero_badge_prefix">공식 문서 기준 재검수</span>
                         <span aria-hidden="true"> · </span>
-                        <span class="live-date" data-date-format="long">2026년 5월 4일</span>
+                        <span class="live-date" data-date-format="long">2026년 5월 5일</span>
                     </p>
                     <h1 class="hero-title" data-i18n="hero_title">OpenAI Codex를<br />실무에 바로 붙이는 가이드</h1>
                     <p class="hero-sub" data-i18n="hero_sub">CLI · Desktop App (macOS/Windows) · IDE Extension · Web · iOS · SDK automation<br />최신 공식 문서를 기준으로 어디서 시작할지, 어떤 모델을 쓸지, 샌드박스/승인, MCP, plugins, automations를 처음 사용자와 실무 사용자 모두 읽기 쉽도록 다시 정리했습니다.</p>
@@ -150,7 +150,40 @@
             <section class="section overview-section" id="start-here">
                 <p class="overview-kicker" data-i18n="overview_kicker">Start here</p>
                 <h2 data-i18n="overview_title">처음 사용자와 실무 사용자를 위한 읽기 경로</h2>
-                <p class="overview-lead" data-i18n="overview_lead">이 페이지는 먼저 두 가지를 보여줍니다. 지금 어떤 모델과 사용 방식을 고르면 되는지, 그리고 처음 사용자와 실무 사용자가 어디서부터 읽으면 좋은지입니다. 오늘 반영한 변경 내용은 하단 Changelog에서만 확인할 수 있습니다.</p>
+                <p class="overview-lead" data-i18n="overview_lead">이 페이지는 먼저 두 가지를 보여줍니다. 지금 어떤 모델과 사용 방식을 고르면 되는지, 그리고 처음 사용자와 실무 사용자가 어디서부터 읽으면 좋은지입니다. 오늘 반영한 변경 내용은 바로 아래 토글에서 먼저 확인할 수 있습니다.</p>
+
+                <details class="overview-update-log" open>
+                    <summary>
+                        <span class="overview-update-log-title" data-i18n="overview_update_toggle_title">오늘 반영한 변경 보기</span>
+                        <span class="overview-update-log-hint" data-i18n="overview_update_toggle_hint">매 실행마다 먼저 확인한 공식 변경 사항</span>
+                    </summary>
+                    <div class="overview-update-strip" aria-label="Today verified updates">
+                        <article class="update-pill">
+                            <strong data-i18n="overview_update_1_title">모델/사용 방식 매트릭스 재확인</strong>
+                            <span data-i18n="overview_update_1_desc">`codex/models`를 다시 확인해 `gpt-5.5`가 최우선 추천 모델로 유지되는지, `gpt-5.4`가 대체 선택지로 남는지, `gpt-5.4-mini`와 `gpt-5.3-codex`의 역할이 어떻게 갈리는지 먼저 대조했습니다.</span>
+                        </article>
+                        <article class="update-pill">
+                            <strong data-i18n="overview_update_2_title">요금제·크레딧 구조 재정리</strong>
+                            <span data-i18n="overview_update_2_desc">`codex/pricing`과 Help Center rate card를 함께 확인해 플랜 한도, token credit, API-key 경로를 같이 읽도록 보강했습니다.</span>
+                        </article>
+                        <article class="update-pill">
+                            <strong data-i18n="overview_update_3_title">Quickstart·IDE 경로 정리</strong>
+                            <span data-i18n="overview_update_3_desc">Quickstart, IDE, Windows 문서를 다시 대조해 App-first 시작 경로와 JetBrains/WSL2 설명을 유지했습니다.</span>
+                        </article>
+                        <article class="update-pill">
+                            <strong data-i18n="overview_update_4_title">App 기능 흐름 재확인</strong>
+                            <span data-i18n="overview_update_4_desc">App features와 automations 문서를 다시 확인해 worktrees, integrated terminal, in-app browser, computer use, artifacts, memories 설명을 점검했습니다.</span>
+                        </article>
+                        <article class="update-pill">
+                            <strong data-i18n="overview_update_5_title">관련 발표 전체 재점검</strong>
+                            <span data-i18n="overview_update_5_desc">`openai.com/index`의 GPT-5.5, Codex for almost everything, AWS, Advanced Account Security, pay-as-you-go 발표를 다시 대조했습니다.</span>
+                        </article>
+                        <article class="update-pill">
+                            <strong data-i18n="overview_update_6_title">Docs MCP·설정 기준 재점검</strong>
+                            <span data-i18n="overview_update_6_desc">Docs MCP와 config reference를 다시 확인해 서버 URL, shared CLI/IDE config, granular approvals, web_search, permissions profile 설명을 최신 기준으로 유지했습니다.</span>
+                        </article>
+                    </div>
+                </details>
 
                 <div class="showcase-card">
                     <div>
@@ -1974,7 +2007,7 @@ codex --search "optimize with Next.js 15"
                     </div>
                     <p class="overview-fact-date">
                         <span data-i18n="overview_fact_date_prefix">업데이트 기준일</span>
-                        <span class="live-date" data-date-format="long">2026년 5월 4일</span>
+                        <span class="live-date" data-date-format="long">2026년 5월 5일</span>
                     </p>
                 </div>
                 <ol class="changelog-list" aria-label="Today update summary">
@@ -2016,14 +2049,14 @@ codex --search "optimize with Next.js 15"
                     href="https://github.com/swhan0329/codex-101" target="_blank">PR을 환영합니다</a>.</p>
             <p class="footer-meta">
                 <span data-i18n="footer_date_prefix">최종 업데이트</span>:
-                        <span class="live-date" data-date-format="long">2026년 5월 4일</span>
+                        <span class="live-date" data-date-format="long">2026년 5월 5일</span>
             </p>
             <p class="footer-meta">Made by <a href="https://github.com/swhan0329" target="_blank">@swhan0329</a></p>
         </div>
     </footer>
 
-    <script src="i18n.js?v=20260504-docs-refresh"></script>
-    <script src="app.js?v=20260504-docs-refresh"></script>
+    <script src="i18n.js?v=20260505-docs-refresh"></script>
+    <script src="app.js?v=20260505-docs-refresh"></script>
 </body>
 
 </html>
