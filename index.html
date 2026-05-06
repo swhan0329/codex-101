@@ -17,7 +17,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=20260505-docs-refresh" />
+    <link rel="stylesheet" href="style.css?v=20260506-docs-refresh" />
 </head>
 
 <body data-page="home">
@@ -47,7 +47,7 @@
                     <p class="hero-badge">
                         <span data-i18n="hero_badge_prefix">공식 문서 기준 재검수</span>
                         <span aria-hidden="true"> · </span>
-                        <span class="live-date" data-date-format="long">2026년 5월 5일</span>
+                        <span class="live-date" data-date-format="long">2026년 5월 6일</span>
                     </p>
                     <h1 class="hero-title" data-i18n="hero_title">OpenAI Codex를<br />실무에 바로 붙이는 가이드</h1>
                     <p class="hero-sub" data-i18n="hero_sub">CLI · Desktop App (macOS/Windows) · IDE Extension · Web · iOS · SDK automation<br />최신 공식 문서를 기준으로 어디서 시작할지, 어떤 모델을 쓸지, 샌드박스/승인, MCP, plugins, automations를 처음 사용자와 실무 사용자 모두 읽기 쉽도록 다시 정리했습니다.</p>
@@ -160,11 +160,11 @@
                     <div class="overview-update-strip" aria-label="Today verified updates">
                         <article class="update-pill">
                             <strong data-i18n="overview_update_1_title">모델/사용 방식 매트릭스 재확인</strong>
-                            <span data-i18n="overview_update_1_desc">`codex/models`를 다시 확인해 `gpt-5.5`가 최우선 추천 모델로 유지되는지, `gpt-5.4`가 대체 선택지로 남는지, `gpt-5.4-mini`와 `gpt-5.3-codex`의 역할이 어떻게 갈리는지 먼저 대조했습니다.</span>
+                            <span data-i18n="overview_update_1_desc">`codex/models`를 오늘 다시 확인해 `gpt-5.5` 우선, `gpt-5.4` 대체, `gpt-5.4-mini` 빠른 보조 작업, `gpt-5.3-codex` Cloud/review 축이 유지되는지 대조했습니다.</span>
                         </article>
                         <article class="update-pill">
                             <strong data-i18n="overview_update_2_title">요금제·크레딧 구조 재정리</strong>
-                            <span data-i18n="overview_update_2_desc">`codex/pricing`과 Help Center rate card를 함께 확인해 플랜 한도, token credit, API-key 경로를 같이 읽도록 보강했습니다.</span>
+                            <span data-i18n="overview_update_2_desc">`codex/pricing`에서 API-key 탭의 Codex 사용 범위와 직접 OpenAI API 모델 접근을 분리해 읽도록 문구를 보강했습니다.</span>
                         </article>
                         <article class="update-pill">
                             <strong data-i18n="overview_update_3_title">Quickstart·IDE 경로 정리</strong>
@@ -176,7 +176,7 @@
                         </article>
                         <article class="update-pill">
                             <strong data-i18n="overview_update_5_title">관련 발표 전체 재점검</strong>
-                            <span data-i18n="overview_update_5_desc">`openai.com/index`의 GPT-5.5, Codex for almost everything, AWS, Advanced Account Security, pay-as-you-go 발표를 다시 대조했습니다.</span>
+                            <span data-i18n="overview_update_5_desc">`openai.com/index` 최신 목록까지 훑어 May 4 저지연 voice engineering 글은 Codex 문서 반영 대상이 아니고, Codex 관련 핵심 발표는 기존 4월 묶음임을 확인했습니다.</span>
                         </article>
                         <article class="update-pill">
                             <strong data-i18n="overview_update_6_title">Docs MCP·설정 기준 재점검</strong>
@@ -716,12 +716,12 @@
                                     <tr>
                                         <td>API Key</td>
                                         <td data-i18n="s4_usage_based">토큰 사용량 기반</td>
-                                        <td data-i18n="s4_codex_api">CLI/IDE/SDK 전용, 클라우드 기능 없음, API 모델은 `gpt-5.5`/`gpt-5.5-pro` 포함</td>
+                                        <td data-i18n="s4_codex_api">CLI/IDE/SDK 전용, 클라우드 기능 없음. Codex API-key 로그인은 `gpt-5.5` 제외, 직접 OpenAI API는 별도 확인</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
-                        <p class="callout-inline" data-i18n="s4_note_access">현재 공식 문서는 모든 ChatGPT 플랜에 Codex가 포함된다고 설명합니다. 처음 보는 사용자라면 `Free $0`, `Go $8`, `Plus $20`, `Pro from $100` 순으로 보면 이해가 쉽고, 팀 사용자는 Business·Enterprise의 Codex-only pay-as-you-go seat를 같이 보면 됩니다. Pricing 페이지는 Plus / Pro 5x / Pro 20x / Business / API Key 표와 모델별 5시간 한도를 보여주며, Plus 기준 로컬 메시지 범위는 `gpt-5.5` 15-80, `gpt-5.4` 20-100, `gpt-5.4-mini` 60-350, `gpt-5.3-codex` 30-150입니다. 다만 최신 Help Center rate card는 대부분의 Plus, Pro, Business, Enterprise/Edu/Gov/Health 고객도 토큰 기반 rate card를 쓰도록 마이그레이션됐다고 설명합니다. 그래서 실제 비용 판단은 메시지/작업 한도, token credit rate card, usage dashboard를 함께 봐야 합니다. Codex 안에서 API 키 로그인은 `gpt-5.5`를 아직 제공하지 않고, OpenAI API 자체에서는 `gpt-5.5`와 `gpt-5.5-pro`가 별도 모델로 제공됩니다. 이미지 생성은 일반 Codex 한도를 평균 3-5배 더 빨리 쓰며 Fast mode는 지원 모델에서 더 높은 비율로 크레딧을 소모합니다.</p>
+                        <p class="callout-inline" data-i18n="s4_note_access">현재 공식 문서는 모든 ChatGPT 플랜에 Codex가 포함된다고 설명합니다. 처음 보는 사용자라면 `Free $0`, `Go $8`, `Plus $20`, `Pro from $100` 순으로 보면 이해가 쉽고, 팀 사용자는 Business·Enterprise의 Codex-only pay-as-you-go seat를 같이 보면 됩니다. Pricing 페이지는 Plus / Pro 5x / Pro 20x / Business / API Key 표와 모델별 5시간 한도를 보여주며, Plus 기준 로컬 메시지 범위는 `gpt-5.5` 15-80, `gpt-5.4` 20-100, `gpt-5.4-mini` 60-350, `gpt-5.3-codex` 30-150입니다. 중요한 차이는 Codex의 API-key 로그인 표에서는 `gpt-5.5`가 제공되지 않는다는 점입니다. 반면 직접 OpenAI API의 별도 Models/Pricing 문서에서는 `gpt-5.5`와 `gpt-5.5-pro`를 확인해야 합니다. 실제 비용 판단은 메시지/작업 한도, token credit rate card, usage dashboard, API 모델 가격표를 섞지 말고 함께 대조하세요. 이미지 생성은 일반 Codex 한도를 평균 3-5배 더 빨리 쓰며 Fast mode는 지원 모델에서 더 높은 비율로 크레딧을 소모합니다.</p>
                         <p class="command-refs" data-i18n-html="s4_refs">출처: <a href="https://developers.openai.com/codex/quickstart/" target="_blank">Quickstart</a> · <a href="https://developers.openai.com/codex/pricing/" target="_blank">Codex pricing</a> · <a href="https://help.openai.com/en/articles/20001106-codex-rate-card" target="_blank">Codex rate card</a> · <a href="https://developers.openai.com/codex/speed" target="_blank">Speed</a> · <a href="https://openai.com/index/codex-flexible-pricing-for-teams/" target="_blank">Pay-as-you-go pricing for teams</a></p>
                     </div>
                 </div>
@@ -1375,6 +1375,10 @@ codex --profile deep</code></pre>
                         <h4 data-i18n="s13_c3_t">설정 문제를 먼저 의심</h4>
                         <p data-i18n="s13_c3_d">품질 문제가 보이면 프롬프트보다 먼저 작업 디렉토리, 쓰기 권한, 기본 모델, 필요한 도구 연결이 맞는지 확인하세요. 많은 실패는 setup mismatch에서 나옵니다.</p>
                     </div>
+                    <div class="tip-card">
+                        <h4 data-i18n="s13_c4_t">팀 관리자는 requirements.toml도 확인</h4>
+                        <p data-i18n="s13_c4_d">Business/Enterprise 운영자는 admin-enforced requirements로 approval, sandbox, web_search, MCP allowlist, Browser Use, Computer Use, in-app browser 같은 기능을 사용자 설정보다 우선 적용할 수 있습니다.</p>
+                    </div>
                 </div>
                 <p class="command-refs" data-i18n-html="s13_refs">출처: <a href="https://developers.openai.com/codex/learn/best-practices/" target="_blank">Codex Best practices</a> · <a href="https://developers.openai.com/codex/config-reference/" target="_blank">config reference</a> · <a href="https://developers.openai.com/codex/concepts/sandboxing/" target="_blank">sandboxing</a> · <a href="https://openai.com/index/openai-on-aws/" target="_blank">OpenAI on AWS</a></p>
             </section>
@@ -2007,17 +2011,17 @@ codex --search "optimize with Next.js 15"
                     </div>
                     <p class="overview-fact-date">
                         <span data-i18n="overview_fact_date_prefix">업데이트 기준일</span>
-                        <span class="live-date" data-date-format="long">2026년 5월 5일</span>
+                        <span class="live-date" data-date-format="long">2026년 5월 6일</span>
                     </p>
                 </div>
                 <ol class="changelog-list" aria-label="Today update summary">
                     <li>
                         <strong data-i18n="overview_update_1_title">모델/사용 방식 매트릭스 재확인</strong>
-                        <span data-i18n="changelog_item_1">`gpt-5.5` 우선 추천을 다시 확인하고, Codex에서는 ChatGPT 로그인일 때만 보인다는 점과 `gpt-5.5-pro` API 지원을 함께 명시했습니다.</span>
+                        <span data-i18n="changelog_item_1">`gpt-5.5` 우선 추천과 ChatGPT 로그인 한정 노출을 다시 확인하고, Codex 모델 선택과 직접 OpenAI API 모델 접근을 분리했습니다.</span>
                     </li>
                     <li>
                         <strong data-i18n="overview_update_2_title">요금제·크레딧 구조 재정리</strong>
-                        <span data-i18n="changelog_item_2">가격 설명을 Plus / Pro 5x / Pro 20x / Business / API Key 읽는 법에 맞게 고치고, 메시지 표와 토큰 크레딧 표를 구분했습니다.</span>
+                        <span data-i18n="changelog_item_2">가격 설명에서 Codex API-key 로그인은 `gpt-5.5`를 제공하지 않는다는 점과 직접 API 모델 표는 별도라는 점을 더 선명하게 고쳤습니다.</span>
                     </li>
                     <li>
                         <strong data-i18n="overview_update_3_title">Quickstart·IDE 경로 정리</strong>
@@ -2029,7 +2033,7 @@ codex --search "optimize with Next.js 15"
                     </li>
                     <li>
                         <strong data-i18n="overview_update_6_title">Docs MCP·설정 기준 재점검</strong>
-                        <span data-i18n="changelog_item_5">Docs MCP, best practices, config, plugins, skills 문서를 다시 확인해 AGENTS.md·설정 키·반복 작업 운영 설명을 최신화했습니다.</span>
+                        <span data-i18n="changelog_item_5">Docs MCP, best practices, config, plugins, skills 문서를 다시 확인하고 `requirements.toml` 기반 관리자 제어 포인트를 추가했습니다.</span>
                     </li>
                     <li>
                         <strong data-i18n="pet_recording_title">왜 Codex Pet이 나왔는지 보기</strong>
@@ -2049,14 +2053,14 @@ codex --search "optimize with Next.js 15"
                     href="https://github.com/swhan0329/codex-101" target="_blank">PR을 환영합니다</a>.</p>
             <p class="footer-meta">
                 <span data-i18n="footer_date_prefix">최종 업데이트</span>:
-                        <span class="live-date" data-date-format="long">2026년 5월 5일</span>
+                        <span class="live-date" data-date-format="long">2026년 5월 6일</span>
             </p>
             <p class="footer-meta">Made by <a href="https://github.com/swhan0329" target="_blank">@swhan0329</a></p>
         </div>
     </footer>
 
-    <script src="i18n.js?v=20260505-docs-refresh"></script>
-    <script src="app.js?v=20260505-docs-refresh"></script>
+    <script src="i18n.js?v=20260506-docs-refresh"></script>
+    <script src="app.js?v=20260506-docs-refresh"></script>
 </body>
 
 </html>
