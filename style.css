@@ -70,6 +70,11 @@ body {
     overflow-x: hidden;
 }
 
+/* Legacy daily-update toggle was intentionally removed; keep it hidden if cached markup reappears. */
+.overview-update-log {
+    display: none !important;
+}
+
 [data-page="home"] {
     --max-w: 1400px;
 }
