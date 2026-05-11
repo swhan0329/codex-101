@@ -17,7 +17,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=20260506-docs-refresh" />
+    <link rel="stylesheet" href="style.css?v=20260511-no-top-toggle" />
 </head>
 
 <body data-page="home">
@@ -47,7 +47,7 @@
                     <p class="hero-badge">
                         <span data-i18n="hero_badge_prefix">공식 문서 기준 재검수</span>
                         <span aria-hidden="true"> · </span>
-                        <span class="live-date" data-date-format="long">2026년 5월 6일</span>
+                        <span class="live-date" data-date-format="long">2026년 5월 11일</span>
                     </p>
                     <h1 class="hero-title" data-i18n="hero_title">OpenAI Codex를<br />실무에 바로 붙이는 가이드</h1>
                     <p class="hero-sub" data-i18n="hero_sub">CLI · Desktop App (macOS/Windows) · IDE Extension · Web · iOS · SDK automation<br />최신 공식 문서를 기준으로 어디서 시작할지, 어떤 모델을 쓸지, 샌드박스/승인, MCP, plugins, automations를 처음 사용자와 실무 사용자 모두 읽기 쉽도록 다시 정리했습니다.</p>
@@ -150,40 +150,7 @@
             <section class="section overview-section" id="start-here">
                 <p class="overview-kicker" data-i18n="overview_kicker">Start here</p>
                 <h2 data-i18n="overview_title">처음 사용자와 실무 사용자를 위한 읽기 경로</h2>
-                <p class="overview-lead" data-i18n="overview_lead">이 페이지는 먼저 두 가지를 보여줍니다. 지금 어떤 모델과 사용 방식을 고르면 되는지, 그리고 처음 사용자와 실무 사용자가 어디서부터 읽으면 좋은지입니다. 오늘 반영한 변경 내용은 바로 아래 토글에서 먼저 확인할 수 있습니다.</p>
-
-                <details class="overview-update-log" open>
-                    <summary>
-                        <span class="overview-update-log-title" data-i18n="overview_update_toggle_title">오늘 반영한 변경 보기</span>
-                        <span class="overview-update-log-hint" data-i18n="overview_update_toggle_hint">매 실행마다 먼저 확인한 공식 변경 사항</span>
-                    </summary>
-                    <div class="overview-update-strip" aria-label="Today verified updates">
-                        <article class="update-pill">
-                            <strong data-i18n="overview_update_1_title">모델/사용 방식 매트릭스 재확인</strong>
-                            <span data-i18n="overview_update_1_desc">`codex/models`를 오늘 다시 확인해 `gpt-5.5` 우선, `gpt-5.4` 대체, `gpt-5.4-mini` 빠른 보조 작업, `gpt-5.3-codex` Cloud/review 축이 유지되는지 대조했습니다.</span>
-                        </article>
-                        <article class="update-pill">
-                            <strong data-i18n="overview_update_2_title">요금제·크레딧 구조 재정리</strong>
-                            <span data-i18n="overview_update_2_desc">`codex/pricing`에서 API-key 탭의 Codex 사용 범위와 직접 OpenAI API 모델 접근을 분리해 읽도록 문구를 보강했습니다.</span>
-                        </article>
-                        <article class="update-pill">
-                            <strong data-i18n="overview_update_3_title">Quickstart·IDE 경로 정리</strong>
-                            <span data-i18n="overview_update_3_desc">Quickstart, IDE, Windows 문서를 다시 대조해 App-first 시작 경로와 JetBrains/WSL2 설명을 유지했습니다.</span>
-                        </article>
-                        <article class="update-pill">
-                            <strong data-i18n="overview_update_4_title">App 기능 흐름 재확인</strong>
-                            <span data-i18n="overview_update_4_desc">App features와 automations 문서를 다시 확인해 worktrees, integrated terminal, in-app browser, computer use, artifacts, memories 설명을 점검했습니다.</span>
-                        </article>
-                        <article class="update-pill">
-                            <strong data-i18n="overview_update_5_title">관련 발표 전체 재점검</strong>
-                            <span data-i18n="overview_update_5_desc">`openai.com/index` 최신 목록까지 훑어 May 4 저지연 voice engineering 글은 Codex 문서 반영 대상이 아니고, Codex 관련 핵심 발표는 기존 4월 묶음임을 확인했습니다.</span>
-                        </article>
-                        <article class="update-pill">
-                            <strong data-i18n="overview_update_6_title">Docs MCP·설정 기준 재점검</strong>
-                            <span data-i18n="overview_update_6_desc">Docs MCP와 config reference를 다시 확인해 서버 URL, shared CLI/IDE config, granular approvals, web_search, permissions profile 설명을 최신 기준으로 유지했습니다.</span>
-                        </article>
-                    </div>
-                </details>
+                <p class="overview-lead" data-i18n="overview_lead">이 페이지는 먼저 두 가지를 보여줍니다. 지금 어떤 모델과 사용 방식을 고르면 되는지, 그리고 처음 사용자와 실무 사용자가 어디서부터 읽으면 좋은지입니다. 오늘 반영한 변경 내용은 하단 Changelog에만 따로 모았습니다.</p>
 
                 <div class="showcase-card">
                     <div>
@@ -764,7 +731,7 @@ export OPENAI_API_KEY="your-api-key-here"</code></pre>
                                 <span class="setup-chip" data-i18n="s5_waitlist_tag">Windows App</span>
                                 <span class="setup-chip" data-i18n="s5_waitlist_scope">지원 범위는 수시 변경</span>
                             </div>
-                            <p data-i18n="s5_waitlist_text">업데이트: Windows에서는 Codex 앱이 가장 쉬운 기본 경로입니다. Microsoft Store나 `winget`로 설치할 수 있고, `elevated` Windows sandbox가 기본 권장값이며 `unelevated`는 차선책입니다. 네이티브 성능이 중요하면 Windows sandbox를, Linux 툴체인이 중요하면 WSL2를 고르고, 앱에서 agent를 WSL로 전환할 때는 재시작이 필요합니다.</p>
+                            <p data-i18n="s5_waitlist_text">업데이트: Windows에서는 Codex 앱이 가장 쉬운 기본 경로입니다. Microsoft Store나 `winget install Codex -s msstore`로 설치할 수 있고, 기본 agent는 PowerShell에서 네이티브로 실행됩니다. Default permissions를 켜면 Windows sandbox가 적용되고, Linux 툴체인이나 WSL 파일시스템 프로젝트가 중요하면 Settings에서 agent를 WSL로 바꾼 뒤 앱을 재시작하세요. 통합 터미널은 PowerShell, Command Prompt, Git Bash, WSL 중 별도로 고를 수 있습니다.</p>
                             <a href="https://developers.openai.com/codex/app/windows" target="_blank" class="btn btn-secondary"
                                 data-i18n="s5_waitlist_btn">Windows App 공식 문서 보기</a>
                         </div>
@@ -1007,7 +974,7 @@ then verify the page again and attach the screenshot result.</code></pre>
                     <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s8_f_sync">App 실시간 동기
                             (Auto Context)</span></div>
                 </div>
-                <p class="command-refs" data-i18n-html="s8_refs">출처: <a href="https://developers.openai.com/codex/ide" target="_blank">IDE extension</a> · <a href="https://developers.openai.com/codex/ide/features" target="_blank">IDE features</a> · <a href="https://developers.openai.com/codex/ide/slash-commands" target="_blank">IDE slash commands</a> · <a href="https://developers.openai.com/codex/windows" target="_blank">Windows guide</a></p>
+                <p class="command-refs" data-i18n-html="s8_refs">출처: <a href="https://developers.openai.com/codex/ide" target="_blank">IDE extension</a> · <a href="https://developers.openai.com/codex/ide/features" target="_blank">IDE features</a> · <a href="https://developers.openai.com/codex/ide/slash-commands" target="_blank">IDE slash commands</a> · <a href="https://developers.openai.com/codex/app/windows" target="_blank">Windows app</a></p>
             </section>
 
             <!-- Section 8 -->
@@ -1380,7 +1347,7 @@ codex --profile deep</code></pre>
                         <p data-i18n="s13_c4_d">Business/Enterprise 운영자는 admin-enforced requirements로 approval, sandbox, web_search, MCP allowlist, Browser Use, Computer Use, in-app browser 같은 기능을 사용자 설정보다 우선 적용할 수 있습니다.</p>
                     </div>
                 </div>
-                <p class="command-refs" data-i18n-html="s13_refs">출처: <a href="https://developers.openai.com/codex/learn/best-practices/" target="_blank">Codex Best practices</a> · <a href="https://developers.openai.com/codex/config-reference/" target="_blank">config reference</a> · <a href="https://developers.openai.com/codex/concepts/sandboxing/" target="_blank">sandboxing</a> · <a href="https://openai.com/index/openai-on-aws/" target="_blank">OpenAI on AWS</a></p>
+                <p class="command-refs" data-i18n-html="s13_refs">출처: <a href="https://developers.openai.com/codex/learn/best-practices/" target="_blank">Codex Best practices</a> · <a href="https://developers.openai.com/codex/config-reference/" target="_blank">config reference</a> · <a href="https://developers.openai.com/codex/concepts/sandboxing/" target="_blank">sandboxing</a> · <a href="https://openai.com/index/running-codex-safely/" target="_blank">Running Codex safely</a> · <a href="https://openai.com/index/openai-on-aws/" target="_blank">OpenAI on AWS</a></p>
             </section>
 
             <!-- Section 13 -->
@@ -1918,6 +1885,9 @@ codex --search "optimize with Next.js 15"
                     <a href="https://openai.com/codex" target="_blank" class="link-card">OpenAI Codex</a>
                     <a href="https://github.com/openai/codex" target="_blank" class="link-card">GitHub Repo</a>
                     <a href="https://openai.com/index/introducing-gpt-5-5/" target="_blank" class="link-card">Introducing GPT-5.5</a>
+                    <a href="https://openai.com/index/gpt-5-5-instant/" target="_blank" class="link-card">GPT-5.5 Instant</a>
+                    <a href="https://openai.com/index/running-codex-safely/" target="_blank" class="link-card">Running Codex safely</a>
+                    <a href="https://openai.com/index/gpt-5-5-with-trusted-access-for-cyber/" target="_blank" class="link-card">GPT-5.5-Cyber and Codex Security</a>
                     <a href="https://developers.openai.com/api/docs/models" target="_blank" class="link-card">OpenAI API Models</a>
                     <a href="https://developers.openai.com/api/docs/models/gpt-5.5-pro" target="_blank" class="link-card">GPT-5.5 pro API Model</a>
                     <a href="https://developers.openai.com/codex/models/" target="_blank" class="link-card">Codex Models (Official)</a>
@@ -2011,7 +1981,7 @@ codex --search "optimize with Next.js 15"
                     </div>
                     <p class="overview-fact-date">
                         <span data-i18n="overview_fact_date_prefix">업데이트 기준일</span>
-                        <span class="live-date" data-date-format="long">2026년 5월 6일</span>
+                        <span class="live-date" data-date-format="long">2026년 5월 11일</span>
                     </p>
                 </div>
                 <ol class="changelog-list" aria-label="Today update summary">
@@ -2033,7 +2003,7 @@ codex --search "optimize with Next.js 15"
                     </li>
                     <li>
                         <strong data-i18n="overview_update_6_title">Docs MCP·설정 기준 재점검</strong>
-                        <span data-i18n="changelog_item_5">Docs MCP, best practices, config, plugins, skills 문서를 다시 확인하고 `requirements.toml` 기반 관리자 제어 포인트를 추가했습니다.</span>
+                        <span data-i18n="changelog_item_5">Docs MCP, best practices, config 문서를 다시 확인하고 `plan_mode_reasoning_effort`, shell environment policy, project root markers, TUI settings, keyring auth, telemetry를 보강했습니다.</span>
                     </li>
                     <li>
                         <strong data-i18n="pet_recording_title">왜 Codex Pet이 나왔는지 보기</strong>
@@ -2053,14 +2023,14 @@ codex --search "optimize with Next.js 15"
                     href="https://github.com/swhan0329/codex-101" target="_blank">PR을 환영합니다</a>.</p>
             <p class="footer-meta">
                 <span data-i18n="footer_date_prefix">최종 업데이트</span>:
-                        <span class="live-date" data-date-format="long">2026년 5월 6일</span>
+                        <span class="live-date" data-date-format="long">2026년 5월 11일</span>
             </p>
             <p class="footer-meta">Made by <a href="https://github.com/swhan0329" target="_blank">@swhan0329</a></p>
         </div>
     </footer>
 
-    <script src="i18n.js?v=20260506-docs-refresh"></script>
-    <script src="app.js?v=20260506-docs-refresh"></script>
+    <script src="i18n.js?v=20260511-no-top-toggle"></script>
+    <script src="app.js?v=20260511-no-top-toggle"></script>
 </body>
 
 </html>
