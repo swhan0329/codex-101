@@ -17,7 +17,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=20260513-docs-refresh" />
+    <link rel="stylesheet" href="style.css?v=20260515-docs-refresh" />
 </head>
 
 <body data-page="home">
@@ -47,10 +47,10 @@
                     <p class="hero-badge">
                         <span data-i18n="hero_badge_prefix">공식 문서 기준 재검수</span>
                         <span aria-hidden="true"> · </span>
-                        <span class="live-date" data-date-format="long">2026년 5월 13일</span>
+                        <span class="live-date" data-date-format="long">2026년 5월 15일</span>
                     </p>
                     <h1 class="hero-title" data-i18n="hero_title">OpenAI Codex를<br />실무에 바로 붙이는 가이드</h1>
-                    <p class="hero-sub" data-i18n="hero_sub">CLI · Desktop App (macOS/Windows) · IDE Extension · Web · iOS · SDK automation<br />최신 공식 문서를 기준으로 어디서 시작할지, 어떤 모델을 쓸지, 샌드박스/승인, MCP, plugins, automations를 처음 사용자와 실무 사용자 모두 읽기 쉽도록 다시 정리했습니다.</p>
+                    <p class="hero-sub" data-i18n="hero_sub">CLI · Desktop App (macOS/Windows) · IDE Extension · Web · Mobile · SDK automation<br />최신 공식 문서를 기준으로 어디서 시작할지, 어떤 모델을 쓸지, 샌드박스/승인, MCP, plugins, automations를 처음 사용자와 실무 사용자 모두 읽기 쉽도록 다시 정리했습니다.</p>
                     <div class="hero-cta">
                         <a href="#start-here" class="btn btn-primary" data-i18n="hero_cta">빠른 시작 경로 보기</a>
                         <a href="#s17" class="btn btn-ghost" data-i18n="hero_cta_secondary">Prompting 실전 가이드</a>
@@ -385,7 +385,7 @@
                     <div class="product-card">
                         <div class="product-icon">Web</div>
                         <h3>Codex Web</h3>
-                        <p data-i18n="s2_cloud">ChatGPT 웹 대시보드. GitHub 연동, 자동 PR/코드 리뷰, Slack·Linear발 클라우드 작업까지 연결합니다.</p>
+                        <p data-i18n="s2_cloud">ChatGPT 웹/모바일 표면. GitHub 연동, 자동 PR/코드 리뷰, Slack·Linear발 클라우드 작업, 모바일 preview 조율까지 연결합니다.</p>
                     </div>
                 </div>
                 <p class="command-refs" data-i18n-html="s2_refs">출처: <a href="https://developers.openai.com/codex/quickstart/" target="_blank">Quickstart</a> · <a href="https://developers.openai.com/codex/app" target="_blank">Codex app</a> · <a href="https://developers.openai.com/codex/ide" target="_blank">IDE extension</a> · <a href="https://developers.openai.com/codex/cli" target="_blank">Codex CLI</a></p>
@@ -979,13 +979,12 @@ then verify the page again and attach the screenshot result.</code></pre>
 
             <!-- Section 8 -->
             <section class="section" id="s9">
-                <h2><span class="section-num">09</span> <span data-i18n="s9_title">Codex Web (ChatGPT
-                        대시보드)</span></h2>
+                <h2><span class="section-num">09</span> <span data-i18n="s9_title">Codex Web/Mobile (ChatGPT)</span></h2>
                 <figure class="screenshot">
                     <img src="images/codex_cloud.png" alt="Codex Web Dashboard in ChatGPT" loading="lazy" />
                     <figcaption data-i18n="img_cloud">Codex Web - ChatGPT 웹 대시보드에서 GitHub 연동 작업</figcaption>
                 </figure>
-                <p data-i18n="s9_intro">ChatGPT 웹의 `chatgpt.com/codex`에서 GitHub 환경을 연결하고 클라우드 코딩 작업을 실행할 수 있습니다. PR 댓글에서 `@codex`로 위임하거나, 브라우저에서 바로 diff를 보고 PR을 만들 수 있습니다.</p>
+                <p data-i18n="s9_intro">ChatGPT 웹의 `chatgpt.com/codex`에서 GitHub 환경을 연결하고 클라우드 코딩 작업을 실행할 수 있습니다. ChatGPT 모바일 앱의 Codex preview에서는 실행 중인 Codex 작업을 휴대폰에서 확인하고 승인하며 방향을 바꿀 수 있습니다.</p>
                 <div class="steps">
                     <div class="step"><span class="step-num">1</span><span data-i18n="s9_s1">GitHub 계정 연결 → 레포 선택</span>
                     </div>
@@ -1001,7 +1000,7 @@ then verify the page again and attach the screenshot result.</code></pre>
                     <p data-i18n="s9_auto_desc">Codex Web에서 GitHub 연결 후 리뷰 대상 저장소를 선택하고 "Automatic reviews"를 활성화하면 새
                         PR마다 자동 리뷰됩니다. AGENTS.md 규칙 기반 커스터마이징 가능.</p>
                 </div>
-                <p class="command-refs" data-i18n-html="s9_refs">출처: <a href="https://developers.openai.com/codex/quickstart/" target="_blank">Quickstart</a> · <a href="https://developers.openai.com/codex/cloud" target="_blank">Codex cloud</a> · <a href="https://developers.openai.com/codex/integrations/github" target="_blank">GitHub integration</a></p>
+                <p class="command-refs" data-i18n-html="s9_refs">출처: <a href="https://developers.openai.com/codex/quickstart/" target="_blank">Quickstart</a> · <a href="https://developers.openai.com/codex/cloud" target="_blank">Codex cloud</a> · <a href="https://developers.openai.com/codex/integrations/github" target="_blank">GitHub integration</a> · <a href="https://openai.com/index/work-with-codex-from-anywhere/" target="_blank">Work with Codex from anywhere</a></p>
             </section>
 
             <!-- Section 9 -->
@@ -1981,7 +1980,7 @@ codex --search "optimize with Next.js 15"
                     </div>
                     <p class="overview-fact-date">
                         <span data-i18n="overview_fact_date_prefix">업데이트 기준일</span>
-                        <span class="live-date" data-date-format="long">2026년 5월 13일</span>
+                        <span class="live-date" data-date-format="long">2026년 5월 15일</span>
                     </p>
                 </div>
                 <ol class="changelog-list" aria-label="Today update summary">
@@ -1994,8 +1993,8 @@ codex --search "optimize with Next.js 15"
                         <span data-i18n="changelog_item_2">가격 설명에서 Go/iOS 표기, credit 적용 범위, API-key 사용 시 실제 모델 선택기와 직접 API 모델 가격을 함께 확인해야 한다는 주의점을 맞췄습니다.</span>
                     </li>
                     <li>
-                        <strong data-i18n="overview_update_3_title">Quickstart·IDE 경로 정리</strong>
-                        <span data-i18n="changelog_item_3">Quickstart·IDE·Windows 문서를 다시 대조해 App-first 시작 경로와 JetBrains/WSL2 설명을 더 또렷하게 정리했습니다.</span>
+                        <strong data-i18n="overview_update_3_title">Quickstart·IDE·Mobile 경로 정리</strong>
+                        <span data-i18n="changelog_item_3">Quickstart·IDE·Windows 문서와 mobile preview 발표를 다시 대조해 App-first 시작 경로, JetBrains/WSL2, iOS/Android 조율 표면을 더 또렷하게 정리했습니다.</span>
                     </li>
                     <li>
                         <strong data-i18n="overview_update_4_title">Cyber Safety 주의점 보강</strong>
@@ -2003,11 +2002,11 @@ codex --search "optimize with Next.js 15"
                     </li>
                     <li>
                         <strong data-i18n="overview_update_6_title">Docs MCP·설정 기준 재점검</strong>
-                        <span data-i18n="changelog_item_5">Docs MCP, best practices, config 문서를 다시 확인하고 granular approvals, app/plugin 제어, permissions profile, telemetry를 재점검했습니다.</span>
+                        <span data-i18n="changelog_item_5">Docs MCP, best practices, config, OpenAI API changelog를 다시 확인하고 DALL-E/Realtime 제거 등 Platform/API 신규 항목은 Codex 기본 사용법과 분리했습니다.</span>
                     </li>
                     <li>
                         <strong data-i18n="overview_update_7_title">소셜 팁 검증 제한 기록</strong>
-                        <span data-i18n="changelog_item_6">Chrome은 연결됐지만 Google, X, Threads, LinkedIn 접근이 정책상 차단되어 새 소셜 팁은 추가하지 않았습니다.</span>
+                        <span data-i18n="changelog_item_6">Chrome 플러그인으로 X, Threads, LinkedIn 탭을 확인했지만 도메인 읽기가 정책상 차단되어 새 소셜 팁은 추가하지 않았습니다.</span>
                     </li>
                 </ol>
             </section>
@@ -2023,14 +2022,14 @@ codex --search "optimize with Next.js 15"
                     href="https://github.com/swhan0329/codex-101" target="_blank">PR을 환영합니다</a>.</p>
             <p class="footer-meta">
                 <span data-i18n="footer_date_prefix">최종 업데이트</span>:
-                        <span class="live-date" data-date-format="long">2026년 5월 13일</span>
+                        <span class="live-date" data-date-format="long">2026년 5월 15일</span>
             </p>
             <p class="footer-meta">Made by <a href="https://github.com/swhan0329" target="_blank">@swhan0329</a></p>
         </div>
     </footer>
 
-    <script src="i18n.js?v=20260513-docs-refresh"></script>
-    <script src="app.js?v=20260513-docs-refresh"></script>
+    <script src="i18n.js?v=20260514-docs-refresh"></script>
+    <script src="app.js?v=20260514-docs-refresh"></script>
 </body>
 
 </html>
