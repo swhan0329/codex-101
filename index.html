@@ -1286,6 +1286,9 @@ network_access = false
 web_search = { context_size = "medium", allowed_domains = ["developers.openai.com", "openai.com"] }
 view_image = true
 
+[features]
+remote_control = true
+
 [permissions.project_safe.filesystem]
 ":project_roots" = "write"
 
@@ -1331,7 +1334,7 @@ codex --profile deep</code></pre>
                 <div class="tip-grid">
                     <div class="tip-card">
                         <h4 data-i18n="s13_c1_t">무엇을 고정할까</h4>
-                        <p data-i18n="s13_c1_d">모델, model_provider, review_model, reasoning effort, sandbox mode, approval policy, web_search, profile, MCP 서버처럼 세션마다 흔들리면 품질 차이가 큰 항목부터 기본값으로 고정하세요. AWS limited preview처럼 Bedrock 경로를 쓰는 팀은 provider 설정도 운영 표준에 포함해야 합니다. 필요하면 Windows 전용 `windows.sandbox`와 `windows.sandbox_private_desktop`도 함께 고정하세요.</p>
+                        <p data-i18n="s13_c1_d">모델, model_provider, review_model, reasoning effort, sandbox mode, approval policy, web_search, profile, MCP 서버처럼 세션마다 흔들리면 품질 차이가 큰 항목부터 기본값으로 고정하세요. AWS limited preview처럼 Bedrock 경로를 쓰는 팀은 provider 설정도 운영 표준에 포함해야 합니다. 필요하면 Windows 전용 `windows.sandbox`, `windows.sandbox_private_desktop`, mobile 연동용 `[features].remote_control`도 함께 고정하세요.</p>
                     </div>
                     <div class="tip-card">
                         <h4 data-i18n="s13_c2_t">권한은 좁게 시작</h4>
