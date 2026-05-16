@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 5월 15일</strong><br/>
+  <strong>최종 업데이트: 2026년 5월 16일</strong><br/>
   라이브 사이트는 보는 사람의 당일 날짜를 자동으로 표시하며, 최신 Codex 모델 가이드를 공식 문서 기준으로 반영합니다.
 </p>
 
@@ -39,9 +39,9 @@
 - 인트로에는 [OpenAI Developer Showcase](https://developers.openai.com/showcase) 안내를 추가해, Codex로 만든 실제 예시와 바로 실행해볼 만한 프롬프트 감을 먼저 잡을 수 있게 했습니다.
 - 최신 변경 로그는 첫 독서 흐름을 방해하지 않도록 맨 아래 Changelog 섹션으로 옮기고, 근거 문서는 접어서 볼 수 있게 낮췄습니다.
 
-### 일일 MCP 검증 스냅샷 (2026-05-15)
+### 일일 MCP 검증 스냅샷 (2026-05-16)
 
-- 2026년 5월 15일 기준으로 `codex/models`를 다시 대조한 결과, `gpt-5.5`는 오늘도 최우선 추천 모델입니다. `gpt-5.4`는 주요 대체 선택지로 남고, `gpt-5.4-mini`는 빠른 로컬/subagent 축, `gpt-5.3-codex`는 cloud/code review 축, `gpt-5.3-codex-spark`는 ChatGPT Pro용 거의 즉각적인 research preview 축, `gpt-5.2`는 대표 대안 모델로 정리하는 편이 맞습니다.
+- 2026년 5월 16일 기준으로 `codex/models`를 다시 대조한 결과, `gpt-5.5`는 오늘도 최우선 추천 모델입니다. `gpt-5.4`는 주요 대체 선택지로 남고, `gpt-5.4-mini`는 빠른 로컬/subagent 축, `gpt-5.3-codex`는 cloud/code review 축, `gpt-5.3-codex-spark`는 ChatGPT Pro용 거의 즉각적인 research preview 축, `gpt-5.2`는 대표 대안 모델로 정리하는 편이 맞습니다.
 - 오늘 가장 중요한 변화는 인증 경로 설명입니다. 현재 `codex/models` 문서는 `gpt-5.5`에 API Access를 표시하고 ChatGPT 또는 API-key authentication에서도 사용할 수 있다고 설명하지만, `codex/pricing`의 API Key 사용량 표는 여전히 `gpt-5.5`를 Not available로 보여줍니다. 그래서 문서에서는 이 부분을 “사용 범위가 서로 다르게 설명되는 지점”으로 다루고, ChatGPT 로그인은 여전히 `gpt-5.5`의 가장 명확한 Codex 경로이며 API 사용자는 실제 모델 선택기와 표준 API 가격을 함께 확인하도록 정리했습니다.
 - 가격/접근 범위는 Quickstart와 Pricing을 같이 봐야 정확합니다. Quickstart는 모든 ChatGPT 플랜에 Codex가 포함된다고 설명하고 데스크톱에서는 App 경로를 우선 보여주며, `codex/pricing`은 `Free`, `Go`, `Plus`, `Pro 5x`, `Pro 20x`, `Business`, `API Key` 기준의 사용량 표를 유지합니다. Plus 기준 로컬 메시지 범위는 `gpt-5.5` 15-80, `gpt-5.4` 20-100, `gpt-5.4-mini` 60-350, `gpt-5.3-codex` 30-150입니다. Plus 설명에는 이제 web, CLI, IDE extension, iOS 접근도 함께 표시됩니다. 현재 Pro 프로모션은 2026년 5월 31일까지 이어집니다.
 - 2026년 5월 14일 OpenAI 공식 발표 [Work with Codex from anywhere](https://openai.com/index/work-with-codex-from-anywhere/)는 Codex mobile 표면을 별도로 추가합니다. Codex는 ChatGPT 모바일 앱 안에서 iOS와 Android preview로 모든 플랜에 롤아웃 중이며, 노트북, Mac mini, devbox, managed remote environment처럼 Codex가 이미 실행 중인 머신에 연결해 thread 이어가기, 결과 확인, command 승인, model 변경, 새 작업 시작, screenshot/terminal output/diff/test result/approval prompt 확인을 휴대폰에서 할 수 있습니다. 파일, credential, permission, local setup은 Codex가 실행 중인 원래 머신에 남습니다. 문서에서는 발표문의 Windows 표현과 현재 활성화 메모를 분리했습니다. Windows에서는 `config.toml`의 `[features]` 아래에 `remote_control = true`를 추가하고 저장 후 Codex를 재시작하면 mobile remote control을 사용할 수 있습니다.
@@ -53,9 +53,9 @@
 - 현재 app, app/features, app/automations 문서를 보면 Codex App은 단순한 데스크톱 셸이 아니라 worktrees, Automations, thread/standalone automation 분기, Git 도구, 내장 terminal, voice dictation, pop-out window, IDE sync, image input, chats, artifact preview, 로컬 작업 기본 cached web search, notifications, 절전 방지까지 묶은 작업 허브로 설명됩니다. 2026년 4월 업데이트 기준으로 background computer use, 더 많은 plugins, multiple terminal tabs, SSH devbox, richer summary pane뿐 아니라 Memories와 context-aware suggestions도 핵심 흐름으로 올라왔습니다. 출시 글의 “command center for agents” 관점도 이제 기능 문서와 거의 같은 방향으로 맞물립니다. 여기에 가격 문서를 함께 보면 내장 이미지 생성은 일반 Codex 한도를 공유하면서 평균적으로 3-5배 더 빠르게 소모하고, Fast mode는 현재 GPT-5.5에서 2.5배, GPT-5.4에서 2배 크레딧을 소모한다는 점도 같이 이해해야 합니다.
 - Plugins와 Skills의 역할도 더 선명해졌습니다. 공식 `Plugins` 페이지는 plugin을 skills·app integrations·MCP servers를 함께 묶는 배포 단위로 정의하고, `Skills` 페이지는 progressive disclosure 방식으로 필요할 때만 `SKILL.md`를 여는 구조를 더 명확히 설명합니다.
 - Docs MCP는 여전히 가장 효과가 큰 기본 연결입니다. 현재 `developers.openai.com/learn/docs-mcp` 가이드는 `https://developers.openai.com/mcp` 서버 URL, CLI와 IDE의 설정 공유, 그리고 OpenAI 관련 질문에서 문서 MCP를 자동으로 우선 사용하게 만드는 `AGENTS.md` 유도 문구까지 함께 안내합니다. 문서에서는 그 “설정 공유” 포인트를 초보자와 실무 사용자 모두 더 빨리 이해할 수 있게 앞쪽 설명에서도 계속 강조합니다.
-- `config.toml` 최신화 포인트도 더 넓어졌습니다. 현재 reference는 `review_model`, `plan_mode_reasoning_effort`, top-level `web_search`, `tools.web_search`, `personality`, `service_tier`, `default_permissions`, `tools.view_image`, `windows.sandbox`, `windows.sandbox_private_desktop`, `model_instructions_file`, `memories.disable_on_external_context`, `sqlite_home`, shell environment policy, project root markers, TUI 설정, granular approval policy, app 권한 제어, feature flag, permissions profile, keyring credential storage, forced login method/workspace, OpenTelemetry export, managed network policy까지 함께 다룹니다. 오늘은 Business/Enterprise 관리자가 `requirements.toml`로 MCP allowlist, web search mode, Browser Use, Computer Use, in-app browser 사용 가능 여부, allowed sandbox mode를 사용자 설정보다 우선 강제할 수 있다는 점도 유지했습니다.
+- `config.toml` 최신화 포인트도 더 넓어졌습니다. 현재 reference는 `review_model`, `model_reasoning_effort`, top-level `web_search`, `tools.web_search`, `tools.view_image`, `tool_suggest`, `personality`, `service_tier`, `default_permissions`, `windows.sandbox`, `windows.sandbox_private_desktop`, `model_instructions_file`, `memories.disable_on_external_context`, `sqlite_home`, TUI 설정, granular approval policy, app 권한 제어, feature flag, permissions profile, keyring credential storage, forced login method/workspace, OpenTelemetry export, managed network policy까지 함께 다룹니다. 오늘은 Business/Enterprise 관리자가 `requirements.toml`로 MCP allowlist, web search mode, Browser Use, Computer Use, in-app browser 사용 가능 여부, allowed sandbox mode를 사용자 설정보다 우선 강제할 수 있다는 점도 유지했습니다.
 - 섹션 17은 현재 GPT-5.5 Prompt Guidance를 반영해 다시 다듬었습니다. 세부 절차를 과하게 고정하기보다 outcome-first 요청, 성공 기준, 제약, 출력 기대치, stop rules를 먼저 두고, 긴 도구 작업에는 짧은 preamble을 사용하며, 근거형 답변에는 retrieval budget과 missing-evidence 규칙을 명시하고, assistant item을 수동 재전송할 때 Responses API `phase` 값을 보존하며, 코딩/시각 결과물은 마감 전 실제 검증을 요구하도록 정리했습니다.
-- `developers.openai.com/codex`, 관련 OpenAI 발표/검색 표면, API 모델 문서, OpenAI API changelog도 폭넓게 다시 훑어봤지만, 오늘 기준으로 Codex 모델 추천 순서는 바뀌지 않았습니다. 대신 API-key availability 설명을 계속 분리하고, Codex mobile preview 발표와 Windows `remote_control` 활성화 메모는 Codex 사용 표면 업데이트로 추가했으며, 2026년 5월 API changelog의 5월 12일 DALL-E 2/3 snapshot과 Realtime API Beta 제거, Responses API web search `return_token_budget`, Realtime 2/Translate/Whisper, OpenAI Developers plugin for Codex, TypeScript Agents SDK, `chat-latest`, Admin API SDK 지원은 Codex 기본 사용법이 아니라 Platform/API 개발자 참고사항으로 따로 적었습니다. Chrome 연결은 성공했고 기존 X/Threads/LinkedIn 탭도 Chrome 플러그인으로 확인했지만, 활성 브라우저 정책이 해당 도메인 읽기를 차단했기 때문에 새로 검증하지 못한 소셜 팁은 추가하지 않았습니다. 현재 페이지 구조에서는 오늘의 검토 결과를 하단 Changelog에만 모읍니다.
+- `developers.openai.com/codex`, 관련 OpenAI 발표/검색 표면, API 모델 문서, OpenAI API changelog도 폭넓게 다시 훑어봤지만, 오늘 기준으로 Codex 모델 추천 순서는 바뀌지 않았습니다. 대신 API-key availability 설명을 계속 분리하고, Codex mobile preview 발표와 Windows `remote_control` 활성화 메모는 Codex 사용 표면 업데이트로 추가했으며, 2026년 5월 API changelog의 5월 12일 DALL-E 2/3 snapshot과 Realtime API Beta 제거, Responses API web search `return_token_budget`, Realtime 2/Translate/Whisper, OpenAI Developers plugin for Codex, TypeScript Agents SDK, `chat-latest`, Admin API SDK 지원은 Codex 기본 사용법이 아니라 Platform/API 개발자 참고사항으로 따로 적었습니다. Chrome 연결은 성공했지만 Chrome 플러그인에서 X, Threads, LinkedIn 열기가 보안 정책으로 차단되었기 때문에 새로 검증하지 못한 소셜 팁은 추가하지 않았습니다. 현재 페이지 구조에서는 오늘의 검토 결과를 하단 Changelog에만 모읍니다.
 
 ### 사용자별 즉시 적용 요약
 
@@ -75,7 +75,7 @@
 
 이번 추가에 사용한 출처는 Gabriel Chua의 [How I Think About Codex](https://www.linkedin.com/pulse/how-i-think-codex-gabriel-chua-ukhic), OpenAI의 [Codex agent loop](https://openai.com/index/unrolling-the-codex-agent-loop/), [openai/codex-plugin-cc](https://github.com/openai/codex-plugin-cc), 공식 [Codex Subagents](https://developers.openai.com/codex/subagents), 그리고 [VB](https://x.com/reach_vb), [Tibo](https://x.com/thsottiaux), [Katia](https://x.com/kagigz), [Dominik Kundel](https://x.com/dkundel/status/2018436269907603590), [Romain Huet](https://vivatech.com/speakers/e5bb6392-2f32-f011-8b3d-6045bd903b46/)의 공개 글/프로필입니다.
 
-2026년 5월 15일 실행 참고: Chrome 연결은 성공했고 기존 X/Threads/LinkedIn 탭도 확인했지만, 이번 자동화 세션의 브라우저 정책이 해당 도메인 읽기를 차단했습니다. 그래서 기존에 정리해 둔 공개 출처만 유지했고, Chrome에서 새로 검증하지 못한 소셜 팁은 추가하지 않았습니다.
+2026년 5월 16일 실행 참고: Chrome 연결은 성공했지만 이번 자동화 세션의 브라우저 정책이 X, Threads, LinkedIn 도메인 열기를 차단했습니다. 그래서 기존에 정리해 둔 공개 출처만 유지했고, Chrome에서 새로 검증하지 못한 소셜 팁은 추가하지 않았습니다.
 
 ### 다루는 내용
 
