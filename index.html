@@ -47,7 +47,7 @@
                     <p class="hero-badge">
                         <span data-i18n="hero_badge_prefix">공식 문서 기준 재검수</span>
                         <span aria-hidden="true"> · </span>
-                        <span class="live-date" data-date-format="long">2026년 5월 16일</span>
+                        <span class="live-date" data-date-format="long">2026년 5월 17일</span>
                     </p>
                     <h1 class="hero-title" data-i18n="hero_title">OpenAI Codex를<br />실무에 바로 붙이는 가이드</h1>
                     <p class="hero-sub" data-i18n="hero_sub">CLI · Desktop App (macOS/Windows) · IDE Extension · Web · Mobile · SDK automation<br />최신 공식 문서를 기준으로 어디서 시작할지, 어떤 모델을 쓸지, 샌드박스/승인, MCP, plugins, automations를 처음 사용자와 실무 사용자 모두 읽기 쉽도록 다시 정리했습니다.</p>
@@ -963,7 +963,7 @@ then verify the page again and attach the screenshot result.</code></pre>
                     <img src="images/codex_cloud.png" alt="Codex Web Dashboard in ChatGPT" loading="lazy" />
                     <figcaption data-i18n="img_cloud">Codex Web - ChatGPT 웹 대시보드에서 GitHub 연동 작업</figcaption>
                 </figure>
-                <p data-i18n="s9_intro">ChatGPT 웹의 `chatgpt.com/codex`에서 GitHub 환경을 연결하고 클라우드 코딩 작업을 실행할 수 있습니다. ChatGPT 모바일 앱의 Codex preview에서는 실행 중인 Codex 작업을 휴대폰에서 확인하고 승인하며 방향을 바꿀 수 있습니다.</p>
+                <p data-i18n="s9_intro">ChatGPT 웹의 `chatgpt.com/codex`에서는 GitHub 환경을 연결하고 클라우드 코딩 작업을 실행할 수 있습니다. 2026년 5월 14일 OpenAI 발표 기준으로 Codex는 ChatGPT 모바일 앱에서도 iOS/Android preview로 롤아웃 중입니다. 휴대폰에서는 active thread, 승인, model 변경, 새 작업 시작, screenshot/terminal output/diff/test result 확인을 이어갈 수 있고, 파일·credential·permission·local setup은 원래 host에 남습니다. 다만 현재 `remote-connections` 공식 문서는 mobile setup에 awake/online macOS Codex App host가 필요하고 Windows phone 연결은 coming soon이라고 설명합니다. Windows `remote_control = true` 설정은 해당 빌드에서 기능이 보일 때 쓰는 운영 메모로 분리해 읽으세요.</p>
                 <div class="steps">
                     <div class="step"><span class="step-num">1</span><span data-i18n="s9_s1">GitHub 계정 연결 → 레포 선택</span>
                     </div>
@@ -979,7 +979,7 @@ then verify the page again and attach the screenshot result.</code></pre>
                     <p data-i18n="s9_auto_desc">Codex Web에서 GitHub 연결 후 리뷰 대상 저장소를 선택하고 "Automatic reviews"를 활성화하면 새
                         PR마다 자동 리뷰됩니다. AGENTS.md 규칙 기반 커스터마이징 가능.</p>
                 </div>
-                <p class="command-refs" data-i18n-html="s9_refs">출처: <a href="https://developers.openai.com/codex/quickstart/" target="_blank">Quickstart</a> · <a href="https://developers.openai.com/codex/cloud" target="_blank">Codex cloud</a> · <a href="https://developers.openai.com/codex/integrations/github" target="_blank">GitHub integration</a> · <a href="https://openai.com/index/work-with-codex-from-anywhere/" target="_blank">Work with Codex from anywhere</a></p>
+                <p class="command-refs" data-i18n-html="s9_refs">출처: <a href="https://developers.openai.com/codex/quickstart/" target="_blank">Quickstart</a> · <a href="https://developers.openai.com/codex/cloud" target="_blank">Codex cloud</a> · <a href="https://developers.openai.com/codex/remote-connections" target="_blank">Remote connections</a> · <a href="https://developers.openai.com/codex/integrations/github" target="_blank">GitHub integration</a> · <a href="https://openai.com/index/work-with-codex-from-anywhere/" target="_blank">Work with Codex from anywhere</a></p>
             </section>
 
             <!-- Section 9 -->
@@ -1033,9 +1033,9 @@ then verify the page again and attach the screenshot result.</code></pre>
 codex --full-auto
 codex --sandbox workspace-write --ask-for-approval untrusted
 codex --dangerously-bypass-approvals-and-sandbox</code></pre>
-                <p data-i18n="s10_sandbox">보안: 로컬 Codex는 OS 수준 sandbox를 사용합니다. macOS는 Seatbelt, Linux는 bubblewrap + seccomp, Windows는 네이티브 sandbox 또는 WSL을 사용합니다. 기본 `workspace-write`에서는 네트워크가 꺼져 있고 `.git`·`.codex`·`.agents`는 보호 경로로 읽기 전용입니다. Cloud는 setup 단계와 offline agent 단계를 분리한 런타임입니다.
+                <p data-i18n="s10_sandbox">보안: 로컬 Codex는 OS 수준 sandbox를 사용합니다. macOS는 Seatbelt, Linux는 bubblewrap + seccomp, Windows는 네이티브 sandbox 또는 WSL을 사용합니다. Windows native에서는 `elevated`가 권장 경로이고, 관리자 승인이나 정책 때문에 막히면 `unelevated` fallback을 씁니다. 기본 `workspace-write`에서는 네트워크가 꺼져 있고 `.git`·`.codex`·`.agents`는 보호 경로로 읽기 전용입니다. Cloud는 setup 단계와 offline agent 단계를 분리한 런타임입니다.
                 </p>
-                <p class="command-refs" data-i18n-html="s10_refs">출처: <a href="https://developers.openai.com/codex/agent-approvals-security" target="_blank">Agent approvals &amp; security</a> · <a href="https://developers.openai.com/codex/config-reference/" target="_blank">Config reference</a> · <a href="https://developers.openai.com/codex/windows" target="_blank">Windows guide</a></p>
+                <p class="command-refs" data-i18n-html="s10_refs">출처: <a href="https://developers.openai.com/codex/agent-approvals-security" target="_blank">Agent approvals &amp; security</a> · <a href="https://developers.openai.com/codex/config-reference/" target="_blank">Config reference</a> · <a href="https://developers.openai.com/codex/windows" target="_blank">Windows guide</a> · <a href="https://openai.com/index/building-codex-windows-sandbox/" target="_blank">Windows sandbox engineering</a></p>
             </section>
 
             <!-- Section 10 -->
@@ -1962,7 +1962,7 @@ codex --search "optimize with Next.js 15"
                     </div>
                     <p class="overview-fact-date">
                         <span data-i18n="overview_fact_date_prefix">업데이트 기준일</span>
-                        <span class="live-date" data-date-format="long">2026년 5월 16일</span>
+                        <span class="live-date" data-date-format="long">2026년 5월 17일</span>
                     </p>
                 </div>
                 <ol class="changelog-list" aria-label="Today update summary">
@@ -1976,7 +1976,7 @@ codex --search "optimize with Next.js 15"
                     </li>
                     <li>
                         <strong data-i18n="overview_update_3_title">Quickstart·IDE·Mobile 경로 정리</strong>
-                        <span data-i18n="changelog_item_3">Quickstart·IDE·Windows 문서와 mobile preview 발표를 다시 대조해 App-first 시작 경로, JetBrains/WSL2, iOS/Android 조율 표면을 더 또렷하게 정리했습니다.</span>
+                        <span data-i18n="changelog_item_3">Quickstart·IDE·Windows·remote-connections 문서와 mobile preview 발표를 대조해 Mac host 공식 요건과 Windows 운영 메모를 분리했습니다.</span>
                     </li>
                     <li>
                         <strong data-i18n="overview_update_4_title">Cyber Safety 주의점 보강</strong>
@@ -1984,7 +1984,7 @@ codex --search "optimize with Next.js 15"
                     </li>
                     <li>
                         <strong data-i18n="overview_update_6_title">Docs MCP·설정 기준 재점검</strong>
-                        <span data-i18n="changelog_item_5">Docs MCP, best practices, config, OpenAI API changelog를 다시 확인하고 DALL-E/Realtime 제거 등 Platform/API 신규 항목은 Codex 기본 사용법과 분리했습니다.</span>
+                        <span data-i18n="changelog_item_5">Docs MCP, best practices, config, OpenAI API changelog, Windows sandbox 발표를 확인하고 Platform/API 신규 항목은 Codex 기본 사용법과 분리했습니다.</span>
                     </li>
                     <li>
                         <strong data-i18n="overview_update_7_title">소셜 팁 검증 제한 기록</strong>
@@ -2004,7 +2004,7 @@ codex --search "optimize with Next.js 15"
                     href="https://github.com/swhan0329/codex-101" target="_blank">PR을 환영합니다</a>.</p>
             <p class="footer-meta">
                 <span data-i18n="footer_date_prefix">최종 업데이트</span>:
-                        <span class="live-date" data-date-format="long">2026년 5월 16일</span>
+                        <span class="live-date" data-date-format="long">2026년 5월 17일</span>
             </p>
             <p class="footer-meta">Made by <a href="https://github.com/swhan0329" target="_blank">@swhan0329</a></p>
         </div>
