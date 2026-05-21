@@ -1505,7 +1505,7 @@ codex exec "Fix all TODOs" --full-auto</code></pre>
                             </div>
                         </div>
                         <p data-i18n="s17_intro_desc">GPT-5.5 기준의 핵심은 세세한 절차를 모두 적는 것보다 목표 결과, 성공 기준, 제약, 사용할 수 있는 근거를 분명히 주고 모델이 적절한 경로를 고르게 하는 데 있습니다.</p>
-                        <p class="prompt-inline-ref" data-i18n-html="s17_intro_ref">레퍼런스: <a href="https://developers.openai.com/codex/learn/best-practices/" target="_blank">Codex Best practices</a> · <a href="https://developers.openai.com/api/docs/guides/prompt-guidance?model=gpt-5.5" target="_blank">GPT-5.5 Prompt guidance</a> · <a href="https://openai.com/index/introducing-gpt-5-5/" target="_blank">Introducing GPT-5.5</a></p>
+                        <p class="prompt-inline-ref" data-i18n-html="s17_intro_ref">레퍼런스: <a href="https://developers.openai.com/codex/learn/best-practices/" target="_blank">Codex Best practices</a> · <a href="https://developers.openai.com/codex/use-cases/follow-goals" target="_blank">Follow goals</a> · <a href="https://developers.openai.com/api/docs/guides/prompt-guidance?model=gpt-5.5" target="_blank">GPT-5.5 Prompt guidance</a> · <a href="https://openai.com/index/introducing-gpt-5-5/" target="_blank">Introducing GPT-5.5</a></p>
                         <p data-i18n="pg_s1_intro">GPT-5.5 프롬프팅은 모든 단계를 과하게 지정하는 방식보다, 원하는 결과와 성공 기준을 선명하게 두고 필요한 도구·추론·검증 경로를 모델이 고르게 하는 쪽에 가깝습니다.</p>
                         <div class="two-col">
                             <div class="callout">
@@ -1623,6 +1623,15 @@ codex exec "Fix all TODOs" --full-auto</code></pre>
 - Treat the task as incomplete until every requested item is covered or explicitly marked blocked.
 - Before finalizing, verify requirements coverage, grounding, and output format.
 &lt;/agent_execution_loop&gt;</code></pre>
+                        <div class="prompt-inline-note">
+                            <strong data-i18n="pg_goals_t">Goals preview는 장기 작업의 체크포인트 계약입니다</strong>
+                            <p data-i18n="pg_goals_d">공식 Follow goals 문서는 `/goal`을 큰 목표를 작게 쪼개고, 진행 상태를 기록하고, 멈춤 기준을 지키게 하는 preview 흐름으로 설명합니다. 한 번의 프롬프트보다 길지만 무한 backlog는 아닌 작업에 쓰고, 시작할 때 목표·완료 조건·검증 명령·중간 체크포인트·중단/승인 조건을 함께 적으세요.</p>
+                            <div class="feature-list">
+                                <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="pg_goals_f1">`/goal`이 보이지 않으면 preview/experimental 기능 활성화가 필요한지 확인하세요. CLI에서는 설정의 `[features] goals = true` 같은 feature flag가 운영 메모가 될 수 있고, App 표면에서는 지원 상태가 다를 수 있습니다.</span></div>
+                                <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="pg_goals_f2">상태 업데이트는 “현재 checkpoint, 검증한 것, 남은 것, 막힌 것” 네 항목으로 짧게 요구하세요. 목표가 바뀌면 새 목표로 다시 계약을 잡는 편이 안전합니다.</span></div>
+                                <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="pg_goals_f3">마이그레이션, 여러 파일 리팩터링, prototype polish, eval을 돌리며 prompt를 다듬는 작업처럼 완료 조건이 관찰 가능한 일에 특히 잘 맞습니다.</span></div>
+                            </div>
+                        </div>
                     </article>
 
                     <article class="prompt-inline-section" id="s17-workflows">
