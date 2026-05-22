@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Codex 101 Use Cases — 한국어 실무 사례</title>
+    <meta name="description"
+        content="OpenAI Codex 공식 use cases를 한국 실무자가 바로 이해할 수 있도록 직무와 상황 중심으로 재분류한 한국어 상세 가이드입니다." />
+    <meta property="og:title" content="Codex 101 Use Cases — 한국어 실무 사례" />
+    <meta property="og:description"
+        content="메일, 코드 리뷰, UI 구현, 데이터 분석, 운영 자동화, iOS/macOS 앱까지 Codex에게 맡길 수 있는 일을 한국어 상세 예시로 확인하세요." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="images/codex_cli.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css?v=20260522-use-cases" />
+</head>
+
+<body data-page="use-cases">
+    <nav class="top-bar">
+        <div class="top-bar-inner">
+            <a href="index.html" class="logo">Codex 101</a>
+            <nav class="site-nav" aria-label="Codex 101 pages">
+                <a href="index.html" class="site-nav-link" data-i18n="nav_guide">Guide</a>
+                <a href="use-cases.html" class="site-nav-link active" aria-current="page" data-i18n="nav_use_cases">Use cases</a>
+            </nav>
+            <div class="top-bar-actions">
+                <button id="theme-toggle" class="icon-btn" title="Toggle theme" aria-label="Toggle theme">🌙</button>
+                <div class="lang-switch">
+                    <button class="lang-btn active" data-lang="ko">한국어</button>
+                    <button class="lang-btn" data-lang="en">English</button>
+                </div>
+            </div>
+        </div>
+        <div class="reading-progress" aria-hidden="true">
+            <span id="reading-progress-bar" class="reading-progress-bar"></span>
+        </div>
+    </nav>
+
+    <header class="use-case-hero">
+        <div class="container">
+            <div class="use-case-hero-grid">
+                <div class="use-case-hero-copy">
+                    <p class="hero-badge">
+                        <span>공식 Use Cases 한국어 재분류</span>
+                        <span aria-hidden="true"> · </span>
+                        <span class="live-date" data-date-format="long">2026년 5월 22일</span>
+                    </p>
+                    <h1 class="use-case-title">Codex에게 무엇을 맡길 수 있을까?</h1>
+                    <p class="use-case-lead">OpenAI 공식 Codex use cases를 그대로 번역하지 않고, 한국 실무자가 먼저 떠올리는 업무 상황으로 다시 묶었습니다. 카테고리를 고르고 카드를 누르면, 언제 쓰면 좋은지, 첫 요청을 어떻게 쓰면 좋은지, 결과물과 주의점까지 한국어로 확인할 수 있습니다.</p>
+                    <div class="hero-cta">
+                        <a href="#use-case-browser" class="btn btn-primary">사례 둘러보기</a>
+                        <a href="https://developers.openai.com/codex/use-cases" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">공식 원문 보기</a>
+                    </div>
+                </div>
+                <aside class="use-case-source-panel" aria-label="Use case page source note">
+                    <p class="use-case-source-label">읽는 방법</p>
+                    <ol class="use-case-source-list">
+                        <li>영어 기능명이 아니라 한국 실무 상황 기준으로 먼저 고릅니다.</li>
+                        <li>카드를 누르면 오른쪽에서 상세 요청 예시를 봅니다.</li>
+                        <li>공식 원문은 각 상세 패널 하단 링크로 바로 확인합니다.</li>
+                    </ol>
+                </aside>
+            </div>
+        </div>
+    </header>
+
+    <main class="use-case-page" id="use-case-browser" data-use-cases-root>
+        <div class="container">
+            <section class="use-case-section section">
+                <div class="use-case-controls">
+                    <div>
+                        <p class="overview-kicker">Korean-first categories</p>
+                        <h2>공식 카드를 한국 업무 흐름으로 다시 묶었습니다</h2>
+                    </div>
+                    <label class="use-case-search">
+                        <span class="sr-only">사용 사례 검색</span>
+                        <input id="use-case-search" type="search" placeholder="메일, PR, Figma, 재무, iOS처럼 검색" autocomplete="off" />
+                    </label>
+                </div>
+
+                <div class="use-case-layout">
+                    <aside class="use-case-category-rail" aria-label="Use case categories">
+                        <button class="use-case-category active" type="button" data-use-case-filter="all">
+                            <span class="use-case-category-main">전체 보기</span>
+                            <span class="use-case-category-sub">모든 한국어 상세 사례</span>
+                            <span class="use-case-category-count" data-use-case-count="all">52</span>
+                        </button>
+                        <div id="use-case-categories" class="use-case-category-list"></div>
+                    </aside>
+
+                    <div class="use-case-workbench">
+                        <section class="use-case-results" aria-label="Use case cards">
+                            <div class="use-case-results-head">
+                                <p id="use-case-result-label" class="use-case-result-label" aria-live="polite">52개 사례</p>
+                                <p class="use-case-result-note">카드를 클릭하면 상세 패널이 열립니다.</p>
+                            </div>
+                            <div id="use-case-grid" class="use-case-grid"></div>
+                        </section>
+
+                        <aside id="use-case-detail" class="use-case-detail" aria-live="polite">
+                            <div class="use-case-detail-empty">
+                                <p class="overview-kicker">Detail</p>
+                                <h2>왼쪽에서 사례를 선택하세요</h2>
+                                <p>선택한 사례의 한국어 설명, 첫 요청 예시, 결과물, 주의점, 공식 원문 링크가 여기에 표시됩니다.</p>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-contrib">이 페이지는 OpenAI 공식 Codex use cases를 한국어 실무 맥락으로 재구성한 보조 가이드입니다. 원문과 최신 세부사항은 각 공식 링크를 함께 확인하세요.</p>
+            <p class="footer-meta">
+                <span data-i18n="footer_date_prefix">최종 업데이트</span>:
+                <span class="live-date" data-date-format="long">2026년 5월 22일</span>
+            </p>
+            <p class="footer-meta">Made by <a href="https://github.com/swhan0329" target="_blank">@swhan0329</a></p>
+        </div>
+    </footer>
+
+    <script src="i18n.js?v=20260522-use-cases"></script>
+    <script src="use-cases-data.js?v=20260522-use-cases"></script>
+    <script src="app.js?v=20260522-use-cases"></script>
+</body>
+
+</html>

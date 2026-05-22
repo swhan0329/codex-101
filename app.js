@@ -463,9 +463,198 @@
         });
     });
 
+    function setupUseCasesPage() {
+        const root = document.querySelector('[data-use-cases-root]');
+        const items = window.codexUseCases || [];
+        const categories = window.codexUseCaseCategories || [];
+        if (!root || !items.length || !categories.length) return;
+
+        const categoryById = Object.fromEntries(categories.map((category) => [category.id, category]));
+        const grid = document.getElementById('use-case-grid');
+        const detail = document.getElementById('use-case-detail');
+        const categoryList = document.getElementById('use-case-categories');
+        const searchInput = document.getElementById('use-case-search');
+        const resultLabel = document.getElementById('use-case-result-label');
+        const allCount = document.querySelector('[data-use-case-count="all"]');
+        if (!grid || !detail || !categoryList || !searchInput || !resultLabel) return;
+
+        let activeCategory = 'all';
+        let activeId = '';
+        let query = '';
+
+        const escapeHtml = (value) => String(value)
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#039;');
+
+        const categoryCounts = items.reduce((acc, item) => {
+            acc[item.category] = (acc[item.category] || 0) + 1;
+            return acc;
+        }, {});
+
+        if (allCount) {
+            allCount.textContent = String(items.length);
+        }
+
+        categoryList.innerHTML = categories.map((category) => `
+            <button class="use-case-category" type="button" data-use-case-filter="${escapeHtml(category.id)}" style="--case-accent: ${escapeHtml(category.accent)}">
+                <span class="use-case-category-main">${escapeHtml(category.label)}</span>
+                <span class="use-case-category-sub">${escapeHtml(category.short)}</span>
+                <span class="use-case-category-count">${categoryCounts[category.id] || 0}</span>
+            </button>
+        `).join('');
+
+        const filterButtons = Array.from(document.querySelectorAll('[data-use-case-filter]'));
+
+        const getSearchText = (item) => {
+            return [
+                item.title,
+                item.sourceTitle,
+                item.summary,
+                item.when,
+                item.prompt,
+                item.output,
+                item.caution,
+            ].join(' ').toLowerCase();
+        };
+
+        const getVisibleItems = () => items.filter((item) => {
+            const matchesCategory = activeCategory === 'all' || item.category === activeCategory;
+            const matchesQuery = !query || getSearchText(item).includes(query);
+            return matchesCategory && matchesQuery;
+        });
+
+        const renderCards = () => {
+            const visibleItems = getVisibleItems();
+            resultLabel.textContent = query
+                ? `${visibleItems.length}개 사례 검색됨`
+                : `${visibleItems.length}개 사례`;
+
+            if (!visibleItems.length) {
+                grid.innerHTML = `
+                    <div class="use-case-empty-state">
+                        <h3>검색 결과가 없습니다</h3>
+                        <p>카테고리를 전체로 바꾸거나 다른 업무 단어로 검색해보세요.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            grid.innerHTML = visibleItems.map((item) => {
+                const category = categoryById[item.category] || {};
+                const selected = item.id === activeId ? ' active' : '';
+                return `
+                    <button class="use-case-card${selected}" type="button" data-use-case-id="${escapeHtml(item.id)}" style="--case-accent: ${escapeHtml(category.accent || '#ffffff')}">
+                        <span class="use-case-card-category">${escapeHtml(category.label || item.category)}</span>
+                        <strong>${escapeHtml(item.title)}</strong>
+                        <span class="use-case-card-summary">${escapeHtml(item.summary)}</span>
+                        <span class="use-case-card-source">Official: ${escapeHtml(item.sourceTitle)}</span>
+                    </button>
+                `;
+            }).join('');
+        };
+
+        const selectCase = (id, updateHash = true) => {
+            const item = items.find((candidate) => candidate.id === id) || getVisibleItems()[0] || items[0];
+            if (!item) return;
+
+            activeId = item.id;
+            const category = categoryById[item.category] || {};
+            detail.innerHTML = `
+                <article class="use-case-detail-card" style="--case-accent: ${escapeHtml(category.accent || '#ffffff')}">
+                    <p class="overview-kicker">${escapeHtml(category.label || item.category)}</p>
+                    <h2>${escapeHtml(item.title)}</h2>
+                    <p class="use-case-detail-summary">${escapeHtml(item.summary)}</p>
+                    <dl class="use-case-detail-list">
+                        <div>
+                            <dt>언제 쓰면 좋나</dt>
+                            <dd>${escapeHtml(item.when)}</dd>
+                        </div>
+                        <div>
+                            <dt>첫 요청 예시</dt>
+                            <dd><code>${escapeHtml(item.prompt)}</code></dd>
+                        </div>
+                        <div>
+                            <dt>결과물</dt>
+                            <dd>${escapeHtml(item.output)}</dd>
+                        </div>
+                        <div>
+                            <dt>주의점</dt>
+                            <dd>${escapeHtml(item.caution)}</dd>
+                        </div>
+                    </dl>
+                    <div class="use-case-detail-actions">
+                        <span>공식 원문: ${escapeHtml(item.sourceTitle)}</span>
+                        <a href="${escapeHtml(item.sourceUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">공식 상세 보기</a>
+                    </div>
+                </article>
+            `;
+
+            renderCards();
+
+            if (updateHash) {
+                history.replaceState(null, '', `#${item.id}`);
+            }
+        };
+
+        const setCategory = (categoryId) => {
+            activeCategory = categoryId;
+            filterButtons.forEach((button) => {
+                const active = button.dataset.useCaseFilter === activeCategory;
+                button.classList.toggle('active', active);
+                if (active) {
+                    button.setAttribute('aria-current', 'true');
+                } else {
+                    button.removeAttribute('aria-current');
+                }
+            });
+
+            const visibleItems = getVisibleItems();
+            if (!visibleItems.some((item) => item.id === activeId)) {
+                activeId = visibleItems[0]?.id || '';
+            }
+            renderCards();
+            if (activeId) selectCase(activeId, false);
+        };
+
+        filterButtons.forEach((button) => {
+            button.addEventListener('click', () => setCategory(button.dataset.useCaseFilter));
+        });
+
+        searchInput.addEventListener('input', () => {
+            query = searchInput.value.trim().toLowerCase();
+            const visibleItems = getVisibleItems();
+            if (!visibleItems.some((item) => item.id === activeId)) {
+                activeId = visibleItems[0]?.id || '';
+            }
+            renderCards();
+            if (activeId) selectCase(activeId, false);
+        });
+
+        grid.addEventListener('click', (event) => {
+            const card = event.target.closest('[data-use-case-id]');
+            if (!card) return;
+            selectCase(card.dataset.useCaseId);
+        });
+
+        const initialId = decodeURIComponent(window.location.hash.replace('#', ''));
+        const initialItem = items.find((item) => item.id === initialId);
+        if (initialItem) {
+            activeCategory = initialItem.category;
+            setCategory(activeCategory);
+            selectCase(initialItem.id, false);
+        } else {
+            setCategory('all');
+            selectCase(items[0].id, false);
+        }
+    }
+
     // Init
     applyTheme(theme);
     setLang(currentLang);
+    setupUseCasesPage();
     setupHomeSidebarPin();
     setupReadingProgress();
 })();

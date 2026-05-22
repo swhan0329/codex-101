@@ -17,7 +17,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=20260521-docs-refresh" />
+    <link rel="stylesheet" href="style.css?v=20260522-remote-refresh" />
 </head>
 
 <body data-page="home">
@@ -25,6 +25,10 @@
     <nav class="top-bar">
         <div class="top-bar-inner">
             <a href="index.html" class="logo">Codex 101</a>
+            <nav class="site-nav" aria-label="Codex 101 pages">
+                <a href="index.html" class="site-nav-link active" aria-current="page" data-i18n="nav_guide">Guide</a>
+                <a href="use-cases.html" class="site-nav-link" data-i18n="nav_use_cases">Use cases</a>
+            </nav>
             <div class="top-bar-actions">
                 <button id="theme-toggle" class="icon-btn" title="Toggle theme" aria-label="Toggle theme">🌙</button>
                 <div class="lang-switch">
@@ -47,7 +51,7 @@
                     <p class="hero-badge">
                         <span data-i18n="hero_badge_prefix">공식 문서 기준 재검수</span>
                         <span aria-hidden="true"> · </span>
-                        <span class="live-date" data-date-format="long">2026년 5월 21일</span>
+                        <span class="live-date" data-date-format="long">2026년 5월 22일</span>
                     </p>
                     <h1 class="hero-title" data-i18n="hero_title">OpenAI Codex를<br />실무에 바로 붙이는 가이드</h1>
                     <p class="hero-sub" data-i18n="hero_sub">CLI · Desktop App (macOS/Windows) · IDE Extension · Web · Mobile · SDK automation<br />최신 공식 문서를 기준으로 어디서 시작할지, 어떤 모델을 쓸지, 샌드박스/승인, MCP, plugins, automations를 처음 사용자와 실무 사용자 모두 읽기 쉽도록 다시 정리했습니다.</p>
@@ -963,7 +967,7 @@ then verify the page again and attach the screenshot result.</code></pre>
                     <img src="images/codex_cloud.png" alt="Codex Web Dashboard in ChatGPT" loading="lazy" />
                     <figcaption data-i18n="img_cloud">Codex Web - ChatGPT 웹 대시보드에서 GitHub 연동 작업</figcaption>
                 </figure>
-                <p data-i18n="s9_intro">ChatGPT 웹의 `chatgpt.com/codex`에서는 GitHub 환경을 연결하고 클라우드 코딩 작업을 실행할 수 있습니다. 2026년 5월 14일 OpenAI 발표 기준으로 Codex는 ChatGPT 모바일 앱에서도 iOS/Android preview로 롤아웃 중입니다. 휴대폰에서는 active thread, 승인, model 변경, 새 작업 시작, screenshot/terminal output/diff/test result 확인을 이어갈 수 있고, 파일·credential·permission·local setup은 원래 host에 남습니다. 다만 현재 `remote-connections` 공식 문서는 mobile setup에 awake/online macOS Codex App host가 필요하고 Windows phone 연결은 coming soon이라고 설명합니다. Windows `remote_control = true` 설정은 해당 빌드에서 기능이 보일 때 쓰는 운영 메모로 분리해 읽으세요.</p>
+                <p data-i18n="s9_intro">ChatGPT 웹의 `chatgpt.com/codex`에서는 GitHub 환경을 연결하고 클라우드 코딩 작업을 실행할 수 있습니다. Remote connections는 별도 축입니다. ChatGPT 모바일 앱 preview에서는 active thread, 승인, model 변경, 새 작업 시작, screenshot/terminal output/diff/test result 확인을 이어갈 수 있지만, 실제 파일·credential·permission·plugin·browser setup·Computer Use·local tool은 연결된 host에 남습니다. 현재 공식 문서는 mobile setup을 awake/online macOS Codex App host에서 시작하라고 설명하고, 같은 account/workspace와 필요한 SSO/MFA/passkey를 요구할 수 있습니다. 또 다른 signed-in Codex App 기기가 같은 host를 제어할 수 있고, Codex App은 SSH config의 구체 host alias를 통해 SSH host 프로젝트를 열어 remote filesystem/shell에서 실행할 수 있습니다. Business/Enterprise에서는 admin/owner가 Remote Control을 workspace settings 또는 RBAC로 허용해야 할 수 있습니다. Windows phone 연결은 공식 문서상 coming soon이므로, Windows `remote_control = true`는 해당 빌드에서 보일 때 쓰는 별도 운영 메모로 읽으세요.</p>
                 <div class="steps">
                     <div class="step"><span class="step-num">1</span><span data-i18n="s9_s1">GitHub 계정 연결 → 레포 선택</span>
                     </div>
@@ -979,7 +983,7 @@ then verify the page again and attach the screenshot result.</code></pre>
                     <p data-i18n="s9_auto_desc">Codex Web에서 GitHub 연결 후 리뷰 대상 저장소를 선택하고 "Automatic reviews"를 활성화하면 새
                         PR마다 자동 리뷰됩니다. AGENTS.md 규칙 기반 커스터마이징 가능.</p>
                 </div>
-                <p class="command-refs" data-i18n-html="s9_refs">출처: <a href="https://developers.openai.com/codex/quickstart/" target="_blank">Quickstart</a> · <a href="https://developers.openai.com/codex/cloud" target="_blank">Codex cloud</a> · <a href="https://developers.openai.com/codex/remote-connections" target="_blank">Remote connections</a> · <a href="https://developers.openai.com/codex/integrations/github" target="_blank">GitHub integration</a> · <a href="https://openai.com/index/work-with-codex-from-anywhere/" target="_blank">Work with Codex from anywhere</a></p>
+                <p class="command-refs" data-i18n-html="s9_refs">출처: <a href="https://developers.openai.com/codex/quickstart/" target="_blank">Quickstart</a> · <a href="https://developers.openai.com/codex/cloud" target="_blank">Codex cloud</a> · <a href="https://developers.openai.com/codex/remote-connections" target="_blank">Remote connections</a> · <a href="https://developers.openai.com/codex/integrations/github" target="_blank">GitHub integration</a> · <a href="https://openai.com/index/work-with-codex-from-anywhere/" target="_blank">Work with Codex from anywhere</a> · <a href="https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan" target="_blank">Using Codex with your ChatGPT plan</a></p>
             </section>
 
             <!-- Section 9 -->
@@ -1971,7 +1975,7 @@ codex --search "optimize with Next.js 15"
                     </div>
                     <p class="overview-fact-date">
                         <span data-i18n="overview_fact_date_prefix">업데이트 기준일</span>
-                        <span class="live-date" data-date-format="long">2026년 5월 21일</span>
+                        <span class="live-date" data-date-format="long">2026년 5월 22일</span>
                     </p>
                 </div>
                 <ol class="changelog-list" aria-label="Today update summary">
@@ -1985,7 +1989,7 @@ codex --search "optimize with Next.js 15"
                     </li>
                     <li>
                         <strong data-i18n="overview_update_3_title">Quickstart·IDE·Mobile 경로 정리</strong>
-                        <span data-i18n="changelog_item_3">Quickstart·IDE·Windows·remote-connections 문서와 mobile preview 발표를 대조해 Mac host 공식 요건과 Windows 운영 메모를 분리했습니다.</span>
+                        <span data-i18n="changelog_item_3">Remote connections 문서를 크게 재검토해 mobile host, 다른 Codex App 기기, SSH host, connected-host state, admin Remote Control/RBAC, Windows 운영 메모를 분리했습니다.</span>
                     </li>
                     <li>
                         <strong data-i18n="overview_update_4_title">Cyber Safety 주의점 보강</strong>
@@ -1997,7 +2001,7 @@ codex --search "optimize with Next.js 15"
                     </li>
                     <li>
                         <strong data-i18n="overview_update_7_title">소셜 팁 검증 제한 기록</strong>
-                        <span data-i18n="changelog_item_6">Chrome 플러그인으로 X, Threads, LinkedIn을 확인했습니다. 검증되지 않은 소셜 주장은 넣지 않고, 공식 문서와 맞는 권한 확인, 출력 계약, 도구 사용 규칙, 완료 기준, OpenAI Developers plugin 활용 메모만 기존 guidance와 연결했습니다.</span>
+                        <span data-i18n="changelog_item_6">Chrome 플러그인으로 X, Threads, LinkedIn을 확인했습니다. Windows feature flag 관련 community claim은 공식 문서와 분리해 운영 메모로만 유지했고, 검증되지 않은 소셜 주장은 일반 문장으로 추가하지 않았습니다.</span>
                     </li>
                 </ol>
             </section>
@@ -2013,14 +2017,14 @@ codex --search "optimize with Next.js 15"
                     href="https://github.com/swhan0329/codex-101" target="_blank">PR을 환영합니다</a>.</p>
             <p class="footer-meta">
                 <span data-i18n="footer_date_prefix">최종 업데이트</span>:
-                        <span class="live-date" data-date-format="long">2026년 5월 21일</span>
+                        <span class="live-date" data-date-format="long">2026년 5월 22일</span>
             </p>
             <p class="footer-meta">Made by <a href="https://github.com/swhan0329" target="_blank">@swhan0329</a></p>
         </div>
     </footer>
 
-    <script src="i18n.js?v=20260521-docs-refresh"></script>
-    <script src="app.js?v=20260521-docs-refresh"></script>
+    <script src="i18n.js?v=20260522-remote-refresh"></script>
+    <script src="app.js?v=20260522-remote-refresh"></script>
 </body>
 
 </html>
