@@ -17,7 +17,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=20260529-config-check" />
+    <link rel="stylesheet" href="style.css?v=20260530-windows-profile" />
 </head>
 
 <body data-page="home">
@@ -51,7 +51,7 @@
                     <p class="hero-badge">
                         <span data-i18n="hero_badge_prefix">공식 문서 기준 재검수</span>
                         <span aria-hidden="true"> · </span>
-                        <span class="live-date" data-date-format="long">2026년 5월 29일</span>
+                        <span class="live-date" data-date-format="long">2026년 5월 30일</span>
                     </p>
                     <h1 class="hero-title" data-i18n="hero_title">OpenAI Codex를<br />실무에 바로 붙이는 가이드</h1>
                     <p class="hero-sub" data-i18n="hero_sub">CLI · Desktop App (macOS/Windows) · IDE Extension · Web · Mobile · SDK automation<br />최신 공식 문서를 기준으로 어디서 시작할지, 어떤 모델을 쓸지, 샌드박스/승인, MCP, plugins, automations를 처음 사용자와 실무 사용자 모두 읽기 쉽도록 다시 정리했습니다.</p>
@@ -967,7 +967,7 @@ then verify the page again and attach the screenshot result.</code></pre>
                     <img src="images/codex_cloud.png" alt="Codex Web Dashboard in ChatGPT" loading="lazy" />
                     <figcaption data-i18n="img_cloud">Codex Web - ChatGPT 웹 대시보드에서 GitHub 연동 작업</figcaption>
                 </figure>
-                <p data-i18n="s9_intro">ChatGPT 웹의 `chatgpt.com/codex`에서는 GitHub 환경을 연결하고 클라우드 코딩 작업을 실행할 수 있습니다. Remote connections는 별도 축입니다. ChatGPT 모바일 앱 preview에서는 active thread, 승인, model 변경, 새 작업 시작, screenshot/terminal output/diff/test result 확인을 이어갈 수 있지만, 실제 파일·credential·permission·plugin·browser setup·Computer Use·local tool은 연결된 host에 남습니다. 현재 공식 문서는 mobile setup을 awake/online macOS Codex App host에서 시작하라고 설명하고, 같은 account/workspace와 필요한 SSO/MFA/passkey를 요구할 수 있습니다. 또 다른 signed-in Codex App 기기가 같은 host를 제어할 수 있고, Codex App은 SSH config의 구체 host alias를 통해 SSH host 프로젝트를 열어 remote filesystem/shell에서 실행할 수 있습니다. Business/Enterprise에서는 admin/owner가 Remote Control을 workspace settings 또는 RBAC로 허용해야 할 수 있습니다. Windows phone 연결은 공식 문서상 coming soon이므로, Windows `remote_control = true`는 해당 빌드에서 보일 때 쓰는 별도 운영 메모로 읽으세요.</p>
+                <p data-i18n="s9_intro">ChatGPT 웹의 `chatgpt.com/codex`에서는 GitHub 환경을 연결하고 클라우드 코딩 작업을 실행할 수 있습니다. Remote connections는 별도 축입니다. 현재 공식 문서는 ChatGPT iOS/Android 모바일 앱이 awake/online macOS 또는 Windows Codex App host를 제어할 수 있다고 설명합니다. 모바일에서는 active thread 이어가기, 승인, model 변경, 새 작업 시작, screenshot/terminal output/diff/test result 확인을 할 수 있지만, 실제 파일·credential·permission·plugin·browser setup·Computer Use·local tool은 연결된 host에 남습니다. 같은 account/workspace와 필요한 SSO/MFA/passkey가 맞아야 하고, Business/Enterprise에서는 admin/owner가 Remote Control을 workspace settings 또는 RBAC로 허용해야 할 수 있습니다. Windows host는 휴대폰이나 Mac에서 제어할 수 있지만, Windows Codex App 자체는 아직 다른 컴퓨터를 제어하는 클라이언트로 쓰지 못합니다. Codex App은 SSH config의 구체 host alias를 통해 SSH host 프로젝트를 열어 remote filesystem/shell에서 실행할 수도 있습니다.</p>
                 <div class="steps">
                     <div class="step"><span class="step-num">1</span><span data-i18n="s9_s1">GitHub 계정 연결 → 레포 선택</span>
                     </div>
@@ -1270,9 +1270,6 @@ network_access = false
 web_search = { context_size = "medium", allowed_domains = ["developers.openai.com", "openai.com"] }
 view_image = true
 
-[features]
-remote_control = true
-
 [permissions.project_safe.filesystem]
 ":project_roots" = "write"
 
@@ -1318,7 +1315,7 @@ codex --profile deep</code></pre>
                 <div class="tip-grid">
                     <div class="tip-card">
                         <h4 data-i18n="s13_c1_t">무엇을 고정할까</h4>
-                        <p data-i18n="s13_c1_d">모델, model_provider, review_model, reasoning effort, sandbox mode, approval policy, web_search, profile, MCP 서버처럼 세션마다 흔들리면 품질 차이가 큰 항목부터 기본값으로 고정하세요. AWS limited preview처럼 Bedrock 경로를 쓰는 팀은 provider 설정도 운영 표준에 포함해야 합니다. 필요하면 Windows 전용 `windows.sandbox`, `windows.sandbox_private_desktop`, mobile 연동용 `[features].remote_control`도 함께 고정하세요.</p>
+                        <p data-i18n="s13_c1_d">모델, model_provider, review_model, reasoning effort, sandbox mode, approval policy, web_search, profile, MCP 서버처럼 세션마다 흔들리면 품질 차이가 큰 항목부터 기본값으로 고정하세요. AWS limited preview처럼 Bedrock 경로를 쓰는 팀은 provider 설정도 운영 표준에 포함해야 합니다. Windows 네이티브 운영에서는 `windows.sandbox`, `windows.sandbox_private_desktop`을 함께 검토하고, remote connection은 App의 Settings > Connections와 workspace Remote Control 권한에서 관리하세요.</p>
                     </div>
                     <div class="tip-card">
                         <h4 data-i18n="s13_c2_t">권한은 좁게 시작</h4>
@@ -1976,7 +1973,7 @@ codex --search "optimize with Next.js 15"
                     </div>
                     <p class="overview-fact-date">
                         <span data-i18n="overview_fact_date_prefix">업데이트 기준일</span>
-                        <span class="live-date" data-date-format="long">2026년 5월 29일</span>
+                        <span class="live-date" data-date-format="long">2026년 5월 30일</span>
                     </p>
                 </div>
                 <ol class="changelog-list" aria-label="Today update summary">
@@ -1990,19 +1987,19 @@ codex --search "optimize with Next.js 15"
                     </li>
                     <li>
                         <strong data-i18n="overview_update_3_title">Quickstart·IDE·Mobile 경로 정리</strong>
-                        <span data-i18n="changelog_item_3">May 21 Enterprise/Edu 릴리스 노트를 반영해 Goal mode GA, Appshots, locked computer use, in-app browser annotations, admin analytics, plugin sharing 기본값을 추가했습니다.</span>
+                        <span data-i18n="changelog_item_3">Remote connections 공식 문서가 Windows host를 ChatGPT iOS/Android 또는 Mac에서 제어할 수 있다고 바뀐 점을 반영하고, Windows App은 아직 다른 컴퓨터를 제어하는 클라이언트가 아니라는 제한을 분리했습니다.</span>
                     </li>
                     <li>
                         <strong data-i18n="overview_update_4_title">Enterprise 발표 맥락 분리</strong>
-                        <span data-i18n="changelog_item_4">2026년 5월 27일 Tax AI/Codex 글을 새 토글이 아니라 practitioner feedback, production traces, eval targets, bounded tasks, human review를 묶는 고급 운영 패턴으로 추가했습니다.</span>
+                        <span data-i18n="changelog_item_4">Codex App Settings > Profile에서 lifetime tokens, peak tokens, streaks, longest task, token activity를 확인할 수 있다는 공식 설정 문서를 추가했습니다.</span>
                     </li>
                     <li>
                         <strong data-i18n="overview_update_6_title">Docs MCP·설정 기준 재점검</strong>
-                        <span data-i18n="changelog_item_5">Docs MCP, best practices, config, OpenAI API changelog/deprecations, API 모델 문서, Windows sandbox 발표, Dell/Gartner enterprise 발표, election safeguards의 Codex Security/provenance 맥락을 다시 확인했고, `plan_mode_reasoning_effort`를 현재 Plan mode override로 복원했습니다.</span>
+                        <span data-i18n="changelog_item_5">Docs MCP, best practices, config, app/settings, OpenAI API changelog/deprecations, API 모델 문서, Windows sandbox 발표, Dell/Gartner enterprise 발표, election safeguards의 Codex Security/provenance 맥락을 다시 확인했습니다.</span>
                     </li>
                     <li>
                         <strong data-i18n="overview_update_7_title">소셜 팁 검증 제한 기록</strong>
-                        <span data-i18n="changelog_item_6">소셜 확인에서 X는 로그인 리다이렉트, Threads는 가입/로그인 모달, LinkedIn은 로그인 화면에 막혔습니다. 검증되지 않은 소셜 claim은 추가하지 않았습니다.</span>
+                        <span data-i18n="changelog_item_6">Chrome에서 X 검색은 로딩/뉴스 사이드바만 확인됐고, 추가 소셜 claim은 문서에 넣지 않았습니다. Threads/LinkedIn은 로그인·정책 제한 가능성이 있어 공식 문서 근거만 반영했습니다.</span>
                     </li>
                 </ol>
             </section>
@@ -2018,14 +2015,14 @@ codex --search "optimize with Next.js 15"
                     href="https://github.com/swhan0329/codex-101" target="_blank">PR을 환영합니다</a>.</p>
             <p class="footer-meta">
                 <span data-i18n="footer_date_prefix">최종 업데이트</span>:
-                        <span class="live-date" data-date-format="long">2026년 5월 29일</span>
+                        <span class="live-date" data-date-format="long">2026년 5월 30일</span>
             </p>
             <p class="footer-meta">Made by <a href="https://github.com/swhan0329" target="_blank">@swhan0329</a></p>
         </div>
     </footer>
 
-    <script src="i18n.js?v=20260529-config-check"></script>
-    <script src="app.js?v=20260529-config-check"></script>
+    <script src="i18n.js?v=20260530-windows-profile"></script>
+    <script src="app.js?v=20260530-windows-profile"></script>
 </body>
 
 </html>
