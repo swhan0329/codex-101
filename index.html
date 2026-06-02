@@ -17,7 +17,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=20260601-codex-playbook" />
+    <link rel="stylesheet" href="style.css?v=20260602-bedrock-ga" />
 </head>
 
 <body data-page="home">
@@ -51,7 +51,7 @@
                     <p class="hero-badge">
                         <span data-i18n="hero_badge_prefix">공식 문서 기준 재검수</span>
                         <span aria-hidden="true"> · </span>
-                        <span class="live-date" data-date-format="long">2026년 6월 1일</span>
+                        <span class="live-date" data-date-format="long">2026년 6월 2일</span>
                     </p>
                     <h1 class="hero-title" data-i18n="hero_title">OpenAI Codex를<br />실무에 바로 붙이는 가이드</h1>
                     <p class="hero-sub" data-i18n="hero_sub">CLI · Desktop App (macOS/Windows) · IDE Extension · Web · Mobile · SDK automation<br />최신 공식 문서를 기준으로 어디서 시작할지, 어떤 모델을 쓸지, 샌드박스/승인, MCP, plugins, automations를 처음 사용자와 실무 사용자 모두 읽기 쉽도록 다시 정리했습니다.</p>
@@ -1315,7 +1315,7 @@ codex --profile deep</code></pre>
                 <div class="tip-grid">
                     <div class="tip-card">
                         <h4 data-i18n="s13_c1_t">무엇을 고정할까</h4>
-                        <p data-i18n="s13_c1_d">모델, model_provider, review_model, reasoning effort, sandbox mode, approval policy, web_search, profile, MCP 서버처럼 세션마다 흔들리면 품질 차이가 큰 항목부터 기본값으로 고정하세요. AWS limited preview처럼 Bedrock 경로를 쓰는 팀은 provider 설정도 운영 표준에 포함해야 합니다. Windows 네이티브 운영에서는 `windows.sandbox`, `windows.sandbox_private_desktop`을 함께 검토하고, remote connection은 App의 Settings > Connections와 workspace Remote Control 권한에서 관리하세요.</p>
+                        <p data-i18n="s13_c1_d">모델, model_provider, review_model, reasoning effort, sandbox mode, approval policy, web_search, profile, MCP 서버처럼 세션마다 흔들리면 품질 차이가 큰 항목부터 기본값으로 고정하세요. Amazon Bedrock 경로를 쓰는 팀은 AWS credential, region, model provider 설정도 운영 표준에 포함해야 합니다. Windows 네이티브 운영에서는 `windows.sandbox`, `windows.sandbox_private_desktop`을 함께 검토하고, remote connection은 App의 Settings > Connections와 workspace Remote Control 권한에서 관리하세요.</p>
                     </div>
                     <div class="tip-card">
                         <h4 data-i18n="s13_c2_t">권한은 좁게 시작</h4>
@@ -1330,7 +1330,7 @@ codex --profile deep</code></pre>
                         <p data-i18n="s13_c4_d">Business/Enterprise 운영자는 admin-enforced requirements로 approval, sandbox, web_search, MCP allowlist, Browser Use, Computer Use, in-app browser 같은 기능을 사용자 설정보다 우선 적용할 수 있습니다.</p>
                     </div>
                 </div>
-                <p class="command-refs" data-i18n-html="s13_refs">출처: <a href="https://developers.openai.com/codex/learn/best-practices/" target="_blank">Codex Best practices</a> · <a href="https://developers.openai.com/codex/config-reference/" target="_blank">config reference</a> · <a href="https://developers.openai.com/codex/concepts/sandboxing/" target="_blank">sandboxing</a> · <a href="https://openai.com/index/running-codex-safely/" target="_blank">Running Codex safely</a> · <a href="https://openai.com/index/openai-on-aws/" target="_blank">OpenAI on AWS</a></p>
+                <p class="command-refs" data-i18n-html="s13_refs">출처: <a href="https://developers.openai.com/codex/learn/best-practices/" target="_blank">Codex Best practices</a> · <a href="https://developers.openai.com/codex/config-reference/" target="_blank">config reference</a> · <a href="https://developers.openai.com/codex/concepts/sandboxing/" target="_blank">sandboxing</a> · <a href="https://developers.openai.com/codex/amazon-bedrock" target="_blank">Codex on Amazon Bedrock</a> · <a href="https://developers.openai.com/api/docs/guides/amazon-bedrock" target="_blank">OpenAI models in Amazon Bedrock</a> · <a href="https://openai.com/index/openai-frontier-models-and-codex-are-now-available-on-aws/" target="_blank">OpenAI and Codex on AWS</a></p>
             </section>
 
             <!-- Section 13 -->
@@ -1975,7 +1975,7 @@ codex --search "optimize with Next.js 15"
                     </div>
                     <p class="overview-fact-date">
                         <span data-i18n="overview_fact_date_prefix">업데이트 기준일</span>
-                        <span class="live-date" data-date-format="long">2026년 6월 1일</span>
+                        <span class="live-date" data-date-format="long">2026년 6월 2일</span>
                     </p>
                 </div>
                 <ol class="changelog-list" aria-label="Today update summary">
@@ -2017,14 +2017,14 @@ codex --search "optimize with Next.js 15"
                     href="https://github.com/swhan0329/codex-101" target="_blank">PR을 환영합니다</a>.</p>
             <p class="footer-meta">
                 <span data-i18n="footer_date_prefix">최종 업데이트</span>:
-                        <span class="live-date" data-date-format="long">2026년 6월 1일</span>
+                        <span class="live-date" data-date-format="long">2026년 6월 2일</span>
             </p>
             <p class="footer-meta">Made by <a href="https://github.com/swhan0329" target="_blank">@swhan0329</a></p>
         </div>
     </footer>
 
-    <script src="i18n.js?v=20260601-codex-playbook"></script>
-    <script src="app.js?v=20260601-codex-playbook"></script>
+    <script src="i18n.js?v=20260602-bedrock-ga"></script>
+    <script src="app.js?v=20260602-bedrock-ga"></script>
 </body>
 
 </html>
