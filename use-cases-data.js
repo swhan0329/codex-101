@@ -306,6 +306,18 @@ window.codexUseCases = [
         caution: 'preview URL이 배포됐다는 것과 외부인이 로그인 없이 열 수 있다는 것은 별개로 확인해야 합니다.',
     },
     {
+        id: 'publish-with-sites',
+        category: 'ui',
+        title: 'Sites로 팀이 함께 볼 내부 웹앱 배포하기',
+        sourceTitle: 'Sites',
+        sourceUrl: 'https://developers.openai.com/codex/sites',
+        summary: 'Codex가 만든 웹사이트, 대시보드, 내부 도구를 OpenAI-hosted URL로 저장하고 배포합니다.',
+        when: 'Business/Enterprise 워크스페이스에서 고객 리뷰 허브, 운영 대시보드, 시나리오 플래너처럼 팀 공유용 결과물이 필요할 때 좋습니다.',
+        prompt: '@Sites 이 프로젝트를 팀 내부 리뷰용 사이트로 저장해줘. 먼저 build를 검증하고, 바로 배포하지 말고 saved version과 접근 권한 옵션을 설명해줘.',
+        output: 'saved version, 배포 후보, 접근 권한 제안, storage/secret 확인, production URL 배포 전 체크리스트.',
+        caution: 'Sites 배포 URL은 production 배포입니다. Enterprise는 RBAC/admin enablement가 필요할 수 있고, runtime secret은 `.openai/hosting.json`이 아니라 Sites panel에서 관리해야 합니다.',
+    },
+    {
         id: 'idea-to-proof-of-concept',
         category: 'ui',
         title: '아이디어를 첫 프로토타입으로 만들기',
