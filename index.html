@@ -17,7 +17,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=20260604-security-pricing" />
+    <link rel="stylesheet" href="style.css?v=20260606-model-deprecation" />
 </head>
 
 <body data-page="home">
@@ -51,7 +51,7 @@
                     <p class="hero-badge">
                         <span data-i18n="hero_badge_prefix">공식 문서 기준 재검수</span>
                         <span aria-hidden="true"> · </span>
-                        <span class="live-date" data-date-format="long">2026년 6월 4일</span>
+                        <span class="live-date" data-date-format="long">2026년 6월 6일</span>
                     </p>
                     <h1 class="hero-title" data-i18n="hero_title">OpenAI Codex를<br />실무에 바로 붙이는 가이드</h1>
                     <p class="hero-sub" data-i18n="hero_sub">CLI · Desktop App (macOS/Windows) · IDE Extension · Web · Mobile · SDK automation<br />최신 공식 문서를 기준으로 어디서 시작할지, 어떤 모델을 쓸지, 샌드박스/승인, MCP, plugins, automations를 처음 사용자와 실무 사용자 모두 읽기 쉽도록 다시 정리했습니다.</p>
@@ -227,7 +227,7 @@
                                 <tr>
                                     <td data-i18n="overview_decision_review_case">PR 리뷰와 클라우드 작업</td>
                                     <td data-i18n="overview_decision_review_surface">Web/Cloud</td>
-                                    <td data-i18n="overview_decision_review_model">Cloud/review 경로 기준 모델</td>
+                                    <td data-i18n="overview_decision_review_model">제품이 관리하는 cloud 모델</td>
                                     <td><a href="#s9" data-i18n="overview_decision_review_next">09 Web + 16 자동화</a></td>
                                 </tr>
                             </tbody>
@@ -476,7 +476,7 @@
                     <div class="model-card">
                         <div class="model-banner">gpt-5.3-codex</div>
                         <div class="model-body">
-                            <p class="model-desc" data-i18n="m2_f">복잡한 소프트웨어 엔지니어링에 강한 업계 최고 수준의 코딩 모델입니다. 이 모델의 코딩 역량은 현재 GPT-5.4에도 반영되어 있습니다.</p>
+                            <p class="model-desc" data-i18n="m2_f">ChatGPT 로그인으로 쓰는 Codex에서는 deprecated로 표시된 예전 Codex 모델입니다. 기존 script, config, `codex exec --model` 명령에 남아 있다면 최신 추천 모델로 바꾸는 편이 안전합니다.</p>
                             <div class="model-cmd">codex -m gpt-5.3-codex</div>
                             <div class="model-features">
                                 <div class="model-feat-row"><span class="model-feat-label"
@@ -535,7 +535,7 @@
                     </div>
                 </div>
                 <div class="callout">
-                    <p data-i18n="s3_rec_note">💡 최신 `codex/models` 기준 공식 가이드는 모델 선택기에서 `gpt-5.5`가 보이면 대부분의 작업을 거기서 시작하라고 권장합니다. 오늘은 같은 모델 페이지가 API Access를 true로 표시하지만 `codex/pricing`의 API Key 사용량 표는 아직 Not available로 두고 있으므로, API-key 사용자는 실제 Codex 모델 선택기와 표준 API pricing을 같이 확인하세요. 비용/속도 균형이 중요하면 `gpt-5.4`를 계속 사용하면 됩니다. API에서는 `gpt-5.5`와 `gpt-5.5-pro`를 사용할 수 있으며, Pro는 더 높은 정확도가 필요한 Responses API/Batch API 작업에 적합합니다. 더 빠르고 가벼운 코딩 작업이나 subagent에는 `gpt-5.4-mini`, 복잡한 소프트웨어 엔지니어링과 현재 Codex Cloud에는 `gpt-5.3-codex`, 거의 즉각적인 반복에는 `gpt-5.3-codex-spark`를 검토하세요. 현재 대표 대안 모델은 `gpt-5.2`입니다.</p>
+                    <p data-i18n="s3_rec_note">💡 최신 `codex/models` 기준 공식 가이드는 모델 선택기에서 `gpt-5.5`가 보이면 대부분의 작업을 거기서 시작하라고 권장합니다. 오늘은 같은 모델 페이지가 API Access를 true로 표시하지만 `codex/pricing`의 API Key 사용량 표는 아직 Not available로 두고 있으므로, API-key 사용자는 실제 Codex 모델 선택기와 표준 API pricing을 같이 확인하세요. 비용/속도 균형이 중요하면 `gpt-5.4`를 계속 사용하면 됩니다. API에서는 `gpt-5.5`와 `gpt-5.5-pro`를 사용할 수 있으며, Pro는 더 높은 정확도가 필요한 Responses API/Batch API 작업에 적합합니다. 더 빠르고 가벼운 코딩 작업이나 subagent에는 `gpt-5.4-mini`, 거의 즉각적인 반복에는 ChatGPT Pro research preview인 `gpt-5.3-codex-spark`를 검토하세요. `gpt-5.2`와 `gpt-5.3-codex`는 ChatGPT 로그인 Codex 기준 deprecated입니다.</p>
                 </div>
 
                 <h4 data-i18n="s3_alt_title">🔄 대안 모델</h4>
@@ -544,7 +544,7 @@
                     <div class="model-card collapsible">
                         <div class="model-banner">gpt-5.2</div>
                         <div class="model-body">
-                            <p class="model-desc" data-i18n="m4_f">코딩과 에이전틱 작업 전반을 위한 이전 범용 모델. 현재는 `gpt-5.5`/`gpt-5.4` 조합 아래의 대안 모델로 보는 편이 맞습니다.</p>
+                            <p class="model-desc" data-i18n="m4_f">ChatGPT 로그인으로 쓰는 Codex에서는 deprecated로 표시된 이전 범용 모델입니다. API에서는 별도 제공 여부를 API models page에서 확인하세요.</p>
                             <div class="model-cmd">codex -m gpt-5.2</div>
                             <div class="model-features">
                                 <div class="model-feat-row"><span class="model-feat-label"
@@ -671,7 +671,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <p class="callout-inline" data-i18n="s4_note_access">현재 공식 문서는 모든 ChatGPT 플랜에 Codex가 포함된다고 설명합니다. 처음 보는 사용자라면 `Free $0`, `Go $8`, `Plus $20`, `Pro from $100` 순으로 보면 이해가 쉽고, 팀 사용자는 Business·Enterprise의 Codex-only pay-as-you-go seat를 같이 보면 됩니다. Pricing 페이지는 Plus / Pro 5x / Pro 20x / Business / API Key 표와 모델별 5시간 한도를 보여주며, Plus 기준 로컬 메시지 범위는 `gpt-5.5` 15-80, `gpt-5.4` 20-100, `gpt-5.4-mini` 60-350, `gpt-5.3-codex` 30-150입니다. 중요한 차이는 Codex의 API-key 로그인 표에서는 `gpt-5.5`가 제공되지 않는다는 점입니다. 반면 직접 OpenAI API의 별도 Models/Pricing 문서에서는 `gpt-5.5`와 `gpt-5.5-pro`를 확인해야 합니다. 실제 비용 판단은 메시지/작업 한도, token credit rate card, usage dashboard, API 모델 가격표를 섞지 말고 함께 대조하세요. 이미지 생성은 일반 Codex 한도를 평균 3-5배 더 빨리 쓰며 Fast mode는 지원 모델에서 더 높은 비율로 크레딧을 소모합니다.</p>
+                        <p class="callout-inline" data-i18n="s4_note_access">현재 공식 문서는 모든 ChatGPT 플랜에 Codex가 포함된다고 설명합니다. 처음 보는 사용자라면 `Free $0`, `Go $8`, `Plus $20`, `Pro from $100` 순으로 보면 이해가 쉽고, 팀 사용자는 Business·Enterprise의 Codex-only pay-as-you-go seat를 같이 보면 됩니다. Pricing 페이지는 Plus / Pro 5x / Pro 20x / Business / API Key 표와 모델별 5시간 한도를 보여주며, Plus 기준 로컬 메시지 범위에는 아직 `gpt-5.3-codex` 30-150이 남아 있습니다. 중요한 차이는 오늘 `codex/models`가 `gpt-5.5` API Access를 표시하지만 `codex/pricing`의 API Key 사용량 표는 아직 Not available로 남아 있고, `gpt-5.3-codex`는 models 문서에서 ChatGPT 로그인 기준 deprecated라는 점입니다. 실제 비용 판단은 메시지/작업 한도, token credit rate card, usage dashboard, 실제 모델 선택기, API 모델 가격표를 섞지 말고 함께 대조하세요. 이미지 생성은 일반 Codex 한도를 평균 3-5배 더 빨리 쓰며 Fast mode는 지원 모델에서 더 높은 비율로 크레딧을 소모합니다.</p>
                         <p class="command-refs" data-i18n-html="s4_refs">출처: <a href="https://developers.openai.com/codex/quickstart/" target="_blank">Quickstart</a> · <a href="https://developers.openai.com/codex/pricing/" target="_blank">Codex pricing</a> · <a href="https://help.openai.com/en/articles/20001106-codex-rate-card" target="_blank">Codex rate card</a> · <a href="https://developers.openai.com/codex/speed" target="_blank">Speed</a> · <a href="https://openai.com/index/codex-flexible-pricing-for-teams/" target="_blank">Pay-as-you-go pricing for teams</a></p>
                     </div>
                 </div>
@@ -1801,7 +1801,7 @@ Research rules:
                 <p data-i18n="s18_intro">최신 best practices와 customization 문서를 같이 보면 장기적으로 잘 쓰는 사용자는 반복 작업을 skill로 만들고, 팀에 공유할 때는 plugin으로 묶고, 외부 시스템 연결은 MCP로 붙이고, 장기 작업은 bounded delegation으로 나눕니다.</p>
                 <pre data-i18n-html="code_s18_adv"><code><span class="c"># 모델 선택</span>
 /model gpt-5.4         <span class="c"># 기본 추천</span>
-/model gpt-5.3-codex   <span class="c"># Codex-특화 비교용</span>
+/model gpt-5.4-mini    <span class="c"># 빠른 작업 / subagent</span>
 
 <span class="c"># 플러그인 디렉터리 (CLI)</span>
 /plugins
@@ -1979,33 +1979,33 @@ codex --search "optimize with Next.js 15"
                     </div>
                     <p class="overview-fact-date">
                         <span data-i18n="overview_fact_date_prefix">업데이트 기준일</span>
-                        <span class="live-date" data-date-format="long">2026년 6월 4일</span>
+                        <span class="live-date" data-date-format="long">2026년 6월 6일</span>
                     </p>
                 </div>
                 <ol class="changelog-list" aria-label="Today update summary">
                     <li>
                         <strong data-i18n="overview_update_1_title">모델/사용 방식 매트릭스 재확인</strong>
-                        <span data-i18n="changelog_item_1">`gpt-5.5` 우선 추천을 다시 확인하고, `codex/models`의 API Access 표기와 `codex/pricing`의 API Key 사용량 표 차이를 분리했습니다.</span>
+                        <span data-i18n="changelog_item_1">`gpt-5.5` 우선 추천은 유지하고, `gpt-5.2`와 `gpt-5.3-codex`가 ChatGPT 인증 Codex에서 deprecated로 표시된 점을 반영했습니다.</span>
                     </li>
                     <li>
                         <strong data-i18n="overview_update_2_title">요금제·크레딧 구조 재정리</strong>
-                        <span data-i18n="changelog_item_2">가격 설명에서 종료된 Pro 프로모션 문구를 제거하고, 현재 Pro 5x/20x 구조, Go/iOS 표기, ChatGPT for Excel 공유 한도, credit 적용 범위를 맞췄습니다.</span>
+                        <span data-i18n="changelog_item_2">`codex/pricing`의 `gpt-5.3-codex` 한도 표기는 가격 범위로 남기되, models 문서의 현재 추천/지원 상태와 분리했습니다.</span>
                     </li>
                     <li>
                         <strong data-i18n="overview_update_3_title">Quickstart·IDE·Mobile 경로 정리</strong>
-                        <span data-i18n="changelog_item_3">Remote connections 공식 문서가 Windows host를 ChatGPT iOS/Android 또는 Mac에서 제어할 수 있다고 바뀐 점을 반영하고, Windows App은 아직 다른 컴퓨터를 제어하는 클라이언트가 아니라는 제한을 분리했습니다.</span>
+                        <span data-i18n="changelog_item_3">ChatGPT Active sessions는 Codex/API Platform session을 보여줄 수 있지만 Codex CLI session은 관리하지 않는다는 보안 메모를 추가했습니다.</span>
                     </li>
                     <li>
                         <strong data-i18n="overview_update_4_title">Enterprise 발표 맥락 분리</strong>
-                        <span data-i18n="changelog_item_4">May 13 보안 공지 기준 macOS 사용자는 2026년 6월 12일까지 Codex App/CLI를 공식 경로로 업데이트해야 한다는 인증서 교체 주의점을 추가했습니다.</span>
+                        <span data-i18n="changelog_item_4">OpenAI API latest-model, API changelog, Apps SDK changelog를 OpenAI Developers MCP로 다시 확인했고 June 5 이후 Codex-101 핵심 API 변경은 발견하지 못했습니다.</span>
                     </li>
                     <li>
                         <strong data-i18n="overview_update_6_title">Docs MCP·설정 기준 재점검</strong>
-                        <span data-i18n="changelog_item_5">Config reference의 agents.* 동시성/깊이/역할 설정, Chat Completions provider 지원 deprecation, Sites hosting.json/secret 분리를 반영했습니다.</span>
+                        <span data-i18n="changelog_item_5">Remote connections, Sites, Bedrock, Windows Computer Use, macOS certificate update 문구는 이전 공식 상태가 유지되는지 재확인했습니다.</span>
                     </li>
                     <li>
                         <strong data-i18n="overview_update_7_title">소셜 팁 검증 제한 기록</strong>
-                        <span data-i18n="changelog_item_6">Chrome 소셜 확인에서 X의 usage reset류 claim은 검증하지 않았고, LinkedIn은 공식 Sites/plugins 반복과 파트너 사례만 확인했으며 Threads는 로드 제한으로 제외했습니다.</span>
+                        <span data-i18n="changelog_item_6">Chrome 소셜 확인은 X 빈 화면, Threads 타임아웃, LinkedIn 내비게이션만 확인되어 social-only claim을 추가하지 않았습니다.</span>
                     </li>
                 </ol>
             </section>
@@ -2021,14 +2021,14 @@ codex --search "optimize with Next.js 15"
                     href="https://github.com/swhan0329/codex-101" target="_blank">PR을 환영합니다</a>.</p>
             <p class="footer-meta">
                 <span data-i18n="footer_date_prefix">최종 업데이트</span>:
-                        <span class="live-date" data-date-format="long">2026년 6월 4일</span>
+                        <span class="live-date" data-date-format="long">2026년 6월 6일</span>
             </p>
             <p class="footer-meta">Made by <a href="https://github.com/swhan0329" target="_blank">@swhan0329</a></p>
         </div>
     </footer>
 
-    <script src="i18n.js?v=20260604-security-pricing"></script>
-    <script src="app.js?v=20260604-security-pricing"></script>
+    <script src="i18n.js?v=20260606-model-deprecation"></script>
+    <script src="app.js?v=20260606-model-deprecation"></script>
 </body>
 
 </html>
