@@ -520,6 +520,32 @@
             ].join(' ').toLowerCase();
         };
 
+        const getDetailedPrompt = (item) => {
+            if (item.prompt.includes('\n')) return item.prompt;
+
+            return [
+                item.prompt,
+                '',
+                '맥락:',
+                `- 공식 use case: ${item.sourceTitle}`,
+                `- 지금 쓰기 좋은 상황: ${item.when}`,
+                '- 먼저 현재 프로젝트, 연결된 앱, 파일, 데이터, 스레드 중 이 작업에 필요한 범위를 확인해.',
+                '- 기존 패턴, 권한, 출처를 읽고 확실하지 않은 부분은 추측하지 말고 표시해.',
+                '',
+                '진행 방식:',
+                '- 작업을 바로 실행하기 전에 어떤 자료를 확인했고 어떤 순서로 진행할지 짧게 말해.',
+                '- 가능한 한 작은 단위로 처리하고, 중간에 중요한 판단이 필요하면 선택지를 나눠줘.',
+                '- 보내기, 제출, 삭제, 결제, merge, production 배포처럼 되돌리기 어려운 행동은 내가 승인하기 전 멈춰.',
+                '',
+                '결과물:',
+                `- ${item.output}`,
+                '- 확인한 근거, 남은 질문, 사람이 마지막으로 봐야 할 부분을 함께 정리해.',
+                '',
+                '주의:',
+                `- ${item.caution}`,
+            ].join('\n');
+        };
+
         const getVisibleItems = () => items.filter((item) => {
             const matchesCategory = activeCategory === 'all' || item.category === activeCategory;
             const matchesQuery = !query || getSearchText(item).includes(query);
@@ -574,7 +600,7 @@
                         </div>
                         <div>
                             <dt>첫 요청 예시</dt>
-                            <dd><code>${escapeHtml(item.prompt)}</code></dd>
+                            <dd><code>${escapeHtml(getDetailedPrompt(item))}</code></dd>
                         </div>
                         <div>
                             <dt>결과물</dt>
@@ -639,16 +665,21 @@
             selectCase(card.dataset.useCaseId);
         });
 
-        const initialId = decodeURIComponent(window.location.hash.replace('#', ''));
-        const initialItem = items.find((item) => item.id === initialId);
-        if (initialItem) {
-            activeCategory = initialItem.category;
-            setCategory(activeCategory);
-            selectCase(initialItem.id, false);
-        } else {
-            setCategory('all');
-            selectCase(items[0].id, false);
-        }
+        const selectFromHash = () => {
+            const initialId = decodeURIComponent(window.location.hash.replace('#', ''));
+            const initialItem = items.find((item) => item.id === initialId);
+            if (initialItem) {
+                activeCategory = initialItem.category;
+                setCategory(activeCategory);
+                selectCase(initialItem.id, false);
+            } else {
+                setCategory('all');
+                selectCase(items[0].id, false);
+            }
+        };
+
+        window.addEventListener('hashchange', selectFromHash);
+        selectFromHash();
     }
 
     // Init
