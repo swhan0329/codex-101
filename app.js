@@ -523,6 +523,9 @@
                 skills: '필요한 Skills & Plugins',
                 noSkills: '공식 상세 페이지에 별도 skill/plugin이 지정되지 않았습니다. 현재 repo, 파일, 브라우저, 터미널 접근 범위부터 확인하세요.',
                 prompt: '공식 Starter prompt 기반 요청',
+                copyPrompt: '프롬프트 복사',
+                copied: '복사됨',
+                copyFailed: '복사 실패',
                 workflow: '진행 흐름',
                 output: '결과물',
                 caution: '주의점',
@@ -542,6 +545,9 @@
                 skills: 'Skills & Plugins',
                 noSkills: 'The official page does not specify a separate skill or plugin. Start by checking the current repo, files, browser, and terminal access scope.',
                 prompt: 'Official starter prompt',
+                copyPrompt: 'Copy prompt',
+                copied: 'Copied',
+                copyFailed: 'Copy failed',
                 workflow: 'Workflow',
                 output: 'Deliverable',
                 caution: 'Watch out',
@@ -711,6 +717,7 @@
             const official = item.official || {};
             const title = localized(item, 'title', 'titleEn');
             const summary = localized(item, 'summary', 'summaryEn');
+            const promptText = getDetailedPrompt(item);
             const bestFor = currentLang === 'en'
                 ? (official.bestForEn || [])
                 : [item.when];
@@ -742,8 +749,17 @@
                         ${listHtml(bestFor, 'use-case-check-list')}
                     </section>
                     <section class="use-case-detail-section">
-                        <h3>${escapeHtml(l.prompt)}</h3>
-                        <pre class="use-case-prompt"><code>${escapeHtml(getDetailedPrompt(item))}</code></pre>
+                        <div class="use-case-section-head">
+                            <h3>${escapeHtml(l.prompt)}</h3>
+                            <button class="use-case-copy-btn" type="button" data-copy-prompt data-copy-value="${escapeHtml(promptText)}" aria-label="${escapeHtml(l.copyPrompt)}" title="${escapeHtml(l.copyPrompt)}">
+                                <svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16">
+                                    <path d="M8 7.5A2.5 2.5 0 0 1 10.5 5h7A2.5 2.5 0 0 1 20 7.5v7a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 8 14.5v-7Zm2.5-.5a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.5-.5h-7Z" fill="currentColor"></path>
+                                    <path d="M4 10.5A4.5 4.5 0 0 1 8.5 6H9v2h-.5A2.5 2.5 0 0 0 6 10.5v7A2.5 2.5 0 0 0 8.5 20h7A2.5 2.5 0 0 0 18 17.5V17h2v.5a4.5 4.5 0 0 1-4.5 4.5h-7A4.5 4.5 0 0 1 4 17.5v-7Z" fill="currentColor"></path>
+                                </svg>
+                                <span>${escapeHtml(l.copyPrompt)}</span>
+                            </button>
+                        </div>
+                        <pre class="use-case-prompt"><code>${escapeHtml(promptText)}</code></pre>
                     </section>
                     <section class="use-case-detail-section">
                         <h3>${escapeHtml(l.workflow)}</h3>
@@ -811,6 +827,39 @@
             const card = event.target.closest('[data-use-case-id]');
             if (!card) return;
             selectCase(card.dataset.useCaseId);
+        });
+
+        detail.addEventListener('click', async (event) => {
+            const button = event.target.closest('[data-copy-prompt]');
+            if (!button) return;
+            const l = getLabels();
+            const value = button.dataset.copyValue || '';
+            const label = button.querySelector('span');
+            const original = label ? label.textContent : '';
+            try {
+                if (navigator.clipboard?.writeText) {
+                    await navigator.clipboard.writeText(value);
+                } else {
+                    const textarea = document.createElement('textarea');
+                    textarea.value = value;
+                    textarea.setAttribute('readonly', '');
+                    textarea.style.position = 'fixed';
+                    textarea.style.opacity = '0';
+                    document.body.appendChild(textarea);
+                    textarea.select();
+                    document.execCommand('copy');
+                    textarea.remove();
+                }
+                button.classList.add('copied');
+                if (label) label.textContent = l.copied;
+            } catch (error) {
+                button.classList.add('copy-error');
+                if (label) label.textContent = l.copyFailed;
+            }
+            window.setTimeout(() => {
+                button.classList.remove('copied', 'copy-error');
+                if (label) label.textContent = original || l.copyPrompt;
+            }, 1600);
         });
 
         const selectFromHash = () => {
