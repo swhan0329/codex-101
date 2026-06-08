@@ -740,15 +740,7 @@
                     <div class="use-case-meta-strip">
                         ${metaPills.map((pill) => `<span>${escapeHtml(pill)}</span>`).join('')}
                     </div>
-                    <section class="use-case-detail-section">
-                        <h3>${escapeHtml(l.skills)}</h3>
-                        ${skillRows ? `<ul class="use-case-skill-list">${skillRows}</ul>` : `<p>${escapeHtml(l.noSkills)}</p>`}
-                    </section>
-                    <section class="use-case-detail-section">
-                        <h3>${escapeHtml(l.bestFor)}</h3>
-                        ${listHtml(bestFor, 'use-case-check-list')}
-                    </section>
-                    <section class="use-case-detail-section">
+                    <section class="use-case-detail-section use-case-prompt-spotlight">
                         <div class="use-case-section-head">
                             <h3>${escapeHtml(l.prompt)}</h3>
                             <button class="use-case-copy-btn" type="button" data-copy-prompt data-copy-value="${escapeHtml(promptText)}" aria-label="${escapeHtml(l.copyPrompt)}" title="${escapeHtml(l.copyPrompt)}">
@@ -761,16 +753,24 @@
                         </div>
                         <pre class="use-case-prompt"><code>${escapeHtml(promptText)}</code></pre>
                     </section>
-                    <section class="use-case-detail-section">
-                        <h3>${escapeHtml(l.workflow)}</h3>
-                        ${listHtml(getWorkflowSteps(item), 'use-case-step-list')}
+                    <section class="use-case-detail-section use-case-support-grid">
+                        <div>
+                            <h3>${escapeHtml(l.skills)}</h3>
+                            ${skillRows ? `<ul class="use-case-skill-list">${skillRows}</ul>` : `<p>${escapeHtml(l.noSkills)}</p>`}
+                        </div>
+                        <div>
+                            <h3>${escapeHtml(l.bestFor)}</h3>
+                            ${listHtml(bestFor, 'use-case-check-list')}
+                        </div>
                     </section>
                     <section class="use-case-detail-section use-case-two-col">
                         <div>
-                            <h3>${escapeHtml(l.output)}</h3>
-                            <p>${escapeHtml(item.output)}</p>
+                            <h3>${escapeHtml(l.workflow)}</h3>
+                            ${listHtml(getWorkflowSteps(item), 'use-case-step-list')}
                         </div>
                         <div>
+                            <h3>${escapeHtml(l.output)}</h3>
+                            <p>${escapeHtml(item.output)}</p>
                             <h3>${escapeHtml(l.caution)}</h3>
                             <p>${escapeHtml(item.caution)}</p>
                         </div>
