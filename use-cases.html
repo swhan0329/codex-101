@@ -51,7 +51,7 @@
                         <span class="live-date" data-date-format="long">2026년 6월 8일</span>
                     </p>
                     <h1 class="use-case-title">Codex에게 무엇을 맡길 수 있을까?</h1>
-                    <p class="use-case-lead">OpenAI 공식 Codex use cases를 그대로 번역하지 않고, 한국 실무자가 먼저 떠올리는 업무 상황으로 다시 묶었습니다. 카테고리를 고르고 카드를 누르면, 언제 쓰면 좋은지, 첫 요청을 어떻게 쓰면 좋은지, 결과물과 주의점까지 한국어로 확인할 수 있습니다.</p>
+                    <p class="use-case-lead">OpenAI 공식 Codex use cases 전체를 한국 실무자가 먼저 떠올리는 업무 상황으로 다시 묶었습니다. 카드를 누르면 공식 상세 페이지의 난이도, 시간, Skills & Plugins, Starter prompt, 주의점을 한국어 모드에서 읽기 쉽게 확인할 수 있습니다.</p>
                     <div class="hero-cta">
                         <a href="#use-case-browser" class="btn btn-primary">사례 둘러보기</a>
                         <a href="https://developers.openai.com/codex/use-cases" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">공식 원문 보기</a>
@@ -61,8 +61,8 @@
                     <p class="use-case-source-label">읽는 방법</p>
                     <ol class="use-case-source-list">
                         <li>영어 기능명이 아니라 한국 실무 상황 기준으로 먼저 고릅니다.</li>
-                        <li>카드를 누르면 오른쪽에서 상세 요청 예시를 봅니다.</li>
-                        <li>공식 원문은 각 상세 패널 하단 링크로 바로 확인합니다.</li>
+                        <li>카드를 누르면 오른쪽에서 필요한 스킬과 플러그인을 먼저 봅니다.</li>
+                        <li>한국어 모드에서는 한국어 프롬프트, 영어 모드에서는 공식 영어 프롬프트를 봅니다.</li>
                     </ol>
                 </aside>
             </div>
@@ -88,7 +88,7 @@
                         <button class="use-case-category active" type="button" data-use-case-filter="all">
                             <span class="use-case-category-main">전체 보기</span>
                             <span class="use-case-category-sub">모든 한국어 상세 사례</span>
-                            <span class="use-case-category-count" data-use-case-count="all">53</span>
+                            <span class="use-case-category-count" data-use-case-count="all">60</span>
                         </button>
                         <div id="use-case-categories" class="use-case-category-list"></div>
                     </aside>
@@ -96,8 +96,8 @@
                     <div class="use-case-workbench">
                         <section class="use-case-results" aria-label="Use case cards">
                             <div class="use-case-results-head">
-                                <p id="use-case-result-label" class="use-case-result-label" aria-live="polite">53개 사례</p>
-                                <p class="use-case-result-note">카드를 클릭하면 상세 패널이 열립니다.</p>
+                                <p id="use-case-result-label" class="use-case-result-label" aria-live="polite">60개 사례</p>
+                                <p class="use-case-result-note">카드를 클릭하면 공식 상세 구조가 한국어로 열립니다.</p>
                             </div>
                             <div id="use-case-grid" class="use-case-grid"></div>
                         </section>
@@ -106,7 +106,7 @@
                             <div class="use-case-detail-empty">
                                 <p class="overview-kicker">Detail</p>
                                 <h2>왼쪽에서 사례를 선택하세요</h2>
-                                <p>선택한 사례의 한국어 설명, 첫 요청 예시, 결과물, 주의점, 공식 원문 링크가 여기에 표시됩니다.</p>
+                                <p>선택한 사례의 공식 태그, 필요한 Skills & Plugins, Starter prompt, 결과물, 주의점, 공식 원문 링크가 여기에 표시됩니다.</p>
                             </div>
                         </aside>
                     </div>
@@ -126,9 +126,9 @@
         </div>
     </footer>
 
-    <script src="i18n.js?v=20260608-pricing-config"></script>
-    <script src="use-cases-data.js?v=20260608-pricing-config"></script>
-    <script src="app.js?v=20260608-pricing-config"></script>
+    <script src="i18n.js?v=20260608-use-cases-official"></script>
+    <script src="use-cases-data.js?v=20260608-use-cases-official"></script>
+    <script src="app.js?v=20260608-use-cases-official"></script>
 </body>
 
 </html>

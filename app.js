@@ -408,6 +408,7 @@
         if (page === 'home') {
             setupSectionNavigation('#home-nav a[href^="#"]');
         }
+        document.dispatchEvent(new CustomEvent('codex101:langchange', { detail: { lang } }));
         refreshHomeSidebarPin();
     }
 
@@ -508,23 +509,112 @@
 
         const filterButtons = Array.from(document.querySelectorAll('[data-use-case-filter]'));
 
+        const labels = {
+            ko: {
+                all: '전체 보기',
+                cases: '개 사례',
+                searchCases: '개 사례 검색됨',
+                noResults: '검색 결과가 없습니다',
+                noResultsHint: '카테고리를 전체로 바꾸거나 다른 업무 단어로 검색해보세요.',
+                difficulty: '난이도',
+                time: '소요 시간',
+                tags: '공식 태그',
+                bestFor: '언제 쓰면 좋은가',
+                skills: '필요한 Skills & Plugins',
+                noSkills: '공식 상세 페이지에 별도 skill/plugin이 지정되지 않았습니다. 현재 repo, 파일, 브라우저, 터미널 접근 범위부터 확인하세요.',
+                prompt: '공식 Starter prompt 기반 요청',
+                workflow: '진행 흐름',
+                output: '결과물',
+                caution: '주의점',
+                source: '공식 원문',
+                sourceCta: '공식 상세 보기',
+            },
+            en: {
+                all: 'All use cases',
+                cases: ' use cases',
+                searchCases: ' matching use cases',
+                noResults: 'No matching use cases',
+                noResultsHint: 'Reset the category or try another work keyword.',
+                difficulty: 'Difficulty',
+                time: 'Time horizon',
+                tags: 'Official tags',
+                bestFor: 'Best for',
+                skills: 'Skills & Plugins',
+                noSkills: 'The official page does not specify a separate skill or plugin. Start by checking the current repo, files, browser, and terminal access scope.',
+                prompt: 'Official starter prompt',
+                workflow: 'Workflow',
+                output: 'Deliverable',
+                caution: 'Watch out',
+                source: 'Official source',
+                sourceCta: 'Open official page',
+            },
+        };
+
+        const getLabels = () => labels[currentLang === 'en' ? 'en' : 'ko'];
+        const localized = (item, koKey, enKey) => {
+            if (currentLang === 'en' && item[enKey]) return item[enKey];
+            return item[koKey] || item[enKey] || '';
+        };
+        const listHtml = (items, className = '') => {
+            const values = (items || []).filter(Boolean);
+            if (!values.length) return '';
+            return `<ul class="${className}">${values.map((value) => `<li>${escapeHtml(value)}</li>`).join('')}</ul>`;
+        };
+        const getSkillWhy = (skill) => {
+            if (currentLang === 'en') return skill.why || '';
+            const fallback = {
+                'Slack': 'Slack 채널, DM, 스레드에서 요청, 결정, blocker, 최신 맥락을 확인합니다.',
+                'Gmail': '관련 이메일 스레드, 첨부, 일정 변경, 외부 커뮤니케이션 맥락을 확인합니다.',
+                'Google Calendar': '일정, 참석자, 시간, 첨부 자료처럼 작업 범위를 정하는 정보를 찾습니다.',
+                'Google Drive': '문서, 시트, 덱, 폴더, pre-read, tracker 같은 승인된 출처를 읽거나 산출물을 만듭니다.',
+                'Google Sheets': '팀이 정렬, 검토, 코멘트할 수 있는 시트 형태의 결과물을 만듭니다.',
+                'GitHub': 'repo 파일, issue, PR, workflow, 보안 관련 변경 이력을 확인합니다.',
+                'Linear': '버그, feature queue, 제품 이슈 흐름을 읽어 우선순위와 액션으로 묶습니다.',
+                'Notion': '프로젝트 노트, tracker, decision log처럼 업무 맥락을 정의하는 문서를 읽습니다.',
+                'Playwright': '실제 브라우저에서 UI와 상호작용을 확인하고 스크린샷 근거를 남깁니다.',
+                'Build macOS Apps': 'macOS SwiftUI/AppKit 패턴, 빌드/실행 루프, window/settings 검증에 사용합니다.',
+                'Build iOS Apps': 'SwiftUI, Simulator, App Intents, XcodeBuildMCP 기반 iOS 검증에 사용합니다.',
+                'Security Best Practices': 'secrets, auth, dependency, permission처럼 위험한 표면을 중심으로 리뷰합니다.',
+                'Cli Creator': 'Codex가 반복 실행할 수 있는 안정적인 CLI command surface를 설계하고 검증합니다.',
+                'Skill Creator': '반복 절차를 다음 작업에서도 재사용할 수 있는 skill로 정리합니다.',
+                'Sites': 'Codex에서 만든 내부 앱이나 사이트를 테스트하고 workspace 공유 배포로 연결합니다.',
+                'Zoom': '승인된 Zoom transcript, recording, AI Companion summary를 후속 액션의 근거로 사용합니다.',
+            };
+            return fallback[skill.name] || skill.why || '';
+        };
+        const formatPrompt = (value) => String(value || '')
+            .replace(/\s+(Use only these sources:|First,|Return:|Keep unsupported|Do not |Please:|Requirements:|Validation:|Deliver:|Goal:|Inputs:|Approval or policy source:|Runner:|Verification artifact:)/g, '\n\n$1')
+            .replace(/\s+-\s+/g, '\n- ')
+            .trim();
+
         const getSearchText = (item) => {
             return [
                 item.title,
+                item.titleEn,
                 item.sourceTitle,
                 item.summary,
+                item.summaryEn,
                 item.when,
                 item.prompt,
                 item.output,
                 item.caution,
+                item.official?.promptEn,
+                item.official?.skills?.map((skill) => `${skill.name} ${skill.why}`).join(' '),
+                item.official?.bestForEn?.join(' '),
             ].join(' ').toLowerCase();
         };
 
         const getDetailedPrompt = (item) => {
-            if (item.prompt.includes('\n')) return item.prompt;
+            const official = item.official || {};
+            if (currentLang === 'en') {
+                return formatPrompt(official.promptEn || item.prompt || '');
+            }
+
+            const prompt = official.promptKo || item.prompt || '';
+            if (prompt.includes('\n')) return formatPrompt(prompt);
 
             return [
-                item.prompt,
+                prompt,
                 '',
                 '맥락:',
                 `- 공식 use case: ${item.sourceTitle}`,
@@ -546,6 +636,29 @@
             ].join('\n');
         };
 
+        const getWorkflowSteps = (item) => {
+            if (currentLang === 'en') {
+                const sections = item.official?.guideSectionsEn || [];
+                return sections.length ? sections : [
+                    'Check the available sources and access scope.',
+                    'Use the listed skills or plugins to gather context.',
+                    'Return the requested artifact with evidence and gaps.',
+                    'Pause before irreversible actions.',
+                ];
+            }
+
+            const skills = item.official?.skills || [];
+            const skillNames = skills.length
+                ? skills.map((skill) => skill.name).slice(0, 4).join(', ')
+                : '현재 repo, 파일, 브라우저, 터미널';
+            return [
+                '먼저 입력 자료, 접근 권한, 사용해도 되는 출처와 쓰면 안 되는 출처를 확인합니다.',
+                `${skillNames} 범위에서 공식 상세 페이지가 요구하는 맥락을 모읍니다.`,
+                '공식 Starter prompt의 산출물 형식을 유지해 결과, 근거, source gap을 분리합니다.',
+                '보내기, 게시, 삭제, 결제, merge, production 배포처럼 되돌리기 어려운 행동은 승인 전 멈춥니다.',
+            ];
+        };
+
         const getVisibleItems = () => items.filter((item) => {
             const matchesCategory = activeCategory === 'all' || item.category === activeCategory;
             const matchesQuery = !query || getSearchText(item).includes(query);
@@ -554,15 +667,16 @@
 
         const renderCards = () => {
             const visibleItems = getVisibleItems();
+            const l = getLabels();
             resultLabel.textContent = query
-                ? `${visibleItems.length}개 사례 검색됨`
-                : `${visibleItems.length}개 사례`;
+                ? `${visibleItems.length}${l.searchCases}`
+                : `${visibleItems.length}${l.cases}`;
 
             if (!visibleItems.length) {
                 grid.innerHTML = `
                     <div class="use-case-empty-state">
-                        <h3>검색 결과가 없습니다</h3>
-                        <p>카테고리를 전체로 바꾸거나 다른 업무 단어로 검색해보세요.</p>
+                        <h3>${escapeHtml(l.noResults)}</h3>
+                        <p>${escapeHtml(l.noResultsHint)}</p>
                     </div>
                 `;
                 return;
@@ -571,12 +685,17 @@
             grid.innerHTML = visibleItems.map((item) => {
                 const category = categoryById[item.category] || {};
                 const selected = item.id === activeId ? ' active' : '';
+                const title = localized(item, 'title', 'titleEn');
+                const summary = localized(item, 'summary', 'summaryEn');
+                const meta = [item.official?.difficulty, item.official?.time].filter(Boolean).join(' · ');
+                const skills = item.official?.skills || [];
                 return `
                     <button class="use-case-card${selected}" type="button" data-use-case-id="${escapeHtml(item.id)}" style="--case-accent: ${escapeHtml(category.accent || '#ffffff')}">
                         <span class="use-case-card-category">${escapeHtml(category.label || item.category)}</span>
-                        <strong>${escapeHtml(item.title)}</strong>
-                        <span class="use-case-card-summary">${escapeHtml(item.summary)}</span>
-                        <span class="use-case-card-source">Official: ${escapeHtml(item.sourceTitle)}</span>
+                        <strong>${escapeHtml(title)}</strong>
+                        <span class="use-case-card-summary">${escapeHtml(summary)}</span>
+                        <span class="use-case-card-meta">${escapeHtml(meta || item.sourceTitle)}</span>
+                        <span class="use-case-card-source">${escapeHtml(skills.length ? skills.map((skill) => skill.name).slice(0, 3).join(' · ') : `Official: ${item.sourceTitle}`)}</span>
                     </button>
                 `;
             }).join('');
@@ -588,32 +707,61 @@
 
             activeId = item.id;
             const category = categoryById[item.category] || {};
+            const l = getLabels();
+            const official = item.official || {};
+            const title = localized(item, 'title', 'titleEn');
+            const summary = localized(item, 'summary', 'summaryEn');
+            const bestFor = currentLang === 'en'
+                ? (official.bestForEn || [])
+                : [item.when];
+            const skillRows = (official.skills || []).map((skill) => `
+                <li>
+                    <a href="${escapeHtml(skill.url || item.sourceUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(skill.name)}</a>
+                    <span>${escapeHtml(getSkillWhy(skill))}</span>
+                </li>
+            `).join('');
+            const metaPills = [
+                official.difficulty && `${l.difficulty}: ${official.difficulty}`,
+                official.time && `${l.time}: ${official.time}`,
+                ...(official.tags || []).slice(0, 3),
+            ].filter(Boolean);
             detail.innerHTML = `
                 <article class="use-case-detail-card" style="--case-accent: ${escapeHtml(category.accent || '#ffffff')}">
                     <p class="overview-kicker">${escapeHtml(category.label || item.category)}</p>
-                    <h2>${escapeHtml(item.title)}</h2>
-                    <p class="use-case-detail-summary">${escapeHtml(item.summary)}</p>
-                    <dl class="use-case-detail-list">
+                    <h2>${escapeHtml(title)}</h2>
+                    <p class="use-case-detail-summary">${escapeHtml(summary)}</p>
+                    <div class="use-case-meta-strip">
+                        ${metaPills.map((pill) => `<span>${escapeHtml(pill)}</span>`).join('')}
+                    </div>
+                    <section class="use-case-detail-section">
+                        <h3>${escapeHtml(l.skills)}</h3>
+                        ${skillRows ? `<ul class="use-case-skill-list">${skillRows}</ul>` : `<p>${escapeHtml(l.noSkills)}</p>`}
+                    </section>
+                    <section class="use-case-detail-section">
+                        <h3>${escapeHtml(l.bestFor)}</h3>
+                        ${listHtml(bestFor, 'use-case-check-list')}
+                    </section>
+                    <section class="use-case-detail-section">
+                        <h3>${escapeHtml(l.prompt)}</h3>
+                        <pre class="use-case-prompt"><code>${escapeHtml(getDetailedPrompt(item))}</code></pre>
+                    </section>
+                    <section class="use-case-detail-section">
+                        <h3>${escapeHtml(l.workflow)}</h3>
+                        ${listHtml(getWorkflowSteps(item), 'use-case-step-list')}
+                    </section>
+                    <section class="use-case-detail-section use-case-two-col">
                         <div>
-                            <dt>언제 쓰면 좋나</dt>
-                            <dd>${escapeHtml(item.when)}</dd>
+                            <h3>${escapeHtml(l.output)}</h3>
+                            <p>${escapeHtml(item.output)}</p>
                         </div>
                         <div>
-                            <dt>첫 요청 예시</dt>
-                            <dd><code>${escapeHtml(getDetailedPrompt(item))}</code></dd>
+                            <h3>${escapeHtml(l.caution)}</h3>
+                            <p>${escapeHtml(item.caution)}</p>
                         </div>
-                        <div>
-                            <dt>결과물</dt>
-                            <dd>${escapeHtml(item.output)}</dd>
-                        </div>
-                        <div>
-                            <dt>주의점</dt>
-                            <dd>${escapeHtml(item.caution)}</dd>
-                        </div>
-                    </dl>
+                    </section>
                     <div class="use-case-detail-actions">
-                        <span>공식 원문: ${escapeHtml(item.sourceTitle)}</span>
-                        <a href="${escapeHtml(item.sourceUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">공식 상세 보기</a>
+                        <span>${escapeHtml(l.source)}: ${escapeHtml(item.sourceTitle)}</span>
+                        <a href="${escapeHtml(item.sourceUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">${escapeHtml(l.sourceCta)}</a>
                     </div>
                 </article>
             `;
@@ -679,6 +827,10 @@
         };
 
         window.addEventListener('hashchange', selectFromHash);
+        document.addEventListener('codex101:langchange', () => {
+            renderCards();
+            if (activeId) selectCase(activeId, false);
+        });
         selectFromHash();
     }
 

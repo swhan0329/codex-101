@@ -3530,7 +3530,7 @@ details p {
 
 .use-case-workbench {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(340px, 410px);
+    grid-template-columns: minmax(360px, .85fr) minmax(480px, 1.15fr);
     gap: 22px;
     align-items: start;
 }
@@ -3562,7 +3562,7 @@ details p {
     position: relative;
     display: flex;
     flex-direction: column;
-    min-height: 214px;
+    min-height: 188px;
     gap: 12px;
     border: 1px solid var(--border);
     border-radius: var(--radius-sm);
@@ -3617,6 +3617,14 @@ details p {
     line-height: 1.55;
 }
 
+.use-case-card-meta {
+    color: var(--text);
+    font-family: var(--mono);
+    font-size: .68rem;
+    line-height: 1.4;
+    opacity: .82;
+}
+
 .use-case-card-source {
     margin-top: auto;
     color: var(--text-dim);
@@ -3628,7 +3636,7 @@ details p {
 .use-case-detail {
     position: sticky;
     top: 86px;
-    min-height: 420px;
+    min-height: 520px;
 }
 
 .use-case-detail-empty,
@@ -3646,6 +3654,8 @@ details p {
 
 .use-case-detail-card {
     border-top: 4px solid var(--case-accent, var(--accent));
+    max-height: calc(100vh - 112px);
+    overflow: auto;
 }
 
 .use-case-detail-card h2 {
@@ -3659,6 +3669,129 @@ details p {
 .use-case-detail-summary {
     color: var(--text-dim);
     margin-bottom: 18px;
+}
+
+.use-case-meta-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0 0 18px;
+}
+
+.use-case-meta-strip span {
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 6px 10px;
+    background: var(--bg-code);
+    color: var(--text-dim);
+    font-family: var(--mono);
+    font-size: .7rem;
+    line-height: 1;
+}
+
+.use-case-detail-section {
+    padding: 18px 0;
+    border-top: 1px solid var(--line-soft);
+}
+
+.use-case-detail-section h3 {
+    margin: 0 0 10px;
+    color: var(--text);
+    font-size: .92rem;
+    line-height: 1.25;
+}
+
+.use-case-detail-section p,
+.use-case-detail-section li {
+    color: var(--text-dim);
+    font-size: .9rem;
+    line-height: 1.7;
+}
+
+.use-case-skill-list,
+.use-case-check-list,
+.use-case-step-list {
+    display: grid;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.use-case-skill-list li {
+    display: grid;
+    grid-template-columns: minmax(120px, .34fr) minmax(0, 1fr);
+    gap: 12px;
+    align-items: start;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 12px;
+    background: rgba(255, 255, 255, .025);
+}
+
+[data-theme="light"] .use-case-skill-list li {
+    background: rgba(255, 255, 255, .62);
+}
+
+.use-case-skill-list a {
+    width: fit-content;
+    max-width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 5px 9px;
+    color: var(--text);
+    font-size: .78rem;
+    font-weight: 800;
+    line-height: 1.2;
+    text-decoration: none;
+}
+
+.use-case-skill-list span {
+    color: var(--text-dim);
+    font-size: .86rem;
+    line-height: 1.55;
+}
+
+.use-case-check-list li,
+.use-case-step-list li {
+    position: relative;
+    padding-left: 22px;
+}
+
+.use-case-check-list li::before,
+.use-case-step-list li::before {
+    content: "";
+    position: absolute;
+    top: .7em;
+    left: 4px;
+    width: 7px;
+    height: 7px;
+    border-radius: 999px;
+    background: var(--case-accent, var(--accent));
+}
+
+.use-case-prompt {
+    margin: 0;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--bg-code);
+    color: var(--text-code);
+    overflow: auto;
+}
+
+.use-case-prompt code {
+    display: block;
+    white-space: pre-wrap;
+    padding: 14px;
+    font-family: var(--font);
+    font-size: .88rem;
+    line-height: 1.68;
+}
+
+.use-case-two-col {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
 }
 
 .use-case-detail-list {
@@ -3736,6 +3869,10 @@ details p {
         position: static;
     }
 
+    .use-case-detail-card {
+        max-height: none;
+    }
+
     .use-case-category-list {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -3772,5 +3909,10 @@ details p {
 
     .use-case-card {
         min-height: 184px;
+    }
+
+    .use-case-skill-list li,
+    .use-case-two-col {
+        grid-template-columns: 1fr;
     }
 }
