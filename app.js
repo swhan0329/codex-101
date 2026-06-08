@@ -786,6 +786,9 @@
 
             if (updateHash) {
                 history.replaceState(null, '', `#${item.id}`);
+                window.requestAnimationFrame(() => {
+                    detail.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                });
             }
         };
 
