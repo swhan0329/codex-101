@@ -80,8 +80,8 @@
             items: [
                 { href: '#s18', label: '18', titleKey: 's18_title' },
                 { href: '#s20', label: '19', titleKey: 's20_title' },
-                { href: '#s21', label: '20', titleKey: 's21_title' },
-                { href: '#openai-field-tips', label: '21', titleKey: 'field_tips_nav' },
+                { href: '#openai-field-tips', label: '20', titleKey: 'field_tips_nav' },
+                { href: '#s21', label: '21', titleKey: 's21_title' },
             ],
         },
     ];
@@ -135,6 +135,9 @@
         updateModelToggleLabels(lang);
         renderLiveDates(lang);
         document.documentElement.lang = lang === 'ko' ? 'ko' : 'en';
+        if (document.body.dataset.page === 'use-cases' && t.use_cases_document_title) {
+            document.title = t.use_cases_document_title;
+        }
     }
 
     // Build TOC
@@ -508,10 +511,19 @@
         `).join('');
 
         const filterButtons = Array.from(document.querySelectorAll('[data-use-case-filter]'));
+        const categoryLabel = (category) => {
+            if (currentLang === 'en' && category.labelEn) return category.labelEn;
+            return category.label || category.id || '';
+        };
+        const categoryShort = (category) => {
+            if (currentLang === 'en' && category.shortEn) return category.shortEn;
+            return category.short || category.description || '';
+        };
 
         const labels = {
             ko: {
                 all: '전체 보기',
+                allSub: '모든 한국어 상세 사례',
                 cases: '개 사례',
                 searchCases: '개 사례 검색됨',
                 noResults: '검색 결과가 없습니다',
@@ -534,6 +546,7 @@
             },
             en: {
                 all: 'All use cases',
+                allSub: 'All practical Codex examples',
                 cases: ' use cases',
                 searchCases: ' matching use cases',
                 noResults: 'No matching use cases',
@@ -557,6 +570,25 @@
         };
 
         const getLabels = () => labels[currentLang === 'en' ? 'en' : 'ko'];
+        const updateUseCaseStaticLabels = () => {
+            const l = getLabels();
+            const allButton = document.querySelector('[data-use-case-filter="all"]');
+            if (allButton) {
+                const main = allButton.querySelector('.use-case-category-main');
+                const sub = allButton.querySelector('.use-case-category-sub');
+                if (main) main.textContent = l.all;
+                if (sub) sub.textContent = l.allSub;
+            }
+
+            categories.forEach((category) => {
+                const button = document.querySelector(`[data-use-case-filter="${category.id}"]`);
+                if (!button) return;
+                const main = button.querySelector('.use-case-category-main');
+                const sub = button.querySelector('.use-case-category-sub');
+                if (main) main.textContent = categoryLabel(category);
+                if (sub) sub.textContent = categoryShort(category);
+            });
+        };
         const localized = (item, koKey, enKey) => {
             if (currentLang === 'en' && item[enKey]) return item[enKey];
             return item[koKey] || item[enKey] || '';
@@ -664,6 +696,19 @@
                 '보내기, 게시, 삭제, 결제, merge, production 배포처럼 되돌리기 어려운 행동은 승인 전 멈춥니다.',
             ];
         };
+        const getOutputText = (item) => {
+            if (currentLang !== 'en') return item.output || '';
+            if (item.outputEn) return item.outputEn;
+            if (item.summaryEn) {
+                return `${item.summaryEn} Include the artifact, evidence, source gaps, and review notes.`;
+            }
+            return 'A reviewable artifact with evidence, source gaps, and next steps.';
+        };
+        const getCautionText = (item) => {
+            if (currentLang !== 'en') return item.caution || '';
+            if (item.cautionEn) return item.cautionEn;
+            return 'Confirm source access and pause before sending, publishing, deleting, merging, deploying, or taking other irreversible actions.';
+        };
 
         const getVisibleItems = () => items.filter((item) => {
             const matchesCategory = activeCategory === 'all' || item.category === activeCategory;
@@ -697,7 +742,7 @@
                 const skills = item.official?.skills || [];
                 return `
                     <button class="use-case-card${selected}" type="button" data-use-case-id="${escapeHtml(item.id)}" style="--case-accent: ${escapeHtml(category.accent || '#ffffff')}">
-                        <span class="use-case-card-category">${escapeHtml(category.label || item.category)}</span>
+                        <span class="use-case-card-category">${escapeHtml(categoryLabel(category) || item.category)}</span>
                         <strong>${escapeHtml(title)}</strong>
                         <span class="use-case-card-summary">${escapeHtml(summary)}</span>
                         <span class="use-case-card-meta">${escapeHtml(meta || item.sourceTitle)}</span>
@@ -734,7 +779,7 @@
             ].filter(Boolean);
             detail.innerHTML = `
                 <article class="use-case-detail-card" style="--case-accent: ${escapeHtml(category.accent || '#ffffff')}">
-                    <p class="overview-kicker">${escapeHtml(category.label || item.category)}</p>
+                    <p class="overview-kicker">${escapeHtml(categoryLabel(category) || item.category)}</p>
                     <h2>${escapeHtml(title)}</h2>
                     <p class="use-case-detail-summary">${escapeHtml(summary)}</p>
                     <div class="use-case-meta-strip">
@@ -770,9 +815,9 @@
                         </div>
                         <div>
                             <h3>${escapeHtml(l.output)}</h3>
-                            <p>${escapeHtml(item.output)}</p>
+                            <p>${escapeHtml(getOutputText(item))}</p>
                             <h3>${escapeHtml(l.caution)}</h3>
-                            <p>${escapeHtml(item.caution)}</p>
+                            <p>${escapeHtml(getCautionText(item))}</p>
                         </div>
                     </section>
                     <div class="use-case-detail-actions">
@@ -880,9 +925,11 @@
 
         window.addEventListener('hashchange', selectFromHash);
         document.addEventListener('codex101:langchange', () => {
+            updateUseCaseStaticLabels();
             renderCards();
             if (activeId) selectCase(activeId, false);
         });
+        updateUseCaseStaticLabels();
         selectFromHash();
     }
 

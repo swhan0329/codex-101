@@ -5,64 +5,91 @@ window.codexUseCaseCategories = [
     {
         "id": "today",
         "label": "오늘 바로 맡기기",
+        "labelEn": "Start Today",
         "short": "메일, 메시지, 회의, 브라우저 업무",
+        "shortEn": "Inbox, messages, meetings, browser work",
         "description": "처음 쓰는 사람도 바로 체감하기 좋은 반복 업무와 커뮤니케이션 작업입니다.",
+        "descriptionEn": "Repeatable work and communication tasks that first-time users can feel immediately.",
         "accent": "#8fd3ff"
     },
     {
         "id": "code",
         "label": "코드 이해와 변경",
+        "labelEn": "Code Understanding and Changes",
         "short": "리뷰, 리팩터링, 마이그레이션, 평가",
+        "shortEn": "Review, refactoring, migration, evals",
         "description": "큰 코드베이스를 파악하고, 안전하게 고치고, 검증 가능한 단위로 나누는 흐름입니다.",
+        "descriptionEn": "Understand large codebases, make safe changes, and split work into verifiable steps.",
         "accent": "#9ee6b8"
     },
     {
         "id": "ui",
         "label": "제품과 UI 만들기",
+        "labelEn": "Product and UI Building",
         "short": "프론트엔드, Figma, 배포, 프로토타입",
+        "shortEn": "Frontend, Figma, deployment, prototypes",
         "description": "아이디어, 디자인, 화면 수정 요청을 실제 앱과 배포 가능한 결과물로 바꾸는 흐름입니다.",
+        "descriptionEn": "Turn ideas, designs, and screen-change requests into working apps and deployable artifacts.",
         "accent": "#f4c56f"
     },
     {
         "id": "data",
         "label": "데이터와 리포트",
+        "labelEn": "Data and Reports",
         "short": "CSV, 스프레드시트, 재무 모델, 발표자료",
+        "shortEn": "CSV, spreadsheets, financial models, decks",
         "description": "원본을 보존하면서 데이터를 정리하고, 분석 결과를 문서나 시트로 남기는 흐름입니다.",
+        "descriptionEn": "Preserve source data while cleaning, analyzing, and turning results into documents or sheets.",
         "accent": "#d6b6ff"
     },
     {
         "id": "ops",
         "label": "운영과 자동화",
+        "labelEn": "Operations and Automation",
         "short": "버그 triage, 온보딩, 이벤트, 반복 워크플로",
+        "shortEn": "Bug triage, onboarding, events, recurring workflows",
         "description": "매번 사람이 손으로 하던 운영 절차를 체크리스트와 검증 루프로 바꾸는 흐름입니다.",
+        "descriptionEn": "Turn manual operating routines into checklists and verification loops.",
         "accent": "#ffb3a7"
     },
     {
         "id": "security",
         "label": "보안과 품질",
+        "labelEn": "Security and Quality",
         "short": "취약점 backlog, deep scan, PR 보안 리뷰",
+        "shortEn": "Vulnerability backlog, deep scan, PR security review",
         "description": "승인된 repo와 변경 범위 안에서 보안 근거를 찾고 최소 수정과 검증 증거를 남기는 흐름입니다.",
+        "descriptionEn": "Find security evidence within the approved repo and leave minimal fixes with verification proof.",
         "accent": "#ff8fb1"
     },
     {
         "id": "apple",
         "label": "iOS와 macOS 앱",
+        "labelEn": "iOS and macOS Apps",
         "short": "SwiftUI, Simulator, App Intents, Mac telemetry",
+        "shortEn": "SwiftUI, Simulator, App Intents, Mac telemetry",
         "description": "Apple 플랫폼 앱을 만들고, 쪼개고, 시뮬레이터와 로그로 확인하는 흐름입니다.",
+        "descriptionEn": "Build Apple-platform apps, split the work, and verify through simulators and logs.",
         "accent": "#a7c7ff"
     },
     {
         "id": "science",
         "label": "과학 연구",
+        "labelEn": "Scientific Research",
         "short": "단백질 접힘, single-cell, RNA-seq, target ranking",
+        "shortEn": "Protein folding, single-cell, RNA-seq, target ranking",
         "description": "생명과학 데이터와 연구 가설을 검증 가능한 분석 루프와 benchmark로 바꾸는 흐름입니다.",
+        "descriptionEn": "Turn life-science data and research hypotheses into verifiable analysis loops and benchmarks.",
         "accent": "#92ead7"
     },
     {
         "id": "strategy",
         "label": "기획, 문서, 학습",
+        "labelEn": "Planning, Docs, and Learning",
         "short": "PRD, 학습 리포트, 문서 최신화",
+        "shortEn": "PRDs, learning reports, documentation refresh",
         "description": "흩어진 자료를 읽고, 의사결정 가능한 문서나 학습 결과물로 압축하는 흐름입니다.",
+        "descriptionEn": "Read scattered material and compress it into decision-ready documents or learning artifacts.",
         "accent": "#f1f5a8"
     }
 ];

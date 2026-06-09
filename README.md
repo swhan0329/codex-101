@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: June 8, 2026</strong><br/>
+  <strong>Last updated: June 9, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
@@ -28,6 +28,13 @@ The guide is written from the official OpenAI Codex documentation first, then ma
 - **First-time users**: read sections `04-06` for setup and first run, then `10` for sandbox/approval basics, and `14` for OpenAI Docs MCP.
 - **Professional users**: read sections `12-14` for `AGENTS.md`, `config.toml`, and MCP, then `15-17` for sessions, automation, and prompt contracts.
 - **Example-driven readers**: open the live site and the use-case gallery to start from real workflows instead of feature lists.
+
+## June 9, 2026 Refresh Notes
+
+- Rechecked `developers.openai.com/codex/models` first: `gpt-5.5` remains the top Codex recommendation, with `gpt-5.4`, `gpt-5.4-mini`, and `gpt-5.3-codex-spark` in their existing fallback/fast/research-preview lanes.
+- Updated config guidance for the current profile-file shape: use separate `~/.codex/<profile>.config.toml` files instead of legacy inline `[profiles.*]` tables, and removed stale feature-flag examples that no longer appear in the current docs.
+- Rechecked OpenAI Platform/API docs and kept those notes separate from Codex product guidance. GPT-5.5 remains the latest API model guidance, while Codex pricing/API-key availability still needs scope-specific reading.
+- Chrome social checks for X, Threads, and LinkedIn were readable, but no new social-only claim was added without official corroboration.
 
 ## What's Covered
 

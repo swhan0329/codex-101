@@ -17,7 +17,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=20260608-use-cases-cards-first" />
+    <link rel="stylesheet" href="style.css?v=20260609-config-profile" />
 </head>
 
 <body data-page="use-cases">
@@ -46,23 +46,23 @@
             <div class="use-case-hero-grid">
                 <div class="use-case-hero-copy">
                     <p class="hero-badge">
-                        <span>공식 Use Cases 한국어 재분류</span>
+                        <span data-i18n="use_cases_hero_badge">공식 Use Cases 한국어 재분류</span>
                         <span aria-hidden="true"> · </span>
-                        <span class="live-date" data-date-format="long">2026년 6월 8일</span>
+                        <span class="live-date" data-date-format="long">2026년 6월 9일</span>
                     </p>
-                    <h1 class="use-case-title">Codex에게 무엇을 맡길 수 있을까?</h1>
-                    <p class="use-case-lead">OpenAI 공식 Codex use cases 전체를 한국 실무자가 먼저 떠올리는 업무 상황으로 다시 묶었습니다. 카드를 누르면 공식 상세 페이지의 난이도, 시간, Skills & Plugins, Starter prompt, 주의점을 한국어 모드에서 읽기 쉽게 확인할 수 있습니다.</p>
+                    <h1 class="use-case-title" data-i18n="use_cases_hero_title">Codex에게 무엇을 맡길 수 있을까?</h1>
+                    <p class="use-case-lead" data-i18n="use_cases_hero_lead">OpenAI 공식 Codex use cases 전체를 한국 실무자가 먼저 떠올리는 업무 상황으로 다시 묶었습니다. 카드를 누르면 공식 상세 페이지의 난이도, 시간, Skills & Plugins, Starter prompt, 주의점을 한국어 모드에서 읽기 쉽게 확인할 수 있습니다.</p>
                     <div class="hero-cta">
-                        <a href="#use-case-browser" class="btn btn-primary">사례 둘러보기</a>
-                        <a href="https://developers.openai.com/codex/use-cases" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">공식 원문 보기</a>
+                        <a href="#use-case-browser" class="btn btn-primary" data-i18n="use_cases_hero_cta">사례 둘러보기</a>
+                        <a href="https://developers.openai.com/codex/use-cases" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" data-i18n="use_cases_official_cta">공식 원문 보기</a>
                     </div>
                 </div>
                 <aside class="use-case-source-panel" aria-label="Use case page source note">
-                    <p class="use-case-source-label">읽는 방법</p>
+                    <p class="use-case-source-label" data-i18n="use_cases_source_label">읽는 방법</p>
                     <ol class="use-case-source-list">
-                        <li>영어 기능명이 아니라 한국 실무 상황 기준으로 먼저 고릅니다.</li>
-                        <li>카드를 누르면 아래에서 필요한 스킬과 플러그인을 먼저 봅니다.</li>
-                        <li>한국어 모드에서는 한국어 프롬프트, 영어 모드에서는 공식 영어 프롬프트를 봅니다.</li>
+                        <li data-i18n="use_cases_source_1">영어 기능명이 아니라 한국 실무 상황 기준으로 먼저 고릅니다.</li>
+                        <li data-i18n="use_cases_source_2">카드를 누르면 아래에서 필요한 스킬과 플러그인을 먼저 봅니다.</li>
+                        <li data-i18n="use_cases_source_3">한국어 모드에서는 한국어 프롬프트, 영어 모드에서는 공식 영어 프롬프트를 봅니다.</li>
                     </ol>
                 </aside>
             </div>
@@ -74,12 +74,12 @@
             <section class="use-case-section section">
                 <div class="use-case-controls">
                     <div>
-                        <p class="overview-kicker">Korean-first categories</p>
-                        <h2>공식 카드를 한국 업무 흐름으로 다시 묶었습니다</h2>
+                        <p class="overview-kicker" data-i18n="use_cases_controls_kicker">Korean-first categories</p>
+                        <h2 data-i18n="use_cases_controls_title">공식 카드를 한국 업무 흐름으로 다시 묶었습니다</h2>
                     </div>
                     <label class="use-case-search">
-                        <span class="sr-only">사용 사례 검색</span>
-                        <input id="use-case-search" type="search" placeholder="메일, PR, Figma, 재무, iOS처럼 검색" autocomplete="off" />
+                        <span class="sr-only" data-i18n="use_cases_search_label">사용 사례 검색</span>
+                        <input id="use-case-search" type="search" placeholder="메일, PR, Figma, 재무, iOS처럼 검색" autocomplete="off" data-i18n="use_cases_search_placeholder" />
                     </label>
                 </div>
 
@@ -97,16 +97,16 @@
                         <section class="use-case-results" aria-label="Use case cards">
                             <div class="use-case-results-head">
                                 <p id="use-case-result-label" class="use-case-result-label" aria-live="polite">60개 사례</p>
-                                <p class="use-case-result-note">사례를 먼저 고르면 아래에 프롬프트와 상세 가이드가 열립니다.</p>
+                                <p class="use-case-result-note" data-i18n="use_cases_result_note">사례를 먼저 고르면 아래에 프롬프트와 상세 가이드가 열립니다.</p>
                             </div>
                             <div id="use-case-grid" class="use-case-grid"></div>
                         </section>
 
                         <aside id="use-case-detail" class="use-case-detail" aria-live="polite">
                             <div class="use-case-detail-empty">
-                                <p class="overview-kicker">Detail</p>
-                                <h2>왼쪽에서 사례를 선택하세요</h2>
-                                <p>선택한 사례의 공식 태그, 필요한 Skills & Plugins, Starter prompt, 결과물, 주의점, 공식 원문 링크가 여기에 표시됩니다.</p>
+                                <p class="overview-kicker" data-i18n="use_cases_empty_kicker">Detail</p>
+                                <h2 data-i18n="use_cases_empty_title">왼쪽에서 사례를 선택하세요</h2>
+                                <p data-i18n="use_cases_empty_desc">선택한 사례의 공식 태그, 필요한 Skills & Plugins, Starter prompt, 결과물, 주의점, 공식 원문 링크가 여기에 표시됩니다.</p>
                             </div>
                         </aside>
                     </div>
@@ -117,18 +117,18 @@
 
     <footer class="footer">
         <div class="container">
-            <p class="footer-contrib">이 페이지는 OpenAI 공식 Codex use cases를 한국어 실무 맥락으로 재구성한 보조 가이드입니다. 원문과 최신 세부사항은 각 공식 링크를 함께 확인하세요.</p>
+            <p class="footer-contrib" data-i18n="use_cases_footer_contrib">이 페이지는 OpenAI 공식 Codex use cases를 한국어 실무 맥락으로 재구성한 보조 가이드입니다. 원문과 최신 세부사항은 각 공식 링크를 함께 확인하세요.</p>
             <p class="footer-meta">
                 <span data-i18n="footer_date_prefix">최종 업데이트</span>:
-                <span class="live-date" data-date-format="long">2026년 6월 8일</span>
+                <span class="live-date" data-date-format="long">2026년 6월 9일</span>
             </p>
             <p class="footer-meta">Made by <a href="https://github.com/swhan0329" target="_blank">@swhan0329</a></p>
         </div>
     </footer>
 
-    <script src="i18n.js?v=20260608-use-cases-cards-first"></script>
-    <script src="use-cases-data.js?v=20260608-use-cases-cards-first"></script>
-    <script src="app.js?v=20260608-use-cases-cards-first"></script>
+    <script src="i18n.js?v=20260609-config-profile"></script>
+    <script src="use-cases-data.js?v=20260609-config-profile"></script>
+    <script src="app.js?v=20260609-config-profile"></script>
 </body>
 
 </html>

@@ -17,7 +17,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=20260608-pricing-config" />
+    <link rel="stylesheet" href="style.css?v=20260609-config-profile" />
 </head>
 
 <body data-page="home">
@@ -51,7 +51,7 @@
                     <p class="hero-badge">
                         <span data-i18n="hero_badge_prefix">공식 문서 기준 재검수</span>
                         <span aria-hidden="true"> · </span>
-                        <span class="live-date" data-date-format="long">2026년 6월 8일</span>
+                        <span class="live-date" data-date-format="long">2026년 6월 9일</span>
                     </p>
                     <h1 class="hero-title" data-i18n="hero_title">OpenAI Codex를<br />실무에 바로 붙이는 가이드</h1>
                     <p class="hero-sub" data-i18n="hero_sub">CLI · Desktop App (macOS/Windows) · IDE Extension · Web · Mobile · SDK automation<br />최신 공식 문서를 기준으로 어디서 시작할지, 어떤 모델을 쓸지, 샌드박스/승인, MCP, plugins, automations를 처음 사용자와 실무 사용자 모두 읽기 쉽도록 다시 정리했습니다.</p>
@@ -94,6 +94,9 @@
                     </div>
                 </div>
                 <aside class="hero-rail" aria-label="Guide launch points">
+                    <figure class="hero-product-frame">
+                        <img src="images/codex_app.png" alt="Codex desktop app screen with the codex-101 project open" loading="eager" />
+                    </figure>
                     <div class="hero-rail-card hero-rail-intro">
                         <p class="hero-rail-kicker" data-i18n="hero_panel_kicker">Launch paths</p>
                         <h2 class="hero-rail-title" data-i18n="hero_panel_title">지금 필요한 흐름부터 바로 들어가기</h2>
@@ -1277,13 +1280,9 @@ view_image = true
 enabled = false
 
 <span class="c"># 프로필</span>
-[profiles.fast]
-model = "gpt-5.4-mini"
-model_reasoning_effort = "low"
-
-[profiles.deep]
-model = "gpt-5.5"
-model_reasoning_effort = "high"
+# Profiles now live in separate files:
+#   ~/.codex/fast.config.toml
+#   ~/.codex/deep.config.toml
 
 [windows]
 sandbox = "elevated"
@@ -1872,7 +1871,7 @@ codex --search "optimize with Next.js 15"
 
             <section class="section field-tips-section" id="openai-field-tips">
                 <h2><span class="section-num">20</span> <span data-i18n="field_tips_title">OpenAI 담당자들이 전하는 팁</span></h2>
-                <p data-i18n="field_tips_intro">2026-06-08 Chrome 로그인 세션으로 확인한 OpenAI Codex 관련 실무자들의 X 최근 글을 공식 문서와 대조해, 문서에 넣어도 되는 사용 습관만 추렸습니다.</p>
+                <p data-i18n="field_tips_intro">2026-06-09 Chrome 로그인 세션으로 확인한 OpenAI Codex 관련 실무자들의 X 최근 글을 공식 문서와 대조해, 문서에 넣어도 되는 사용 습관만 추렸습니다.</p>
                 <div class="field-tip-grid">
                     <article class="field-tip-card">
                         <span class="field-tip-person">Greg Brockman + Tibo + dominik</span>
@@ -1998,7 +1997,7 @@ codex --search "optimize with Next.js 15"
                     </div>
                     <p class="overview-fact-date">
                         <span data-i18n="overview_fact_date_prefix">업데이트 기준일</span>
-                        <span class="live-date" data-date-format="long">2026년 6월 8일</span>
+                        <span class="live-date" data-date-format="long">2026년 6월 9일</span>
                     </p>
                 </div>
                 <ol class="changelog-list" aria-label="Today update summary">
@@ -2016,7 +2015,7 @@ codex --search "optimize with Next.js 15"
                     </li>
                     <li>
                         <strong data-i18n="overview_update_4_title">Enterprise 발표 맥락 분리</strong>
-                        <span data-i18n="changelog_item_4">Config reference의 `background_terminal_max_timeout`, `features.fast_mode`, `features.prevent_idle_sleep`, `features.network_proxy`, `experimental_instructions_file` deprecation을 추가했습니다.</span>
+                        <span data-i18n="changelog_item_4">Config reference 기준으로 profile 설정을 별도 `~/.codex/&lt;profile&gt;.config.toml` 파일 방식으로 고치고, stale feature-flag 예시를 제거했습니다.</span>
                     </li>
                     <li>
                         <strong data-i18n="overview_update_6_title">Docs MCP·설정 기준 재점검</strong>
@@ -2024,7 +2023,7 @@ codex --search "optimize with Next.js 15"
                     </li>
                     <li>
                         <strong data-i18n="overview_update_7_title">X 실무 팁 반영</strong>
-                        <span data-i18n="changelog_item_6">`codex-x-tips-2026-06-08.md`의 계정별 X 크롤링 내용을 Chapter 20에 source-gated 패턴으로 정리했고, `/goal`, Automations, Skills, Subagents, Browser/Chrome, SDK는 공식 문서와 대조했습니다.</span>
+                        <span data-i18n="changelog_item_6">Chrome으로 X, Threads, LinkedIn을 다시 확인했고, 새 social-only claim은 추가하지 않은 채 공식 문서로 확인되는 실무 습관만 유지했습니다.</span>
                     </li>
                 </ol>
             </section>
@@ -2040,14 +2039,14 @@ codex --search "optimize with Next.js 15"
                     href="https://github.com/swhan0329/codex-101" target="_blank">PR을 환영합니다</a>.</p>
             <p class="footer-meta">
                 <span data-i18n="footer_date_prefix">최종 업데이트</span>:
-                        <span class="live-date" data-date-format="long">2026년 6월 8일</span>
+                        <span class="live-date" data-date-format="long">2026년 6월 9일</span>
             </p>
             <p class="footer-meta">Made by <a href="https://github.com/swhan0329" target="_blank">@swhan0329</a></p>
         </div>
     </footer>
 
-    <script src="i18n.js?v=20260608-x-tips-ch20"></script>
-    <script src="app.js?v=20260608-x-tips-ch20"></script>
+    <script src="i18n.js?v=20260609-config-profile"></script>
+    <script src="app.js?v=20260609-config-profile"></script>
 </body>
 
 </html>
