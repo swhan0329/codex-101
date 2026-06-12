@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: June 11, 2026</strong><br/>
+  <strong>Last updated: June 12, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
@@ -29,14 +29,15 @@ The guide is written from the official OpenAI Codex documentation first, then ma
 - **Professional users**: read sections `12-14` for `AGENTS.md`, `config.toml`, and MCP, then `15-17` for sessions, automation, and prompt contracts.
 - **Example-driven readers**: open the live site and the use-case gallery to start from real workflows instead of feature lists.
 
-## June 11, 2026 Refresh Notes
+## June 12, 2026 Refresh Notes
 
 - Rechecked `developers.openai.com/codex/models` first: `gpt-5.5` remains the top Codex recommendation, with `gpt-5.4`, `gpt-5.4-mini`, and `gpt-5.3-codex-spark` in their existing fallback/fast/research-preview lanes.
-- Rechecked pricing, quickstart, config/profile, app settings/features, remote connections, Sites, Bedrock, MCP, hooks, plugins, and skills through the fresh Codex manual. No model-order, remote-control, or Sites setup reversal was needed.
+- Reflected the June 11 Codex app 26.609 release: rate-limit reset banking, Developer mode for Browser/CDP work, `/init` in the app composer, expanded Enterprise Computer Use, and Windows Computer Use per-app access controls.
+- Rechecked pricing, quickstart, config/profile, app settings/features, remote connections, Sites, Bedrock, MCP, hooks, plugins, and skills through the fresh Codex manual. No model-order, remote-control, or Sites setup reversal was needed, but Quickstart now clearly foregrounds the standalone installers.
 - Rechecked OpenAI Platform/API docs and kept those notes separate from Codex product guidance. GPT-5.5 remains the latest API model guidance, while Codex pricing/API-key availability still needs scope-specific reading.
-- Audited all 60 official Codex use cases. The catalog count, local/official IDs, `promptEn`, `promptKo`, and multiline Korean prompt shape are clean; two official Starter prompts still intentionally include trailing spaces and were restored exactly.
-- Rechecked OpenAI launch/customer-story surfaces. The June 10 Oracle cloud commitment post and June 11 black-hole simulation article were added only as procurement/research workflow context, not as new model, plan, platform, preview/GA, or feature-flag changes.
-- Chrome social checks for X, Threads, and LinkedIn were readable, but no new social-only claim was added without official corroboration.
+- Audited all 60 official Codex use cases after excluding collection pages. The catalog count, local/official IDs, `promptEn`, `promptKo`, and multiline Korean prompt shape are clean.
+- Rechecked OpenAI launch/customer-story surfaces. The June 11 Ona acquisition announcement is captured only as pre-closing enterprise execution direction, not as an enabled feature, model, plan, platform, preview/GA, or feature-flag change.
+- Chrome social checks for X, Threads, and LinkedIn did not yield usable new official-corroborated claims, so no social-only guidance was added.
 
 ## What's Covered
 
