@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: June 12, 2026</strong><br/>
+  <strong>Last updated: June 13, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
@@ -29,6 +29,12 @@ The guide is written from the official OpenAI Codex documentation first, then ma
 - **Professional users**: read sections `12-14` for `AGENTS.md`, `config.toml`, and MCP, then `15-17` for sessions, automation, and prompt contracts.
 - **Example-driven readers**: open the live site and the use-case gallery to start from real workflows instead of feature lists.
 
+## June 13, 2026 Refresh Notes
+
+- Used the logged-in Chrome session to recheck recent X and LinkedIn activity from Codex, OpenAI Developer Experience, and adjacent OpenAI practitioners.
+- Added [`codex-team-social-research-2026-06-13.md`](codex-team-social-research-2026-06-13.md) as the people-and-tips record, including newly surfaced people such as Pauline P. Narvas, Rohan Varma, Johannes Landgraf/Ona, Michael Aiello, and Clint Gibler.
+- Updated the OpenAI practitioner tips section with only guidance that can be separated from or corroborated by official docs: `/goal` contracts, `AGENTS.md` context, appshot action prompts, platform plugins, docs-agent workflows, Sites preview scope, and Ona as pre-closing enterprise execution direction.
+
 ## June 12, 2026 Refresh Notes
 
 - Rechecked `developers.openai.com/codex/models` first: `gpt-5.5` remains the top Codex recommendation, with `gpt-5.4`, `gpt-5.4-mini`, and `gpt-5.3-codex-spark` in their existing fallback/fast/research-preview lanes.
@@ -37,7 +43,7 @@ The guide is written from the official OpenAI Codex documentation first, then ma
 - Rechecked OpenAI Platform/API docs and kept those notes separate from Codex product guidance. GPT-5.5 remains the latest API model guidance, while Codex pricing/API-key availability still needs scope-specific reading.
 - Audited all 60 official Codex use cases after excluding collection pages. The catalog count, local/official IDs, `promptEn`, `promptKo`, and multiline Korean prompt shape are clean.
 - Rechecked OpenAI launch/customer-story surfaces. The June 11 Ona acquisition announcement is captured only as pre-closing enterprise execution direction, not as an enabled feature, model, plan, platform, preview/GA, or feature-flag change.
-- Chrome social checks for X, Threads, and LinkedIn did not yield usable new official-corroborated claims, so no social-only guidance was added.
+- Chrome social checks for X, Threads, and LinkedIn were kept conservative in that run; the June 13 follow-up used logged-in X/LinkedIn people pages and moved the sourced people/tips into a separate research note.
 
 ## What's Covered
 

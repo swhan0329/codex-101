@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 6월 12일</strong><br/>
+  <strong>최종 업데이트: 2026년 6월 13일</strong><br/>
   라이브 사이트는 보는 사람의 당일 날짜를 자동으로 표시하며, 최신 Codex 모델 가이드를 공식 문서 기준으로 반영합니다.
 </p>
 
@@ -39,6 +39,12 @@
 - 인트로에는 [OpenAI Developer Showcase](https://developers.openai.com/showcase) 안내를 추가해, Codex로 만든 실제 예시와 바로 실행해볼 만한 프롬프트 감을 먼저 잡을 수 있게 했습니다.
 - 최신 변경 로그는 첫 독서 흐름을 방해하지 않도록 맨 아래 Changelog 섹션으로 옮기고, 근거 문서는 접어서 볼 수 있게 낮췄습니다.
 
+### 일일 MCP 검증 스냅샷 (2026-06-13)
+
+- 로그인된 Chrome 세션으로 Codex, OpenAI Developer Experience, 관련 OpenAI 담당자들의 X와 LinkedIn 최신 글을 사람별로 다시 확인했습니다.
+- [`codex-team-social-research-2026-06-13.md`](codex-team-social-research-2026-06-13.md)에 사람별 역할, 새로 확인한 합류/이동 맥락, Codex 사용 팁, 공식 문서 대조 여부를 기록했습니다. Pauline P. Narvas, Rohan Varma, Johannes Landgraf/Ona, Michael Aiello, Clint Gibler 같은 새로 surfaced된 사람도 별도로 표시했습니다.
+- 섹션 20에는 `/goal` 종료 조건, `AGENTS.md` 맥락 작성, appshot action prompt, 플랫폼별 plugin, OpenAI docs agent, Sites preview 범위, Ona 인수 발표의 pre-closing 상태처럼 공식 문서와 분리/대조 가능한 팁만 반영했습니다.
+
 ### 일일 MCP 검증 스냅샷 (2026-06-12)
 
 - 2026년 6월 12일 기준으로 `codex/models`를 가장 먼저 다시 대조한 결과, `gpt-5.5`는 오늘도 최우선 추천 모델입니다. `gpt-5.4`는 주요 대체 선택지로 남고, `gpt-5.4-mini`는 빠른 로컬/subagent 축, `gpt-5.3-codex-spark`는 ChatGPT Pro용 거의 즉각적인 research preview 축으로 유지됩니다. 현재 models 문서는 계속 `gpt-5.2`와 `gpt-5.3-codex`를 ChatGPT 로그인으로 쓰는 Codex에서는 deprecated라고 명시합니다. 아직 이 모델을 가리키는 script, config file, `codex exec --model` 명령은 추천 모델로 옮기되, API-key authentication을 의도적으로 쓰는 workflow라면 API 모델 제공 여부를 따로 확인해야 합니다. 임의 provider로 Codex를 연결할 때 Chat Completions API 지원은 여전히 deprecated이며 future release에서 제거될 예정이므로, 새 설정은 Responses API 지원 provider를 기준으로 잡는 편이 안전합니다.
@@ -62,7 +68,7 @@
 - `config.toml` 최신화 포인트도 더 넓어졌습니다. 현재 reference는 `review_model`, `plan_mode_reasoning_effort`, top-level `web_search`, `tools.web_search`, `tools.view_image`, `tool_suggest`, `personality`, `service_tier`, `default_permissions`, `windows.sandbox`, `windows.sandbox_private_desktop`, `model_instructions_file`, `background_terminal_max_timeout`, `memories.disable_on_external_context`, `sqlite_home`, `agents.max_threads`, `agents.max_depth`, `agents.job_max_runtime_seconds`, `allow_login_shell`, `analytics.enabled`, `skills.config`, TUI 설정, granular approval policy, app 권한 제어, `features.fast_mode`, permissions profile, sandboxed network proxy/requirements, keyring credential storage, forced login method/workspace, OpenTelemetry export, managed network policy, 그리고 AWS Bedrock 배포 경로를 선택한 팀의 provider 설정까지 함께 다룹니다. project-scoped `.codex/config.toml`은 trusted project에서만 로드되고, provider/auth/profile/telemetry routing key는 user-level config에 둬야 합니다. 오늘은 legacy `[profiles.*]`/`profile = "..."` 예시를 현재 문서의 `~/.codex/<profile>.config.toml` 파일 방식으로 고치고, 현재 feature flag 표에 남아 있지 않은 `features.prevent_idle_sleep`/`features.network_proxy` 예시는 제거했습니다. `plan_mode_reasoning_effort`는 현재 reference 기준 Plan mode 전용 reasoning override로 유지했고, `experimental_instructions_file`은 `model_instructions_file`로 바꾸라는 deprecation 메모를 유지했습니다. 별도 Platform/API 흐름에서는 GPT-5.5가 최신 API 모델 가이드로 유지되며, 기본 reasoning effort는 medium이고 image input detail 기본 동작이 더 보존적으로 바뀐 점을 반영했습니다. API Changelog에는 prompt cache retention 24h default, Amazon Bedrock Responses API compatibility, Secure MCP Tunnel, workload identity federation, Admin API 확장, multiple IP allowlists가 있습니다. 이 내용은 Codex 일반 설정이 아니라 Platform/API/App 개발자 흐름으로 분리했습니다.
 - 섹션 17은 현재 GPT-5.5 Prompt Guidance를 반영해 다시 다듬었습니다. 세부 절차를 과하게 고정하기보다 outcome-first 요청, 성공 기준, 제약, 출력 기대치, stop rules를 먼저 두고, 긴 도구 작업에는 짧은 preamble을 사용하며, 근거형 답변에는 retrieval budget과 missing-evidence 규칙을 명시하고, assistant item을 수동 재전송할 때 Responses API `phase` 값을 보존하며, 코딩/시각 결과물은 마감 전 실제 검증을 요구하도록 정리했습니다.
 - 공식 Codex [Follow goals](https://developers.openai.com/codex/use-cases/follow-goals) use case를 섹션 17에 반영했고, 2026년 5월 21일 Enterprise/Edu 릴리스 노트 기준으로 Goal mode는 Codex app, IDE extension, CLI에서 일반 제공됩니다. 문서에서는 Goal mode를 한 번의 프롬프트보다 길지만 무한 backlog는 아닌 작업을 위한 checkpoint contract로 다룹니다. 시작할 때 목표, 완료 조건, 검증 명령, 중간 checkpoint, 중단/승인 조건을 함께 고정하고, 상태 업데이트는 현재 checkpoint, 검증한 것, 남은 것, blocker로 짧게 받도록 안내합니다.
-- `developers.openai.com/codex`, 관련 OpenAI 발표/검색 표면, API 모델 문서, Help Center 릴리스 노트, OpenAI API changelog도 폭넓게 다시 훑어봤고, 최우선 추천 모델 순서는 바뀌지 않았습니다. 2026년 6월 2일 [Codex for every role, tool, and workflow](https://openai.com/index/codex-for-every-role-tool-workflow/) 발표와 공식 Sites 문서는 workflow 확장으로 유지하고, 6월 2일 knowledge-work 보고서, 5월 13일 macOS certificate update 공지, 6월 1일 OpenAI/AWS Bedrock 업데이트, 5월 29일 Windows/Profile 릴리스 노트는 각자 별도 범위에 둡니다. Help Center Enterprise/Edu 릴리스 노트는 Sites가 eligible Enterprise/Edu workspace에서 preview이고, Enterprise/Edu에서는 기본 off라서 `Workspace settings > Permissions & Roles`와 Sites settings에서 관리한다고 설명합니다. 2026년 6월 10일 [Oracle cloud commitment](https://openai.com/index/openai-on-oracle-cloud/) 발표는 eligible Oracle Universal Credits로 OpenAI 모델과 Codex 접근 경로를 여는 조달/파트너십 메모로만 반영했고, 2026년 6월 11일 [black-hole simulation](https://openai.com/index/using-codex-to-simulate-black-holes/) 글은 검증 가능한 과학 알고리즘 탐색 사례로만 반영했습니다. 둘 다 새 모델 순서, 일반 사용자 플랜, preview/GA 상태, 설정 키, feature flag 변경으로 단정하지 않았습니다. Chrome 소셜 확인에서는 X 검색 본문을 읽지 못했고 Threads는 로딩 제한에 걸렸으며 LinkedIn은 검색 화면만 확인돼, 검증되지 않은 social-only claim은 추가하지 않았습니다.
+- `developers.openai.com/codex`, 관련 OpenAI 발표/검색 표면, API 모델 문서, Help Center 릴리스 노트, OpenAI API changelog도 폭넓게 다시 훑어봤고, 최우선 추천 모델 순서는 바뀌지 않았습니다. 2026년 6월 2일 [Codex for every role, tool, and workflow](https://openai.com/index/codex-for-every-role-tool-workflow/) 발표와 공식 Sites 문서는 workflow 확장으로 유지하고, 6월 2일 knowledge-work 보고서, 5월 13일 macOS certificate update 공지, 6월 1일 OpenAI/AWS Bedrock 업데이트, 5월 29일 Windows/Profile 릴리스 노트는 각자 별도 범위에 둡니다. Help Center Enterprise/Edu 릴리스 노트는 Sites가 eligible Enterprise/Edu workspace에서 preview이고, Enterprise/Edu에서는 기본 off라서 `Workspace settings > Permissions & Roles`와 Sites settings에서 관리한다고 설명합니다. 2026년 6월 10일 [Oracle cloud commitment](https://openai.com/index/openai-on-oracle-cloud/) 발표는 eligible Oracle Universal Credits로 OpenAI 모델과 Codex 접근 경로를 여는 조달/파트너십 메모로만 반영했고, 2026년 6월 11일 [black-hole simulation](https://openai.com/index/using-codex-to-simulate-black-holes/) 글은 검증 가능한 과학 알고리즘 탐색 사례로만 반영했습니다. 둘 다 새 모델 순서, 일반 사용자 플랜, preview/GA 상태, 설정 키, feature flag 변경으로 단정하지 않았습니다. Chrome 소셜 확인은 이 실행에서 보수적으로 처리했고, 2026년 6월 13일 후속 실행에서 로그인된 X/LinkedIn 사람별 페이지를 다시 확인해 별도 리서치 노트로 분리했습니다.
 - 2026년 6월 12일에는 공식 use-case catalog도 데이터셋 단위로 다시 감사했습니다. collection page를 제외한 공식 카드는 60개로 유지됐고, local/official ID 차이 0, `promptEn` 누락 0, `promptKo` 누락 0, official prompt mismatch 0, multiline 공식 prompt인데 한국어가 1줄 요약인 항목 0입니다.
 - OpenAI 발표/고객 사례 표면에서는 2026년 6월 11일 [OpenAI to acquire Ona](https://openai.com/index/openai-to-acquire-ona/)를 새로 확인했습니다. 이 발표는 closing 전이고 regulatory approval 조건이 있으므로, 고객 cloud environment에서 장기 실행 agent를 위한 secure persistent enterprise execution 방향으로만 반영했고, 새 platform, plan, preview/GA 상태, feature flag, activation 절차처럼 단정하지 않았습니다.
 
@@ -73,16 +79,16 @@
 
 ### OpenAI 담당자 실전 팁 추가
 
-섹션 **21**에 Gabriel Chua, Vaibhav “VB” Srivastav, Tibo, Katia Gil Guzman, Dominik Kundel, Romain Huet 등 OpenAI Developer Experience와 Codex 담당자들이 공개적으로 공유한 운영 패턴을 녹였습니다.
+섹션 **20**에 Codex, OpenAI Developer Experience, 관련 OpenAI 담당자들이 공개적으로 공유한 운영 패턴을 공식 문서와 분리해 녹였습니다.
 
-- Codex 업데이트를 단순히 “새 모델”로 보지 말고 **Model + Harness + Surfaces**로 나눠 읽습니다.
-- 다른 코딩 에이전트 옆에 Codex를 세컨드 패스 리뷰어로 붙입니다. 일반 review, adversarial review, rescue는 각각 다른 위험 단계에 씁니다.
-- Subagent는 보안 리뷰, 테스트 공백, 유지보수성 점검, 로그 트리아지처럼 읽기 중심 병렬 작업부터 시작합니다.
-- Codex를 vibe coding 자동완성보다 PR을 설명하고 테스트를 돌리고 리뷰 가능한 단위로 나누는 AI teammate로 다룹니다.
-- 실행할 명령, 확인할 화면, 실패 시 멈출 기준, 기대 출력, 출처를 프롬프트에 넣어 작업을 검증 가능하게 만듭니다.
-- Automations, plugins, connectors, Browser use, app integrations는 코딩뿐 아니라 반복 업무 준비까지 묶는 작업 허브 패턴으로 봅니다.
+- `/goal`은 하나의 목표와 검증 가능한 종료 조건이 있을 때 씁니다.
+- `AGENTS.md`와 skill은 규칙 더미가 아니라 무엇을 하는지, 왜 중요한지, 어디서 근거를 잡는지를 알려주는 운영 맥락입니다.
+- screenshot/appshot은 “봐줘”가 아니라 조사, PR 수정, eval 실행, heartbeat 같은 action prompt로 바꿉니다.
+- macOS/iOS 같은 플랫폼 작업은 Build macOS Apps, Build iOS Apps처럼 전용 plugin을 먼저 붙입니다.
+- OpenAI API, Agents SDK, ChatGPT Apps, Codex처럼 빨리 바뀌는 내용은 OpenAI docs agent나 Docs MCP로 공식 문서를 먼저 확인합니다.
+- Sites와 Ona 발표는 현재 사용할 수 있는 기능, preview 범위, closing 전 발표를 섞지 않고 설명합니다.
 
-이번 추가에 사용한 출처는 Gabriel Chua의 [How I Think About Codex](https://www.linkedin.com/pulse/how-i-think-codex-gabriel-chua-ukhic), OpenAI의 [Codex agent loop](https://openai.com/index/unrolling-the-codex-agent-loop/), [openai/codex-plugin-cc](https://github.com/openai/codex-plugin-cc), 공식 [Codex Subagents](https://developers.openai.com/codex/subagents), 그리고 [VB](https://x.com/reach_vb), [Tibo](https://x.com/thsottiaux), [Katia](https://x.com/kagigz), [Dominik Kundel](https://x.com/dkundel/status/2018436269907603590), [Romain Huet](https://vivatech.com/speakers/e5bb6392-2f32-f011-8b3d-6045bd903b46/)의 공개 글/프로필입니다.
+이번 추가의 상세 근거와 사람별 메모는 [`codex-team-social-research-2026-06-13.md`](codex-team-social-research-2026-06-13.md)에 따로 남겼습니다.
 
 2026년 6월 12일 실행 참고: deprecated Codex model 상태, pricing table 한도, API-key Codex 동작, direct API model availability는 분리해서 읽어야 합니다. `gpt-5.2`와 `gpt-5.3-codex`는 ChatGPT 인증 Codex에서는 deprecated이지만, 일부 모델은 API-key 인증이나 직접 API 사용에서는 별도로 제공될 수 있습니다.
 

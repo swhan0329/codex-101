@@ -1,0 +1,87 @@
+# Codex team and practitioner social research - 2026-06-13
+
+This note records the people and Codex usage tips checked through the logged-in Chrome session on 2026-06-13 KST. It separates official-document-backed guidance from social observations that should stay as context until OpenAI documents them.
+
+## Method and boundaries
+
+- Chrome was used with the user's logged-in X and LinkedIn sessions.
+- The pass focused on recent posts, reposts, and activity from OpenAI Codex, Developer Experience, and adjacent product/security people.
+- X and LinkedIn posts are treated as public practitioner signals, not product documentation.
+- Items that conflict with official docs are not merged into the guide as fact. They are recorded here as observations only.
+- Threads was not used for this update.
+
+## People checked
+
+| Person | Public role or context observed | Recent Codex-related signal | Guide action |
+| --- | --- | --- | --- |
+| Alexander Embiricos | Codex @ OpenAI | Shared Codex enterprise and Cyber-adjacent work; older activity includes Datadog using Codex for system-level code review and plugins as an extension point. | Keep as Codex team reference; use only official docs for product details. |
+| Rohan Varma | Codex | Posted about partners helping customers use Codex and OpenAI models better. Also described Sites as an ambitious Codex feature for creating hosted interactive apps and websites. | Added Sites guidance with official `developers.openai.com/codex/sites` as the source of truth. |
+| Johannes Landgraf | Ona co-founder/CEO | Reposted OpenAI for Business note that Ona will bring secure cloud execution and orchestration into the Codex ecosystem after closing. | Added as "emerging enterprise execution" with official Ona announcement caveat. |
+| Pauline P. Narvas | Newly joined OpenAI Developer Experience, formerly Vercel | Romain Huet welcomed Pauline to the OpenAI Developer Experience team; Pauline wrote that she will support developers across Codex, API Platform, and ChatGPT. | Listed as new DX person; do not label as Codex product team. |
+| Michael Aiello | Head of Product for Cyber @ OpenAI | Alexander highlighted Michael Aiello and Clint Gibler joining/leading Cyber work, with agents for defenders and scaled deployment. | Record as Codex Security-adjacent, not general Codex guidance. |
+| Clint Gibler | Cyber/security leader joining OpenAI context | Mentioned with Michael Aiello in Cyber leadership context. | Record as security-adjacent only. |
+| Dominik Kundel | Developer Experience @ OpenAI; Codex, gpt-oss, TS Agents SDK | Reposted rate-limit reset banking and appshot prompt patterns. X post on `/goal` says it helps Codex keep working toward concrete outcomes. | Added `/goal`, docs-agent, reset-bank, and appshot prompt pattern tips. |
+| Gabriel Chua | DX Engineer @ OpenAI | Posted about rate-limit reset banking and Codex lunch-and-learn style demos. | Added reset-bank and "Codex is for everyone" community signal as context. |
+| Romain Huet | Head of Developer Experience at OpenAI | Welcomed Pauline to DX; prior Codex launch/web-dev-challenge context. | Listed as DX lead and source for new-person confirmation. |
+| Brent Schooley | Developer Experience @ OpenAI | Chrome X/LinkedIn pass showed `/goal` as a favorite Codex feature, ambitious builds where `/goal` creates/finishes a roadmap of issues, Sites/role-based plugins, and Build iOS Apps repost context. | Added as DX practitioner support for `/goal`, plugins, and Sites guidance. |
+| Vaibhav "VB" Srivastav | Codex practitioner / OpenAI context on X | Shared appshot prompt patterns: investigate, open PR, run evals, set heartbeat. Also posted to use Build macOS Apps and Build iOS Apps plugins for platform-specific app work. | Added prompt-pattern and plugin tips. |
+| Thibault "Tibo" Sottiaux | Codex & ChatGPT @ OpenAI | Noted that future rate-limit reset banking should let users choose when a reset applies. | Added reset-bank caveat as social observation; official feature details should still be checked. |
+| Ryan Lopopolo | Building future of work at OpenAI | Posted that `AGENTS.md` should tell the agent what it is working on, why it matters, and where to look to ground itself. | Added `AGENTS.md` guidance. |
+| Nicole Cha | OpenAI practitioner | Framed skills as focus/steering for a broadly capable model, like helping an intern know what to focus on. | Added skills-as-focus framing. |
+| Katia Gil Guzman | Developer-facing OpenAI work | Reposted OpenAI Developers docs-agent launch. | Added docs-agent / official-docs-first workflow context. |
+| Greg Brockman | OpenAI president | Posted about inviting friends to Codex and banking rate-limit resets. | Added reset-bank observation. |
+
+## Codex tips extracted
+
+1. Use `/goal` when the work has one durable objective and a verifiable stopping condition.
+   - Social source: Dominik Kundel; Brent Schooley.
+   - Official source: <https://developers.openai.com/codex/use-cases/follow-goals>.
+   - Codex-101 wording: "Give Codex the objective, the proof of completion, and the validation loop before it starts."
+
+2. Write `AGENTS.md` as context, not as a rule dump.
+   - Social source: Ryan Lopopolo; Nicole Cha's skills framing.
+   - Codex-101 wording: "Tell Codex what it is working on, why it matters, and where to ground itself."
+
+3. Use appshot-style prompts for visible work.
+   - Social source: VB, reposted by Dominik.
+   - Useful prompt intents: investigate this screen, open a PR to fix it, run the eval on these prompts, set a heartbeat to keep following up.
+   - Codex-101 wording: "Turn screenshots and app states into explicit actions: investigate, patch, evaluate, or monitor."
+
+4. Use platform plugins when the job is platform-specific.
+   - Social source: VB.
+   - Examples: Build macOS Apps plugin for SwiftUI/macOS; Build iOS Apps plugin for iOS.
+   - Codex-101 wording: "Pick the plugin that owns the platform instead of making Codex rediscover the build/debug workflow."
+
+5. Treat rate-limit reset banking as a resource to spend deliberately.
+   - Social sources: Greg Brockman, Tibo, Dominik Kundel, Gabriel Chua.
+   - Caveat: social posts describe rollout behavior and referral/reset banking; check current product UI for exact availability and limits.
+   - Codex-101 wording: "Banked resets are not a substitute for smaller, verified loops."
+
+6. Use the OpenAI developer docs agent or Docs MCP when answering current OpenAI questions.
+   - Social sources: Katia Gil Guzman, Dominik Kundel, OpenAI Developers.
+   - Codex-101 wording: "Search official docs first, then summarize; do not mix Codex product behavior with OpenAI API/platform behavior."
+
+7. Sites is a preview deployment surface for Codex-generated websites and internal apps.
+   - Social source: Rohan Varma; Brent Schooley; Corey Ching repost context.
+   - Official source: <https://developers.openai.com/codex/sites>.
+   - Caveat: official docs say Sites is in preview and currently available for ChatGPT Business and Enterprise workspaces, with Enterprise RBAC needed before members can use it.
+
+8. Ona is an upcoming enterprise execution direction, not a local feature toggle.
+   - Social source: Johannes Landgraf.
+   - Official source: <https://openai.com/index/openai-to-acquire-ona/>.
+   - Caveat: OpenAI says the acquisition is subject to closing conditions. Until closing, OpenAI and Ona remain separate and independent companies.
+
+## Newly joined or recently surfaced people
+
+- Pauline P. Narvas: joined OpenAI Developer Experience to support developers across Codex, API Platform, and ChatGPT.
+- Rohan Varma: Codex; recently posting about partner adoption and Sites.
+- Johannes Landgraf and the Ona team: planned to join OpenAI and work with the Codex team after acquisition closing.
+- Michael Aiello and Clint Gibler: Cyber leadership context at OpenAI; relevant to Codex Security and defender-agent work, not general Codex onboarding.
+- Tibo Sottiaux: Codex & ChatGPT OpenAI context on X; recent reset-banking update signal.
+
+## Notable non-updates
+
+- Do not state that Ona-backed persistent enterprise environments are generally available today. The official announcement is an acquisition plan subject to closing.
+- Do not state that Sites is available to every plan. Official docs currently limit it to ChatGPT Business and Enterprise preview.
+- Do not turn rate-limit reset banking into a guaranteed universal feature without checking the current account UI.
+- Do not use old social snippets such as `npm install -g @openai/codex` as the sole install guidance. Codex-101 should keep the current official installer paths first.

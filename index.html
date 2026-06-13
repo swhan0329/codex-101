@@ -1877,47 +1877,47 @@ codex --search "optimize with Next.js 15"
 
             <section class="section field-tips-section" id="openai-field-tips">
                 <h2><span class="section-num">20</span> <span data-i18n="field_tips_title">OpenAI 담당자들이 전하는 팁</span></h2>
-                <p data-i18n="field_tips_intro">2026-06-12 Chrome으로 X, Threads, LinkedIn을 다시 확인했습니다. X는 검색 화면 본문을 읽을 수 없었고 Threads는 로딩 제한에 걸렸으며 LinkedIn은 검색 화면만 확인됐습니다. 그래서 social-only claim은 추가하지 않고, 아래에는 이미 공식 문서와 대조한 사용 습관만 남겼습니다.</p>
+                <p data-i18n="field_tips_intro">2026-06-13 로그인된 Chrome 세션으로 X와 LinkedIn의 사람별 최신 글을 다시 확인했습니다. 소셜 글은 “현장 신호”로만 쓰고, 제품 상태와 활성화 방법은 공식 Codex 문서와 OpenAI 발표로 대조했습니다.</p>
                 <div class="field-tip-grid">
                     <article class="field-tip-card">
-                        <span class="field-tip-person">Greg Brockman + Tibo + dominik</span>
-                        <h3 data-i18n="field_tip_1_t">안 쓴 작업부터 context gap 찾기</h3>
-                        <p data-i18n="field_tip_1_d">Codex를 쓰지 않고 지나간 작업을 보면 모델 능력보다 맥락, skill, 도구 연결, 습관이 빠져 있는 경우가 많습니다. 반복 설명은 memory, skill, repo-local docs로 옮겨 다음 프롬프트를 짧게 만드세요.</p>
+                        <span class="field-tip-person">Greg Brockman + Tibo + Dominik + Gabriel</span>
+                        <h3 data-i18n="field_tip_1_t">Reset bank는 아껴 쓰는 예비 체력</h3>
+                        <p data-i18n="field_tip_1_d">초대나 프로모션으로 생기는 rate-limit reset은 긴 작업을 무작정 키우는 면허가 아닙니다. 큰 refactor, eval 반복, 배포 재시도처럼 검증 루프가 있는 일에 쓰고, 세션 안에서는 여전히 작은 checkpoint로 나누세요.</p>
                     </article>
                     <article class="field-tip-card">
-                        <span class="field-tip-person">Ryan Lopopolo + nicole</span>
-                        <h3 data-i18n="field_tip_2_t">규칙 더미보다 맥락을 찾는 방법</h3>
-                        <p data-i18n="field_tip_2_d">AGENTS.md, skill, runbook에는 모든 절차를 박아 넣기보다 이 프로젝트에서 중요한 것, 더 읽을 위치, 검증 방식, 의도를 적습니다. 자연어 지시문은 모델이 다시 읽을 운영 자산이므로 사람이 리뷰해야 합니다.</p>
+                        <span class="field-tip-person">VB + Dominik</span>
+                        <h3 data-i18n="field_tip_2_t">화면은 action prompt로 바꾸기</h3>
+                        <p data-i18n="field_tip_2_d">스크린샷이나 appshot을 붙일 때는 “봐줘”보다 “이 화면을 조사해”, “이 문제를 고쳐 PR 열어”, “이 prompt set으로 eval 돌려”, “heartbeat로 계속 확인해”처럼 다음 행동을 분명히 말하세요.</p>
                     </article>
                     <article class="field-tip-card">
-                        <span class="field-tip-person">dominik kundel</span>
+                        <span class="field-tip-person">Dominik Kundel + Brent Schooley</span>
                         <h3 data-i18n="field_tip_3_t">/goal에는 검증 가능한 종료 조건</h3>
-                        <p data-i18n="field_tip_3_d">긴 작업은 바로 “해줘”로 던지기보다 완료 여부를 판정할 숫자, 상태, 테스트, 화면 기준을 같이 줍니다. 필요하면 먼저 plan/research를 만든 뒤 /goal을 그 계획과 연결하세요.</p>
+                        <p data-i18n="field_tip_3_d">/goal은 “계속 해줘”가 아니라 하나의 durable objective와 멈출 기준을 주는 기능입니다. 목표, 건드리지 말 것, 증명 명령, 화면 기준, 중간 checkpoint를 같이 적어야 오래 가는 작업이 믿을 만해집니다.</p>
                     </article>
                     <article class="field-tip-card">
-                        <span class="field-tip-person">Vaibhav Srivastav + Anthony Kroeger</span>
-                        <h3 data-i18n="field_tip_4_t">긴 작업은 화면 evidence까지 남기기</h3>
-                        <p data-i18n="field_tip_4_d">성능, 문서, 프론트엔드 작업은 측정, 수정, 재측정, 브라우저 확인, PR 본문 정리까지 하나의 루프로 맡깁니다. 테스트 로그만 남기지 말고 실제 화면 스크린샷과 확인 URL도 evidence로 남기세요.</p>
+                        <span class="field-tip-person">Ryan Lopopolo + Nicole Cha</span>
+                        <h3 data-i18n="field_tip_4_t">AGENTS.md는 일의 이유와 근거 위치</h3>
+                        <p data-i18n="field_tip_4_d">AGENTS.md와 skill은 규칙을 쌓아두는 곳이 아니라 Codex가 무엇을 하고 있는지, 왜 중요한지, 어디를 읽고 근거를 잡아야 하는지 알려주는 운영 맥락입니다. 모델은 넓게 알지만 초점은 사용자가 잡아줘야 합니다.</p>
                     </article>
                     <article class="field-tip-card">
-                        <span class="field-tip-person">dominik + Ryan + Alexander</span>
-                        <h3 data-i18n="field_tip_5_t">Automations로 나중 일 챙기기</h3>
-                        <p data-i18n="field_tip_5_d">Codex에게 내일 다시 확인할 thread, 매주 반복할 리포트, CI/PR 상태, flaky test 후속 확인을 맡기세요. 사람 머릿속의 “나중에 봐야지”를 thread automation과 recurring task로 빼내는 흐름입니다.</p>
+                        <span class="field-tip-person">VB + Build Apps plugins</span>
+                        <h3 data-i18n="field_tip_5_t">플랫폼 일은 전용 plugin부터</h3>
+                        <p data-i18n="field_tip_5_d">macOS SwiftUI 앱이면 Build macOS Apps, iOS 앱이면 Build iOS Apps처럼 플랫폼을 아는 plugin을 먼저 붙이세요. 빌드, simulator, 로그, UI 확인의 표준 루프를 Codex가 다시 발명하지 않게 해줍니다.</p>
                     </article>
                     <article class="field-tip-card">
-                        <span class="field-tip-person">Alexander Embiricos + Anthony Kroeger</span>
-                        <h3 data-i18n="field_tip_6_t">Browser와 Chrome을 역할별로 나누기</h3>
-                        <p data-i18n="field_tip_6_d">local preview와 공개 페이지 검증은 in-app browser에 맡기고, 로그인 세션, 확장, 기존 탭, 여러 계정 상태가 필요한 일은 Chrome extension으로 분리합니다. 여러 탭과 subagent를 쓰면 검증도 병렬화할 수 있습니다.</p>
+                        <span class="field-tip-person">Katia + OpenAI Developers</span>
+                        <h3 data-i18n="field_tip_6_t">OpenAI 답변은 docs agent부터</h3>
+                        <p data-i18n="field_tip_6_d">Codex, API, Agents SDK, ChatGPT Apps처럼 바뀌는 주제는 소셜 글이나 기억만으로 단정하지 말고 OpenAI developer docs agent나 Docs MCP로 공식 문서를 먼저 찾으세요. Codex 제품 기능과 API 플랫폼 기능도 섞지 마세요.</p>
                     </article>
                     <article class="field-tip-card">
-                        <span class="field-tip-person">VB + Tibo</span>
-                        <h3 data-i18n="field_tip_7_t">Worktrees, Skills, Connectors, Subagents를 loop로 묶기</h3>
-                        <p data-i18n="field_tip_7_d">반복 업무는 한 번 더 prompt하는 방식보다 loop로 설계합니다. Automations는 발견과 triage, worktrees는 격리된 수정, skills는 재사용 지식, plugins/connectors는 실제 업무 도구, subagents는 병렬 검토를 맡깁니다.</p>
+                        <span class="field-tip-person">Rohan Varma + Brent Schooley</span>
+                        <h3 data-i18n="field_tip_7_t">Sites는 preview 배포 surface</h3>
+                        <p data-i18n="field_tip_7_d">@Sites는 Codex가 웹사이트, 내부 앱, 게임을 만들고 OpenAI-hosted URL로 저장/배포하게 하는 preview 기능입니다. 현재 공식 문서 기준으로 Business와 Enterprise workspace 대상이며, Enterprise는 RBAC 활성화가 필요합니다.</p>
                     </article>
                     <article class="field-tip-card">
-                        <span class="field-tip-person">Tibo + Adithyan + Ryan</span>
-                        <h3 data-i18n="field_tip_8_t">좋은 자료를 skill과 SDK surface로 증류하기</h3>
-                        <p data-i18n="field_tip_8_d">좋은 글, talk, 운영 습관은 그냥 읽고 끝내지 말고 skill/reference로 남깁니다. 앱이나 내부 자동화에서 Codex를 호출해야 할 때는 Codex SDK를 별도 automation surface로 보고 공식 설치 경로를 확인합니다.</p>
+                        <span class="field-tip-person">Johannes Landgraf + Ona team</span>
+                        <h3 data-i18n="field_tip_8_t">Persistent execution은 발표와 운영을 분리</h3>
+                        <p data-i18n="field_tip_8_d">Ona 인수 발표는 Codex가 장시간 enterprise 작업을 고객 통제 cloud 환경에서 이어가는 방향을 보여줍니다. 다만 인수는 closing 조건이 남아 있으므로, 지금 켜는 설정처럼 쓰지 말고 공식 발표와 현재 사용 가능한 기능을 분리해서 설명하세요.</p>
                     </article>
                 </div>
                 <a class="pet-recording-card" href="https://youtu.be/l-eXsCldCgQ" target="_blank" rel="noopener noreferrer">
@@ -1934,29 +1934,25 @@ codex --search "optimize with Next.js 15"
                 <div class="field-source-block" aria-label="OpenAI practitioner sources">
                     <p class="field-source-label" data-i18n="field_tips_sources_label">원글 및 근거</p>
                     <div class="field-source-list">
-                        <a href="https://x.com/_lopopolo/status/2062950475989725465" target="_blank" rel="noopener noreferrer">Ryan Lopopolo framework post</a>
+                        <a href="codex-team-social-research-2026-06-13.md" target="_blank" rel="noopener noreferrer">2026-06-13 people and social research note</a>
+                        <a href="https://x.com/heccbrent" target="_blank" rel="noopener noreferrer">Brent Schooley X</a>
+                        <a href="https://x.com/heccbrent/status/2062651567413637441" target="_blank" rel="noopener noreferrer">Brent /goal post</a>
+                        <a href="https://www.linkedin.com/in/brentschooley" target="_blank" rel="noopener noreferrer">Brent Schooley LinkedIn</a>
+                        <a href="https://x.com/_lopopolo/status/2064742429438198056" target="_blank" rel="noopener noreferrer">Ryan Lopopolo AGENTS.md post</a>
                         <a href="https://x.com/dkundel/status/2062650378089594955" target="_blank" rel="noopener noreferrer">dominik /goal guide</a>
-                        <a href="https://x.com/dkundel/status/2062948646879113636" target="_blank" rel="noopener noreferrer">dominik automations post</a>
-                        <a href="https://x.com/ajambrosino" target="_blank" rel="noopener noreferrer">Andrew Ambrosino X</a>
-                        <a href="https://x.com/embirico/status/2051521360896422264" target="_blank" rel="noopener noreferrer">Alexander future work post</a>
-                        <a href="https://x.com/embirico/status/2052484966446199039" target="_blank" rel="noopener noreferrer">Alexander Chrome post</a>
-                        <a href="https://x.com/embirico/status/2062913411252629520" target="_blank" rel="noopener noreferrer">Alexander skills post</a>
-                        <a href="https://x.com/thsottiaux/status/2062966625733861752" target="_blank" rel="noopener noreferrer">Tibo memory post</a>
-                        <a href="https://x.com/thsottiaux/status/2062734215494664697" target="_blank" rel="noopener noreferrer">Tibo SDK post</a>
-                        <a href="https://x.com/reach_vb/status/2062665232980247025" target="_blank" rel="noopener noreferrer">VB long-running goal post</a>
-                        <a href="https://x.com/reach_vb/status/2063713960495558940" target="_blank" rel="noopener noreferrer">VB loop post</a>
-                        <a href="https://x.com/gdb/status/2063437915347136554" target="_blank" rel="noopener noreferrer">Greg Brockman context post</a>
-                        <a href="https://x.com/bolinfest" target="_blank" rel="noopener noreferrer">Michael Bolin X</a>
-                        <a href="https://x.com/kr0der/status/2061422011386343800" target="_blank" rel="noopener noreferrer">Anthony Kroeger screenshot post</a>
+                        <a href="https://x.com/reach_vb/status/2065520558620500082" target="_blank" rel="noopener noreferrer">VB Build macOS Apps post</a>
+                        <a href="https://x.com/reach_vb" target="_blank" rel="noopener noreferrer">VB appshot prompt patterns</a>
+                        <a href="https://x.com/gdb" target="_blank" rel="noopener noreferrer">Greg Brockman X</a>
                         <a href="https://x.com/nicolekcha/status/2063362606543622322" target="_blank" rel="noopener noreferrer">nicole steering post</a>
-                        <a href="https://x.com/adithyan_ai/status/2062575891402674190" target="_blank" rel="noopener noreferrer">Adithyan skill post</a>
+                        <a href="https://www.linkedin.com/in/pnarvas" target="_blank" rel="noopener noreferrer">Pauline Narvas LinkedIn</a>
+                        <a href="https://www.linkedin.com/in/romainhuet" target="_blank" rel="noopener noreferrer">Romain Huet LinkedIn</a>
+                        <a href="https://www.linkedin.com/in/rohan-varma-9523a595" target="_blank" rel="noopener noreferrer">Rohan Varma LinkedIn</a>
+                        <a href="https://www.linkedin.com/in/johannes-landgraf-79558653" target="_blank" rel="noopener noreferrer">Johannes Landgraf LinkedIn</a>
                         <a href="https://developers.openai.com/codex/use-cases/follow-goals" target="_blank" rel="noopener noreferrer">Official /goal use case</a>
-                        <a href="https://developers.openai.com/codex/app/automations" target="_blank" rel="noopener noreferrer">Official Automations</a>
+                        <a href="https://developers.openai.com/codex/sites" target="_blank" rel="noopener noreferrer">Official Sites</a>
+                        <a href="https://openai.com/index/openai-to-acquire-ona/" target="_blank" rel="noopener noreferrer">Official Ona announcement</a>
                         <a href="https://developers.openai.com/codex/skills" target="_blank" rel="noopener noreferrer">Official Skills</a>
-                        <a href="https://developers.openai.com/codex/subagents" target="_blank" rel="noopener noreferrer">Official Subagents</a>
-                        <a href="https://developers.openai.com/codex/app/browser" target="_blank" rel="noopener noreferrer">Official In-app browser</a>
-                        <a href="https://developers.openai.com/codex/app/chrome-extension" target="_blank" rel="noopener noreferrer">Official Chrome extension</a>
-                        <a href="https://developers.openai.com/codex/sdk" target="_blank" rel="noopener noreferrer">Official Codex SDK</a>
+                        <a href="https://developers.openai.com/codex/plugins" target="_blank" rel="noopener noreferrer">Official Plugins</a>
                     </div>
                 </div>
             </section>
@@ -2009,7 +2005,7 @@ codex --search "optimize with Next.js 15"
                     </div>
                     <p class="overview-fact-date">
                         <span data-i18n="overview_fact_date_prefix">업데이트 기준일</span>
-                        <span class="live-date" data-date-format="long">2026년 6월 12일</span>
+                        <span class="live-date" data-date-format="long">2026년 6월 13일</span>
                     </p>
                 </div>
                 <ol class="changelog-list" aria-label="Today update summary">
@@ -2035,7 +2031,7 @@ codex --search "optimize with Next.js 15"
                     </li>
                     <li>
                         <strong data-i18n="overview_update_7_title">X 실무 팁 반영</strong>
-                        <span data-i18n="changelog_item_6">Ona 인수 발표는 closing 전 enterprise execution 방향으로만 분리했고, Chrome 소셜 확인에서는 새 social-only claim을 추가하지 않았습니다.</span>
+                        <span data-i18n="changelog_item_6">로그인된 Chrome으로 X와 LinkedIn의 사람별 최신 글을 다시 확인하고, 공식 문서로 대조 가능한 Codex 팁만 섹션 20과 별도 리서치 노트에 반영했습니다.</span>
                     </li>
                 </ol>
             </section>
@@ -2057,7 +2053,7 @@ codex --search "optimize with Next.js 15"
         </div>
     </footer>
 
-    <script src="i18n.js?v=20260612-ona-app609"></script>
+    <script src="i18n.js?v=20260613-social-field-tips"></script>
     <script src="app.js?v=20260612-ona-app609"></script>
 </body>
 
