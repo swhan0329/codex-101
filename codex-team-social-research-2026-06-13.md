@@ -4,11 +4,11 @@ This note records the people and Codex usage tips checked through the logged-in 
 
 ## Method and boundaries
 
-- Chrome was used with the user's logged-in X and LinkedIn sessions.
-- The pass focused on recent posts, reposts, and activity from OpenAI Codex, Developer Experience, and adjacent product/security people.
-- X and LinkedIn posts are treated as public practitioner signals, not product documentation.
+- Chrome was used with the user's logged-in X, Threads, and LinkedIn sessions.
+- The pass focused on recent posts, reposts, and activity from OpenAI Codex, Developer Experience, and adjacent product/security/data people.
+- X, Threads, and LinkedIn posts are treated as public practitioner signals, not product documentation.
 - Items that conflict with official docs are not merged into the guide as fact. They are recorded here as observations only.
-- Threads was not used for this update.
+- Threads and LinkedIn surfaced mostly general reposts or commentary in this pass, so unverified claims from those surfaces were not merged into the guide.
 
 ## People checked
 
@@ -30,6 +30,7 @@ This note records the people and Codex usage tips checked through the logged-in 
 | Nicole Cha | OpenAI practitioner | Framed skills as focus/steering for a broadly capable model, like helping an intern know what to focus on. | Added skills-as-focus framing. |
 | Katia Gil Guzman | Developer-facing OpenAI work | Reposted OpenAI Developers docs-agent launch. | Added docs-agent / official-docs-first workflow context. |
 | Greg Brockman | OpenAI president | Posted about inviting friends to Codex and banking rate-limit resets. | Added reset-bank observation. |
+| Jason Wang | Data/product work at OpenAI | X post described four ways OpenAI teams use Codex with the Data Analytics plugin: define metrics, inspect data gaps, and schedule KPI-style reports. | Kept as a social observation that reinforces official plugin/workflow guidance; do not treat as a new product feature. |
 
 ## Codex tips extracted
 
@@ -70,6 +71,11 @@ This note records the people and Codex usage tips checked through the logged-in 
    - Social source: Johannes Landgraf.
    - Official source: <https://openai.com/index/openai-to-acquire-ona/>.
    - Caveat: OpenAI says the acquisition is subject to closing conditions. Until closing, OpenAI and Ona remain separate and independent companies.
+
+9. Use analytics plugins to turn vague metric work into reviewable artifacts.
+   - Social source: Jason Wang.
+   - Codex-101 wording: "For data work, ask Codex to define the metric, list data gaps, produce the query/report, and schedule a recurring check only after the definition is clear."
+   - Caveat: the post is a workflow example, not a new feature announcement; rely on official plugin and automation docs for availability.
 
 ## Newly joined or recently surfaced people
 
