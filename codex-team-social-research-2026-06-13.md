@@ -1,6 +1,6 @@
-# Codex team and practitioner social research - 2026-06-13
+# Codex team and practitioner social research - 2026-06-15
 
-This note records the people and Codex usage tips checked through the logged-in Chrome session on 2026-06-13 KST. It separates official-document-backed guidance from social observations that should stay as context until OpenAI documents them.
+This note records the people and Codex usage tips checked through the logged-in Chrome session on 2026-06-15 KST. It separates official-document-backed guidance from social observations that should stay as context until OpenAI documents them.
 
 ## Method and boundaries
 
@@ -8,7 +8,9 @@ This note records the people and Codex usage tips checked through the logged-in 
 - The pass focused on recent posts, reposts, and activity from OpenAI Codex, Developer Experience, and adjacent product/security/data people.
 - X, Threads, and LinkedIn posts are treated as public practitioner signals, not product documentation.
 - Items that conflict with official docs are not merged into the guide as fact. They are recorded here as observations only.
-- Threads and LinkedIn surfaced mostly general reposts or commentary in this pass, so unverified claims from those surfaces were not merged into the guide.
+- X surfaced one new Codex Mobile workflow tip from VB that matches the official Remote connections docs.
+- Threads surfaced mostly unrelated or non-OpenAI plugin/community posts, so no Threads claim was merged into the guide.
+- LinkedIn surfaced the OpenAI Developers / OpenAI for Business role-specific plugins posts already covered by the June 2 official announcement, so no new LinkedIn-only claim was merged into the guide.
 
 ## People checked
 
@@ -24,7 +26,7 @@ This note records the people and Codex usage tips checked through the logged-in 
 | Gabriel Chua | DX Engineer @ OpenAI | Posted about rate-limit reset banking and Codex lunch-and-learn style demos. | Added reset-bank and "Codex is for everyone" community signal as context. |
 | Romain Huet | Head of Developer Experience at OpenAI | Welcomed Pauline to DX; prior Codex launch/web-dev-challenge context. | Listed as DX lead and source for new-person confirmation. |
 | Brent Schooley | Developer Experience @ OpenAI | Chrome X/LinkedIn pass showed `/goal` as a favorite Codex feature, ambitious builds where `/goal` creates/finishes a roadmap of issues, Sites/role-based plugins, and Build iOS Apps repost context. | Added as DX practitioner support for `/goal`, plugins, and Sites guidance. |
-| Vaibhav "VB" Srivastav | Codex practitioner / OpenAI context on X | Shared appshot prompt patterns: investigate, open PR, run evals, set heartbeat. Also posted to use Build macOS Apps and Build iOS Apps plugins for platform-specific app work. | Added prompt-pattern and plugin tips. |
+| Vaibhav "VB" Srivastav | Codex practitioner / OpenAI context on X | Shared appshot prompt patterns: investigate, open PR, run evals, set heartbeat. Also posted to use Build macOS Apps and Build iOS Apps plugins for platform-specific app work. On June 15, X search surfaced a Codex Mobile power-user note: treat the phone as a control plane for work running on a Mac, Windows machine, or devbox. | Added prompt-pattern, plugin, and mobile-control tips where official docs corroborate them. |
 | Thibault "Tibo" Sottiaux | Codex & ChatGPT @ OpenAI | Noted that future rate-limit reset banking should let users choose when a reset applies. | Added reset-bank caveat as social observation; official feature details should still be checked. |
 | Ryan Lopopolo | Building future of work at OpenAI | Posted that `AGENTS.md` should tell the agent what it is working on, why it matters, and where to look to ground itself. | Added `AGENTS.md` guidance. |
 | Nicole Cha | OpenAI practitioner | Framed skills as focus/steering for a broadly capable model, like helping an intern know what to focus on. | Added skills-as-focus framing. |
@@ -77,6 +79,12 @@ This note records the people and Codex usage tips checked through the logged-in 
    - Codex-101 wording: "For data work, ask Codex to define the metric, list data gaps, produce the query/report, and schedule a recurring check only after the definition is clear."
    - Caveat: the post is a workflow example, not a new feature announcement; rely on official plugin and automation docs for availability.
 
+10. Use Codex Mobile as a control plane for a connected host.
+   - Social source: VB.
+   - Official source: <https://developers.openai.com/codex/remote-connections>.
+   - Codex-101 wording: "Your phone steers the connected Mac or Windows host; the host still owns the files, credentials, plugins, Computer Use, approvals, tests, terminal output, and local permissions."
+   - Caveat: this is not a new platform launch or a transfer of credentials to the phone. It is a usage framing for the already documented Remote connections behavior.
+
 ## Newly joined or recently surfaced people
 
 - Pauline P. Narvas: joined OpenAI Developer Experience to support developers across Codex, API Platform, and ChatGPT.
@@ -91,3 +99,4 @@ This note records the people and Codex usage tips checked through the logged-in 
 - Do not state that Sites is available to every plan. Official docs currently limit it to ChatGPT Business and Enterprise preview.
 - Do not turn rate-limit reset banking into a guaranteed universal feature without checking the current account UI.
 - Do not use old social snippets such as `npm install -g @openai/codex` as the sole install guidance. Codex-101 should keep the current official installer paths first.
+- Do not imply Codex Mobile runs the whole development environment on the phone. Official docs frame it as remote control of an awake, online Codex App host.

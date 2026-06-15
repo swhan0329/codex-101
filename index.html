@@ -17,7 +17,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=20260613-pricing-audit" />
+    <link rel="stylesheet" href="style.css?v=20260615-mobile-social" />
 </head>
 
 <body data-page="home">
@@ -51,7 +51,7 @@
                     <p class="hero-badge">
                         <span data-i18n="hero_badge_prefix">공식 문서 기준 재검수</span>
                         <span aria-hidden="true"> · </span>
-                        <span class="live-date" data-date-format="long">2026년 6월 13일</span>
+                        <span class="live-date" data-date-format="long">2026년 6월 15일</span>
                     </p>
                     <h1 class="hero-title" data-i18n="hero_title">OpenAI Codex를<br />실무에 바로 붙이는 가이드</h1>
                     <p class="hero-sub" data-i18n="hero_sub">CLI · Desktop App (macOS/Windows) · IDE Extension · Web · Mobile · SDK automation<br />최신 공식 문서를 기준으로 어디서 시작할지, 어떤 모델을 쓸지, 샌드박스/승인, MCP, plugins, automations를 처음 사용자와 실무 사용자 모두 읽기 쉽도록 다시 정리했습니다.</p>
@@ -1877,7 +1877,7 @@ codex --search "optimize with Next.js 15"
 
             <section class="section field-tips-section" id="openai-field-tips">
                 <h2><span class="section-num">20</span> <span data-i18n="field_tips_title">OpenAI 담당자들이 전하는 팁</span></h2>
-                <p data-i18n="field_tips_intro">2026-06-13 로그인된 Chrome 세션으로 X, Threads, LinkedIn의 최신 글을 다시 확인했습니다. 소셜 글은 “현장 신호”로만 쓰고, 제품 상태와 활성화 방법은 공식 Codex 문서와 OpenAI 발표로 대조했습니다.</p>
+                <p data-i18n="field_tips_intro">2026-06-15 로그인된 Chrome 세션으로 X, Threads, LinkedIn의 최신 글을 다시 확인했습니다. 소셜 글은 “현장 신호”로만 쓰고, 제품 상태와 활성화 방법은 공식 Codex 문서와 OpenAI 발표로 대조했습니다.</p>
                 <div class="field-tip-grid">
                     <article class="field-tip-card">
                         <span class="field-tip-person">Greg Brockman + Tibo + Dominik + Gabriel</span>
@@ -1924,6 +1924,11 @@ codex --search "optimize with Next.js 15"
                         <h3 data-i18n="field_tip_9_t">데이터 일은 먼저 metric contract</h3>
                         <p data-i18n="field_tip_9_d">Data Analytics plugin을 쓸 때는 “분석해줘”보다 north star, success metrics, guardrails, data gaps를 먼저 정의하게 하세요. 그 다음 query/report와 반복 KPI 점검으로 넘어가야 결과가 검토 가능한 artifact가 됩니다.</p>
                     </article>
+                    <article class="field-tip-card">
+                        <span class="field-tip-person">VB + Codex Mobile</span>
+                        <h3 data-i18n="field_tip_10_t">모바일은 host 제어판처럼 쓰기</h3>
+                        <p data-i18n="field_tip_10_d">휴대폰에서 모든 파일이 옮겨가는 것이 아닙니다. 공식 Remote connections 문서 기준으로 ChatGPT 모바일 앱은 켜져 있는 Mac/Windows host의 프로젝트, thread, 승인, diff, test, terminal output을 이어서 조종하고, 파일·credential·plugin·Computer Use 권한은 host에 남습니다.</p>
+                    </article>
                 </div>
                 <a class="pet-recording-card" href="https://youtu.be/l-eXsCldCgQ" target="_blank" rel="noopener noreferrer">
                     <span class="pet-recording-thumb">
@@ -1939,7 +1944,7 @@ codex --search "optimize with Next.js 15"
                 <div class="field-source-block" aria-label="OpenAI practitioner sources">
                     <p class="field-source-label" data-i18n="field_tips_sources_label">원글 및 근거</p>
                     <div class="field-source-list">
-                        <a href="codex-team-social-research-2026-06-13.md" target="_blank" rel="noopener noreferrer">2026-06-13 people and social research note</a>
+                        <a href="codex-team-social-research-2026-06-13.md" target="_blank" rel="noopener noreferrer">2026-06-15 people and social research note</a>
                         <a href="https://x.com/heccbrent" target="_blank" rel="noopener noreferrer">Brent Schooley X</a>
                         <a href="https://x.com/heccbrent/status/2062651567413637441" target="_blank" rel="noopener noreferrer">Brent /goal post</a>
                         <a href="https://www.linkedin.com/in/brentschooley" target="_blank" rel="noopener noreferrer">Brent Schooley LinkedIn</a>
@@ -1947,6 +1952,8 @@ codex --search "optimize with Next.js 15"
                         <a href="https://x.com/dkundel/status/2062650378089594955" target="_blank" rel="noopener noreferrer">dominik /goal guide</a>
                         <a href="https://x.com/reach_vb/status/2065520558620500082" target="_blank" rel="noopener noreferrer">VB Build macOS Apps post</a>
                         <a href="https://x.com/reach_vb" target="_blank" rel="noopener noreferrer">VB appshot prompt patterns</a>
+                        <a href="https://x.com/reach_vb" target="_blank" rel="noopener noreferrer">VB Codex Mobile control-plane note</a>
+                        <a href="https://developers.openai.com/codex/remote-connections" target="_blank" rel="noopener noreferrer">Official Remote connections</a>
                         <a href="https://x.com/gdb" target="_blank" rel="noopener noreferrer">Greg Brockman X</a>
                         <a href="https://x.com/zswang24" target="_blank" rel="noopener noreferrer">Jason Wang Data Analytics note</a>
                         <a href="https://x.com/nicolekcha/status/2063362606543622322" target="_blank" rel="noopener noreferrer">nicole steering post</a>
@@ -2011,7 +2018,7 @@ codex --search "optimize with Next.js 15"
                     </div>
                     <p class="overview-fact-date">
                         <span data-i18n="overview_fact_date_prefix">업데이트 기준일</span>
-                        <span class="live-date" data-date-format="long">2026년 6월 13일</span>
+                        <span class="live-date" data-date-format="long">2026년 6월 15일</span>
                     </p>
                 </div>
                 <ol class="changelog-list" aria-label="Today update summary">
@@ -2037,7 +2044,7 @@ codex --search "optimize with Next.js 15"
                     </li>
                     <li>
                         <strong data-i18n="overview_update_7_title">X 실무 팁 반영</strong>
-                        <span data-i18n="changelog_item_6">로그인된 Chrome으로 X와 LinkedIn의 사람별 최신 글을 다시 확인하고, 공식 문서로 대조 가능한 Codex 팁만 섹션 20과 별도 리서치 노트에 반영했습니다.</span>
+                        <span data-i18n="changelog_item_6">로그인된 Chrome으로 X, Threads, LinkedIn의 사람별 최신 글을 다시 확인하고, 공식 Remote connections 문서로 대조 가능한 Codex Mobile control-plane 팁만 섹션 20과 별도 리서치 노트에 반영했습니다.</span>
                     </li>
                 </ol>
             </section>
@@ -2053,14 +2060,14 @@ codex --search "optimize with Next.js 15"
                     href="https://github.com/swhan0329/codex-101" target="_blank">PR을 환영합니다</a>.</p>
             <p class="footer-meta">
                 <span data-i18n="footer_date_prefix">최종 업데이트</span>:
-                        <span class="live-date" data-date-format="long">2026년 6월 13일</span>
+                        <span class="live-date" data-date-format="long">2026년 6월 15일</span>
             </p>
             <p class="footer-meta">Made by <a href="https://github.com/swhan0329" target="_blank">@swhan0329</a></p>
         </div>
     </footer>
 
-    <script src="i18n.js?v=20260613-pricing-audit"></script>
-    <script src="app.js?v=20260613-pricing-audit"></script>
+    <script src="i18n.js?v=20260615-mobile-social"></script>
+    <script src="app.js?v=20260615-mobile-social"></script>
 </body>
 
 </html>

@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: June 13, 2026</strong><br/>
+  <strong>Last updated: June 15, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
@@ -29,14 +29,14 @@ The guide is written from the official OpenAI Codex documentation first, then ma
 - **Professional users**: read sections `12-14` for `AGENTS.md`, `config.toml`, and MCP, then `15-17` for sessions, automation, and prompt contracts.
 - **Example-driven readers**: open the live site and the use-case gallery to start from real workflows instead of feature lists.
 
-## June 13, 2026 Refresh Notes
+## June 15, 2026 Refresh Notes
 
 - Rechecked `developers.openai.com/codex/models` first again; the recommendation order stayed `gpt-5.5`, `gpt-5.4`, `gpt-5.4-mini`, and `gpt-5.3-codex-spark`.
 - Updated pricing/API-key notes because the current Pricing API Key table now lists GPT-5.5/GPT-5.4/GPT-5.4 mini as usage-based, and the referral section documents June 11-24 Plus/Pro invitation reset banking.
 - Audited the official use-case catalog again: 60 official cards, 60 local cards, 0 missing local/extra IDs, 0 local `promptEn`/`promptKo` gaps, 0 official prompt mismatches, and 0 multiline Korean prompt regressions.
 - Used the logged-in Chrome session to recheck recent X, Threads, and LinkedIn activity from Codex, OpenAI Developer Experience, and adjacent OpenAI practitioners.
-- Added [`codex-team-social-research-2026-06-13.md`](codex-team-social-research-2026-06-13.md) as the people-and-tips record, including newly surfaced people such as Pauline P. Narvas, Rohan Varma, Johannes Landgraf/Ona, Michael Aiello, and Clint Gibler.
-- Updated the OpenAI practitioner tips section with only guidance that can be separated from or corroborated by official docs: `/goal` contracts, `AGENTS.md` context, appshot action prompts, platform plugins, docs-agent workflows, Data Analytics metric contracts, Sites preview scope, and Ona as pre-closing enterprise execution direction.
+- Updated [`codex-team-social-research-2026-06-13.md`](codex-team-social-research-2026-06-13.md), the people-and-tips record, with the June 15 Chrome pass.
+- Updated the OpenAI practitioner tips section with only guidance that can be separated from or corroborated by official docs: `/goal` contracts, `AGENTS.md` context, appshot action prompts, platform plugins, docs-agent workflows, Data Analytics metric contracts, Sites preview scope, Ona as pre-closing enterprise execution direction, and Codex Mobile as a remote-control plane for an awake host.
 
 ## June 12, 2026 Refresh Notes
 
