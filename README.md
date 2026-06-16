@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: June 15, 2026</strong><br/>
+  <strong>Last updated: June 16, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
@@ -29,14 +29,13 @@ The guide is written from the official OpenAI Codex documentation first, then ma
 - **Professional users**: read sections `12-14` for `AGENTS.md`, `config.toml`, and MCP, then `15-17` for sessions, automation, and prompt contracts.
 - **Example-driven readers**: open the live site and the use-case gallery to start from real workflows instead of feature lists.
 
-## June 15, 2026 Refresh Notes
+## June 16, 2026 Refresh Notes
 
 - Rechecked `developers.openai.com/codex/models` first again; the recommendation order stayed `gpt-5.5`, `gpt-5.4`, `gpt-5.4-mini`, and `gpt-5.3-codex-spark`.
-- Updated pricing/API-key notes because the current Pricing API Key table now lists GPT-5.5/GPT-5.4/GPT-5.4 mini as usage-based, and the referral section documents June 11-24 Plus/Pro invitation reset banking.
-- Audited the official use-case catalog again: 60 official cards, 60 local cards, 0 missing local/extra IDs, 0 local `promptEn`/`promptKo` gaps, 0 official prompt mismatches, and 0 multiline Korean prompt regressions.
-- Used the logged-in Chrome session to recheck recent X, Threads, and LinkedIn activity from Codex, OpenAI Developer Experience, and adjacent OpenAI practitioners.
-- Updated [`codex-team-social-research-2026-06-13.md`](codex-team-social-research-2026-06-13.md), the people-and-tips record, with the June 15 Chrome pass.
-- Updated the OpenAI practitioner tips section with only guidance that can be separated from or corroborated by official docs: `/goal` contracts, `AGENTS.md` context, appshot action prompts, platform plugins, docs-agent workflows, Data Analytics metric contracts, Sites preview scope, Ona as pre-closing enterprise execution direction, and Codex Mobile as a remote-control plane for an awake host.
+- Added the June 12 ChatGPT release-note caveat that GPT-5.2 models are no longer available in ChatGPT, while keeping the separate Codex model-page wording for `gpt-5.2` and `gpt-5.3-codex` deprecation in ChatGPT-authenticated Codex.
+- Tightened the Codex rate-card wording: token-based pricing is now the main rate card for most customers, GPT-5.5 is listed at 125 input / 12.50 cached input / 750 output credits per 1M tokens, and legacy average-message rates are only for the remaining unmigrated Enterprise subset.
+- Audited the official use-case catalog again: 60 official cards, 60 local cards, 0 missing local/extra IDs, 0 local `promptEn`/`promptKo` gaps, 0 official prompt mismatches after HTML-entity normalization, and 0 multiline Korean prompt regressions.
+- Used the logged-in Chrome session to recheck X, Threads, and LinkedIn. X returned a blank readable body, Threads exposed only search-shell text, and LinkedIn exposed navigation shell only, so no new social-only claim was added.
 
 ## June 12, 2026 Refresh Notes
 

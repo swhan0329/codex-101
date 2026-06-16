@@ -1,6 +1,6 @@
-# Codex team and practitioner social research - 2026-06-15
+# Codex team and practitioner social research - 2026-06-16
 
-This note records the people and Codex usage tips checked through the logged-in Chrome session on 2026-06-15 KST. It separates official-document-backed guidance from social observations that should stay as context until OpenAI documents them.
+This note records the people and Codex usage tips checked through the logged-in Chrome session on 2026-06-16 KST. It separates official-document-backed guidance from social observations that should stay as context until OpenAI documents them.
 
 ## Method and boundaries
 
@@ -8,9 +8,8 @@ This note records the people and Codex usage tips checked through the logged-in 
 - The pass focused on recent posts, reposts, and activity from OpenAI Codex, Developer Experience, and adjacent product/security/data people.
 - X, Threads, and LinkedIn posts are treated as public practitioner signals, not product documentation.
 - Items that conflict with official docs are not merged into the guide as fact. They are recorded here as observations only.
-- X surfaced one new Codex Mobile workflow tip from VB that matches the official Remote connections docs.
-- Threads surfaced mostly unrelated or non-OpenAI plugin/community posts, so no Threads claim was merged into the guide.
-- LinkedIn surfaced the OpenAI Developers / OpenAI for Business role-specific plugins posts already covered by the June 2 official announcement, so no new LinkedIn-only claim was merged into the guide.
+- June 16 Chrome result: X search for the recorded people returned a blank readable body, Threads exposed only search-shell text, and LinkedIn exposed only navigation shell text.
+- No new social-only claim was promoted into the guide on June 16. The June 15 VB Codex Mobile tip remains the latest promoted social/practitioner item because it is corroborated by the official Remote connections docs.
 
 ## People checked
 
