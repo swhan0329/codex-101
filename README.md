@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: June 16, 2026</strong><br/>
+  <strong>Last updated: June 17, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
@@ -29,13 +29,13 @@ The guide is written from the official OpenAI Codex documentation first, then ma
 - **Professional users**: read sections `12-14` for `AGENTS.md`, `config.toml`, and MCP, then `15-17` for sessions, automation, and prompt contracts.
 - **Example-driven readers**: open the live site and the use-case gallery to start from real workflows instead of feature lists.
 
-## June 16, 2026 Refresh Notes
+## June 17, 2026 Refresh Notes
 
 - Rechecked `developers.openai.com/codex/models` first again; the recommendation order stayed `gpt-5.5`, `gpt-5.4`, `gpt-5.4-mini`, and `gpt-5.3-codex-spark`.
-- Added the June 12 ChatGPT release-note caveat that GPT-5.2 models are no longer available in ChatGPT, while keeping the separate Codex model-page wording for `gpt-5.2` and `gpt-5.3-codex` deprecation in ChatGPT-authenticated Codex.
-- Tightened the Codex rate-card wording: token-based pricing is now the main rate card for most customers, GPT-5.5 is listed at 125 input / 12.50 cached input / 750 output credits per 1M tokens, and legacy average-message rates are only for the remaining unmigrated Enterprise subset.
-- Audited the official use-case catalog again: 60 official cards, 60 local cards, 0 missing local/extra IDs, 0 local `promptEn`/`promptKo` gaps, 0 official prompt mismatches after HTML-entity normalization, and 0 multiline Korean prompt regressions.
-- Used the logged-in Chrome session to recheck X, Threads, and LinkedIn. X returned a blank readable body, Threads exposed only search-shell text, and LinkedIn exposed navigation shell only, so no new social-only claim was added.
+- Rechecked Quickstart, pricing, config, Windows/IDE/App/automations/cloud, remote connections, MCP, hooks, plugins, skills, Sites, OpenAI API changelog, and current Platform/API surfaces. No Codex model-order, pricing, remote-control, Sites, or activation-step change was needed.
+- Rechecked recent `openai.com/index` surfaces. The June 14 OpenAI Partner Network announcement is enterprise adoption and partner-delivery context, not a new Codex feature, model, plan, preview/GA status, feature flag, activation step, or credential/permission change.
+- Audited the official use-case catalog again: 60 official cards, 60 local cards, 0 missing local/extra IDs, 0 local `promptEn`/`promptKo` gaps, 0 official prompt mismatches after HTML-entity normalization, 0 multiline Korean prompt regressions, and 0 official Korean prompt token-preservation failures. Two official pages expose their starter prompt through the copy block rather than the open-in-Codex button, and both matched local data.
+- Used the saved social research note as the baseline and attempted a Chrome/social sweep. X/Threads/LinkedIn did not surface a new official-doc-corroborated Codex tip, so no social-only claim was added.
 
 ## June 12, 2026 Refresh Notes
 

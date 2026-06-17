@@ -1,6 +1,6 @@
 // Korean-first Codex use-case catalog.
 // Source baseline: https://developers.openai.com/codex/use-cases
-// Last official scrape: 2026-06-16
+// Last official scrape: 2026-06-17
 window.codexUseCaseCategories = [
     {
         "id": "today",
@@ -327,7 +327,7 @@ window.codexUseCases = [
                 }
             ],
             "promptEn": "@codex review for security regressions, missing tests, and risky behavior changes.",
-            "promptKo": "이 PR을 코드 리뷰 관점으로 봐줘. 버그 가능성, 회귀 위험, 테스트 공백을 파일/라인 기준으로 먼저 말해줘.",
+            "promptKo": "@codex security regression, missing tests, risky behavior change를 검토해줘.",
             "guideSectionsEn": [
                 "How to use",
                 "Define review guidance"
@@ -672,7 +672,7 @@ window.codexUseCases = [
             ],
             "skills": [],
             "promptEn": "@Codex analyze the issue mentioned in this thread and implement a fix in <name of your environment>.",
-            "promptKo": "이 Slack 스레드에서 결정된 코딩 작업을 범위, 관련 파일, 완료 기준으로 정리하고 작업을 시작해줘.",
+            "promptKo": "@Codex 이 thread에서 언급된 issue를 분석하고 <name of your environment>에서 fix를 구현해줘.",
             "guideSectionsEn": [
                 "How to use",
                 "Tips"
@@ -942,7 +942,7 @@ window.codexUseCases = [
                 }
             ],
             "promptEn": "Implement this Figma design in the current project using the Figma skill.\n\nRequirements:\n- Start with `get_design_context` for the exact node or frame.\n- If the response is truncated, use `get_metadata` to map the file and then re-fetch only the needed nodes with `get_design_context`.\n- Run `get_screenshot` for the exact variant before you start coding.\n- Reuse the existing design system components and tokens.\n- Translate the Figma output into this repo's utilities and component patterns instead of inventing a parallel system.\n- Match spacing, layout, hierarchy, and responsive behavior closely.\n- Respect the repo's routing, state, and data-fetch patterns.\n- Make the page responsive on desktop and mobile.\n- If Figma returns localhost image or SVG sources, use them directly and do not create placeholders or add new icon packages.\n\nValidation:\n- Compare the finished UI against the Figma reference for both look and behavior.\n- Use Playwright to check that the UI matches the reference and iterate as needed until it does.",
-            "promptKo": "이 Figma design을 현재 프로젝트에 구현해줘.\n\n요구사항:\n- 정확한 node/frame에 대해 먼저 get_design_context를 실행해.\n- 응답이 잘리면 get_metadata로 파일 구조를 확인한 뒤 필요한 node만 다시 get_design_context로 가져와.\n- 코딩을 시작하기 전에 정확한 variant의 get_screenshot을 실행해.\n- 기존 design system component와 token을 재사용해.\n- Figma 출력물을 그대로 새 체계로 붙이지 말고, 이 repo의 utility, component pattern, routing, state, data-fetch pattern에 맞게 번역해.\n- spacing, layout, hierarchy, responsive behavior를 최대한 맞춰.\n- desktop/mobile 반응형을 확인해.\n- Figma가 localhost image나 SVG source를 반환하면 placeholder나 새 icon package를 만들지 말고 그 source를 직접 사용해.\n\n검증:\n- 완성된 UI를 Figma reference와 look/behavior 기준으로 비교해.\n- Playwright로 실제 브라우저에서 확인하고, 차이가 남으면 반복 수정해.",
+            "promptKo": "현재 project에서 Figma skill을 사용해 이 Figma design을 구현해줘.\n\nRequirements:\n- exact node 또는 frame에 대해 `get_design_context`로 시작해.\n- response가 truncated되면 `get_metadata`를 사용해 file을 map한 다음 필요한 node만 `get_design_context`로 다시 fetch해.\n- coding을 시작하기 전에 exact variant에 대해 `get_screenshot`을 실행해.\n- 기존 design system components와 tokens를 재사용해.\n- parallel system을 새로 만들지 말고 Figma output을 이 repo의 utilities와 component patterns로 번역해.\n- spacing, layout, hierarchy, responsive behavior를 가깝게 맞춰.\n- repo의 routing, state, data-fetch patterns를 존중해.\n- desktop과 mobile에서 page가 responsive하게 만들어.\n- Figma가 localhost image 또는 SVG sources를 반환하면 직접 사용하고 placeholder를 만들거나 새 icon package를 추가하지 마.\n\nValidation:\n- 완성된 UI를 Figma reference와 look 및 behavior 기준으로 비교해.\n- Playwright를 사용해 UI가 reference와 맞는지 확인하고, 맞을 때까지 필요하면 iterate해.",
             "guideSectionsEn": [
                 "Introduction",
                 "Set up your Figma project",
@@ -2207,7 +2207,7 @@ window.codexUseCases = [
             ],
             "skills": [],
             "promptEn": "/goal Complete [objective] without stopping until [verifiable end state].",
-            "promptKo": "목표는 이 문서 최신화 완료야. 공식 문서 확인, 수정, 테스트, 변경 요약까지 끝날 때까지 계속 추적해줘.",
+            "promptKo": "/goal [verifiable end state]까지 멈추지 말고 [objective]를 완료해.",
             "guideSectionsEn": [
                 "Introduction",
                 "Choose the right work",
