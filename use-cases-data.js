@@ -1,6 +1,6 @@
 // Korean-first Codex use-case catalog.
 // Source baseline: https://developers.openai.com/codex/use-cases
-// Last official scrape: 2026-06-18
+// Last official scrape: 2026-06-22
 window.codexUseCaseCategories = [
     {
         "id": "today",
@@ -1836,7 +1836,7 @@ window.codexUseCases = [
         "summary": "authorized repository에서 plausible vulnerability를 높은 recall로 탐색합니다.",
         "summaryEn": "Search an authorized repository deeply for plausible vulnerabilities.",
         "when": "일반 lint나 얕은 리뷰로는 놓칠 수 있는 auth, secrets, injection, permission 문제를 깊게 점검하고 싶을 때 좋습니다.",
-        "prompt": "이 authorized repo를 deep security scan 관점으로 검토해줘. threat model, data flow, 위험 sink/source, 재현 가능한 evidence를 우선해줘.",
+        "prompt": "$codex-security:deep-security-scan으로 이 repo 또는 지정 폴더를 deep security scan 해줘. 승인된 범위만 보고 findings, reviewed surfaces, proof gaps를 report로 남겨줘.",
         "output": "위험 후보, 근거 파일/라인, 공격 경로, 검증 단계, false positive 메모.",
         "caution": "허가된 범위 안에서만 수행하고, 실제 exploit 실행이나 외부 시스템 접근은 승인 없이는 하지 않게 하세요.",
         "official": {
@@ -1860,8 +1860,8 @@ window.codexUseCases = [
                     "url": "https://developers.openai.com/codex/security/plugin"
                 }
             ],
-            "promptEn": "/goal Run a deep security scan on this repository. Do not stop until all required steps are complete and the final report is ready.\n\nScope and rules:\n- I am authorized to assess this repository.\n- Treat the entire repository as in scope.\n- Use the Codex Security plugin's deep scan workflow; do not broaden this into a diff or scoped-path review.\n- Keep the scan read-only; do not modify code, open pull requests, or test external targets.\n\nReturn the final Markdown and HTML report paths and summarize the findings that require human review first.",
-            "promptKo": "/goal 이 repository에 deep security scan을 실행해줘. 모든 required steps가 완료되고 final report가 준비될 때까지 멈추지 마.\n\nScope and rules:\n- 나는 이 repository를 assess할 권한이 있어.\n- 전체 repository를 scope 안으로 다뤄줘.\n- Codex Security 플러그인의 deep scan workflow를 사용해줘. 이것을 diff 또는 scoped-path review로 넓히거나 바꾸지 마.\n- scan은 read-only로 유지해줘. code를 modify하거나, pull requests를 열거나, external targets를 test하지 마.\n\nfinal Markdown 및 HTML report paths를 반환하고, human review가 먼저 필요한 findings를 요약해줘.",
+            "promptEn": "Use $codex-security:deep-security-scan to run a deep security scan on [this repository / absolute path to a scoped folder].\n\nScope and rules:\n- I am authorized to assess this repository.\n- Keep the scan within [the entire repository / the exact folder named above].\n- Use the Codex Security plugin's deep-scan workflow; do not reinterpret this as a pull request or diff review.\n\nReturn the generated report path. Summarize the findings, reviewed surfaces, and proof gaps that require human review first.",
+            "promptKo": "$codex-security:deep-security-scan을 사용해서 [this repository / absolute path to a scoped folder]에 deep security scan을 실행해줘.\n\nScope and rules:\n- 나는 이 repository를 assess할 권한이 있어.\n- scan을 [the entire repository / the exact folder named above] 안으로 유지해줘.\n- Codex Security plugin의 deep-scan workflow를 사용해줘. 이것을 pull request 또는 diff review로 재해석하지 마.\n\n생성된 report path를 반환해줘. human review가 먼저 필요한 findings, reviewed surfaces, proof gaps를 요약해줘.",
             "guideSectionsEn": [
                 "Choose a deep repository review",
                 "Prepare an authorized scan",
@@ -1879,7 +1879,7 @@ window.codexUseCases = [
         "summary": "변경된 코드만 중심으로 secrets, auth, injection, 권한 회귀를 리뷰합니다.",
         "summaryEn": "Review a pull request or local diff for security regressions.",
         "when": "merge 전 diff에서 보안상 위험한 변경이 섞였는지 별도 렌즈로 보고 싶을 때 좋습니다.",
-        "prompt": "이 PR diff를 보안 리뷰 관점으로 봐줘. secrets, authz/authn, injection, permission, dependency 위험을 파일/라인 근거로 먼저 말해줘.",
+        "prompt": "$codex-security:security-diff-scan으로 이 PR, commit, branch diff, 또는 working-tree patch를 보안 회귀 관점에서 리뷰해줘. findings는 파일/라인 근거와 app review directive로 남겨줘.",
         "output": "보안 finding, 심각도, 근거 라인, 수정 제안, 추가 테스트.",
         "caution": "보안 리뷰 결과는 확정 판정이 아니라 근거 기반 후보입니다. false positive와 검증 필요 항목을 구분하게 하세요.",
         "official": {
@@ -1903,8 +1903,8 @@ window.codexUseCases = [
                     "url": "https://developers.openai.com/codex/security/plugin"
                 }
             ],
-            "promptEn": "/goal Scan this PR, commit, branch diff, or working-tree patch for security regressions. Do not stop until all in-scope changed files are covered and all required steps are complete.\n\nScope and rules:\n- Target: [this pull request / commit SHA / branch diff from BASE to HEAD / the current working-tree patch]\n- I am authorized to assess this repository and change set.\n- Pay particular attention to [auth, input handling, secrets, filesystem, network, dependencies, or other sensitive surface].\n- Keep this pass read-only; do not modify code or open a pull request.\n\nReturn the final Markdown report and any Codex app review directives for findings that require human review.",
-            "promptKo": "/goal 이 PR, commit, branch diff, 또는 working-tree patch에서 security regressions를 scan해줘. 모든 in-scope changed files가 covered되고 모든 required steps가 완료될 때까지 멈추지 마.\n\nScope and rules:\n- Target: [this pull request / commit SHA / branch diff from BASE to HEAD / the current working-tree patch]\n- 나는 이 repository와 change set을 assess할 권한이 있어.\n- [auth, input handling, secrets, filesystem, network, dependencies, or other sensitive surface]에 특히 주의해줘.\n- 이 pass는 read-only로 유지해줘. code를 modify하거나 pull request를 열지 마.\n\nfinal Markdown report와 human review가 필요한 findings에 대한 Codex app review directives를 반환해줘.",
+            "promptEn": "Use $codex-security:security-diff-scan to review this PR, commit, branch diff, or working-tree patch for security regressions.\n\nScope and rules:\n- Target: [this pull request / commit SHA / branch diff from BASE to HEAD / the current working-tree patch]\n- I am authorized to assess this repository and change set.\n- Pay particular attention to [auth, input handling, secrets, filesystem, network, dependencies, or other sensitive surface].\n\nReturn the final Markdown report and any Codex app review directives for findings that require human review.",
+            "promptKo": "$codex-security:security-diff-scan을 사용해서 이 PR, commit, branch diff, 또는 working-tree patch의 security regressions를 review해줘.\n\nScope and rules:\n- Target: [this pull request / commit SHA / branch diff from BASE to HEAD / the current working-tree patch]\n- 나는 이 repository와 change set을 assess할 권한이 있어.\n- [auth, input handling, secrets, filesystem, network, dependencies, or other sensitive surface]에 특히 주의해줘.\n\nfinal Markdown report와 human review가 필요한 findings에 대한 Codex app review directives를 반환해줘.",
             "guideSectionsEn": [
                 "Review the change instead of the whole repository",
                 "Run a focused pass",
