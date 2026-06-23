@@ -92,7 +92,7 @@
 - Sites와 Ona 발표는 현재 사용할 수 있는 기능, preview 범위, closing 전 발표를 섞지 않고 설명합니다.
 - Codex Mobile은 개발 환경을 휴대폰으로 옮기는 기능이 아니라, 켜져 있는 Mac/Windows host의 thread, 승인, diff, test, terminal output을 이어서 조종하는 Remote connections 흐름으로 설명합니다.
 
-이번 추가의 상세 근거와 사람별 메모는 [`codex-team-social-research-2026-06-13.md`](codex-team-social-research-2026-06-13.md)에 따로 남겼습니다.
+이번 추가의 상세 근거와 사람별 메모는 공개 사이트가 아니라 로컬 리서치 노트에서만 관리합니다.
 
 2026년 6월 23일 실행 참고: deprecated Codex model 상태, ChatGPT 일반 모델 retirement, pricing table 한도, token-based rate card, API-key Codex 동작, direct API model availability는 분리해서 읽어야 합니다. `gpt-5.2`와 `gpt-5.3-codex`는 ChatGPT 인증 Codex에서는 deprecated이고, GPT-5.2 ChatGPT 모델군은 2026년 6월 12일부터 ChatGPT에서 retired 상태입니다. API-key 인증이나 직접 API 사용은 API 모델 문서와 실제 product picker를 별도로 확인해야 합니다.
 
