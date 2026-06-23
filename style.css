@@ -4961,6 +4961,15 @@ body[data-page="home"] .screenshot img {
     box-shadow: rgba(0, 0, 0, .22) 3px 5px 30px 0;
 }
 
+body[data-page="home"] .overview-visual-figure .overview-lang-visual {
+    display: none;
+}
+
+html[lang="ko"] body[data-page="home"] .overview-visual-figure .overview-lang-visual-ko,
+html[lang="en"] body[data-page="home"] .overview-visual-figure .overview-lang-visual-en {
+    display: block;
+}
+
 body[data-page="home"] .screenshot {
     border: 0;
     border-radius: 0;
