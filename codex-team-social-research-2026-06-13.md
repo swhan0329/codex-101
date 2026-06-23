@@ -1,6 +1,6 @@
-# Codex team and practitioner social research - 2026-06-22
+# Codex team and practitioner social research - 2026-06-23
 
-This note records the people and Codex usage tips checked through the logged-in Chrome session and official-source sweeps through 2026-06-22 KST. It separates official-document-backed guidance from social observations that should stay as context until OpenAI documents them.
+This note records the people and Codex usage tips checked through the logged-in Chrome session and official-source sweeps through 2026-06-23 KST. It separates official-document-backed guidance from social observations that should stay as context until OpenAI documents them.
 
 ## Method and boundaries
 
@@ -8,12 +8,14 @@ This note records the people and Codex usage tips checked through the logged-in 
 - The pass focused on recent posts, reposts, and activity from OpenAI Codex, Developer Experience, and adjacent product/security/data people.
 - X, Threads, and LinkedIn posts are treated as public practitioner signals, not product documentation.
 - Items that conflict with official docs are not merged into the guide as fact. They are recorded here as observations only.
-- June 22 result: the saved people/tip baseline was re-used, official docs and openai.com/index were checked first, and X/Threads/LinkedIn did not surface a new Codex tip that was both current and corroborated by official docs. X search returned an empty readable body, Threads returned only an `OpenAI Codex` search shell, and LinkedIn surfaced the user's own Codex Community Meetup post rather than OpenAI/Codex team tips.
-- No new social-only claim was promoted into the guide on June 22. The June 15 VB Codex Mobile tip remains the latest promoted social/practitioner item because it is corroborated by the official Remote connections docs.
+- June 23 result: the saved people/tip baseline was re-used, official docs and openai.com/index were checked first, and X/Threads/LinkedIn did not surface a new social-only Codex tip that should be promoted. X search returned an empty readable body, Threads returned only an `OpenAI Codex` search shell, and LinkedIn showed OpenAI's official Daybreak/Codex Security post.
+- No new social-only claim was promoted into the guide on June 23. The Daybreak/Codex Security update was reflected only through official OpenAI announcement pages and current Codex Security docs. The June 15 VB Codex Mobile tip remains the latest promoted practitioner item because it is corroborated by the official Remote connections docs.
 - OpenAI's June 14 Partner Network announcement was recorded only as enterprise adoption and partner-delivery context. It is not a Codex feature, model, plan, preview/GA, feature-flag, activation, credential, or permission change.
 - OpenAI's June 16 Deployment Simulation, June 17 LifeSciBench, and GPT-Rosalind life-science updates were recorded only as model safety/evaluation and life-science benchmark/model-access context. They do not change Codex model order, plan availability, activation steps, credentials, permissions, or feature flags.
 - OpenAI's June 18 Enterprise usage analytics and spend-controls announcement includes Codex credit usage in the Global Admin Console and Cost API context, but it was recorded as Enterprise admin visibility/spend-governance context rather than a general Codex feature or social tip.
 - OpenAI's June 21 Samsung Electronics deployment announcement was recorded as Korea-scale enterprise adoption context: ChatGPT Enterprise and Codex are available to all Samsung Electronics employees in Korea and all global DX employees. It is not a Codex model, plan, preview/GA, feature-flag, activation, credential, or permission change.
+- OpenAI's June 22 Daybreak and Patch the Planet announcements were recorded as security operating context: Codex Security is framed around finding, validating, patching, verifying, and exporting defensive findings; GPT-5.5-Cyber is for trusted defenders; and Patch the Planet gives selected maintainers expert-reviewed support. These are not general Codex model, plan, feature-flag, activation, credential, or permission changes.
+- OpenAI's June 22 Codex-maxxing post was recorded as long-running-work operating context: break large goals into verifiable steps, preserve workstream continuity, and keep human oversight clear. It reinforces existing `/goal`, automation, and checkpoint guidance rather than adding a new product surface.
 
 ## People checked
 

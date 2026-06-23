@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: June 22, 2026</strong><br/>
+  <strong>Last updated: June 23, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
@@ -29,13 +29,14 @@ The guide is written from the official OpenAI Codex documentation first, then ma
 - **Professional users**: read sections `12-14` for `AGENTS.md`, `config.toml`, and MCP, then `15-17` for sessions, automation, and prompt contracts.
 - **Example-driven readers**: open the live site and the use-case gallery to start from real workflows instead of feature lists.
 
-## June 22, 2026 Refresh Notes
+## June 23, 2026 Refresh Notes
 
 - Rechecked `developers.openai.com/codex/models` first again; the recommendation order stayed `gpt-5.5`, `gpt-5.4`, `gpt-5.4-mini`, and `gpt-5.3-codex-spark`.
 - Rechecked Quickstart, pricing, config, Windows/IDE/App/automations/cloud, remote connections, MCP, hooks, plugins, skills, Sites, OpenAI API changelog, and current Platform/API surfaces. No Codex model-order, pricing, remote-control, Sites, or activation-step change was needed.
-- Rechecked recent `openai.com/index` surfaces. The June 21 Samsung Electronics deployment makes ChatGPT Enterprise and Codex available to all Samsung Electronics employees in Korea and all global DX employees; this is enterprise adoption and Korea-scale rollout context, not a new model, plan, feature flag, preview/GA status, activation step, or credential change. The June 18 Enterprise spend-controls post remains admin visibility/governance context.
+- Rechecked recent `openai.com/index` surfaces. The June 22 Daybreak and Patch the Planet posts update the security context: Codex Security is framed as a findings-to-fixes workflow, GPT-5.5-Cyber is for trusted defenders, and open-source maintainers may receive expert-reviewed security help through Patch the Planet. This is not a general Codex model-order, consumer-plan, feature-flag, or activation change.
+- Added the June 22 Codex-maxxing post as long-running-work operating context: break large goals into verifiable steps, preserve continuity, and keep human oversight clear. This reinforces the existing `/goal`, automation, and checkpoint guidance rather than introducing a new surface.
 - Audited the official use-case catalog again: 60 official cards, 60 local cards, 0 missing local/extra IDs, 0 local `promptEn`/`promptKo` gaps, 0 official prompt mismatches, and 0 multiline Korean prompt regressions.
-- Used the saved social research note as the baseline and attempted a Chrome/social sweep. X returned an empty readable body, Threads returned a search shell, and LinkedIn showed the user's own Codex meetup post rather than an OpenAI/Codex team tip. No official-doc-corroborated social claim was added.
+- Used the saved social research note as the baseline and attempted a Chrome/social sweep. X returned an empty readable body, Threads returned a search shell, and LinkedIn showed the OpenAI Daybreak/Codex Security post. No social-only claim was promoted; the guide relies on the official OpenAI and Codex Security docs for that update.
 
 ## June 12, 2026 Refresh Notes
 
