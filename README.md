@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: July 1, 2026</strong><br/>
+  <strong>Last updated: July 2, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
@@ -29,16 +29,16 @@ The guide is written from the official OpenAI Codex documentation first, then ma
 - **Professional users**: read sections `12-14` for `AGENTS.md`, `config.toml`, and MCP, then `15-17` for sessions, automation, and prompt contracts.
 - **Example-driven readers**: open the live site and the use-case gallery to start from real workflows instead of feature lists.
 
-## July 1, 2026 Refresh Notes
+## July 2, 2026 Refresh Notes
 
 - Rechecked `developers.openai.com/codex/models` first again. The recommended Codex lanes remain `gpt-5.5`, `gpt-5.4`, `gpt-5.4-mini`, and `gpt-5.3-codex-spark`; `gpt-5.2` and `gpt-5.3-codex` are treated as deprecated for ChatGPT-authenticated Codex, not as fallback recommendations.
-- Rechecked Quickstart, pricing, best practices, config, Windows/Windows App/IDE/App features/App automations/cloud, remote connections, integrations, MCP, hooks, plugins, skills, Sites, OpenAI API changelog, and current Platform/API surfaces. No Codex activation-flow or remote-control procedure change was needed.
-- Rechecked recent `openai.com/index` surfaces. The June 30 global ChatGPT adoption report, GeneBench-Pro benchmark note, and core-dump debugging/epidemiology story are recorded as research, benchmark, or technical operating context only; they are not Codex model, plan, preview/GA, feature flag, activation, credential, or permission changes.
+- Rechecked Quickstart, pricing, best practices, config, Windows/Windows App/IDE/App features/App automations/cloud, remote connections, integrations, MCP, hooks, plugins, skills, Sites, OpenAI API changelog, and current Platform/API surfaces. No Codex activation-flow, model-order, pricing, or remote-control procedure change was needed.
+- Rechecked recent `openai.com/index` surfaces. The news index still tops out at the June 30 global ChatGPT adoption, GeneBench-Pro benchmark, and core-dump debugging/epidemiology stories, so they remain research, benchmark, or technical operating context only; they are not Codex model, plan, preview/GA, feature flag, activation, credential, or permission changes.
 - Kept the June 26 GPT-5.6 Sol preview as a separate Platform/API and limited-preview model announcement for select trusted partners/organizations, with broader ChatGPT/Codex/API availability described as coming soon; it is not promoted into the general Codex model picker guidance.
 - Kept the June 28 HP Frontier partnership as enterprise adoption context only: OpenAI says HP is deploying ChatGPT Enterprise and Codex to thousands of employees across roles, but this is not a new Codex model, consumer plan, activation step, local app setting, or credential/permission change.
 - Kept the June 24 AWS announcement and Workspace Agents announcement in separate enterprise/provider and ChatGPT research-preview lanes, not mixed into Codex App local automation, remote-control, or model-order guidance.
 - Audited the official use-case catalog again: 60 official cards, 60 local cards, 0 missing local/extra IDs, 0 local `promptEn`/`promptKo` gaps, 0 official prompt mismatches, and 0 multiline Korean prompt regressions.
-- Used the saved social research note as the baseline. Chrome opened the targeted X and Threads surfaces, but X returned an empty body, Threads exposed only search shell content, and LinkedIn fell back to a blank tab, so no unverified social-only claim was promoted.
+- Used the saved social research note as the baseline. Chrome surfaced a fresh X reset-bank community/event post from VB and Dominik, while Threads and LinkedIn were community/noisy; because the reset claim was not corroborated by official docs, it was recorded only in the local research note and not promoted into the guide.
 
 ## June 12, 2026 Refresh Notes
 
