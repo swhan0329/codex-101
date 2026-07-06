@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: July 5, 2026</strong><br/>
+  <strong>Last updated: July 6, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
@@ -29,18 +29,17 @@ The guide is written from the official OpenAI Codex documentation first, then ma
 - **Professional users**: read sections `12-14` for `AGENTS.md`, `config.toml`, and MCP, then `15-17` for sessions, automation, and prompt contracts.
 - **Example-driven readers**: open the live site and the use-case gallery to start from real workflows instead of feature lists.
 
-## July 5, 2026 Refresh Notes
+## July 6, 2026 Refresh Notes
 
 - Rechecked `developers.openai.com/codex/models` first again. The recommended Codex lanes remain `gpt-5.5`, `gpt-5.4`, `gpt-5.4-mini`, and `gpt-5.3-codex-spark`; `gpt-5.2` and `gpt-5.3-codex` are treated as deprecated for ChatGPT-authenticated Codex, not as fallback recommendations.
 - Rechecked Quickstart, pricing, speed/Fast mode, best practices, config, Windows/Windows App/IDE/App features/App automations/cloud, remote connections, integrations, MCP, hooks, plugins, skills, Sites, OpenAI API changelog, and current Platform/API surfaces. No Codex activation-flow, model-order, remote-control procedure, Sites setup, or Windows setup change was needed.
 - Pricing now needs the Free/Go/Plus/Pro split to stay visible: `codex/pricing` lists Free $0, Go $8, Plus $20, Pro from $100, Business, Enterprise & Edu, and API Key. Fast mode remains a ChatGPT-sign-in feature for Codex app, CLI, and IDE extension: it speeds GPT-5.5/GPT-5.4 by 1.5x while consuming 2.5x/2x standard credits respectively; API-key Codex uses standard API pricing instead.
-- Rechecked recent `developers.openai.com/blog` and `openai.com/index` surfaces. `Mastering Codex Remote for engineering` reinforces the phone-as-control-center pattern already documented in Remote connections, and `Making private MCP servers reachable without making them public` stays in the Platform/API Secure MCP Tunnel lane. The Simplex customer story was added as enterprise adoption and measurable AI-first delivery context, not a Codex model, plan, preview/GA, feature flag, activation, credential, or permission change.
-- Rechecked broader OpenAI product posts. `Dreaming: Better memory for a more helpful ChatGPT` is a ChatGPT memory update, not a Codex configuration or API/Codex model change, so it is kept out of Codex setup guidance.
+- Rechecked recent `developers.openai.com/blog` and `openai.com/index` surfaces. The public OpenAI news index still tops out at June 30, 2026 items, so no newer Codex product launch was added today. Existing Codex Remote, private MCP server/Secure MCP Tunnel, Simplex, and ChatGPT Dreaming notes remain separated into operating, Platform/API, enterprise-adoption, and ChatGPT-memory lanes.
 - Kept the June 26 GPT-5.6 Sol preview as a separate Platform/API and limited-preview model announcement for select trusted partners/organizations, with broader ChatGPT/Codex/API availability described as coming soon; it is not promoted into the general Codex model picker guidance.
 - Kept the June 28 HP Frontier partnership as enterprise adoption context only: OpenAI says HP is deploying ChatGPT Enterprise and Codex to thousands of employees across roles, but this is not a new Codex model, consumer plan, activation step, local app setting, or credential/permission change.
 - Kept the June 24 AWS announcement and Workspace Agents announcement in separate enterprise/provider and ChatGPT research-preview lanes, not mixed into Codex App local automation, remote-control, or model-order guidance.
 - Audited the official use-case catalog again: 60 official cards after excluding collection pages, 60 local cards, 0 missing local/extra IDs, 0 local `promptEn`/`promptKo` gaps, 0 official prompt mismatches, and 0 multiline Korean prompt regressions.
-- Used the saved social research note as the baseline. Chrome-specific control was not exposed in this session; Playwright fallback could not use its bundled Chromium, and system Chrome public pages redirected X/LinkedIn to login while Threads showed noisy public posts. No unverified X, Threads, or LinkedIn claim was promoted into the public guide.
+- Used the saved social research note as the baseline. Chrome plugin connection was attempted, but the Chrome extension backend returned `Browser is not available: extension`, and `agent.browsers.list()` exposed only the Codex in-app browser. X, Threads, and LinkedIn were not checked through the user's Chrome session, and no unverified social claim was promoted into the public guide.
 
 ## June 12, 2026 Refresh Notes
 
