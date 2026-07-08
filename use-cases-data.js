@@ -1,6 +1,6 @@
 // Korean-first Codex use-case catalog.
 // Source baseline: https://developers.openai.com/codex/use-cases
-// Last official scrape: 2026-07-07
+// Last official scrape: 2026-07-08
 window.codexUseCaseCategories = [
     {
         "id": "today",
@@ -537,8 +537,8 @@ window.codexUseCases = [
                 "Work you want to hand off and let Codex continue in the background"
             ],
             "skills": [],
-            "promptEn": "@Computer [do the task you want completed across your Mac]\n\nFor example:\n\n- Play some music to help me focus.\n- Help me add my interview notes from Notes to Ashby.\n- Look through my Messages app for the trip ideas Brooke sent me this week, add the best options to a new note called \"Yosemite ideas\", and draft a reply back to her.",
-            "promptKo": "@Computer [do the task you want completed across your Mac]\n\n예를 들어:\n\n- 집중할 수 있도록 음악을 틀어줘.\n- Notes에 있는 내 interview notes를 Ashby에 추가하는 걸 도와줘.\n- Messages app에서 Brooke가 이번 주에 보낸 trip ideas를 찾아보고, 가장 좋은 options를 \"Yosemite ideas\"라는 새 note에 추가하고, 그녀에게 보낼 reply를 draft해줘.",
+            "promptEn": "@Computer [do the task you want completed across your Mac]\n\nFor example:\n- Play some music to help me focus.\n- Help me add my interview notes from Notes to Ashby.\n- Look through my Messages app for the trip ideas Brooke sent me this week, add the best options to a new note called \"Yosemite ideas\", and draft a reply back to her.",
+            "promptKo": "@Computer [do the task you want completed across your Mac]\n\n예를 들어:\n- 집중할 수 있도록 음악을 틀어줘.\n- Notes에 있는 내 interview notes를 Ashby에 추가하는 걸 도와줘.\n- Messages app에서 Brooke가 이번 주에 보낸 trip ideas를 찾아보고, 가장 좋은 options를 \"Yosemite ideas\"라는 새 note에 추가하고, 그녀에게 보낼 reply를 draft해줘.",
             "guideSectionsEn": [
                 "Introduction",
                 "How to use",
@@ -894,8 +894,8 @@ window.codexUseCases = [
                     "url": "https://github.com/openai/plugins/tree/main/plugins/vercel"
                 }
             ],
-            "promptEn": "Use @build-web-apps to turn [repo, screenshot, design, or rough app idea] into a working website.\n\nThen use @vercel to deploy a preview and hand me the live URL.\n\nContext:\n\n- [what the site should do]\n- [source data, API, docs, or assets to use]\n- [style or product constraints]\n- [anything not to change]\n\nBefore you hand it back, run the local build and verify the deployment is ready.",
-            "promptKo": "@build-web-apps를 사용해 [repo, screenshot, design, or rough app idea]를 working website로 만들어줘.\n\n그다음 @vercel을 사용해 preview를 deploy하고 live URL을 넘겨줘.\n\nContext:\n\n- [what the site should do]\n- [source data, API, docs, or assets to use]\n- [style or product constraints]\n- [anything not to change]\n\n넘겨주기 전에 local build를 실행하고 deployment가 ready인지 검증해줘.",
+            "promptEn": "Use @build-web-apps to turn [repo, screenshot, design, or rough app idea] into a working website.\n\nThen use @vercel to deploy a preview and hand me the live URL.\n\nContext:\n- [what the site should do]\n- [source data, API, docs, or assets to use]\n- [style or product constraints]\n- [anything not to change]\n\nBefore you hand it back, run the local build and verify the deployment is ready.",
+            "promptKo": "@build-web-apps를 사용해 [repo, screenshot, design, or rough app idea]를 working website로 만들어줘.\n\n그다음 @vercel을 사용해 preview를 deploy하고 live URL을 넘겨줘.\n\nContext:\n- [what the site should do]\n- [source data, API, docs, or assets to use]\n- [style or product constraints]\n- [anything not to change]\n\n넘겨주기 전에 local build를 실행하고 deployment가 ready인지 검증해줘.",
             "guideSectionsEn": [
                 "Start with the site and the deploy target",
                 "Check the result before you share it",
@@ -979,8 +979,8 @@ window.codexUseCases = [
                 "QA loops that should end with severity, repro steps, and a short triage summary"
             ],
             "skills": [],
-            "promptEn": "@Computer Test my app in [environment].\n\nTest these flows:\n\n- [hero use case 1]\n- [hero use case 2]\n- [hero use case 3]\n\nFor every bug you find, include:\n\n- repro steps\n- expected result\n- actual result\n- severity\n\nKeep going past non-blocking issues and end with a short triage summary.",
-            "promptKo": "@Computer [environment]에서 내 app을 test해줘.\n\n이 flows를 test해:\n\n- [hero use case 1]\n- [hero use case 2]\n- [hero use case 3]\n\n찾은 모든 bug마다 다음을 포함해:\n\n- repro steps\n- expected result\n- actual result\n- severity\n\nnon-blocking issues가 있어도 계속 진행하고, 마지막에는 짧은 triage summary로 마무리해.",
+            "promptEn": "@Computer Test my app in [environment].\n\nTest these flows:\n- [hero use case 1]\n- [hero use case 2]\n- [hero use case 3]\n\nFor every bug you find, include:\n- repro steps\n- expected result\n- actual result\n- severity\n\nKeep going past non-blocking issues and end with a short triage summary.",
+            "promptKo": "@Computer [environment]에서 내 app을 test해줘.\n\n이 flows를 test해:\n- [hero use case 1]\n- [hero use case 2]\n- [hero use case 3]\n\n찾은 모든 bug마다 다음을 포함해:\n- repro steps\n- expected result\n- actual result\n- severity\n\nnon-blocking issues가 있어도 계속 진행하고, 마지막에는 짧은 triage summary로 마무리해.",
             "guideSectionsEn": [
                 "Introduction",
                 "How to use",
@@ -1069,8 +1069,8 @@ window.codexUseCases = [
                 "Work that needs a quick check across Messages plus a few related apps"
             ],
             "skills": [],
-            "promptEn": "@Computer Look at my messages from [person].\n\nThen:\n\n- understand the request\n- complete the task across the apps involved\n- draft a reply in the same thread\n\nPause before anything irreversible, such as placing an order or confirming a booking.",
-            "promptKo": "@Computer [person]에게서 온 내 messages를 봐줘.\n\nThen:\n\n- request를 이해해\n- 관련된 apps를 넘나들며 task를 complete해\n- 같은 thread에 reply draft를 작성해\n\n주문을 넣거나 booking을 확정하는 것처럼 irreversible한 일은 하기 전에 멈춰.",
+            "promptEn": "@Computer Look at my messages from [person].\n\nThen:\n- understand the request\n- complete the task across the apps involved\n- draft a reply in the same thread\n\nPause before anything irreversible, such as placing an order or confirming a booking.",
+            "promptKo": "@Computer [person]에게서 온 내 messages를 봐줘.\n\nThen:\n- request를 이해해\n- 관련된 apps를 넘나들며 task를 complete해\n- 같은 thread에 reply draft를 작성해\n\n주문을 넣거나 booking을 확정하는 것처럼 irreversible한 일은 하기 전에 멈춰.",
             "guideSectionsEn": [
                 "Introduction",
                 "How to use",
@@ -2206,8 +2206,8 @@ window.codexUseCases = [
                 "Teams that need to run long experiments with clear success criteria."
             ],
             "skills": [],
-            "promptEn": "/goal Optimize the prompts in [prompt file or directory] until the eval suite reaches [target score or pass rate]. After each change, run [eval command], inspect the failing cases, and keep the prompt edits minimal and targeted. Stop when the target is met or when further prompt changes would need product or policy guidance.",
-            "promptKo": "/goal [prompt file or directory]의 prompts를 optimize해서 eval suite가 [target score or pass rate]에 도달할 때까지 진행해. 각 변경 후 [eval command]를 실행하고, failing cases를 inspect하고, prompt edits는 minimal하고 targeted하게 유지해. Target이 충족되거나 추가 prompt 변경에 product 또는 policy guidance가 필요해지면 멈춰.",
+            "promptEn": "/goal Complete [objective] without stopping until [verifiable end state].",
+            "promptKo": "/goal [verifiable end state]에 도달할 때까지 멈추지 말고 [objective]를 완료해.",
             "guideSectionsEn": [
                 "Introduction",
                 "Choose the right work",
@@ -2368,8 +2368,8 @@ window.codexUseCases = [
                     "url": "https://github.com/openai/plugins/tree/main/plugins/vercel"
                 }
             ],
-            "promptEn": "Use $chatgpt-apps with $openai-docs to scaffold the first version of this ChatGPT app.\n\nStack:\n\n- TypeScript MCP server\n- React widget\n- Vite build\n- Local HTTPS via ngrok\n\nConstraints:\n\n- Keep the app narrow: one read flow and at most one write flow.\n- Return concise structuredContent for the model and reserve widget-only data for _meta.\n- Make tool handlers idempotent.\n- Reuse existing repo patterns before adding dependencies.\n\nVerification:\n\n- Start the local server\n- Explain how to connect the app in ChatGPT developer mode\n- List the exact prompts to test",
-            "promptKo": "$chatgpt-apps와 $openai-docs를 사용해 이 ChatGPT app의 첫 version을 scaffold해줘.\n\nStack:\n\n- TypeScript MCP server\n- React widget\n- Vite build\n- Local HTTPS via ngrok\n\nConstraints:\n\n- App은 좁게 유지해: one read flow와 최대 one write flow.\n- Model에는 concise structuredContent를 반환하고 widget-only data는 _meta에만 둬.\n- Tool handlers를 idempotent하게 만들어.\n- Dependency를 추가하기 전에 existing repo patterns를 재사용해.\n\nVerification:\n\n- Local server 시작\n- ChatGPT developer mode에서 app을 connect하는 방법 설명\n- Test할 exact prompts 나열",
+            "promptEn": "Use $chatgpt-apps with $openai-docs to plan a ChatGPT app for [use case] in this repo.\n\nRequirements:\n- Start with one core user outcome.\n- Propose 3-5 tools with clear names, descriptions, inputs, and outputs.\n- Recommend whether v1 needs a widget or can start data-only.\n- Prefer TypeScript for the MCP server and React for the widget.\n- Call out auth, deployment, and test requirements.\n\nOutput:\n- Tool plan\n- Proposed file tree\n- Golden prompt set\n- Risks and open questions",
+            "promptKo": "$chatgpt-apps와 $openai-docs를 사용해 이 repo에서 [use case]를 위한 ChatGPT app을 plan해줘.\n\nRequirements:\n- 하나의 core user outcome에서 시작해.\n- 명확한 names, descriptions, inputs, outputs를 갖춘 3-5개 tools를 제안해.\n- v1에 widget이 필요한지, 아니면 data-only로 시작할 수 있는지 추천해.\n- MCP server에는 TypeScript를, widget에는 React를 선호해.\n- auth, deployment, test requirements를 짚어줘.\n\nOutput:\n- Tool plan\n- Proposed file tree\n- Golden prompt set\n- Risks and open questions",
             "guideSectionsEn": [
                 "What you build",
                 "Why Codex is a strong fit",
