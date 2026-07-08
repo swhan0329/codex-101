@@ -40,7 +40,7 @@ The guide is written from the official OpenAI Codex documentation first, then ma
 - Kept the June 28 HP Frontier partnership as enterprise adoption context only: OpenAI says HP is deploying ChatGPT Enterprise and Codex to thousands of employees across roles, but this is not a new Codex model, consumer plan, activation step, local app setting, or credential/permission change.
 - Kept the June 24 AWS announcement and Workspace Agents announcement in separate enterprise/provider and ChatGPT research-preview lanes, not mixed into Codex App local automation, remote-control, or model-order guidance.
 - Audited the official use-case catalog again: 60 official cards after excluding collection pages and 60 local cards. Updated six Starter prompt drifts (`use-your-computer-with-codex`, `deploy-app-or-website`, `qa-your-app-with-computer-use`, `complete-tasks-from-messages`, `follow-goals`, `chatgpt-apps`), including the changed `follow-goals` and `chatgpt-apps` official prompts, then confirmed 0 missing local/extra IDs, 0 local `promptEn`/`promptKo` gaps, 0 official prompt mismatches, and 0 multiline Korean prompt regressions.
-- Used the saved social research note as the baseline. Chrome plugin connection succeeded this time: targeted X search produced a blank readable body, Threads timed out before `DOMContentLoaded`, and LinkedIn surfaced only a third-party Korean post summarizing already official Goal Mode / Locked Computer Use status. No unverified social-only claim was promoted into the public guide.
+- Updated Section 20 from a generic field-tips block into person-linked practitioner cards. Cards now link to the relevant X post, LinkedIn post stream, or official corroborating page and summarize what each person advised.
 
 ## June 12, 2026 Refresh Notes
 
@@ -50,7 +50,7 @@ The guide is written from the official OpenAI Codex documentation first, then ma
 - Rechecked OpenAI Platform/API docs and kept those notes separate from Codex product guidance. GPT-5.5 remains the latest API model guidance, while Codex pricing/API-key availability still needs scope-specific reading.
 - Audited all 60 official Codex use cases after excluding collection pages. The catalog count, local/official IDs, `promptEn`, `promptKo`, and multiline Korean prompt shape are clean.
 - Rechecked OpenAI launch/customer-story surfaces. The June 11 Ona acquisition announcement is captured only as pre-closing enterprise execution direction, not as an enabled feature, model, plan, platform, preview/GA, or feature-flag change.
-- Chrome social checks for X, Threads, and LinkedIn were kept conservative in that run; the June 13 follow-up used logged-in X/LinkedIn people pages and moved the sourced people/tips into a separate research note.
+- Person-linked practitioner tips stay separate from product documentation. The public guide points readers to original posts or official corroborating docs, while the local research note keeps the detailed people/tip inventory.
 
 ## What's Covered
 
