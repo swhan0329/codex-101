@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: July 8, 2026</strong><br/>
+  <strong>Last updated: July 9, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
@@ -29,18 +29,18 @@ The guide is written from the official OpenAI Codex documentation first, then ma
 - **Professional users**: read sections `12-14` for `AGENTS.md`, `config.toml`, and MCP, then `15-17` for sessions, automation, and prompt contracts.
 - **Example-driven readers**: open the live site and the use-case gallery to start from real workflows instead of feature lists.
 
-## July 8, 2026 Refresh Notes
+## July 9, 2026 Refresh Notes
 
 - Rechecked `developers.openai.com/codex/models` first again. The recommended Codex lanes remain `gpt-5.5`, `gpt-5.4`, `gpt-5.4-mini`, and `gpt-5.3-codex-spark`; `gpt-5.2` and `gpt-5.3-codex` are treated as deprecated for ChatGPT-authenticated Codex, not as fallback recommendations.
 - Rechecked Quickstart, pricing, speed/Fast mode, best practices, config, Windows/Windows App/IDE/App features/App automations/cloud, remote connections, integrations, MCP, hooks, plugins, skills, Sites, OpenAI API changelog, and current Platform/API surfaces. No Codex activation-flow, model-order, remote-control procedure, Sites setup, or Windows setup change was needed.
 - Reflected the July 1, 2026 Codex changelog entry for Codex CLI 0.142.5 as a security/logging hygiene fix: full Responses WebSocket request payloads are no longer written to trace logs. This is not a model-order or setup-flow change.
 - Pricing now needs the Free/Go/Plus/Pro split to stay visible: `codex/pricing` lists Free $0, Go $8, Plus $20, Pro from $100, Business, Enterprise & Edu, and API Key. Fast mode remains a ChatGPT-sign-in feature for Codex app, CLI, and IDE extension: it speeds GPT-5.5/GPT-5.4 by 1.5x while consuming 2.5x/2x standard credits respectively; API-key Codex uses standard API pricing instead.
-- Rechecked recent `developers.openai.com/blog` and `openai.com/index` surfaces. The public OpenAI news index still tops out at June 30, 2026 items, so no newer Codex product launch was added today. Existing Codex Remote, private MCP server/Secure MCP Tunnel, Simplex, and ChatGPT Dreaming notes remain separated into operating, Platform/API, enterprise-adoption, and ChatGPT-memory lanes.
+- Rechecked recent `developers.openai.com/blog` and `openai.com/index` surfaces. The July 8 GPT-Live launch is ChatGPT Voice first, with API and Codex support described as in progress rather than live Codex setup guidance. The July 8 coding-evaluation post is reflected only as evaluation methodology using Codex-based investigator agents, and the July 7 Australian Payments Plus story is enterprise adoption context.
 - Kept the June 26 GPT-5.6 Sol preview as a separate Platform/API and limited-preview model announcement for select trusted partners/organizations, with broader ChatGPT/Codex/API availability described as coming soon; it is not promoted into the general Codex model picker guidance.
 - Kept the June 28 HP Frontier partnership as enterprise adoption context only: OpenAI says HP is deploying ChatGPT Enterprise and Codex to thousands of employees across roles, but this is not a new Codex model, consumer plan, activation step, local app setting, or credential/permission change.
 - Kept the June 24 AWS announcement and Workspace Agents announcement in separate enterprise/provider and ChatGPT research-preview lanes, not mixed into Codex App local automation, remote-control, or model-order guidance.
-- Audited the official use-case catalog again: 60 official cards after excluding collection pages and 60 local cards. Updated six Starter prompt drifts (`use-your-computer-with-codex`, `deploy-app-or-website`, `qa-your-app-with-computer-use`, `complete-tasks-from-messages`, `follow-goals`, `chatgpt-apps`), including the changed `follow-goals` and `chatgpt-apps` official prompts, then confirmed 0 missing local/extra IDs, 0 local `promptEn`/`promptKo` gaps, 0 official prompt mismatches, and 0 multiline Korean prompt regressions.
-- Updated Section 20 from a generic field-tips block into person-linked practitioner cards. Cards now link to the relevant X post, LinkedIn post stream, or official corroborating page and summarize what each person advised.
+- Audited the official use-case catalog again: 60 official cards after excluding collection pages and 60 local cards, with 0 missing local/extra IDs, 0 local `promptEn`/`promptKo` gaps, 0 official prompt mismatches, and 0 multiline Korean prompt regressions.
+- Rechecked the person-linked social cards against the monitored practitioner baseline. No newly verified person-level Codex tip needed promotion into the public guide, so Section 20's practitioner cards stay stable and the local research note carries the detailed matrix.
 
 ## June 12, 2026 Refresh Notes
 
