@@ -1,6 +1,6 @@
 // Korean-first Codex use-case catalog.
 // Source baseline: https://developers.openai.com/codex/use-cases
-// Last official scrape: 2026-07-09
+// Last official scrape: 2026-07-10
 window.codexUseCaseCategories = [
     {
         "id": "today",
@@ -144,8 +144,8 @@ window.codexUseCases = [
                     "url": "https://developers.openai.com/codex/plugins"
                 }
             ],
-            "promptEn": "Can you check @slack, @gmail, @google-calendar, and @notion and tell me what needs my attention?\n\nLook for anything important or surprising that I might miss.",
-            "promptKo": "내 @slack, @gmail, @google-calendar, @notion을 확인해서 내가 신경 써야 할 일을 알려줄 수 있어?\n\n내가 놓칠 수 있는 중요하거나 예상 밖의 일이 있는지 찾아줘.",
+            "promptEn": "Build my work brief for [date].\n\nReview my calendar, unread direct messages and mentions from the last 24 hours, unread email from the last 24 hours, open follow-ups, and the project notes or trackers I name. If a prior brief is available, call out what changed. Create a short brief with:\n\n- top priorities\n- meeting preparation\n- messages that need replies\n- decisions I owe\n- useful FYIs\n- missing access or uncertain context\n\nKeep confirmed facts separate from inference. Do not send messages, change documents, or create tasks.",
+            "promptKo": "[date]에 대한 내 work brief를 만들어줘.\n\n내 calendar, 지난 24시간의 unread direct messages and mentions, 지난 24시간의 unread email, open follow-ups, 그리고 내가 이름 붙인 project notes or trackers를 검토해줘. Prior brief가 있으면 무엇이 바뀌었는지 call out해줘. 다음을 포함한 short brief를 만들어줘:\n\n- top priorities\n- meeting preparation\n- messages that need replies\n- decisions I owe\n- useful FYIs\n- missing access or uncertain context\n\nConfirmed facts와 inference를 분리해. Messages를 보내거나, documents를 변경하거나, tasks를 만들지 마.",
             "guideSectionsEn": [
                 "Use Codex as a teammate",
                 "Start a teammate thread",
@@ -285,8 +285,8 @@ window.codexUseCases = [
                     "url": "https://developers.openai.com/codex/plugins"
                 }
             ],
-            "promptEn": "Analyze @sales-export.csv\n\nQuestion: Which customer segment changed the most last quarter?\n\nPlease:\n- inspect the columns before analyzing\n- answer the question from the data\n- create a simple browser visualization as an HTML file\n- start a local preview so I can open it in the Codex browser",
-            "promptKo": "@sales-export.csv를 분석해줘\n\nQuestion: 지난 quarter에 가장 많이 변한 customer segment는 무엇이야?\n\nPlease:\n- 분석하기 전에 columns를 inspect해줘\n- data를 근거로 question에 답해줘\n- 간단한 browser visualization을 HTML file로 만들어줘\n- Codex browser에서 열 수 있도록 local preview를 시작해줘",
+            "promptEn": "Analyze @sales-export.csv\n\nQuestion: Which customer segment changed the most last quarter?\n\nPlease:\n- inspect the columns before analyzing\n- answer the question from the data\n- create a simple browser visualization as an HTML file\n- start a local preview so I can open it in the built-in browser",
+            "promptKo": "@sales-export.csv를 분석해줘\n\nQuestion: 지난 quarter에 가장 많이 변한 customer segment는 무엇이야?\n\nPlease:\n- 분석하기 전에 columns를 inspect해줘\n- data를 근거로 question에 답해줘\n- 간단한 browser visualization을 HTML file로 만들어줘\n- built-in browser에서 열 수 있도록 local preview를 시작해줘",
             "guideSectionsEn": [
                 "Analyze the data",
                 "Follow-up analysis"
@@ -1250,8 +1250,8 @@ window.codexUseCases = [
                     "url": "https://github.com/openai/skills/tree/main/skills/.system/skill-creator"
                 }
             ],
-            "promptEn": "Use $skill-creator to create a Codex skill that [fixes failing Buildkite checks on a GitHub PR / turns PR notes into inline review comments / writes our release notes from merged PRs]\n\nUse these sources when creating the skill:\n- Working example: [say \"use this thread,\" link a merged PR, or paste a good Codex answer]\n- Source: [paste a Slack thread, PR review link, runbook URL, docs URL, or ticket]\n- Repo: [repo path, if this skill depends on one repo]\n- Scripts or commands to reuse: [test command], [preview command], [log-fetch script], [release command]\n- Good output: [paste the Slack update, changelog entry, review comment, ticket, or final answer you want future threads to match]",
-            "promptKo": "$skill-creator를 사용해 [fixes failing Buildkite checks on a GitHub PR / turns PR notes into inline review comments / writes our release notes from merged PRs]하는 Codex skill을 만들어줘\n\nskill을 만들 때 이 sources를 사용해:\n- Working example: [say \"use this thread,\" link a merged PR, or paste a good Codex answer]\n- Source: [paste a Slack thread, PR review link, runbook URL, docs URL, or ticket]\n- Repo: [repo path, if this skill depends on one repo]\n- Scripts or commands to reuse: [test command], [preview command], [log-fetch script], [release command]\n- Good output: [paste the Slack update, changelog entry, review comment, ticket, or final answer you want future threads to match]",
+            "promptEn": "Use $skill-creator to create a Codex skill that [fixes failing Buildkite checks on a GitHub PR / turns PR notes into inline review comments / writes our release notes from merged PRs]\n\nUse these sources when creating the skill:\n- Working example: [say \"use this task,\" link a merged PR, or paste a good Codex answer]\n- Source: [paste a Slack thread, PR review link, runbook URL, docs URL, or ticket]\n- Repo: [repo path, if this skill depends on one repo]\n- Scripts or commands to reuse: [test command], [preview command], [log-fetch script], [release command]\n- Good output: [paste the Slack update, changelog entry, review comment, ticket, or final answer you want future tasks to match]",
+            "promptKo": "$skill-creator를 사용해 [fixes failing Buildkite checks on a GitHub PR / turns PR notes into inline review comments / writes our release notes from merged PRs]하는 Codex skill을 만들어줘\n\nskill을 만들 때 이 sources를 사용해:\n- Working example: [say \"use this task,\" link a merged PR, or paste a good Codex answer]\n- Source: [paste a Slack thread, PR review link, runbook URL, docs URL, or ticket]\n- Repo: [repo path, if this skill depends on one repo]\n- Scripts or commands to reuse: [test command], [preview command], [log-fetch script], [release command]\n- Good output: [paste the Slack update, changelog entry, review comment, ticket, or final answer you want future tasks to match]",
             "guideSectionsEn": [
                 "Create a skill Codex can keep on hand",
                 "How to use",
@@ -1903,8 +1903,8 @@ window.codexUseCases = [
                     "url": "https://developers.openai.com/codex/security/plugin"
                 }
             ],
-            "promptEn": "Use $codex-security:security-diff-scan to review this PR, commit, branch diff, or working-tree patch for security regressions.\n\nScope and rules:\n- Target: [this pull request / commit SHA / branch diff from BASE to HEAD / the current working-tree patch]\n- I am authorized to assess this repository and change set.\n- Pay particular attention to [auth, input handling, secrets, filesystem, network, dependencies, or other sensitive surface].\n\nReturn the final Markdown report and any Codex app review directives for findings that require human review.",
-            "promptKo": "$codex-security:security-diff-scan을 사용해서 이 PR, commit, branch diff, 또는 working-tree patch의 security regressions를 review해줘.\n\nScope and rules:\n- Target: [this pull request / commit SHA / branch diff from BASE to HEAD / the current working-tree patch]\n- 나는 이 repository와 change set을 assess할 권한이 있어.\n- [auth, input handling, secrets, filesystem, network, dependencies, or other sensitive surface]에 특히 주의해줘.\n\nfinal Markdown report와 human review가 필요한 findings에 대한 Codex app review directives를 반환해줘.",
+            "promptEn": "Use $codex-security:security-diff-scan to review this PR, commit, branch diff, or working-tree patch for security regressions.\n\nScope and rules:\n- Target: [this pull request / commit SHA / branch diff from BASE to HEAD / the current working-tree patch]\n- I am authorized to assess this repository and change set.\n- Pay particular attention to [auth, input handling, secrets, filesystem, network, dependencies, or other sensitive surface].\n\nReturn the final Markdown report and inline code comments for findings that require human review.",
+            "promptKo": "$codex-security:security-diff-scan을 사용해서 이 PR, commit, branch diff, 또는 working-tree patch의 security regressions를 review해줘.\n\nScope and rules:\n- Target: [this pull request / commit SHA / branch diff from BASE to HEAD / the current working-tree patch]\n- 나는 이 repository와 change set을 assess할 권한이 있어.\n- [auth, input handling, secrets, filesystem, network, dependencies, or other sensitive surface]에 특히 주의해줘.\n\nfinal Markdown report와 human review가 필요한 findings에 대한 inline code comments를 반환해줘.",
             "guideSectionsEn": [
                 "Review the change instead of the whole repository",
                 "Run a focused pass",
@@ -2460,8 +2460,8 @@ window.codexUseCases = [
                     "url": "https://github.com/openai/skills/tree/main/skills/.system/skill-creator"
                 }
             ],
-            "promptEn": "Use $cli-creator to create a CLI you can use, and use $skill-creator to create the companion skill in this same thread.\n\nSource to learn from: [docs URL, OpenAPI spec, redacted curl command, existing script path, log folder, CSV or JSON export, SQLite database path, or pasted --help output].\n\nFirst job the CLI should support: [download failed CI logs from a build URL, search support tickets and read one by ID, query an admin API, read a local database, or run one step from an existing script].\n\nOptional write job: [create a draft comment, upload media, retry a failed job, or read-only for now].\n\nCommand name: [cli-name, or recommend one].\n\nBefore coding, show me the proposed command surface and ask only for missing details that would block the build.",
-            "promptKo": "$cli-creator를 사용해 네가 사용할 수 있는 CLI를 만들고, 같은 thread에서 $skill-creator를 사용해 companion skill도 만들어줘.\n\n학습할 source: [docs URL, OpenAPI spec, redacted curl command, existing script path, log folder, CSV or JSON export, SQLite database path, or pasted --help output].\n\nCLI가 먼저 지원해야 할 job: [download failed CI logs from a build URL, search support tickets and read one by ID, query an admin API, read a local database, or run one step from an existing script].\n\nOptional write job: [create a draft comment, upload media, retry a failed job, or read-only for now].\n\nCommand name: [cli-name, or recommend one].\n\n코딩하기 전에 proposed command surface를 보여주고, build를 막는 누락 정보가 있을 때만 질문해줘.",
+            "promptEn": "Use $cli-creator to create a CLI you can use, and use $skill-creator to create the companion skill in this same task.\n\nSource to learn from: [docs URL, OpenAPI spec, redacted curl command, existing script path, log folder, CSV or JSON export, SQLite database path, or pasted --help output].\n\nFirst job the CLI should support: [download failed CI logs from a build URL, search support tickets and read one by ID, query an admin API, read a local database, or run one step from an existing script].\n\nOptional write job: [create a draft comment, upload media, retry a failed job, or read-only for now].\n\nCommand name: [cli-name, or recommend one].\n\nBefore coding, show me the proposed command surface and ask only for missing details that would block the build.",
+            "promptKo": "$cli-creator를 사용해 네가 사용할 수 있는 CLI를 만들고, 같은 task에서 $skill-creator를 사용해 companion skill도 만들어줘.\n\n학습할 source: [docs URL, OpenAPI spec, redacted curl command, existing script path, log folder, CSV or JSON export, SQLite database path, or pasted --help output].\n\nCLI가 먼저 지원해야 할 job: [download failed CI logs from a build URL, search support tickets and read one by ID, query an admin API, read a local database, or run one step from an existing script].\n\nOptional write job: [create a draft comment, upload media, retry a failed job, or read-only for now].\n\nCommand name: [cli-name, or recommend one].\n\n코딩하기 전에 proposed command surface를 보여주고, build를 막는 누락 정보가 있을 때만 질문해줘.",
             "guideSectionsEn": [
                 "Introduction",
                 "How to use",
@@ -2602,8 +2602,8 @@ window.codexUseCases = [
                     "url": "https://chatgpt.com/plugins/share/sites"
                 }
             ],
-            "promptEn": "Use @sites to build and deploy an internal app for [team or workflow].\n\nGoal:\n- [what the app should help people do]\n- [who should use it]\n- [source docs, data, or connected services Codex should inspect]\n\nRequirements:\n- Keep the first version focused on one useful workflow.\n- Use D1 for structured data persistence.\n- Use R2 for user-uploaded files if needed.\n- Test the main flow, persistence, and responsive layout before deploying.\n\nMake it available to all workspace users.",
-            "promptKo": "@sites를 사용해 [team or workflow]를 위한 internal app을 build하고 deploy해줘.\n\nGoal:\n- [what the app should help people do]\n- [who should use it]\n- [source docs, data, or connected services Codex should inspect]\n\nRequirements:\n- 첫 version은 하나의 useful workflow에 집중해줘.\n- Structured data persistence에는 D1을 사용해줘.\n- User-uploaded file이 필요하면 R2를 사용해줘.\n- Deploy하기 전에 main flow, persistence, responsive layout을 test해줘.\n\n모든 workspace user가 사용할 수 있게 해줘.",
+            "promptEn": "Build and deploy an internal app for [team or workflow].\n\nGoal:\n- [what the app should help people do]\n- [who should use it]\n- [source docs, data, or connected services ChatGPT should inspect]\n\nRequirements:\n- Keep the first version focused on one useful workflow.\n- Use D1 for structured data persistence.\n- Use R2 for user-uploaded files if needed.\n- Test the main flow, persistence, and responsive layout before deploying.\n\nMake it available to all workspace users.",
+            "promptKo": "[team or workflow]를 위한 internal app을 build하고 deploy해줘.\n\nGoal:\n- [what the app should help people do]\n- [who should use it]\n- [source docs, data, or connected services ChatGPT should inspect]\n\nRequirements:\n- 첫 version은 하나의 useful workflow에 집중해줘.\n- Structured data persistence에는 D1을 사용해줘.\n- User-uploaded file이 필요하면 R2를 사용해줘.\n- Deploy하기 전에 main flow, persistence, responsive layout을 test해줘.\n\n모든 workspace user가 사용할 수 있게 해줘.",
             "guideSectionsEn": [
                 "Build and deploy from one thread",
                 "Give Codex the workflow context",

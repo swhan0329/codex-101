@@ -17,7 +17,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=20260709-docs-social-check" />
+    <link rel="stylesheet" href="style.css?v=20260710-gpt56-refresh" />
 </head>
 
 <body data-page="home">
@@ -51,7 +51,7 @@
                     <p class="hero-badge">
                         <span data-i18n="hero_badge_prefix">공식 문서 기준 재검수</span>
                         <span aria-hidden="true"> · </span>
-                        <span class="live-date" data-date-format="long">2026년 7월 9일</span>
+                        <span class="live-date" data-date-format="long">2026년 7월 10일</span>
                     </p>
                     <h1 class="hero-title" data-i18n="hero_title">OpenAI Codex를<br />실무에 바로 붙이는 가이드</h1>
                     <p class="hero-sub" data-i18n="hero_sub">CLI · Desktop App (macOS/Windows) · IDE Extension · Web · Mobile · SDK automation<br />최신 공식 문서를 기준으로 어디서 시작할지, 어떤 모델을 쓸지, 샌드박스/승인, MCP, plugins, automations를 처음 사용자와 실무 사용자 모두 읽기 쉽도록 다시 정리했습니다.</p>
@@ -212,7 +212,7 @@
                                 <tr>
                                     <td data-i18n="overview_decision_local_case">내 프로젝트에서 작은 수정</td>
                                     <td data-i18n="overview_decision_local_surface">App Local 또는 CLI</td>
-                                    <td data-i18n="overview_decision_local_model">gpt-5.5, 없으면 gpt-5.4</td>
+                                    <td data-i18n="overview_decision_local_model">gpt-5.6-sol, 일상 작업은 terra</td>
                                     <td><a href="#s5" data-i18n="overview_decision_local_next">05-06 설치와 첫 실행</a></td>
                                 </tr>
                                 <tr>
@@ -224,7 +224,7 @@
                                 <tr>
                                     <td data-i18n="overview_decision_team_case">팀 규칙과 자동화 도입</td>
                                     <td data-i18n="overview_decision_team_surface">CLI/App + AGENTS.md + MCP</td>
-                                    <td data-i18n="overview_decision_team_model">gpt-5.5/gpt-5.4, 빠른 보조 작업은 mini</td>
+                                    <td data-i18n="overview_decision_team_model">gpt-5.6-sol/terra, 반복 작업은 luna</td>
                                     <td><a href="#s12" data-i18n="overview_decision_team_next">12-16 운영 설정</a></td>
                                 </tr>
                                 <tr>
@@ -337,7 +337,7 @@
                             </tr>
                             <tr>
                                 <td>2026.04.23</td>
-                                <td data-i18n="tl12">GPT-5.5가 Codex 최우선 추천 모델로 승격</td>
+                                <td data-i18n="tl12">GPT-5.6 Sol/Terra/Luna가 Codex 추천 모델로 승격</td>
                             </tr>
                             <tr>
                                 <td>2026.05.14</td>
@@ -346,7 +346,7 @@
                         </tbody>
                     </table>
                 </div>
-                <p class="command-refs" data-i18n-html="s1_refs">출처: <a href="https://developers.openai.com/codex/" target="_blank">Codex overview</a> · <a href="https://developers.openai.com/codex/models/" target="_blank">Codex models</a> · <a href="https://developers.openai.com/api/docs/models" target="_blank">OpenAI API Models</a> · <a href="https://openai.com/index/introducing-gpt-5-5/" target="_blank">Introducing GPT-5.5</a> · <a href="https://openai.com/index/work-with-codex-from-anywhere/" target="_blank">Work with Codex from anywhere</a></p>
+                <p class="command-refs" data-i18n-html="s1_refs">출처: <a href="https://developers.openai.com/codex/" target="_blank">Codex overview</a> · <a href="https://developers.openai.com/codex/models/" target="_blank">Codex models</a> · <a href="https://developers.openai.com/api/docs/models" target="_blank">OpenAI API Models</a> · <a href="https://developers.openai.com/api/docs/guides/latest-model" target="_blank">GPT-5.6 API guidance</a> · <a href="https://openai.com/index/work-with-codex-from-anywhere/" target="_blank">Work with Codex from anywhere</a></p>
             </section>
 
             <!-- Section 2 -->
@@ -386,12 +386,12 @@
 
                 <h4 data-i18n="s3_rec_title">⭐ 추천 모델</h4>
                 <div class="model-grid">
-                    <!-- GPT-5.5 -->
+                    <!-- GPT-5.6 Sol -->
                     <div class="model-card">
-                        <div class="model-banner">gpt-5.5</div>
+                        <div class="model-banner">gpt-5.6-sol</div>
                         <div class="model-body">
                             <p class="model-desc" data-i18n="m0_f">복잡한 코딩, computer use, 지식 작업, 리서치 워크플로를 위한 최신 프론티어 모델. ChatGPT로 로그인한 Codex에서 최우선 추천 모델입니다.</p>
-                            <div class="model-cmd">codex -m gpt-5.5</div>
+                            <div class="model-cmd">codex -m gpt-5.6-sol</div>
                             <div class="model-features">
                                 <div class="model-feat-row"><span class="model-feat-label"
                                         data-i18n="feat_cap">Capability</span><span class="model-feat-value"><span
@@ -416,12 +416,12 @@
                             </div>
                         </div>
                     </div>
-                    <!-- GPT-5.4 -->
+                    <!-- GPT-5.6 Terra -->
                     <div class="model-card">
-                        <div class="model-banner">gpt-5.4</div>
+                        <div class="model-banner">gpt-5.6-terra</div>
                         <div class="model-body">
-                            <p class="model-desc" data-i18n="m1_f">GPT-5.5가 아직 모델 선택기에 보이지 않거나 비용/속도 균형이 더 중요할 때의 기본 대체 모델입니다. 강한 코딩·추론·도구 사용 균형이 계속 장점입니다.</p>
-                            <div class="model-cmd">codex -m gpt-5.4</div>
+                            <p class="model-desc" data-i18n="m1_f">GPT-5.6 Terra는 일상 작업용 균형 모델입니다. Sol만큼 깊게 쓰지 않아도 되는 반복 개발, 문서 정리, 도구 사용 작업에 적합합니다.</p>
+                            <div class="model-cmd">codex -m gpt-5.6-terra</div>
                             <div class="model-features">
                                 <div class="model-feat-row"><span class="model-feat-label"
                                         data-i18n="feat_cap">Capability</span><span class="model-feat-value"><span
@@ -446,12 +446,12 @@
                             </div>
                         </div>
                     </div>
-                    <!-- GPT-5.4-Mini -->
+                    <!-- GPT-5.6 Luna -->
                     <div class="model-card">
-                        <div class="model-banner">gpt-5.4-mini</div>
+                        <div class="model-banner">gpt-5.6-luna</div>
                         <div class="model-body">
-                            <p class="model-desc" data-i18n="m1mini_f">빠르고 효율적인 mini 모델로, 가벼운 코딩 작업과 subagent/보조 agent 작업에 적합합니다.</p>
-                            <div class="model-cmd">codex -m gpt-5.4-mini</div>
+                            <p class="model-desc" data-i18n="m1mini_f">GPT-5.6 Luna는 가장 빠르고 비용 효율적인 추천 모델입니다. 반복적인 로컬 수정, 보조 agent, 대량 처리처럼 latency와 처리량이 중요한 작업에 적합합니다.</p>
+                            <div class="model-cmd">codex -m gpt-5.6-luna</div>
                             <div class="model-features">
                                 <div class="model-feat-row"><span class="model-feat-label"
                                         data-i18n="feat_cap">Capability</span><span class="model-feat-value"><span
@@ -508,7 +508,7 @@
                     </div>
                 </div>
                 <div class="callout">
-                    <p data-i18n="s3_rec_note">💡 최신 `codex/models` 기준 공식 가이드는 모델 선택기에서 `gpt-5.5`가 보이면 대부분의 작업을 거기서 시작하라고 권장합니다. 오늘은 같은 모델 페이지가 API Access를 true로 표시하고 pricing의 Plus/Pro/Business 사용량 표도 GPT-5.5 local-message 범위를 보여주며, API Key 표도 GPT-5.5/GPT-5.4/GPT-5.4 mini를 usage-based로 표시합니다. API-key 사용자는 실제 Codex 모델 선택기와 표준 API pricing을 같이 확인하세요. 비용/속도 균형이 중요하면 `gpt-5.4`를 계속 사용하면 됩니다. API에서는 `gpt-5.5`와 `gpt-5.5-pro`를 사용할 수 있으며, GPT-5.6 Sol은 아직 제한 preview/coming-soon 범위로 분리해야 합니다. 더 빠르고 가벼운 코딩 작업이나 subagent에는 `gpt-5.4-mini`, 거의 즉각적인 반복에는 ChatGPT Pro research preview인 `gpt-5.3-codex-spark`를 검토하세요. `gpt-5.2`와 `gpt-5.3-codex`는 ChatGPT 로그인 Codex 기준 deprecated이고, ChatGPT 릴리스 노트는 GPT-5.2 Instant/Thinking/Pro가 2026년 6월 12일부터 ChatGPT에서 retired됐다고 별도로 설명합니다.</p>
+                    <p data-i18n="s3_rec_note">💡 최신 `codex/models` 기준 공식 가이드는 GPT-5.6 family에서 시작하라고 안내합니다. 기본 Power setting은 `gpt-5.6-sol` medium reasoning이고, Sol은 복잡하고 중요한 작업, Terra는 일상 작업, Luna는 빠르고 반복적인 작업에 맞습니다. Pricing도 GPT-5.6 Sol/Terra/Luna를 Plus/Pro/Business/API Key 사용량 표에 포함합니다. 단, Fast mode는 아직 GPT-5.5/GPT-5.4 지원으로 문서화되어 있으므로 모델 선택과 속도 모드는 분리해서 판단하세요.</p>
                 </div>
 
                 <h4 data-i18n="s3_alt_title">🔄 대안 모델</h4>
@@ -553,16 +553,16 @@
                 <div class="callout">
                     <p data-i18n="s3_cfg_default">config.toml에서 기본 모델을 설정할 수 있습니다. 지정하지 않으면 추천 모델이 기본값입니다.</p>
                 </div>
-                <pre><code>model = "gpt-5.5"</code></pre>
+                <pre><code>model = "gpt-5.6-sol"</code></pre>
                 <div class="callout">
                     <p data-i18n="s3_cfg_temp">CLI에서 <code>/model</code> 명령 또는 <code>codex -m 모델명</code> 플래그로 임시 변경 가능.
                         IDE에서는 입력창 아래 모델 선택기 사용.</p>
                 </div>
-                <pre><code>codex -m gpt-5.5</code></pre>
+                <pre><code>codex -m gpt-5.6-sol</code></pre>
                 <div class="callout">
                     <p data-i18n="s3_cfg_cloud">Codex 클라우드 작업의 기본 모델은 현재 변경할 수 없습니다.</p>
                 </div>
-                <p class="command-refs" data-i18n-html="s3_refs">출처: <a href="https://developers.openai.com/codex/models/" target="_blank">Codex models</a> · <a href="https://developers.openai.com/codex/pricing/" target="_blank">Codex pricing</a> · <a href="https://developers.openai.com/api/docs/models" target="_blank">OpenAI API Models</a> · <a href="https://developers.openai.com/api/docs/models/gpt-5.5-pro" target="_blank">GPT-5.5 pro API model</a></p>
+                <p class="command-refs" data-i18n-html="s3_refs">출처: <a href="https://developers.openai.com/codex/models/" target="_blank">Codex models</a> · <a href="https://developers.openai.com/codex/pricing/" target="_blank">Codex pricing</a> · <a href="https://developers.openai.com/api/docs/models" target="_blank">OpenAI API Models</a> · <a href="https://developers.openai.com/api/docs/guides/latest-model" target="_blank">GPT-5.6 API guidance</a></p>
             </section>
 
             <!-- Section 3 -->
@@ -644,7 +644,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <p class="callout-inline" data-i18n="s4_note_access">현재 공식 문서는 모든 ChatGPT 플랜에 Codex가 포함된다고 설명합니다. 처음 보는 사용자라면 `Free $0`, `Go $8`, `Plus $20`, `Pro from $100` 순으로 보면 이해가 쉽고, 팀 사용자는 Business·Enterprise의 Codex-only pay-as-you-go seat를 같이 보면 됩니다. Pricing 페이지는 Plus / Pro 5x / Pro 20x / Business / API Key 표와 모델별 5시간 한도를 보여줍니다. Help Center Codex rate card는 대부분 고객에게 token-based pricing을 기본으로 안내하고, GPT-5.5를 1M tokens 기준 input 125 credits, cached input 12.50 credits, output 750 credits로 표시합니다. 실제 비용 판단은 메시지/작업 한도, token credit rate card, usage dashboard, 실제 모델 선택기, API 모델 가격표를 섞지 말고 함께 대조하세요. 2026년 6월 11-24일 eligible Plus/Pro 초대 reset banking은 dialog와 current terms로 조건을 확인해야 합니다. 이미지 생성은 일반 Codex 한도를 평균 3-5배 더 빨리 쓰며 Fast mode는 지원 모델에서 더 높은 비율로 크레딧을 소모합니다.</p>
+                        <p class="callout-inline" data-i18n="s4_note_access">현재 공식 문서는 모든 ChatGPT 플랜에 Codex가 포함된다고 설명합니다. 처음 보는 사용자라면 `Free $0`, `Go $8`, `Plus $20`, `Pro from $100` 순으로 보면 이해가 쉽고, 팀 사용자는 Business·Enterprise의 Codex-only pay-as-you-go seat를 같이 보면 됩니다. Pricing 페이지는 Plus / Pro 5x / Pro 20x / Business / API Key 표와 모델별 5시간 한도를 보여줍니다. Help Center Codex rate card는 대부분 고객에게 token-based pricing을 기본으로 안내하고, GPT-5.6 Sol/Terra/Luna의 plan별 5시간 사용량과 API Key usage-based 범위를 표시합니다. 실제 비용 판단은 메시지/작업 한도, token credit rate card, usage dashboard, 실제 모델 선택기, API 모델 가격표를 섞지 말고 함께 대조하세요. 2026년 6월 11-24일 eligible Plus/Pro 초대 reset banking은 dialog와 current terms로 조건을 확인해야 합니다. 이미지 생성은 일반 Codex 한도를 평균 3-5배 더 빨리 쓰며 Fast mode는 지원 모델에서 더 높은 비율로 크레딧을 소모합니다.</p>
                         <p class="command-refs" data-i18n-html="s4_refs">출처: <a href="https://developers.openai.com/codex/quickstart/" target="_blank">Quickstart</a> · <a href="https://developers.openai.com/codex/pricing/" target="_blank">Codex pricing</a> · <a href="https://help.openai.com/en/articles/20001106-codex-rate-card" target="_blank">Codex rate card</a> · <a href="https://developers.openai.com/codex/speed" target="_blank">Speed</a> · <a href="https://openai.com/index/codex-flexible-pricing-for-teams/" target="_blank">Pay-as-you-go pricing for teams</a></p>
                     </div>
                 </div>
@@ -831,7 +831,7 @@ then verify the page again and attach the screenshot result.</code></pre>
                     <div class="overview-visual-copy">
                         <p class="overview-action-kicker" data-i18n="computer_use_kicker">Computer use</p>
                         <h3 data-i18n="computer_use_title">Computer use를 하나의 기능 챕터로 이해하기</h3>
-                        <p data-i18n="computer_use_desc">공식 문서 기준으로 `gpt-5.4`는 첫 mainline built-in computer use 모델입니다. 즉, 화면을 보고 다음 행동을 정하고, 클릭이나 입력을 실행하고, 바뀐 화면을 다시 확인하는 루프를 모델 자체가 더 잘 돌 수 있게 됐다는 뜻입니다.</p>
+                        <p data-i18n="computer_use_desc">현재 Codex changelog는 GPT-5.6으로 Computer Use가 더 빨라졌다고 설명합니다. 화면을 보고 다음 행동을 정하고, 클릭이나 입력을 실행하고, 바뀐 화면을 다시 확인하는 루프를 더 빠르게 돌리는 맥락으로 읽으면 됩니다.</p>
                         <ul class="overview-list">
                             <li data-i18n="computer_use_p1">단순 채팅형 답변보다 “직접 UI를 보면서 작업”하는 자동화에 더 잘 맞습니다.</li>
                             <li data-i18n="computer_use_p2">핵심 흐름은 `screenshot → action → screenshot → verify/fix` 입니다.</li>
@@ -1229,8 +1229,8 @@ AGENTS.override.md  → 최우선
                 <h2><span class="section-num">13</span> <span data-i18n="s13_title">config.toml 설정</span></h2>
                 <pre data-i18n-html="code_s13_config"><code><span class="c">#:schema https://developers.openai.com/codex/config-schema.json</span>
 <span class="c"># ~/.codex/config.toml</span>
-model = "gpt-5.5"
-review_model = "gpt-5.4"
+model = "gpt-5.6-sol"
+review_model = "gpt-5.6-terra"
 model_provider = "openai"
 approval_policy = "on-request"
 sandbox_mode = "workspace-write"
@@ -1481,9 +1481,9 @@ codex exec "Fix all TODOs" --full-auto</code></pre>
                                 <p class="section-credit" data-i18n="s17_credit">이제 프롬프트는 문장 요령보다 작업 규칙을 분명히 정하는 일이 더 중요합니다.</p>
                             </div>
                         </div>
-                        <p data-i18n="s17_intro_desc">GPT-5.5 기준의 핵심은 세세한 절차를 모두 적는 것보다 목표 결과, 성공 기준, 제약, 사용할 수 있는 근거를 분명히 주고 모델이 적절한 경로를 고르게 하는 데 있습니다.</p>
-                        <p class="prompt-inline-ref" data-i18n-html="s17_intro_ref">레퍼런스: <a href="https://developers.openai.com/codex/learn/best-practices/" target="_blank">Codex Best practices</a> · <a href="https://developers.openai.com/codex/use-cases/follow-goals" target="_blank">Follow goals</a> · <a href="https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes" target="_blank">Enterprise/Edu release notes</a> · <a href="https://developers.openai.com/api/docs/guides/prompt-guidance?model=gpt-5.5" target="_blank">GPT-5.5 Prompt guidance</a> · <a href="https://openai.com/index/introducing-gpt-5-5/" target="_blank">Introducing GPT-5.5</a></p>
-                        <p data-i18n="pg_s1_intro">GPT-5.5 프롬프팅은 모든 단계를 과하게 지정하는 방식보다, 원하는 결과와 성공 기준을 선명하게 두고 필요한 도구·추론·검증 경로를 모델이 고르게 하는 쪽에 가깝습니다.</p>
+                        <p data-i18n="s17_intro_desc">GPT-5.6 기준의 핵심은 세세한 절차를 모두 적는 것보다 목표 결과, 성공 기준, 제약, 사용할 수 있는 근거를 분명히 주고 모델이 적절한 경로를 고르게 하는 데 있습니다.</p>
+                        <p class="prompt-inline-ref" data-i18n-html="s17_intro_ref">레퍼런스: <a href="https://developers.openai.com/codex/learn/best-practices/" target="_blank">Codex Best practices</a> · <a href="https://developers.openai.com/codex/use-cases/follow-goals" target="_blank">Follow goals</a> · <a href="https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes" target="_blank">Enterprise/Edu release notes</a> · <a href="https://developers.openai.com/api/docs/guides/prompt-guidance-gpt-5p6" target="_blank">GPT-5.6 Prompt guidance</a> · <a href="https://openai.com/index/introducing-gpt-5-5/" target="_blank">Introducing GPT-5.5</a></p>
+                        <p data-i18n="pg_s1_intro">GPT-5.6 프롬프팅은 모든 단계를 과하게 지정하는 방식보다, 원하는 결과와 성공 기준을 선명하게 두고 필요한 도구·추론·검증 경로를 모델이 고르게 하는 쪽에 가깝습니다.</p>
                         <div class="two-col">
                             <div class="callout">
                                 <strong data-i18n="s17_first_use_t">Strong first use: 결과와 멈춤 기준을 먼저 주세요</strong>
@@ -1700,7 +1700,7 @@ codex exec "Fix all TODOs" --full-auto</code></pre>
                         <div class="feature-list">
                             <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="pg_s5_f1">Responses API의 <code>phase</code>는 preamble 같은 중간 업데이트와 final answer를 구분합니다. assistant item을 수동 재전송한다면 기존 <code>phase</code> 값을 그대로 보존해야 합니다.</span></div>
                             <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="pg_s5_f2">Compaction을 쓸 때는 milestone 이후에만 압축하고, 압축 전후 프롬프트의 기능적 의미를 바꾸지 않는 편이 안전합니다.</span></div>
-                            <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="pg_s5_f3">GPT-5.5 마이그레이션은 모델만 먼저 바꾸고 reasoning을 고정한 뒤 eval로 차이를 보는 one-change-at-a-time 방식이 낫습니다.</span></div>
+                            <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="pg_s5_f3">GPT-5.6 family로 옮길 때는 모델만 먼저 바꾸고 reasoning을 고정한 뒤 eval로 차이를 보는 one-change-at-a-time 방식이 낫습니다.</span></div>
                         </div>
                         <div class="callout">
                             <strong data-i18n="pg_s5_callout_t">먼저 요청 방식, 그 다음 reasoning</strong>
@@ -1764,8 +1764,8 @@ Research rules:
                     <article class="product-card prompt-guide-card">
                         <div class="product-icon" data-i18n="s17_link2_kicker">Official</div>
                         <h3 data-i18n="s17_link2_title">OpenAI Prompt Guidance</h3>
-                        <p data-i18n="s17_link2_desc">GPT-5.5의 outcome-first prompting, reasoning effort, phase, compaction, validation, research/citation 규칙까지 포함한 공식 기준 문서를 같이 보세요.</p>
-                        <a href="https://developers.openai.com/api/docs/guides/prompt-guidance?model=gpt-5.5" target="_blank" class="btn btn-ghost" data-i18n="s17_link2_cta">공식 문서 보기</a>
+                        <p data-i18n="s17_link2_desc">GPT-5.6 시대의 outcome-first prompting, reasoning effort, phase, compaction, validation, research/citation 규칙까지 포함한 공식 기준 문서를 같이 보세요.</p>
+                        <a href="https://developers.openai.com/api/docs/guides/prompt-guidance-gpt-5p6" target="_blank" class="btn btn-ghost" data-i18n="s17_link2_cta">공식 문서 보기</a>
                     </article>
                 </div>
             </section>
@@ -1775,8 +1775,9 @@ Research rules:
                 <h2><span class="section-num">18</span> <span data-i18n="s18_title">고급 활용 기법</span></h2>
                 <p data-i18n="s18_intro">최신 best practices와 customization 문서를 같이 보면 장기적으로 잘 쓰는 사용자는 반복 작업을 skill로 만들고, 팀에 공유할 때는 plugin으로 묶고, 외부 시스템 연결은 MCP로 붙이고, 장기 작업은 bounded delegation으로 나눕니다.</p>
                 <pre data-i18n-html="code_s18_adv"><code><span class="c"># 모델 선택</span>
-/model gpt-5.4         <span class="c"># 기본 추천</span>
-/model gpt-5.4-mini    <span class="c"># 빠른 작업 / subagent</span>
+/model gpt-5.6-sol     <span class="c"># 복잡하고 중요한 작업</span>
+/model gpt-5.6-terra   <span class="c"># 일상 작업</span>
+/model gpt-5.6-luna    <span class="c"># 빠른 반복 작업 / subagent</span>
 
 <span class="c"># 플러그인 디렉터리 (CLI)</span>
 /plugins
@@ -1967,7 +1968,7 @@ codex --search "optimize with Next.js 15"
                     <a href="https://openai.com/index/using-codex-to-simulate-black-holes/" target="_blank" class="link-card">Black-hole simulations + Codex</a>
                     <a href="https://openai.com/index/gpt-5-5-with-trusted-access-for-cyber/" target="_blank" class="link-card">GPT-5.5-Cyber and Codex Security</a>
                     <a href="https://developers.openai.com/api/docs/models" target="_blank" class="link-card">OpenAI API Models</a>
-                    <a href="https://developers.openai.com/api/docs/models/gpt-5.5-pro" target="_blank" class="link-card">GPT-5.5 pro API Model</a>
+                    <a href="https://developers.openai.com/api/docs/guides/latest-model" target="_blank" class="link-card">GPT-5.6 API Model Guidance</a>
                     <a href="https://developers.openai.com/codex/models/" target="_blank" class="link-card">Codex Models (Official)</a>
                     <a href="#s17" class="link-card" data-i18n="s21_prompt_guide">Prompting Codex Agents Section</a>
                     <a href="https://developers.openai.com/api/docs/guides/prompt-engineering" target="_blank" class="link-card">Prompt Engineering</a>
@@ -1997,17 +1998,17 @@ codex --search "optimize with Next.js 15"
                     </div>
                     <p class="overview-fact-date">
                         <span data-i18n="overview_fact_date_prefix">업데이트 기준일</span>
-                        <span class="live-date" data-date-format="long">2026년 7월 9일</span>
+                        <span class="live-date" data-date-format="long">2026년 7월 10일</span>
                     </p>
                 </div>
                 <ol class="changelog-list" aria-label="Today update summary">
                     <li>
                         <strong data-i18n="overview_update_1_title">모델/사용 방식 매트릭스 재확인</strong>
-                        <span data-i18n="changelog_item_1">`codex/models`를 먼저 재확인했고, `gpt-5.5` 우선 추천과 `gpt-5.2`/`gpt-5.3-codex`의 ChatGPT 인증 Codex deprecated 상태를 반영했습니다.</span>
+                        <span data-i18n="changelog_item_1">`codex/models`를 먼저 재확인했고, `gpt-5.6-sol`/`gpt-5.6-terra`/`gpt-5.6-luna` 추천 전환과 `gpt-5.5`의 previous-generation 위치를 반영했습니다.</span>
                     </li>
                     <li>
                         <strong data-i18n="overview_update_2_title">요금제·크레딧 구조 재정리</strong>
-                        <span data-i18n="changelog_item_2">Pricing/rate card와 Speed 문서를 다시 확인했고 Free/Go 플랜, GPT-5.5 usage-based/API Key 범위, 125/12.50/750 credits per 1M tokens, Fast mode 2.5x/2x credit 소모를 분리했습니다.</span>
+                        <span data-i18n="changelog_item_2">Pricing/rate card와 Speed 문서를 다시 확인했고 GPT-5.6 Sol/Terra/Luna usage-based/API Key 범위와 Fast mode가 아직 GPT-5.5/GPT-5.4 전용이라는 차이를 분리했습니다.</span>
                     </li>
                     <li>
                         <strong data-i18n="overview_update_3_title">Quickstart·IDE·Mobile 경로 정리</strong>
@@ -2039,14 +2040,14 @@ codex --search "optimize with Next.js 15"
                     href="https://github.com/swhan0329/codex-101" target="_blank">PR을 환영합니다</a>.</p>
             <p class="footer-meta">
                 <span data-i18n="footer_date_prefix">최종 업데이트</span>:
-                        <span class="live-date" data-date-format="long">2026년 7월 9일</span>
+                        <span class="live-date" data-date-format="long">2026년 7월 10일</span>
             </p>
             <p class="footer-meta">Made by <a href="https://github.com/swhan0329" target="_blank">@swhan0329</a></p>
         </div>
     </footer>
 
-    <script src="i18n.js?v=20260709-docs-social-check"></script>
-    <script src="app.js?v=20260709-docs-social-check"></script>
+    <script src="i18n.js?v=20260710-gpt56-refresh"></script>
+    <script src="app.js?v=20260710-gpt56-refresh"></script>
 </body>
 
 </html>
