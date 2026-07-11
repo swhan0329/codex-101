@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 7월 10일</strong><br/>
+  <strong>최종 업데이트: 2026년 7월 11일</strong><br/>
   라이브 사이트는 보는 사람의 당일 날짜를 자동으로 표시하며, 최신 Codex 모델 가이드를 공식 문서 기준으로 반영합니다.
 </p>
 
@@ -39,14 +39,14 @@
 - 인트로에는 [OpenAI Developer Showcase](https://developers.openai.com/showcase) 안내를 추가해, Codex로 만든 실제 예시와 바로 실행해볼 만한 프롬프트 감을 먼저 잡을 수 있게 했습니다.
 - 최신 변경 로그는 첫 독서 흐름을 방해하지 않도록 맨 아래 Changelog 섹션으로 옮기고, 근거 문서는 접어서 볼 수 있게 낮췄습니다.
 
-### 일일 MCP 검증 스냅샷 (2026-07-10)
+### 일일 MCP 검증 스냅샷 (2026-07-11)
 
 - `codex/models`를 가장 먼저 다시 확인했고, 추천 모델이 GPT-5.6 family로 바뀐 것을 반영했습니다. 기본 Power setting은 `gpt-5.6-sol` medium reasoning이고, Sol은 복잡한 coding/computer use/research/security, Terra는 일상 작업, Luna는 빠르고 반복적인 고빈도 작업에 맞습니다. `gpt-5.5`는 previous-generation frontier model로 남고, `gpt-5.2`와 `gpt-5.3-codex`는 ChatGPT 인증 Codex 기준 deprecated로 유지됩니다.
 - Quickstart, Pricing, Speed/Fast mode, Best practices, Config, Windows/Windows App/IDE/App features/App Automations/Cloud, Remote connections, Integrations, MCP, Hooks, Plugins, Skills, Sites, OpenAI API latest-model/changelog와 Platform/API 문서를 다시 확인했습니다. Pricing은 GPT-5.6 Sol/Terra/Luna를 plan/API Key usage table에 포함하지만, Fast mode는 아직 GPT-5.5/GPT-5.4 지원으로 분리되어 있습니다.
-- Codex changelog의 2026-07-09 항목을 반영했습니다. Codex가 macOS/Windows ChatGPT desktop app 안으로 들어왔고, Markdown/code 직접 편집, inline annotations, sidebar PR review, multi-repo project, GPT-5.6 기반 faster Computer Use, Settings 안 plugin management, mobile/SSH reliability fix가 추가됐습니다.
-- OpenAI API latest-model/changelog는 별도 Platform/API lane으로 반영했습니다. `gpt-5.6` alias는 `gpt-5.6-sol`로 라우팅되고, Programmatic Tool Calling, Multi-agent beta, explicit prompt caching, persisted reasoning, max reasoning effort, Pro mode, original/auto image detail preservation이 추가됐습니다.
-- 공식 use-case catalog는 local 카드 60개, checked prompt 60개 기준으로 감사했습니다. `proactive-teammate`, `analyze-data-export`, `reusable-codex-skills`, `scan-code-changes-for-security`, `agent-friendly-clis`, `build-and-deploy-internal-apps`의 Starter prompt drift를 반영했고, `promptEn`/`promptKo` 누락 0, official prompt mismatch 0, multiline 한국어 요약 회귀 0입니다.
-- Chrome으로 사람별 practitioner baseline을 다시 대조했습니다. 새로 공개 가이드에 승격할 검증된 person-level Codex 팁은 없어서 공개 Section 20 practitioner cards는 유지하고, 로컬 social research note에 7월 10일 matrix를 업데이트했습니다.
+- OpenAI 2026-07-09 발표와 Codex changelog를 함께 반영했습니다. Codex가 macOS/Windows ChatGPT desktop app 안으로 들어왔고, 업데이트된 desktop app은 Free를 포함한 모든 ChatGPT plan에서 전 세계 제공됩니다. Markdown/code 직접 편집, inline annotations, sidebar PR review, multi-repo project, GPT-5.6 기반 faster Computer Use, Settings 안 plugin management, mobile/SSH reliability fix도 함께 반영했습니다.
+- OpenAI API latest-model/changelog는 별도 Platform/API lane으로 반영했습니다. `gpt-5.6` alias는 `gpt-5.6-sol`로 라우팅되고, Programmatic Tool Calling, Multi-agent beta, explicit prompt caching, persisted reasoning, max reasoning effort, Pro mode, original/auto image detail preservation이 추가됐습니다. Codex의 `Max`와 `Ultra`는 API mode가 아니라 제품 power setting으로 분리해 설명했습니다.
+- 공식 use-case catalog는 local 카드 60개, checked prompt 60개 기준으로 감사했습니다. `promptEn`/`promptKo` 누락 0, official prompt mismatch 0, multiline 한국어 요약 회귀 0입니다.
+- Chrome으로 사람별 practitioner baseline을 다시 대조했습니다. 새로 공개 가이드에 승격할 검증된 person-level Codex 팁은 없어서 공개 Section 20 practitioner cards는 유지하고, 로컬 social research note에 7월 11일 matrix를 업데이트했습니다.
 
 ### 누적 검증 메모
 
@@ -72,7 +72,7 @@
 - 섹션 17은 현재 GPT-5.6 Prompt Guidance와 Codex best practices를 반영해 다시 다듬었습니다. 세부 절차를 과하게 고정하기보다 outcome-first 요청, 성공 기준, 제약, 출력 기대치, stop rules를 먼저 두고, 긴 도구 작업에는 짧은 preamble을 사용하며, 근거형 답변에는 retrieval budget과 missing-evidence 규칙을 명시하고, assistant item을 수동 재전송할 때 Responses API `phase` 값을 보존하며, 코딩/시각 결과물은 마감 전 실제 검증을 요구하도록 정리했습니다.
 - 공식 Codex [Follow goals](https://developers.openai.com/codex/use-cases/follow-goals) use case를 섹션 17에 반영했고, 2026년 5월 21일 Enterprise/Edu 릴리스 노트 기준으로 Goal mode는 Codex app, IDE extension, CLI에서 일반 제공됩니다. 문서에서는 Goal mode를 한 번의 프롬프트보다 길지만 무한 backlog는 아닌 작업을 위한 checkpoint contract로 다룹니다. 시작할 때 목표, 완료 조건, 검증 명령, 중간 checkpoint, 중단/승인 조건을 함께 고정하고, 상태 업데이트는 현재 checkpoint, 검증한 것, 남은 것, blocker로 짧게 받도록 안내합니다.
 - `developers.openai.com/codex`, 관련 OpenAI 발표/검색 표면, API 모델 문서, Help Center 릴리스 노트, OpenAI API changelog도 폭넓게 다시 훑어봤고, 최우선 추천 모델 순서가 GPT-5.6 family로 바뀐 것을 반영했습니다. 2026년 6월 2일 [Codex for every role, tool, and workflow](https://openai.com/index/codex-for-every-role-tool-workflow/) 발표와 공식 Sites 문서는 workflow 확장으로 유지하고, 6월 2일 knowledge-work 보고서, 6월 25일 agentic-work 연구, 5월 13일 macOS certificate update 공지, 6월 1일 및 6월 24일 OpenAI/AWS Bedrock 업데이트, 5월 29일 Windows/Profile 릴리스 노트는 각자 별도 범위에 둡니다. Help Center Enterprise/Edu 릴리스 노트는 Sites가 eligible Enterprise/Edu workspace에서 preview이고, Enterprise/Edu에서는 기본 off라서 `Workspace settings > Permissions & Roles`와 Sites settings에서 관리한다고 설명합니다. 2026년 6월 21일 [Samsung Electronics brings ChatGPT and Codex to employees](https://openai.com/index/samsung-electronics-chatgpt-codex-deployment/)는 한국 전 직원 및 전 세계 DX 직원 대상 ChatGPT Enterprise/Codex rollout과 비개발 직무 workflow 확장 사례로만 반영했습니다. 2026년 6월 22일 [Daybreak](https://openai.com/index/daybreak-securing-the-world/)와 [Patch the Planet](https://openai.com/index/patch-the-planet/)은 Codex Security, GPT-5.5-Cyber trusted defender access, maintainer support, human review, disclosure/patch governance 맥락으로 반영했습니다. 2026년 6월 22일 [Codex-maxxing for long-running work](https://openai.com/index/codex-maxxing-long-running-work/)는 long-running Codex 운영 패턴으로만 반영했습니다. 2026년 6월 24일 Workspace Agents는 Codex-powered라고 설명되지만 ChatGPT Business/Enterprise/Edu/Teachers research preview와 agent governance 범위에 두었습니다. 2026년 6월 28일 HP Frontier partnership는 enterprise adoption 사례로만 분리했습니다. 새 Codex 일반 모델 순서, 일반 사용자 플랜, local app 설정 키, credential/permission 변화로 단정하지 않았습니다.
-- 2026년 7월 10일에는 공식 use-case catalog도 데이터셋 단위로 다시 감사했습니다. local 카드는 60개로 유지됐고, `promptEn` 누락 0, `promptKo` 누락 0, official prompt mismatch 0, multiline 공식 prompt인데 한국어가 1줄 요약인 항목 0입니다.
+- 2026년 7월 11일에는 공식 use-case catalog도 데이터셋 단위로 다시 감사했습니다. local 카드는 60개로 유지됐고, `promptEn` 누락 0, `promptKo` 누락 0, official prompt mismatch 0, multiline 공식 prompt인데 한국어가 1줄 요약인 항목 0입니다.
 - 사람별 practitioner baseline을 다시 대조했습니다. 새로 공개 가이드에 승격할 검증된 person-level Codex 팁은 없어서, 공개 Section 20 practitioner cards는 유지하고 로컬 social research note에만 사람별 matrix를 업데이트했습니다.
 - OpenAI 발표/고객 사례 표면에서는 2026년 6월 14일 [Introducing the OpenAI Partner Network](https://openai.com/index/introducing-openai-partner-network/)도 확인했습니다. 이는 enterprise 고객이 use case 발굴, workflow 재설계, 기존 시스템 통합, adoption/change management를 partner와 진행하기 쉽게 만드는 생태계 발표입니다. 6월 16일 Deployment Simulation과 6월 17일 LifeSciBench도 확인했지만 각각 safety/eval, life-science benchmark 맥락입니다. Codex 자체의 새 모델 순서, 일반 사용자 플랜, preview/GA 상태, 설정 키, feature flag, credential/permission 변화는 아니므로 분리해서 읽어야 합니다.
 
@@ -95,7 +95,7 @@
 
 이번 추가의 상세 근거와 사람별 메모는 공개 사이트가 아니라 로컬 리서치 노트에서만 관리합니다.
 
-2026년 7월 10일 실행 참고: deprecated Codex model 상태, ChatGPT 일반 모델 retirement, pricing table 한도, token-based rate card, Fast mode credit multiplier, API-key Codex 동작, direct API model availability는 분리해서 읽어야 합니다. `gpt-5.2`와 `gpt-5.3-codex`는 ChatGPT 인증 Codex에서는 deprecated이고, GPT-5.2 ChatGPT 모델군은 2026년 6월 12일부터 ChatGPT에서 retired 상태입니다. API-key 인증이나 직접 API 사용은 API 모델 문서와 실제 product picker를 별도로 확인해야 합니다. GPT-5.6 family는 이제 Codex model picker와 API latest-model guidance 양쪽에서 확인됩니다. OpenAI API code-generation 문서처럼 일부 API/Platform 문서에 legacy codex-family 언급이 남아 있더라도, Codex product model picker 안내는 `codex/models`를 우선 출처로 삼아야 합니다.
+2026년 7월 11일 실행 참고: deprecated Codex model 상태, ChatGPT 일반 모델 retirement, pricing table 한도, token-based rate card, Fast mode credit multiplier, API-key Codex 동작, direct API model availability는 분리해서 읽어야 합니다. `gpt-5.2`와 `gpt-5.3-codex`는 ChatGPT 인증 Codex에서는 deprecated이고, GPT-5.2 ChatGPT 모델군은 2026년 6월 12일부터 ChatGPT에서 retired 상태입니다. API-key 인증이나 직접 API 사용은 API 모델 문서와 실제 product picker를 별도로 확인해야 합니다. GPT-5.6 family는 이제 Codex model picker와 API latest-model guidance 양쪽에서 확인됩니다. OpenAI API code-generation 문서처럼 일부 API/Platform 문서에 legacy codex-family 언급이 남아 있더라도, Codex product model picker 안내는 `codex/models`를 우선 출처로 삼아야 합니다.
 
 ### 다루는 내용
 
