@@ -3008,6 +3008,54 @@ details p {
     border-top: 1px solid var(--border);
 }
 
+.app-ui-detail-grid {
+    display: grid;
+    grid-template-columns: minmax(220px, .42fr) minmax(0, 1.58fr);
+    gap: 20px;
+    align-items: stretch;
+    margin: 0 0 24px;
+}
+
+.app-ui-detail-grid .app-ui-detail-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    margin: 0;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: #050505;
+}
+
+body[data-page="home"] .app-ui-detail-grid .app-ui-detail-card img {
+    width: 100%;
+    max-width: none;
+    margin: auto;
+    border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+    box-shadow: none;
+    object-fit: contain;
+}
+
+body[data-page="home"] .app-ui-detail-grid .app-ui-detail-card-switch img {
+    width: min(100%, 320px);
+    padding: 18px;
+}
+
+.app-ui-detail-grid .app-ui-detail-card figcaption {
+    margin-top: auto;
+    border-top: 1px solid var(--border);
+    background: var(--bg-card);
+}
+
+@media (max-width: 760px) {
+    .app-ui-detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    body[data-page="home"] .app-ui-detail-grid .app-ui-detail-card-switch img {
+        width: min(100%, 360px);
+    }
+}
+
 /* === Footer === */
 .footer {
     padding: 40px 0;

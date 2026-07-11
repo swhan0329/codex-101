@@ -95,7 +95,7 @@
                 </div>
                 <aside class="hero-rail" aria-label="Guide launch points">
                     <figure class="hero-product-frame">
-                        <img src="images/codex_app.png" alt="Codex desktop app screen with the codex-101 project open" loading="eager" />
+                        <img src="images/codex_app.png?v=20260711-ui-refresh" alt="ChatGPT desktop app Codex new task screen with GPT-5.6 Sol selected" loading="eager" />
                     </figure>
                     <div class="hero-rail-card hero-rail-intro">
                         <p class="hero-rail-kicker" data-i18n="hero_panel_kicker">Launch paths</p>
@@ -366,7 +366,7 @@
                     <div class="product-card">
                         <div class="product-icon">IDE</div>
                         <h3>Codex IDE Extension</h3>
-                        <p data-i18n="s2_ide">VS Code, Cursor, Windsurf, JetBrains로 확장된 IDE 에이전트. 로컬 작업과 클라우드 위임을 함께 지원합니다.</p>
+                        <p data-i18n="s2_ide">VS Code, Cursor, Windsurf, VS Code Insiders, Xcode, JetBrains로 확장된 IDE 에이전트. 로컬 작업과 클라우드 위임을 함께 지원합니다.</p>
                     </div>
                     <div class="product-card">
                         <div class="product-icon">Web</div>
@@ -576,11 +576,11 @@
                                 <tbody>
                                     <tr>
                                         <td><strong>OS</strong></td>
-                                        <td>macOS 12+, Ubuntu 20.04+, Windows 11 권장 / 최신 Windows 10은 best-effort (CLI: PowerShell or WSL, IDE agent mode: WSL, App: Native)</td>
+                                        <td data-i18n="s4_os">ChatGPT 데스크톱 앱: macOS/Windows · Codex CLI: macOS/Linux/Windows</td>
                                     </tr>
                                     <tr>
                                         <td><strong>Node.js</strong></td>
-                                        <td>v18+</td>
+                                        <td data-i18n="s4_node">npm으로 CLI를 설치할 때만 필요 (standalone installer와 데스크톱 앱은 불필요)</td>
                                     </tr>
                                     <tr>
                                         <td><strong>Git</strong></td>
@@ -655,7 +655,25 @@
                 <h2><span class="section-num">05</span> <span data-i18n="s5_title">설치 및 인증</span></h2>
                 <div class="code-tabs">
                     <article class="setup-block">
-                        <h3 data-i18n="s5_cli_install">CLI 설치</h3>
+                        <h3 data-i18n="s5_app_install">ChatGPT 데스크톱 앱 설치 (macOS/Windows)</h3>
+                        <ol class="setup-steps">
+                            <li data-i18n="s5_app1">macOS: 공식 Quickstart의 Download ChatGPT 버튼에서 macOS용 ChatGPT 데스크톱 앱을 다운로드합니다.</li>
+                            <li data-i18n="s5_app2">Windows: 공식 다운로드 링크나 Microsoft Store에서 설치하거나 `winget install Codex -s msstore`를 실행합니다.</li>
+                            <li data-i18n="s5_app3">앱을 열고 ChatGPT 계정으로 로그인한 뒤 프로젝트를 만들거나 폴더를 엽니다. API 키 로그인도 가능하지만 일부 ChatGPT workspace·cloud 기능은 제한될 수 있습니다.</li>
+                        </ol>
+                        <div class="callout waitlist-box">
+                            <div class="setup-meta" aria-hidden="true">
+                                <span class="setup-chip" data-i18n="s5_waitlist_tag">Windows 데스크톱 앱</span>
+                                <span class="setup-chip" data-i18n="s5_waitlist_scope">네이티브 또는 WSL2</span>
+                            </div>
+                            <p data-i18n="s5_waitlist_text">Windows의 ChatGPT 데스크톱 앱은 기본적으로 Codex agent를 PowerShell에서 네이티브로 실행합니다. Sandbox 보호를 적용하려면 메시지를 보내기 전에 composer 아래에서 `Ask for approval`을 선택하세요. Linux 툴체인이나 WSL 파일시스템 프로젝트가 중요하면 Settings에서 agent를 WSL로 바꾼 뒤 앱을 재시작하세요. 통합 터미널은 PowerShell, Command Prompt, Git Bash, WSL 중 별도로 고를 수 있습니다.</p>
+                            <a href="https://learn.chatgpt.com/docs/windows/windows-app" target="_blank" class="btn btn-secondary"
+                                data-i18n="s5_waitlist_btn">ChatGPT Windows 앱 공식 문서 보기</a>
+                        </div>
+                    </article>
+
+                    <article class="setup-block">
+                        <h3 data-i18n="s5_cli_install">개발자 선택: Codex CLI 설치</h3>
                         <pre data-i18n-html="code_s5_install"><code><span class="c"># Standalone installer (macOS/Linux)</span>
 curl -fsSL https://chatgpt.com/codex/install.sh | sh
 
@@ -664,12 +682,14 @@ powershell -ExecutionPolicy ByPass -c "irm https://chatgpt.com/codex/install.ps1
 
 <span class="c"># npm</span>
 npm install -g @openai/codex
+npm update -g @openai/codex
 
 <span class="c"># Homebrew (macOS)</span>
 brew install codex
+brew upgrade codex
 
-<span class="c"># Update</span>
-npm update -g @openai/codex</code></pre>
+<span class="c"># 설치 확인</span>
+codex --version</code></pre>
                     </article>
 
                     <article class="setup-block">
@@ -682,33 +702,15 @@ export OPENAI_API_KEY="your-api-key-here"</code></pre>
                     </article>
 
                     <article class="setup-block">
-                        <h3 data-i18n="s5_app_install">Desktop App 설치 (macOS/Windows)</h3>
+                        <h3 data-i18n="s5_vsc_install">개발자 선택: IDE 통합</h3>
                         <ol class="setup-steps">
-                            <li data-i18n="s5_app1">macOS: openai.com/codex 에서 다운로드 (.dmg)</li>
-                            <li data-i18n="s5_app2">Windows: Microsoft Store에서 설치하거나 `winget install Codex -s msstore` 사용</li>
-                            <li data-i18n="s5_app3">앱 실행 후 ChatGPT 계정 또는 API 키로 로그인 (API 키 로그인은 cloud threads와 일부 credits 기반 기능이 제한될 수 있음). 고위험 계정이나 민감한 프로젝트라면 ChatGPT 웹 보안 설정에서 Advanced Account Security도 검토하세요.</li>
-                        </ol>
-                        <div class="callout waitlist-box">
-                            <div class="setup-meta" aria-hidden="true">
-                                <span class="setup-chip" data-i18n="s5_waitlist_tag">Windows App</span>
-                                <span class="setup-chip" data-i18n="s5_waitlist_scope">지원 범위는 수시 변경</span>
-                            </div>
-                            <p data-i18n="s5_waitlist_text">업데이트: Windows에서는 Codex 앱이 가장 쉬운 기본 경로입니다. Microsoft Store나 `winget install Codex -s msstore`로 설치할 수 있고, 기본 agent는 PowerShell에서 네이티브로 실행됩니다. Default permissions를 켜면 Windows sandbox가 적용되고, Linux 툴체인이나 WSL 파일시스템 프로젝트가 중요하면 Settings에서 agent를 WSL로 바꾼 뒤 앱을 재시작하세요. 통합 터미널은 PowerShell, Command Prompt, Git Bash, WSL 중 별도로 고를 수 있습니다.</p>
-                            <a href="https://developers.openai.com/codex/app/windows" target="_blank" class="btn btn-secondary"
-                                data-i18n="s5_waitlist_btn">Windows App 공식 문서 보기</a>
-                        </div>
-                    </article>
-
-                    <article class="setup-block">
-                        <h3 data-i18n="s5_vsc_install">IDE Extension 설치</h3>
-                        <ol class="setup-steps">
-                            <li data-i18n="s5_vsc1">VS Code/Cursor/Windsurf는 확장을 설치하고, JetBrains는 전용 통합을 사용합니다. JetBrains 쪽은 ChatGPT, API 키, JetBrains AI 로그인을 지원하고, Windows에서는 네이티브 sandbox 또는 WSL2 경로를 선택할 수 있습니다.</li>
-                            <li data-i18n="s5_vsc2">설치 후 사이드바에서 Codex 패널 활성화</li>
-                            <li data-i18n="s5_vsc3">ChatGPT 계정으로 인증</li>
+                            <li data-i18n="s5_vsc1">VS Code/Cursor/Windsurf/VS Code Insiders는 Codex 확장을 사용하고, Xcode와 JetBrains IDE는 각 IDE의 자체 통합을 사용합니다.</li>
+                            <li data-i18n="s5_vsc2">VS Code 계열은 사이드바나 `Codex: Open Codex Sidebar`, Xcode는 coding assistant, JetBrains는 AI Chat에서 Codex를 엽니다.</li>
+                            <li data-i18n="s5_vsc3">ChatGPT 계정 또는 API 키로 인증</li>
                         </ol>
                     </article>
                 </div>
-                <p class="command-refs" data-i18n-html="s5_refs">출처: <a href="https://developers.openai.com/codex/quickstart/" target="_blank">Quickstart</a> · <a href="https://developers.openai.com/codex/windows" target="_blank">Windows guide</a> · <a href="https://developers.openai.com/codex/app/windows" target="_blank">Windows app</a> · <a href="https://developers.openai.com/codex/ide" target="_blank">IDE extension</a> · <a href="https://openai.com/index/advanced-account-security/" target="_blank">Advanced Account Security</a></p>
+                <p class="command-refs" data-i18n-html="s5_refs">출처: <a href="https://learn.chatgpt.com/docs/quickstart?setup=app" target="_blank">Quickstart</a> · <a href="https://learn.chatgpt.com/docs/codex/cli" target="_blank">Codex CLI</a> · <a href="https://learn.chatgpt.com/docs/windows/windows-app" target="_blank">Windows app</a> · <a href="https://learn.chatgpt.com/docs/codex/ide" target="_blank">IDE integrations</a> · <a href="https://learn.chatgpt.com/docs/auth" target="_blank">Authentication</a></p>
             </section>
 
             <!-- Section 5 -->
@@ -739,12 +741,22 @@ codex --cd /path/to/project
 
             <!-- Section 6 -->
             <section class="section" id="s7">
-                <h2><span class="section-num">07</span> <span data-i18n="s7_title">Codex App (macOS + Windows)</span></h2>
+                <h2><span class="section-num">07</span> <span data-i18n="s7_title">ChatGPT 데스크톱 앱의 Codex</span></h2>
                 <figure class="screenshot">
-                    <img src="images/codex_app.png" alt="Codex Desktop App interface" loading="lazy" />
-                    <figcaption data-i18n="img_app">Codex Desktop App — 멀티에이전트 커맨드 센터와 워크트리 관리</figcaption>
+                    <img src="images/codex_app.png?v=20260711-ui-refresh" alt="ChatGPT desktop app Codex new task screen with project picker and GPT-5.6 Sol Medium" loading="lazy" />
+                    <figcaption data-i18n="img_app">ChatGPT 데스크톱 앱의 Codex 새 작업 화면 — 프로젝트 선택, 시작 카드, GPT-5.6 Sol Medium</figcaption>
                 </figure>
-                <p data-i18n="s7_intro">Codex App은 여러 프로젝트를 넘나들며 병렬 agent thread를 운영하고, built-in Git와 integrated terminal로 결과를 리뷰하며, chats·artifact preview·in-app browser·browser use·computer use·image generation·memories·thread automations를 한곳에서 다루는 데 가장 적합한 데스크톱 표면입니다. 최신 App 문서와 2026년 6월 11일 26.609 릴리스 기준으로 Developer mode, App composer `/init`, plugin management 개선, unread chats, Profile token/activity 통계, 더 빠른 Browser use까지 함께 보는 것이 현재 상태에 가깝습니다.</p>
+                <div class="app-ui-detail-grid" aria-label="ChatGPT desktop app Codex interface details">
+                    <figure class="screenshot app-ui-detail-card app-ui-detail-card-switch">
+                        <img src="images/codex_work_switch.png" alt="ChatGPT desktop app workspace menu switching between Work and Codex" loading="lazy" />
+                        <figcaption data-i18n="img_app_switch">좌상단 전환 메뉴 — 완성 결과물 중심 Work와 프로젝트·파일 작업 중심 Codex를 같은 앱에서 선택</figcaption>
+                    </figure>
+                    <figure class="screenshot app-ui-detail-card">
+                        <img src="images/codex_chat_overlay.png" alt="Chat overlay opened above a Codex task in the ChatGPT desktop app" loading="lazy" />
+                        <figcaption data-i18n="img_app_chat">Codex 작업 위 Chat 오버레이 — 프로젝트 작업을 유지한 채 일반 대화를 분리해 시작</figcaption>
+                    </figure>
+                </div>
+                <p data-i18n="s7_intro">2026년 7월 9일부터 Codex는 macOS·Windows용 ChatGPT 데스크톱 앱 안의 전용 공간으로 제공됩니다. 좌상단에서 Work와 Codex를 전환하고, Codex의 `New task`에서는 프로젝트를 고른 뒤 모델과 reasoning effort를 확인해 작업을 시작합니다. 사이드바의 Chat은 현재 Codex 작업 위에 별도 대화 창을 열어 일반 질문을 분리합니다. Codex 공간은 여러 프로젝트의 병렬 agent task, built-in Git, integrated terminal, artifact preview, in-app browser, Browser use, Computer Use, image generation, memories, scheduled tasks를 한곳에서 다루는 데 가장 적합합니다.</p>
 
                 <h3 data-i18n="s7_modes_title">쓰레드 모드</h3>
                 <div class="table-wrap">
@@ -884,7 +896,7 @@ then verify the page again and attach the screenshot result.</code></pre>
                     <img src="images/codex_IDE.png" alt="Codex VS Extension marketplace page" loading="lazy" />
                     <figcaption data-i18n="img_ide">Codex VS Extension — 마켓플레이스 (4.6M+ 다운로드)</figcaption>
                 </figure>
-                <p data-i18n="s8_intro">VS Code, Cursor, Windsurf, JetBrains IDE에 통합되는 AI 코딩 에이전트입니다. 일반적으로 설치 후 Agent mode가 기본이며, JetBrains 통합은 ChatGPT 계정, API 키, JetBrains AI로 로그인할 수 있습니다. 현재 공식 문서는 IDE 통합이 macOS·Windows·Linux에 걸쳐 제공된다고 설명합니다. Windows에서는 네이티브 sandbox를 기본 경로로 두고, Linux-native 도구나 이미 WSL2에 있는 저장소가 중요할 때 WSL2 워크스페이스를 선택하세요.</p>
+                <p data-i18n="s8_intro">VS Code, Cursor, Windsurf, VS Code Insiders에는 Codex 확장을 설치하고, Xcode와 JetBrains IDE에서는 각 IDE의 자체 통합을 사용합니다. ChatGPT 계정 또는 API 키로 로그인할 수 있고 JetBrains는 JetBrains AI 구독도 지원합니다. Windows에서는 네이티브 sandbox를 기본 경로로 두고, Linux-native 도구나 이미 WSL2에 있는 저장소가 중요할 때 WSL2 워크스페이스를 선택하세요.</p>
                 <div class="table-wrap">
                     <table>
                         <thead>
@@ -2012,7 +2024,7 @@ codex --search "optimize with Next.js 15"
                     </li>
                     <li>
                         <strong data-i18n="overview_update_3_title">Quickstart·IDE·Mobile 경로 정리</strong>
-                        <span data-i18n="changelog_item_3">Quickstart, App/IDE/CLI/Cloud, Remote connections, Windows, Sites, config, MCP/hooks/plugins/skills 문서를 다시 훑었고, config/remote-control/Sites/Windows 활성화 절차와 충돌하는 새 공식 변경은 없었습니다. 7월 9일 ChatGPT desktop app 통합과 ChatGPT Work 발표의 desktop 전 플랜 제공, Codex 기본 view, Codex icon 유지, mobile project 접근 문구를 보강했습니다.</span>
+                        <span data-i18n="changelog_item_3">Quickstart, App/IDE/CLI/Cloud, Remote connections, Windows, Sites, config, MCP/hooks/plugins/skills 문서를 다시 확인했습니다. ChatGPT 데스크톱 앱 중심의 첫 설치 경로, 설치 방식별 CLI 업데이트, Windows `Ask for approval` sandbox, Xcode/JetBrains 통합을 반영하고 App 챕터 이미지를 최신 `New task`·Work/Codex 전환·Chat 오버레이 화면으로 교체했습니다.</span>
                     </li>
                     <li>
                         <strong data-i18n="overview_update_4_title">Enterprise 발표 맥락 분리</strong>
