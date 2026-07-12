@@ -1,6 +1,6 @@
 // Korean-first Codex use-case catalog.
 // Source baseline: https://developers.openai.com/codex/use-cases
-// Last official scrape: 2026-07-11
+// Last official scrape: 2026-07-12
 window.codexUseCaseCategories = [
     {
         "id": "today",
@@ -98,13 +98,13 @@ window.codexUseCases = [
     {
         "id": "proactive-teammate",
         "category": "ops",
-        "title": "Codex를 내 업무를 아는 팀원처럼 세팅하기",
-        "titleEn": "Set up a teammate",
-        "sourceTitle": "Set up a teammate",
-        "sourceUrl": "https://developers.openai.com/codex/use-cases/proactive-teammate",
-        "summary": "Codex가 프로젝트, 문서, 반복 작업 맥락을 기억하고 변화 감지를 돕게 합니다.",
-        "summaryEn": "Give Codex a durable view of your work so it can notice what changed.",
-        "when": "매번 같은 설명을 반복하지 않고, 지속적인 작업 파트너처럼 쓰고 싶을 때 좋습니다.",
+        "title": "매일 업무 브리프 만들기",
+        "titleEn": "Create a daily work brief",
+        "sourceTitle": "Create a daily work brief",
+        "sourceUrl": "https://developers.openai.com/codex/use-cases/daily-work-brief",
+        "summary": "캘린더, 메시지, 이메일, 프로젝트 문맥을 모아 오늘의 우선순위와 준비할 일을 짧은 브리프로 정리합니다.",
+        "summaryEn": "Turn calendar, messages, email, and project context into a focused plan for the day.",
+        "when": "하루의 우선순위가 calendar, email, Slack, docs, follow-up 목록에 흩어져 있을 때 좋습니다.",
         "prompt": "이 프로젝트의 목표, 자주 쓰는 명령, 주의할 파일, 완료 기준을 읽고 Codex용 작업 메모를 만들어줘.",
         "output": "작업 규칙, 반복 명령, 주의점, 다음에 바로 이어갈 수 있는 운영 메모.",
         "caution": "기억시킬 내용에는 민감 정보나 비밀키를 넣지 말고, repo에 남겨도 되는 규칙만 구분하세요.",
@@ -118,40 +118,38 @@ window.codexUseCases = [
                 "Analysis"
             ],
             "bestForEn": [
-                "Roles working with context across Slack, Gmail, calendar, docs, trackers, code, and notes",
-                "Understanding active work, recurring decisions, collaborators, and cutting through noise",
-                "Teams that need to escalate what deserves attention"
+                "People whose priorities are spread across calendar, email, Slack, docs, and follow-up lists.",
+                "Workdays with several meetings, decisions, and reply-worthy messages to triage.",
+                "Teams that want a short source-backed brief they can refine and run on a schedule."
             ],
             "skills": [
                 {
-                    "name": "Slack",
-                    "why": "Find the Slack context around asks, owner changes, blockers, and decisions.",
-                    "url": "https://github.com/openai/plugins/tree/main/plugins/slack"
-                },
-                {
-                    "name": "Gmail",
-                    "why": "Find reply-worthy threads and cross-check them against the rest of the workstream.",
-                    "url": "https://github.com/openai/plugins/tree/main/plugins/gmail"
-                },
-                {
                     "name": "Google Calendar",
-                    "why": "Use the day's meetings to decide which updates matter now and which can wait.",
+                    "why": "Review the day's meetings, timing, and preparation needs.",
                     "url": "https://github.com/openai/plugins/tree/main/plugins/google-calendar"
                 },
                 {
-                    "name": "Notion",
-                    "why": "Read the project notes, trackers, or decision logs that define the workstream.",
-                    "url": "https://developers.openai.com/codex/plugins"
+                    "name": "Gmail",
+                    "why": "Find recent email that needs a reply or changes today's priorities.",
+                    "url": "https://github.com/openai/plugins/tree/main/plugins/gmail"
+                },
+                {
+                    "name": "Slack",
+                    "why": "Find direct messages, mentions, decisions, and follow-ups that need attention.",
+                    "url": "https://github.com/openai/plugins/tree/main/plugins/slack"
+                },
+                {
+                    "name": "Google Drive",
+                    "why": "Read the approved running notes, trackers, or planning docs behind the day's work.",
+                    "url": "https://github.com/openai/plugins/tree/main/plugins/google-drive"
                 }
             ],
             "promptEn": "Build my work brief for [date].\n\nReview my calendar, unread direct messages and mentions from the last 24 hours, unread email from the last 24 hours, open follow-ups, and the project notes or trackers I name. If a prior brief is available, call out what changed. Create a short brief with:\n\n- top priorities\n- meeting preparation\n- messages that need replies\n- decisions I owe\n- useful FYIs\n- missing access or uncertain context\n\nKeep confirmed facts separate from inference. Do not send messages, change documents, or create tasks.",
             "promptKo": "[date]에 대한 내 work brief를 만들어줘.\n\n내 calendar, 지난 24시간의 unread direct messages and mentions, 지난 24시간의 unread email, open follow-ups, 그리고 내가 이름 붙인 project notes or trackers를 검토해줘. Prior brief가 있으면 무엇이 바뀌었는지 call out해줘. 다음을 포함한 short brief를 만들어줘:\n\n- top priorities\n- meeting preparation\n- messages that need replies\n- decisions I owe\n- useful FYIs\n- missing access or uncertain context\n\nConfirmed facts와 inference를 분리해. Messages를 보내거나, documents를 변경하거나, tasks를 만들지 마.",
             "guideSectionsEn": [
-                "Use Codex as a teammate",
-                "Start a teammate thread",
-                "Run one useful check",
-                "Turn the thread into an automation",
-                "Operate from the same thread"
+                "Start with the context behind today",
+                "Make the brief recurring",
+                "Review what changed"
             ]
         }
     },
@@ -1169,8 +1167,8 @@ window.codexUseCases = [
                     "url": "https://github.com/openai/skills/tree/main/skills/.curated/openai-docs"
                 }
             ],
-            "promptEn": "Use $playwright-interactive, $imagegen, and $openai-docs to plan and build a browser game in this repo.\nImplement PLAN.md, and log your work under `.logs/`.",
-            "promptKo": "$playwright-interactive, $imagegen, $openai-docs를 사용해 이 repo에서 browser game을 plan하고 build해줘.\nPLAN.md를 구현하고, 작업 로그는 `.logs/` 아래에 남겨줘.",
+            "promptEn": "Use $playwright-interactive, $imagegen, and $openai-docs to plan and build a browser game in this repo.\n\nImplement PLAN.md, and log your work under `.logs/`.",
+            "promptKo": "$playwright-interactive, $imagegen, $openai-docs를 사용해 이 repo에서 browser game을 plan하고 build해줘.\n\nPLAN.md를 구현하고, 작업 로그는 `.logs/` 아래에 남겨줘.",
             "guideSectionsEn": [
                 "Introduction",
                 "Start with the game plan",
