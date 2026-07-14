@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: July 13, 2026</strong><br/>
+  <strong>Last updated: July 14, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
@@ -29,23 +29,23 @@ The guide is written from the official OpenAI Codex documentation first, then ma
 - **Professional users**: read sections `12-14` for `AGENTS.md`, `config.toml`, and MCP, then `15-17` for sessions, automation, and prompt contracts.
 - **Example-driven readers**: open the live site and the use-case gallery to start from real workflows instead of feature lists.
 
-## July 13, 2026 Refresh Notes
+## July 14, 2026 Refresh Notes
 
 - Rechecked `developers.openai.com/codex/models` first. Recommended Codex models remain the GPT-5.6 family: `gpt-5.6-sol` for highest-capability complex work, `gpt-5.6-terra` for everyday balanced work, and `gpt-5.6-luna` for fast, lower-cost repeatable work. `gpt-5.5` is still previous-generation, while `gpt-5.2` and `gpt-5.3-codex` remain deprecated for ChatGPT-authenticated Codex.
 - Rechecked pricing, Speed/Fast mode, remote connections, app/features, app/automations, config, MCP, hooks, plugins, skills, Sites, OpenAI API latest-model/changelog, and current Platform/API surfaces. Pricing includes GPT-5.6 Sol/Terra/Luna in plan and API Key usage tables; Fast mode is still documented only for GPT-5.5/GPT-5.4; and ChatGPT Work usage shares the same pricing, credits, and usage limits as Codex.
 - Reflected the July 9 OpenAI announcements and Codex changelog: Codex is now part of the ChatGPT desktop app on macOS and Windows, the updated desktop app is globally available on every ChatGPT plan including Free, and core workflows add direct Markdown/code editing, inline annotations, sidebar PR review, multi-repo projects, faster Computer Use with GPT-5.6, plugin management in Settings, and remote/mobile reliability fixes.
 - Added the July 6 ChatGPT for iOS 1.2026.181 Codex changelog note: mobile can create, search, open, fork, and manage Codex tasks from a conversation; compare staged/unstaged, branch, and last-turn changes; add selected transcript text to the composer; use SSH host shortcuts with private keys or no credentials; and view usage limits and credit details in the task menu.
 - Reflected OpenAI API GPT-5.6 guidance separately from Codex product guidance: `gpt-5.6` routes to `gpt-5.6-sol`; GPT-5.6 adds Programmatic Tool Calling, Multi-agent beta, explicit prompt caching, persisted reasoning, max reasoning effort, Pro mode, and original/auto image detail preservation. Codex `Max` and `Ultra` are documented as product power settings, not API mode names.
-- Audited the official use-case catalog again: 60 local cards, official detail pages reachable, 0 local `promptEn`/`promptKo` gaps, and 0 multiline Korean prompt regressions. The first card still points to the current Daily Work Brief page.
-- Chrome person-level social sweep completed against the monitored practitioner baseline across X and LinkedIn, with Threads aggregate searches checked separately. No newly verified person-level Codex tip needed promotion into the public guide, so Section 20's practitioner cards stay stable and the local research note carries the July 13 matrix.
+- Expanded the official use-case catalog from 60 to 99 local cards after excluding collection pages. Added the new finance, sales, and education workflows with official `promptEn` and structure-preserving Korean `promptKo`; remaining gaps are 0 for `promptEn`, 0 for `promptKo`, and 0 for multiline Korean prompt regressions.
+- No newly verified practitioner tip needed promotion into the public guide today, so Section 20's person-linked cards stay stable.
 
 ## June 12, 2026 Refresh Notes
 
 - Reflected the June 11 Codex app 26.609 release: rate-limit reset banking, Developer mode for Browser/CDP work, `/init` in the app composer, expanded Enterprise Computer Use, and Windows Computer Use per-app access controls.
 - Rechecked pricing, quickstart, config/profile, app settings/features, remote connections, Sites, Bedrock, MCP, hooks, plugins, and skills through the fresh Codex manual. No model-order, remote-control, or Sites setup reversal was needed, but Quickstart now clearly foregrounds the standalone installers.
-- Audited all 60 official Codex use cases after excluding collection pages. The catalog count, local/official IDs, `promptEn`, `promptKo`, and multiline Korean prompt shape are clean.
+- Audited all 99 official Codex use cases after excluding collection pages. The catalog count, local/official IDs, `promptEn`, `promptKo`, and multiline Korean prompt shape are clean.
 - Rechecked OpenAI launch/customer-story surfaces. The June 11 Ona acquisition announcement is captured only as pre-closing enterprise execution direction, not as an enabled feature, model, plan, platform, preview/GA, or feature-flag change.
-- Person-linked practitioner tips stay separate from product documentation. The public guide points readers to original posts or official corroborating docs, while the local research note keeps the detailed people/tip inventory.
+- Person-linked practitioner tips stay separate from product documentation. The public guide points readers to original posts or official corroborating docs, and only verified, reader-useful guidance is promoted.
 
 ## What's Covered
 
