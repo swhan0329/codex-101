@@ -46,7 +46,7 @@
 - OpenAI 2026-07-09 발표와 Codex changelog를 함께 반영했습니다. Codex가 macOS/Windows ChatGPT desktop app 안으로 들어왔고, 업데이트된 desktop app은 Free를 포함한 모든 ChatGPT plan에서 전 세계 제공됩니다. Markdown/code 직접 편집, inline annotations, sidebar PR review, multi-repo project, GPT-5.6 기반 faster Computer Use, Settings 안 plugin management, mobile/SSH reliability fix도 함께 반영했습니다.
 - 2026-07-06 ChatGPT for iOS 1.2026.181 changelog도 추가로 반영했습니다. 모바일 대화 안에서 Codex task 생성, 검색, 열기, fork, 관리가 가능하고, staged/unstaged/branch/last-turn diff filter, selected transcript text composer 추가, private key 또는 no-credential SSH host shortcut, task menu의 usage limit/credit detail 확인이 추가됐습니다.
 - OpenAI API latest-model/changelog는 별도 Platform/API lane으로 반영했습니다. `gpt-5.6` alias는 `gpt-5.6-sol`로 라우팅되고, Programmatic Tool Calling, Multi-agent beta, explicit prompt caching, persisted reasoning, max reasoning effort, Pro mode, original/auto image detail preservation이 추가됐습니다. Codex의 `Max`와 `Ultra`는 API mode가 아니라 제품 power setting으로 분리해 설명했습니다.
-- 공식 use-case catalog는 collection page를 제외한 local 카드 99개 기준으로 감사했습니다. 오늘 새로 확인된 finance, sales, education workflow를 추가했고, `promptEn` 누락 0, `promptKo` 누락 0, multiline 공식 prompt인데 한국어가 1줄 요약인 항목 0입니다.
+- 공식 use-case catalog는 collection page를 제외한 local 카드 99개 기준으로 감사했습니다. 신규 finance, sales, education workflow 39개의 공식 `promptEn`은 그대로 유지하고, 일부 한국어 동사만 섞여 있던 `promptKo`를 완전한 한국어 번역으로 교정했으며 기존 프롬프트 2개의 회귀도 복원했습니다. 99개 전체에서 줄 구조, 플레이스홀더, skill/plugin 핸들, 경로, 한국어 포함 여부를 자동 검증합니다.
 - 새로 공개 가이드에 승격할 검증된 person-level Codex 팁은 없어서 공개 Section 20 practitioner cards는 기존 공식 근거와 원문 링크 기준으로 유지했습니다.
 
 ### 누적 검증 메모
