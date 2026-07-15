@@ -17,7 +17,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=20260714-ko-prompt-fix" />
+    <link rel="stylesheet" href="style.css?v=20260715-changelog-audit" />
 </head>
 
 <body data-page="home">
@@ -51,7 +51,7 @@
                     <p class="hero-badge">
                         <span data-i18n="hero_badge_prefix">공식 문서 기준 재검수</span>
                         <span aria-hidden="true"> · </span>
-                        <span class="live-date" data-date-format="long">2026년 7월 14일</span>
+                        <span class="live-date" data-date-format="long">2026년 7월 15일</span>
                     </p>
                     <h1 class="hero-title" data-i18n="hero_title">OpenAI Codex를<br />실무에 바로 붙이는 가이드</h1>
                     <p class="hero-sub" data-i18n="hero_sub">CLI · Desktop App (macOS/Windows) · IDE Extension · Web · Mobile · SDK automation<br />최신 공식 문서를 기준으로 어디서 시작할지, 어떤 모델을 쓸지, 샌드박스/승인, MCP, plugins, automations를 처음 사용자와 실무 사용자 모두 읽기 쉽도록 다시 정리했습니다.</p>
@@ -2026,33 +2026,33 @@ codex --search "optimize with Next.js 15"
                     </div>
                     <p class="overview-fact-date">
                         <span data-i18n="overview_fact_date_prefix">업데이트 기준일</span>
-                        <span class="live-date" data-date-format="long">2026년 7월 14일</span>
+                        <span class="live-date" data-date-format="long">2026년 7월 15일</span>
                     </p>
                 </div>
                 <ol class="changelog-list" aria-label="Today update summary">
                     <li>
                         <strong data-i18n="overview_update_1_title">핵심 업데이트 날짜 교정</strong>
-                        <span data-i18n="changelog_item_1">핵심 업데이트의 날짜와 이벤트를 다시 맞췄습니다. 4월 23일은 GPT-5.5로 교정하고, 5월 29일 Windows Computer Use, 6월 2일 Sites, 6월 26일 GPT-5.6 preview, 7월 9일 GPT-5.6 GA·ChatGPT 데스크톱 통합을 추가했습니다.</span>
+                        <span data-i18n="changelog_item_1">핵심 모델 기준을 다시 확인했습니다. GPT-5.6 Sol/Terra/Luna가 추천 family이고, GPT-5.5는 previous-generation, `gpt-5.2`와 `gpt-5.3-codex`는 ChatGPT 인증 Codex 기준 deprecated로 유지됩니다.</span>
                     </li>
                     <li>
                         <strong data-i18n="overview_update_2_title">요금제·크레딧 구조 재정리</strong>
-                        <span data-i18n="changelog_item_2">Pricing/rate card와 Speed 문서를 다시 확인했고 GPT-5.6 Sol/Terra/Luna usage-based/API Key 범위와 Fast mode가 아직 GPT-5.5/GPT-5.4 전용이라는 차이를 분리했습니다.</span>
+                        <span data-i18n="changelog_item_2">Max/Ultra 설명을 현재 모델·subagents 문서에 맞췄습니다. Max는 단일 어려운 작업, Ultra는 subagents로 나눌 수 있는 큰 작업에 쓰며, Ultra가 보이지 않으면 `Settings > Configuration`의 `Ultra in model picker slider`를 확인합니다.</span>
                     </li>
                     <li>
                         <strong data-i18n="overview_update_3_title">Quickstart·IDE·Mobile 경로 정리</strong>
-                        <span data-i18n="changelog_item_3">Quickstart, App/IDE/CLI/Cloud, Remote connections, Windows, Sites, config, MCP/hooks/plugins/skills 문서를 다시 확인했습니다. ChatGPT 데스크톱 앱 중심의 첫 설치 경로, 설치 방식별 CLI 업데이트, Windows `Ask for approval` sandbox, Xcode/JetBrains 통합을 반영하고 App 챕터 이미지를 최신 `New task`·Work/Codex 전환·Chat 오버레이 화면으로 교체했습니다.</span>
+                        <span data-i18n="changelog_item_3">2026-07-13/14 Codex changelog를 반영했습니다. iOS 1.2026.185의 inline visualizations와 mobile task-flow fixes, CLI 0.144.2의 Guardian auto-review rollback을 운영 메모로 추가했습니다.</span>
                     </li>
                     <li>
                         <strong data-i18n="overview_update_4_title">Enterprise 발표 맥락 분리</strong>
-                        <span data-i18n="changelog_item_4">공식 use-case catalog 99개를 다시 감사했고 local `official.promptEn` mismatch 0을 확인했습니다. promptEn/promptKo 누락 0, multiline 한국어 요약 회귀 0입니다.</span>
+                        <span data-i18n="changelog_item_4">공식 use-case catalog 99개를 다시 감사했고 local `official.promptEn` mismatch 0을 확인했습니다. promptEn/promptKo 누락 0, line/token 구조 mismatch 0, multiline 한국어 요약 회귀 0입니다.</span>
                     </li>
                     <li>
                         <strong data-i18n="overview_update_6_title">Docs MCP·설정 기준 재점검</strong>
-                        <span data-i18n="changelog_item_5">OpenAI Developers MCP와 openai.com/index를 확인했고, 7월 9일 GPT-5.6 GA 발표의 Sol/Terra/Luna, `max`, `ultra`, ChatGPT Work/Codex availability, API pricing/cache/PTC/Multi-agent 범위를 제품 가이드와 API lane으로 분리했습니다.</span>
+                        <span data-i18n="changelog_item_5">OpenAI Developers MCP와 openai.com/index를 확인했습니다. 7월 14 agentic-era 투자 글과 Microsoft 365 Copilot GPT-5.6 발표는 Codex 설정 변경이 아니라 생태계/운영 맥락으로 분리했습니다.</span>
                     </li>
                     <li>
                         <strong data-i18n="overview_update_7_title">소셜 baseline 점검</strong>
-                        <span data-i18n="changelog_item_6">사람별 practitioner tips를 다시 대조했지만, 새로 공개 가이드에 승격할 검증된 person-level Codex 팁은 없었습니다. 공개 Section 20 practitioner cards는 기존 공식 근거와 원문 링크 기준으로 유지했습니다.</span>
+                        <span data-i18n="changelog_item_6">새로 공개 가이드에 승격할 공식 근거가 있는 practitioner tip은 없었습니다. Section 20 practitioner cards는 기존 공식 근거와 원문 링크 기준으로 유지했습니다.</span>
                     </li>
                 </ol>
             </section>
@@ -2068,14 +2068,14 @@ codex --search "optimize with Next.js 15"
                     href="https://github.com/swhan0329/codex-101" target="_blank">PR을 환영합니다</a>.</p>
             <p class="footer-meta">
                 <span data-i18n="footer_date_prefix">최종 업데이트</span>:
-                        <span class="live-date" data-date-format="long">2026년 7월 14일</span>
+                        <span class="live-date" data-date-format="long">2026년 7월 15일</span>
             </p>
             <p class="footer-meta">Made by <a href="https://github.com/swhan0329" target="_blank">@swhan0329</a></p>
         </div>
     </footer>
 
-    <script src="i18n.js?v=20260714-ko-prompt-fix"></script>
-    <script src="app.js?v=20260714-ko-prompt-fix"></script>
+    <script src="i18n.js?v=20260715-changelog-audit"></script>
+    <script src="app.js?v=20260715-changelog-audit"></script>
 </body>
 
 </html>

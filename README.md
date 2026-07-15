@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: July 14, 2026</strong><br/>
+  <strong>Last updated: July 15, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
@@ -29,15 +29,15 @@ The guide is written from the official OpenAI Codex documentation first, then ma
 - **Professional users**: read sections `12-14` for `AGENTS.md`, `config.toml`, and MCP, then `15-17` for sessions, automation, and prompt contracts.
 - **Example-driven readers**: open the live site and the use-case gallery to start from real workflows instead of feature lists.
 
-## July 14, 2026 Refresh Notes
+## July 15, 2026 Refresh Notes
 
-- Rechecked `developers.openai.com/codex/models` first. Recommended Codex models remain the GPT-5.6 family: `gpt-5.6-sol` for highest-capability complex work, `gpt-5.6-terra` for everyday balanced work, and `gpt-5.6-luna` for fast, lower-cost repeatable work. `gpt-5.5` is still previous-generation, while `gpt-5.2` and `gpt-5.3-codex` remain deprecated for ChatGPT-authenticated Codex.
-- Rechecked pricing, Speed/Fast mode, remote connections, app/features, app/automations, config, MCP, hooks, plugins, skills, Sites, OpenAI API latest-model/changelog, and current Platform/API surfaces. Pricing includes GPT-5.6 Sol/Terra/Luna in plan and API Key usage tables; Fast mode is still documented only for GPT-5.5/GPT-5.4; and ChatGPT Work usage shares the same pricing, credits, and usage limits as Codex.
-- Reflected the July 9 OpenAI announcements and Codex changelog: Codex is now part of the ChatGPT desktop app on macOS and Windows, the updated desktop app is globally available on every ChatGPT plan including Free, and core workflows add direct Markdown/code editing, inline annotations, sidebar PR review, multi-repo projects, faster Computer Use with GPT-5.6, plugin management in Settings, and remote/mobile reliability fixes.
-- Added the July 6 ChatGPT for iOS 1.2026.181 Codex changelog note: mobile can create, search, open, fork, and manage Codex tasks from a conversation; compare staged/unstaged, branch, and last-turn changes; add selected transcript text to the composer; use SSH host shortcuts with private keys or no credentials; and view usage limits and credit details in the task menu.
+- Rechecked `developers.openai.com/codex/models` first. Recommended Codex models remain the GPT-5.6 family: `gpt-5.6-sol`, `gpt-5.6-terra`, and `gpt-5.6-luna`; `gpt-5.5` remains previous-generation, and `gpt-5.2` / `gpt-5.3-codex` remain deprecated for ChatGPT-authenticated Codex.
+- Tightened the Max/Ultra note from the current model and subagents docs: Max gives one selected model more reasoning time for a single hard task, while Ultra uses subagents for divisible work and may require enabling **Ultra in model picker slider** under Settings > Configuration.
+- Rechecked pricing, Speed/Fast mode, remote connections, app/features, app/automations, config, MCP, hooks, plugins, skills, Sites, OpenAI API latest-model/changelog, and current Platform/API surfaces. No model-order, pricing, remote-control, Windows activation, Sites, credential, permission, or feature-flag reversal was found.
+- Added the July 13/14 Codex changelog notes: iOS 1.2026.185 adds inline visualizations for charts and other visual artifacts plus mobile task-flow fixes, and CLI 0.144.2 restored the previous Guardian auto-review policy after rolling back a prompting regression. CLI 0.144.3/0.144.4 are version-only releases.
 - Reflected OpenAI API GPT-5.6 guidance separately from Codex product guidance: `gpt-5.6` routes to `gpt-5.6-sol`; GPT-5.6 adds Programmatic Tool Calling, Multi-agent beta, explicit prompt caching, persisted reasoning, max reasoning effort, Pro mode, and original/auto image detail preservation. Codex `Max` and `Ultra` are documented as product power settings, not API mode names.
-- Expanded the official use-case catalog from 60 to 99 local cards after excluding collection pages. Kept all 39 new `promptEn` values identical to the official starter prompts, replaced their partial mixed-language `promptKo` values with complete Korean translations, and restored two existing Korean prompts that had regressed. The validator now checks line structure, placeholders, skill/plugin handles, paths, and Korean-language coverage across all 99 cases.
-- No newly verified practitioner tip needed promotion into the public guide today, so Section 20's person-linked cards stay stable.
+- Re-audited the official use-case catalog: official individual pages 99, local cards 99, `promptEn` gaps 0, `promptKo` gaps 0, official Starter prompt mismatches 0, line/token structure regressions 0. The `daily-work-brief` official slug still maps to the preserved local `proactive-teammate` ID.
+- No newly corroborated practitioner tip needed promotion into the public guide today, so Section 20's person-linked cards stay tied to existing official evidence and source links.
 
 ## June 12, 2026 Refresh Notes
 
