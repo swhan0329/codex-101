@@ -39,7 +39,7 @@ The guide is written from the official OpenAI Codex documentation first, then ma
 - Reflected OpenAI API GPT-5.6 guidance separately from Codex product guidance: `gpt-5.6` routes to `gpt-5.6-sol`; GPT-5.6 adds Programmatic Tool Calling, Multi-agent beta, explicit prompt caching, persisted reasoning, max reasoning effort, Pro mode, and original/auto image detail preservation. API hard spend limits now belong in the Platform/API lane because monthly caps can return 429 when tracked spend reaches the limit.
 - Re-audited the official use-case catalog: official individual pages 99, local cards 99, `promptEn` gaps 0, `promptKo` gaps 0, official Starter prompt mismatches 0, line/token structure regressions 0.
 - Rechecked openai.com/index. GPT-5.6 availability/pricing remains model and plan context; the NTT DATA and OpenAI Presence posts are enterprise adoption / agent-improvement context only, while Health in ChatGPT is explicitly not available in Codex. The mobile remote-control announcement still stays separate from the newer remote-connections operational docs.
-- Person-level practitioner signals were rechecked. No newly verified person-level Codex tip required a public practitioner-card change.
+- Person-level practitioner signals were rechecked and corrected after a deeper pass. Section 20 now adds current person-linked cards for VB's Auto-review/approval guidance, VB's reasoning-effort tuning, Gabriel Chua's Build Week beginner flow, and Romain Huet's GPT-5.6 model-recheck context, while keeping product facts tied to official docs.
 
 ## June 12, 2026 Refresh Notes
 
