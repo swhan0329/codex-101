@@ -17,7 +17,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=20260722-safety-work" />
+    <link rel="stylesheet" href="style.css?v=20260727-presence-health" />
 </head>
 
 <body data-page="home">
@@ -51,7 +51,7 @@
                     <p class="hero-badge">
                         <span data-i18n="hero_badge_prefix">공식 문서 기준 재검수</span>
                         <span aria-hidden="true"> · </span>
-                        <span class="live-date" data-date-format="long">2026년 7월 22일</span>
+                        <span class="live-date" data-date-format="long">2026년 7월 27일</span>
                     </p>
                     <h1 class="hero-title" data-i18n="hero_title">OpenAI Codex를<br />실무에 바로 붙이는 가이드</h1>
                     <p class="hero-sub" data-i18n="hero_sub">CLI · Desktop App (macOS/Windows) · IDE Extension · Web · Mobile · SDK automation<br />최신 공식 문서를 기준으로 어디서 시작할지, 어떤 모델을 쓸지, 샌드박스/승인, MCP, plugins, automations를 처음 사용자와 실무 사용자 모두 읽기 쉽도록 다시 정리했습니다.</p>
@@ -524,7 +524,7 @@
                     </div>
                 </div>
                 <div class="callout">
-                        <p data-i18n="s3_rec_note">💡 최신 `codex/models` 기준 공식 가이드는 GPT-5.6 family에서 시작하라고 안내합니다. 기본 Power setting은 `gpt-5.6-sol` medium reasoning이고, Sol은 복잡하고 중요한 작업, Terra는 일상 작업, Luna는 빠르고 반복적인 작업에 맞습니다. `Max`는 단일 작업에 더 많은 추론 시간을 주고, `Ultra`는 subagents로 나눌 수 있는 큰 작업에 씁니다. Pricing도 GPT-5.6 Sol/Terra/Luna를 Plus/Pro/Business/API Key 사용량 표에 포함합니다. 단, Fast mode는 아직 GPT-5.5/GPT-5.4 지원으로 문서화되어 있으므로 모델 선택과 속도 모드는 분리해서 판단하세요.</p>
+                        <p data-i18n="s3_rec_note">💡 최신 `codex/models` 기준 공식 가이드는 GPT-5.6 family에서 시작하라고 안내합니다. 기본 Power setting은 `gpt-5.6-sol` medium reasoning이고, Sol은 복잡하고 중요한 작업, Terra는 일상 작업, Luna는 빠르고 반복적인 작업에 맞습니다. `Max`는 단일 작업에 더 많은 추론 시간을 주고, `Ultra`는 subagents로 나눌 수 있는 큰 작업에 씁니다. Pricing도 GPT-5.6 Sol/Terra/Luna를 Plus/Pro/Business/API Key 사용량 표에 포함합니다. Fast mode는 GPT-5.6/GPT-5.5에서 2.5배, GPT-5.4에서 2배 ChatGPT credit을 쓰며, API-key Codex는 API token pricing을 따릅니다.</p>
                 </div>
 
                 <h4 data-i18n="s3_alt_title">🔄 대안 모델</h4>
@@ -660,7 +660,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <p class="callout-inline" data-i18n="s4_note_access">현재 공식 문서는 모든 ChatGPT 플랜에 Codex가 포함된다고 설명합니다. 처음 보는 사용자라면 `Free $0`, `Go $8`, `Plus $20`, `Pro from $100` 순으로 보면 이해가 쉽고, 팀 사용자는 Business·Enterprise의 Codex-only pay-as-you-go seat를 같이 보면 됩니다. Pricing 페이지는 Plus / Pro 5x / Pro 20x / Business / API Key 표와 모델별 5시간 한도를 보여줍니다. Help Center Codex rate card는 대부분 고객에게 token-based pricing을 기본으로 안내하고, GPT-5.6 Sol/Terra/Luna의 plan별 5시간 사용량과 API Key usage-based 범위를 표시합니다. 실제 비용 판단은 메시지/작업 한도, token credit rate card, usage dashboard, 실제 모델 선택기, API 모델 가격표를 섞지 말고 함께 대조하세요. 2026년 6월 11-24일 eligible Plus/Pro 초대 reset banking은 dialog와 current terms로 조건을 확인해야 합니다. 이미지 생성은 일반 Codex 한도를 평균 3-5배 더 빨리 쓰며 Fast mode는 지원 모델에서 더 높은 비율로 크레딧을 소모합니다.</p>
+                        <p class="callout-inline" data-i18n="s4_note_access">현재 공식 문서는 모든 ChatGPT 플랜에 Codex가 포함된다고 설명합니다. 처음 보는 사용자라면 `Free $0`, `Go $8`, `Plus $20`, `Pro from $100` 순으로 보면 이해가 쉽고, 팀 사용자는 Business·Enterprise의 Codex-only pay-as-you-go seat를 같이 보면 됩니다. Pricing 페이지는 Plus / Pro 5x / Pro 20x / Business / API Key 표와 모델별 5시간 한도를 보여주며 GPT-5.6 Sol/Terra/Luna를 포함합니다. 실제 비용 판단은 메시지/작업 한도, token credit rate card, usage dashboard, 실제 모델 선택기, API 모델 가격표를 섞지 말고 함께 대조하세요. Fast mode는 GPT-5.6/GPT-5.5에서 2.5배, GPT-5.4에서 2배 ChatGPT credit을 씁니다.</p>
                         <p class="command-refs" data-i18n-html="s4_refs">출처: <a href="https://developers.openai.com/codex/quickstart/" target="_blank">Quickstart</a> · <a href="https://developers.openai.com/codex/pricing/" target="_blank">Codex pricing</a> · <a href="https://help.openai.com/en/articles/20001106-codex-rate-card" target="_blank">Codex rate card</a> · <a href="https://developers.openai.com/codex/speed" target="_blank">Speed</a> · <a href="https://openai.com/index/codex-flexible-pricing-for-teams/" target="_blank">Pay-as-you-go pricing for teams</a></p>
                     </div>
                 </div>
@@ -2026,7 +2026,7 @@ codex --search "optimize with Next.js 15"
                     </div>
                     <p class="overview-fact-date">
                         <span data-i18n="overview_fact_date_prefix">업데이트 기준일</span>
-                        <span class="live-date" data-date-format="long">2026년 7월 22일</span>
+                        <span class="live-date" data-date-format="long">2026년 7월 27일</span>
                     </p>
                 </div>
                 <ol class="changelog-list" aria-label="Today update summary">
@@ -2040,7 +2040,7 @@ codex --search "optimize with Next.js 15"
                     </li>
                     <li>
                         <strong data-i18n="overview_update_3_title">Quickstart·IDE·Mobile 경로 정리</strong>
-                        <span data-i18n="changelog_item_3">최신 Codex changelog를 대조했습니다. CLI 0.144.6의 GPT-5.6 bundled instructions/context window 정정을 추가하고, CLI 0.144.5 dangerous-command detection 운영 메모는 유지했습니다.</span>
+                        <span data-i18n="changelog_item_3">최신 Codex changelog를 대조했습니다. CLI 0.145.0의 paginated thread history, `/import`, Bedrock, audio/realtime, multi-agent V2, inline visualization link, Windows/MCP reliability 개선을 추가했습니다.</span>
                     </li>
                     <li>
                         <strong data-i18n="overview_update_4_title">Enterprise 발표 맥락 분리</strong>
@@ -2048,11 +2048,11 @@ codex --search "optimize with Next.js 15"
                     </li>
                     <li>
                         <strong data-i18n="overview_update_6_title">Docs MCP·설정 기준 재점검</strong>
-                        <span data-i18n="changelog_item_5">OpenAI Developers MCP와 openai.com/index를 확인했습니다. 7월 21일 Small Business 프로그램은 ChatGPT Work adoption 맥락으로, 7월 20/21일 long-horizon safety와 Hugging Face 보안 사고 글은 persistent agent 보안 맥락으로 분리했습니다.</span>
+                        <span data-i18n="changelog_item_5">OpenAI Developers MCP와 openai.com/index를 확인했습니다. ChatGPT Voice, multi-folder project, API hard spend limits, NTT DATA, OpenAI Presence, Health in ChatGPT를 Codex 제품 guidance와 분리해 반영했습니다.</span>
                     </li>
                     <li>
                         <strong data-i18n="overview_update_7_title">소셜 baseline 점검</strong>
-                        <span data-i18n="changelog_item_6">Chrome으로 X, Threads, LinkedIn person-level social sweep을 다시 진행했습니다. 새로 public guide에 승격할 만큼 검증된 person-level Codex tip은 없었습니다.</span>
+                        <span data-i18n="changelog_item_6">사람별 공개 practitioner signal을 다시 확인했습니다. 새로 public guide에 승격할 만큼 검증된 person-level Codex tip은 없었습니다.</span>
                     </li>
                 </ol>
             </section>
@@ -2068,14 +2068,14 @@ codex --search "optimize with Next.js 15"
                     href="https://github.com/swhan0329/codex-101" target="_blank">PR을 환영합니다</a>.</p>
             <p class="footer-meta">
                 <span data-i18n="footer_date_prefix">최종 업데이트</span>:
-                        <span class="live-date" data-date-format="long">2026년 7월 22일</span>
+                        <span class="live-date" data-date-format="long">2026년 7월 27일</span>
             </p>
             <p class="footer-meta">Made by <a href="https://github.com/swhan0329" target="_blank">@swhan0329</a></p>
         </div>
     </footer>
 
-    <script src="i18n.js?v=20260722-safety-work"></script>
-    <script src="app.js?v=20260722-safety-work"></script>
+    <script src="i18n.js?v=20260727-presence-health"></script>
+    <script src="app.js?v=20260727-presence-health"></script>
 </body>
 
 </html>

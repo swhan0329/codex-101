@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: July 22, 2026</strong><br/>
+  <strong>Last updated: July 27, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
@@ -29,17 +29,17 @@ The guide is written from the official OpenAI Codex documentation first, then ma
 - **Professional users**: read sections `12-14` for `AGENTS.md`, `config.toml`, and MCP, then `15-17` for sessions, automation, and prompt contracts.
 - **Example-driven readers**: open the live site and the use-case gallery to start from real workflows instead of feature lists.
 
-## July 22, 2026 Refresh Notes
+## July 27, 2026 Refresh Notes
 
 - Rechecked `developers.openai.com/codex/models` first. Recommended Codex models remain the GPT-5.6 family: `gpt-5.6-sol`, `gpt-5.6-terra`, and `gpt-5.6-luna`; `gpt-5.5` remains previous-generation, and `gpt-5.2` / `gpt-5.3-codex` remain deprecated for ChatGPT-authenticated Codex.
 - Tightened the Max/Ultra note from the current model and subagents docs: Max gives one selected model more reasoning time for a single hard task, while Ultra uses subagents for divisible work and may require enabling **Ultra in model picker slider** under Settings > Configuration.
-- Rechecked pricing, Speed/Fast mode, remote connections, app/features, app/automations, config, MCP, hooks, plugins, skills, Sites, OpenAI API latest-model/changelog, and current Platform/API surfaces. No model-order, pricing, remote-control, Windows activation, Sites, credential, permission, or feature-flag reversal was found.
-- Rechecked the latest Codex changelog and added CLI 0.144.6: bundled GPT-5.6 Sol/Terra/Luna instructions were refreshed and their context windows were corrected to 272,000 tokens. The CLI 0.144.5 dangerous-command detection note and CLI 0.144.0-0.144.4 operational notes remain current.
-- Reflected OpenAI API GPT-5.6 guidance separately from Codex product guidance: `gpt-5.6` routes to `gpt-5.6-sol`; GPT-5.6 adds Programmatic Tool Calling, Multi-agent beta, explicit prompt caching, persisted reasoning, max reasoning effort, Pro mode, and original/auto image detail preservation. Codex `Max` and `Ultra` are documented as product power settings, not API mode names.
+- Rechecked pricing, Speed/Fast mode, remote connections, app/features, app/automations, config, MCP, hooks, plugins, skills, Sites, OpenAI API latest-model/changelog, and current Platform/API surfaces. Fast mode now includes GPT-5.6, GPT-5.5, and GPT-5.4; GPT-5.6/GPT-5.5 use 2.5x Standard credits, GPT-5.4 uses 2x, and API-key workflows stay on API token pricing.
+- Rechecked the latest Codex changelog and added CLI 0.145.0: paginated thread history, expanded `/import`, Bedrock endpoint/auth updates, audio inputs/tool outputs, realtime V3, multi-agent V2 stabilization, inline visualization links, and Windows/MCP reliability fixes.
+- Added the July 23 ChatGPT desktop app 26.715 update: ChatGPT Voice can coordinate Chat, Work, and Codex tasks in the desktop app and through Remote on iOS; local projects can include multiple folders with one primary folder for Git, new chats, AGENTS.md, skills, and `config.toml`.
+- Reflected OpenAI API GPT-5.6 guidance separately from Codex product guidance: `gpt-5.6` routes to `gpt-5.6-sol`; GPT-5.6 adds Programmatic Tool Calling, Multi-agent beta, explicit prompt caching, persisted reasoning, max reasoning effort, Pro mode, and original/auto image detail preservation. API hard spend limits now belong in the Platform/API lane because monthly caps can return 429 when tracked spend reaches the limit.
 - Re-audited the official use-case catalog: official individual pages 99, local cards 99, `promptEn` gaps 0, `promptKo` gaps 0, official Starter prompt mismatches 0, line/token structure regressions 0.
-- Added the July 21 small-business program as ChatGPT Work adoption context only: it highlights product-specific training, small-business skills/plugins/partner workflows, Sites-style work examples, and GPT-5.6-powered Work availability without changing Codex model, pricing, or activation guidance.
-- Added the July 20/21 long-horizon safety and Hugging Face security incident posts as security context for persistent agents: long-running work needs sandboxing, trajectory-level monitoring, user visibility/control, and rollback paths. This does not change general Codex setup, but it reinforces why approvals, host credentials, and sandbox boundaries should stay explicit.
-- Chrome social sweep remains person-level and local-note-backed. No newly verified person-level Codex tip required a public practitioner-card change.
+- Rechecked openai.com/index. GPT-5.6 availability/pricing remains model and plan context; the NTT DATA and OpenAI Presence posts are enterprise adoption / agent-improvement context only, while Health in ChatGPT is explicitly not available in Codex. The mobile remote-control announcement still stays separate from the newer remote-connections operational docs.
+- Person-level practitioner signals were rechecked. No newly verified person-level Codex tip required a public practitioner-card change.
 
 ## June 12, 2026 Refresh Notes
 
