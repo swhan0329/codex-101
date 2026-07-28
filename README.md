@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: July 27, 2026</strong><br/>
+  <strong>Last updated: July 28, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
@@ -29,7 +29,7 @@ The guide is written from the official OpenAI Codex documentation first, then ma
 - **Professional users**: read sections `12-14` for `AGENTS.md`, `config.toml`, and MCP, then `15-17` for sessions, automation, and prompt contracts.
 - **Example-driven readers**: open the live site and the use-case gallery to start from real workflows instead of feature lists.
 
-## July 27, 2026 Refresh Notes
+## July 28, 2026 Refresh Notes
 
 - Rechecked `developers.openai.com/codex/models` first. Recommended Codex models remain the GPT-5.6 family: `gpt-5.6-sol`, `gpt-5.6-terra`, and `gpt-5.6-luna`; `gpt-5.5` remains previous-generation, and `gpt-5.2` / `gpt-5.3-codex` remain deprecated for ChatGPT-authenticated Codex.
 - Tightened the Max/Ultra note from the current model and subagents docs: Max gives one selected model more reasoning time for a single hard task, while Ultra uses subagents for divisible work and may require enabling **Ultra in model picker slider** under Settings > Configuration.
@@ -37,9 +37,10 @@ The guide is written from the official OpenAI Codex documentation first, then ma
 - Rechecked the latest Codex changelog and added CLI 0.145.0: paginated thread history, expanded `/import`, Bedrock endpoint/auth updates, audio inputs/tool outputs, realtime V3, multi-agent V2 stabilization, inline visualization links, and Windows/MCP reliability fixes.
 - Added the July 23 ChatGPT desktop app 26.715 update: ChatGPT Voice can coordinate Chat, Work, and Codex tasks in the desktop app and through Remote on iOS; local projects can include multiple folders with one primary folder for Git, new chats, AGENTS.md, skills, and `config.toml`.
 - Reflected OpenAI API GPT-5.6 guidance separately from Codex product guidance: `gpt-5.6` routes to `gpt-5.6-sol`; GPT-5.6 adds Programmatic Tool Calling, Multi-agent beta, explicit prompt caching, persisted reasoning, max reasoning effort, Pro mode, and original/auto image detail preservation. API hard spend limits now belong in the Platform/API lane because monthly caps can return 429 when tracked spend reaches the limit.
-- Re-audited the official use-case catalog: official individual pages 99, local cards 99, `promptEn` gaps 0, `promptKo` gaps 0, official Starter prompt mismatches 0, line/token structure regressions 0.
-- Rechecked openai.com/index. GPT-5.6 availability/pricing remains model and plan context; the NTT DATA and OpenAI Presence posts are enterprise adoption / agent-improvement context only, while Health in ChatGPT is explicitly not available in Codex. The mobile remote-control announcement still stays separate from the newer remote-connections operational docs.
-- Person-level practitioner signals were rechecked and corrected after a deeper pass. Section 20 now adds current person-linked cards for VB's Auto-review/approval guidance, VB's reasoning-effort tuning, Gabriel Chua's Build Week beginner flow, and Romain Huet's GPT-5.6 model-recheck context, while keeping product facts tied to official docs.
+- Re-audited the official use-case catalog: official individual pages 99 after excluding 13 collection pages, local cards 99, `promptEn` gaps 0, `promptKo` gaps 0, official Starter prompt mismatches 0, line/token structure regressions 0. Three detail pages use a visible prompt block instead of the deep-link prompt prop; those were checked with the fallback extractor.
+- Added the July 20 OpenAI Developers post on Custom Code Review rules for Codex. Section 16 now explains that GitHub Code Review can read `## Code Review Rules` from the nearest applicable `AGENTS.md`, and that rules should encode consequential repository-specific invariants with safe paths while leaving mechanical checks in CI.
+- Rechecked openai.com/index. The June 25 agents-at-work research post is kept as adoption/economic context, the mobile remote-control announcement stays separate from current remote-connections operational docs, and Health in ChatGPT remains outside Codex.
+- Person-level practitioner signals were rechecked in Chrome against X, LinkedIn, and Threads. No new person-level posts were promoted; existing Section 20 practitioner cards remain unchanged and tied to original posts or official corroborating docs.
 
 ## June 12, 2026 Refresh Notes
 
