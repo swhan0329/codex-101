@@ -1,6 +1,6 @@
 // Korean-first Codex use-case catalog.
 // Source baseline: https://developers.openai.com/codex/use-cases
-// Last official scrape: 2026-07-28
+// Last official scrape: 2026-07-29
 window.codexUseCaseCategories = [
     {
         "id": "today",
@@ -283,16 +283,16 @@ window.codexUseCases = [
     {
         "id": "analyze-data-export",
         "category": "data",
-        "title": "CSV나 시트 export에 바로 질문하기",
-        "titleEn": "Query tabular data",
-        "sourceTitle": "Query tabular data",
+        "title": "계속 최신화되는 대시보드 만들기",
+        "titleEn": "Build a dashboard that stays up to date",
+        "sourceTitle": "Build a dashboard that stays up to date",
         "sourceUrl": "https://developers.openai.com/codex/use-cases/analyze-data-export",
-        "summary": "스프레드시트, CSV, export 폴더에 대해 자연어 질문을 하고 근거 행을 확인합니다.",
-        "summaryEn": "Ask a question about a CSV, spreadsheet, export, or data folder.",
-        "when": "데이터 분석 환경을 따로 만들기 전에 빠른 답과 근거를 보고 싶을 때 좋습니다.",
-        "prompt": "이 export에서 지난달 대비 매출이 가장 크게 줄어든 고객군을 찾아줘. 계산 방식과 근거 행도 보여줘.",
-        "output": "답변, 계산식, 근거 행, 재현 가능한 분석 코드.",
-        "caution": "집계 기준과 날짜 범위를 명확히 하지 않으면 그럴듯하지만 틀린 답이 나올 수 있습니다.",
+        "summary": "스프레드시트나 CSV를 비공개 인터랙티브 대시보드로 만들고, 승인된 원본이 바뀌면 필요한 변화만 알립니다.",
+        "summaryEn": "Turn your data into a private dashboard and keep it up to date.",
+        "when": "매출, 세그먼트, 시간별 변화처럼 반복 확인하는 지표를 매번 수동으로 열어보지 않고 추적하고 싶을 때 좋습니다.",
+        "prompt": "@Sites와 @google-drive로 최신 매출 데이터를 비공개 대시보드로 만들고, 평일 아침마다 승인된 원본 변화를 확인해줘.",
+        "output": "비공개 대시보드, 차트와 필터, 계산 근거, 데이터 품질 경고, 의미 있는 변화 알림.",
+        "caution": "파일이나 URL이 없으면 추측하지 말고 요청하게 하고, 게시·공유·권한 변경은 승인 전 금지하세요.",
         "official": {
             "difficulty": "Easy",
             "time": "30m",
@@ -303,18 +303,28 @@ window.codexUseCases = [
                 "Engineering"
             ],
             "bestForEn": [
-                "Questions that can be answered through a quick calculation, chart, table, or short summary.",
-                "Roles that need to analyze data and create visualizations."
+                "Building an interactive dashboard from spreadsheets or sales exports.",
+                "Keeping the dashboard current without manually checking the source data."
             ],
             "skills": [
                 {
-                    "name": "Google Sheets",
-                    "why": "Analyze approved Google Sheets when the data lives in a shared spreadsheet.",
-                    "url": "https://developers.openai.com/codex/plugins"
+                    "name": "Sites",
+                    "why": "Build and preview a private, interactive dashboard.",
+                    "url": "https://developers.openai.com/codex/sites"
+                },
+                {
+                    "name": "Google Drive",
+                    "why": "Read the approved spreadsheets and source files behind the dashboard.",
+                    "url": "https://github.com/openai/plugins/tree/main/plugins/google-drive"
+                },
+                {
+                    "name": "Spreadsheets",
+                    "handle": "$spreadsheets",
+                    "why": "Check source data, calculate changes, and verify the dashboard."
                 }
             ],
-            "promptEn": "Analyze @sales-export.csv\n\nQuestion: Which customer segment changed the most last quarter?\n\nPlease:\n- inspect the columns before analyzing\n- answer the question from the data\n- create a simple browser visualization as an HTML file\n- start a local preview so I can open it in the built-in browser",
-            "promptKo": "@sales-export.csv를 분석해줘\n\n질문: 지난 분기에 가장 많이 변한 고객 세그먼트는 무엇이야?\n\n다음을 해줘:\n- 분석 전에 열을 먼저 확인하기\n- 데이터에 근거해 질문에 답하기\n- 간단한 브라우저 시각화를 HTML 파일로 만들기\n- 내가 내장 브라우저에서 열어볼 수 있도록 로컬 미리보기 시작하기",
+            "promptEn": "Use @Sites and @google-drive to turn my latest sales data into a private, interactive dashboard. Use the spreadsheets or CSVs I attach, or the exact Google Drive or Google Sheets URL I paste into this chat. If I have not attached a file or provided a source URL, ask me for one instead of guessing.\n\nShow revenue, customer segments, changes over time, and anything unusual. Include clear charts, date and segment filters, when the source was last updated, and the calculations behind the results. Check for missing rows, unmatched records, and inconsistent dates, and explain anything that could change the answer.\n\nCheck the approved source every weekday morning. Update the dashboard when the data changes, and notify me only when there is a meaningful change, a data-quality problem, or something I need to review. If nothing important has changed, do not send an update.\n\nShow me the dashboard for review. Keep it private, and do not publish it, share it, change its permissions, or contact anyone without my approval.",
+            "promptKo": "@Sites와 @google-drive를 사용해 내 최신 매출 데이터를 비공개 인터랙티브 대시보드로 바꿔줘. 내가 첨부하는 spreadsheet나 CSV, 또는 이 채팅에 붙여넣는 정확한 Google Drive나 Google Sheets URL을 사용해. 내가 파일을 첨부하지 않았거나 source URL을 제공하지 않았다면 추측하지 말고 나에게 요청해.\n\n매출, 고객 세그먼트, 시간에 따른 변화, 이상한 점을 보여줘. 명확한 차트, 날짜와 세그먼트 필터, 원본이 마지막으로 업데이트된 시점, 결과 뒤의 계산식을 포함해. 누락된 행, 매칭되지 않은 records, 일관되지 않은 날짜를 확인하고, 답을 바꿀 수 있는 모든 사항을 설명해.\n\n승인된 원본을 평일 아침마다 확인해. 데이터가 바뀌면 대시보드를 업데이트하고, 의미 있는 변화, 데이터 품질 문제, 또는 내가 검토해야 할 일이 있을 때만 알려줘. 중요한 변화가 없으면 업데이트를 보내지 마.\n\n검토할 수 있도록 대시보드를 보여줘. 비공개로 유지하고, 내 승인 없이 게시하거나, 공유하거나, 권한을 변경하거나, 누구에게도 연락하지 마.",
             "guideSectionsEn": [
                 "Analyze the data",
                 "Follow-up analysis"
@@ -365,16 +375,16 @@ window.codexUseCases = [
     {
         "id": "manage-your-inbox",
         "category": "today",
-        "title": "받은메일함에서 중요한 것만 추려내기",
-        "titleEn": "Manage your inbox",
-        "sourceTitle": "Manage your inbox",
+        "title": "받은메일함을 inbox zero로 정리하기",
+        "titleEn": "Get your email to inbox zero",
+        "sourceTitle": "Get your email to inbox zero",
         "sourceUrl": "https://developers.openai.com/codex/use-cases/manage-your-inbox",
-        "summary": "Gmail 같은 받은메일함에서 답장 필요, 확인만 하면 되는 일, 나중에 봐도 되는 일을 분리합니다.",
-        "summaryEn": "Have Codex find the emails that matter and write the replies in your voice.",
-        "when": "메일이 많아서 중요한 요청을 놓치기 쉽거나, 답장 초안까지 한 번에 만들고 싶을 때 좋습니다.",
-        "prompt": "최근 24시간 메일 중 내가 답장해야 할 것만 찾아서 우선순위, 이유, 답장 초안을 표로 정리해줘. 실제 전송은 하지 마.",
-        "output": "우선순위 표, 스레드별 맥락 요약, 답장 초안, 확인해야 할 첨부/링크 목록.",
-        "caution": "메일 전송, 삭제, 아카이브처럼 계정 상태를 바꾸는 행동은 마지막에 직접 승인하도록 두세요.",
+        "summary": "쌓인 메일함에서 답장, 결정, 주의가 필요한 메시지를 찾고 내 말투의 초안과 정리 제안을 만듭니다.",
+        "summaryEn": "Clear the backlog, draft replies in your voice, and stay on top of new email.",
+        "when": "메일이 많이 쌓였고 중요한 메일, 반복 정리 규칙, 답장 초안, 일정 기반 확인을 한 흐름으로 만들고 싶을 때 좋습니다.",
+        "prompt": "최근 90일의 연결된 메일과 보낸 메일을 검토해 inbox zero 계획, 주의할 메일, 내 말투의 답장 초안, 승인 질문을 만들어줘.",
+        "output": "받은메일함 요약, 주의할 메일 목록, 라벨/아카이브 제안, 답장 초안, 일정 기반 확인 계획.",
+        "caution": "승인 없이 메일을 보내거나, 아카이브하거나, 휴지통으로 옮기지 않게 하고 Trash는 항상 별도 승인으로 분리하세요.",
         "official": {
             "difficulty": "Easy",
             "time": "5m",
@@ -385,28 +395,23 @@ window.codexUseCases = [
                 "Workflow"
             ],
             "bestForEn": [
-                "People who want Codex to find emails that need attention instead of manually sorting them.",
-                "Recurring inbox checks where Codex can create reviewable drafts in the background."
+                "Clear an overloaded email inbox without losing useful records.",
+                "Surface important mail and reply drafts on a schedule."
             ],
             "skills": [
                 {
                     "name": "Gmail",
-                    "why": "Search and triage Gmail threads, read the surrounding conversation, create reply drafts, and organize messages when you explicitly ask.",
+                    "why": "Search and triage Gmail threads, create reply drafts, and archive, label, or move messages to Trash when you explicitly ask.",
                     "url": "https://github.com/openai/plugins/tree/main/plugins/gmail"
                 },
                 {
-                    "name": "Slack",
-                    "why": "Check team-message context when an email needs the latest decision, owner, asset, or blocker.",
-                    "url": "https://github.com/openai/plugins/tree/main/plugins/slack"
-                },
-                {
-                    "name": "Google Drive",
-                    "why": "Read source docs, FAQs, notes, or approved writing examples that should shape the draft.",
-                    "url": "https://github.com/openai/plugins/tree/main/plugins/google-drive"
+                    "name": "Outlook Email",
+                    "why": "Search and triage Outlook email, organize recurring messages, change read state or move messages when you explicitly ask, and draft replies using your connected mailbox.",
+                    "url": "https://github.com/openai/plugins/tree/main/plugins/outlook-email"
                 }
             ],
-            "promptEn": "Can you check my @gmail, figure out what I need to respond to, and write drafts in my voice.\n\nUse my recent sent replies or @google-drive [writing examples] for tone.\n\nUse @slack, @google-drive, or other sources where my work happens when the email is missing the latest decision, owner, file, or blocker.",
-            "promptKo": "내 @gmail을 확인해서 내가 답장해야 할 일을 파악하고, 내 말투로 draft를 작성해줄 수 있어?\n\nTone에는 내 recent sent replies나 @google-drive [writing examples]를 사용해.\n\nEmail에 latest decision, owner, file, blocker가 빠져 있으면 @slack, @google-drive, 또는 내 일이 이루어지는 다른 sources를 사용해.",
+            "promptEn": "Review my connected email from the last 90 days, including sent mail. If I have multiple accounts, review each separately. If none are connected, explain how to connect Gmail or Outlook Email from the Plugins tab in ChatGPT Work.\n\nInfer whether the inbox is work or personal and identify the people, projects, and recurring messages that matter. Use recent, human-written sent emails to understand how I write. Ignore forwarded or generated messages that aren't representative of my voice, and check other connected tools when they might provide useful context for a reply.\n\nGive me a concise, personalized update with natural headings:\n\n- Open with one or two sentences about what you learned from my inbox, including the total and unread counts.\n- List up to five emails that need attention. Keep each to one short, action-oriented bullet with relevant timing and a link. Avoid speculation, especially for security alerts.\n- In two or three sentences, explain what routine email you'd label and archive, what stays visible, and any subscriptions worth reviewing. Format proposed `labels` inline and clarify that archived email remains searchable.\n- Draft one useful reply in my voice, briefly explaining who it's for, what they need, and any relevant context you found.\n- Explain what you'll do going forward and that I can redirect you by replying here.\n- End with three simple, numbered yes/no questions: apply the cleanup, save the reply as a draft, or keep the proposed schedule and priorities. Show how to respond with a one-line example, such as “1 yes, 2 yes, 3 no,” and invite me to include any changes.\n\nSchedule checks at 8 AM and 4 PM on weekdays for work email, or 8 AM daily for personal email. Explain this in first person: “Going forward, I'll check…” Describe how you'll surface new or changed mail that needs attention, use other connected sources like messaging, documents, or calendar when relevant, and draft replies in my voice. Tell me I can redirect you by replying here. Keep each update concise, number any questions at the bottom, and briefly say so if nothing needs attention.\n\nDon't send, archive, or move anything to Trash without approval. Apply only approved cleanup actions and always ask separately before using Trash.",
+            "promptKo": "보낸 메일을 포함해 지난 90일 동안의 내 연결된 이메일을 검토해. 계정이 여러 개라면 각각 따로 검토해. 연결된 계정이 없다면 ChatGPT Work의 Plugins 탭에서 Gmail 또는 Outlook Email을 연결하는 방법을 설명해.\n\n받은메일함이 업무용인지 개인용인지 추론하고, 중요한 사람, 프로젝트, 반복 메시지를 파악해. 내가 어떻게 쓰는지 이해하기 위해 최근 사람이 직접 쓴 보낸 메일을 사용해. 내 말투를 대표하지 않는 전달 메일이나 생성된 메시지는 무시하고, 답장에 유용한 맥락을 줄 수 있을 때는 다른 연결된 도구도 확인해.\n\n자연스러운 제목을 사용해 간결하고 개인화된 업데이트를 줘:\n\n- 총 메일 수와 읽지 않은 메일 수를 포함해, 내 받은메일함에서 무엇을 알게 됐는지 한두 문장으로 시작해.\n- 주의가 필요한 이메일을 최대 다섯 개 나열해. 각 항목은 관련 시점과 링크를 포함한 짧고 행동 지향적인 bullet 하나로 유지해. 특히 보안 알림에서는 추측을 피해야 해.\n- 어떤 반복 메일에 라벨을 붙이고 아카이브할지, 무엇을 계속 보이게 둘지, 검토할 만한 구독이 있는지 두세 문장으로 설명해. 제안하는 `labels`는 inline으로 표시하고, 아카이브된 이메일은 검색 가능하다는 점을 명확히 해.\n- 내 말투로 유용한 답장 하나를 초안으로 작성하고, 누구에게 보내는지, 상대가 무엇을 필요로 하는지, 찾은 관련 맥락을 짧게 설명해.\n- 앞으로 무엇을 할지 설명하고, 내가 여기 답장해서 방향을 바꿀 수 있다고 알려줘.\n- 마지막에는 세 개의 간단한 번호가 붙은 yes/no 질문으로 끝내: 정리 적용, 답장을 초안으로 저장, 제안한 일정과 우선순위 유지. “1 yes, 2 yes, 3 no,” 같은 한 줄 예시로 응답 방법을 보여주고, 변경 사항을 함께 적어도 된다고 안내해.\n\n업무용 메일은 평일 오전 8시와 오후 4시에, 개인용 메일은 매일 오전 8시에 확인하도록 예약해. 이 내용을 1인칭으로 설명해: “Going forward, I'll check…” 새로 오거나 바뀐 메일 중 주의가 필요한 것을 어떻게 보여줄지, 관련 있을 때 메시지, 문서, 캘린더 같은 다른 연결된 출처를 어떻게 사용할지, 내 말투로 답장을 어떻게 초안 작성할지 설명해. 내가 여기 답장해서 방향을 바꿀 수 있다고 알려줘. 각 업데이트는 간결하게 유지하고, 질문은 아래에 번호를 붙이고, 주의할 일이 없으면 그 점도 짧게 말해.\n\n승인 없이 어떤 것도 보내거나, 아카이브하거나, Trash로 옮기지 마. 승인된 정리 작업만 적용하고 Trash 사용 전에는 항상 별도로 물어봐.",
             "guideSectionsEn": [
                 "Review your inbox",
                 "Let the thread learn your taste",
@@ -638,33 +643,45 @@ window.codexUseCases = [
     {
         "id": "generate-slide-decks",
         "category": "data",
-        "title": "자료를 슬라이드 덱으로 바꾸기",
-        "titleEn": "Generate slide decks",
-        "sourceTitle": "Generate slide decks",
+        "title": "슬라이드 덱을 만들거나 수정하기",
+        "titleEn": "Create or revise a slide deck",
+        "sourceTitle": "Create or revise a slide deck",
         "sourceUrl": "https://developers.openai.com/codex/use-cases/generate-slide-decks",
-        "summary": "pptx 파일을 다루고 이미지 생성까지 연결해 발표자료 초안을 만듭니다.",
-        "summaryEn": "Manipulate pptx files and use image generation to automate slide creation.",
-        "when": "보고서나 회의 내용을 발표용 구조로 빠르게 바꿔야 할 때 좋습니다.",
-        "prompt": "이 문서와 데이터를 10장짜리 발표자료로 바꿔줘. 각 슬라이드 제목, 핵심 메시지, 필요한 시각 자료를 넣어줘.",
-        "output": "PPTX 초안, 슬라이드별 메시지, 이미지/차트 후보, 검토 메모.",
-        "caution": "브랜드 템플릿이나 숫자 정확도가 중요한 덱은 렌더링 후 직접 검수해야 합니다.",
+        "summary": "원본 자료, 기존 덱, 템플릿을 바탕으로 Google Slides나 PowerPoint 발표자료를 만들거나 고칩니다.",
+        "summaryEn": "Turn notes, data, or an existing presentation into a slide deck.",
+        "when": "노트, 데이터, 기존 발표자료를 대상 청중에 맞는 검토 가능한 덱으로 바꿔야 할 때 좋습니다.",
+        "prompt": "@Presentations로 첨부한 자료를 청중에 맞는 발표자료로 만들고, 기존 덱이나 템플릿이 있으면 스타일을 맞춰줘.",
+        "output": "완성된 발표자료, 편집 가능한 텍스트/차트, 레이아웃 검토 결과, 검토 필요 항목.",
+        "caution": "원본 숫자와 브랜드 스타일이 중요한 덱은 완성본을 렌더링해 레이아웃과 포맷 문제를 확인하게 하세요.",
         "official": {
             "difficulty": "Easy",
             "time": "30m",
             "tags": [
-                "Code",
                 "Data",
                 "Integrations",
                 "Knowledge Work"
             ],
             "bestForEn": [
-                "Teams turning notes or structured inputs into repeatable slide decks",
-                "Creating new visual presentations from scratch",
-                "Rebuilding or extending decks from screenshots, PDFs, or reference presentations"
+                "Turning notes, research, or data into a presentation.",
+                "Refreshing an existing deck while preserving its structure and style."
             ],
-            "skills": [],
-            "promptEn": "Use the $slides and $imagegen skills to edit this slide deck in the following way:\n- If present, add logo.png in the bottom right corner on every slide\n- On slides X, Y and Z, move the text to the left and use image generation to generate an illustration (style: abstract, digital art) on the right\n- Preserve text as text and simple charts as native PowerPoint charts where practical.\n- Add these slides: [describe new slides here]\n- Use the existing branding on new slides and new text (colors, fonts, layout, etc.) \n- Render the updated deck to slide images, review the output, and fix layout issues before delivery.\n- Run overflow and font-substitution checks before delivery, especially if the deck is dense.\n- Save reusable prompts or generation notes when you create a batch of related images.\n\nOutput:\n- A copy of the slide deck with the changes applied\n- notes on which slides were generated, rewritten, or left unchanged",
-            "promptKo": "$slides와 $imagegen skill을 사용해 이 슬라이드 덱을 다음 방식으로 편집해줘:\n- logo.png가 있으면 모든 슬라이드의 오른쪽 아래에 추가해\n- X, Y, Z 슬라이드에서는 텍스트를 왼쪽으로 옮기고 image generation을 사용해 오른쪽에 일러스트레이션을 생성해(스타일: abstract, digital art)\n- 가능한 경우 텍스트는 텍스트로, 단순 차트는 네이티브 PowerPoint 차트로 유지해.\n- 다음 슬라이드를 추가해: [describe new slides here]\n- 새 슬라이드와 새 텍스트에는 기존 브랜딩(색상, 글꼴, 레이아웃 등)을 사용해 \n- 업데이트된 덱을 슬라이드 이미지로 렌더링하고, 출력을 검토한 뒤 전달 전에 레이아웃 문제를 고쳐.\n- 특히 덱이 빽빽하면 전달 전에 넘침과 글꼴 대체 검사를 실행해.\n- 관련 이미지를 묶음으로 만들었다면 재사용 가능한 프롬프트나 생성 메모를 저장해.\n\n출력:\n- 변경 사항이 적용된 슬라이드 덱 사본\n- 생성, 재작성, 또는 변경하지 않은 슬라이드에 대한 메모",
+            "skills": [
+                {
+                    "name": "Presentations",
+                    "why": "Create, edit, and preview Google Slides or PowerPoint presentations from source material, a reference deck, or a template."
+                },
+                {
+                    "name": "Google Drive",
+                    "why": "Read connected source files and create or update native Google Slides presentations.",
+                    "url": "https://github.com/openai/plugins/tree/main/plugins/google-drive"
+                },
+                {
+                    "name": "Template Creator",
+                    "why": "Turn an existing PowerPoint presentation into a reusable presentation template."
+                }
+            ],
+            "promptEn": "Use @Presentations to turn the material I've attached into a presentation for its intended audience.\n\nIf I've included an existing deck or template, match its structure, visual style, and branding. Keep text and charts editable where possible, use visuals when they make the point clearer, and check the finished slides for layout or formatting issues. Return the completed presentation and briefly flag anything that needs my review.",
+            "promptKo": "@Presentations를 사용해 내가 첨부한 자료를 의도한 청중에 맞는 발표자료로 바꿔줘.\n\n내가 기존 덱이나 템플릿을 포함했다면 그 구조, 시각 스타일, 브랜딩을 맞춰. 가능한 경우 텍스트와 차트는 편집 가능하게 유지하고, 요점을 더 명확하게 만들 때는 시각 자료를 사용하고, 완성된 슬라이드의 레이아웃이나 포맷 문제를 확인해. 완성된 발표자료를 반환하고 내가 검토해야 할 항목을 짧게 표시해.",
             "guideSectionsEn": [
                 "Introduction",
                 "Start from the source deck and references",
@@ -1025,12 +1042,12 @@ window.codexUseCases = [
         "titleEn": "Analyze datasets and ship reports",
         "sourceTitle": "Analyze datasets and ship reports",
         "sourceUrl": "https://developers.openai.com/codex/use-cases/datasets-and-reports",
-        "summary": "정리, 분석, 차트, 보고서 초안까지 한 흐름으로 만듭니다.",
+        "summary": "지저분한 파일을 정리·조인·분석해 차트와 주의사항이 있는 검토 가능한 보고서로 만듭니다.",
         "summaryEn": "Turn messy data into clear analysis and visualizations.",
-        "when": "데이터를 읽는 사람에게 바로 전달할 수 있는 리포트가 필요할 때 좋습니다.",
-        "prompt": "이 데이터셋의 핵심 인사이트 5개를 찾고, 차트와 함께 의사결정용 보고서로 정리해줘.",
-        "output": "분석 코드, 차트, 요약 보고서, 한계와 추가 확인 질문.",
-        "caution": "상관관계를 인과관계처럼 쓰지 않게 하고, 데이터 품질 한계를 따로 적게 하세요.",
+        "when": "정리, reliable join, 해석 가능한 모델, 재현 가능한 분석을 거쳐 차트·메모·대시보드·보고서가 필요할 때 좋습니다.",
+        "prompt": "@Data Analytics로 부동산 매매와 고속도로 거리 데이터셋을 분석해 고속도로 근처 주택의 가치가 더 낮은지 확인해줘.",
+        "output": "출처 기반 보고서, 차트, 노트북이나 스프레드시트, 데이터 품질 이슈와 불확실성.",
+        "caution": "원본 파일을 덮어쓰거나 누락 값을 지어내지 말고, 상관관계와 해석·불확실성을 분리하게 하세요.",
         "official": {
             "difficulty": "Intermediate",
             "time": "1h",
@@ -1039,29 +1056,28 @@ window.codexUseCases = [
                 "Analysis"
             ],
             "bestForEn": [
-                "Data analysis that starts with messy files and should end with a chart, memo, dashboard, or report",
-                "Analysts who want Codex to help with cleanup, joins, exploratory analysis, and reproducible scripts",
-                "Teams that need reviewable artifacts instead of one-off notebook state"
+                "Data analysis that starts with messy files and ends with a chart, memo, dashboard, or report.",
+                "Questions that require cleaning, reliable joins, interpretable models, or reproducible analysis.",
+                "Teams that need artifacts others can review and reuse."
             ],
             "skills": [
                 {
-                    "name": "Jupyter Notebook",
-                    "why": "Create or refactor notebooks for exploratory analysis, experiments, and reusable walkthroughs.",
-                    "url": "https://github.com/openai/skills/tree/main/skills/.curated/jupyter-notebook"
+                    "name": "Spreadsheets",
+                    "handle": "$spreadsheets",
+                    "why": "Inspect CSV, TSV, and Excel files, check formulas and joins, and create reviewable tables or charts."
                 },
                 {
-                    "name": "Doc",
-                    "why": "Produce stakeholder-ready `.docx` reports when layout, tables, or comments matter.",
-                    "url": "https://github.com/openai/skills/tree/main/skills/.curated/doc"
+                    "name": "Google Drive",
+                    "why": "Read the approved Google Sheets and source files you name in Drive.",
+                    "url": "https://github.com/openai/plugins/tree/main/plugins/google-drive"
                 },
                 {
-                    "name": "Pdf",
-                    "why": "Render PDF outputs and check the final analysis artifact before you share it.",
-                    "url": "https://github.com/openai/skills/tree/main/skills/.curated/pdf"
+                    "name": "Data Analytics",
+                    "why": "Gather source context, analyze and validate data, and build reusable reports, dashboards, charts, or notebooks."
                 }
             ],
-            "promptEn": "I'm doing a data analysis project in this workspace.\n\nGoal:\n- Figure out whether houses near the highway have lower property valuations.\n\nStart by:\n- reading `AGENTS.md` and explaining the recommended Python environment\n- loading the dataset(s) at [dataset path]\n- describing what each file contains, likely join keys, and obvious data quality issues\n- proposing a reproducible workflow from import and tidy through visualization, modeling, and report output\n\nConstraints:\n- prefer scripts and saved artifacts over one-off notebook state\n- do not invent missing values or merge keys\n- suggest any skills or worktree splits that would make the workflow more reproducible\n\nOutput:\n- setup plan\n- data inventory\n- analysis plan\n- first commands or files to create",
-            "promptKo": "이 워크스페이스에서 데이터 분석 프로젝트를 하고 있어.\n\n목표:\n- 고속도로 근처 주택의 부동산 가치 평가가 더 낮은지 알아보기.\n\n다음부터 시작해:\n- `AGENTS.md`를 읽고 권장 Python 환경 설명하기\n- [dataset path]에 있는 데이터셋 불러오기\n- 각 파일에 무엇이 들어 있는지, 가능성 높은 join key, 눈에 띄는 데이터 품질 문제 설명하기\n- import와 tidy부터 시각화, 모델링, 보고서 출력까지 재현 가능한 workflow 제안하기\n\n제약 조건:\n- 일회성 notebook 상태보다 script와 저장된 artifact를 우선해\n- 누락 값이나 merge key를 지어내지 마\n- workflow를 더 재현 가능하게 만들 skill이나 worktree 분리가 있으면 제안해\n\n출력:\n- setup plan\n- data inventory\n- analysis plan\n- first commands or files to create",
+            "promptEn": "Use @Data Analytics to inspect the attached property-sales and highway-distance datasets and determine whether homes near the highway have lower property values.\n\nExplain what each source contains, identify the relevant columns and likely join keys, and check for missing values, duplicates, unmatched records, and incomplete data. Clean and join the inputs without overwriting the source files or inventing values.\n\nExplore the question with clear supporting charts, start with an interpretable model when modeling is useful, and explain the result, assumptions, and uncertainty in plain language. Return a concise report, notebook, or spreadsheet with the answer first, name the files you create, and flag any data issue that could change the conclusion.",
+            "promptKo": "@Data Analytics를 사용해 첨부된 property-sales와 highway-distance 데이터셋을 검사하고, 고속도로 근처 주택의 property values가 더 낮은지 판단해줘.\n\n각 source에 무엇이 들어 있는지 설명하고, 관련 columns와 가능성 높은 join keys를 파악하고, missing values, duplicates, unmatched records, incomplete data를 확인해. source files를 덮어쓰거나 값을 지어내지 말고 입력을 정리하고 조인해.\n\n명확한 보조 차트로 질문을 탐색하고, 모델링이 유용할 때는 해석 가능한 모델부터 시작하고, 결과, assumptions, uncertainty를 쉬운 말로 설명해. 답을 먼저 제시하는 간결한 report, notebook, 또는 spreadsheet를 반환하고, 만든 files의 이름을 적고, 결론을 바꿀 수 있는 data issue를 표시해.",
             "guideSectionsEn": [
                 "Introduction",
                 "Define your use case",
@@ -2603,12 +2619,12 @@ window.codexUseCases = [
         "titleEn": "Build and deploy internal apps",
         "sourceTitle": "Build and deploy internal apps",
         "sourceUrl": "https://developers.openai.com/codex/use-cases/build-and-deploy-internal-apps",
-        "summary": "팀 워크플로를 Sites 기반 내부 앱으로 만들고 테스트와 배포까지 연결합니다.",
+        "summary": "팀 워크플로를 Sites 기반 비공개 내부 앱으로 만들고 모바일·데스크톱에서 검토한 뒤 반복 개선합니다.",
         "summaryEn": "Turn a team workflow into a hosted internal app with Sites.",
-        "when": "Business/Enterprise 워크스페이스에서 고객 리뷰 허브, 운영 대시보드, 시나리오 플래너처럼 팀 공유용 결과물이 필요할 때 좋습니다.",
-        "prompt": "@Sites 이 프로젝트를 팀 내부 리뷰용 사이트로 저장해줘. 먼저 build를 검증하고, 바로 배포하지 말고 saved version과 접근 권한 옵션을 설명해줘.",
-        "output": "saved version, 배포 후보, 접근 권한 제안, storage/secret 확인, production URL 배포 전 체크리스트.",
-        "caution": "Sites 배포 URL은 production 배포입니다. Enterprise는 RBAC/admin enablement가 필요할 수 있고, runtime secret은 `.openai/hosting.json`이 아니라 Sites panel에서 관리해야 합니다.",
+        "when": "반복 업무를 작고 집중된 내부 도구로 바꾸고, 자료를 바탕으로 우선 비공개 미리보기를 검토하고 싶을 때 좋습니다.",
+        "prompt": "@Sites로 [describe the workflow or tool you need]를 위한 비공개 내부 앱을 만들고, 모바일과 데스크톱에서 작동하는지 확인한 뒤 preview를 보여줘.",
+        "output": "비공개 preview, 모바일·데스크톱 검증 결과, 검토 필요 항목, 반복 개선하기 쉬운 첫 버전.",
+        "caution": "승인 없이 앱을 게시·공유하거나 접근 권한을 바꾸지 않게 하고, 연락이나 외부 공유도 별도로 승인받게 하세요.",
         "official": {
             "difficulty": "Intermediate",
             "time": "30m",
@@ -2619,9 +2635,8 @@ window.codexUseCases = [
                 "Engineering"
             ],
             "bestForEn": [
-                "Teams that want to turn recurring workflows into interactive apps.",
-                "Apps that need lightweight structured persistence, file uploads, or workspace-oriented sharing.",
-                "Internal tools that benefit from building, testing, deploying, and iterating in one Codex thread."
+                "Teams turning a recurring workflow into a focused internal tool.",
+                "Apps that need lightweight storage, uploads, or workspace sharing."
             ],
             "skills": [
                 {
@@ -2630,8 +2645,8 @@ window.codexUseCases = [
                     "url": "https://chatgpt.com/plugins/share/sites"
                 }
             ],
-            "promptEn": "Build and deploy an internal app for [team or workflow].\n\nGoal:\n- [what the app should help people do]\n- [who should use it]\n- [source docs, data, or connected services ChatGPT should inspect]\n\nRequirements:\n- Keep the first version focused on one useful workflow.\n- Use D1 for structured data persistence.\n- Use R2 for user-uploaded files if needed.\n- Test the main flow, persistence, and responsive layout before deploying.\n\nMake it available to all workspace users.",
-            "promptKo": "[team or workflow]를 위한 internal app을 build하고 deploy해줘.\n\n목표:\n- [what the app should help people do]\n- [who should use it]\n- [source docs, data, or connected services ChatGPT should inspect]\n\n요구사항:\n- 첫 version은 하나의 유용한 workflow에 집중해.\n- structured data persistence에는 D1을 사용해.\n- 필요한 경우 user-uploaded files에는 R2를 사용해.\n- deploy하기 전에 main flow, persistence, responsive layout을 test해.\n\n모든 workspace users가 사용할 수 있게 만들어.",
+            "promptEn": "Use @Sites to build a private internal app for [describe the workflow or tool you need]. Use any attached files or linked documents to understand who it's for, what information it should show, and what people need to do.\n\nBuild a focused first version and check that it works on mobile and desktop. Show me a private preview, explain anything that needs my review, and make it easy to iterate.\n\nDo not publish or share the app, change its access, or contact anyone without asking me first.",
+            "promptKo": "@Sites를 사용해 [describe the workflow or tool you need]를 위한 비공개 내부 앱을 만들어줘. 첨부된 파일이나 연결된 문서를 사용해 누구를 위한 것인지, 어떤 정보를 보여줘야 하는지, 사람들이 무엇을 해야 하는지 이해해.\n\n집중된 첫 버전을 만들고 모바일과 데스크톱에서 작동하는지 확인해. 비공개 preview를 보여주고, 내가 검토해야 할 모든 것을 설명하고, 반복 개선하기 쉽게 만들어.\n\n나에게 먼저 묻지 않고 앱을 게시하거나 공유하거나, 접근 권한을 변경하거나, 누구에게도 연락하지 마.",
             "guideSectionsEn": [
                 "Build and deploy from one thread",
                 "Give Codex the workflow context",
