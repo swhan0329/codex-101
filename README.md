@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: July 29, 2026</strong><br/>
+  <strong>Last updated: July 30, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
@@ -29,15 +29,15 @@ The guide is written from the official OpenAI Codex documentation first, then ma
 - **Professional users**: read sections `12-14` for `AGENTS.md`, `config.toml`, and MCP, then `15-17` for sessions, automation, and prompt contracts.
 - **Example-driven readers**: open the live site and the use-case gallery to start from real workflows instead of feature lists.
 
-## July 29, 2026 Refresh Notes
+## July 30, 2026 Refresh Notes
 
 - Rechecked `developers.openai.com/codex/models` first. Recommended Codex models remain the GPT-5.6 family: `gpt-5.6-sol`, `gpt-5.6-terra`, and `gpt-5.6-luna`; `gpt-5.5` remains previous-generation, and `gpt-5.2` / `gpt-5.3-codex` remain deprecated for ChatGPT-authenticated Codex.
 - Tightened the Max/Ultra note from the current model and subagents docs: Max gives one selected model more reasoning time for a single hard task, while Ultra uses subagents for divisible work and may require enabling **Ultra in model picker slider** under Settings > Configuration.
 - Rechecked pricing, Speed/Fast mode, remote connections, app/features, app/automations, config, MCP, hooks, plugins, skills, Sites, OpenAI API latest-model/changelog, and current Platform/API surfaces. Fast mode now includes GPT-5.6, GPT-5.5, and GPT-5.4; GPT-5.6/GPT-5.5 use 2.5x Standard credits, GPT-5.4 uses 2x, and API-key workflows stay on API token pricing.
 - Rechecked the latest Codex changelog and added CLI 0.145.0: paginated thread history, expanded `/import`, Bedrock endpoint/auth updates, audio inputs/tool outputs, realtime V3, multi-agent V2 stabilization, inline visualization links, and Windows/MCP reliability fixes.
 - Added the July 23 ChatGPT desktop app 26.715 update: ChatGPT Voice can coordinate Chat, Work, and Codex tasks in the desktop app and through Remote on iOS; local projects can include multiple folders with one primary folder for Git, new chats, AGENTS.md, skills, and `config.toml`.
-- Reflected OpenAI API GPT-5.6 guidance separately from Codex product guidance: `gpt-5.6` routes to `gpt-5.6-sol`; GPT-5.6 adds Programmatic Tool Calling, Multi-agent beta, explicit prompt caching, persisted reasoning, max reasoning effort, Pro mode, and original/auto image detail preservation. API hard spend limits now belong in the Platform/API lane because monthly caps can return 429 when tracked spend reaches the limit.
-- Re-audited the official use-case catalog: official individual pages 99 after excluding collection pages, local cards 99, `promptEn` gaps 0, `promptKo` gaps 0, official Starter prompt mismatches 0, line/token structure regressions 0. Five changed Starter prompts were updated: dashboard, inbox zero, slide decks, datasets/reports, and internal apps.
+- Reflected OpenAI API GPT-5.6 guidance separately from Codex product guidance: `gpt-5.6` routes to `gpt-5.6-sol`; GPT-5.6 adds Programmatic Tool Calling, Multi-agent beta, explicit prompt caching, persisted reasoning, max reasoning effort, Pro mode, and original/auto image detail preservation. API hard spend limits and the July 29 Terraform provider remain Platform/API lane items, while the July 29 GPT-5.6 efficiency article reinforces Codex/ChatGPT Work agentic-harness guidance around deferred discovery, bounded tool output, and prompt-cache prefix stability.
+- Re-audited the official use-case catalog: official individual pages 101 after excluding collection pages, local cards 101, `promptEn` gaps 0, `promptKo` gaps 0, official Starter prompt mismatches 0, line/token structure regressions 0. Added `project-teammate` and `track-bills-subscriptions-and-spending`, and updated three changed Starter prompts: daily work brief, feedback synthesis, and computer use.
 - Rechecked Remote connections against current official docs. iOS/Android can control awake/online macOS or Windows hosts, and supported Mac or Windows desktop apps can continue work on another host from Settings > Connections > Control other devices. Host files, credentials, permissions, plugins, browser setup, Computer Use, and local tools remain on the connected host.
 - Rechecked openai.com/index and OpenAI Developers/API docs. No model recommendation change needed a broader guide update today; the July 28 scientific-computing field report is reflected only as validation/stewardship context, and the July 22 NTT DATA story is reflected only as Enterprise CoE/security/adoption context.
 - Person-level practitioner signals were rechecked in Chrome against X, LinkedIn, and Threads. No new person-level posts were promoted; existing Section 20 practitioner cards remain unchanged and tied to original posts or official corroborating docs.
@@ -46,7 +46,7 @@ The guide is written from the official OpenAI Codex documentation first, then ma
 
 - Reflected the June 11 Codex app 26.609 release: rate-limit reset banking, Developer mode for Browser/CDP work, `/init` in the app composer, expanded Enterprise Computer Use, and Windows Computer Use per-app access controls.
 - Rechecked pricing, quickstart, config/profile, app settings/features, remote connections, Sites, Bedrock, MCP, hooks, plugins, and skills through the fresh Codex manual. No model-order, remote-control, or Sites setup reversal was needed, but Quickstart now clearly foregrounds the standalone installers.
-- Audited all 99 official Codex use cases after excluding collection pages. The catalog count, local/official IDs, `promptEn`, `promptKo`, and multiline Korean prompt shape are clean.
+- Audited all 101 official Codex use cases after excluding collection pages. The catalog count, local/official IDs, `promptEn`, `promptKo`, and multiline Korean prompt shape are clean.
 - Rechecked OpenAI launch/customer-story surfaces. The June 11 Ona acquisition announcement is captured only as pre-closing enterprise execution direction, not as an enabled feature, model, plan, platform, preview/GA, or feature-flag change.
 - Person-linked practitioner tips stay separate from product documentation. The public guide points readers to original posts or official corroborating docs, and only verified, reader-useful guidance is promoted.
 

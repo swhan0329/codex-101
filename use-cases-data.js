@@ -1,6 +1,6 @@
 // Korean-first Codex use-case catalog.
 // Source baseline: https://developers.openai.com/codex/use-cases
-// Last official scrape: 2026-07-29
+// Last official scrape: 2026-07-30
 window.codexUseCaseCategories = [
     {
         "id": "today",
@@ -174,8 +174,8 @@ window.codexUseCases = [
                     "url": "https://github.com/openai/plugins/tree/main/plugins/google-drive"
                 }
             ],
-            "promptEn": "Build my work brief for [date].\n\nReview my calendar, unread direct messages and mentions from the last 24 hours, unread email from the last 24 hours, open follow-ups, and the project notes or trackers I name. If a prior brief is available, call out what changed. Create a short brief with:\n\n- top priorities\n- meeting preparation\n- messages that need replies\n- decisions I owe\n- useful FYIs\n- missing access or uncertain context\n\nKeep confirmed facts separate from inference. Do not send messages, change documents, or create tasks.",
-            "promptKo": "[date]에 대한 내 업무 브리프를 만들어줘.\n\n내 캘린더, 지난 24시간 동안 읽지 않은 직접 메시지와 멘션, 지난 24시간 동안 읽지 않은 이메일, 열려 있는 후속 조치, 그리고 내가 이름을 지정한 프로젝트 노트나 트래커를 검토해줘. 이전 브리프가 있으면 무엇이 달라졌는지도 짚어줘. 다음 내용을 포함한 짧은 브리프를 만들어줘:\n\n- 최우선 과제\n- 회의 준비 사항\n- 답장이 필요한 메시지\n- 내가 결정해야 할 사항\n- 알아두면 좋은 참고 사항\n- 접근 권한이 없거나 맥락이 불확실한 부분\n\n확인된 사실과 추론을 분리해. 메시지를 보내거나, 문서를 변경하거나, 작업을 만들지 마.",
+            "promptEn": "Be my chief of staff.\n\nStart by checking the work tools and sources available to you, such as Slack or Teams, Gmail or Outlook, my calendar, documents, notes, and project trackers. Figure out what I'm working on, who I work with, what I've committed to, and what needs my attention.\n\nGive me a concise update covering:\n\n- what changed and what needs a decision;\n- approaching deadlines, meetings, and commitments;\n- messages that need a response;\n- what is blocked or waiting on someone; and\n- what can wait.\n\nLink to the original sources when possible, check the latest replies before resurfacing an older request, and tell me if an important source is unavailable. Separate confirmed facts from assumptions and don't repeat items that have already been resolved.\n\nSuggest next steps, draft replies, and prepare meeting briefs when useful. In the desktop app, when I ask you to delegate a project, create or continue a separate project task and share only the context it needs.\n\nSet up an hourly check if scheduled tasks are available. Review the connected sources, compare what you find with prior updates, and interrupt me only when a priority, deadline, blocker, decision, or message meaningfully changes. Stay quiet when there's nothing new. If you can't create the schedule, tell me instead of implying that it's active.\n\nApart from the hourly check I just requested, ask before creating a new project task, sending anything, editing documents, changing a schedule, or making commitments.\n\nStart by telling me what I should know today.",
+            "promptKo": "내 chief of staff가 되어줘.\n\nSlack 또는 Teams, Gmail 또는 Outlook, 내 캘린더, 문서, 노트, 프로젝트 tracker처럼 네가 사용할 수 있는 업무 도구와 출처를 먼저 확인해. 내가 무엇을 하고 있는지, 누구와 일하는지, 무엇을 약속했는지, 무엇에 주의해야 하는지 파악해.\n\n다음을 다루는 간결한 업데이트를 제공해:\n\n- 무엇이 바뀌었고 무엇에 결정이 필요한지;\n- 다가오는 마감, 회의, 약속;\n- 답장이 필요한 메시지;\n- 무엇이 막혔거나 누군가를 기다리는지; 그리고\n- 무엇은 기다려도 되는지.\n\n가능한 경우 원본 출처에 링크하고, 오래된 요청을 다시 올리기 전에 최신 답장을 확인하며, 중요한 출처를 사용할 수 없으면 알려줘. 확인된 사실과 가정을 분리하고 이미 해결된 항목은 반복하지 마.\n\n유용할 때는 다음 단계 제안, 답장 초안, 회의 브리프를 준비해. 데스크톱 앱에서 내가 프로젝트를 위임하라고 요청하면, 별도 프로젝트 task를 만들거나 이어서 진행하고 필요한 맥락만 공유해.\n\nscheduled tasks를 사용할 수 있으면 매시간 확인을 설정해. 연결된 출처를 검토하고, 찾은 내용을 이전 업데이트와 비교하며, 우선순위, 마감, blocker, 결정, 메시지가 의미 있게 바뀔 때만 나를 방해해. 새 내용이 없으면 조용히 있어. 스케줄을 만들 수 없으면 활성화된 것처럼 말하지 말고 알려줘.\n\n방금 요청한 매시간 확인을 제외하고, 새 프로젝트 task를 만들거나, 무언가를 보내거나, 문서를 편집하거나, 일정을 바꾸거나, 약속을 만들기 전에는 먼저 물어봐.\n\n오늘 내가 알아야 할 것부터 말해줘.",
             "guideSectionsEn": [
                 "Start with the context behind today",
                 "Make the brief recurring",
@@ -236,8 +236,8 @@ window.codexUseCases = [
                     "url": "https://developers.openai.com/codex/plugins"
                 }
             ],
-            "promptEn": "Can you synthesize the beta feedback on [feature or product area] into a @google-sheets review sheet?\n\nUse these sources:\n- @slack [feedback channel or thread links]\n- @github [issue search or issue links]\n- @google-drive [survey export, notes doc, or Drive folder]\n\nIn the sheet, group repeated feedback, include source links or IDs, mark confidence, and call out which items need product or engineering follow-up.\n\nKeep names and private quotes out of the visible summary unless I approve them. Do not post, send, create issues, or assign owners.",
-            "promptKo": "[feature or product area]에 대한 베타 피드백을 @google-sheets 검토용 시트로 종합해줄 수 있어?\n\n다음 출처를 사용해:\n- @slack [feedback channel or thread links]\n- @github [issue search or issue links]\n- @google-drive [survey export, notes doc, or Drive folder]\n\n시트에서는 반복되는 피드백을 묶고, 출처 링크나 ID를 포함하고, 확신도를 표시하고, 제품팀이나 엔지니어링팀의 후속 조치가 필요한 항목을 짚어줘.\n\n내가 승인하지 않는 한 표시되는 요약에는 이름과 비공개 인용문을 넣지 마. 게시, 전송, 이슈 생성, 담당자 지정은 하지 마.",
+            "promptEn": "Analyze feedback on [feature or product area] from [time period] using @Slack, @GitHub, @Linear, and @Google Drive. Include any relevant support tickets, surveys, and research notes.\n\nGroup the feedback into clear themes, show the supporting evidence, and tell me what needs attention.\n\nPut the findings in a Google Sheet or Doc I can review. Draft any follow-ups, but don't post or send them.",
+            "promptKo": "@Slack, @GitHub, @Linear, @Google Drive를 사용해 [time period] 동안의 [feature or product area] 피드백을 분석해. 관련 support ticket, survey, research note도 포함해.\n\n피드백을 명확한 theme으로 묶고, supporting evidence를 보여주며, 무엇에 주의가 필요한지 알려줘.\n\n내가 검토할 수 있는 Google Sheet 또는 Doc에 findings를 넣어. 후속 조치 초안은 작성하되 게시하거나 보내지는 마.",
             "guideSectionsEn": [
                 "Create the first version",
                 "Turn the sheet into the next draft",
@@ -570,8 +570,8 @@ window.codexUseCases = [
                 "Work you want to hand off and let Codex continue in the background"
             ],
             "skills": [],
-            "promptEn": "@Computer [do the task you want completed across your Mac]\n\nFor example:\n- Play some music to help me focus.\n- Help me add my interview notes from Notes to Ashby.\n- Look through my Messages app for the trip ideas Brooke sent me this week, add the best options to a new note called \"Yosemite ideas\", and draft a reply back to her.",
-            "promptKo": "@Computer [do the task you want completed across your Mac]\n\n예를 들면:\n- 집중할 수 있도록 음악을 틀어줘.\n- Notes에 있는 내 인터뷰 노트를 Ashby에 추가하는 걸 도와줘.\n- 이번 주에 Brooke가 보낸 여행 아이디어를 Messages 앱에서 찾아보고, 가장 좋은 선택지를 \"Yosemite ideas\"라는 새 노트에 추가한 다음, 그녀에게 보낼 답장 초안을 작성해줘.",
+            "promptEn": "@Computer Help me [task].\n\nUse my desktop apps or files as needed. Ask before sending, buying, or changing anything important.",
+            "promptKo": "@Computer [task]를 도와줘.\n\n필요하면 내 desktop app이나 file을 사용해. 보내기, 구매, 중요한 변경 전에는 먼저 물어봐.",
             "guideSectionsEn": [
                 "Introduction",
                 "How to use",
@@ -4789,6 +4789,124 @@ window.codexUseCases = [
             "guideSectionsEn": [
                 "Reconstruct the week from source activity",
                 "Prepare the next update"
+            ]
+        }
+    },
+    {
+        "id": "project-teammate",
+        "category": "ops",
+        "title": "프로젝트 전담 teammate 설정하기",
+        "titleEn": "Set up a project teammate",
+        "sourceTitle": "Set up a project teammate",
+        "sourceUrl": "https://developers.openai.com/codex/use-cases/project-teammate",
+        "summary": "하나의 프로젝트나 workstream만 맡는 전담 task를 두고 메시지, 문서, 결정, 마감, blocker를 계속 추적합니다.",
+        "summaryEn": "Keep one project moving with a dedicated, context-aware teammate.",
+        "when": "launch, customer account, event, initiative처럼 결정과 마감이 여러 업무 도구에 흩어져 있고 한 흐름만 지속 추적해야 할 때 좋습니다.",
+        "prompt": "[project or workstream]만 전담으로 추적하고, 현재 상태와 다음 단계를 출처와 함께 정리해줘.",
+        "output": "프로젝트 목표, 현재 상태, 결정/owner/마감, 변경점, blocker, 다음 액션을 담은 project brief와 follow-up 초안.",
+        "caution": "범위를 한 프로젝트로 제한하고, 메시지 발송·문서 편집·일정 변경·정보 공유·약속 생성 전에는 반드시 승인을 받으세요.",
+        "official": {
+            "difficulty": "Easy",
+            "time": "Long-running",
+            "tags": [
+                "project teammate",
+                "scheduled work",
+                "work tools",
+                "project tracking"
+            ],
+            "bestForEn": [
+                "Launches, customer accounts, events, or initiatives with decisions spread across connected work tools.",
+                "Projects that need a dedicated task to track progress, blockers, owners, and next steps."
+            ],
+            "skills": [
+                {
+                    "name": "Slack",
+                    "handle": "@Slack",
+                    "why": "Review the messages, decisions, and follow-ups relevant to the project.",
+                    "url": "https://github.com/openai/plugins/tree/main/plugins/slack"
+                },
+                {
+                    "name": "Teams",
+                    "handle": "@Teams",
+                    "why": "Review Teams messages, project decisions, and open follow-ups.",
+                    "url": "https://developers.openai.com/codex/plugins"
+                },
+                {
+                    "name": "Gmail",
+                    "handle": "@Gmail",
+                    "why": "Find project-related email, pending replies, and commitments.",
+                    "url": "https://github.com/openai/plugins/tree/main/plugins/gmail"
+                },
+                {
+                    "name": "Outlook Email",
+                    "handle": "@Outlook",
+                    "why": "Find project-related Outlook email and outstanding requests.",
+                    "url": "https://developers.openai.com/codex/plugins"
+                },
+                {
+                    "name": "Google Calendar",
+                    "handle": "@Google Calendar",
+                    "why": "Check project milestones, meetings, and preparation.",
+                    "url": "https://github.com/openai/plugins/tree/main/plugins/google-calendar"
+                },
+                {
+                    "name": "Google Drive",
+                    "handle": "@Google Drive",
+                    "why": "Review the project brief, notes, plans, and decision history.",
+                    "url": "https://github.com/openai/plugins/tree/main/plugins/google-drive"
+                }
+            ],
+            "promptEn": "Be my dedicated teammate for [project or workstream]. Focus only on that project. If the project isn't clear, ask me before reviewing unrelated work.\n\nReview the relevant messages, email, calendar events, documents, notes, and project trackers available to you. Establish what we're trying to accomplish, who's involved, what's already been decided, the current deadlines, and what's still open. Tell me when a source is missing instead of guessing.\n\nStart with a concise project brief:\n\n- the goal and current state;\n- important decisions, owners, and deadlines;\n- what's changed;\n- blockers, dependencies, and unanswered questions; and\n- the next step that would move the project forward.\n\nLink to your sources when available, check the latest replies before surfacing old requests, and distinguish confirmed facts from assumptions. Keep your context limited to this project.\n\nHelp me research questions, prepare meetings, review drafts, and write follow-ups as the project progresses. If I ask you to check back on a schedule, watch for meaningful changes.\n\nAsk before sending messages, editing documents, scheduling work, sharing information, or making commitments.",
+            "promptKo": "[project or workstream]의 전담 teammate가 되어줘. 그 프로젝트에만 집중해. 프로젝트가 명확하지 않으면 관련 없는 업무를 검토하기 전에 나에게 물어봐.\n\n사용할 수 있는 관련 메시지, 이메일, 캘린더 이벤트, 문서, 노트, 프로젝트 tracker를 검토해. 우리가 무엇을 달성하려는지, 누가 참여하는지, 이미 무엇이 결정됐는지, 현재 마감은 무엇인지, 아직 열려 있는 항목은 무엇인지 파악해. 출처가 없으면 추측하지 말고 알려줘.\n\n간결한 project brief로 시작해:\n\n- 목표와 현재 상태;\n- 중요한 결정, owner, 마감;\n- 무엇이 바뀌었는지;\n- blocker, dependency, 답이 없는 질문; 그리고\n- 프로젝트를 앞으로 움직일 다음 단계.\n\n가능하면 출처에 링크하고, 오래된 요청을 다시 올리기 전에 최신 답장을 확인하며, 확인된 사실과 가정을 구분해. 맥락은 이 프로젝트로 제한해.\n\n프로젝트가 진행되는 동안 질문 조사, 회의 준비, 초안 검토, follow-up 작성도 도와줘. 내가 일정에 따라 다시 확인하라고 요청하면 의미 있는 변화를 지켜봐.\n\n메시지 발송, 문서 편집, 작업 일정 예약, 정보 공유, 약속 생성 전에는 먼저 물어봐.",
+            "guideSectionsEn": [
+                "Start with one project boundary",
+                "Build a concise project brief",
+                "Schedule checks only when meaningful changes matter",
+                "Keep approvals before external action"
+            ]
+        }
+    },
+    {
+        "id": "track-bills-subscriptions-and-spending",
+        "category": "finance",
+        "title": "청구서, 구독, 지출 추적하기",
+        "titleEn": "Track bills, subscriptions, and spending",
+        "sourceTitle": "Track bills, subscriptions, and spending",
+        "sourceUrl": "https://developers.openai.com/codex/use-cases/track-bills-subscriptions-and-spending",
+        "summary": "연결된 금융 계정의 최근 30일 지출, 저축, 잔액 변화, 이상 항목을 읽기 전용으로 점검합니다.",
+        "summaryEn": "Review the last 30 days and stay ahead of anything unusual.",
+        "when": "지출, 저축, 계정 증가, 예정된 청구서와 구독을 빠르게 점검하고 이상 항목만 알림으로 받고 싶을 때 좋습니다.",
+        "prompt": "@Finances 최근 30일 재정을 확인하고 지출, 저축, 잔액 변화, 이상 항목을 보여줘.",
+        "output": "최근 30일 지출·저축·잔액 변화 요약, 이상 거래/중복 구독 후보, 예정 청구서와 확인할 항목.",
+        "caution": "Finances는 읽기 전용입니다. 송금, 결제, 구독 취소, 거래, 계정 설정 변경은 할 수 없고, 금융 데이터 분류 오류나 누락은 직접 확인해야 합니다.",
+        "official": {
+            "difficulty": "Easy",
+            "time": "5m",
+            "tags": [
+                "finances",
+                "spending",
+                "subscriptions",
+                "bills"
+            ],
+            "bestForEn": [
+                "Understanding spending, savings, account growth, and upcoming bills.",
+                "Read-only daily monitoring with a short report every two weeks."
+            ],
+            "skills": [
+                {
+                    "name": "Finances",
+                    "handle": "@Finances",
+                    "why": "Review connected spending, upcoming payments, recurring bills, and subscriptions in ChatGPT.",
+                    "url": "https://learn.chatgpt.com/use-cases/track-bills-subscriptions-and-spending"
+                }
+            ],
+            "promptEn": "@Finances Check my finances for the last 30 days. Show me my spending, savings, account balances and growth, and anything unusual.",
+            "promptKo": "@Finances 최근 30일 내 재정을 확인해. 내 지출, 저축, 계정 잔액과 증가, 그리고 이상한 항목을 보여줘.",
+            "guideSectionsEn": [
+                "Before you start",
+                "Review the last 30 days",
+                "Set up daily monitoring",
+                "Verify financial data before acting"
             ]
         }
     }
