@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: July 30, 2026</strong><br/>
+  <strong>Last updated: July 31, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
@@ -29,18 +29,18 @@ The guide is written from the official OpenAI Codex documentation first, then ma
 - **Professional users**: read sections `12-14` for `AGENTS.md`, `config.toml`, and MCP, then `15-17` for sessions, automation, and prompt contracts.
 - **Example-driven readers**: open the live site and the use-case gallery to start from real workflows instead of feature lists.
 
-## July 30, 2026 Refresh Notes
+## July 31, 2026 Refresh Notes
 
 - Rechecked `developers.openai.com/codex/models` first. Recommended Codex models remain the GPT-5.6 family: `gpt-5.6-sol`, `gpt-5.6-terra`, and `gpt-5.6-luna`; `gpt-5.5` remains previous-generation, and `gpt-5.2` / `gpt-5.3-codex` remain deprecated for ChatGPT-authenticated Codex.
 - Tightened the Max/Ultra note from the current model and subagents docs: Max gives one selected model more reasoning time for a single hard task, while Ultra uses subagents for divisible work and may require enabling **Ultra in model picker slider** under Settings > Configuration.
 - Rechecked pricing, Speed/Fast mode, remote connections, app/features, app/automations, config, MCP, hooks, plugins, skills, Sites, OpenAI API latest-model/changelog, and current Platform/API surfaces. Fast mode now includes GPT-5.6, GPT-5.5, and GPT-5.4; GPT-5.6/GPT-5.5 use 2.5x Standard credits, GPT-5.4 uses 2x, and API-key workflows stay on API token pricing.
 - Rechecked the latest Codex changelog and added CLI 0.145.0: paginated thread history, expanded `/import`, Bedrock endpoint/auth updates, audio inputs/tool outputs, realtime V3, multi-agent V2 stabilization, inline visualization links, and Windows/MCP reliability fixes.
 - Added the July 23 ChatGPT desktop app 26.715 update: ChatGPT Voice can coordinate Chat, Work, and Codex tasks in the desktop app and through Remote on iOS; local projects can include multiple folders with one primary folder for Git, new chats, AGENTS.md, skills, and `config.toml`.
-- Reflected OpenAI API GPT-5.6 guidance separately from Codex product guidance: `gpt-5.6` routes to `gpt-5.6-sol`; GPT-5.6 adds Programmatic Tool Calling, Multi-agent beta, explicit prompt caching, persisted reasoning, max reasoning effort, Pro mode, and original/auto image detail preservation. API hard spend limits and the July 29 Terraform provider remain Platform/API lane items, while the July 29 GPT-5.6 efficiency article reinforces Codex/ChatGPT Work agentic-harness guidance around deferred discovery, bounded tool output, and prompt-cache prefix stability.
-- Re-audited the official use-case catalog: official individual pages 101 after excluding collection pages, local cards 101, `promptEn` gaps 0, `promptKo` gaps 0, official Starter prompt mismatches 0, line/token structure regressions 0. Added `project-teammate` and `track-bills-subscriptions-and-spending`, and updated three changed Starter prompts: daily work brief, feedback synthesis, and computer use.
+- Reflected OpenAI API GPT-5.6 guidance separately from Codex product guidance: `gpt-5.6` routes to `gpt-5.6-sol`; GPT-5.6 adds Programmatic Tool Calling, Multi-agent beta, explicit prompt caching, persisted reasoning, max reasoning effort, Pro mode, and original/auto image detail preservation. API hard spend limits and the July 29 Terraform provider remain Platform/API lane items. The July 30 price-performance post lowers GPT-5.6 Luna API pricing by 80% and Terra by 20%, says those lower Luna/Terra costs are reflected in Codex and ChatGPT Work usage counting, and introduces API Fast mode for Sol at up to 2.5x faster Standard speed at twice the price. The July 30 ARC-AGI-3 post reinforces the Platform/API lane: use Responses API, retained reasoning, and compaction for long agent runs.
+- Re-audited the official use-case catalog: official individual pages 101 after excluding collection pages, local cards 101, `promptEn` gaps 0, `promptKo` gaps 0, official Starter prompt mismatches 0, line/token structure regressions 0.
 - Rechecked Remote connections against current official docs. iOS/Android can control awake/online macOS or Windows hosts, and supported Mac or Windows desktop apps can continue work on another host from Settings > Connections > Control other devices. Host files, credentials, permissions, plugins, browser setup, Computer Use, and local tools remain on the connected host.
-- Rechecked openai.com/index and OpenAI Developers/API docs. No model recommendation change needed a broader guide update today; the July 28 scientific-computing field report is reflected only as validation/stewardship context, and the July 22 NTT DATA story is reflected only as Enterprise CoE/security/adoption context.
-- Person-level practitioner signals were rechecked in Chrome against X, LinkedIn, and Threads. No new person-level posts were promoted; existing Section 20 practitioner cards remain unchanged and tied to original posts or official corroborating docs.
+- Rechecked openai.com/index and OpenAI Developers/API docs. No Codex product model recommendation change was needed, but the July 30 GPT-5.6 price-performance and ARC-AGI-3 posts update the pricing/API-operating context described above.
+- Person-level practitioner signals were rechecked in Chrome against X, LinkedIn, and Threads. No new person-level posts were promoted; Threads surfaced the GPT-5.6 Luna/Terra price-cut signal already corroborated by the official OpenAI post, so existing Section 20 practitioner cards remain unchanged.
 
 ## June 12, 2026 Refresh Notes
 
