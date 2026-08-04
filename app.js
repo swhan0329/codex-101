@@ -918,7 +918,7 @@
 
         const selectFromHash = () => {
             const initialId = decodeURIComponent(window.location.hash.replace('#', ''));
-            const initialItem = items.find((item) => item.id === initialId);
+            const initialItem = items.find((item) => item.id === initialId || (item.aliases || []).includes(initialId));
             if (initialItem) {
                 activeCategory = initialItem.category;
                 setCategory(activeCategory);

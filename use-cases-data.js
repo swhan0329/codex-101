@@ -1,6 +1,6 @@
 // Korean-first Codex use-case catalog.
 // Source baseline: https://developers.openai.com/codex/use-cases
-// Last official scrape: 2026-08-03
+// Last official scrape: 2026-08-04
 window.codexUseCaseCategories = [
     {
         "id": "today",
@@ -126,7 +126,10 @@ window.codexUseCaseCategories = [
 
 window.codexUseCases = [
     {
-        "id": "proactive-teammate",
+        "id": "daily-work-brief",
+        "aliases": [
+            "proactive-teammate"
+        ],
         "category": "ops",
         "title": "매일 업무 브리프 만들기",
         "titleEn": "Create a daily work brief",
