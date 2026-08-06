@@ -182,6 +182,18 @@ const untranslatedWords = (value) => (stripPreservedLiterals(value).match(/[A-Za
 const normalizedTokens = (value) => Array.from(String(value).matchAll(
   /\[[^\]\n]+\]|[$@][A-Za-z0-9_-]+|`[^`]+`|\b(?:[\w.-]+\/)*[\w.-]+\.(?:md|csv|pptx|xlsx|docx|json|toml|html|js|ts|py)\b/g,
 ), (match) => match[0]).sort();
+const machineTranslationRedFlags = [
+  /\bchief of staff\b/i,
+  /\bproject task\b/i,
+  /\bscheduled tasks\b/i,
+  /\bblocker\b/i,
+  /\btracker\b/i,
+  /사용해줘\s+the\b/,
+  /반환해줘\s+an?\b/,
+  /생성해줘\s+an?\b/,
+  /그리고\s+[A-Za-z]/,
+  /와\/과/,
+];
 
 for (const item of cases) {
   const promptEn = item.official?.promptEn || '';
@@ -216,7 +228,8 @@ for (const item of cases) {
       errors.push(`${item.id}: promptKo still has too much untranslated English (${latinWords} Latin words vs ${koreanChunks} Korean chunks)`);
     }
 
-    if (/사용해줘\s+the\b|반환해줘\s+an?\b|생성해줘\s+an?\b|그리고\s+[A-Za-z]|와\/과/.test(`${item.summary}\n${promptKo}`)) {
+    const localizedText = stripPreservedLiterals(`${item.summary}\n${promptKo}`);
+    if (machineTranslationRedFlags.some((pattern) => pattern.test(localizedText))) {
       errors.push(`${item.id}: machine-replacement translation pattern remains`);
     }
   }
