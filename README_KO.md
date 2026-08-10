@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 8월 9일</strong><br/>
+  <strong>최종 업데이트: 2026년 8월 10일</strong><br/>
   라이브 사이트는 보는 사람의 당일 날짜를 자동으로 표시하며, 최신 Codex 모델 가이드를 공식 문서 기준으로 반영합니다.
 </p>
 
@@ -39,7 +39,7 @@
 - 인트로에는 [OpenAI Developer Showcase](https://developers.openai.com/showcase) 안내를 추가해, Codex로 만든 실제 예시와 바로 실행해볼 만한 프롬프트 감을 먼저 잡을 수 있게 했습니다.
 - 최신 변경 로그는 첫 독서 흐름을 방해하지 않도록 맨 아래 Changelog 섹션으로 옮기고, 근거 문서는 접어서 볼 수 있게 낮췄습니다.
 
-### 일일 MCP 검증 스냅샷 (2026-08-09)
+### 일일 MCP 검증 스냅샷 (2026-08-10)
 
 - `codex/models`를 가장 먼저 다시 확인했고, 추천 모델은 계속 GPT-5.6 family입니다. 기본 Power setting은 `gpt-5.6-sol` medium reasoning이고, Sol은 복잡한 coding/computer use/research/security, Terra는 일상 작업, Luna는 빠르고 반복적인 고빈도 작업에 맞습니다. `gpt-5.5`는 previous-generation frontier model로 남고, `gpt-5.2`와 `gpt-5.3-codex`는 ChatGPT 인증 Codex 기준 deprecated로 유지됩니다. `gpt-5.4`와 `gpt-5.4-mini`는 ChatGPT 로그인 Codex에서 2026년 8월 31일 은퇴하므로 각각 `gpt-5.6-terra`, `gpt-5.6-luna`로 옮겨야 합니다.
 - 현재 모델 문서와 subagents 문서를 대조해 Max/Ultra 설명을 더 정확히 맞췄습니다. `Max`는 단일 어려운 작업에 더 많은 reasoning 시간을 주고, `Ultra`는 나눌 수 있는 큰 작업을 subagents로 병렬 처리합니다. desktop app slider에 Ultra가 보이지 않으면 `Settings > Configuration`에서 **Ultra in model picker slider**를 켜야 할 수 있습니다.
@@ -50,7 +50,7 @@
 - OpenAI API latest-model/changelog는 별도 Platform/API lane으로 반영했습니다. `gpt-5.6` alias는 `gpt-5.6-sol`로 라우팅되고, Programmatic Tool Calling, Multi-agent beta, explicit prompt caching, persisted reasoning, max reasoning effort, Pro mode, original/auto image detail preservation이 추가됐습니다. API hard spend limits와 2026년 7월 29일 Terraform provider는 Platform/API 운영 기준으로 분리했습니다. 2026년 7월 30일 GPT-5.6 price-performance 발표는 GPT-5.6 Luna API 가격 80% 인하, Terra 20% 인하, Codex/ChatGPT Work 사용량 계산 반영, API Fast mode for Sol을 설명하므로 가격/API 운영 맥락에 반영했습니다. 같은 날 ARC-AGI-3 글은 Responses API, retained reasoning, compaction을 쓰는 long agent run 기준으로만 분리했습니다. 2026년 8월 3일 GPT-Live engineering 글은 full-duplex voice, frontier model asynchronous delegation, desktop app의 agent/computer coordination을 설명하는 Voice/API architecture 맥락으로만 분리했고, 별도 Codex 설정 flag처럼 쓰지 않았습니다. 2026년 8월 6일 ChatGPT GPT-5.6 Sol 발표는 ChatGPT Chat 품질 개선과 Free/Go의 Luna 접근 확대 맥락으로만 분리했습니다. 발표문이 Work/Codex용 Sol은 이번 릴리스에서 바뀌지 않는다고 명시하므로 Codex 모델 추천 변경으로 쓰지 않았습니다.
 - 공식 use-case catalog는 collection page를 제외한 local 카드 101개 기준으로 다시 감사했습니다. 공식 개별 페이지 101개, local 카드 101개, `promptEn` 누락 0, `promptKo` 누락 0, 공식 Starter prompt mismatch 0, line/token 구조 회귀 0입니다.
 - Remote connections도 현재 공식 문서에 맞췄습니다. iOS/Android는 awake/online macOS 또는 Windows host를 제어할 수 있고, 기능이 제공되는 Mac 또는 Windows 데스크톱 앱은 `Settings > Connections > Control other devices`에서 다른 host 작업을 이어갈 수 있습니다. 파일, credential, permission, plugin, browser setup, Computer Use, local tool은 연결된 host에 남습니다.
-- openai.com/index와 OpenAI Developers/API 문서도 다시 대조했습니다. 오늘은 Codex 제품 추천 모델을 바꿀 항목은 없었습니다. 2026년 8월 7일 cybersecurity capabilities 발표는 고성능 agentic system의 security/preparedness 맥락으로만 기록하고, Codex 설정 flag나 모델 선택 변경으로 섞지 않았습니다. 2026년 8월 6일 GPT-5.6 Sol ChatGPT 발표는 ChatGPT 일반 채팅 모델 접근성/품질 업데이트로만 반영하고, Codex 제품 모델 변경과 섞지 않았습니다.
+- openai.com/index와 OpenAI Developers/API 문서도 다시 대조했습니다. 오늘은 Codex 제품 추천 모델을 바꿀 항목은 없었습니다. 2026년 8월 7일 cybersecurity capabilities 발표는 고성능 agentic system의 security/preparedness 맥락으로만 기록하고, Codex 설정 flag나 모델 선택 변경으로 섞지 않았습니다. 2026년 8월 6일 GPT-5.6 Sol ChatGPT 발표는 ChatGPT 일반 채팅 모델 접근성/품질 업데이트로만 반영하고, Codex 제품 모델 변경과 섞지 않았습니다. 2026년 8월 4일 교육 발표는 ChatGPT Edu 및 ChatGPT for Teachers district deployment용 교육 plugins/workflow 패키징 맥락으로만 반영하고, 일반 Codex 모델·가격·설정 키 변경으로 쓰지 않았습니다.
 - Chrome으로 X, LinkedIn, Threads의 사람별 공개 practitioner signal을 다시 확인했습니다. 오늘 새로 승격할 OpenAI/Codex person-level workflow post는 없었고, Section 20의 기존 practitioner card는 원글 또는 공식 corroborating docs 링크를 유지한 채 변경하지 않았습니다.
 
 ### 누적 검증 메모

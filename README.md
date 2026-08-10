@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: August 9, 2026</strong><br/>
+  <strong>Last updated: August 10, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
@@ -29,7 +29,7 @@ The guide is written from the official OpenAI Codex documentation first, then ma
 - **Professional users**: read sections `12-14` for `AGENTS.md`, `config.toml`, and MCP, then `15-17` for sessions, automation, and prompt contracts.
 - **Example-driven readers**: open the live site and the use-case gallery to start from real workflows instead of feature lists.
 
-## August 9, 2026 Refresh Notes
+## August 10, 2026 Refresh Notes
 
 - Rechecked `developers.openai.com/codex/models` first. Recommended Codex models remain the GPT-5.6 family: `gpt-5.6-sol`, `gpt-5.6-terra`, and `gpt-5.6-luna`; `gpt-5.5` remains previous-generation, `gpt-5.2` / `gpt-5.3-codex` remain deprecated for ChatGPT-authenticated Codex, and `gpt-5.4` / `gpt-5.4-mini` now have an August 31, 2026 ChatGPT sign-in Codex retirement notice.
 - Tightened the Max/Ultra note from the current model and subagents docs: Max gives one selected model more reasoning time for a single hard task, while Ultra uses subagents for divisible work and may require enabling **Ultra in model picker slider** under Settings > Configuration.
@@ -40,7 +40,7 @@ The guide is written from the official OpenAI Codex documentation first, then ma
 - Reflected OpenAI API GPT-5.6 guidance separately from Codex product guidance: `gpt-5.6` routes to `gpt-5.6-sol`; GPT-5.6 adds Programmatic Tool Calling, Multi-agent beta, explicit prompt caching, persisted reasoning, max reasoning effort, Pro mode, and original/auto image detail preservation. API hard spend limits and the July 29 Terraform provider remain Platform/API lane items. The July 30 price-performance post lowers GPT-5.6 Luna API pricing by 80% and Terra by 20%, says those lower Luna/Terra costs are reflected in Codex and ChatGPT Work usage counting, and introduces API Fast mode for Sol at up to 2.5x faster Standard speed at twice the price. The July 30 ARC-AGI-3 post reinforces the Platform/API lane: use Responses API, retained reasoning, and compaction for long agent runs. The August 3 GPT-Live engineering post is recorded as Voice/API architecture context: full-duplex voice, asynchronous delegation to frontier models, and agent/computer coordination in the desktop app, not a separate Codex setup flag. The August 6 ChatGPT GPT-5.6 Sol update is also separated: it improves ChatGPT Chat and expands Free/Go access to Luna, but the announcement says the Work/Codex Sol version is not changing in that release.
 - Re-audited the official use-case catalog: official individual pages 101 after excluding collection pages, local cards 101, `promptEn` gaps 0, `promptKo` gaps 0, official Starter prompt mismatches 0, line/token structure regressions 0, and no new or changed Starter prompts.
 - Rechecked Remote connections against current official docs. iOS/Android can control awake/online macOS or Windows hosts, and supported Mac or Windows desktop apps can continue work on another host from Settings > Connections > Control other devices. Host files, credentials, permissions, plugins, browser setup, Computer Use, and local tools remain on the connected host.
-- Rechecked openai.com/index and OpenAI Developers/API docs. No Codex product model recommendation change was needed. The August 7 cybersecurity capabilities post is recorded as security/preparedness context for high-capability agentic systems, not as a Codex setup flag or model-picker change. The August 6 GPT-5.6 Sol ChatGPT announcement remains ChatGPT model-access context only because it explicitly leaves the Work/Codex Sol variant unchanged.
+- Rechecked openai.com/index and OpenAI Developers/API docs. No Codex product model recommendation change was needed. The August 7 cybersecurity capabilities post is recorded as security/preparedness context for high-capability agentic systems, not as a Codex setup flag or model-picker change. The August 6 GPT-5.6 Sol ChatGPT announcement remains ChatGPT model-access context only because it explicitly leaves the Work/Codex Sol variant unchanged. The August 4 education announcement is reflected as a plugin/workflow packaging note for ChatGPT Edu and ChatGPT for Teachers district deployments, not as a general Codex model, pricing, or setup-key change.
 - Person-level practitioner signals were rechecked in Chrome against X, LinkedIn, and Threads. No new person-level Codex workflow post was promoted today; the existing Section 20 practitioner cards remain unchanged and continue to link to original posts or official corroborating docs.
 
 ## June 12, 2026 Refresh Notes
