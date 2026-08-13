@@ -1,6 +1,6 @@
 // Korean-first Codex use-case catalog.
 // Source baseline: https://developers.openai.com/codex/use-cases
-// Last official scrape: 2026-08-12
+// Last official scrape: 2026-08-13
 window.codexUseCaseCategories = [
     {
         "id": "today",
@@ -1907,8 +1907,8 @@ window.codexUseCases = [
                     "url": "https://developers.openai.com/codex/security/plugin"
                 }
             ],
-            "promptEn": "Use $codex-security:deep-security-scan to run a deep security scan on [this repository / absolute path to a scoped folder].\n\nScope and rules:\n- I am authorized to assess this repository.\n- Keep the scan within [the entire repository / the exact folder named above].\n- Use the Codex Security plugin's deep-scan workflow; do not reinterpret this as a pull request or diff review.\n\nReturn the scan directory and report.md path. Summarize the findings, reviewed surfaces, structural hardening guidance, and proof gaps that require human review first.",
-            "promptKo": "$codex-security:deep-security-scan을 사용해 [this repository / absolute path to a scoped folder]에 deep security scan을 실행해줘.\n\n범위와 규칙:\n- 나는 이 repository를 평가할 권한이 있어.\n- scan을 [the entire repository / the exact folder named above] 안으로 제한해.\n- Codex Security 플러그인의 deep-scan workflow를 사용하고, 이것을 pull request나 diff review로 재해석하지 마.\n\nscan directory와 report.md path를 반환해. Findings, reviewed surfaces, structural hardening guidance, human review가 먼저 필요한 proof gaps를 요약해.",
+            "promptEn": "Use $codex-security:deep-security-scan to run a deep security scan on [this repository / absolute path to a scoped folder].\n\nScope and rules:\n- I am authorized to assess this repository.\n- Keep the scan within [the entire repository / the exact folder named above].\n- Use the Codex Security plugin's deep-scan workflow; do not reinterpret this as a pull request or diff review.\n\nReturn the scan directory and report.md path. Summarize the findings, reviewed surfaces, and proof gaps that require human review first.",
+            "promptKo": "$codex-security:deep-security-scan을 사용해 [this repository / absolute path to a scoped folder]에 deep security scan을 실행해줘.\n\n범위와 규칙:\n- 나는 이 repository를 평가할 권한이 있어.\n- scan을 [the entire repository / the exact folder named above] 안으로 제한해.\n- Codex Security 플러그인의 deep-scan workflow를 사용하고, 이것을 pull request나 diff review로 재해석하지 마.\n\nscan directory와 report.md path를 반환해. findings, reviewed surfaces, human review가 먼저 필요한 proof gaps를 요약해.",
             "guideSectionsEn": [
                 "Choose a deep repository review",
                 "Prepare an authorized scan",
