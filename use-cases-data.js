@@ -1,6 +1,6 @@
 // Korean-first Codex use-case catalog.
 // Source baseline: https://developers.openai.com/codex/use-cases
-// Last official scrape: 2026-08-13
+// Last official scrape: 2026-08-14
 window.codexUseCaseCategories = [
     {
         "id": "today",
