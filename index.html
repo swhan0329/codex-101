@@ -17,7 +17,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=20260817-docs-social-audit" />
+    <link rel="stylesheet" href="style.css?v=20260818-full-auto-cleanup" />
 </head>
 
 <body data-page="home">
@@ -51,7 +51,7 @@
                     <p class="hero-badge">
                         <span data-i18n="hero_badge_prefix">공식 문서 기준 재검수</span>
                         <span aria-hidden="true"> · </span>
-                        <span class="live-date" data-date-format="long">2026년 8월 17일</span>
+                        <span class="live-date" data-date-format="long">2026년 8월 18일</span>
                     </p>
                     <h1 class="hero-title" data-i18n="hero_title">OpenAI Codex를<br />실무에 바로 붙이는 가이드</h1>
                     <p class="hero-sub" data-i18n="hero_sub">CLI (macOS/Linux/Windows) · Desktop App (macOS/Windows/Linux preview) · IDE Extension · Web · Mobile · SDK automation<br />최신 공식 문서를 기준으로 어디서 시작할지, 어떤 모델을 쓸지, 샌드박스/승인, MCP, plugins, automations를 처음 사용자와 실무 사용자 모두 읽기 쉽도록 다시 정리했습니다.</p>
@@ -1041,7 +1041,7 @@ then verify the page again and attach the screenshot result.</code></pre>
                     </table>
                 </div>
                 <pre><code>codex --sandbox read-only --ask-for-approval on-request
-codex --full-auto
+codex --sandbox workspace-write --ask-for-approval on-request
 codex --sandbox workspace-write --ask-for-approval untrusted
 codex --dangerously-bypass-approvals-and-sandbox</code></pre>
                 <p data-i18n="s10_sandbox">보안: 로컬 Codex는 OS 수준 sandbox를 사용합니다. macOS는 Seatbelt, Linux는 bubblewrap + seccomp, Windows는 네이티브 sandbox 또는 WSL을 사용합니다. Windows native에서는 `elevated`가 권장 경로이고, 관리자 승인이나 정책 때문에 막히면 `unelevated` fallback을 씁니다. 기본 `workspace-write`에서는 네트워크가 꺼져 있고 `.git`·`.codex`·`.agents`는 보호 경로로 읽기 전용입니다. Cloud는 setup 단계와 offline agent 단계를 분리한 런타임입니다.
@@ -1470,7 +1470,7 @@ codex resume &lt;ID&gt;       <span class="c"># 특정 세션</span>
                 <h2><span class="section-num">16</span> <span data-i18n="s16_title">비대화형 자동화 & CI/CD</span></h2>
                 <pre data-i18n-html="code_s16_exec"><code><span class="c"># codex exec - 실행 후 자동 종료</span>
 codex exec "Review this PR" --output stdout
-codex exec "Fix all TODOs" --full-auto</code></pre>
+codex exec "Fix all TODOs" --sandbox workspace-write --ask-for-approval on-request</code></pre>
                 <div class="callout">
                     <strong data-i18n="s16_cloud_title">Codex Web 자동 리뷰</strong>
                     <p data-i18n="s16_cloud_desc">GitHub 연결 + 리뷰 대상 저장소 선택 후 "Automatic reviews" 활성화 → 새 PR마다 자동 리뷰,
@@ -2084,7 +2084,7 @@ codex --search "optimize with Next.js 15"
                     </div>
                     <p class="overview-fact-date">
                         <span data-i18n="overview_fact_date_prefix">업데이트 기준일</span>
-                        <span class="live-date" data-date-format="long">2026년 8월 17일</span>
+                        <span class="live-date" data-date-format="long">2026년 8월 18일</span>
                     </p>
                 </div>
                 <ol class="changelog-list" aria-label="Today update summary">
@@ -2098,11 +2098,11 @@ codex --search "optimize with Next.js 15"
                     </li>
                     <li>
                         <strong data-i18n="overview_update_3_title">Quickstart·IDE·Mobile 경로 정리</strong>
-                        <span data-i18n="changelog_item_3">최신 Codex changelog를 대조했습니다. CLI 0.147.0의 cached MCP tool 노출, model-owned token budget defaults, Enterprise automation account plan support, MCP 2026 support, Agent Plugin runtime boundary, remote plugin search, portable Agent Plugins, app-server/thread/history 개선을 반영했습니다.</span>
+                        <span data-i18n="changelog_item_3">최신 Codex changelog를 대조했습니다. CLI 0.147.0의 cached MCP tool 노출, model-owned token budget defaults, Enterprise automation account plan support, MCP 2026 support, Agent Plugin runtime boundary, remote plugin search, portable Agent Plugins, app-server/thread/history 개선을 반영했고, 제거된 `codex exec --full-auto` 예시는 `--sandbox workspace-write`와 approval flag 조합으로 교체했습니다.</span>
                     </li>
                     <li>
                         <strong data-i18n="overview_update_4_title">Enterprise 발표 맥락 분리</strong>
-                        <span data-i18n="changelog_item_4">공식 use-case catalog 101개를 다시 감사했습니다. local card 누락 0, official URL 누락 0, local `official.promptEn` mismatch 0, promptEn/promptKo 누락 0, line/token 구조 mismatch 0이며 오늘 새 Starter prompt 변경은 없었습니다.</span>
+                        <span data-i18n="changelog_item_4">공식 use-case catalog 101개를 다시 감사했습니다. official Starter prompt 77개의 line-break/blank-line 구조 변경을 promptEn/promptKo에 반영했고, local card 누락 0, official URL 누락 0, local `official.promptEn` mismatch 0, promptEn/promptKo 누락 0, line/token 구조 mismatch 0입니다.</span>
                     </li>
                     <li>
                         <strong data-i18n="overview_update_6_title">Docs MCP·설정 기준 재점검</strong>
@@ -2126,14 +2126,14 @@ codex --search "optimize with Next.js 15"
                     href="https://github.com/swhan0329/codex-101" target="_blank">PR을 환영합니다</a>.</p>
             <p class="footer-meta">
                 <span data-i18n="footer_date_prefix">최종 업데이트</span>:
-                        <span class="live-date" data-date-format="long">2026년 8월 17일</span>
+                        <span class="live-date" data-date-format="long">2026년 8월 18일</span>
             </p>
             <p class="footer-meta">Made by <a href="https://github.com/swhan0329" target="_blank">@swhan0329</a></p>
         </div>
     </footer>
 
-    <script src="i18n.js?v=20260817-docs-social-audit"></script>
-    <script src="app.js?v=20260817-docs-social-audit"></script>
+    <script src="i18n.js?v=20260818-full-auto-cleanup"></script>
+    <script src="app.js?v=20260818-full-auto-cleanup"></script>
 </body>
 
 </html>
