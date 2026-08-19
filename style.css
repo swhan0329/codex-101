@@ -1661,6 +1661,40 @@ html[lang="en"] .overview-visual-figure .overview-lang-visual-en {
     color: var(--text-dim);
 }
 
+.automation-prompt-card {
+    margin: 24px 0;
+    background: linear-gradient(180deg, rgba(16, 163, 127, .09), rgba(255, 255, 255, .015));
+    border-color: rgba(16, 163, 127, .32);
+}
+
+.automation-prompt-header {
+    align-items: center;
+}
+
+.automation-prompt-header > div {
+    flex: 1;
+    min-width: 0;
+}
+
+.automation-copy-btn {
+    flex: 0 0 auto;
+    margin-left: auto;
+}
+
+.automation-prompt-card pre {
+    max-height: 520px;
+    overflow: auto;
+}
+
+.automation-prompt-note {
+    margin: 16px 0 0;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: .92rem;
+    line-height: 1.7;
+}
+
 .prompt-guide-links {
     max-width: 100%;
     margin-top: 8px;
@@ -5316,6 +5350,17 @@ html:not([data-theme="light"]) body[data-page="home"] .footer-contrib {
     body[data-page="home"] .section h3,
     body[data-page="home"] .hero-rail-title {
         font-size: 21px;
+    }
+
+    body[data-page="home"] .automation-prompt-header {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    body[data-page="home"] .automation-copy-btn {
+        width: 100%;
+        justify-content: center;
+        margin-left: 0;
     }
 
     body[data-page="home"] .section p,

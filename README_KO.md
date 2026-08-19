@@ -41,6 +41,8 @@
 
 ### 일일 MCP 검증 스냅샷 (2026-08-19)
 
+- 새 공식 문서 허브인 `learn.chatgpt.com/docs`의 정보 구조를 기준으로 핵심 링크와 설명을 다시 정리했습니다. 권한 장에서는 새 permission profile과 예전 `sandbox_mode`를 한 설정에서 섞던 예시를 제거하고 두 방식을 분리했습니다.
+- 16장을 GitHub-only 자동 리뷰 중심에서 로컬 Scheduled task 중심으로 바꿨습니다. Local/worktree/`codex exec`/GitHub auto-review를 비교하고, 로컬 갱신 → 검증 → 관련 파일만 commit → 안전한 push까지 실행하는 복사형 프롬프트와 중단 조건을 추가했습니다.
 - `codex/models`를 2026년 8월 19일 가장 먼저 다시 확인했고, 추천 모델은 계속 GPT-5.6 family입니다. 기본 Power setting은 `gpt-5.6-sol` medium reasoning이고, Sol은 복잡한 coding/computer use/research/security, Terra는 일상 작업, Luna는 빠르고 반복적인 고빈도 작업에 맞습니다. `gpt-5.5`는 previous-generation frontier model로 남고, `gpt-5.2`와 `gpt-5.3-codex`는 ChatGPT 인증 Codex 기준 deprecated로 유지됩니다. `gpt-5.4`와 `gpt-5.4-mini`는 ChatGPT 로그인 Codex에서 2026년 8월 31일 은퇴하므로 각각 `gpt-5.6-terra`, `gpt-5.6-luna`로 옮겨야 합니다. 모델 선택기에 `Daybreak Blue`가 보이면 일반 추천 모델 교체가 아니라, 별도 승인된 defensive cybersecurity 작업용 접근 경로로 읽어야 합니다.
 - 현재 모델 문서와 subagents 문서를 대조해 Max/Ultra 설명을 더 정확히 맞췄습니다. `Max`는 단일 어려운 작업에 더 많은 reasoning 시간을 주고, `Ultra`는 나눌 수 있는 큰 작업을 subagents로 병렬 처리합니다. desktop app slider에 Ultra가 보이지 않으면 `Settings > Configuration`에서 **Ultra in model picker slider**를 켜야 할 수 있습니다.
 - Quickstart, Pricing, Speed/Fast mode, Best practices, Config, Windows/Windows App/IDE/App features/App Automations/Cloud, Remote connections, Integrations, MCP, Hooks, Plugins, Skills, Sites, OpenAI API latest-model/changelog와 Platform/API 문서를 다시 확인했습니다. Fast mode는 GPT-5.6, GPT-5.5, GPT-5.4를 지원하고, GPT-5.6/GPT-5.5는 Standard 대비 2.5배, GPT-5.4는 2배 ChatGPT credit을 씁니다. OpenAI API changelog는 GPT-5.6 Sol/Terra/Luna Fast mode가 272K token을 넘는 long-context request도 지원한다고 설명하므로, 이 내용은 Codex model picker 동작이 아니라 Platform/API 문맥으로 분리했습니다. 다만 ChatGPT 로그인 Codex에서 GPT-5.4 계열을 저장 설정·custom agent·scheduled task에 남겨두면 2026년 8월 31일 이후 막힐 수 있습니다. API-key workflow는 Fast credit이 아니라 API token pricing과 API model availability를 따르므로 분리했습니다.
@@ -112,7 +114,7 @@
 | 04–05 | 시스템 요구사항 & 가격, 설치 및 인증 |
 | 06–09 | CLI, App, IDE Extension, Web 사용법 |
 | 10–14 | 승인 모드, 슬래시 명령어, AGENTS.md, config.toml, MCP |
-| 15–16 | 세션 관리, CI/CD 자동화 |
+| 15–16 | 세션 관리, 로컬 Scheduled task, Git 자동화 |
 | 17 | Prompting Codex agents 개요, 요청·검증 규칙, 워크플로, 플레이북 |
 | 18 | 고급 활용 |
 | 19–21 | FAQ, 참고 자료, OpenAI 담당자 실전 팁 |

@@ -17,7 +17,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=20260819-cli148-usecase-prompts" />
+    <link rel="stylesheet" href="style.css?v=20260819-learn-docs-local-automation" />
 </head>
 
 <body data-page="home">
@@ -49,12 +49,12 @@
             <div class="hero-layout">
                 <div class="hero-copy">
                     <p class="hero-badge">
-                        <span data-i18n="hero_badge_prefix">공식 문서 기준 재검수</span>
+                        <span data-i18n="hero_badge_prefix">ChatGPT 공식 문서 기준 재검수</span>
                         <span aria-hidden="true"> · </span>
                         <span class="live-date" data-date-format="long">2026년 8월 19일</span>
                     </p>
                     <h1 class="hero-title" data-i18n="hero_title">OpenAI Codex를<br />실무에 바로 붙이는 가이드</h1>
-                    <p class="hero-sub" data-i18n="hero_sub">CLI (macOS/Linux/Windows) · Desktop App (macOS/Windows/Linux preview) · IDE Extension · Web · Mobile · SDK automation<br />최신 공식 문서를 기준으로 어디서 시작할지, 어떤 모델을 쓸지, 샌드박스/승인, MCP, plugins, automations를 처음 사용자와 실무 사용자 모두 읽기 쉽도록 다시 정리했습니다.</p>
+                    <p class="hero-sub" data-i18n="hero_sub">CLI (macOS/Linux/Windows) · Desktop App (macOS/Windows/Linux preview) · IDE Extension · Web · Mobile · SDK automation<br />learn.chatgpt.com의 최신 공식 문서를 기준으로 로컬 프로젝트, 권한, Git, Scheduled task, prompting을 실행 순서대로 다시 정리했습니다.</p>
                     <div class="hero-cta">
                         <a href="#start-here" class="btn btn-primary" data-i18n="hero_cta">빠른 시작 경로 보기</a>
                         <a href="#s17" class="btn btn-ghost" data-i18n="hero_cta_secondary">Prompting 실전 가이드</a>
@@ -287,10 +287,10 @@
                     <article class="track-card track-card-pro">
                         <span class="product-icon" data-i18n="overview_pro_tag">실무 운영</span>
                         <h3 data-i18n="overview_pro_title">팀 규칙과 자동화까지</h3>
-                        <p data-i18n="overview_pro_desc">AGENTS.md, config.toml, 세션 운영, non-interactive 실행, 웹 리뷰 자동화를 연결해서 팀 작업 방식으로 확장하는 경로입니다.</p>
+                        <p data-i18n="overview_pro_desc">AGENTS.md, config.toml, 세션 운영, 로컬 Scheduled task와 Git 검증을 연결해 반복 가능한 팀 작업 방식으로 확장하는 경로입니다.</p>
                         <ul class="overview-list">
                             <li data-i18n="overview_pro_p1">12-14에서 규칙, 설정, 연결할 도구와 권한을 프로젝트 단위로 정합니다.</li>
-                            <li data-i18n="overview_pro_p2">15-16에서 이어서 작업하기, codex exec, PR 리뷰 자동화를 한 흐름으로 묶습니다.</li>
+                            <li data-i18n="overview_pro_p2">15-16에서 이어서 작업하기, 로컬 예약 실행, 검증 후 commit/push를 한 흐름으로 묶습니다.</li>
                             <li data-i18n="overview_pro_p3">17에서 출력 형식, 도구 사용, 검증 방식을 팀 표준 프롬프트로 정리합니다.</li>
                         </ul>
                         <a href="#s12" class="btn btn-secondary" data-i18n="overview_pro_cta">운영 가이드 보기</a>
@@ -779,7 +779,7 @@ codex --cd /path/to/project
                     <table>
                         <thead>
                             <tr>
-                                <th data-i18n="th_mode">모드</th>
+                                <th data-i18n="th_mode">권한 profile</th>
                                 <th data-i18n="s7_th_where">실행 위치</th>
                                 <th data-i18n="s7_th_desc">설명</th>
                             </tr>
@@ -990,12 +990,12 @@ then verify the page again and attach the screenshot result.</code></pre>
                     <p data-i18n="s9_auto_desc">Codex Web에서 GitHub 연결 후 리뷰 대상 저장소를 선택하고 "Automatic reviews"를 활성화하면 새
                         PR마다 자동 리뷰됩니다. AGENTS.md 규칙 기반 커스터마이징 가능.</p>
                 </div>
-                <p class="command-refs" data-i18n-html="s9_refs">출처: <a href="https://developers.openai.com/codex/quickstart/" target="_blank">Quickstart</a> · <a href="https://developers.openai.com/codex/cloud" target="_blank">Codex cloud</a> · <a href="https://developers.openai.com/codex/remote-connections" target="_blank">Remote connections</a> · <a href="https://developers.openai.com/codex/integrations/github" target="_blank">GitHub integration</a> · <a href="https://openai.com/index/work-with-codex-from-anywhere/" target="_blank">Work with Codex from anywhere</a> · <a href="https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan" target="_blank">Using Codex with your ChatGPT plan</a> · <a href="https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes" target="_blank">Enterprise/Edu release notes</a></p>
+                <p class="command-refs" data-i18n-html="s9_refs">출처: <a href="https://learn.chatgpt.com/docs/quickstart" target="_blank">Quickstart</a> · <a href="https://learn.chatgpt.com/docs/cloud" target="_blank">Codex cloud</a> · <a href="https://learn.chatgpt.com/docs/remote-connections" target="_blank">Remote connections</a> · <a href="https://learn.chatgpt.com/docs/third-party/github" target="_blank">GitHub integration</a></p>
             </section>
 
             <!-- Section 9 -->
             <section class="section" id="s10">
-                <h2><span class="section-num">10</span> <span data-i18n="s10_title">승인 + 샌드박스 조합</span></h2>
+                <h2><span class="section-num">10</span> <span data-i18n="s10_title">권한 경계 + 승인 방식</span></h2>
                 <div class="table-wrap">
                     <table>
                         <thead>
@@ -1009,29 +1009,28 @@ then verify the page again and attach the screenshot result.</code></pre>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><strong>Read-only</strong>
-                                </td>
+                                <td><strong>:read-only</strong></td>
                                 <td>✅</td>
                                 <td>❌</td>
-                                <td>❌</td>
-                                <td>❌</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Auto</strong> <span class="badge" data-i18n="default_badge">기본</span></td>
-                                <td>✅</td>
-                                <td>✅</td>
-                                <td>✅</td>
+                                <td data-i18n="s10_readonly_exec">△ 읽기 명령만</td>
                                 <td>❌</td>
                             </tr>
                             <tr>
-                                <td><strong>Workspace-write + untrusted</strong></td>
+                                <td><strong>:workspace</strong> <span class="badge" data-i18n="default_badge">권장 시작점</span></td>
                                 <td>✅</td>
                                 <td>✅</td>
-                                <td>△ trusted commands only</td>
+                                <td data-i18n="s10_workspace_exec">✅ 작업공간 안</td>
                                 <td>❌</td>
                             </tr>
                             <tr>
-                                <td><strong>Danger-full-access</strong></td>
+                                <td><strong data-i18n="s10_custom_profile">Custom profile</strong></td>
+                                <td data-i18n="s10_custom_read">설정값</td>
+                                <td data-i18n="s10_custom_write">설정값</td>
+                                <td data-i18n="s10_custom_exec">설정값</td>
+                                <td data-i18n="s10_custom_net">명시한 도메인</td>
+                            </tr>
+                            <tr>
+                                <td><strong>:danger-full-access</strong></td>
                                 <td>✅</td>
                                 <td>✅</td>
                                 <td>✅</td>
@@ -1040,13 +1039,17 @@ then verify the page again and attach the screenshot result.</code></pre>
                         </tbody>
                     </table>
                 </div>
-                <pre><code>codex --sandbox read-only --ask-for-approval on-request
-codex --sandbox workspace-write --ask-for-approval on-request
-codex --sandbox workspace-write --ask-for-approval untrusted
-codex --dangerously-bypass-approvals-and-sandbox</code></pre>
-                <p data-i18n="s10_sandbox">보안: 로컬 Codex는 OS 수준 sandbox를 사용합니다. macOS는 Seatbelt, Linux는 bubblewrap + seccomp, Windows는 네이티브 sandbox 또는 WSL을 사용합니다. Windows native에서는 `elevated`가 권장 경로이고, 관리자 승인이나 정책 때문에 막히면 `unelevated` fallback을 씁니다. 기본 `workspace-write`에서는 네트워크가 꺼져 있고 `.git`·`.codex`·`.agents`는 보호 경로로 읽기 전용입니다. Cloud는 setup 단계와 offline agent 단계를 분리한 런타임입니다.
-                </p>
-                <p class="command-refs" data-i18n-html="s10_refs">출처: <a href="https://developers.openai.com/codex/agent-approvals-security" target="_blank">Agent approvals &amp; security</a> · <a href="https://developers.openai.com/codex/config-reference/" target="_blank">Config reference</a> · <a href="https://developers.openai.com/codex/windows" target="_blank">Windows guide</a> · <a href="https://openai.com/index/building-codex-windows-sandbox/" target="_blank">Windows sandbox engineering</a></p>
+                <pre data-i18n-html="code_s10_permissions"><code><span class="c"># 현재 권한 선택기</span>
+/permissions
+
+<span class="c"># 새 permission profile 방식</span>
+default_permissions = ":workspace"
+approval_policy = "on-request"
+
+<span class="c"># 예전 sandbox 설정을 쓴다면 위 profile과 섞지 않습니다</span>
+codex --sandbox workspace-write --ask-for-approval on-request</code></pre>
+                <p data-i18n="s10_sandbox">권한 profile은 로컬 명령이 읽고 쓸 경로와 접속할 네트워크를 묶습니다. `:workspace`는 활성 workspace와 임시 폴더 쓰기를 허용하지만 네트워크는 기본적으로 열지 않는 낮은 마찰의 시작점입니다. App의 Ask for approval·Approve for me는 경계를 넘는 요청을 누가 검토할지 정하는 방식이며, sandbox 경계 자체를 없애지 않습니다. 새 permission profile 방식과 예전 `sandbox_mode` 설정은 같은 구성에서 섞지 마세요.</p>
+                <p class="command-refs" data-i18n-html="s10_refs">출처: <a href="https://learn.chatgpt.com/docs/permission-modes" target="_blank">Permission modes</a> · <a href="https://learn.chatgpt.com/docs/permissions" target="_blank">Permission profiles</a> · <a href="https://learn.chatgpt.com/docs/sandboxing" target="_blank">Sandbox</a> · <a href="https://learn.chatgpt.com/docs/config-file/config-reference" target="_blank">Config reference</a></p>
             </section>
 
             <!-- Section 10 -->
@@ -1249,57 +1252,38 @@ AGENTS.override.md  → 최우선
                 </div>
                 <pre data-i18n-html="code_s12_init"><code><span class="c"># 자동 생성</span>
 /init</code></pre>
-                <p class="command-refs" data-i18n-html="s12_refs">출처: <a href="https://developers.openai.com/codex/learn/best-practices/" target="_blank">Codex Best practices</a> · <a href="https://developers.openai.com/codex/guides/agents-md" target="_blank">AGENTS.md guide</a></p>
+                <p class="command-refs" data-i18n-html="s12_refs">출처: <a href="https://learn.chatgpt.com/guides/best-practices" target="_blank">Best practices</a> · <a href="https://learn.chatgpt.com/docs/agent-configuration/agents-md" target="_blank">AGENTS.md guide</a></p>
             </section>
 
             <!-- Section 12 -->
             <section class="section" id="s13">
                 <h2><span class="section-num">13</span> <span data-i18n="s13_title">config.toml 설정</span></h2>
                 <pre data-i18n-html="code_s13_config"><code><span class="c">#:schema https://developers.openai.com/codex/config-schema.json</span>
-<span class="c"># ~/.codex/config.toml</span>
+<span class="c"># ~/.codex/config.toml — permission profile 방식</span>
 model = "gpt-5.6-sol"
 review_model = "gpt-5.6-terra"
-model_provider = "openai"
-approval_policy = "on-request"
-sandbox_mode = "workspace-write"
-web_search = "cached"
 model_reasoning_effort = "medium"
 plan_mode_reasoning_effort = "medium"
-personality = "friendly"
-service_tier = "fast"
+approval_policy = "on-request"
+approvals_reviewer = "user"
 default_permissions = "project_safe"
-model_instructions_file = "~/.codex/instructions.md"
+web_search = "cached"
+personality = "friendly"
 
-[sandbox_workspace_write]
-network_access = false
-
-[tools]
-web_search = { context_size = "medium", allowed_domains = ["developers.openai.com", "openai.com"] }
-view_image = true
-
-[permissions.project_safe.filesystem]
-":project_roots" = "write"
+<span class="c"># sandbox_mode / sandbox_workspace_write와 함께 쓰지 않습니다</span>
+[permissions.project_safe]
+description = "현재 프로젝트 안에서만 읽고 쓰는 기본 profile"
+extends = ":workspace"
 
 [permissions.project_safe.network]
 enabled = false
 
-<span class="c"># 프로필</span>
-# Profiles now live in separate files:
-#   ~/.codex/fast.config.toml
-#   ~/.codex/deep.config.toml
+[features]
+fast_mode = true
 
-[windows]
-sandbox = "elevated"
-sandbox_private_desktop = true
-
-<span class="c"># 필요한 경우 세밀 승인 정책</span>
-# approval_policy = { granular = {
-#   sandbox_approval = true,
-#   rules = true,
-#   mcp_elicitations = true,
-#   request_permissions = false,
-#   skill_approval = false
-# } }
+[tools]
+web_search = { context_size = "medium", allowed_domains = ["learn.chatgpt.com", "developers.openai.com", "openai.com"] }
+view_image = true
 
 <span class="c"># OpenAI Docs MCP</span>
 [mcp_servers.openaiDeveloperDocs]
@@ -1313,16 +1297,16 @@ codex --profile deep</code></pre>
                 </div>
                 <div class="callout">
                     <strong data-i18n="s13_beginner_t">처음 사용자라면 이렇게 이해하면 됩니다</strong>
-                    <p data-i18n="s13_beginner_d"><code>model</code>은 기본 두뇌, <code>review_model</code>은 리뷰 전용 두뇌, <code>sandbox_mode</code>는 작업 범위, <code>approval_policy</code>는 언제 멈춰서 묻는지, <code>web_search</code>는 웹 최신성 모드, <code>model_instructions_file</code>은 항상 따라야 할 개인 기본 지침입니다.</p>
+                    <p data-i18n="s13_beginner_d"><code>model</code>은 기본 두뇌, <code>review_model</code>은 리뷰 전용 두뇌, <code>default_permissions</code>는 파일·네트워크 경계, <code>approval_policy</code>는 언제 멈춰서 묻는지입니다. 예전 <code>sandbox_mode</code>를 쓰는 구성에서는 permission profile과 섞지 않습니다.</p>
                 </div>
                 <div class="tip-grid">
                     <div class="tip-card">
                         <h4 data-i18n="s13_c1_t">무엇을 고정할까</h4>
-                        <p data-i18n="s13_c1_d">모델, model_provider, review_model, reasoning effort, sandbox mode, approval policy, web_search, profile, MCP 서버처럼 세션마다 흔들리면 품질 차이가 큰 항목부터 기본값으로 고정하세요. Amazon Bedrock 경로를 쓰는 팀은 AWS credential, region, model provider 설정도 운영 표준에 포함해야 합니다. Windows 네이티브 운영에서는 `windows.sandbox`, `windows.sandbox_private_desktop`을 함께 검토하고, remote connection은 App의 Settings > Connections와 workspace Remote Control 권한에서 관리하세요.</p>
+                        <p data-i18n="s13_c1_d">모델, review_model, reasoning effort, permission profile, approval policy, web_search, MCP 서버처럼 세션마다 흔들리면 결과 차이가 큰 항목부터 기본값으로 고정하세요.</p>
                     </div>
                     <div class="tip-card">
                         <h4 data-i18n="s13_c2_t">권한은 좁게 시작</h4>
-                        <p data-i18n="s13_c2_d">처음에는 기본 권한과 보수적인 sandbox/approval 조합으로 시작하고, 신뢰할 수 있는 저장소나 반복된 워크플로에만 점진적으로 권한을 넓히는 편이 안전합니다.</p>
+                        <p data-i18n="s13_c2_d">처음에는 `:workspace` 또는 그보다 좁은 profile로 시작하고, 검증된 workflow에 필요한 경로와 네트워크만 명시적으로 여세요.</p>
                     </div>
                     <div class="tip-card">
                         <h4 data-i18n="s13_c3_t">설정 문제를 먼저 의심</h4>
@@ -1333,7 +1317,7 @@ codex --profile deep</code></pre>
                         <p data-i18n="s13_c4_d">Business/Enterprise 운영자는 admin-enforced requirements로 approval, sandbox, web_search, MCP allowlist, Browser Use, Computer Use, in-app browser 같은 기능을 사용자 설정보다 우선 적용할 수 있습니다.</p>
                     </div>
                 </div>
-                <p class="command-refs" data-i18n-html="s13_refs">출처: <a href="https://developers.openai.com/codex/learn/best-practices/" target="_blank">Codex Best practices</a> · <a href="https://developers.openai.com/codex/config-reference/" target="_blank">config reference</a> · <a href="https://developers.openai.com/codex/concepts/sandboxing/" target="_blank">sandboxing</a> · <a href="https://developers.openai.com/codex/amazon-bedrock" target="_blank">Codex on Amazon Bedrock</a> · <a href="https://developers.openai.com/api/docs/guides/amazon-bedrock" target="_blank">OpenAI models in Amazon Bedrock</a> · <a href="https://openai.com/index/openai-frontier-models-and-codex-are-now-available-on-aws/" target="_blank">OpenAI and Codex on AWS</a></p>
+                <p class="command-refs" data-i18n-html="s13_refs">출처: <a href="https://learn.chatgpt.com/guides/best-practices" target="_blank">Best practices</a> · <a href="https://learn.chatgpt.com/docs/config-file/config-reference" target="_blank">Config reference</a> · <a href="https://learn.chatgpt.com/docs/permissions" target="_blank">Permissions</a> · <a href="https://learn.chatgpt.com/docs/sandboxing" target="_blank">Sandbox</a></p>
             </section>
 
             <!-- Section 13 -->
@@ -1432,7 +1416,7 @@ url = "https://developers.openai.com/mcp"
                         </tbody>
                     </table>
                 </div>
-                <p class="command-refs" data-i18n-html="s14_refs">출처: <a href="https://developers.openai.com/learn/docs-mcp" target="_blank">Docs MCP</a> · <a href="https://developers.openai.com/codex/learn/best-practices/" target="_blank">Codex Best practices</a> · <a href="https://developers.openai.com/codex/mcp" target="_blank">Codex MCP</a></p>
+                <p class="command-refs" data-i18n-html="s14_refs">출처: <a href="https://developers.openai.com/learn/docs-mcp" target="_blank">OpenAI Docs MCP</a> · <a href="https://learn.chatgpt.com/guides/best-practices" target="_blank">Best practices</a> · <a href="https://learn.chatgpt.com/docs/extend/mcp" target="_blank">Codex MCP</a></p>
             </section>
 
             <!-- Section 14 -->
@@ -1462,39 +1446,118 @@ codex resume &lt;ID&gt;       <span class="c"># 특정 세션</span>
                         <p data-i18n="s15_c3_d">메인 스레드는 요구사항과 최종 결정을 맡기고, 탐색·테스트·트리아지처럼 읽기 중심의 bounded work만 병렬 agent나 subagent로 분리하세요. 쓰기 충돌이 나는 병렬 편집은 더 조심해야 합니다.</p>
                     </div>
                 </div>
-                <p class="command-refs" data-i18n-html="s15_refs">출처: <a href="https://developers.openai.com/codex/learn/best-practices/" target="_blank">Codex Best practices</a> · <a href="https://developers.openai.com/codex/cli/slash-commands/" target="_blank">CLI slash commands</a> · <a href="https://developers.openai.com/codex/concepts/multi-agents/" target="_blank">Multi-agents concepts</a> · <a href="https://developers.openai.com/cookbook/articles/codex_exec_plans" target="_blank">Execution plans guide</a></p>
+                <p class="command-refs" data-i18n-html="s15_refs">출처: <a href="https://learn.chatgpt.com/guides/best-practices" target="_blank">Best practices</a> · <a href="https://learn.chatgpt.com/docs/developer-commands?surface=cli" target="_blank">CLI commands</a> · <a href="https://learn.chatgpt.com/docs/agent-configuration/subagents" target="_blank">Subagents</a> · <a href="https://learn.chatgpt.com/docs/long-running-work" target="_blank">Long-running work</a></p>
             </section>
 
-            <!-- Section 15 -->
+            <!-- Section 16 -->
             <section class="section" id="s16">
-                <h2><span class="section-num">16</span> <span data-i18n="s16_title">비대화형 자동화 & CI/CD</span></h2>
-                <pre data-i18n-html="code_s16_exec"><code><span class="c"># codex exec - 실행 후 자동 종료</span>
-codex exec "Review this PR" --output stdout
-codex exec "Fix all TODOs" --sandbox workspace-write --ask-for-approval on-request</code></pre>
-                <div class="callout">
-                    <strong data-i18n="s16_cloud_title">Codex Web 자동 리뷰</strong>
-                    <p data-i18n="s16_cloud_desc">GitHub 연결 + 리뷰 대상 저장소 선택 후 "Automatic reviews" 활성화 → 새 PR마다 자동 리뷰,
-                        AGENTS.md 규칙 기반 커스터마이징.</p>
+                <h2><span class="section-num">16</span> <span data-i18n="s16_title">로컬 Scheduled task & Git 자동화</span></h2>
+                <p data-i18n="s16_intro">반복 작업은 GitHub 연동이 없어도 실행할 수 있습니다. ChatGPT 데스크톱 앱의 Scheduled에서 로컬 프로젝트와 실행 환경을 고르면, 앱이 켜져 있고 프로젝트가 디스크에 있는 동안 현재 체크아웃 또는 격리된 worktree에서 작업합니다.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th data-i18n="s16_th_route">경로</th>
+                                <th data-i18n="s16_th_runs">실행 위치</th>
+                                <th data-i18n="s16_th_best">잘 맞는 일</th>
+                                <th data-i18n="s16_th_watch">주의점</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong data-i18n="s16_route_local">Local scheduled task</strong></td>
+                                <td data-i18n="s16_route_local_runs">내 로컬 체크아웃</td>
+                                <td data-i18n="s16_route_local_best">문서 갱신 후 바로 commit/push</td>
+                                <td data-i18n="s16_route_local_watch">작업 중인 파일과 충돌하지 않게 preflight 필요</td>
+                            </tr>
+                            <tr>
+                                <td><strong data-i18n="s16_route_worktree">Worktree scheduled task</strong></td>
+                                <td data-i18n="s16_route_worktree_runs">격리된 Git worktree</td>
+                                <td data-i18n="s16_route_worktree_best">코드 수정, 테스트, 검토 대기</td>
+                                <td data-i18n="s16_route_worktree_watch">push 전에 branch 생성과 결과 리뷰 필요</td>
+                            </tr>
+                            <tr>
+                                <td><strong>codex exec</strong></td>
+                                <td data-i18n="s16_route_exec_runs">로컬 shell 또는 CI</td>
+                                <td data-i18n="s16_route_exec_best">스크립트·파이프라인 실행</td>
+                                <td data-i18n="s16_route_exec_watch">기본은 read-only, 권한을 명시해야 함</td>
+                            </tr>
+                            <tr>
+                                <td><strong data-i18n="s16_route_github">GitHub auto-review</strong></td>
+                                <td data-i18n="s16_route_github_runs">GitHub PR</td>
+                                <td data-i18n="s16_route_github_best">새 PR 자동 리뷰</td>
+                                <td data-i18n="s16_route_github_watch">내 컴퓨터의 미커밋 파일은 볼 수 없음</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
+                <div class="callout">
+                    <strong data-i18n="s16_local_title">이 가이드처럼 정적 사이트를 갱신한다면</strong>
+                    <p data-i18n="s16_local_desc">먼저 로컬 프로젝트에서 프롬프트를 수동 실행해 결과를 확인한 뒤 Scheduled task로 옮기세요. 현재 checkout을 바로 배포하는 구조라면 Local을, 사람이 diff를 먼저 볼 구조라면 worktree를 고르는 편이 이해하기 쉽습니다.</p>
+                </div>
+                <article class="prompt-inline-section automation-prompt-card">
+                    <div class="prompt-inline-header automation-prompt-header">
+                        <span class="prompt-inline-num">16.1</span>
+                        <div>
+                            <h3 data-i18n="s16_prompt_title">로컬 갱신 → commit → push 프롬프트</h3>
+                            <p class="section-credit" data-i18n="s16_prompt_desc">Scheduled task에 넣기 전에 일반 로컬 채팅에서 한 번 검증하세요.</p>
+                        </div>
+                        <button class="use-case-copy-btn automation-copy-btn" type="button" data-copy-block="#s16-local-prompt" aria-label="프롬프트 복사" title="프롬프트 복사">
+                            <span data-i18n="s16_copy_prompt">프롬프트 복사</span>
+                        </button>
+                    </div>
+                    <pre id="s16-local-prompt" data-i18n-html="code_s16_local_prompt"><code>이 작업은 현재 로컬 Git 저장소의 공식 문서 기반 정기 업데이트다.
+
+목표
+- learn.chatgpt.com/docs를 제품 사용법의 1차 출처로 사용한다.
+- 오래된 설명과 링크를 제거하고, 한국어/영어 내용을 같은 의미로 맞춘다.
+- 실제 사용자가 따라 할 수 있는 짧은 예시와 검증 방법을 남긴다.
+
+시작 전 확인
+- 현재 branch, git status --short, remote를 확인한다.
+- 사용자의 tracked 변경이 있거나 main과 origin/main이 갈라졌으면 수정·commit·push하지 말고 이유를 보고한다.
+- 기존 untracked 파일은 수정·추가·삭제하지 않는다.
+- git pull --ff-only가 실패하면 강제로 해결하지 말고 멈춘다.
+
+작업과 검증
+- 공식 문서에서 바뀐 사실만 반영한다. 추측과 홍보성 표현은 넣지 않는다.
+- 관련 파일만 수정하고 JavaScript 구문 검사, 번역 검증, git diff --check를 실행한다.
+- 로컬 페이지를 열어 한국어/영어와 모바일 레이아웃을 확인한다.
+
+게시
+- 모든 검사가 통과하고 diff가 이번 작업 범위에만 있을 때만 관련 tracked 파일을 명시적으로 stage한다.
+- git commit -m "docs: refresh guide from official ChatGPT docs" 후 git push origin main을 실행한다.
+- git add ., force push, amend, rebase, 사용자 파일 삭제는 금지한다.
+- push 또는 원격 확인이 막히면 성공했다고 말하지 말고, 마지막 성공 단계와 필요한 조치만 보고한다.</code></pre>
+                    <p class="automation-prompt-note" data-i18n="s16_prompt_note">프롬프트는 작업 규칙이고 실제 권한은 별개입니다. commit에는 작업공간 쓰기 권한이, push에는 네트워크·Git 인증이 필요합니다. 먼저 수동 실행으로 정확한 저장소·branch·검증 명령을 확인한 뒤 최소 권한만 허용하세요.</p>
+                </article>
                 <div class="tip-grid">
                     <div class="tip-card">
-                        <h4 data-i18n="s16_c1_t">신뢰할 수 있는 변경 루프</h4>
-                        <p data-i18n="s16_c1_d">변경만 시키지 말고 테스트 작성 또는 수정, 적절한 체크 실행, 동작 확인, diff 리뷰까지 같이 요구하세요. Codex는 코드 생성보다 검증 루프까지 맡길 때 더 유용합니다.</p>
+                        <h4 data-i18n="s16_c1_t">수동 성공 뒤에 예약</h4>
+                        <p data-i18n="s16_c1_d">공식 문서도 먼저 일반 채팅에서 프롬프트와 도구를 시험하고 초기 실행 몇 건을 검토하라고 권합니다. 실패 조건과 no-op 조건까지 확인한 뒤 일정을 붙이세요.</p>
                     </div>
                     <div class="tip-card">
-                        <h4 data-i18n="s16_c2_t">리뷰도 규칙화할 수 있습니다</h4>
-                        <p data-i18n="s16_c2_d">base branch 기준 PR 스타일 리뷰, 미커밋 변경 리뷰, 특정 커밋 리뷰를 `/review`로 돌릴 수 있고, `code_review.md`를 AGENTS.md에서 참조하면 팀 기준을 재사용할 수 있습니다.</p>
+                        <h4 data-i18n="s16_c2_t">commit과 push를 분리해서 판단</h4>
+                        <p data-i18n="s16_c2_d">검증 실패, 사용자 변경 발견, 원격 branch 충돌이면 commit 전 멈춥니다. commit 뒤 push가 막히면 로컬 commit은 보존하고 push 실패를 그대로 보고해야 복구가 쉽습니다.</p>
                     </div>
                     <div class="tip-card">
-                        <h4 data-i18n="s16_c3_t">자동화 후보를 고르는 법</h4>
-                        <p data-i18n="s16_c3_d">최근 커밋 요약, 버그 스캔, 릴리스 노트 초안, CI 실패 점검, 스탠드업 요약처럼 이미 수동으로 안정화된 반복 작업부터 자동화하세요. 같은 스레드를 이어야 하면 thread automation, 매번 새로 시작해야 하면 standalone automation이 맞고, 프로젝트 스코프 자동화는 앱이 실행 중이며 대상 프로젝트가 디스크에 있어야 합니다. unattended 자동화는 기본 sandbox를 그대로 쓰고, 조직 정책이 허용하면 `approval_policy = "never"`를 우선 사용합니다.</p>
+                        <h4 data-i18n="s16_c3_t">앱과 컴퓨터가 실행 조건</h4>
+                        <p data-i18n="s16_c3_d">로컬 파일을 쓰는 Scheduled task는 컴퓨터가 켜져 있고 데스크톱 앱이 실행 중이며 프로젝트 경로가 유효해야 합니다. 웹 Scheduled task는 연결된 도구는 쓸 수 있어도 내 컴퓨터 폴더를 직접 수정하지 못합니다.</p>
                     </div>
+                </div>
+                <pre data-i18n-html="code_s16_exec"><code><span class="c"># shell/CI에서는 codex exec를 별도 선택지로 사용</span>
+codex exec --sandbox workspace-write "Run the documented checks and report the diff"
+
+<span class="c"># --full-auto는 새 스크립트에서 쓰지 않습니다</span></code></pre>
+                <div class="callout">
+                    <strong data-i18n="s16_cloud_title">GitHub 자동 리뷰는 별도 경로</strong>
+                    <p data-i18n="s16_cloud_desc">GitHub의 새 PR을 자동 검토하려면 Code Review 설정을 사용합니다. 로컬 파일 갱신·commit·push가 목적이라면 Local/Worktree Scheduled task가 더 직접적입니다.</p>
                 </div>
                 <div class="callout">
                     <strong data-i18n="s16_callout_t">skill이 방법을, automation이 일정을 정의합니다</strong>
                     <p data-i18n="s16_callout_d">아직 사람의 조향이 많이 필요한 흐름이면 먼저 skill로 묶고, 예측 가능해진 뒤 자동화로 옮기세요. 너무 이른 자동화는 품질 편차만 키웁니다.</p>
                 </div>
-                <p class="command-refs" data-i18n-html="s16_refs">출처: <a href="https://developers.openai.com/codex/learn/best-practices/" target="_blank">Codex Best practices</a> · <a href="https://developers.openai.com/codex/app/review" target="_blank">Codex app review</a> · <a href="https://developers.openai.com/codex/integrations/github" target="_blank">GitHub integration</a> · <a href="https://developers.openai.com/codex/app/automations" target="_blank">Automations</a> · <a href="https://developers.openai.com/codex/app/worktrees" target="_blank">Worktrees</a> · <a href="https://openai.com/index/dell-codex-enterprise-partnership/" target="_blank">Dell enterprise partnership</a> · <a href="https://openai.com/index/gartner-2026-agentic-coding-leader/" target="_blank">Gartner enterprise coding agents</a></p>
+                <p class="command-refs" data-i18n-html="s16_refs">출처: <a href="https://learn.chatgpt.com/docs/automations" target="_blank">Scheduled tasks</a> · <a href="https://learn.chatgpt.com/docs/environments/local-environment" target="_blank">Local environments</a> · <a href="https://learn.chatgpt.com/docs/environments/git-worktrees" target="_blank">Worktrees</a> · <a href="https://learn.chatgpt.com/docs/non-interactive-mode" target="_blank">codex exec</a> · <a href="https://learn.chatgpt.com/docs/code-review" target="_blank">Code review</a> · <a href="https://learn.chatgpt.com/docs/permissions" target="_blank">Permissions</a></p>
             </section>
 
             <!-- Section 16 -->
@@ -1510,7 +1573,7 @@ codex exec "Fix all TODOs" --sandbox workspace-write --ask-for-approval on-reque
                             </div>
                         </div>
                         <p data-i18n="s17_intro_desc">GPT-5.6 기준의 핵심은 세세한 절차를 모두 적는 것보다 목표 결과, 성공 기준, 제약, 사용할 수 있는 근거를 분명히 주고 모델이 적절한 경로를 고르게 하는 데 있습니다.</p>
-                        <p class="prompt-inline-ref" data-i18n-html="s17_intro_ref">레퍼런스: <a href="https://developers.openai.com/codex/learn/best-practices/" target="_blank">Codex Best practices</a> · <a href="https://developers.openai.com/codex/use-cases/follow-goals" target="_blank">Follow goals</a> · <a href="https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes" target="_blank">Enterprise/Edu release notes</a> · <a href="https://developers.openai.com/api/docs/guides/prompt-guidance-gpt-5p6" target="_blank">GPT-5.6 Prompt guidance</a> · <a href="https://openai.com/index/introducing-gpt-5-5/" target="_blank">Introducing GPT-5.5</a></p>
+                        <p class="prompt-inline-ref" data-i18n-html="s17_intro_ref">레퍼런스: <a href="https://learn.chatgpt.com/docs/prompting" target="_blank">Prompting</a> · <a href="https://learn.chatgpt.com/guides/best-practices" target="_blank">Best practices</a> · <a href="https://learn.chatgpt.com/docs/long-running-work" target="_blank">Long-running work</a> · <a href="https://developers.openai.com/api/docs/guides/prompt-guidance?model=gpt-5.6" target="_blank">GPT-5.6 Prompt guidance</a></p>
                         <p data-i18n="pg_s1_intro">GPT-5.6 프롬프팅은 모든 단계를 과하게 지정하는 방식보다, 원하는 결과와 성공 기준을 선명하게 두고 필요한 도구·추론·검증 경로를 모델이 고르게 하는 쪽에 가깝습니다.</p>
                         <div class="two-col">
                             <div class="callout">
@@ -2037,42 +2100,34 @@ codex --search "optimize with Next.js 15"
             </section>
 
             <section class="section" id="s21">
-                <h2><span class="section-num">21</span> <span data-i18n="s21_title">참고 자료</span></h2>
+                <h2><span class="section-num">21</span> <span data-i18n="s21_title">공식 문서 바로가기</span></h2>
                 <div class="link-grid">
-                    <a href="https://openai.com/codex" target="_blank" class="link-card">OpenAI Codex</a>
+                    <a href="https://learn.chatgpt.com/docs" target="_blank" class="link-card">ChatGPT Docs Hub</a>
+                    <a href="https://learn.chatgpt.com/docs/quickstart" target="_blank" class="link-card">Quickstart</a>
+                    <a href="https://learn.chatgpt.com/docs/app" target="_blank" class="link-card">ChatGPT Desktop App</a>
+                    <a href="https://learn.chatgpt.com/docs/codex/cli" target="_blank" class="link-card">Codex CLI</a>
+                    <a href="https://learn.chatgpt.com/docs/codex/ide" target="_blank" class="link-card">Codex IDE Extension</a>
+                    <a href="https://learn.chatgpt.com/docs/models" target="_blank" class="link-card">Models</a>
+                    <a href="https://learn.chatgpt.com/docs/pricing" target="_blank" class="link-card">Pricing</a>
+                    <a href="https://learn.chatgpt.com/docs/prompting" target="_blank" class="link-card">Prompting</a>
+                    <a href="https://learn.chatgpt.com/guides/best-practices" target="_blank" class="link-card">Best Practices</a>
+                    <a href="https://learn.chatgpt.com/docs/automations" target="_blank" class="link-card">Scheduled Tasks</a>
+                    <a href="https://learn.chatgpt.com/docs/environments/local-environment" target="_blank" class="link-card">Local Environments</a>
+                    <a href="https://learn.chatgpt.com/docs/environments/git-worktrees" target="_blank" class="link-card">Worktrees</a>
+                    <a href="https://learn.chatgpt.com/docs/permissions" target="_blank" class="link-card">Permissions</a>
+                    <a href="https://learn.chatgpt.com/docs/sandboxing" target="_blank" class="link-card">Sandbox</a>
+                    <a href="https://learn.chatgpt.com/docs/code-review" target="_blank" class="link-card">Code Review</a>
+                    <a href="https://learn.chatgpt.com/docs/non-interactive-mode" target="_blank" class="link-card">Non-interactive Mode</a>
+                    <a href="https://learn.chatgpt.com/docs/agent-configuration/agents-md" target="_blank" class="link-card">AGENTS.md</a>
+                    <a href="https://learn.chatgpt.com/docs/build-skills" target="_blank" class="link-card">Build Skills</a>
+                    <a href="https://learn.chatgpt.com/docs/plugins" target="_blank" class="link-card">Plugins</a>
+                    <a href="https://learn.chatgpt.com/docs/extend/mcp" target="_blank" class="link-card">MCP</a>
+                    <a href="https://learn.chatgpt.com/docs/changelog" target="_blank" class="link-card">Changelog</a>
                     <a href="https://github.com/openai/codex" target="_blank" class="link-card">GitHub Repo</a>
-                    <a href="https://openai.com/index/introducing-gpt-5-5/" target="_blank" class="link-card">Introducing GPT-5.5</a>
-                    <a href="https://openai.com/index/gpt-5-5-instant/" target="_blank" class="link-card">GPT-5.5 Instant</a>
-                    <a href="https://openai.com/index/running-codex-safely/" target="_blank" class="link-card">Running Codex safely</a>
-                    <a href="https://openai.com/business/guides-and-resources/how-openai-uses-codex/" target="_blank" class="link-card">How OpenAI uses Codex</a>
-                    <a href="https://openai.com/index/braintrust/" target="_blank" class="link-card">Braintrust + Codex</a>
-                    <a href="https://openai.com/index/nextdoor/" target="_blank" class="link-card">Nextdoor + Codex</a>
-                    <a href="https://openai.com/index/notion/" target="_blank" class="link-card">Notion + Codex</a>
-                    <a href="https://openai.com/index/wasmer/" target="_blank" class="link-card">Wasmer + Codex</a>
-                    <a href="https://openai.com/index/openai-to-acquire-ona/" target="_blank" class="link-card">Ona acquisition + Codex</a>
-                    <a href="https://openai.com/index/openai-on-oracle-cloud/" target="_blank" class="link-card">Oracle cloud commitment + Codex</a>
-                    <a href="https://openai.com/index/using-codex-to-simulate-black-holes/" target="_blank" class="link-card">Black-hole simulations + Codex</a>
-                    <a href="https://openai.com/index/gpt-5-5-with-trusted-access-for-cyber/" target="_blank" class="link-card">GPT-5.5-Cyber and Codex Security</a>
                     <a href="https://developers.openai.com/api/docs/models" target="_blank" class="link-card">OpenAI API Models</a>
                     <a href="https://developers.openai.com/api/docs/guides/latest-model" target="_blank" class="link-card">GPT-5.6 API Model Guidance</a>
-                    <a href="https://developers.openai.com/codex/models/" target="_blank" class="link-card">Codex Models (Official)</a>
                     <a href="#s17" class="link-card" data-i18n="s21_prompt_guide">Prompting Codex Agents Section</a>
-                    <a href="https://developers.openai.com/api/docs/guides/prompt-engineering" target="_blank" class="link-card">Prompt Engineering</a>
-                    <a href="https://developers.openai.com/api/docs/guides/compaction" target="_blank" class="link-card">Compaction Guide</a>
-                    <a href="https://developers.openai.com/codex/learn/best-practices/" target="_blank" class="link-card">Codex Best practices</a>
-                    <a href="https://developers.openai.com/codex/app/windows" target="_blank" class="link-card">Codex App for Windows (Official Docs)</a>
-                    <a href="https://developers.openai.com/codex/app/browser" target="_blank" class="link-card">Codex In-app Browser & Browser use</a>
-                    <a href="https://developers.openai.com/codex/sites" target="_blank" class="link-card">Codex Sites</a>
-                    <a href="https://openai.com/index/codex-for-every-role-tool-workflow/" target="_blank" class="link-card">Codex for every role, tool, and workflow</a>
-                    <a href="https://openai.com/index/codex-for-knowledge-work/" target="_blank" class="link-card">Codex knowledge work report</a>
-                    <a href="https://openai.com/index/our-response-to-the-tanstack-npm-supply-chain-attack/" target="_blank" class="link-card">OpenAI macOS certificate update</a>
-                    <a href="https://openai.com/index/introducing-codex/" target="_blank" class="link-card">Introducing Codex (Mar 4, 2026 update)</a>
-                    <a href="https://github.com/openai/codex/releases" target="_blank" class="link-card">Release
-                        Notes</a>
-                    <a href="https://developers.openai.com/cookbook/examples/gpt-5/codex_prompting_guide"
-                        target="_blank" class="link-card">GPT-5 Codex Prompting Guide</a>
                     <a href="https://agents.md" target="_blank" class="link-card">agents.md Spec</a>
-                    <a href="https://mcpmarket.com" target="_blank" class="link-card">MCP Marketplace</a>
                 </div>
             </section>
 
@@ -2109,8 +2164,8 @@ codex --search "optimize with Next.js 15"
                         <span data-i18n="changelog_item_5">OpenAI Developers MCP와 openai.com/index를 확인했습니다. 2026년 8월 13일 Ultrafast mode preview는 eligible GPT-5.6 Sol API workload용 제한 preview로 분리했고, 2026년 8월 5일 Fast long-context note는 Platform/API 문맥으로만 반영했습니다.</span>
                     </li>
                     <li>
-                        <strong data-i18n="overview_update_7_title">소셜 baseline 점검</strong>
-                        <span data-i18n="changelog_item_6">사람별 practitioner 점검에서 공개 가이드에 새로 승격할 만한 공식 corroboration 완료 팁은 나오지 않았습니다. Section 20은 그대로 유지했습니다.</span>
+                        <strong data-i18n="overview_update_7_title">로컬 자동화 경로 개편</strong>
+                        <span data-i18n="changelog_item_6">새 learn.chatgpt.com 문서 구조를 핵심 출처에 반영했습니다. Section 10의 충돌하던 권한 설정 예시를 고쳤고, Section 16을 Local/Worktree Scheduled task와 검증된 commit/push 프롬프트 중심으로 다시 작성했습니다.</span>
                     </li>
                 </ol>
             </section>
@@ -2132,8 +2187,8 @@ codex --search "optimize with Next.js 15"
         </div>
     </footer>
 
-    <script src="i18n.js?v=20260819-cli148-usecase-prompts"></script>
-    <script src="app.js?v=20260819-cli148-usecase-prompts"></script>
+    <script src="i18n.js?v=20260819-learn-docs-local-automation"></script>
+    <script src="app.js?v=20260819-learn-docs-local-automation"></script>
 </body>
 
 </html>

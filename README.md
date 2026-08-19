@@ -21,7 +21,7 @@
 
 **Codex 101** is a practical, bilingual guide for people learning or rolling out OpenAI Codex. It covers the main Codex surfaces, setup decisions, safety controls, configuration, MCP, workflow automation, and prompt patterns.
 
-The guide is written from the official OpenAI Codex documentation first, then manually reviewed before publishing. Because Codex changes quickly, treat the live guide as a learning companion and always confirm critical model, pricing, security, and availability details in the [official docs](https://developers.openai.com/codex/).
+The guide is written from the official ChatGPT/Codex documentation first, then manually reviewed before publishing. Because Codex changes quickly, treat the live guide as a learning companion and always confirm critical model, pricing, security, and availability details in the [official docs hub](https://learn.chatgpt.com/docs).
 
 ## Start Here
 
@@ -31,6 +31,8 @@ The guide is written from the official OpenAI Codex documentation first, then ma
 
 ## August 19, 2026 Refresh Notes
 
+- Rebased the practical guide on the new `learn.chatgpt.com/docs` information architecture. The permissions chapter now separates permission profiles from legacy `sandbox_mode` configuration instead of showing both in one invalid example.
+- Reworked section 16 around local scheduled tasks first. It now compares Local, worktree, `codex exec`, and GitHub auto-review routes, and includes a copy-ready prompt for safe local refresh → validation → scoped commit → push with explicit stop rules.
 - Rechecked `developers.openai.com/codex/models` first on August 19. Recommended Codex models remain the GPT-5.6 family: `gpt-5.6-sol`, `gpt-5.6-terra`, and `gpt-5.6-luna`; `gpt-5.5` remains previous-generation, `gpt-5.2` / `gpt-5.3-codex` remain deprecated for ChatGPT-authenticated Codex, and `gpt-5.4` / `gpt-5.4-mini` still have an August 31, 2026 ChatGPT sign-in Codex retirement notice. If `Daybreak Blue` appears in your model picker, treat it as a separately approved defensive-cybersecurity access path, not as a replacement for the general GPT-5.6 recommendation.
 - Tightened the Max/Ultra note from the current model and subagents docs: Max gives one selected model more reasoning time for a single hard task, while Ultra uses subagents for divisible work and may require enabling **Ultra in model picker slider** under Settings > Configuration.
 - Rechecked pricing, Speed/Fast mode, remote connections, app/features, app/automations, config, MCP, hooks, plugins, skills, Sites, OpenAI API latest-model/changelog, and current Platform/API surfaces. Fast mode still includes GPT-5.6, GPT-5.5, and GPT-5.4 while GPT-5.4 is available; GPT-5.6/GPT-5.5 use 2.5x Standard credits, GPT-5.4 uses 2x, and API-key workflows stay on API token pricing. The OpenAI API changelog now also says Fast mode supports GPT-5.6 Sol/Terra/Luna long-context requests over 272K tokens, so the guide keeps that as Platform/API context rather than Codex model-picker behavior. Saved ChatGPT-authenticated Codex configs should replace `gpt-5.4` with `gpt-5.6-terra` and `gpt-5.4-mini` with `gpt-5.6-luna` before August 31, 2026.
@@ -61,7 +63,7 @@ The guide is written from the official OpenAI Codex documentation first, then ma
 | 04-05 | Requirements, pricing, installation, authentication |
 | 06-09 | CLI, Desktop App, IDE Extension, Web/Mobile |
 | 10-14 | Approvals, sandboxing, slash commands, `AGENTS.md`, `config.toml`, MCP |
-| 15-17 | Session strategy, automation, prompt contracts |
+| 15-17 | Session strategy, local scheduled tasks, Git automation, prompt contracts |
 | 18-21 | Advanced usage, FAQ, references, practitioner tips |
 
 ## Languages

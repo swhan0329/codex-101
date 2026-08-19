@@ -419,6 +419,45 @@
         btn.addEventListener('click', () => setLang(btn.dataset.lang));
     });
 
+    document.addEventListener('click', async (event) => {
+        const button = event.target.closest('[data-copy-block]');
+        if (!button) return;
+
+        const target = document.querySelector(button.dataset.copyBlock || '');
+        const label = button.querySelector('span');
+        if (!target || !label) return;
+
+        const value = target.textContent.trim();
+        const copiedLabel = currentLang === 'ko' ? '복사됨' : 'Copied';
+        const failedLabel = currentLang === 'ko' ? '복사 실패' : 'Copy failed';
+
+        try {
+            if (navigator.clipboard?.writeText) {
+                await navigator.clipboard.writeText(value);
+            } else {
+                const textarea = document.createElement('textarea');
+                textarea.value = value;
+                textarea.setAttribute('readonly', '');
+                textarea.style.position = 'fixed';
+                textarea.style.opacity = '0';
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                textarea.remove();
+            }
+            button.classList.add('copied');
+            label.textContent = copiedLabel;
+        } catch (error) {
+            button.classList.add('copy-error');
+            label.textContent = failedLabel;
+        }
+
+        window.setTimeout(() => {
+            button.classList.remove('copied', 'copy-error');
+            label.textContent = translations[currentLang]?.s16_copy_prompt || (currentLang === 'ko' ? '프롬프트 복사' : 'Copy prompt');
+        }, 1600);
+    });
+
     // Theme toggle
     const themeBtn = document.getElementById('theme-toggle');
     let theme = localStorage.getItem('codex101_theme') || 'dark';
