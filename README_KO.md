@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 8월 19일</strong><br/>
+  <strong>최종 업데이트: 2026년 8월 21일</strong><br/>
   라이브 사이트는 보는 사람의 당일 날짜를 자동으로 표시하며, 최신 Codex 모델 가이드를 공식 문서 기준으로 반영합니다.
 </p>
 
@@ -39,7 +39,7 @@
 - 인트로에는 [OpenAI Developer Showcase](https://developers.openai.com/showcase) 안내를 추가해, Codex로 만든 실제 예시와 바로 실행해볼 만한 프롬프트 감을 먼저 잡을 수 있게 했습니다.
 - 최신 변경 로그는 첫 독서 흐름을 방해하지 않도록 맨 아래 Changelog 섹션으로 옮기고, 근거 문서는 접어서 볼 수 있게 낮췄습니다.
 
-### 일일 MCP 검증 스냅샷 (2026-08-19)
+### 일일 MCP 검증 스냅샷 (2026-08-21)
 
 - 새 공식 문서 허브인 `learn.chatgpt.com/docs`의 정보 구조를 기준으로 핵심 링크와 설명을 다시 정리했습니다. 권한 장에서는 새 permission profile과 예전 `sandbox_mode`를 한 설정에서 섞던 예시를 제거하고 두 방식을 분리했습니다.
 - 16장을 GitHub-only 자동 리뷰 중심에서 로컬 Scheduled task 중심으로 바꿨습니다. Local/worktree/`codex exec`/GitHub auto-review를 비교하고, 로컬 갱신 → 검증 → 관련 파일만 commit → 안전한 push까지 실행하는 복사형 프롬프트와 중단 조건을 추가했습니다.
@@ -48,6 +48,7 @@
 - Quickstart, Pricing, Speed/Fast mode, Best practices, Config, Windows/Windows App/IDE/App features/App Automations/Cloud, Remote connections, Integrations, MCP, Hooks, Plugins, Skills, Sites, OpenAI API latest-model/changelog와 Platform/API 문서를 다시 확인했습니다. Fast mode는 GPT-5.6, GPT-5.5, GPT-5.4를 지원하고, GPT-5.6/GPT-5.5는 Standard 대비 2.5배, GPT-5.4는 2배 ChatGPT credit을 씁니다. OpenAI API changelog는 GPT-5.6 Sol/Terra/Luna Fast mode가 272K token을 넘는 long-context request도 지원한다고 설명하므로, 이 내용은 Codex model picker 동작이 아니라 Platform/API 문맥으로 분리했습니다. 다만 ChatGPT 로그인 Codex에서 GPT-5.4 계열을 저장 설정·custom agent·scheduled task에 남겨두면 2026년 8월 31일 이후 막힐 수 있습니다. API-key workflow는 Fast credit이 아니라 API token pricing과 API model availability를 따르므로 분리했습니다.
 - 2026년 8월 10일 Business Premium 발표를 plan capacity 메모로 추가했습니다. 발표문은 ChatGPT Business Premium seat가 Standard 대비 5배 사용량, 5시간 사용 제한 없음, 주간 reset, 월 $125 또는 연간 월 $100, Standard/Premium 혼합 seat 운영, 8월 20일까지의 waitlist/promotion을 제공한다고 설명합니다. 하지만 현재 Codex Pricing 문서는 아직 기본 Business 사용량 표를 보여주므로, 문서에서는 발표 상태와 현재 가격표 상태를 섞어 단정하지 않고 분리했습니다.
 - What's new와 Codex changelog를 다시 확인했습니다. CLI 0.148.0은 TUI 대화를 `/export`로 Markdown 내보내기, `codex exec fork`, TUI resume picker의 archive/restore, 시작 중 prompt draft, eligible workspace의 `/status`와 terminal surface 비용/credit 추정 표시, built-in Amazon Bedrock Runtime routing, 비동기 실행 및 MCP tool 호출이 가능한 Hooks를 추가했습니다. 또한 model switch 때 stale instruction이 남는 문제, resume 시 cwd/approval policy 복원, MCP OAuth recovery, Linux/Windows sandbox fail-closed 동작을 고쳤습니다.
+- 8월 17–21일 업데이트의 Apple Messages 플러그인 경계를 추가했습니다. Apple Silicon ChatGPT desktop app의 Codex 또는 ChatGPT Work에서만 실행하며, 요청된 macOS 권한을 준 뒤 메시지와 수신자를 검토하고 전송을 승인해야 합니다. Full access에서는 필요한 확인이 막힐 수 있으므로 전송 작업은 **Ask for approval** 또는 **Approve for me**를 유지하세요.
 - 공식 use-case catalog는 계속 101개입니다. 공식 Starter prompt 74개의 줄바꿈 또는 blank-line 구조 변경을 `promptEn`과 `promptKo`에 맞췄고, 공식 상세 101개 `starterPrompt.body`와 local `official.promptEn` mismatch는 0입니다. 첫 카드의 canonical slug는 `daily-work-brief`이며, 기존 `proactive-teammate` hash는 alias로 유지했습니다.
 - 2026년 7월 23일 ChatGPT desktop app 26.715 업데이트를 반영했습니다. ChatGPT Voice는 desktop app의 Chat, Work, Codex task를 음성으로 조율하고 Remote on iOS에서도 쓸 수 있습니다. Local project는 여러 폴더를 포함할 수 있고, primary folder가 새 chat, Git, AGENTS.md, skills, `config.toml` 기준이 됩니다.
 - OpenAI API latest-model/changelog는 별도 Platform/API lane으로 반영했습니다. `gpt-5.6` alias는 `gpt-5.6-sol`로 라우팅되고, Programmatic Tool Calling, Multi-agent beta, explicit prompt caching, persisted reasoning, max reasoning effort, Pro mode, original/auto image detail preservation이 추가됐습니다. 2026년 8월 13일 Ultrafast mode preview는 제한된 GPT-5.6 Sol API workload용 `service_tier` preview로 분리했습니다. 응답에 `service_tier=ultrafast`가 표시될 수 있는 API 처리 모드이지 Codex 모델 선택기의 기본값이나 ChatGPT credit plan 변경이 아닙니다. 2026년 8월 5일 API changelog는 GPT-5.6 Sol/Terra/Luna Fast mode가 272K token을 넘는 long-context prompt도 지원한다고 설명합니다. API hard spend limits와 2026년 7월 29일 Terraform provider는 Platform/API 운영 기준으로 분리했습니다. 2026년 7월 30일 GPT-5.6 price-performance 발표는 GPT-5.6 Luna API 가격 80% 인하, Terra 20% 인하, Codex/ChatGPT Work 사용량 계산 반영, API Fast mode for Sol을 설명하므로 가격/API 운영 맥락에 반영했습니다. 같은 날 ARC-AGI-3 글은 Responses API, retained reasoning, compaction을 쓰는 long agent run 기준으로만 분리했습니다. 2026년 8월 3일 GPT-Live engineering 글은 full-duplex voice, frontier model asynchronous delegation, desktop app의 agent/computer coordination을 설명하는 Voice/API architecture 맥락으로만 분리했고, 별도 Codex 설정 flag처럼 쓰지 않았습니다. 2026년 8월 6일 ChatGPT GPT-5.6 Sol 발표는 ChatGPT Chat 품질 개선과 Free/Go의 Luna 접근 확대 맥락으로만 분리했습니다. 발표문이 Work/Codex용 Sol은 이번 릴리스에서 바뀌지 않는다고 명시하므로 Codex 모델 추천 변경으로 쓰지 않았습니다.
