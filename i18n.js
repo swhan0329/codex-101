@@ -398,7 +398,7 @@ const translations = {
         s9_s3: "클라우드 샌드박스에서 자동 작업", s9_s4: "결과 diff 확인", s9_s5: "GitHub PR로 제안 또는 머지",
         s9_auto_title: "자동 코드 리뷰",
         s9_auto_desc: 'Codex Web에서 GitHub 연결 후 리뷰 대상 저장소를 선택하고 "Automatic reviews"를 활성화하면 새 PR마다 자동 리뷰됩니다. AGENTS.md 규칙 기반 커스터마이징 가능.',
-        img_cloud: "Codex Web — ChatGPT 웹 대시보드에서 GitHub 연동 작업",
+        img_cloud: "현재 Codex cloud — 저장소·브랜치 선택과 작업·코드 리뷰·보안 리뷰",
         // Section 9
         s10_title: "권한 경계 + 승인 방식",
         th_read: "파일 읽기", th_write: "파일 수정", th_net: "네트워크",
@@ -1174,7 +1174,7 @@ const translations = {
         s9_s3: "Auto-runs in cloud sandbox", s9_s4: "Review result diff", s9_s5: "Submit as GitHub PR or merge",
         s9_auto_title: "Automatic Code Review",
         s9_auto_desc: 'In Codex Web, connect GitHub, choose target repositories for review, then enable "Automatic reviews" to auto-review new PRs. Customize via AGENTS.md rules.',
-        img_cloud: "Codex Web — GitHub integration via ChatGPT web dashboard",
+        img_cloud: "Current Codex cloud — repository and branch selection with task, code-review, and security-review tabs",
         s10_title: "Permission Boundaries + Approvals",
         th_read: "File Read", th_write: "File Write", th_net: "Network",
         default_badge: "recommended start",
