@@ -378,7 +378,7 @@ const translations = {
         s7_pb_plugin_d: "skills, app integrations, MCP server를 묶어 배포하는 단위입니다. 반복 프롬프트가 안정화된 뒤 팀에 공유할 때 plugin으로 올리고, 설치 후에는 작업 설명만 하거나 `@plugin`으로 특정 workflow를 직접 호출하는 방식이 좋습니다. Apple Messages는 Apple Silicon Mac의 ChatGPT desktop app에서 Codex 또는 ChatGPT Work로만 쓸 수 있으므로, 필요한 macOS 권한을 준 뒤 메시지와 수신자를 검토하고 전송을 승인하세요. Full access에서는 전송 확인이 막힐 수 있어 Ask for approval 또는 Approve for me가 필요합니다.",
         img_app: "ChatGPT 데스크톱 앱의 Codex 새 작업 화면 — 프로젝트 선택, 시작 카드, GPT-5.6 Sol Medium (2026년 7월 10일 촬영)",
         img_app_switch: "좌상단 전환 메뉴 — 완성 결과물 중심 Work와 프로젝트·파일 작업 중심 Codex를 같은 앱에서 선택",
-        img_app_chat: "Codex 작업 위 Chat 오버레이 — 프로젝트 작업을 유지한 채 일반 대화를 분리해 시작",
+        img_app_chat: "현재 ChatGPT 데스크톱 앱 — 상단 Chat·Work 전환과 사이드바",
         // Section 7
         s8_title: "Codex IDE Extension",
         s8_intro: "VS Code, Cursor, Windsurf, VS Code Insiders에는 Codex 확장을 설치하고, Xcode와 JetBrains IDE에서는 각 IDE의 자체 통합을 사용하는 AI 코딩 에이전트입니다. ChatGPT 계정 또는 API 키로 로그인할 수 있고 JetBrains는 JetBrains AI 구독도 지원합니다. Windows에서는 네이티브 sandbox를 기본 경로로 두고, Linux-native 도구나 이미 WSL2에 있는 저장소가 중요할 때 WSL2 워크스페이스를 선택하세요.",
@@ -1156,7 +1156,7 @@ const translations = {
         s7_pb_plugin_d: "Plugins are the packaging layer for skills, app integrations, and MCP servers. After a workflow becomes reliable, package it as a plugin for team reuse; after install, either describe the task normally or invoke a specific workflow with `@plugin`. Apple Messages works only in Codex or ChatGPT Work in the Apple Silicon ChatGPT desktop app, so grant the needed macOS permissions, then review the message and recipients before approving a send. Full access can prevent the send confirmation, so use Ask for approval or Approve for me.",
         img_app: "Codex new-task screen in the ChatGPT desktop app — project picker, starter cards, and GPT-5.6 Sol Medium (captured July 10, 2026)",
         img_app_switch: "Top-left workspace switcher — choose Work for finished deliverables or Codex for project and file work",
-        img_app_chat: "Chat overlay above a Codex task — start a separate general conversation without replacing the project task",
+        img_app_chat: "Current ChatGPT desktop app — the Chat/Work switcher and sidebar",
         s8_title: "Codex IDE Extension",
         s8_intro: "Use the Codex extension in VS Code, Cursor, Windsurf, and VS Code Insiders; Xcode and JetBrains IDEs provide their own integrations. Sign in with ChatGPT or an API key, with JetBrains AI also supported in JetBrains. On Windows, use the native sandbox path by default and choose a WSL2 workspace when your repository or toolchain is Linux-native.",
         th_mode: "Permission profile", th_file_access: "File Access", th_edit: "Code Edit", th_exec: "Command Exec",
