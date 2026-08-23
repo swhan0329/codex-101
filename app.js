@@ -3,6 +3,7 @@
     let currentLang = localStorage.getItem('codex101_lang') || 'ko';
     let sectionNavCleanups = [];
     let homeSidebarPinCleanup = null;
+    let homeTreeCleanup = null;
     let refreshHomeSidebarPin = () => { };
     const pageTocs = {
         home: [
@@ -85,6 +86,10 @@
             ],
         },
     ];
+    const homeNavRootItems = [
+        { href: '#start-here', label: '00', titleKey: 'overview_kicker' },
+        { href: '#changelog', label: '↺', titleKey: 'changelog_title', end: true },
+    ];
 
     function updateModelToggleLabels(lang) {
         const t = translations[lang] || {};
@@ -166,14 +171,26 @@
         const nav = document.getElementById('home-nav');
         if (!nav) return;
         const t = translations[lang] || {};
-        nav.innerHTML = homeNavGroups.map((group) => {
+        const rootLink = (item) => {
+            const title = t[item.titleKey] || '';
+            return `
+                <a href="${item.href}" class="home-nav-link home-nav-root-link${item.end ? ' is-end-link' : ''}"
+                    data-target="${item.href}" data-title-key="${item.titleKey}" role="treeitem" aria-level="1">
+                    <span class="home-nav-num">${item.label}</span>
+                    <span class="home-nav-text">${title}</span>
+                </a>
+            `;
+        };
+
+        const groups = homeNavGroups.map((group, groupIndex) => {
             const title = t[group.titleKey] || '';
-            const groupHref = group.items[0]?.href || '#toc';
             const items = group.items.map((item) => {
                 const label = t[item.titleKey] || '';
                 const classes = item.subitem ? 'home-nav-link is-subitem' : 'home-nav-link';
+                const level = item.subitem ? 3 : 2;
                 return `
-                    <a href="${item.href}" class="${classes}" data-target="${item.href}" data-title-key="${item.titleKey}">
+                    <a href="${item.href}" class="${classes}" data-target="${item.href}" data-title-key="${item.titleKey}"
+                        role="treeitem" aria-level="${level}">
                         <span class="home-nav-num">${item.label}</span>
                         <span class="home-nav-text">${label}</span>
                     </a>
@@ -181,14 +198,121 @@
             }).join('');
 
             return `
-                <section class="home-nav-group" data-group-title-key="${group.titleKey}">
-                    <a href="${groupHref}" class="home-nav-group-toggle" data-target="${groupHref}">
+                <section class="home-nav-group" data-group-title-key="${group.titleKey}" role="treeitem"
+                    aria-level="1" aria-expanded="true">
+                    <button class="home-nav-group-toggle" type="button" aria-expanded="true"
+                        aria-controls="home-nav-group-${groupIndex}">
                         <span class="home-nav-group-title">${title}</span>
-                    </a>
-                    <div class="home-nav-items">${items}</div>
+                        <span class="home-nav-group-chevron" aria-hidden="true">⌄</span>
+                    </button>
+                    <div class="home-nav-items" id="home-nav-group-${groupIndex}" role="group">${items}</div>
                 </section>
             `;
         }).join('');
+
+        nav.innerHTML = `${rootLink(homeNavRootItems[0])}${groups}${rootLink(homeNavRootItems[1])}<p class="home-nav-empty" hidden>${t.home_nav_no_results || 'No matching sections.'}</p>`;
+    }
+
+    function resetHomeTreeInteractions() {
+        if (homeTreeCleanup) {
+            homeTreeCleanup();
+            homeTreeCleanup = null;
+        }
+    }
+
+    function setupHomeTreeInteractions() {
+        resetHomeTreeInteractions();
+        const sidebar = document.querySelector('.home-sidebar');
+        const nav = document.getElementById('home-nav');
+        const search = document.getElementById('home-nav-search-input');
+        const mobileToggle = document.getElementById('home-nav-mobile-toggle');
+        if (!sidebar || !nav || !search || !mobileToggle) return;
+
+        const groupToggles = Array.from(nav.querySelectorAll('.home-nav-group-toggle'));
+        const links = Array.from(nav.querySelectorAll('.home-nav-link'));
+        const empty = nav.querySelector('.home-nav-empty');
+
+        const setGroupExpanded = (group, expanded) => {
+            const toggle = group.querySelector('.home-nav-group-toggle');
+            group.classList.toggle('is-collapsed', !expanded);
+            group.setAttribute('aria-expanded', String(expanded));
+            if (toggle) toggle.setAttribute('aria-expanded', String(expanded));
+        };
+
+        const onGroupClick = (event) => {
+            const group = event.currentTarget.closest('.home-nav-group');
+            if (!group) return;
+            setGroupExpanded(group, group.classList.contains('is-collapsed'));
+        };
+        groupToggles.forEach((toggle) => toggle.addEventListener('click', onGroupClick));
+
+        const applyFilter = () => {
+            const query = search.value.trim().toLocaleLowerCase();
+            let visibleCount = 0;
+
+            nav.querySelectorAll('.home-nav-root-link').forEach((link) => {
+                const matches = !query || link.textContent.toLocaleLowerCase().includes(query);
+                link.hidden = !matches;
+                if (matches) visibleCount += 1;
+            });
+
+            nav.querySelectorAll('.home-nav-group').forEach((group) => {
+                const groupTitle = group.querySelector('.home-nav-group-title')?.textContent.toLocaleLowerCase() || '';
+                let groupMatches = false;
+                group.querySelectorAll('.home-nav-link').forEach((link) => {
+                    const matches = !query || groupTitle.includes(query) || link.textContent.toLocaleLowerCase().includes(query);
+                    link.hidden = !matches;
+                    if (matches) {
+                        groupMatches = true;
+                        visibleCount += 1;
+                    }
+                });
+                group.hidden = !groupMatches;
+                if (query && groupMatches) setGroupExpanded(group, true);
+            });
+
+            if (empty) empty.hidden = visibleCount > 0;
+        };
+
+        const onSearchInput = () => applyFilter();
+        const onSearchKeydown = (event) => {
+            if (event.key === 'Escape' && search.value) {
+                search.value = '';
+                applyFilter();
+                search.focus();
+            }
+        };
+        search.addEventListener('input', onSearchInput);
+        search.addEventListener('keydown', onSearchKeydown);
+
+        const closeMobileTree = () => {
+            sidebar.classList.remove('tree-open');
+            mobileToggle.setAttribute('aria-expanded', 'false');
+        };
+        const onMobileToggle = () => {
+            const open = sidebar.classList.toggle('tree-open');
+            mobileToggle.setAttribute('aria-expanded', String(open));
+        };
+        const onLinkClick = () => {
+            if (window.matchMedia('(max-width: 960px)').matches) closeMobileTree();
+        };
+        const onDocumentKeydown = (event) => {
+            if (event.key === 'Escape' && sidebar.classList.contains('tree-open')) closeMobileTree();
+        };
+
+        mobileToggle.addEventListener('click', onMobileToggle);
+        links.forEach((link) => link.addEventListener('click', onLinkClick));
+        document.addEventListener('keydown', onDocumentKeydown);
+        applyFilter();
+
+        homeTreeCleanup = () => {
+            groupToggles.forEach((toggle) => toggle.removeEventListener('click', onGroupClick));
+            search.removeEventListener('input', onSearchInput);
+            search.removeEventListener('keydown', onSearchKeydown);
+            mobileToggle.removeEventListener('click', onMobileToggle);
+            links.forEach((link) => link.removeEventListener('click', onLinkClick));
+            document.removeEventListener('keydown', onDocumentKeydown);
+        };
     }
 
     function updateHomeNavContext(activeLink) {
@@ -200,7 +324,31 @@
 
         groups.forEach((group) => {
             group.classList.toggle('active', group === activeGroup);
+            if (group === activeGroup && group.classList.contains('is-collapsed')) {
+                group.classList.remove('is-collapsed');
+                group.setAttribute('aria-expanded', 'true');
+                group.querySelector('.home-nav-group-toggle')?.setAttribute('aria-expanded', 'true');
+            }
         });
+
+        if (activeLink) {
+            const mobileLabel = document.getElementById('home-nav-mobile-label');
+            const number = activeLink.querySelector('.home-nav-num')?.textContent.trim();
+            const title = activeLink.querySelector('.home-nav-text')?.textContent.trim();
+            if (mobileLabel && title) mobileLabel.textContent = number ? `${number} · ${title}` : title;
+            const scrollContainer = activeLink.closest('.guide-sidebar-inner');
+            if (scrollContainer && scrollContainer.scrollHeight > scrollContainer.clientHeight) {
+                const linkTop = activeLink.offsetTop;
+                const linkBottom = linkTop + activeLink.offsetHeight;
+                const viewTop = scrollContainer.scrollTop;
+                const viewBottom = viewTop + scrollContainer.clientHeight;
+                if (linkTop < viewTop) {
+                    scrollContainer.scrollTop = Math.max(0, linkTop - 16);
+                } else if (linkBottom > viewBottom) {
+                    scrollContainer.scrollTop = linkBottom - scrollContainer.clientHeight + 16;
+                }
+            }
+        }
     }
 
     function resetSectionNavigation() {
@@ -219,66 +367,11 @@
     function setupHomeSidebarPin() {
         const page = document.body.dataset.page || 'home';
         if (page !== 'home') return;
-
-        const shell = document.querySelector('.home-shell');
         const sidebar = document.querySelector('.home-sidebar');
-        const sidebarInner = document.querySelector('.home-sidebar .guide-sidebar-inner');
-        if (!shell || !sidebar || !sidebarInner) return;
-
-        const desktopQuery = window.matchMedia('(min-width: 1624px)');
-        const topOffset = 84;
-
-        const update = () => {
-            if (!desktopQuery.matches) {
-                sidebar.style.transform = '';
-                return;
-            }
-
-            const shellRect = shell.getBoundingClientRect();
-            const shellTop = window.scrollY + shellRect.top;
-            const shellHeight = shell.offsetHeight;
-            const sidebarHeight = sidebarInner.offsetHeight;
-            const maxTranslate = Math.max(0, shellHeight - sidebarHeight);
-            const desiredTranslate = window.scrollY + topOffset - shellTop;
-            const translate = Math.max(0, Math.min(desiredTranslate, maxTranslate));
-
-            sidebar.style.transform = `translateY(${translate}px)`;
-        };
-
-        let ticking = false;
-        const onScroll = () => {
-            if (!ticking) {
-                window.requestAnimationFrame(() => {
-                    update();
-                    ticking = false;
-                });
-                ticking = true;
-            }
-        };
-        const onResize = () => update();
-        const onMediaChange = () => update();
-
-        window.addEventListener('scroll', onScroll, { passive: true });
-        window.addEventListener('resize', onResize);
-        if (typeof desktopQuery.addEventListener === 'function') {
-            desktopQuery.addEventListener('change', onMediaChange);
-        } else {
-            desktopQuery.addListener(onMediaChange);
-        }
-
-        refreshHomeSidebarPin = update;
-        update();
-
-        homeSidebarPinCleanup = () => {
-            window.removeEventListener('scroll', onScroll);
-            window.removeEventListener('resize', onResize);
-            if (typeof desktopQuery.removeEventListener === 'function') {
-                desktopQuery.removeEventListener('change', onMediaChange);
-            } else {
-                desktopQuery.removeListener(onMediaChange);
-            }
-            sidebar.style.transform = '';
-        };
+        if (!sidebar) return;
+        sidebar.style.transform = '';
+        refreshHomeSidebarPin = () => { sidebar.style.transform = ''; };
+        homeSidebarPinCleanup = () => { sidebar.style.transform = ''; };
     }
 
     function setupSectionNavigation(navSelector) {
@@ -327,7 +420,7 @@
         });
 
         const updateFromScroll = () => {
-            const anchorOffset = Math.max(120, Math.min(200, window.innerHeight * 0.18));
+            const anchorOffset = Math.max(180, Math.min(240, window.innerHeight * 0.2));
             const scrollMarker = window.scrollY + anchorOffset;
             const nearBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 40;
             const orderedEntries = entries
@@ -395,6 +488,31 @@
         update();
     }
 
+    function restoreInitialHashPosition() {
+        const hash = decodeURIComponent(window.location.hash || '');
+        if (!hash || hash === '#toc') return;
+        const target = document.querySelector(hash);
+        if (!target) return;
+
+        const restore = () => {
+            window.requestAnimationFrame(() => {
+                window.requestAnimationFrame(() => target.scrollIntoView({ block: 'start' }));
+            });
+        };
+
+        if (document.readyState === 'complete') {
+            restore();
+        } else {
+            window.addEventListener('load', restore, { once: true });
+        }
+
+        Array.from(document.images)
+            .filter((image) => !image.complete && (image.compareDocumentPosition(target) & Node.DOCUMENT_POSITION_FOLLOWING))
+            .forEach((image) => image.addEventListener('load', restore, { once: true }));
+        window.setTimeout(restore, 300);
+        window.setTimeout(restore, 1000);
+    }
+
     // Language switch
     function setLang(lang) {
         currentLang = lang;
@@ -405,6 +523,7 @@
         applyTranslations(lang);
         buildTOC(lang);
         buildHomeNav(lang);
+        setupHomeTreeInteractions();
         resetSectionNavigation();
 
         const page = document.body.dataset.page || 'home';
@@ -984,4 +1103,5 @@
     setupUseCasesPage();
     setupHomeSidebarPin();
     setupReadingProgress();
+    restoreInitialHashPosition();
 })();
