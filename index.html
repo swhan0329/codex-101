@@ -1200,12 +1200,16 @@ then verify the page again and attach the screenshot result.</code></pre>
                         <h4 data-i18n="s7_pb_thread_t">Thread automations</h4>
                         <p data-i18n="s7_pb_thread_d">같은 대화 문맥을 유지한 채 주기적으로 다시 깨워야 하는 작업에 씁니다. 긴 실행 상태 확인, PR 댓글 재점검, Slack/GitHub 폴링처럼 “이전 대화의 맥락”이 중요한 경우에 project automation보다 thread automation이 맞습니다. 현재 문서 기준으로 thread automation은 분 단위 간격이나 일/주간 스케줄에 잘 맞습니다.</p>
                     </div>
+                    <div class="tip-card" id="s7-share-snapshot">
+                        <h4 data-i18n="s7_pb_share_t">Read-only thread snapshot</h4>
+                        <p data-i18n="s7_pb_share_d">macOS 데스크톱 앱에서 로컬 Codex thread를 읽기 전용 링크로 공유할 수 있습니다. Share 또는 `/share`에서 대상 범위를 정하고 Copy link를 누른 뒤, 링크를 보내기 전에 실제 공유 화면을 다시 확인하세요. 스냅샷에는 메시지, reasoning summary, 이미지, 파일 경로·diff가 남을 수 있고, 이후 대화는 갱신되지 않습니다.</p>
+                    </div>
                     <div class="tip-card" id="s7-plugins">
                         <h4 data-i18n="s7_pb_plugin_t">Plugins</h4>
                         <p data-i18n="s7_pb_plugin_d">skills, app integrations, MCP server를 묶어 배포하는 단위입니다. 반복 프롬프트가 안정화된 뒤 팀에 공유할 때 plugin으로 올리고, 설치 후에는 작업 설명만 하거나 `@plugin`으로 특정 workflow를 직접 호출하는 방식이 좋습니다.</p>
                     </div>
                 </div>
-                <p class="command-refs" data-i18n-html="s7_refs">출처: <a href="https://developers.openai.com/codex/app" target="_blank">Codex app</a> · <a href="https://developers.openai.com/codex/app/features" target="_blank">App features</a> · <a href="https://developers.openai.com/codex/app/browser" target="_blank">In-app browser</a> · <a href="https://developers.openai.com/codex/app/automations" target="_blank">App automations</a> · <a href="https://openai.com/index/codex-for-almost-everything/" target="_blank">Codex for (almost) everything</a></p>
+                <p class="command-refs" data-i18n-html="s7_refs">출처: <a href="https://developers.openai.com/codex/app" target="_blank">Codex app</a> · <a href="https://developers.openai.com/codex/app/features" target="_blank">App features</a> · <a href="https://developers.openai.com/codex/app/browser" target="_blank">In-app browser</a> · <a href="https://developers.openai.com/codex/app/automations" target="_blank">App automations</a> · <a href="https://learn.chatgpt.com/docs/use-chatgpt#share-a-read-only-snapshot-of-a-codex-thread" target="_blank">읽기 전용 thread snapshot</a> · <a href="https://openai.com/index/codex-for-almost-everything/" target="_blank">Codex for (almost) everything</a></p>
             </section>
 
             <!-- Section 7 -->
@@ -2561,6 +2565,10 @@ codex --search "optimize with Next.js 15"
                         <strong data-i18n="overview_update_9_title">GitLab cloud beta 경로 추가</strong>
                         <span data-i18n="changelog_item_8">Codex cloud의 GitLab beta를 추가했습니다. GitLab project/environment를 연결해 issue·merge request의 `@codex`, 일회성·자동 review를 쓸 수 있지만, webhook 권한과 Self-Managed/Dedicated·큰 diff 제한을 먼저 확인해야 합니다.</span>
                     </li>
+                    <li>
+                        <strong data-i18n="overview_update_10_title">읽기 전용 thread snapshot 공유 흐름 추가</strong>
+                        <span data-i18n="changelog_item_9">macOS 데스크톱 앱에서 Share 또는 `/share`로 로컬 thread snapshot의 대상 범위를 정하고, Copy link 뒤 공유 화면을 다시 확인하는 절차를 추가했습니다.</span>
+                    </li>
                 </ol>
             </section>
 
@@ -2581,7 +2589,7 @@ codex --search "optimize with Next.js 15"
         </div>
     </footer>
 
-    <script src="i18n.js?v=20260823-hero-spotlight"></script>
+    <script src="i18n.js?v=20260824-thread-snapshot"></script>
     <script src="app.js?v=20260823-friendly-permission-labels"></script>
 </body>
 
