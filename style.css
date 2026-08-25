@@ -6000,7 +6000,7 @@ html:not([data-theme="light"]) body[data-page="home"] .footer {
 
 html:not([data-theme="light"]) body[data-page="home"] .hero-badge,
 html:not([data-theme="light"]) body[data-page="home"] .hero-jump,
-html:not([data-theme="light"]) body[data-page="home"] .hero-rail-card,
+html:not([data-theme="light"]) body[data-page="home"] .hero-rail-card:not(.hero-rail-intro),
 html:not([data-theme="light"]) body[data-page="home"] .hero-path-card,
 html:not([data-theme="light"]) body[data-page="home"] .hero-signal {
     background: var(--bg-card);
