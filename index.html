@@ -51,7 +51,7 @@
                     <p class="hero-badge">
                         <span data-i18n="hero_badge_prefix">공식 문서 기반 · 실무 실행 가이드</span>
                         <span aria-hidden="true"> · </span>
-                        <span class="live-date" data-date-format="long">2026년 8월 23일</span>
+                        <span class="live-date" data-date-format="long">2026년 8월 26일</span>
                     </p>
                     <h1 class="hero-title" data-i18n="hero_title"><span class="hero-title-lead">OpenAI Codex를</span><span class="hero-title-focus">실무에 바로 붙이는 가이드</span></h1>
                     <p class="hero-sub" data-i18n="hero_sub"><span class="hero-sub-lead">CLI부터 데스크톱 앱·IDE·Web·Mobile까지, 한 흐름으로.</span><span class="hero-sub-detail">설치·권한·Git·자동화·프롬프팅을 최신 공식 문서 기준의 실행 순서로 정리했습니다.</span></p>
@@ -1875,6 +1875,12 @@ codex resume &lt;ID&gt;       <span class="c"># 특정 세션</span>
                                 <td data-i18n="s16_route_github_best">새 PR 자동 리뷰</td>
                                 <td data-i18n="s16_route_github_watch">내 컴퓨터의 미커밋 파일은 볼 수 없음</td>
                             </tr>
+                            <tr>
+                                <td><strong data-i18n="s16_route_event">Event-triggered task</strong></td>
+                                <td data-i18n="s16_route_event_runs">ChatGPT 웹·모바일</td>
+                                <td data-i18n="s16_route_event_best">Gmail·Slack·GitHub 이벤트 후속 작업</td>
+                                <td data-i18n="s16_route_event_watch">앱 연결·권한이 필요하며 시간 기반 일정과 함께 쓸 수 없음</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -1947,7 +1953,7 @@ codex exec --sandbox workspace-write "Run the documented checks and report the d
                     <strong data-i18n="s16_callout_t">skill이 방법을, automation이 일정을 정의합니다</strong>
                     <p data-i18n="s16_callout_d">아직 사람의 조향이 많이 필요한 흐름이면 먼저 skill로 묶고, 예측 가능해진 뒤 자동화로 옮기세요. 너무 이른 자동화는 품질 편차만 키웁니다.</p>
                 </div>
-                <p class="command-refs" data-i18n-html="s16_refs">출처: <a href="https://learn.chatgpt.com/docs/automations" target="_blank">Scheduled tasks</a> · <a href="https://learn.chatgpt.com/docs/environments/local-environment" target="_blank">Local environments</a> · <a href="https://learn.chatgpt.com/docs/environments/git-worktrees" target="_blank">Worktrees</a> · <a href="https://learn.chatgpt.com/docs/non-interactive-mode" target="_blank">codex exec</a> · <a href="https://learn.chatgpt.com/docs/code-review" target="_blank">Code review</a> · <a href="https://learn.chatgpt.com/docs/permissions" target="_blank">Permissions</a></p>
+                <p class="command-refs" data-i18n-html="s16_refs">출처: <a href="https://learn.chatgpt.com/docs/automations#trigger-tasks-from-app-events" target="_blank">이벤트 기반 Scheduled tasks</a> · <a href="https://learn.chatgpt.com/docs/automations" target="_blank">Scheduled tasks</a> · <a href="https://learn.chatgpt.com/docs/environments/local-environment" target="_blank">Local environments</a> · <a href="https://learn.chatgpt.com/docs/environments/git-worktrees" target="_blank">Worktrees</a> · <a href="https://learn.chatgpt.com/docs/non-interactive-mode" target="_blank">codex exec</a> · <a href="https://learn.chatgpt.com/docs/code-review" target="_blank">Code review</a> · <a href="https://learn.chatgpt.com/docs/permissions" target="_blank">Permissions</a></p>
             </section>
 
             <!-- Section 16 -->
@@ -2569,6 +2575,10 @@ codex --search "optimize with Next.js 15"
                         <strong data-i18n="overview_update_10_title">읽기 전용 thread snapshot 공유 흐름 추가</strong>
                         <span data-i18n="changelog_item_9">macOS 데스크톱 앱에서 Share 또는 `/share`로 로컬 thread snapshot의 대상 범위를 정하고, Copy link 뒤 공유 화면을 다시 확인하는 절차를 추가했습니다.</span>
                     </li>
+                    <li>
+                        <strong data-i18n="overview_update_11_title">이벤트 기반 Scheduled task 경계 추가</strong>
+                        <span data-i18n="changelog_item_10">Gmail·Slack·GitHub 이벤트로 시작하는 Scheduled task는 eligible 플랜의 ChatGPT 웹·모바일 전용입니다. 로컬 데스크톱 프로젝트에는 쓰지 않으며, 앱 연결·권한이 필요하고 시간 기반 schedule과 함께 쓸 수 없습니다.</span>
+                    </li>
                 </ol>
             </section>
 
@@ -2589,7 +2599,7 @@ codex --search "optimize with Next.js 15"
         </div>
     </footer>
 
-    <script src="i18n.js?v=20260825-messages-macos"></script>
+    <script src="i18n.js?v=20260826-event-triggered-tasks"></script>
     <script src="app.js?v=20260823-friendly-permission-labels"></script>
 </body>
 

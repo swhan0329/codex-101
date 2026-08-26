@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 8월 21일</strong><br/>
+  <strong>최종 업데이트: 2026년 8월 26일</strong><br/>
   라이브 사이트는 보는 사람의 당일 날짜를 자동으로 표시하며, 최신 Codex 모델 가이드를 공식 문서 기준으로 반영합니다.
 </p>
 
@@ -41,6 +41,7 @@
 
 ### 일일 MCP 검증 스냅샷 (2026-08-22)
 
+- 8월 25일 event-triggered Scheduled task 경계를 추가했습니다. eligible 플랜의 ChatGPT 웹·모바일에서는 Gmail·Slack·GitHub 이벤트로 task를 시작할 수 있지만, 로컬 데스크톱 프로젝트에서 실행하는 방식은 아닙니다. 먼저 앱을 연결·승인하고, 이벤트 trigger와 시간 기반 schedule은 함께 쓰지 마세요.
 - 새 공식 문서 허브인 `learn.chatgpt.com/docs`의 정보 구조를 기준으로 핵심 링크와 설명을 다시 정리했습니다. 권한 장에서는 새 permission profile과 예전 `sandbox_mode`를 한 설정에서 섞던 예시를 제거하고 두 방식을 분리했습니다.
 - 16장을 GitHub-only 자동 리뷰 중심에서 로컬 Scheduled task 중심으로 바꿨습니다. Local/worktree/`codex exec`/GitHub auto-review를 비교하고, 로컬 갱신 → 검증 → 관련 파일만 commit → 안전한 push까지 실행하는 복사형 프롬프트와 중단 조건을 추가했습니다.
 - `codex/models`를 2026년 8월 19일 가장 먼저 다시 확인했고, 추천 모델은 계속 GPT-5.6 family입니다. 기본 Power setting은 `gpt-5.6-sol` medium reasoning이고, Sol은 복잡한 coding/computer use/research/security, Terra는 일상 작업, Luna는 빠르고 반복적인 고빈도 작업에 맞습니다. `gpt-5.5`는 previous-generation frontier model로 남고, `gpt-5.2`와 `gpt-5.3-codex`는 ChatGPT 인증 Codex 기준 deprecated로 유지됩니다. `gpt-5.4`와 `gpt-5.4-mini`는 ChatGPT 로그인 Codex에서 2026년 8월 31일 은퇴하므로 각각 `gpt-5.6-terra`, `gpt-5.6-luna`로 옮겨야 합니다. 모델 선택기에 `Daybreak Blue`가 보이면 일반 추천 모델 교체가 아니라, 별도 승인된 defensive cybersecurity 작업용 접근 경로로 읽어야 합니다.
