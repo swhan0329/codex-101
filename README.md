@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: August 26, 2026</strong><br/>
+  <strong>Last updated: August 27, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
@@ -31,6 +31,7 @@ The guide is written from the official ChatGPT/Codex documentation first, then m
 
 ## August 22, 2026 Refresh Notes
 
+- Added the August 25 browser boundary. In the ChatGPT desktop app, set up the browser extension from **Settings &gt; Computer Use** for Chrome, Edge, Brave, Opera, or Vivaldi; all support tab mentions and browser control, while Opera has no side chat. Keep this separate from Site tools (WebMCP): a site's tools run in the in-app browser only with GPT-5.6 Sol or Terra on the latest desktop app, not Luna or Enterprise/Edu workspaces.
 - Added the August 25 event-triggered scheduled-task boundary. Gmail, Slack, and GitHub events can trigger tasks on ChatGPT web and mobile for eligible plans; they are not a way to run against a local desktop project. Connect and authorize the app first, and do not combine an event trigger with a time-based schedule.
 - Rebased the practical guide on the new `learn.chatgpt.com/docs` information architecture. The permissions chapter now separates permission profiles from legacy `sandbox_mode` configuration instead of showing both in one invalid example.
 - Reworked section 16 around local scheduled tasks first. It now compares Local, worktree, `codex exec`, and GitHub auto-review routes, and includes a copy-ready prompt for safe local refresh → validation → scoped commit → push with explicit stop rules.
