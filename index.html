@@ -2535,7 +2535,7 @@ codex --search "optimize with Next.js 15"
                     </div>
                     <p class="overview-fact-date">
                         <span data-i18n="overview_fact_date_prefix">업데이트 기준일</span>
-                        <span class="live-date" data-date-format="long">2026년 8월 27일</span>
+                        <span class="live-date" data-date-format="long">2026년 9월 2일</span>
                     </p>
                 </div>
                 <ol class="changelog-list" aria-label="Today update summary">
@@ -2548,8 +2548,8 @@ codex --search "optimize with Next.js 15"
                         <span data-i18n="changelog_item_2">Max/Ultra 설명을 현재 모델·subagents 문서에 맞췄습니다. Max는 단일 어려운 작업, Ultra는 subagents로 나눌 수 있는 큰 작업에 쓰며, Ultra가 보이지 않으면 `Settings > Configuration`의 `Ultra in model picker slider`를 확인합니다.</span>
                     </li>
                     <li>
-                        <strong data-i18n="overview_update_3_title">Quickstart·IDE·Mobile 경로 정리</strong>
-                        <span data-i18n="changelog_item_3">최신 Codex changelog를 대조했습니다. CLI 0.148.0은 `/export` Markdown 내보내기, `codex exec fork`, TUI resume picker의 archive/restore, startup 중 prompt draft, eligible workspace의 `/status` 비용·credit 표시, built-in Amazon Bedrock Runtime routing, 비동기 및 MCP tool 호출 Hooks를 추가했습니다. Model switch, resume cwd/approval policy, MCP OAuth recovery, Linux/Windows sandbox fail-closed 수정도 반영했습니다.</span>
+                        <strong data-i18n="overview_update_3_title">CLI·MCP 운영 기준 갱신</strong>
+                        <span data-i18n="changelog_item_3">최신 Codex changelog를 대조했습니다. CLI 0.152.0은 terminal UI와 `codex exec`에 credential-refresh 진행 상태를 표시하고, package-style MCP server 이름과 개별 MCP tool의 `output_token_limit` 설정을 지원합니다. planning은 이제 기본 off이므로 그 workflow가 필요할 때만 `tools.update_plan.enabled = true`로 명시적으로 켜세요. CLI 0.152.1은 Node REPL policy를 다루는 Guardian approval review를 수정했습니다.</span>
                     </li>
                     <li>
                         <strong data-i18n="overview_update_4_title">Enterprise 발표 맥락 분리</strong>
@@ -2603,7 +2603,7 @@ codex --search "optimize with Next.js 15"
         </div>
     </footer>
 
-    <script src="i18n.js?v=20260901-model-retirement"></script>
+    <script src="i18n.js?v=20260902-cli-0152"></script>
     <script src="app.js?v=20260823-friendly-permission-labels"></script>
 </body>
 

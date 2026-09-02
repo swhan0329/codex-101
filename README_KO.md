@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 8월 27일</strong><br/>
+  <strong>최종 업데이트: 2026년 9월 2일</strong><br/>
   라이브 사이트는 보는 사람의 당일 날짜를 자동으로 표시하며, 최신 Codex 모델 가이드를 공식 문서 기준으로 반영합니다.
 </p>
 
@@ -49,7 +49,7 @@
 - 현재 모델 문서와 subagents 문서를 대조해 Max/Ultra 설명을 더 정확히 맞췄습니다. `Max`는 단일 어려운 작업에 더 많은 reasoning 시간을 주고, `Ultra`는 나눌 수 있는 큰 작업을 subagents로 병렬 처리합니다. desktop app slider에 Ultra가 보이지 않으면 `Settings > Configuration`에서 **Ultra in model picker slider**를 켜야 할 수 있습니다.
 - Quickstart, Pricing, Speed/Fast mode, Best practices, Config, Windows/Windows App/IDE/App features/App Automations/Cloud, Remote connections, Integrations, MCP, Hooks, Plugins, Skills, Sites, OpenAI API latest-model/changelog와 Platform/API 문서를 다시 확인했습니다. Fast mode는 GPT-5.6과 GPT-5.5를 지원하며, API-key workflow는 API token pricing을 따릅니다. OpenAI API changelog는 GPT-5.6 Sol/Terra/Luna Fast mode가 272K token을 넘는 long-context request도 지원한다고 설명하므로, 이 내용은 Codex model picker 동작이 아니라 Platform/API 문맥으로 분리했습니다. ChatGPT 로그인 Codex의 저장 설정·custom agent·scheduled task에는 `gpt-5.4` 계열 대신 각각 `gpt-5.6-terra`, `gpt-5.6-luna`를 사용하세요.
 - 2026년 8월 10일 Business Premium 발표를 plan capacity 메모로 추가했습니다. 발표문은 ChatGPT Business Premium seat가 Standard 대비 5배 사용량, 5시간 사용 제한 없음, 주간 reset, 월 $125 또는 연간 월 $100, Standard/Premium 혼합 seat 운영, 8월 20일까지의 waitlist/promotion을 제공한다고 설명합니다. 하지만 현재 Codex Pricing 문서는 아직 기본 Business 사용량 표를 보여주므로, 문서에서는 발표 상태와 현재 가격표 상태를 섞어 단정하지 않고 분리했습니다.
-- What's new와 현재 [Codex changelog](https://learn.chatgpt.com/docs/changelog)를 다시 확인했습니다. CLI 0.150.0은 terminal에서 다른 Codex task를 `@`로 참조하는 기능, 전체 응답·code block·blockquote를 고르는 `/copy` picker, 이름 없는 task의 설명형 제목과 `/rename` 제안, terminal link label, permission mode shortcut binding, `Interrupt` hook을 추가했습니다. 보안 수정도 운영 경계로 반영합니다. untrusted project는 project-level `AGENTS.md`를 제공할 수 없고, permission을 바꿔도 managed deny-read rule은 계속 적용됩니다. CLI 0.150.1은 retained image가 remote compaction token budget에 기본으로 포함되도록 고쳤습니다.
+- What's new와 현재 [Codex changelog](https://learn.chatgpt.com/docs/changelog)를 다시 확인했습니다. CLI 0.152.0은 terminal UI와 `codex exec`에 credential-refresh 진행 상태를 표시하고, package-style MCP server 이름과 개별 MCP tool의 `output_token_limit` 설정을 지원합니다. planning은 이제 기본 off이므로 그 workflow가 필요할 때만 `tools.update_plan.enabled = true`로 명시적으로 켜세요. CLI 0.152.1은 Node REPL policy를 다루는 Guardian approval review를 수정했습니다.
 - 8월 17–21일 업데이트의 Apple Messages 플러그인 경계를 추가했습니다. macOS용 ChatGPT desktop app의 Codex 또는 ChatGPT Work에서만 실행하며, 요청된 macOS 권한을 준 뒤 메시지와 수신자를 검토하고 전송을 승인해야 합니다. Full access에서는 필요한 확인이 막힐 수 있으므로 전송 작업은 **Ask for approval** 또는 **Approve for me**를 유지하세요.
 - macOS 데스크톱 앱의 읽기 전용 로컬 thread snapshot 흐름을 추가했습니다. **Share** 또는 `/share`에서 대상 범위를 정하고 **Copy link**를 눌러 스냅샷을 게시한 뒤, 링크를 보내기 전에 공유 화면을 다시 확인하세요. 스냅샷에는 메시지, reasoning summary, 이미지, 파일 경로·diff가 남을 수 있으며 이후 대화는 링크에 갱신되지 않습니다.
 - 8월 19일 GitLab cloud beta 경로를 추가했습니다. 모든 ChatGPT 플랜에서 GitLab project를 연결하고 environment를 만든 뒤 issue·merge request의 `@codex`, 일회성·자동 merge request review를 쓸 수 있습니다. webhook 설정 권한이 필요하며, Self-Managed/Dedicated는 workspace admin 설정과 GitLab 19.0 이상이 필요합니다. GitLab이 접었거나 너무 큰 diff를 생략하면 Codex는 review를 끝낼 수 없습니다.
