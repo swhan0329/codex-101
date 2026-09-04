@@ -41,6 +41,7 @@
 
 ### 일일 MCP 검증 스냅샷 (2026-08-22)
 
+- 9월 1일 iOS 원격 작업 업데이트를 추가했습니다. iOS 1.2026.237에서는 Windows·Linux를 포함한 연결 host 간 첨부를 이어 받고, Priority에서 실행 중·읽지 않은·응답 대기 task를 먼저 보며, queued prompt는 편집 가능한 상태로 연결 host와 동기화됩니다. 이는 원격 후속 작업을 보강하지만 프로젝트 파일·credential·permission·plugin·browser setup·Computer Use·local tool이 어느 host에 남는지는 바꾸지 않습니다.
 - 8월 25일 브라우저 지원 범위를 추가했습니다. ChatGPT desktop app의 **Settings &gt; Computer Use**에서 Chrome·Edge·Brave·Opera·Vivaldi용 브라우저 확장을 설정할 수 있고, 모두 tab mention과 browser control을 지원하지만 Opera에는 side chat이 없습니다. 이는 Site tools(WebMCP)와 구분하세요. 최신 desktop app의 In-app browser에서 사이트가 제공하는 도구를 쓰는 경로이며 GPT-5.6 Sol·Terra에서만 제공되고 Luna 및 Enterprise/Edu workspace에서는 쓸 수 없습니다.
 - 8월 25일 event-triggered Scheduled task 경계를 추가했습니다. eligible 플랜의 ChatGPT 웹·모바일에서는 Gmail·Slack·GitHub 이벤트로 task를 시작할 수 있지만, 로컬 데스크톱 프로젝트에서 실행하는 방식은 아닙니다. 먼저 앱을 연결·승인하고, 이벤트 trigger와 시간 기반 schedule은 함께 쓰지 마세요.
 - 새 공식 문서 허브인 `learn.chatgpt.com/docs`의 정보 구조를 기준으로 핵심 링크와 설명을 다시 정리했습니다. 권한 장에서는 새 permission profile과 예전 `sandbox_mode`를 한 설정에서 섞던 예시를 제거하고 두 방식을 분리했습니다.

@@ -31,6 +31,7 @@ The guide is written from the official ChatGPT/Codex documentation first, then m
 
 ## August 22, 2026 Refresh Notes
 
+- Added the September 1 iOS remote-work update. In iOS 1.2026.237, attachments continue across connected hosts, including Windows and Linux; Priority brings running, unread, and response-needed tasks forward; queued prompts remain editable and sync with the connected host. This improves remote follow-through, but it does not change which host retains the project's files, credentials, permissions, plugins, browser setup, Computer Use, or local tools.
 - Added the August 25 browser boundary. In the ChatGPT desktop app, set up the browser extension from **Settings &gt; Computer Use** for Chrome, Edge, Brave, Opera, or Vivaldi; all support tab mentions and browser control, while Opera has no side chat. Keep this separate from Site tools (WebMCP): a site's tools run in the in-app browser only with GPT-5.6 Sol or Terra on the latest desktop app, not Luna or Enterprise/Edu workspaces.
 - Added the August 25 event-triggered scheduled-task boundary. Gmail, Slack, and GitHub events can trigger tasks on ChatGPT web and mobile for eligible plans; they are not a way to run against a local desktop project. Connect and authorize the app first, and do not combine an event trigger with a time-based schedule.
 - Rebased the practical guide on the new `learn.chatgpt.com/docs` information architecture. The permissions chapter now separates permission profiles from legacy `sandbox_mode` configuration instead of showing both in one invalid example.
