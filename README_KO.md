@@ -10,8 +10,8 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 9월 2일</strong><br/>
-  라이브 사이트는 보는 사람의 당일 날짜를 자동으로 표시하며, 최신 Codex 모델 가이드를 공식 문서 기준으로 반영합니다.
+  <strong>최종 업데이트: 2026년 9월 6일</strong><br/>
+  페이지의 실제 수정일을 표시하며, 모델 안내에는 공식 출처와 확인 범위를 함께 제공합니다.
 </p>
 
 <p align="center">
@@ -20,6 +20,14 @@
 </p>
 
 ---
+
+## 2026년 9월 6일 — Astra와 실무 활용 업데이트
+
+- [GPT-6 Astra](https://learn.chatgpt.com/docs/models), CLI 선택기 문제 해결, 실험적 맥락 관리의 제공 범위, ChatGPT 크레딧/API 요율 구분을 추가했습니다.
+- 직접 확인한 [Dominik Kundel](https://x.com/dkundel/status/2095972046014673156)과 [VB Srivastav](https://x.com/reach_vb/status/2096271854193271229)의 X 원문, 공식 [게임 제작](https://developers.openai.com/blog/how-to-build-games-with-astra)·[Runme 업무 기록](https://developers.openai.com/blog/automating-repetitive-work-at-openai-with-codex) 가이드를 반영했습니다. 개인 사례는 일반적인 성능 보장과 구분합니다.
+- 업무에 맞게 바꿀 프롬프트와 지침 충돌 확인법을 추가했습니다. 다른 사람의 LinkedIn 글을 Romain에게 귀속한 카드를 제거했습니다.
+- [Gabriel Chua](https://x.com/gabrielchua/status/2096097151524978891)의 실험적 맥락 관리 글과 [Eric Provencher](https://x.com/pvncher/status/2096220470429319275)의 Astra API 가이드 추천 글도 직접 확인해 연결했습니다.
+- 방문일을 표시하던 날짜를 실제 페이지 수정일로 고쳤습니다. 이전 발표 기록은 별도로 유지하며 활용 사례 전체를 이번에 재감사했다고 표시하지 않습니다.
 
 ## 📖 소개
 

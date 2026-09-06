@@ -4,7 +4,7 @@ order: 20
 tier: changelog
 title: "Changelog / 최신 검증"
 subtitle: "근거와 변경 기록은 여기 모읍니다."
-verifiedAt: 2026-06-08
+verifiedAt: 2026-09-06
 ---
 
 # Changelog / 최신 검증
@@ -12,6 +12,14 @@ verifiedAt: 2026-06-08
 근거와 변경 기록은 여기 모읍니다.
 
 상단을 가볍게 만들고, 공식 문서 확인 기록은 마지막 섹션에서 관리합니다.
+
+## September 6, 2026 — Astra and practical workflows
+
+- Added [GPT-6 Astra](https://learn.chatgpt.com/docs/models), CLI picker troubleshooting, experimental context-management eligibility, and separate ChatGPT-credit/API rates.
+- Added directly reviewed X posts by [Dominik Kundel](https://x.com/dkundel/status/2095972046014673156) and [VB Srivastav](https://x.com/reach_vb/status/2096271854193271229), plus official [game-building](https://developers.openai.com/blog/how-to-build-games-with-astra) and [Runme workflow](https://developers.openai.com/blog/automating-repetitive-work-at-openai-with-codex) guides. Personal demonstrations are not universal performance guarantees.
+- Added an adaptable work prompt and advice for investigating conflicting instructions. Removed a third-party LinkedIn card incorrectly attributed to Romain.
+- Also linked directly reviewed posts by [Gabriel Chua](https://x.com/gabrielchua/status/2096097151524978891) on experimental context management and [Eric Provencher](https://x.com/pvncher/status/2096220470429319275) on the Astra API guide.
+- Revision dates now reflect a saved page date instead of the visitor's current date. Earlier release notes remain historical; the use-case catalog was not re-audited in this refresh.
 
 ## June 8, 2026 Verification Notes
 

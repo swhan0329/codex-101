@@ -104,15 +104,16 @@
 
     function renderLiveDates(lang) {
         const locale = lang === 'ko' ? 'ko-KR' : 'en-US';
+        const updated = document.body.dataset.updated;
+        if (!updated) return;
+        const revisionDate = new Date(`${updated}T00:00:00Z`);
         const formatter = new Intl.DateTimeFormat(locale, {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric',
+            year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC',
         });
-        const today = formatter.format(new Date());
+        const dateLabel = formatter.format(revisionDate);
 
         document.querySelectorAll('.live-date').forEach((el) => {
-            el.textContent = today;
+            el.textContent = dateLabel;
         });
     }
 

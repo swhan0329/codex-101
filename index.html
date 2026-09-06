@@ -17,10 +17,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=20260825-launch-paths-header" />
+    <link rel="stylesheet" href="style.css?v=20260906-astra-facts" />
 </head>
 
-<body data-page="home">
+<body data-page="home" data-updated="2026-09-06">
     <!-- Language Toggle -->
     <nav class="top-bar">
         <div class="top-bar-inner">
@@ -51,7 +51,7 @@
                     <p class="hero-badge">
                         <span data-i18n="hero_badge_prefix">공식 문서 기반 · 실무 실행 가이드</span>
                         <span aria-hidden="true"> · </span>
-                        <span class="live-date" data-date-format="long">2026년 8월 26일</span>
+                        <span class="live-date" data-date-format="long">2026년 9월 6일</span>
                     </p>
                     <h1 class="hero-title" data-i18n="hero_title"><span class="hero-title-lead">OpenAI Codex를</span><span class="hero-title-focus">실무에 바로 붙이는 가이드</span></h1>
                     <p class="hero-sub" data-i18n="hero_sub"><span class="hero-sub-lead">CLI부터 데스크톱 앱·IDE·Web·Mobile까지, 한 흐름으로.</span><span class="hero-sub-detail">설치·권한·Git·자동화·프롬프팅을 최신 공식 문서 기준의 실행 순서로 정리했습니다.</span></p>
@@ -449,11 +449,12 @@
 
                 <h4 data-i18n="s3_rec_title">⭐ 추천 모델</h4>
                 <div class="model-grid">
+<div class="model-card"><div class="model-banner">gpt-6-astra</div><div class="model-body"><p class="model-desc" data-i18n="astra_desc">여러 도구를 쓰는 어려운 코딩·앱·리서치 작업용 모델입니다. 공식 추천 모델 목록에서 확인할 수 있습니다.</p><div class="model-cmd">codex -m gpt-6-astra</div><p data-i18n="astra_access">계정에서 제공될 때 선택하세요. 공개 발표와 내 계정의 실제 사용 가능 여부는 다를 수 있습니다.</p><p class="command-refs"><a href="https://learn.chatgpt.com/docs/models" target="_blank" rel="noopener noreferrer">Models</a></p></div></div>
                     <!-- GPT-5.6 Sol -->
                     <div class="model-card">
                         <div class="model-banner">gpt-5.6-sol</div>
                         <div class="model-body">
-                            <p class="model-desc" data-i18n="m0_f">복잡한 코딩, computer use, 지식 작업, 리서치 워크플로를 위한 최신 프론티어 모델. ChatGPT로 로그인한 Codex에서 최우선 추천 모델입니다.</p>
+                            <p class="model-desc" data-i18n="m0_f">GPT-5.6 계열에서 복잡한 코딩·리서치·앱 작업을 맡기는 모델입니다. Astra와 별도로 선택할 수 있습니다.</p>
                             <div class="model-cmd">codex -m gpt-5.6-sol</div>
                             <div class="model-features">
                                 <div class="model-feat-row"><span class="model-feat-label"
@@ -574,12 +575,11 @@
                     <div class="model-guidance-head">
                         <div>
                             <span class="model-guidance-kicker" data-i18n="s3_guide_kicker">공식 가이드의 추천 시작점</span>
-                            <h4 data-i18n="s3_guide_title">GPT-5.6 family에서 시작하세요</h4>
+                            <h4 data-i18n="s3_guide_title">Astra · Sol · Terra · Luna, 작업에 맞게 선택</h4>
                         </div>
                         <div class="model-guidance-default">
-                            <span data-i18n="s3_guide_default">기본 Power</span>
-                            <code>gpt-5.6-sol</code>
-                            <strong>Medium</strong>
+                            <span data-i18n="s3_guide_default">내 계정의 Power부터 확인</span>
+                            <a href="https://learn.chatgpt.com/docs/models" target="_blank" rel="noopener noreferrer">Astra · Sol · Terra · Luna</a>
                         </div>
                     </div>
 
@@ -587,7 +587,7 @@
                         <article class="model-choice-card model-choice-sol">
                             <code>Sol</code>
                             <strong data-i18n="s3_guide_sol_title">복잡하고 중요한 작업</strong>
-                            <span data-i18n="s3_guide_sol_desc">품질과 깊이가 가장 중요한 기본 선택</span>
+                            <span data-i18n="s3_guide_sol_desc">Sol: 복잡한 구현과 깊이 있는 분석</span>
                         </article>
                         <article class="model-choice-card model-choice-terra">
                             <code>Terra</code>
@@ -618,8 +618,8 @@
                         <section class="model-guidance-block">
                             <span class="model-guidance-label" data-i18n="s3_guide_cost">요금·수명 주기</span>
                             <ul class="model-guidance-list">
-                                <li data-i18n="s3_guide_plans">Plus·Pro·Business·API Key 사용량 표에 GPT-5.6 family 포함</li>
-                                <li data-i18n="s3_guide_fast">Fast mode: GPT-5.6/5.5는 2.5배, GPT-5.4는 2배 ChatGPT credit</li>
+                                <li data-i18n="s3_guide_plans">Astra 제공 여부와 사용량은 플랜·로그인 방식·배포 단계에 따라 확인</li>
+                                <li data-i18n="s3_guide_fast">Fast는 사용량이 늘어나는 속도 옵션입니다. 모델별 현재 요율을 확인하세요.</li>
                                 <li data-i18n="s3_guide_api">API-key Codex는 API token pricing 적용</li>
                                 <li data-i18n="s3_guide_retire">GPT-5.4·GPT-5.4 mini는 ChatGPT 로그인 Codex에서 2026년 8월 31일 은퇴</li>
                             </ul>
@@ -632,12 +632,14 @@
                             <span data-i18n="s3_guide_daybreak">승인된 defender 계정의 defensive cybersecurity 작업용 선택지입니다. 일반 코딩 기본값으로 사용하지 않습니다.</span>
                         </div>
                         <div class="model-guidance-alert">
-                            <strong data-i18n="s3_guide_scope_title">2026년 8월 6일 발표 범위</strong>
-                            <span data-i18n="s3_guide_scope">ChatGPT Chat 업데이트이며, Work/Codex용 Sol은 이번 릴리스에서 변경되지 않았습니다.</span>
+                            <strong data-i18n="s3_guide_scope_title">Astra가 선택기에 없다면</strong>
+                            <span data-i18n="s3_guide_scope">앱을 업데이트하고 계정·워크스페이스의 모델 제공 범위를 확인하세요. CLI 0.153.4는 Astra 선택기 표시를 수정했습니다. 명시적으로 저장한 model 설정도 확인하세요.</span>
                         </div>
                     </div>
                 </div>
 
+<h4 data-i18n="astra_start_title">Astra로 첫 작업 시작하기</h4><p data-i18n="astra_start">앱의 모델 선택기에서 Astra를 고르거나 CLI에서 아래 명령으로 시작하세요. 기존 작업과 같은 입력·완료 기준으로 비교하세요.</p><div class="model-cmd">codex -m gpt-6-astra</div><details class="model-guidance-card"><summary data-i18n="astra_context_title">긴 작업의 맥락 유지 · 실험 기능</summary><p data-i18n="astra_context">지원 클라이언트의 ChatGPT Plus/Pro 로그인에서만 출시 시점에 사용 가능합니다. 기본은 꺼짐이며 Business·Enterprise·API 키는 출시 시점에 제외됩니다. config.toml에 아래 설정 후 새 작업을 시작하세요.</p><pre><code>features.context_management.experimental_mode = true</code></pre><p data-i18n="astra_context_detail">Astra가 작업의 이전 메시지·도구 결과를 검색하고 맥락 창 사이에 노트를 유지합니다. 무제한 기억을 보장하는 기능은 아닙니다.</p><p class="command-refs"><a href="https://learn.chatgpt.com/docs/models#experimental-context-management" target="_blank" rel="noopener noreferrer">Experimental context management</a></p></details>
+<h4 data-i18n="astra_cost_title">사용량 확인: ChatGPT 크레딧과 API는 별도</h4><p data-i18n="astra_cost">2026-09-06 공식 요금표: Astra는 100만 토큰당 입력 250·캐시 입력 25·출력 1,250 ChatGPT 크레딧입니다. Fast는 Standard 사용량의 2.5배입니다. API Standard는 입력 $10·출력 $50이며 캐시는 별도 요율, API Fast는 최대 2배 속도·2배 가격입니다. 월 구독료와 작업당 비용을 혼동하지 마세요.</p><p class="command-refs"><a href="https://learn.chatgpt.com/docs/pricing" target="_blank" rel="noopener noreferrer">ChatGPT credits</a> · <a href="https://openai.com/index/gpt-6-astra/#availability" target="_blank" rel="noopener noreferrer">Astra API pricing</a></p>
                 <h4 data-i18n="s3_alt_title">🔄 대안 모델</h4>
                 <div class="model-grid">
                     <!-- GPT-5.2 -->
@@ -689,7 +691,7 @@
                 <div class="callout">
                     <p data-i18n="s3_cfg_cloud">Codex 클라우드 작업의 기본 모델은 현재 변경할 수 없습니다.</p>
                 </div>
-                <p class="command-refs" data-i18n-html="s3_refs">출처: <a href="https://developers.openai.com/codex/models/" target="_blank">Codex models</a> · <a href="https://developers.openai.com/codex/pricing/" target="_blank">Codex pricing</a> · <a href="https://developers.openai.com/api/docs/models" target="_blank">OpenAI API Models</a> · <a href="https://developers.openai.com/api/docs/guides/latest-model" target="_blank">GPT-5.6 API guidance</a></p>
+                <p class="command-refs" data-i18n-html="s3_refs">출처: <a href="https://developers.openai.com/codex/models/" target="_blank">Codex models</a> · <a href="https://developers.openai.com/codex/pricing/" target="_blank">Codex pricing</a> · <a href="https://developers.openai.com/api/docs/models" target="_blank">OpenAI API Models</a> · <a href="https://developers.openai.com/api/docs/guides/latest-model" target="_blank">GPT-6 Astra API guidance</a></p>
             </section>
 
             <!-- Section 3 -->
@@ -746,7 +748,7 @@
                                     <tr>
                                         <td>Plus</td>
                                         <td>$20/mo</td>
-                                        <td data-i18n="s4_codex_plus">웹/CLI/IDE/iOS + 최신 모델 + 클라우드 리뷰/Slack + credits 확장</td>
+                                        <td data-i18n="s4_codex_plus">웹·CLI·IDE·모바일, 클라우드 리뷰와 크레딧. Astra 등 모델 접근은 현재 계정에서 확인</td>
                                     </tr>
                                     <tr>
                                         <td>Pro</td>
@@ -824,7 +826,7 @@
                             <ul class="model-guidance-list">
                                 <li data-i18n="s4_guide_table_plans">Plus · Pro 5x · Pro 20x · Business · API Key 표</li>
                                 <li data-i18n="s4_guide_five_hours">모델별 5시간 한도</li>
-                                <li data-i18n="s4_guide_models">GPT-5.6 Sol · Terra · Luna 사용량 범위</li>
+                                <li data-i18n="s4_guide_models">Astra · Sol · Terra · Luna 사용량 확인</li>
                             </ul>
                         </section>
 
@@ -843,7 +845,7 @@
 
                     <div class="model-guidance-alert plan-fast-alert">
                         <strong>Fast mode</strong>
-                        <span data-i18n="s4_guide_fast">GPT-5.6·GPT-5.5는 2.5배, GPT-5.4는 2배 ChatGPT credit을 사용합니다.</span>
+                        <span data-i18n="s4_guide_fast">Astra Fast는 Standard의 2.5배 ChatGPT 크레딧입니다. API Fast 가격 배수와는 별도입니다.</span>
                     </div>
                 </div>
 
@@ -1155,7 +1157,7 @@ then verify the page again and attach the screenshot result.</code></pre>
                     <div class="overview-visual-copy">
                         <p class="overview-action-kicker" data-i18n="computer_use_kicker">Computer use</p>
                         <h3 data-i18n="computer_use_title">Computer use를 하나의 기능 챕터로 이해하기</h3>
-                        <p data-i18n="computer_use_desc">현재 Codex changelog는 GPT-5.6으로 Computer Use가 더 빨라졌다고 설명합니다. 화면을 보고 다음 행동을 정하고, 클릭이나 입력을 실행하고, 바뀐 화면을 다시 확인하는 루프를 더 빠르게 돌리는 맥락으로 읽으면 됩니다.</p>
+                        <p data-i18n="computer_use_desc">Astra는 브라우저와 전문 앱을 오가며 작업하고 결과를 확인하도록 설계됐습니다. 사용할 앱·파일·참고자료를 연결하고, 결과를 실제 화면에서 검증하도록 요청하세요.</p>
                         <ul class="overview-list">
                             <li data-i18n="computer_use_p1">단순 채팅형 답변보다 “직접 UI를 보면서 작업”하는 자동화에 더 잘 맞습니다.</li>
                             <li data-i18n="computer_use_p2">핵심 흐름은 `screenshot → action → screenshot → verify/fix` 입니다.</li>
@@ -1968,8 +1970,8 @@ codex exec --sandbox workspace-write "Run the documented checks and report the d
                                 <p class="section-credit" data-i18n="s17_credit">이제 프롬프트는 문장 요령보다 작업 규칙을 분명히 정하는 일이 더 중요합니다.</p>
                             </div>
                         </div>
-                        <p data-i18n="s17_intro_desc">GPT-5.6 기준의 핵심은 세세한 절차를 모두 적는 것보다 목표 결과, 성공 기준, 제약, 사용할 수 있는 근거를 분명히 주고 모델이 적절한 경로를 고르게 하는 데 있습니다.</p>
-                        <p class="prompt-inline-ref" data-i18n-html="s17_intro_ref">레퍼런스: <a href="https://learn.chatgpt.com/docs/prompting" target="_blank">Prompting</a> · <a href="https://learn.chatgpt.com/guides/best-practices" target="_blank">Best practices</a> · <a href="https://learn.chatgpt.com/docs/long-running-work" target="_blank">Long-running work</a> · <a href="https://developers.openai.com/api/docs/guides/prompt-guidance?model=gpt-5.6" target="_blank">GPT-5.6 Prompt guidance</a></p>
+                        <p data-i18n="s17_intro_desc">원하는 결과·참고자료·제약·완료 기준을 먼저 주세요. Astra로 바꿀 때는 오래된 AGENTS.md와 스킬의 충돌도 점검하세요. 작은 작업은 낮은 추론 강도부터 결과를 비교하고, 필요한 검증 범위를 명시하세요.</p>
+                        <p class="prompt-inline-ref" data-i18n-html="s17_intro_ref">레퍼런스: <a href="https://learn.chatgpt.com/docs/prompting" target="_blank">Prompting</a> · <a href="https://learn.chatgpt.com/guides/best-practices" target="_blank">Best practices</a> · <a href="https://learn.chatgpt.com/docs/long-running-work" target="_blank">Long-running work</a> · <a href="https://developers.openai.com/api/docs/guides/latest-model" target="_blank">GPT-6 Astra Prompt guidance</a></p>
                         <p data-i18n="pg_s1_intro">GPT-5.6 프롬프팅은 모든 단계를 과하게 지정하는 방식보다, 원하는 결과와 성공 기준을 선명하게 두고 필요한 도구·추론·검증 경로를 모델이 고르게 하는 쪽에 가깝습니다.</p>
                         <div class="two-col">
                             <div class="callout">
@@ -2335,8 +2337,21 @@ codex --search "optimize with Next.js 15"
 
             <section class="section field-tips-section" id="openai-field-tips">
                 <h2><span class="section-num">20</span> <span data-i18n="field_tips_title">OpenAI 담당자들이 전하는 팁</span></h2>
+<h3 data-i18n="astra_audit_title">자꾸 멈추거나 검증이 길어질 때</h3><p data-i18n="astra_audit">중단 원인이 된 AGENTS.md·SKILL.md의 파일명과 정확한 규칙을 보여 달라고 요청하세요. 현재 요청과 충돌하는 오래된 지침을 정리하고, 관련 검증이 통과하면 변경·실패·미해결 문제가 있을 때만 다시 검사하도록 범위를 정하세요.</p><h3 data-i18n="astra_prompt_title">복사해서 내 업무에 맞게 바꿔 쓰기 · 편집 예시</h3><div class="code-block"><pre id="astra-work-prompt"><code data-i18n="astra_prompt">목표: [완성할 결과물]
+자료와 도구: [파일·참고 이미지·사용할 앱]
+제약: [반드시 지킬 조건과 작업 범위]
+완료 기준: [실행·화면·내용으로 확인할 항목]
+허용된 작업은 끝까지 진행해 주세요. 중요한 결정이 필요한 경우, 먼저 검토 가능한 결과를 준비하고 질문해 주세요. 관련 검증을 마치면 결과와 남은 문제를 알려주세요.</code></pre><button class="use-case-copy-btn automation-copy-btn" type="button" data-copy-block="#astra-work-prompt"><span data-i18n="s16_copy_prompt">프롬프트 복사</span></button></div><p class="command-refs"><a href="https://developers.openai.com/api/docs/guides/latest-model#prompting-best-practices" target="_blank" rel="noopener noreferrer">GPT-6 Astra prompting guidance</a></p>
                 <p data-i18n="field_tips_intro">OpenAI Codex, Developer Experience, 데이터/보안/제품 담당자들이 공개적으로 공유한 실전 사용법을 사람별 원글 링크와 함께 정리했습니다. 제품의 사용 가능 여부와 설정 절차는 아래 공식 문서 링크를 함께 확인하세요.</p>
                 <div class="field-tip-grid">
+<a class="field-tip-card" href="https://x.com/gabrielchua/status/2096097151524978891" target="_blank" rel="noopener noreferrer"><span class="field-tip-person">Gabriel Chua · X · 2026-09-05 UTC</span><h3 data-i18n="field_tip_astra_gabriel_t">긴 작업의 맥락 검색은 실험 조건부터 확인</h3><p data-i18n="field_tip_astra_gabriel_d">Gabriel은 Astra의 맥락 유지 실험과 활성화 안내를 공유했습니다. 위 모델 장의 제공 범위를 확인하고 설정 후 새 작업에서 시작하세요.</p></a>
+<a class="field-tip-card" href="https://x.com/pvncher/status/2096220470429319275" target="_blank" rel="noopener noreferrer"><span class="field-tip-person">Eric Provencher · X · 2026-09-05 UTC</span><h3 data-i18n="field_tip_astra_eric_t">Astra 지침은 최신 공식 가이드와 함께</h3><p data-i18n="field_tip_astra_eric_d">Eric은 Astra API 가이드를 읽어 보라고 권했습니다. 실행·문체·검증 조언을 참고하되 API 매개변수를 Codex 앱 설정과 혼동하지 마세요.</p></a>
+
+<a class="field-tip-card" href="https://x.com/dkundel/status/2095972046014673156" target="_blank" rel="noopener noreferrer"><span class="field-tip-person">Dominik Kundel · X · 2026-09-04 UTC</span><h3 data-i18n="field_tip_astra_dominik_t">예전 모델용 스킬과 추론 설정을 다시 비교하기</h3><p data-i18n="field_tip_astra_dominik_d">Dominik은 필요한 앱과 좋은 참고자료를 주고 Light/Low 또는 Medium부터 비교하라고 제안합니다. 예전 모델의 약점을 보완하던 스킬은 없는 경우도 비교하고, 완성물·검증·종료 시점을 명시하세요. 개인 실험에 기반한 팁입니다.</p></a>
+<a class="field-tip-card" href="https://x.com/reach_vb/status/2096271854193271229" target="_blank" rel="noopener noreferrer"><span class="field-tip-person">VB Srivastav · X · 2026-09-05 UTC</span><h3 data-i18n="field_tip_astra_vb_t">3D 결과물은 근거 자료와 구조까지 확인하기</h3><p data-i18n="field_tip_astra_vb_d">VB는 F1 규정·사진·엔지니어 영상으로 자료를 조사한 뒤 Blender 모델과 부품 설명, clay·wireframe 뷰를 만든 사례를 공유했습니다. 적용할 때는 참고자료와 검사할 뷰를 함께 요청하세요. 이 사례가 치수 정확도나 제조 적합성을 입증하지는 않습니다.</p></a>
+<a class="field-tip-card" href="https://developers.openai.com/blog/how-to-build-games-with-astra" target="_blank" rel="noopener noreferrer"><span class="field-tip-person">OpenAI Developers · Astra</span><h3 data-i18n="field_tip_astra_game_t">게임은 직접 플레이한 피드백으로 개선하기</h3><p data-i18n="field_tip_astra_game_d">공식 Astra 게임 제작 글은 원하는 경험과 이미지 참고자료로 시작하고, 직접 플레이하며 문제를 구체적으로 전달하는 과정을 보여줍니다. 수정 전후를 같은 테스트로 비교하고 Blender 원본과 실행용 에셋을 구분해 관리하세요.</p></a>
+<a class="field-tip-card" href="https://developers.openai.com/blog/automating-repetitive-work-at-openai-with-codex" target="_blank" rel="noopener noreferrer"><span class="field-tip-person">OpenAI Developers · Runme</span><h3 data-i18n="field_tip_astra_runme_t">반복 업무의 판단 근거를 결과물에 남기기</h3><p data-i18n="field_tip_astra_runme_d">OpenAI의 Runme 사례는 평가 목표·승인된 계획·실행 결과·실패한 접근·선택 이유를 같은 노트북에 남깁니다. 다음 작업자가 지난 판단을 다시 찾을 수 있도록, 최종 답변뿐 아니라 근거와 재사용할 절차를 남기세요.</p></a>
+
                     <a class="field-tip-card" href="https://x.com/dkundel/status/2071982764929458626" target="_blank" rel="noopener noreferrer">
                         <span class="field-tip-person">Dominik Kundel</span>
                         <h3 data-i18n="field_tip_1_t">/goal에는 token budget까지 주기</h3>
@@ -2375,17 +2390,12 @@ codex --search "optimize with Next.js 15"
                     <a class="field-tip-card" href="https://x.com/reach_vb/status/2075489301253488778" target="_blank" rel="noopener noreferrer">
                         <span class="field-tip-person">VB + GPT-5.6 Sol</span>
                         <h3 data-i18n="field_tip_14_t">Reasoning effort는 낮게 시작하기</h3>
-                        <p data-i18n="field_tip_14_d">VB의 최신 모델 운용 팁은 “필요한 만큼만 reasoning을 올리기”입니다. 공식 모델 문서도 Power 기본값을 Sol medium으로 두고, 더 깊은 분석은 Smarter나 Advanced에서 조정하라고 안내합니다.</p>
+                        <p data-i18n="field_tip_14_d">VB가 제안한 원칙은 작업에 필요한 만큼만 추론 강도를 높이는 것입니다. 현재 계정에 제공되는 Power 설정에서 시작해 결과가 부족할 때 강도를 올리세요.</p>
                     </a>
                     <a class="field-tip-card" href="https://x.com/gabrielchua/article/2078683016680145054" target="_blank" rel="noopener noreferrer">
                         <span class="field-tip-person">Gabriel Chua + Build Week</span>
                         <h3 data-i18n="field_tip_15_t">초보자는 아이디어 대화부터 시작하기</h3>
                         <p data-i18n="field_tip_15_d">Gabriel의 Build Week 가이드는 Codex를 바로 코딩 버튼처럼 누르기보다, 먼저 아이디어를 말로 풀고 예시·plugin·기존 프로젝트를 붙여 작은 실험으로 좁히라고 안내합니다. 처음 쓰는 사람에게는 설치보다 “무엇을 만들고 어떻게 확인할지”가 먼저입니다.</p>
-                    </a>
-                    <a class="field-tip-card" href="https://www.linkedin.com/posts/abedshaaban_i-burned-through-my-entire-weekly-gpt-56-activity-7482873402559635456-kGgr" target="_blank" rel="noopener noreferrer">
-                        <span class="field-tip-person">Romain Huet + GPT-5.6</span>
-                        <h3 data-i18n="field_tip_16_t">모델 선택은 매주 다시 보기</h3>
-                        <p data-i18n="field_tip_16_d">Romain은 GPT-5.6 Sol/Terra/Luna가 ChatGPT, Codex, API에 걸쳐 비용·속도·완성도 균형을 바꾼다고 설명했습니다. 모델 matrix는 고정 답이 아니라 재검토 습관입니다. 공식 모델 페이지를 먼저 보고, 작업 난이도와 비용을 함께 맞추세요.</p>
                     </a>
                     <a class="field-tip-card" href="https://x.com/reach_vb/status/2084014531274240100" target="_blank" rel="noopener noreferrer">
                         <span class="field-tip-person">VB Srivastav + config schema</span>
@@ -2521,7 +2531,7 @@ codex --search "optimize with Next.js 15"
                     <a href="https://learn.chatgpt.com/docs/changelog" target="_blank" class="link-card">Changelog</a>
                     <a href="https://github.com/openai/codex" target="_blank" class="link-card">GitHub Repo</a>
                     <a href="https://developers.openai.com/api/docs/models" target="_blank" class="link-card">OpenAI API Models</a>
-                    <a href="https://developers.openai.com/api/docs/guides/latest-model" target="_blank" class="link-card">GPT-5.6 API Model Guidance</a>
+                    <a href="https://developers.openai.com/api/docs/guides/latest-model" target="_blank" class="link-card">GPT-6 Astra API Model Guidance</a>
                     <a href="#s17" class="link-card" data-i18n="s21_prompt_guide">Prompting Codex Agents Section</a>
                     <a href="https://agents.md" target="_blank" class="link-card">agents.md Spec</a>
                 </div>
@@ -2531,27 +2541,27 @@ codex --search "optimize with Next.js 15"
                 <div class="changelog-head">
                     <div>
                         <p class="overview-kicker" data-i18n="changelog_kicker">Changelog</p>
-                        <h2 data-i18n="changelog_title">오늘의 업데이트</h2>
+                        <h2 data-i18n="changelog_title">최근 업데이트</h2>
                     </div>
                     <p class="overview-fact-date">
                         <span data-i18n="overview_fact_date_prefix">업데이트 기준일</span>
-                        <span class="live-date" data-date-format="long">2026년 9월 2일</span>
+                        <span class="live-date" data-date-format="long">2026년 9월 6일</span>
                     </p>
                 </div>
-                <ol class="changelog-list" aria-label="Today update summary">
+                <ol class="changelog-list" aria-label="Recent update summary">
                     <li>
-                        <strong data-i18n="overview_update_1_title">핵심 업데이트 날짜 교정</strong>
-                        <span data-i18n="changelog_item_1">핵심 모델 기준을 다시 확인했습니다. GPT-5.6 Sol/Terra/Luna가 추천 family이고, GPT-5.5는 previous-generation, `gpt-5.2`와 `gpt-5.3-codex`는 ChatGPT 인증 Codex 기준 deprecated로 유지됩니다. `gpt-5.4`와 `gpt-5.4-mini`는 2026년 8월 31일 ChatGPT 로그인 Codex에서 은퇴했습니다.</span>
+                        <strong data-i18n="overview_update_1_title">GPT-6 Astra 모델 안내</strong>
+                        <span data-i18n="changelog_item_1">Astra를 추천 모델에 추가하고 Sol·Terra·Luna와 역할을 구분했습니다. 제공 여부는 플랜·로그인 방식·클라이언트에 따라 확인하세요.</span>
                     </li>
                     <li>
-                        <strong data-i18n="overview_update_2_title">요금제·크레딧 구조 재정리</strong>
-                        <span data-i18n="changelog_item_2">Max/Ultra 설명을 현재 모델·subagents 문서에 맞췄습니다. Max는 단일 어려운 작업, Ultra는 subagents로 나눌 수 있는 큰 작업에 쓰며, Ultra가 보이지 않으면 `Settings > Configuration`의 `Ultra in model picker slider`를 확인합니다.</span>
+                        <strong data-i18n="overview_update_2_title">추론 강도와 작업 범위</strong>
+                        <span data-i18n="changelog_item_2">Dominik의 Astra X 글을 반영했습니다. 필요한 앱과 참고자료를 주고, Light/Medium부터 비교하며, 완료물과 검증 범위를 정하세요.</span>
                     </li>
                     <li>
-                        <strong data-i18n="overview_update_3_title">CLI·MCP 운영 기준 갱신</strong>
-                        <span data-i18n="changelog_item_3">최신 Codex changelog를 대조했습니다. CLI 0.152.0은 terminal UI와 `codex exec`에 credential-refresh 진행 상태를 표시하고, package-style MCP server 이름과 개별 MCP tool의 `output_token_limit` 설정을 지원합니다. planning은 이제 기본 off이므로 그 workflow가 필요할 때만 `tools.update_plan.enabled = true`로 명시적으로 켜세요. CLI 0.152.1은 Node REPL policy를 다루는 Guardian approval review를 수정했습니다.</span>
+                        <strong data-i18n="overview_update_3_title">Astra 선택기 문제 해결</strong>
+                        <span data-i18n="changelog_item_3">9월 4일 CLI 0.153.4는 Astra의 선택기 표시와 명시적 model 설정이 없을 때의 bundled 기본값을 수정했습니다.</span>
                     </li>
-                    <li>
+                    </ol><details><summary data-i18n="update_history">이전 업데이트 기록 · 각 항목의 발표일 기준</summary><ol class="changelog-list"><li>
                         <strong data-i18n="overview_update_4_title">Enterprise 발표 맥락 분리</strong>
                         <span data-i18n="changelog_item_4">공식 use-case catalog 101개를 다시 감사했습니다. official Starter prompt 74개의 extra blank-line 구조 변경을 promptEn/promptKo에 반영했고, local card 누락 0, official URL 누락 0, local `official.promptEn` mismatch 0, promptEn/promptKo 누락 0, line/token 구조 mismatch 0입니다.</span>
                     </li>
@@ -2587,7 +2597,7 @@ codex --search "optimize with Next.js 15"
                         <strong data-i18n="overview_update_13_title">iOS 원격 작업 흐름 보강</strong>
                         <span data-i18n="changelog_item_12">iOS 1.2026.237의 연결 host 간 첨부, Priority 보기, 편집 가능한 queued prompt 동기화 경계를 추가했습니다.</span>
                     </li>
-                </ol>
+                </ol></details>
             </section>
 
             </div>
@@ -2601,14 +2611,14 @@ codex --search "optimize with Next.js 15"
                     href="https://github.com/swhan0329/codex-101" target="_blank">PR을 환영합니다</a>.</p>
             <p class="footer-meta">
                 <span data-i18n="footer_date_prefix">최종 업데이트</span>:
-                        <span class="live-date" data-date-format="long">2026년 9월 4일</span>
+                        <span class="live-date" data-date-format="long">2026년 9월 6일</span>
             </p>
             <p class="footer-meta">Made by <a href="https://github.com/swhan0329" target="_blank">@swhan0329</a></p>
         </div>
     </footer>
 
-    <script src="i18n.js?v=20260904-ios-remote"></script>
-    <script src="app.js?v=20260823-friendly-permission-labels"></script>
+    <script src="i18n.js?v=20260906-astra-facts"></script>
+    <script src="app.js?v=20260906-astra-facts"></script>
 </body>
 
 </html>

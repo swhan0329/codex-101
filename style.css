@@ -7124,3 +7124,11 @@ html[data-theme="light"] body[data-page="home"] .connection-path-ssh {
         grid-template-columns: 1fr;
     }
 }
+
+/* Keep the new bilingual Astra guidance readable at narrow widths. */
+[data-i18n^="astra_"],
+[data-i18n^="field_tip_astra_"],
+.model-desc {
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
