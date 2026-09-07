@@ -10,12 +10,19 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: September 6, 2026</strong><br/>
+  <strong>Last updated: September 7, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
 
 ---
+
+## September 7, 2026 — Model defaults and Power
+
+- Recommended models are Astra, Sol, Terra, and Luna. Choose Astra for difficult work across tools, Sol for depth, Terra for everyday work, and Luna for clear, repeatable tasks. Start with the default Power available to your account and adjust based on results. GPT-5.4 and GPT-5.4 mini retired from ChatGPT-authenticated Codex on August 31, 2026: replace them with gpt-5.6-terra and gpt-5.6-luna in saved settings, custom agents, and scheduled tasks. API-key sign-in is unaffected by this retirement.
+- Added directly reviewed September 7 KST tips from [VB](https://x.com/reach_vb/status/2096684874346254615), [Eric](https://x.com/pvncher/status/2096709210302005706), and [Tibo](https://x.com/thsottiaux/status/2096688770523467947): trim unnecessary words, start with default settings, and compare Astra at lower effort.
+
+- [Models](https://learn.chatgpt.com/docs/models): Start with your account’s default Power. App/web options for eligible Pro, Business ($100), and Enterprise accounts in the Astra rollout are Terra Light → Sol Light → Sol Medium → Astra Light → Astra Medium → Astra Extra High. Options vary by plan and rollout stage. Use Advanced for Luna or a specific model, effort, or speed. Light in app/web/IDE is Low in the CLI.
 
 ## September 6, 2026 — Astra and practical workflows
 
@@ -44,7 +51,7 @@ The guide is written from the official ChatGPT/Codex documentation first, then m
 - Added the August 25 event-triggered scheduled-task boundary. Gmail, Slack, and GitHub events can trigger tasks on ChatGPT web and mobile for eligible plans; they are not a way to run against a local desktop project. Connect and authorize the app first, and do not combine an event trigger with a time-based schedule.
 - Rebased the practical guide on the new `learn.chatgpt.com/docs` information architecture. The permissions chapter now separates permission profiles from legacy `sandbox_mode` configuration instead of showing both in one invalid example.
 - Reworked section 16 around local scheduled tasks first. It now compares Local, worktree, `codex exec`, and GitHub auto-review routes, and includes a copy-ready prompt for safe local refresh → validation → scoped commit → push with explicit stop rules.
-- Rechecked the official models documentation. Recommended Codex models remain the GPT-5.6 family: `gpt-5.6-sol`, `gpt-5.6-terra`, and `gpt-5.6-luna`; `gpt-5.5` remains previous-generation, `gpt-5.2` / `gpt-5.3-codex` remain deprecated for ChatGPT-authenticated Codex, and `gpt-5.4` / `gpt-5.4-mini` retired from ChatGPT-authenticated Codex on August 31, 2026. Use `gpt-5.6-terra` and `gpt-5.6-luna` respectively in saved ChatGPT-authenticated configurations. If `Daybreak Blue` appears in your model picker, treat it as a separately approved defensive-cybersecurity access path, not as a replacement for the general GPT-5.6 recommendation.
+- Recommended models are Astra, Sol, Terra, and Luna. Choose Astra for difficult work across tools, Sol for depth, Terra for everyday work, and Luna for clear, repeatable tasks. Start with the default Power available to your account and adjust based on results. GPT-5.4 and GPT-5.4 mini retired from ChatGPT-authenticated Codex on August 31, 2026: replace them with gpt-5.6-terra and gpt-5.6-luna in saved settings, custom agents, and scheduled tasks. API-key sign-in is unaffected by this retirement.
 - Tightened the Max/Ultra note from the current model and subagents docs: Max gives one selected model more reasoning time for a single hard task, while Ultra uses subagents for divisible work and may require enabling **Ultra in model picker slider** under Settings > Configuration.
 - Rechecked pricing, Speed/Fast mode, remote connections, app/features, app/automations, config, MCP, hooks, plugins, skills, Sites, OpenAI API latest-model/changelog, and current Platform/API surfaces. Fast mode includes GPT-5.6 and GPT-5.5; API-key workflows stay on API token pricing. The OpenAI API changelog also says Fast mode supports GPT-5.6 Sol/Terra/Luna long-context requests over 272K tokens, so the guide keeps that as Platform/API context rather than Codex model-picker behavior. Saved ChatGPT-authenticated Codex configurations must now use `gpt-5.6-terra` in place of `gpt-5.4` and `gpt-5.6-luna` in place of `gpt-5.4-mini`.
 - Added the August 10 Business Premium announcement as a plan-capacity note, not a Codex model change: OpenAI says Premium seats for ChatGPT Business are coming with 5x more usage than Standard, no five-hour usage limit, predictable weekly resets, $125 monthly or $100 annual per user pricing, mixed Standard/Premium seating, and a waitlist/promotion ending August 20. The current Codex Pricing doc still shows the standard Business usage table, so the guide keeps the announcement and the pricing table as separate scopes until the docs converge.

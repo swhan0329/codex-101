@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 9월 6일</strong><br/>
+  <strong>최종 업데이트: 2026년 9월 7일</strong><br/>
   페이지의 실제 수정일을 표시하며, 모델 안내에는 공식 출처와 확인 범위를 함께 제공합니다.
 </p>
 
@@ -20,6 +20,13 @@
 </p>
 
 ---
+
+## 2026년 9월 7일 — 모델 기본값과 Power
+
+- 현재 추천 모델은 Astra·Sol·Terra·Luna입니다. Astra는 여러 도구를 쓰는 고난도 작업, Sol은 깊이 있는 분석, Terra는 일상 업무, Luna는 명확하고 반복적인 작업에 맞습니다. 계정에 제공되는 기본 Power에서 시작하고 결과에 따라 조절하세요. GPT-5.4·GPT-5.4 mini는 2026년 8월 31일 ChatGPT 로그인 Codex에서 은퇴했으므로 저장된 설정·custom agent·scheduled task에서 각각 gpt-5.6-terra·gpt-5.6-luna로 바꾸세요. API 키 로그인은 이 은퇴의 영향을 받지 않습니다.
+- 9월 7일 KST [VB](https://x.com/reach_vb/status/2096684874346254615)·[Eric](https://x.com/pvncher/status/2096709210302005706)·[Tibo](https://x.com/thsottiaux/status/2096688770523467947)의 원문을 확인해 문구 줄이기·기본 설정·낮은 추론 강도 비교 팁을 추가했습니다.
+
+- [Models](https://learn.chatgpt.com/docs/models): 계정의 기본 Power에서 시작하세요. Astra 배포 대상 Pro·Business($100)·Enterprise의 앱·웹 옵션은 Terra Light → Sol Light → Sol Medium → Astra Light → Astra Medium → Astra Extra High입니다. 플랜·배포 단계에 따라 다릅니다. Luna 또는 특정 모델·추론·속도는 Advanced에서 선택하세요. 앱·웹·IDE의 Light는 CLI에서 Low로 표시됩니다.
 
 ## 2026년 9월 6일 — Astra와 실무 활용 업데이트
 
@@ -54,7 +61,7 @@
 - 8월 25일 event-triggered Scheduled task 경계를 추가했습니다. eligible 플랜의 ChatGPT 웹·모바일에서는 Gmail·Slack·GitHub 이벤트로 task를 시작할 수 있지만, 로컬 데스크톱 프로젝트에서 실행하는 방식은 아닙니다. 먼저 앱을 연결·승인하고, 이벤트 trigger와 시간 기반 schedule은 함께 쓰지 마세요.
 - 새 공식 문서 허브인 `learn.chatgpt.com/docs`의 정보 구조를 기준으로 핵심 링크와 설명을 다시 정리했습니다. 권한 장에서는 새 permission profile과 예전 `sandbox_mode`를 한 설정에서 섞던 예시를 제거하고 두 방식을 분리했습니다.
 - 16장을 GitHub-only 자동 리뷰 중심에서 로컬 Scheduled task 중심으로 바꿨습니다. Local/worktree/`codex exec`/GitHub auto-review를 비교하고, 로컬 갱신 → 검증 → 관련 파일만 commit → 안전한 push까지 실행하는 복사형 프롬프트와 중단 조건을 추가했습니다.
-- 공식 모델 문서를 다시 확인했고, 추천 모델은 계속 GPT-5.6 family입니다. 기본 Power setting은 `gpt-5.6-sol` medium reasoning이고, Sol은 복잡한 coding/computer use/research/security, Terra는 일상 작업, Luna는 빠르고 반복적인 고빈도 작업에 맞습니다. `gpt-5.5`는 previous-generation frontier model로 남고, `gpt-5.2`와 `gpt-5.3-codex`는 ChatGPT 인증 Codex 기준 deprecated로 유지됩니다. `gpt-5.4`와 `gpt-5.4-mini`는 ChatGPT 로그인 Codex에서 2026년 8월 31일 은퇴했습니다. 저장된 ChatGPT 인증 설정에서는 각각 `gpt-5.6-terra`, `gpt-5.6-luna`를 사용하세요. 모델 선택기에 `Daybreak Blue`가 보이면 일반 추천 모델 교체가 아니라, 별도 승인된 defensive cybersecurity 작업용 접근 경로로 읽어야 합니다.
+- 현재 추천 모델은 Astra·Sol·Terra·Luna입니다. Astra는 여러 도구를 쓰는 고난도 작업, Sol은 깊이 있는 분석, Terra는 일상 업무, Luna는 명확하고 반복적인 작업에 맞습니다. 계정에 제공되는 기본 Power에서 시작하고 결과에 따라 조절하세요. GPT-5.4·GPT-5.4 mini는 2026년 8월 31일 ChatGPT 로그인 Codex에서 은퇴했으므로 저장된 설정·custom agent·scheduled task에서 각각 gpt-5.6-terra·gpt-5.6-luna로 바꾸세요. API 키 로그인은 이 은퇴의 영향을 받지 않습니다.
 - 현재 모델 문서와 subagents 문서를 대조해 Max/Ultra 설명을 더 정확히 맞췄습니다. `Max`는 단일 어려운 작업에 더 많은 reasoning 시간을 주고, `Ultra`는 나눌 수 있는 큰 작업을 subagents로 병렬 처리합니다. desktop app slider에 Ultra가 보이지 않으면 `Settings > Configuration`에서 **Ultra in model picker slider**를 켜야 할 수 있습니다.
 - Quickstart, Pricing, Speed/Fast mode, Best practices, Config, Windows/Windows App/IDE/App features/App Automations/Cloud, Remote connections, Integrations, MCP, Hooks, Plugins, Skills, Sites, OpenAI API latest-model/changelog와 Platform/API 문서를 다시 확인했습니다. Fast mode는 GPT-5.6과 GPT-5.5를 지원하며, API-key workflow는 API token pricing을 따릅니다. OpenAI API changelog는 GPT-5.6 Sol/Terra/Luna Fast mode가 272K token을 넘는 long-context request도 지원한다고 설명하므로, 이 내용은 Codex model picker 동작이 아니라 Platform/API 문맥으로 분리했습니다. ChatGPT 로그인 Codex의 저장 설정·custom agent·scheduled task에는 `gpt-5.4` 계열 대신 각각 `gpt-5.6-terra`, `gpt-5.6-luna`를 사용하세요.
 - 2026년 8월 10일 Business Premium 발표를 plan capacity 메모로 추가했습니다. 발표문은 ChatGPT Business Premium seat가 Standard 대비 5배 사용량, 5시간 사용 제한 없음, 주간 reset, 월 $125 또는 연간 월 $100, Standard/Premium 혼합 seat 운영, 8월 20일까지의 waitlist/promotion을 제공한다고 설명합니다. 하지만 현재 Codex Pricing 문서는 아직 기본 Business 사용량 표를 보여주므로, 문서에서는 발표 상태와 현재 가격표 상태를 섞어 단정하지 않고 분리했습니다.
