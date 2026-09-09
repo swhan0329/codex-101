@@ -1,6 +1,16 @@
 // i18n translation data
 const translations = {
     ko: {
+        image25_title: "이미지 수정: 바꿀 부분과 유지할 부분을 함께 지정",
+        image25_steps: "데스크톱 앱에서 생성된 이미지를 열고 Canvas view → Comment로 수정할 부분에 의견을 남기세요. 여러 이미지는 Multi-select로 선택한 뒤 수정 지시를 함께 보내세요. 결과에서 글자·구도·유지할 요소를 원본과 비교하세요.",
+        image25_api: "API에는 gpt-image-2.5-flare(빠른 일상 이미지 작업)와 gpt-image-2.5-sunburst(정밀한 편집)가 추가됐습니다. Image API에서는 model로, Responses API에서는 image_generation 도구의 model로 지정합니다. API 요금은 Codex 포함 사용량과 별도이며, 조직 인증이 필요할 수 있습니다.",
+        image25_scope: "2026년 9월 9일 KST, VB는 ChatGPT Images 2.5의 ChatGPT·Work·Codex 배포 시작을 소개했습니다. 내 계정의 제공 여부를 확인하세요. API 모델 ID가 앱 Power 선택기에서 같은 이름으로 보인다는 뜻은 아닙니다.",
+        image25_refs: "이미지 편집 공식 문서 · API 모델 · 배포 소개",
+        tip_dominik_measure_t: "3D 제작에는 실측이 보이는 참고 사진",
+        tip_dominik_measure_d: "Dominik은 줄자를 곁에 둔 사진 두 장으로 ChatGPT Work에 맞춤 도어 스토퍼를 요청하고, 친구가 출력해 사용한 경험을 공유했습니다. 따라 할 때는 치수·단위·맞닿는 부분을 함께 설명하고 출력 후 실제로 맞는지 확인하세요. 개인 사례이며 모든 설계의 치수 정확도를 보장하지 않습니다.",
+        changelog_image25_t: "9월 9일 · 이미지 편집과 실측 참고자료",
+        changelog_image25_d: "GPT Image 2.5의 API 모델 구분, 앱 Canvas 댓글 수정 절차와 배포 확인 방법을 추가했습니다. Dominik의 실측 사진 기반 3D 제작 팁도 원문과 연결했습니다.",
+
         field_tip_astra_gabriel_t: "긴 작업의 맥락 검색은 실험 조건부터 확인",
         field_tip_astra_gabriel_d: "Gabriel은 Astra의 맥락 유지 실험과 활성화 안내를 공유했습니다. 위 모델 장의 제공 범위를 확인하고 설정 후 새 작업에서 시작하세요.",
         field_tip_astra_eric_t: "Astra 지침은 최신 공식 가이드와 함께",
@@ -939,6 +949,16 @@ const translations = {
     },
 
     en: {
+        image25_title: "Image edits: specify what changes and what stays",
+        image25_steps: "In the desktop app, open a generated image and use Canvas view → Comment to mark changes. Use Multi-select for several images, then send your comments with editing instructions. Compare text, composition, and preserved elements against the originals.",
+        image25_api: "The API now offers gpt-image-2.5-flare for fast everyday image work and gpt-image-2.5-sunburst for precise editing. Set model in the Image API, or model on the image_generation tool in the Responses API. API billing is separate from included Codex usage; organization verification may be required.",
+        image25_scope: "On September 9, 2026 KST, VB described the start of the ChatGPT Images 2.5 rollout across ChatGPT, Work, and Codex. Check access in your own account. API model IDs do not imply identically named options in the app Power picker.",
+        image25_refs: "Official image editing docs · API models · rollout introduction",
+        tip_dominik_measure_t: "Give 3D tasks reference photos with measurements",
+        tip_dominik_measure_d: "Dominik shared how he gave ChatGPT Work two photos with a measuring tape to design a custom door stopper, which a friend printed for use. When adapting this approach, specify dimensions, units, and contact surfaces, then check the physical fit after printing. This personal example does not guarantee dimensional accuracy for every design.",
+        changelog_image25_t: "September 9 · Image edits and measured references",
+        changelog_image25_d: "Added GPT Image 2.5 API model choices, Canvas comment editing, and rollout checks. Linked Dominik’s measured-photo workflow for a custom 3D print to his original post.",
+
         field_tip_astra_gabriel_t: "Check eligibility before enabling context search",
         field_tip_astra_gabriel_d: "Gabriel shared Astra’s context-management experiment and activation guidance. Check the model section for eligibility, then start a new task after configuration.",
         field_tip_astra_eric_t: "Use the current Astra prompting guide",

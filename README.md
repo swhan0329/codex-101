@@ -10,12 +10,17 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: September 7, 2026</strong><br/>
+  <strong>Last updated: September 9, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
 
 ---
+
+## September 9, 2026 — Image editing and measured references
+
+- Added [GPT Image 2.5 API choices](https://developers.openai.com/api/docs/guides/image-generation) and [Canvas comment editing](https://learn.chatgpt.com/docs/image-generation). [VB’s rollout introduction](https://x.com/reach_vb/status/2097399096000581655) is separated from account access and API billing. Added [Dominik’s measured-photo 3D printing example](https://x.com/dkundel/status/2097419372960890983), with a physical-fit check rather than a universal accuracy claim.
+- Corrected Sol’s Codex cloud support indicator against the official Models page and removed a leftover source link mislabeled as Romain’s post.
 
 ## September 7, 2026 — Model defaults and Power
 

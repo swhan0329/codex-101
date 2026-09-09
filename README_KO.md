@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 9월 7일</strong><br/>
+  <strong>최종 업데이트: 2026년 9월 9일</strong><br/>
   페이지의 실제 수정일을 표시하며, 모델 안내에는 공식 출처와 확인 범위를 함께 제공합니다.
 </p>
 
@@ -20,6 +20,11 @@
 </p>
 
 ---
+
+## 2026년 9월 9일 — 이미지 편집과 실측 참고자료
+
+- [GPT Image 2.5 API 모델 구분](https://developers.openai.com/api/docs/guides/image-generation)과 [Canvas 댓글 수정 절차](https://learn.chatgpt.com/docs/image-generation)를 추가했습니다. [VB의 배포 소개](https://x.com/reach_vb/status/2097399096000581655)는 계정별 접근·API 과금과 구분합니다. [Dominik의 실측 사진 기반 3D 출력 사례](https://x.com/dkundel/status/2097419372960890983)를 추가하고, 보편적인 정확도 보장 대신 출력 후 실제 맞음새를 확인하도록 안내합니다.
+- 공식 Models 문서에 맞춰 Sol의 Codex cloud 지원 표시를 고치고, Romain의 글로 잘못 표시된 잔여 출처 링크를 제거했습니다.
 
 ## 2026년 9월 7일 — 모델 기본값과 Power
 
