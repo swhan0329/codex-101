@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 9월 9일</strong><br/>
+  <strong>최종 업데이트: 2026년 9월 10일</strong><br/>
   페이지의 실제 수정일을 표시하며, 모델 안내에는 공식 출처와 확인 범위를 함께 제공합니다.
 </p>
 
@@ -20,6 +20,14 @@
 </p>
 
 ---
+
+## 2026년 9월 10일 — CLI·iOS 작업 흐름
+
+- Git 프로젝트에서 codex --worktree 또는 /worktree로 실험적 격리 작업을 시작할 수 있습니다. 새 작업·fork 전에 기준 브랜치를 확인하고, 생성된 checkout에서 결과를 검증하세요.
+- 작업 중 나타나는 질문에는 선택지나 직접 입력으로 답하세요. 본문 초안은 유지됩니다. 기존 세션도 새로 설치한 plugin 도구를 반영하고 외부 업그레이드 후 skills·hooks를 갱신합니다.
+- CLI 0.154에서 codex mcp-server 진입점이 제거됐습니다. 이를 호출하던 연동은 업데이트 전에 점검하세요. 외부 MCP 서버를 연결하는 기능과는 별개입니다.
+- iOS 1.2026.244에서는 @로 다른 task를 참고하고, 작업 중 질문에 답하며, 새 worktree의 기준 브랜치나 현재 로컬 변경 포함 여부를 선택할 수 있습니다. iOS 26은 백그라운드 설정 진행을 Live Activity로 표시합니다. 저장소와 실행은 연결된 컴퓨터에 남습니다.
+- [Official changelog](https://learn.chatgpt.com/docs/changelog) · [VB original](https://x.com/reach_vb/status/2097736038202421335)
 
 ## 2026년 9월 9일 — 이미지 편집과 실측 참고자료
 

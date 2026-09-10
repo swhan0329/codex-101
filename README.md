@@ -10,12 +10,20 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: September 9, 2026</strong><br/>
+  <strong>Last updated: September 10, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
 
 ---
+
+## September 10, 2026 — CLI and iOS workflows
+
+- In a Git project, try experimental isolated work with codex --worktree or /worktree. Check the starting branch before a new task or fork, then verify results in the created checkout.
+- Answer live questions with a suggested choice or your own text while keeping your main draft. Existing sessions pick up newly installed plugin tools and refresh skills and hooks after external upgrades.
+- CLI 0.154 removes the codex mcp-server entry point. Check integrations that invoke it before updating. This is separate from connecting external MCP servers.
+- In iOS 1.2026.244, use @ to reference tasks, answer live questions, and choose a starting branch or include current local changes for a new worktree. iOS 26 shows background setup progress in a Live Activity. The repository and execution stay on the connected computer.
+- [Official changelog](https://learn.chatgpt.com/docs/changelog) · [VB original](https://x.com/reach_vb/status/2097736038202421335)
 
 ## September 9, 2026 — Image editing and measured references
 

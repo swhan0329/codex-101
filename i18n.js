@@ -1,6 +1,15 @@
 // i18n translation data
 const translations = {
     ko: {
+        cli154_t: "CLI 0.154 · 격리 작업과 실행 중 응답",
+        cli154_worktree: "Git 프로젝트에서 codex --worktree 또는 /worktree로 실험적 격리 작업을 시작할 수 있습니다. 새 작업·fork 전에 기준 브랜치를 확인하고, 생성된 checkout에서 결과를 검증하세요.",
+        cli154_live: "작업 중 나타나는 질문에는 선택지나 직접 입력으로 답하세요. 본문 초안은 유지됩니다. 기존 세션도 새로 설치한 plugin 도구를 반영하고 외부 업그레이드 후 skills·hooks를 갱신합니다.",
+        cli154_mcp: "CLI 0.154에서 codex mcp-server 진입점이 제거됐습니다. 이를 호출하던 연동은 업데이트 전에 점검하세요. 외부 MCP 서버를 연결하는 기능과는 별개입니다.",
+        ios244_worktree: "iOS 1.2026.244에서는 @로 다른 task를 참고하고, 작업 중 질문에 답하며, 새 worktree의 기준 브랜치나 현재 로컬 변경 포함 여부를 선택할 수 있습니다. iOS 26은 백그라운드 설정 진행을 Live Activity로 표시합니다. 저장소와 실행은 연결된 컴퓨터에 남습니다.",
+        changelog_cli154_t: "9월 10일 · CLI·iOS 작업 흐름",
+        changelog_cli154_d: "9월 9일 CLI 0.154와 9월 8일 iOS 1.2026.244의 격리 작업·질문 응답 안내, MCP 진입점 제거와 VB의 참고 이미지 역할 분리 팁을 반영했습니다.",
+        tip_vb_frames_t: "참고 이미지마다 포즈·스타일 역할 지정",
+        tip_vb_frames_d: "VB는 Astra·Sunburst·Codex로 영상 프레임을 변환하며 원본은 포즈, 참고 이미지는 스타일로 구분했습니다. 생성물을 검토한 뒤 FFmpeg로 타이밍·오디오를 합쳤습니다. 따라 할 때도 각 이미지의 역할을 지정하고 프레임 간 일관성을 확인하세요. 개인 제작 사례이며 동일한 품질을 보장하지 않습니다.",
         image25_title: "이미지 수정: 바꿀 부분과 유지할 부분을 함께 지정",
         image25_steps: "데스크톱 앱에서 생성된 이미지를 열고 Canvas view → Comment로 수정할 부분에 의견을 남기세요. 여러 이미지는 Multi-select로 선택한 뒤 수정 지시를 함께 보내세요. 결과에서 글자·구도·유지할 요소를 원본과 비교하세요.",
         image25_api: "API에는 gpt-image-2.5-flare(빠른 일상 이미지 작업)와 gpt-image-2.5-sunburst(정밀한 편집)가 추가됐습니다. Image API에서는 model로, Responses API에서는 image_generation 도구의 model로 지정합니다. API 요금은 Codex 포함 사용량과 별도이며, 조직 인증이 필요할 수 있습니다.",
@@ -949,6 +958,15 @@ const translations = {
     },
 
     en: {
+        cli154_t: "CLI 0.154 · Isolated work and live answers",
+        cli154_worktree: "In a Git project, try experimental isolated work with codex --worktree or /worktree. Check the starting branch before a new task or fork, then verify results in the created checkout.",
+        cli154_live: "Answer live questions with a suggested choice or your own text while keeping your main draft. Existing sessions pick up newly installed plugin tools and refresh skills and hooks after external upgrades.",
+        cli154_mcp: "CLI 0.154 removes the codex mcp-server entry point. Check integrations that invoke it before updating. This is separate from connecting external MCP servers.",
+        ios244_worktree: "In iOS 1.2026.244, use @ to reference tasks, answer live questions, and choose a starting branch or include current local changes for a new worktree. iOS 26 shows background setup progress in a Live Activity. The repository and execution stay on the connected computer.",
+        changelog_cli154_t: "September 10 · CLI and iOS workflows",
+        changelog_cli154_d: "Added isolated-work and live-answer guidance from the September 9 CLI 0.154 and September 8 iOS 1.2026.244 releases, the removed MCP entry point, and VB’s reference-image role tip.",
+        tip_vb_frames_t: "Give pose and style references separate roles",
+        tip_vb_frames_d: "VB used Astra, Sunburst, and Codex to transform video frames, assigning pose to the original and style to reference images. After reviewing the outputs, he used FFmpeg for timing and audio. Assign each image a role and check consistency across frames. This is a personal workflow, not a guarantee of equivalent quality.",
         image25_title: "Image edits: specify what changes and what stays",
         image25_steps: "In the desktop app, open a generated image and use Canvas view → Comment to mark changes. Use Multi-select for several images, then send your comments with editing instructions. Compare text, composition, and preserved elements against the originals.",
         image25_api: "The API now offers gpt-image-2.5-flare for fast everyday image work and gpt-image-2.5-sunburst for precise editing. Set model in the Image API, or model on the image_generation tool in the Responses API. API billing is separate from included Codex usage; organization verification may be required.",
