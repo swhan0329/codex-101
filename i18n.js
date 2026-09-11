@@ -1,6 +1,14 @@
 // i18n translation data
 const translations = {
     ko: {
+        sdk154_t: "Python SDK 0.154 · 외부 입력과 저장된 이력",
+        sdk154_setup: "Python 3.10 이상에서 pip install --upgrade openai-codex==0.154.0으로 설치하세요. 배포 패키지에는 버전이 고정된 CLI 런타임이 포함됩니다. 직접 codex_bin을 지정하면 새 외부 메시지·이력 옵션에 CLI 0.151.0 이상이 필요합니다.",
+        sdk154_external: "ExternalMessage는 실행 중인 일반 turn에도 외부 내용을 전달할 수 있지만 도구 수준 권한이며 사용자 승인을 부여하지 않습니다. max·ultra 추론 강도도 추가됐습니다.",
+        sdk154_history: "늦게 연결한 turn handle은 이전 이벤트를 재생하지 않아 결과가 일부만 모일 수 있습니다. 저장된 이력은 thread.read(include_turns=True)로 확인하세요. resume·fork의 include_turns는 반환 이력만 바꾸며 모델 컨텍스트는 줄이지 않습니다.",
+        pro_pause_t: "9월 11일 KST · Pro $200 신규 가입 안내",
+        pro_pause_d: "Tibo는 기존 사용자의 Astra 이용을 유지하기 위해 월 $200 Pro 신규 구독을 일시 중단한다고 발표했습니다. 기존 계정에는 영향이 없고 다른 플랜·API는 계속 제공한다고 설명했습니다. 가입 가능 여부는 결제 화면에서 다시 확인하세요.",
+        changelog_sdk154_t: "9월 11일 · Python SDK와 Pro 가입 조건",
+        changelog_sdk154_d: "Python SDK 0.154의 설치·외부 메시지 권한·이력 조회 안내와 Tibo의 Pro $200 신규 구독 일시 중단 발표를 추가했습니다.",
         cli154_t: "CLI 0.154 · 격리 작업과 실행 중 응답",
         cli154_worktree: "Git 프로젝트에서 codex --worktree 또는 /worktree로 실험적 격리 작업을 시작할 수 있습니다. 새 작업·fork 전에 기준 브랜치를 확인하고, 생성된 checkout에서 결과를 검증하세요.",
         cli154_live: "작업 중 나타나는 질문에는 선택지나 직접 입력으로 답하세요. 본문 초안은 유지됩니다. 기존 세션도 새로 설치한 plugin 도구를 반영하고 외부 업그레이드 후 skills·hooks를 갱신합니다.",
@@ -958,6 +966,14 @@ const translations = {
     },
 
     en: {
+        sdk154_t: "Python SDK 0.154 · External input and saved history",
+        sdk154_setup: "Install with pip install --upgrade openai-codex==0.154.0 on Python 3.10 or later. Published packages include a pinned CLI runtime. If you override codex_bin, the new external-message and history options require CLI 0.151.0 or later.",
+        sdk154_external: "ExternalMessage can deliver external content during an active regular turn, but carries tool-level authority and does not grant user authorization. The release also adds max and ultra reasoning efforts.",
+        sdk154_history: "Late-attached turn handles do not replay earlier events, so collected results may be partial. Read saved history with thread.read(include_turns=True). On resume and fork, include_turns changes returned history, not model context.",
+        pro_pause_t: "September 11 KST · New Pro $200 subscriptions",
+        pro_pause_d: "Tibo announced a pause on new $200/month Pro subscriptions to preserve Astra access for existing users. He said existing accounts are unaffected and other plans and the API remain available. Recheck subscription availability at checkout.",
+        changelog_sdk154_t: "September 11 · Python SDK and Pro signup availability",
+        changelog_sdk154_d: "Added Python SDK 0.154 installation, external-message authority and history guidance, plus Tibo’s announcement pausing new Pro $200 subscriptions.",
         cli154_t: "CLI 0.154 · Isolated work and live answers",
         cli154_worktree: "In a Git project, try experimental isolated work with codex --worktree or /worktree. Check the starting branch before a new task or fork, then verify results in the created checkout.",
         cli154_live: "Answer live questions with a suggested choice or your own text while keeping your main draft. Existing sessions pick up newly installed plugin tools and refresh skills and hooks after external upgrades.",

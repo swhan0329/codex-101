@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="style.css?v=20260906-astra-facts" />
 </head>
 
-<body data-page="home" data-updated="2026-09-10">
+<body data-page="home" data-updated="2026-09-11">
     <!-- Language Toggle -->
     <nav class="top-bar">
         <div class="top-bar-inner">
@@ -51,7 +51,7 @@
                     <p class="hero-badge">
                         <span data-i18n="hero_badge_prefix">공식 문서 기반 · 실무 실행 가이드</span>
                         <span aria-hidden="true"> · </span>
-                        <span class="live-date" data-date-format="long">2026년 9월 10일</span>
+                        <span class="live-date" data-date-format="long">2026년 9월 11일</span>
                     </p>
                     <h1 class="hero-title" data-i18n="hero_title"><span class="hero-title-lead">OpenAI Codex를</span><span class="hero-title-focus">실무에 바로 붙이는 가이드</span></h1>
                     <p class="hero-sub" data-i18n="hero_sub"><span class="hero-sub-lead">CLI부터 데스크톱 앱·IDE·Web·Mobile까지, 한 흐름으로.</span><span class="hero-sub-detail">설치·권한·Git·자동화·프롬프팅을 최신 공식 문서 기준의 실행 순서로 정리했습니다.</span></p>
@@ -850,6 +850,7 @@
                     </div>
                 </div>
 
+<div class="callout" style="word-break: keep-all; overflow-wrap: anywhere"><h3 data-i18n="pro_pause_t">9월 11일 KST · Pro $200 신규 가입 안내</h3><p data-i18n="pro_pause_d">Tibo는 기존 사용자의 Astra 이용을 유지하기 위해 월 $200 Pro 신규 구독을 일시 중단한다고 발표했습니다. 기존 계정에는 영향이 없고 다른 플랜·API는 계속 제공한다고 설명했습니다. 가입 가능 여부는 결제 화면에서 다시 확인하세요.</p><p class="command-refs"><a href="https://x.com/thsottiaux/status/2098113585683808624" target="_blank" rel="noopener noreferrer">Tibo · X · 2026-09-11 KST</a></p></div>
                 <p class="command-refs" data-i18n-html="s4_refs">출처: <a href="https://developers.openai.com/codex/quickstart/" target="_blank">Quickstart</a> · <a href="https://developers.openai.com/codex/pricing/" target="_blank">Codex pricing</a> · <a href="https://help.openai.com/en/articles/20001106-codex-rate-card" target="_blank">Codex rate card</a> · <a href="https://developers.openai.com/codex/speed" target="_blank">Speed</a> · <a href="https://openai.com/index/codex-flexible-pricing-for-teams/" target="_blank">Pay-as-you-go pricing for teams</a></p>
             </section>
 
@@ -1000,6 +1001,13 @@ codex --cd /path/to/project
                 <p data-i18n="cli154_mcp">CLI 0.154에서 codex mcp-server 진입점이 제거됐습니다. 이를 호출하던 연동은 업데이트 전에 점검하세요. 외부 MCP 서버를 연결하는 기능과는 별개입니다.</p>
                 <p class="command-refs"><a href="https://learn.chatgpt.com/docs/changelog" target="_blank" rel="noopener noreferrer">Codex CLI 0.154.0 · 2026-09-09</a></p>
                 </div>
+<div class="callout" style="word-break: keep-all; overflow-wrap: anywhere">
+<h3 data-i18n="sdk154_t">Python SDK 0.154 · 외부 입력과 저장된 이력</h3>
+<p data-i18n="sdk154_setup">Python 3.10 이상에서 pip install --upgrade openai-codex==0.154.0으로 설치하세요. 배포 패키지에는 버전이 고정된 CLI 런타임이 포함됩니다. 직접 codex_bin을 지정하면 새 외부 메시지·이력 옵션에 CLI 0.151.0 이상이 필요합니다.</p>
+<p data-i18n="sdk154_external">ExternalMessage는 실행 중인 일반 turn에도 외부 내용을 전달할 수 있지만 도구 수준 권한이며 사용자 승인을 부여하지 않습니다. max·ultra 추론 강도도 추가됐습니다.</p>
+<p data-i18n="sdk154_history">늦게 연결한 turn handle은 이전 이벤트를 재생하지 않아 결과가 일부만 모일 수 있습니다. 저장된 이력은 thread.read(include_turns=True)로 확인하세요. resume·fork의 include_turns는 반환 이력만 바꾸며 모델 컨텍스트는 줄이지 않습니다.</p>
+<p class="command-refs"><a href="https://learn.chatgpt.com/docs/codex-sdk" target="_blank" rel="noopener noreferrer">Codex SDK</a> · <a href="https://learn.chatgpt.com/docs/changelog" target="_blank" rel="noopener noreferrer">Python SDK 0.154.0 · 2026-09-10</a></p>
+</div>
             </section>
 
             <!-- Section 6 -->
@@ -2570,10 +2578,11 @@ codex --search "optimize with Next.js 15"
                     </div>
                     <p class="overview-fact-date">
                         <span data-i18n="overview_fact_date_prefix">업데이트 기준일</span>
-                        <span class="live-date" data-date-format="long">2026년 9월 10일</span>
+                        <span class="live-date" data-date-format="long">2026년 9월 11일</span>
                     </p>
                 </div>
                 <ol class="changelog-list" aria-label="Recent update summary">
+<li><strong data-i18n="changelog_sdk154_t">9월 11일 · Python SDK와 Pro 가입 조건</strong><span data-i18n="changelog_sdk154_d">Python SDK 0.154의 설치·외부 메시지 권한·이력 조회 안내와 Tibo의 Pro $200 신규 구독 일시 중단 발표를 추가했습니다.</span></li>
                     <li><strong data-i18n="changelog_cli154_t">9월 10일 · CLI·iOS 작업 흐름</strong><span data-i18n="changelog_cli154_d">9월 9일 CLI 0.154와 9월 8일 iOS 1.2026.244의 격리 작업·질문 응답 안내, MCP 진입점 제거와 VB의 참고 이미지 역할 분리 팁을 반영했습니다.</span></li>
                     <li><strong data-i18n="changelog_image25_t">9월 9일 · 이미지 편집과 실측 참고자료</strong><span data-i18n="changelog_image25_d">GPT Image 2.5의 API 모델 구분, 앱 Canvas 댓글 수정 절차와 배포 확인 방법을 추가했습니다. Dominik의 실측 사진 기반 3D 제작 팁도 원문과 연결했습니다.</span></li>
                     <li>
@@ -2638,13 +2647,13 @@ codex --search "optimize with Next.js 15"
                     href="https://github.com/swhan0329/codex-101" target="_blank">PR을 환영합니다</a>.</p>
             <p class="footer-meta">
                 <span data-i18n="footer_date_prefix">최종 업데이트</span>:
-                        <span class="live-date" data-date-format="long">2026년 9월 10일</span>
+                        <span class="live-date" data-date-format="long">2026년 9월 11일</span>
             </p>
             <p class="footer-meta">Made by <a href="https://github.com/swhan0329" target="_blank">@swhan0329</a></p>
         </div>
     </footer>
 
-    <script src="i18n.js?v=20260910-cli-ios"></script>
+    <script src="i18n.js?v=20260911-sdk-pro"></script>
     <script src="app.js?v=20260906-astra-facts"></script>
 </body>
 

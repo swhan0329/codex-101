@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 9월 10일</strong><br/>
+  <strong>최종 업데이트: 2026년 9월 11일</strong><br/>
   페이지의 실제 수정일을 표시하며, 모델 안내에는 공식 출처와 확인 범위를 함께 제공합니다.
 </p>
 
@@ -20,6 +20,14 @@
 </p>
 
 ---
+
+## 2026년 9월 11일 — Python SDK / Pro
+
+- Python 3.10 이상에서 pip install --upgrade openai-codex==0.154.0으로 설치하세요. 배포 패키지에는 버전이 고정된 CLI 런타임이 포함됩니다. 직접 codex_bin을 지정하면 새 외부 메시지·이력 옵션에 CLI 0.151.0 이상이 필요합니다.
+- ExternalMessage는 실행 중인 일반 turn에도 외부 내용을 전달할 수 있지만 도구 수준 권한이며 사용자 승인을 부여하지 않습니다. max·ultra 추론 강도도 추가됐습니다.
+- 늦게 연결한 turn handle은 이전 이벤트를 재생하지 않아 결과가 일부만 모일 수 있습니다. 저장된 이력은 thread.read(include_turns=True)로 확인하세요. resume·fork의 include_turns는 반환 이력만 바꾸며 모델 컨텍스트는 줄이지 않습니다.
+- Tibo는 기존 사용자의 Astra 이용을 유지하기 위해 월 $200 Pro 신규 구독을 일시 중단한다고 발표했습니다. 기존 계정에는 영향이 없고 다른 플랜·API는 계속 제공한다고 설명했습니다. 가입 가능 여부는 결제 화면에서 다시 확인하세요.
+- [Codex SDK](https://learn.chatgpt.com/docs/codex-sdk) · [Changelog](https://learn.chatgpt.com/docs/changelog) · [Tibo](https://x.com/thsottiaux/status/2098113585683808624)
 
 ## 2026년 9월 10일 — CLI·iOS 작업 흐름
 

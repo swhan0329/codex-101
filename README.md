@@ -10,12 +10,20 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: September 10, 2026</strong><br/>
+  <strong>Last updated: September 11, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
 
 ---
+
+## September 11, 2026 — Python SDK / Pro
+
+- Install with pip install --upgrade openai-codex==0.154.0 on Python 3.10 or later. Published packages include a pinned CLI runtime. If you override codex_bin, the new external-message and history options require CLI 0.151.0 or later.
+- ExternalMessage can deliver external content during an active regular turn, but carries tool-level authority and does not grant user authorization. The release also adds max and ultra reasoning efforts.
+- Late-attached turn handles do not replay earlier events, so collected results may be partial. Read saved history with thread.read(include_turns=True). On resume and fork, include_turns changes returned history, not model context.
+- Tibo announced a pause on new $200/month Pro subscriptions to preserve Astra access for existing users. He said existing accounts are unaffected and other plans and the API remain available. Recheck subscription availability at checkout.
+- [Codex SDK](https://learn.chatgpt.com/docs/codex-sdk) · [Changelog](https://learn.chatgpt.com/docs/changelog) · [Tibo](https://x.com/thsottiaux/status/2098113585683808624)
 
 ## September 10, 2026 — CLI and iOS workflows
 
