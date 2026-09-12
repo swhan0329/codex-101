@@ -21,6 +21,16 @@
 
 ---
 
+## 2026년 9월 12일 — 데스크톱 단축키와 모델 종료 예정
+
+- Settings > Pets에서 펫 또는 Mini를 선택하세요. macOS는 Option+Space, Windows는 Windows+Alt+P로 Quick Chat을 열고 입력 후 Enter로 보냅니다. @로 맥락, $로 스킬을 추가하고 벨 아이콘에서 진행 상황을 확인하세요. 여기서 시작한 대화는 프로젝트 밖에 있으므로 프로젝트 자료가 필요하면 메인 앱의 해당 프로젝트에서 시작하세요.
+- 공유할 창을 맨 앞으로 가져온 뒤 Windows는 양쪽 Alt, macOS는 양쪽 Command를 누르세요. Appshot에는 창 이미지와 앱이 제공하는 텍스트가 포함됩니다. 설정에서 단축키와 Appshot destination을 확인하고 첨부 내용에 필요한 작업을 함께 적으세요. Google Docs·Gmail 등은 화면 이미지만 전달될 수 있습니다.
+- Windows Appshot은 메인 앱에서 열립니다. macOS는 플로팅 컨트롤이 열려 있고 메인 창이 뒤에 있을 때 destination이 Automatic이면 그 컨트롤에서 새 대화를 시작합니다. 권한 설정은 메인 앱에서 먼저 완료하세요.
+- Tibo는 2026년 9월 11일 GPT-5.3-Codex-Spark를 다음 주에 종료할 예정이라고 발표했습니다. 정확한 종료일은 명시하지 않았습니다. 현재 Models 문서에는 Pro용 research preview로 남아 있으므로 종료 완료로 읽지 마세요. 새 기본값으로 저장하기 전 선택기를 확인하고 기존 설정의 Spark 참조를 점검하세요.
+- Eric의 9월 11일 공식 블로그는 스킬 설명에 정확한 적용 조건을 쓰고, 본문은 필요한 문서로 안내하는 짧은 진입점으로 만들라고 제안합니다. AGENTS.md의 매번 전체 문서 읽기 규칙을 작업별로 좁히고, 프롬프트에는 실행·검증·종료 기준을 명시하세요. 함께 쓰는 Sol·Luna에도 필요한 지침은 유지하세요.
+- Eric과 VB는 문제가 나타난 대화에서 /feedback을 보내 달라고 안내했습니다. 기대한 결과와 실제 동작을 적고 세션·로그 포함 여부를 확인하세요. Eric은 X에 ID를 답글로 남길 필요가 없다고 했고, VB는 공개적으로 문제를 설명할 경우 ID도 함께 적으라고 보완했습니다. 제출은 개별 답변이나 해결 시점을 보장하지 않습니다.
+- [Pets](https://learn.chatgpt.com/docs/pets) · [Appshots](https://learn.chatgpt.com/docs/appshots) · [Spark](https://x.com/thsottiaux/status/2098300998968357218) · [Eric](https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra) · [VB](https://x.com/reach_vb/status/2098509751776620654)
+
 ## 2026년 9월 11일 — Python SDK / Pro
 
 - Python 3.10 이상에서 pip install --upgrade openai-codex==0.154.0으로 설치하세요. 배포 패키지에는 버전이 고정된 CLI 런타임이 포함됩니다. 직접 codex_bin을 지정하면 새 외부 메시지·이력 옵션에 CLI 0.151.0 이상이 필요합니다.
@@ -98,7 +108,9 @@
 - openai.com/index와 OpenAI Developers/API 문서도 다시 대조했습니다. 오늘은 Codex 제품 추천 모델을 바꿀 항목은 없었습니다. 2026년 8월 13일 Ultrafast mode preview는 eligible GPT-5.6 Sol API workload용 제한 preview로만 반영했고, 2026년 8월 5일 Fast long-context note는 Platform/API 문맥에만 두었습니다. 2026년 8월 12일 RingCentral 사례와 enterprise research 글은 기업 도입 맥락으로만 유지했습니다. Daybreak와 Linux preview 경계도 유지됩니다.
 - 사람별 practitioner 점검에서 공개 가이드에 새로 승격할 만한 공식 corroboration 완료 팁은 나오지 않았습니다. Section 20은 그대로 유지했습니다.
 
-### 누적 검증 메모
+### 누적 검증 메모 (2026-08-22까지의 기록)
+
+아래는 당시 검증 기록입니다. 현재 모델과 제공 여부는 위의 최신 날짜별 업데이트와 실제 가이드를 확인하세요.
 
 - 현재 `codex/models`를 대조한 결과, 추천 모델은 GPT-5.6 family입니다. `gpt-5.6-sol`은 복잡한 coding/computer use/research/security 작업, `gpt-5.6-terra`는 everyday workhorse, `gpt-5.6-luna`는 빠른 반복/대량 작업에 맞습니다. `gpt-5.5`는 previous-generation frontier model로 남고, `gpt-5.3-codex-spark`는 ChatGPT Pro용 research preview 축으로 유지됩니다. `gpt-5.2`와 `gpt-5.3-codex`는 ChatGPT 로그인 Codex 기준 deprecated이므로 fallback처럼 쓰지 말고, 2026년 8월 31일 은퇴한 `gpt-5.4`와 `gpt-5.4-mini`를 각각 `gpt-5.6-terra`, `gpt-5.6-luna`로 바꾸세요. 기존 script, config file, custom agent, scheduled task, `codex exec --model` 명령이 이 모델명을 가리키는지 확인하세요. Codex product model picker, ChatGPT 일반 모델 retirement, API availability는 범위가 다를 수 있으므로 분리해서 읽어야 합니다. API-key authentication을 의도적으로 쓰는 workflow라면 API 모델 제공 여부를 따로 확인해야 합니다. 임의 provider로 Codex를 연결할 때 Chat Completions API 지원은 여전히 deprecated이며 future release에서 제거될 예정이므로, 새 설정은 Responses API 지원 provider를 기준으로 잡는 편이 안전합니다.
 - 오늘 가장 중요한 변화는 pricing/API 범위 설명입니다. 현재 `codex/models` 문서는 GPT-5.6 Sol/Terra/Luna에 API Access를 표시하고 ChatGPT 또는 API-key authentication에서도 사용할 수 있다고 설명합니다. 동시에 현재 `codex/pricing`은 Plus, Pro 5x, Pro 20x, Business, API Key 사용량 표에 GPT-5.6 Sol/Terra/Luna 범위를 표시합니다. 그래서 문서에서는 ChatGPT 로그인, API-key Codex, direct API 모델 호출을 분리해서 읽도록 정리했습니다. 직접 API에서 쓰는 `gpt-5.6` alias와 Sol/Terra/Luna 모델, 예전 `gpt-5-codex` snapshot deprecation은 별도 OpenAI API 문서 범위로 분리했습니다.

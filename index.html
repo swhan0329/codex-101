@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="style.css?v=20260906-astra-facts" />
 </head>
 
-<body data-page="home" data-updated="2026-09-11">
+<body data-page="home" data-updated="2026-09-12">
     <!-- Language Toggle -->
     <nav class="top-bar">
         <div class="top-bar-inner">
@@ -51,7 +51,7 @@
                     <p class="hero-badge">
                         <span data-i18n="hero_badge_prefix">공식 문서 기반 · 실무 실행 가이드</span>
                         <span aria-hidden="true"> · </span>
-                        <span class="live-date" data-date-format="long">2026년 9월 11일</span>
+                        <span class="live-date" data-date-format="long">2026년 9월 12일</span>
                     </p>
                     <h1 class="hero-title" data-i18n="hero_title"><span class="hero-title-lead">OpenAI Codex를</span><span class="hero-title-focus">실무에 바로 붙이는 가이드</span></h1>
                     <p class="hero-sub" data-i18n="hero_sub"><span class="hero-sub-lead">CLI부터 데스크톱 앱·IDE·Web·Mobile까지, 한 흐름으로.</span><span class="hero-sub-detail">설치·권한·Git·자동화·프롬프팅을 최신 공식 문서 기준의 실행 순서로 정리했습니다.</span></p>
@@ -545,6 +545,7 @@
                         <div class="model-body">
                             <p class="model-desc" data-i18n="m3_f">텍스트 전용 리서치 프리뷰 모델. 거의 즉각적인 실시간 코딩 반복에 최적화되었으며 ChatGPT Pro
                                 사용자에게 제공됩니다.</p>
+<p data-i18n="spark_retire_d">Tibo는 2026년 9월 11일 GPT-5.3-Codex-Spark를 다음 주에 종료할 예정이라고 발표했습니다. 정확한 종료일은 명시하지 않았습니다. 현재 Models 문서에는 Pro용 research preview로 남아 있으므로 종료 완료로 읽지 마세요. 새 기본값으로 저장하기 전 선택기를 확인하고 기존 설정의 Spark 참조를 점검하세요.</p><p class="command-refs"><a href="https://x.com/thsottiaux/status/2098300998968357218" target="_blank" rel="noopener noreferrer">Tibo · 2026-09-11 KST</a></p>
                             <div class="model-cmd">codex -m gpt-5.3-codex-spark</div>
                             <div class="model-features">
                                 <div class="model-feat-row"><span class="model-feat-label"
@@ -754,7 +755,7 @@
                                     <tr>
                                         <td>Pro</td>
                                         <td>From $100/mo</td>
-                                        <td data-i18n="s4_codex_pro">Spark 리서치 프리뷰 + priority processing + Pro 5x / Pro 20x 표 + 2026년 5월 31일까지였던 부스트는 dashboard 확인</td>
+                                        <td data-i18n="s4_codex_pro">Pro 5x / Pro 20x·priority processing. Spark는 Tibo의 9월 11일 발표에 따라 다음 주 종료 예정입니다.</td>
                                     </tr>
                                     <tr>
                                         <td>Business</td>
@@ -850,6 +851,7 @@
                     </div>
                 </div>
 
+<div class="callout" id="spark-retirement" style="word-break: keep-all; overflow-wrap: anywhere"><h3 data-i18n="spark_retire_t">Spark 종료 예정 · 9월 11일 발표</h3><p data-i18n="spark_retire_d">Tibo는 2026년 9월 11일 GPT-5.3-Codex-Spark를 다음 주에 종료할 예정이라고 발표했습니다. 정확한 종료일은 명시하지 않았습니다. 현재 Models 문서에는 Pro용 research preview로 남아 있으므로 종료 완료로 읽지 마세요. 새 기본값으로 저장하기 전 선택기를 확인하고 기존 설정의 Spark 참조를 점검하세요.</p><p class="command-refs"><a href="https://x.com/thsottiaux/status/2098300998968357218" target="_blank" rel="noopener noreferrer">Tibo · X</a></p></div>
 <div class="callout" style="word-break: keep-all; overflow-wrap: anywhere"><h3 data-i18n="pro_pause_t">9월 11일 KST · Pro $200 신규 가입 안내</h3><p data-i18n="pro_pause_d">Tibo는 기존 사용자의 Astra 이용을 유지하기 위해 월 $200 Pro 신규 구독을 일시 중단한다고 발표했습니다. 기존 계정에는 영향이 없고 다른 플랜·API는 계속 제공한다고 설명했습니다. 가입 가능 여부는 결제 화면에서 다시 확인하세요.</p><p class="command-refs"><a href="https://x.com/thsottiaux/status/2098113585683808624" target="_blank" rel="noopener noreferrer">Tibo · X · 2026-09-11 KST</a></p></div>
                 <p class="command-refs" data-i18n-html="s4_refs">출처: <a href="https://developers.openai.com/codex/quickstart/" target="_blank">Quickstart</a> · <a href="https://developers.openai.com/codex/pricing/" target="_blank">Codex pricing</a> · <a href="https://help.openai.com/en/articles/20001106-codex-rate-card" target="_blank">Codex rate card</a> · <a href="https://developers.openai.com/codex/speed" target="_blank">Speed</a> · <a href="https://openai.com/index/codex-flexible-pricing-for-teams/" target="_blank">Pay-as-you-go pricing for teams</a></p>
             </section>
@@ -1128,8 +1130,7 @@ codex --cd /path/to/project
                     <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s7_f_skills">Skills & Plugins 지원</span></div>
                     <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s7_f_auto">Automations
                             (정기 작업 자동화)</span></div>
-                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s7_f_voice">Voice
-                            Dictation (Ctrl+M)</span></div>
+                    <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s7_f_voice">ChatGPT Voice + 음성 받아쓰기</span></div>
                     <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s7_f_float">플로팅 팝아웃
                             창</span></div>
                     <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="s7_f_sync">IDE
@@ -1147,6 +1148,7 @@ codex --cd /path/to/project
                 </div>
 
 
+<div class="callout" id="desktop26908" style="word-break: keep-all; overflow-wrap: anywhere"><h3 data-i18n="quickchat_t">Desktop 26.908 · 다른 앱에서 Quick Chat 시작</h3><p data-i18n="quickchat_d">Settings > Pets에서 펫 또는 Mini를 선택하세요. macOS는 Option+Space, Windows는 Windows+Alt+P로 Quick Chat을 열고 입력 후 Enter로 보냅니다. @로 맥락, $로 스킬을 추가하고 벨 아이콘에서 진행 상황을 확인하세요. 여기서 시작한 대화는 프로젝트 밖에 있으므로 프로젝트 자료가 필요하면 메인 앱의 해당 프로젝트에서 시작하세요.</p><h3 data-i18n="appshots_t">Windows에서도 현재 앱 창을 Appshot으로 전달</h3><p data-i18n="appshots_d">공유할 창을 맨 앞으로 가져온 뒤 Windows는 양쪽 Alt, macOS는 양쪽 Command를 누르세요. Appshot에는 창 이미지와 앱이 제공하는 텍스트가 포함됩니다. 설정에서 단축키와 Appshot destination을 확인하고 첨부 내용에 필요한 작업을 함께 적으세요. Google Docs·Gmail 등은 화면 이미지만 전달될 수 있습니다.</p><p data-i18n="appshots_route">Windows Appshot은 메인 앱에서 열립니다. macOS는 플로팅 컨트롤이 열려 있고 메인 창이 뒤에 있을 때 destination이 Automatic이면 그 컨트롤에서 새 대화를 시작합니다. 권한 설정은 메인 앱에서 먼저 완료하세요.</p><p class="command-refs"><a href="https://learn.chatgpt.com/docs/pets" target="_blank" rel="noopener noreferrer">Pets</a> · <a href="https://learn.chatgpt.com/docs/appshots" target="_blank" rel="noopener noreferrer">Appshots</a> · <a href="https://learn.chatgpt.com/docs/changelog" target="_blank" rel="noopener noreferrer">Desktop 26.908 · 2026-09-11</a></p></div>
                 <div class="callout" id="image-editing-update">
                     <h3 data-i18n="image25_title">이미지 수정: 바꿀 부분과 유지할 부분을 함께 지정</h3>
                     <p data-i18n="image25_steps">데스크톱 앱에서 생성된 이미지를 열고 Canvas view → Comment로 수정할 부분에 의견을 남기세요. 여러 이미지는 Multi-select로 선택한 뒤 수정 지시를 함께 보내세요. 결과에서 글자·구도·유지할 요소를 원본과 비교하세요.</p>
@@ -2353,7 +2355,7 @@ codex --search "optimize with Next.js 15"
                     </details>
                     <details>
                         <summary data-i18n="faq4_q">GPT-5.3-Codex-Spark는 뭔가요?</summary>
-                        <p data-i18n="faq4_a">2026년 2월 12일 공개된 텍스트 중심 초고속 코딩 모델입니다. ChatGPT Pro용 research preview가 기본 경로이고, Pricing 문서도 API launch 시점에는 제공되지 않는다고 설명합니다. 발표문은 소수 디자인 파트너 대상 제한적 API 테스트와 별도 사용 한도를 함께 언급합니다.</p>
+                        <p data-i18n="faq4_a">2026년 2월 12일 공개된 텍스트 중심 초고속 코딩 모델입니다. ChatGPT Pro용 research preview가 기본 경로이고, Pricing 문서도 API launch 시점에는 제공되지 않는다고 설명합니다. 발표문은 소수 디자인 파트너 대상 제한적 API 테스트와 별도 사용 한도를 함께 언급합니다. Tibo의 2026년 9월 11일 발표에 따르면 다음 주 종료 예정이며 정확한 날짜는 미정입니다.</p>
                     </details>
                     <details>
                         <summary data-i18n="faq5_q">오프라인에서 사용 가능한가요?</summary>
@@ -2371,7 +2373,11 @@ codex --search "optimize with Next.js 15"
 완료 기준: [실행·화면·내용으로 확인할 항목]
 허용된 작업은 끝까지 진행해 주세요. 중요한 결정이 필요한 경우, 먼저 검토 가능한 결과를 준비하고 질문해 주세요. 관련 검증을 마치면 결과와 남은 문제를 알려주세요.</code></pre><button class="use-case-copy-btn automation-copy-btn" type="button" data-copy-block="#astra-work-prompt"><span data-i18n="s16_copy_prompt">프롬프트 복사</span></button></div><p class="command-refs"><a href="https://developers.openai.com/api/docs/guides/latest-model#prompting-best-practices" target="_blank" rel="noopener noreferrer">GPT-6 Astra prompting guidance</a></p>
                 <p data-i18n="field_tips_intro">OpenAI Codex, Developer Experience, 데이터/보안/제품 담당자들이 공개적으로 공유한 실전 사용법을 사람별 원글 링크와 함께 정리했습니다. 제품의 사용 가능 여부와 설정 절차는 아래 공식 문서 링크를 함께 확인하세요.</p>
-                <div class="field-tip-grid">
+                <p class="command-refs"><a href="https://x.com/pvncher/status/2098488444443939186" target="_blank" rel="noopener noreferrer">Eric · /feedback</a> · <a href="https://learn.chatgpt.com/docs/reference/troubleshooting#feedback-and-logs" target="_blank" rel="noopener noreferrer">Feedback &amp; logs</a></p>
+<div class="field-tip-grid">
+<a class="field-tip-card" style="word-break: keep-all; overflow-wrap: anywhere" href="https://x.com/reach_vb/status/2098509751776620654" target="_blank" rel="noopener noreferrer"><span class="field-tip-person">Eric Provencher / VB · 2026-09-12 KST</span><h3 data-i18n="feedback_t">문제가 보이는 대화에서 /feedback</h3><p data-i18n="feedback_d">Eric과 VB는 문제가 나타난 대화에서 /feedback을 보내 달라고 안내했습니다. 기대한 결과와 실제 동작을 적고 세션·로그 포함 여부를 확인하세요. Eric은 X에 ID를 답글로 남길 필요가 없다고 했고, VB는 공개적으로 문제를 설명할 경우 ID도 함께 적으라고 보완했습니다. 제출은 개별 답변이나 해결 시점을 보장하지 않습니다.</p></a>
+<a class="field-tip-card" style="word-break: keep-all; overflow-wrap: anywhere" href="https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra" target="_blank" rel="noopener noreferrer"><span class="field-tip-person">Eric Provencher · 2026-09-11</span><h3 data-i18n="skill_refresh_t">스킬은 짧은 적용 조건과 필요한 참고자료부터</h3><p data-i18n="skill_refresh_d">Eric의 9월 11일 공식 블로그는 스킬 설명에 정확한 적용 조건을 쓰고, 본문은 필요한 문서로 안내하는 짧은 진입점으로 만들라고 제안합니다. AGENTS.md의 매번 전체 문서 읽기 규칙을 작업별로 좁히고, 프롬프트에는 실행·검증·종료 기준을 명시하세요. 함께 쓰는 Sol·Luna에도 필요한 지침은 유지하세요.</p></a>
+
 <a class="field-tip-card" style="word-break: keep-all; overflow-wrap: break-word" href="https://x.com/reach_vb/status/2097736038202421335" target="_blank" rel="noopener noreferrer"><span class="field-tip-person">VB Srivastav · X · 2026-09-10 KST</span><h3 data-i18n="tip_vb_frames_t">참고 이미지마다 포즈·스타일 역할 지정</h3><p data-i18n="tip_vb_frames_d">VB는 Astra·Sunburst·Codex로 영상 프레임을 변환하며 원본은 포즈, 참고 이미지는 스타일로 구분했습니다. 생성물을 검토한 뒤 FFmpeg로 타이밍·오디오를 합쳤습니다. 따라 할 때도 각 이미지의 역할을 지정하고 프레임 간 일관성을 확인하세요. 개인 제작 사례이며 동일한 품질을 보장하지 않습니다.</p></a>
 <a class="field-tip-card" href="https://x.com/dkundel/status/2097419372960890983" target="_blank" rel="noopener noreferrer"><span class="field-tip-person">Dominik Kundel · X · 2026-09-09 KST</span><h3 data-i18n="tip_dominik_measure_t">3D 제작에는 실측이 보이는 참고 사진</h3><p data-i18n="tip_dominik_measure_d">Dominik은 줄자를 곁에 둔 사진 두 장으로 ChatGPT Work에 맞춤 도어 스토퍼를 요청하고, 친구가 출력해 사용한 경험을 공유했습니다. 따라 할 때는 치수·단위·맞닿는 부분을 함께 설명하고 출력 후 실제로 맞는지 확인하세요. 개인 사례이며 모든 설계의 치수 정확도를 보장하지 않습니다.</p></a>
 
@@ -2578,10 +2584,11 @@ codex --search "optimize with Next.js 15"
                     </div>
                     <p class="overview-fact-date">
                         <span data-i18n="overview_fact_date_prefix">업데이트 기준일</span>
-                        <span class="live-date" data-date-format="long">2026년 9월 11일</span>
+                        <span class="live-date" data-date-format="long">2026년 9월 12일</span>
                     </p>
                 </div>
                 <ol class="changelog-list" aria-label="Recent update summary">
+<li><strong data-i18n="changelog_sep12_t">9월 12일 · Quick Chat·Windows Appshots·Spark 종료 예정</strong><span data-i18n="changelog_sep12_d">Desktop 26.908의 진입 절차와 플랫폼 차이, Tibo의 Spark 종료 예정 발표, Eric의 스킬 정리 가이드와 Eric·VB의 /feedback 팁을 반영했습니다.</span></li>
 <li><strong data-i18n="changelog_sdk154_t">9월 11일 · Python SDK와 Pro 가입 조건</strong><span data-i18n="changelog_sdk154_d">Python SDK 0.154의 설치·외부 메시지 권한·이력 조회 안내와 Tibo의 Pro $200 신규 구독 일시 중단 발표를 추가했습니다.</span></li>
                     <li><strong data-i18n="changelog_cli154_t">9월 10일 · CLI·iOS 작업 흐름</strong><span data-i18n="changelog_cli154_d">9월 9일 CLI 0.154와 9월 8일 iOS 1.2026.244의 격리 작업·질문 응답 안내, MCP 진입점 제거와 VB의 참고 이미지 역할 분리 팁을 반영했습니다.</span></li>
                     <li><strong data-i18n="changelog_image25_t">9월 9일 · 이미지 편집과 실측 참고자료</strong><span data-i18n="changelog_image25_d">GPT Image 2.5의 API 모델 구분, 앱 Canvas 댓글 수정 절차와 배포 확인 방법을 추가했습니다. Dominik의 실측 사진 기반 3D 제작 팁도 원문과 연결했습니다.</span></li>
@@ -2647,13 +2654,13 @@ codex --search "optimize with Next.js 15"
                     href="https://github.com/swhan0329/codex-101" target="_blank">PR을 환영합니다</a>.</p>
             <p class="footer-meta">
                 <span data-i18n="footer_date_prefix">최종 업데이트</span>:
-                        <span class="live-date" data-date-format="long">2026년 9월 11일</span>
+                        <span class="live-date" data-date-format="long">2026년 9월 12일</span>
             </p>
             <p class="footer-meta">Made by <a href="https://github.com/swhan0329" target="_blank">@swhan0329</a></p>
         </div>
     </footer>
 
-    <script src="i18n.js?v=20260911-sdk-pro"></script>
+    <script src="i18n.js?v=20260912-desktop-spark"></script>
     <script src="app.js?v=20260906-astra-facts"></script>
 </body>
 
