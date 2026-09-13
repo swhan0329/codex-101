@@ -10,12 +10,20 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: September 11, 2026</strong><br/>
+  <strong>Last updated: September 13, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
 
 ---
+
+## September 13, 2026 — Context experiment status and screen review
+
+- On September 12, 2026, Tibo announced that the opt-in context-management experiment had been disabled because it could cause early stops or replies to older messages. This guide does not currently recommend enabling it.
+- Models still contained the earlier Plus/Pro opt-in instructions when checked on September 13. The announcement and documentation differ; check the sources below for any resumption. This does not mean ordinary context compaction or all Memories features have ended.
+- On September 12, Tibo reported fixes for skills over-triggering or blocking self-checks, the context-management experiment, and some misconfigured engines. VB recommended the latest app and CLI. Update, compare the same input and completion criteria, and use /feedback in the affected conversation if problems persist. The announcement does not guarantee every task is fixed.
+- Eric shared a way to reduce image-read calls by combining app screenshots into a contact sheet. Edited example: “Number the screens, combine them into one sheet, and review the overall flow. Inspect the original images at full size for text and spacing.” This is a personal tip; savings depend on image size and review method.
+- [Models](https://learn.chatgpt.com/docs/models#experimental-context-management) · [Tibo](https://x.com/thsottiaux/status/2098612714704891959) · [VB](https://x.com/reach_vb/status/2098691592462725320) · [Eric](https://x.com/pvncher/status/2098885252982677951)
 
 ## September 12, 2026 — Desktop shortcuts and model lifecycle
 
