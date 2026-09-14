@@ -17,6 +17,12 @@
 
 ---
 
+## September 14, 2026 — Completion messages and visual checks
+
+- Eric shared a personal-plan workflow: plan with Astra, send the work to a separate task using a chosen model, then end the original turn. Edited example: “Send the plan and necessary sources to a new task. Ask it to send results back here when complete, then end this turn.” Use this where task-to-task messaging is supported. Cache reuse can differ in a new task, so lower total usage is not guaranteed.
+- VB suggested asking for screenshots or relevant tests during 3D, frontend, and video work. Edited example: “After major changes, open the result, compare it with the requirements, and fix issues. Once relevant checks pass, repeat only if a new issue appears.” This is personal guidance; self-checks do not replace final user review.
+- [Eric](https://x.com/pvncher/status/2098841379837260144) · [VB](https://x.com/reach_vb/status/2099181989190418800)
+
 ## September 13, 2026 — Context experiment status and screen review
 
 - On September 12, 2026, Tibo announced that the opt-in context-management experiment had been disabled because it could cause early stops or replies to older messages. This guide does not currently recommend enabling it.

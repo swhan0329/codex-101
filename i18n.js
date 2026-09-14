@@ -1,6 +1,13 @@
 // i18n translation data
 const translations = {
     ko: {
+        dispatch_t: "별도 작업에 맡긴 뒤 완료 메시지 받기",
+        dispatch_d: "Eric은 개인 플랜에서 Astra로 계획을 세우고, 선택한 모델의 별도 작업에 전달한 뒤 원래 turn을 끝내는 방식을 공유했습니다. 편집 예시: “계획과 필요한 자료를 새 작업에 전달하고, 완료되면 이 작업에 결과를 보내도록 요청하세요. 전달 후 이번 응답을 마치세요.” 작업 간 메시지를 지원하는 환경에서 사용하세요. 새 작업의 캐시 재사용은 달라질 수 있어 총사용량 절감을 보장하지 않습니다.",
+        visual_verify_t: "시각 작업은 만드는 중에도 결과 확인",
+        visual_verify_d: "VB는 3D·프런트엔드·영상 작업을 진행하면서 스크린샷이나 관련 테스트로 결과를 확인하도록 요청하라고 제안했습니다. 편집 예시: “주요 변경 후 화면을 열어 요구사항과 비교하고, 발견한 문제를 수정하세요. 관련 검증이 통과하면 새 문제가 없는 한 반복하지 마세요.” 개인 경험에 따른 조언이며 자체 검증이 최종 사용자 검토를 대신하지는 않습니다.",
+        changelog_sep14_t: "9월 14일 · 작업 간 완료 알림과 시각 검증",
+        changelog_sep14_d: "Eric의 별도 작업 위임·완료 메시지 방식과 캐시 한계, VB의 작업 중 시각 검증 팁을 원문에 연결했습니다.",
+
         changelog_sep13_d: "Tibo의 비활성화 발표에 맞춰 맥락 관리 활성화 권장을 제거하고 공식 문서와의 차이를 표시했습니다. 품질 문제 재확인 절차와 Eric의 contact sheet 팁을 추가했습니다.",
         changelog_sep13_t: "9월 13일 · 맥락 관리 실험 상태와 화면 검토 팁",
         contact_d: "Eric은 앱 스크린샷을 contact sheet로 모아 이미지 읽기 호출을 줄이는 방법을 공유했습니다. 편집 예시: “화면에 번호를 붙여 한 장으로 모으고 전체 흐름을 검토해 주세요. 글자·간격은 해당 원본을 확대해 확인하세요.” 개인 팁이며 절감량은 이미지 크기와 검토 방식에 따라 다릅니다.",
@@ -985,6 +992,13 @@ const translations = {
     },
 
     en: {
+        dispatch_t: "Delegate to a separate task and receive a completion message",
+        dispatch_d: "Eric shared a personal-plan workflow: plan with Astra, send the work to a separate task using a chosen model, then end the original turn. Edited example: “Send the plan and necessary sources to a new task. Ask it to send results back here when complete, then end this turn.” Use this where task-to-task messaging is supported. Cache reuse can differ in a new task, so lower total usage is not guaranteed.",
+        visual_verify_t: "Check visual results while building",
+        visual_verify_d: "VB suggested asking for screenshots or relevant tests during 3D, frontend, and video work. Edited example: “After major changes, open the result, compare it with the requirements, and fix issues. Once relevant checks pass, repeat only if a new issue appears.” This is personal guidance; self-checks do not replace final user review.",
+        changelog_sep14_t: "September 14 · Completion messages and visual checks",
+        changelog_sep14_d: "Added Eric’s separate-task delegation and completion-message workflow with its cache caveat, plus VB’s visual checks during implementation, linked to their originals.",
+
         changelog_sep13_d: "Removed the context-management opt-in recommendation following Tibo’s disabling announcement and noted the mismatch with official docs. Added quality recheck steps and Eric’s contact-sheet tip.",
         changelog_sep13_t: "September 13 · Context experiment status and screen review",
         contact_d: "Eric shared a way to reduce image-read calls by combining app screenshots into a contact sheet. Edited example: “Number the screens, combine them into one sheet, and review the overall flow. Inspect the original images at full size for text and spacing.” This is a personal tip; savings depend on image size and review method.",
