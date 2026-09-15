@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 9월 13일</strong><br/>
+  <strong>최종 업데이트: 2026년 9월 15일</strong><br/>
   페이지의 실제 수정일을 표시하며, 모델 안내에는 공식 출처와 확인 범위를 함께 제공합니다.
 </p>
 
@@ -20,6 +20,13 @@
 </p>
 
 ---
+
+## 9월 15일 · Arch Linux 설치와 진행 중 검토
+
+- Linux preview가 최신 상태의 Arch Linux rolling release를 x64·ARM64에서 지원합니다. uname -m으로 아키텍처를 확인한 뒤 공식 문서의 install-arch.sh를 내려받아 실행하세요. 스크립트는 서명된 OpenAI 저장소를 설정하며, 확인을 거쳐 전체 시스템 업그레이드를 수행합니다. 이후 업데이트는 sudo pacman -Syu로 진행합니다. Computer Use는 아직 Linux에서 지원되지 않습니다.
+- VB는 Astra가 Sol·Luna의 별도 작업을 조율하고 15분 간격의 heartbeat로 중간 결과를 검토하는 방식을 제안했습니다. 편집 예시: “15분마다 해당 작업의 결과와 완료 기준을 비교하고 필요할 때 방향을 수정하세요. 변화가 없으면 알리지 말고 완료되면 점검을 종료하세요.” 작업 간 메시지와 대화 내 예약 작업을 지원하는 환경에서 사용하세요. 로컬 작업은 컴퓨터와 앱이 켜져 있어야 하며, 주기적 검토도 사용량을 소비합니다.
+- Ryan은 프레임워크 관례와 충돌하는 구현, 불필요한 재구현, 폐기 예정 동작과 복잡도를 찾아 달라는 프롬프트를 공유했습니다. 편집 예시: “현재 공급망 보안 조건을 지키면서 단순화 후보와 근거를 제시하세요. 테스트는 보호하는 동작과 중복 여부를 확인한 뒤 변경안을 제안하세요.” 개인 검토 팁이며, 복잡해 보인다는 이유만으로 테스트를 삭제하지 마세요.
+- [Linux](https://learn.chatgpt.com/docs/linux/linux-app#install-on-arch-linux) · [Scheduled tasks](https://learn.chatgpt.com/docs/automations#schedule-a-task-inside-a-chat) · [VB](https://x.com/reach_vb/status/2099630906772222068) · [Ryan](https://x.com/_lopopolo/status/2099339717976478086)
 
 ## 2026년 9월 14일 — 작업 간 완료 알림과 시각 검증
 

@@ -10,12 +10,19 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: September 13, 2026</strong><br/>
+  <strong>Last updated: September 15, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
 
 ---
+
+## September 15 · Arch Linux and progress reviews
+
+- The Linux preview supports fully updated Arch Linux rolling releases on x64 and ARM64. Check your architecture with uname -m, then download and run install-arch.sh from the official guide. The script configures the signed OpenAI repository and performs a full system upgrade after confirmation. Update later with sudo pacman -Syu. Computer Use is not yet supported on Linux.
+- VB suggested having Astra coordinate separate Sol or Luna tasks and review intermediate results with a 15-minute heartbeat. Edited example: “Every 15 minutes, compare the task results with the completion criteria and steer when needed. Stay quiet if nothing changes, and stop checks when complete.” Use this where task messaging and in-chat scheduled tasks are supported. Local work requires the computer and app to stay on; periodic reviews also consume usage.
+- Ryan shared a prompt to find code that fights framework conventions, unnecessary reinvention, deprecated behavior, and complexity. Edited example: “Preserve our supply-chain security requirements and show simplification candidates with evidence. Before proposing test changes, identify the behavior each test protects and any overlap.” This is a personal review tip; apparent complexity alone is not a reason to delete tests.
+- [Linux](https://learn.chatgpt.com/docs/linux/linux-app#install-on-arch-linux) · [Scheduled tasks](https://learn.chatgpt.com/docs/automations#schedule-a-task-inside-a-chat) · [VB](https://x.com/reach_vb/status/2099630906772222068) · [Ryan](https://x.com/_lopopolo/status/2099339717976478086)
 
 ## September 14, 2026 — Completion messages and visual checks
 
