@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 9월 15일</strong><br/>
+  <strong>최종 업데이트: 2026년 9월 16일</strong><br/>
   페이지의 실제 수정일을 표시하며, 모델 안내에는 공식 출처와 확인 범위를 함께 제공합니다.
 </p>
 
@@ -20,6 +20,14 @@
 </p>
 
 ---
+
+## 9월 16일 · GPT-5.5 전환과 서브에이전트 검토
+
+- OpenAI는 9월 14일 GPT-5.5를 10월 14일 ChatGPT·ChatGPT Work·Codex의 모든 플랜에서 종료한다고 공지했습니다. 개인·Business·Enterprise·Edu가 포함되며 OpenAI API는 대상이 아닙니다. ChatGPT 로그인 Codex에서는 gpt-5.5를 gpt-5.6-sol로 전환하세요.
+- 10월 14일 전 워크스페이스 기본값, 저장된 모델 설정, 관리 설정, custom agent, 예약 작업, 모델을 지정하는 스크립트·명령을 점검하세요. 해당 사용자와 클라이언트에서 Sol을 선택할 수 있는지 확인한 뒤 같은 입력과 완료 기준으로 시험하세요. 설정 변경만으로 모델 접근 권한이 생기지는 않습니다.
+- 현재 로컬 Codex 앱·CLI·IDE는 사용자의 직접 요청 또는 적용되는 프로젝트·스킬 지침에 따라 서브에이전트를 시작합니다. ChatGPT Work 웹의 Ultra는 지원 모델·계정에서 적합한 작업을 자율적으로 위임할 수 있고, 다른 강도에서는 직접 요청하세요. 각 에이전트의 모델·도구 작업도 토큰을 소비합니다.
+- VB는 직접 만드는 프롬프트·워크플로에서 메인 에이전트가 구현하는 동안 서브에이전트 한 명에게 검토를 맡긴다고 설명했습니다. Eric은 에이전트끼리 재검토하면서 사용량이 늘 수 있다고 지적했습니다. 편집 예시: “검토 에이전트 한 명에게 범위가 정해진 변경을 읽고 근거가 있는 문제만 보고하게 하세요. 메인은 독립적인 작업을 계속하세요.” 개인 경험이며 보편적인 인원 제한이나 품질·절감 보장이 아닙니다. VB는 Ultra에는 기본 설정을 권했습니다.
+- Sources: [Models](https://learn.chatgpt.com/docs/models#gpt-55-retirement), [Workspace model availability](https://learn.chatgpt.com/docs/enterprise/workspace-model-availability#prepare-for-the-gpt-55-retirement), [Subagents](https://learn.chatgpt.com/docs/agent-configuration/subagents), [VB](https://x.com/reach_vb/status/2100000637291205055), [Eric](https://x.com/pvncher/status/2099995741036933505), [VB on Ultra](https://x.com/reach_vb/status/2100010914757947557).
 
 ## 9월 15일 · Arch Linux 설치와 진행 중 검토
 

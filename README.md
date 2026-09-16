@@ -10,12 +10,20 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: September 15, 2026</strong><br/>
+  <strong>Last updated: September 16, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
 
 ---
+
+## September 16 · GPT-5.5 migration and subagent review
+
+- OpenAI announced on September 14 that GPT-5.5 will retire from ChatGPT, ChatGPT Work, and Codex on October 14 across all plans, including consumer, Business, Enterprise, and Edu. The OpenAI API is unaffected. For Codex with ChatGPT sign-in, switch from gpt-5.5 to gpt-5.6-sol.
+- Before October 14, check workspace defaults, saved model settings, managed configurations, custom agents, scheduled tasks, and scripts or commands that select a model. Confirm Sol access for each affected user and client, then test with the same inputs and completion criteria. Changing a setting does not grant model access.
+- Current local Codex app, CLI, and IDE releases spawn subagents after a direct user request or applicable project or skill instructions. In ChatGPT Work on the web, Ultra can delegate suitable work proactively for supported models and eligible accounts; request subagents directly at other levels. Each agent also consumes tokens for its model and tool work.
+- VB described using one subagent to review while the main agent implements in his own prompts and workflows. Eric noted that agents rechecking each other can increase usage. Edited example: “Have one review agent read a bounded change and report only evidence-backed issues. Let the main agent continue independent work.” This is personal experience, not a universal headcount limit or a quality or savings guarantee. VB recommended keeping Ultra defaults.
+- Sources: [Models](https://learn.chatgpt.com/docs/models#gpt-55-retirement), [Workspace model availability](https://learn.chatgpt.com/docs/enterprise/workspace-model-availability#prepare-for-the-gpt-55-retirement), [Subagents](https://learn.chatgpt.com/docs/agent-configuration/subagents), [VB](https://x.com/reach_vb/status/2100000637291205055), [Eric](https://x.com/pvncher/status/2099995741036933505), [VB on Ultra](https://x.com/reach_vb/status/2100010914757947557).
 
 ## September 15 · Arch Linux and progress reviews
 
