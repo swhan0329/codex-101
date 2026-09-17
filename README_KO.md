@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 9월 16일</strong><br/>
+  <strong>최종 업데이트: 2026년 9월 17일</strong><br/>
   페이지의 실제 수정일을 표시하며, 모델 안내에는 공식 출처와 확인 범위를 함께 제공합니다.
 </p>
 
@@ -20,6 +20,12 @@
 </p>
 
 ---
+
+## 9월 17일 · 빠른 진행 요청과 Fast 설정
+
+VB는 Astra에 말로 빠른 진행을 요청한 경험을 공유하며 /fast를 뜻하는 것이 아니라고 설명했습니다. 편집 예시: “빠르게 진행해 주세요. 요청한 범위와 완료 기준을 지키고, 관련 검증이 통과하면 결과를 알려주세요.” 같은 작업에서 결과·소요 시간·사용량을 비교하세요. 개인 경험이며 속도·정확도·비용 절감 보장은 아닙니다. CLI의 /fast status로 실제 설정을 확인하세요. Astra Fast는 제공되는 환경에서 Standard 대비 2.5배의 ChatGPT 크레딧을 소비하며, API 요금은 별도입니다.
+
+[VB](https://x.com/reach_vb/status/2100076208239067377) · [VB /fast](https://x.com/reach_vb/status/2100127257075265687) · [Speed](https://learn.chatgpt.com/docs/agent-configuration/speed)
 
 ## 9월 16일 · GPT-5.5 전환과 서브에이전트 검토
 

@@ -10,12 +10,18 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: September 16, 2026</strong><br/>
+  <strong>Last updated: September 17, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
 
 ---
+
+## September 17 · Speed requests and Fast mode
+
+VB shared his experience asking Astra to work quickly and clarified that he meant a prompt, not /fast. Edited example: “Work quickly. Preserve the requested scope and completion criteria, then report the result once relevant checks pass.” Compare results, elapsed time, and usage on the same task. This is personal experience, not a speed, accuracy, or savings guarantee. Check the actual CLI setting with /fast status. Where available, Astra Fast consumes 2.5x the Standard ChatGPT credits; API pricing is separate.
+
+[VB](https://x.com/reach_vb/status/2100076208239067377) · [VB /fast](https://x.com/reach_vb/status/2100127257075265687) · [Speed](https://learn.chatgpt.com/docs/agent-configuration/speed)
 
 ## September 16 · GPT-5.5 migration and subagent review
 

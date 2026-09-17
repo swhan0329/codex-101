@@ -1,6 +1,11 @@
 // i18n translation data
 const translations = {
     ko: {
+        speed_prompt_t: "빠르게 진행해 달라는 요청과 Fast 설정 구분",
+        speed_prompt_d: "VB는 Astra에 말로 빠른 진행을 요청한 경험을 공유하며 /fast를 뜻하는 것이 아니라고 설명했습니다. 편집 예시: “빠르게 진행해 주세요. 요청한 범위와 완료 기준을 지키고, 관련 검증이 통과하면 결과를 알려주세요.” 같은 작업에서 결과·소요 시간·사용량을 비교하세요. 개인 경험이며 속도·정확도·비용 절감 보장은 아닙니다. CLI의 /fast status로 실제 설정을 확인하세요. Astra Fast는 제공되는 환경에서 Standard 대비 2.5배의 ChatGPT 크레딧을 소비하며, API 요금은 별도입니다.",
+        changelog_sep17_t: "9월 17일 · 빠른 진행 요청과 Fast 설정",
+        changelog_sep17_d: "VB의 원문·후속 설명을 바탕으로 빠른 진행을 요청하는 예시와 /fast 설정·크레딧의 차이를 정리했습니다.",
+
         retire55_t: "GPT-5.5 종료 예정 · 2026년 10월 14일",
         retire55_d: "OpenAI는 9월 14일 GPT-5.5를 10월 14일 ChatGPT·ChatGPT Work·Codex의 모든 플랜에서 종료한다고 공지했습니다. 개인·Business·Enterprise·Edu가 포함되며 OpenAI API는 대상이 아닙니다. ChatGPT 로그인 Codex에서는 gpt-5.5를 gpt-5.6-sol로 전환하세요.",
         retire55_steps: "10월 14일 전 워크스페이스 기본값, 저장된 모델 설정, 관리 설정, custom agent, 예약 작업, 모델을 지정하는 스크립트·명령을 점검하세요. 해당 사용자와 클라이언트에서 Sol을 선택할 수 있는지 확인한 뒤 같은 입력과 완료 기준으로 시험하세요. 설정 변경만으로 모델 접근 권한이 생기지는 않습니다.",
@@ -1011,6 +1016,11 @@ const translations = {
     },
 
     en: {
+        speed_prompt_t: "Separate a request to work quickly from Fast mode",
+        speed_prompt_d: "VB shared his experience asking Astra to work quickly and clarified that he meant a prompt, not /fast. Edited example: “Work quickly. Preserve the requested scope and completion criteria, then report the result once relevant checks pass.” Compare results, elapsed time, and usage on the same task. This is personal experience, not a speed, accuracy, or savings guarantee. Check the actual CLI setting with /fast status. Where available, Astra Fast consumes 2.5x the Standard ChatGPT credits; API pricing is separate.",
+        changelog_sep17_t: "September 17 · Speed requests and Fast mode",
+        changelog_sep17_d: "Added a bounded speed-request example from VB’s original post and clarification, distinguishing it from /fast settings and credit consumption.",
+
         retire55_t: "GPT-5.5 retirement planned · October 14, 2026",
         retire55_d: "OpenAI announced on September 14 that GPT-5.5 will retire from ChatGPT, ChatGPT Work, and Codex on October 14 across all plans, including consumer, Business, Enterprise, and Edu. The OpenAI API is unaffected. For Codex with ChatGPT sign-in, switch from gpt-5.5 to gpt-5.6-sol.",
         retire55_steps: "Before October 14, check workspace defaults, saved model settings, managed configurations, custom agents, scheduled tasks, and scripts or commands that select a model. Confirm Sol access for each affected user and client, then test with the same inputs and completion criteria. Changing a setting does not grant model access.",
