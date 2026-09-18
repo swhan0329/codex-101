@@ -10,12 +10,21 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: September 17, 2026</strong><br/>
+  <strong>Last updated: September 18, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
 
 ---
+
+## September 18 · CLI 0.155 and Appshot scope
+
+- Released September 17. Update with npm install -g @openai/codex@0.155.0 and check codex --version. On supported builds, enable voice through /experimental, then start a conversation with /voice. Live transcripts and microphone controls are included; this does not establish availability on every platform or account.
+- The terminal status row shows live reasoning summaries and completion timestamps after successful turns. The agents overview supports hiding, archiving, and deleting tasks. Clean managed worktrees now show ownership details and require deletion confirmation. Check the target task and checkout before deleting.
+- Local TUI sessions on supported Macs can use Touch ID verification for MCP requests. Follow MCP reconnect guidance when OAuth token refresh fails. Switching accounts invalidates the previous identity’s remote sessions, WebSocket state, and model catalog caches.
+- VB highlighted Windows Appshots and the app text they can supply alongside the image. Bring the relevant window to the front, press both Alt keys on Windows or both Command keys on macOS, then describe the task. Official docs limit capture to the frontmost window, but text exposed outside the visible scroll area may be included. Google Docs, Gmail, Sheets, and Slides may supply only a screenshot; use a connected plugin or the source file when the full content matters.
+
+[CLI 0.155 changelog](https://learn.chatgpt.com/docs/changelog) · [Appshots](https://learn.chatgpt.com/docs/appshots) · [VB](https://x.com/reach_vb/status/2100729426077999245)
 
 ## September 17 · Speed requests and Fast mode
 

@@ -1,6 +1,14 @@
 // i18n translation data
 const translations = {
     ko: {
+        cli155_t: "CLI 0.155 · 실험적 음성 대화와 작업 관리",
+        cli155_voice: "9월 17일 릴리스입니다. npm install -g @openai/codex@0.155.0으로 업데이트하고 codex --version으로 확인하세요. 지원 빌드에서는 /experimental에서 음성 기능을 켠 뒤 /voice로 대화를 시작할 수 있습니다. 실시간 전사와 마이크 제어가 포함되며, 모든 플랫폼·계정에서 제공된다는 뜻은 아닙니다.",
+        cli155_tasks: "터미널 상태 줄에 진행 중 추론 요약과 성공한 turn의 완료 시각이 표시됩니다. agents overview에서 작업 숨기기·보관·삭제를 지원하며, 관리되는 깨끗한 worktree는 소유 정보를 확인하고 삭제를 확인하는 절차가 추가됐습니다. 삭제 전에 대상 작업과 checkout을 확인하세요.",
+        cli155_auth: "지원되는 Mac의 로컬 TUI 세션에서는 MCP 요청에 Touch ID 확인을 사용할 수 있습니다. OAuth 토큰 갱신이 실패하면 MCP 재연결 안내를 따르세요. 계정을 전환하면 이전 계정의 원격 세션·WebSocket 상태·모델 카탈로그 캐시가 무효화됩니다.",
+        appshot_scope_t: "Appshot은 맨 앞 창과 제공되는 텍스트를 함께 전달",
+        appshot_scope_d: "VB는 Windows Appshots를 소개하며 이미지 외에 앱이 제공하는 텍스트도 맥락으로 쓴다고 설명했습니다. 공유할 창을 맨 앞으로 가져오고 Windows는 양쪽 Alt, macOS는 양쪽 Command를 누른 뒤 필요한 작업을 적으세요. 공식 문서상 맨 앞 창만 캡처하지만 앱이 노출한 스크롤 밖 텍스트도 포함될 수 있습니다. Google Docs·Gmail·Sheets·Slides는 화면 이미지만 전달될 수 있으므로 전체 내용이 필요하면 연결된 plugin이나 원본 파일로 확인하세요.",
+        changelog_sep18_t: "9월 18일 · CLI 0.155와 Appshot 범위",
+        changelog_sep18_d: "실험적 CLI 음성 대화, 작업·worktree 관리, MCP 인증 안내와 VB 원문을 바탕으로 Appshot 캡처 범위·텍스트 한계를 정리했습니다.",
         speed_prompt_t: "빠르게 진행해 달라는 요청과 Fast 설정 구분",
         speed_prompt_d: "VB는 Astra에 말로 빠른 진행을 요청한 경험을 공유하며 /fast를 뜻하는 것이 아니라고 설명했습니다. 편집 예시: “빠르게 진행해 주세요. 요청한 범위와 완료 기준을 지키고, 관련 검증이 통과하면 결과를 알려주세요.” 같은 작업에서 결과·소요 시간·사용량을 비교하세요. 개인 경험이며 속도·정확도·비용 절감 보장은 아닙니다. CLI의 /fast status로 실제 설정을 확인하세요. Astra Fast는 제공되는 환경에서 Standard 대비 2.5배의 ChatGPT 크레딧을 소비하며, API 요금은 별도입니다.",
         changelog_sep17_t: "9월 17일 · 빠른 진행 요청과 Fast 설정",
@@ -1016,6 +1024,14 @@ const translations = {
     },
 
     en: {
+        cli155_t: "CLI 0.155 · Experimental voice and task management",
+        cli155_voice: "Released September 17. Update with npm install -g @openai/codex@0.155.0 and check codex --version. On supported builds, enable voice through /experimental, then start a conversation with /voice. Live transcripts and microphone controls are included; this does not establish availability on every platform or account.",
+        cli155_tasks: "The terminal status row shows live reasoning summaries and completion timestamps after successful turns. The agents overview supports hiding, archiving, and deleting tasks. Clean managed worktrees now show ownership details and require deletion confirmation. Check the target task and checkout before deleting.",
+        cli155_auth: "Local TUI sessions on supported Macs can use Touch ID verification for MCP requests. Follow MCP reconnect guidance when OAuth token refresh fails. Switching accounts invalidates the previous identity’s remote sessions, WebSocket state, and model catalog caches.",
+        appshot_scope_t: "Share the frontmost window and its available text",
+        appshot_scope_d: "VB highlighted Windows Appshots and the app text they can supply alongside the image. Bring the relevant window to the front, press both Alt keys on Windows or both Command keys on macOS, then describe the task. Official docs limit capture to the frontmost window, but text exposed outside the visible scroll area may be included. Google Docs, Gmail, Sheets, and Slides may supply only a screenshot; use a connected plugin or the source file when the full content matters.",
+        changelog_sep18_t: "September 18 · CLI 0.155 and Appshot scope",
+        changelog_sep18_d: "Added experimental CLI voice, task and worktree management, MCP authentication guidance, and Appshot capture boundaries informed by VB’s original post.",
         speed_prompt_t: "Separate a request to work quickly from Fast mode",
         speed_prompt_d: "VB shared his experience asking Astra to work quickly and clarified that he meant a prompt, not /fast. Edited example: “Work quickly. Preserve the requested scope and completion criteria, then report the result once relevant checks pass.” Compare results, elapsed time, and usage on the same task. This is personal experience, not a speed, accuracy, or savings guarantee. Check the actual CLI setting with /fast status. Where available, Astra Fast consumes 2.5x the Standard ChatGPT credits; API pricing is separate.",
         changelog_sep17_t: "September 17 · Speed requests and Fast mode",

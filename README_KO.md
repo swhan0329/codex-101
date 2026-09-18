@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 9월 17일</strong><br/>
+  <strong>최종 업데이트: 2026년 9월 18일</strong><br/>
   페이지의 실제 수정일을 표시하며, 모델 안내에는 공식 출처와 확인 범위를 함께 제공합니다.
 </p>
 
@@ -20,6 +20,15 @@
 </p>
 
 ---
+
+## 9월 18일 · CLI 0.155와 Appshot 범위
+
+- 9월 17일 릴리스입니다. npm install -g @openai/codex@0.155.0으로 업데이트하고 codex --version으로 확인하세요. 지원 빌드에서는 /experimental에서 음성 기능을 켠 뒤 /voice로 대화를 시작할 수 있습니다. 실시간 전사와 마이크 제어가 포함되며, 모든 플랫폼·계정에서 제공된다는 뜻은 아닙니다.
+- 터미널 상태 줄에 진행 중 추론 요약과 성공한 turn의 완료 시각이 표시됩니다. agents overview에서 작업 숨기기·보관·삭제를 지원하며, 관리되는 깨끗한 worktree는 소유 정보를 확인하고 삭제를 확인하는 절차가 추가됐습니다. 삭제 전에 대상 작업과 checkout을 확인하세요.
+- 지원되는 Mac의 로컬 TUI 세션에서는 MCP 요청에 Touch ID 확인을 사용할 수 있습니다. OAuth 토큰 갱신이 실패하면 MCP 재연결 안내를 따르세요. 계정을 전환하면 이전 계정의 원격 세션·WebSocket 상태·모델 카탈로그 캐시가 무효화됩니다.
+- VB는 Windows Appshots를 소개하며 이미지 외에 앱이 제공하는 텍스트도 맥락으로 쓴다고 설명했습니다. 공유할 창을 맨 앞으로 가져오고 Windows는 양쪽 Alt, macOS는 양쪽 Command를 누른 뒤 필요한 작업을 적으세요. 공식 문서상 맨 앞 창만 캡처하지만 앱이 노출한 스크롤 밖 텍스트도 포함될 수 있습니다. Google Docs·Gmail·Sheets·Slides는 화면 이미지만 전달될 수 있으므로 전체 내용이 필요하면 연결된 plugin이나 원본 파일로 확인하세요.
+
+[CLI 0.155 changelog](https://learn.chatgpt.com/docs/changelog) · [Appshots](https://learn.chatgpt.com/docs/appshots) · [VB](https://x.com/reach_vb/status/2100729426077999245)
 
 ## 9월 17일 · 빠른 진행 요청과 Fast 설정
 
