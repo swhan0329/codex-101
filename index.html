@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="style.css?v=20260906-astra-facts" />
 </head>
 
-<body data-page="home" data-updated="2026-09-18">
+<body data-page="home" data-updated="2026-09-19">
     <!-- Language Toggle -->
     <nav class="top-bar">
         <div class="top-bar-inner">
@@ -51,7 +51,7 @@
                     <p class="hero-badge">
                         <span data-i18n="hero_badge_prefix">공식 문서 기반 · 실무 실행 가이드</span>
                         <span aria-hidden="true"> · </span>
-                        <span class="live-date" data-date-format="long">2026년 9월 18일</span>
+                        <span class="live-date" data-date-format="long">2026년 9월 19일</span>
                     </p>
                     <h1 class="hero-title" data-i18n="hero_title"><span class="hero-title-lead">OpenAI Codex를</span><span class="hero-title-focus">실무에 바로 붙이는 가이드</span></h1>
                     <p class="hero-sub" data-i18n="hero_sub"><span class="hero-sub-lead">CLI부터 데스크톱 앱·IDE·Web·Mobile까지, 한 흐름으로.</span><span class="hero-sub-detail">설치·권한·Git·자동화·프롬프팅을 최신 공식 문서 기준의 실행 순서로 정리했습니다.</span></p>
@@ -540,36 +540,12 @@
                             </div>
                         </div>
                     </div>
-                    <!-- GPT-5.3-Codex-Spark -->
-                    <div class="model-card">
-                        <div class="model-banner">gpt-5.3-codex-spark</div>
+                    <div class="model-card" id="spark-model-status" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere">
+                        <div class="model-banner" data-i18n="spark_retire_t">Spark 종료 · 2026년 9월 14일</div>
                         <div class="model-body">
-                            <p class="model-desc" data-i18n="m3_f">텍스트 전용 리서치 프리뷰 모델. 거의 즉각적인 실시간 코딩 반복에 최적화되었으며 ChatGPT Pro
-                                사용자에게 제공됩니다.</p>
-<p data-i18n="spark_retire_d">Tibo는 2026년 9월 11일 GPT-5.3-Codex-Spark를 다음 주에 종료할 예정이라고 발표했습니다. 정확한 종료일은 명시하지 않았습니다. 현재 Models 문서에는 Pro용 research preview로 남아 있으므로 종료 완료로 읽지 마세요. 새 기본값으로 저장하기 전 선택기를 확인하고 기존 설정의 Spark 참조를 점검하세요.</p><p class="command-refs"><a href="https://x.com/thsottiaux/status/2098300998968357218" target="_blank" rel="noopener noreferrer">Tibo · 2026-09-11 KST</a></p>
-                            <div class="model-cmd">codex -m gpt-5.3-codex-spark</div>
-                            <div class="model-features">
-                                <div class="model-feat-row"><span class="model-feat-label"
-                                        data-i18n="feat_cap">Capability</span><span class="model-feat-value"><span
-                                            class="dot-filled">✦</span><span class="dot-filled">✦</span><span
-                                            class="dot-filled">✦</span></span></div>
-                                <div class="model-feat-row"><span class="model-feat-label"
-                                        data-i18n="feat_spd">Speed</span><span class="model-feat-value"><span
-                                            class="dot-filled">⚡</span><span class="dot-filled">⚡</span><span
-                                            class="dot-filled">⚡</span><span class="dot-filled">⚡</span><span
-                                            class="dot-filled">⚡</span></span></div>
-                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cli">Codex
-                                        CLI & SDK</span><span class="check-yes">✅</span></div>
-                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_app">Codex
-                                        app & IDE extension</span><span class="check-yes">✅</span></div>
-                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cloud">Codex
-                                        Cloud</span><span class="check-no">❌</span></div>
-                                <div class="model-feat-row"><span class="model-feat-label"
-                                        data-i18n="feat_credits">ChatGPT Credits</span><span class="check-no">❌</span>
-                                </div>
-                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_api">API
-                                        Access</span><span class="check-no">❌</span></div>
-                            </div>
+                            <p class="model-desc" style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="m3_f">2026년 2월 12일 공개된 텍스트 전용 research preview. 9월 14일 종료되어 현재 선택할 수 없습니다.</p>
+                            <p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="spark_retire_d">OpenAI 변경 기록은 GPT-5.3-Codex-Spark가 2026년 9월 14일 종료되었다고 명시합니다. ChatGPT 데스크톱 앱·Codex CLI·IDE에서 research preview를 더 이상 사용할 수 없습니다. 저장된 설정·custom agent·스크립트의 gpt-5.3-codex-spark를 현재 계정에서 사용할 수 있는 추천 모델로 바꾸세요. 빠른 응답이 필요하면 지원 모델의 Fast 설정과 크레딧을 확인하세요.</p>
+                            <p class="command-refs"><a href="https://learn.chatgpt.com/docs/changelog#codex-2026-09-14-codex-spark-deprecation" target="_blank" rel="noopener noreferrer">OpenAI · 2026-09-14</a></p>
                         </div>
                     </div>
                 </div>
@@ -757,7 +733,7 @@
                                     <tr>
                                         <td>Pro</td>
                                         <td>From $100/mo</td>
-                                        <td data-i18n="s4_codex_pro">Pro 5x / Pro 20x·priority processing. Spark는 Tibo의 9월 11일 발표에 따라 다음 주 종료 예정입니다.</td>
+                                        <td data-i18n="s4_codex_pro">Pro 5x / Pro 20x 사용량. Spark research preview는 2026년 9월 14일 종료되었습니다.</td>
                                     </tr>
                                     <tr>
                                         <td>Business</td>
@@ -853,7 +829,7 @@
                     </div>
                 </div>
 
-<div class="callout" id="spark-retirement" style="word-break: keep-all; overflow-wrap: anywhere"><h3 data-i18n="spark_retire_t">Spark 종료 예정 · 9월 11일 발표</h3><p data-i18n="spark_retire_d">Tibo는 2026년 9월 11일 GPT-5.3-Codex-Spark를 다음 주에 종료할 예정이라고 발표했습니다. 정확한 종료일은 명시하지 않았습니다. 현재 Models 문서에는 Pro용 research preview로 남아 있으므로 종료 완료로 읽지 마세요. 새 기본값으로 저장하기 전 선택기를 확인하고 기존 설정의 Spark 참조를 점검하세요.</p><p class="command-refs"><a href="https://x.com/thsottiaux/status/2098300998968357218" target="_blank" rel="noopener noreferrer">Tibo · X</a></p></div>
+<div class="callout" id="spark-retirement" style="word-break: keep-all; overflow-wrap: anywhere"><h3 data-i18n="spark_retire_t">Spark 종료 · 2026년 9월 14일</h3><p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="spark_retire_d">OpenAI 변경 기록은 GPT-5.3-Codex-Spark가 2026년 9월 14일 종료되었다고 명시합니다. ChatGPT 데스크톱 앱·Codex CLI·IDE에서 research preview를 더 이상 사용할 수 없습니다. 저장된 설정·custom agent·스크립트의 gpt-5.3-codex-spark를 현재 계정에서 사용할 수 있는 추천 모델로 바꾸세요. 빠른 응답이 필요하면 지원 모델의 Fast 설정과 크레딧을 확인하세요.</p><p class="command-refs"><a href="https://learn.chatgpt.com/docs/changelog#codex-2026-09-14-codex-spark-deprecation" target="_blank" rel="noopener noreferrer">OpenAI · 2026-09-14</a></p></div>
 <div class="callout" style="word-break: keep-all; overflow-wrap: anywhere"><h3 data-i18n="pro_pause_t">9월 11일 KST · Pro $200 신규 가입 안내</h3><p data-i18n="pro_pause_d">Tibo는 기존 사용자의 Astra 이용을 유지하기 위해 월 $200 Pro 신규 구독을 일시 중단한다고 발표했습니다. 기존 계정에는 영향이 없고 다른 플랜·API는 계속 제공한다고 설명했습니다. 가입 가능 여부는 결제 화면에서 다시 확인하세요.</p><p class="command-refs"><a href="https://x.com/thsottiaux/status/2098113585683808624" target="_blank" rel="noopener noreferrer">Tibo · X · 2026-09-11 KST</a></p></div>
                 <p class="command-refs" data-i18n-html="s4_refs">출처: <a href="https://developers.openai.com/codex/quickstart/" target="_blank">Quickstart</a> · <a href="https://developers.openai.com/codex/pricing/" target="_blank">Codex pricing</a> · <a href="https://help.openai.com/en/articles/20001106-codex-rate-card" target="_blank">Codex rate card</a> · <a href="https://developers.openai.com/codex/speed" target="_blank">Speed</a> · <a href="https://openai.com/index/codex-flexible-pricing-for-teams/" target="_blank">Pay-as-you-go pricing for teams</a></p>
             </section>
@@ -1247,7 +1223,7 @@ then verify the page again and attach the screenshot result.</code></pre>
                     </div>
                     <div class="tip-card" id="s7-plugins">
                         <h4 data-i18n="s7_pb_plugin_t">Plugins</h4>
-                        <p data-i18n="s7_pb_plugin_d">skills, app integrations, MCP server를 묶어 배포하는 단위입니다. 반복 프롬프트가 안정화된 뒤 팀에 공유할 때 plugin으로 올리고, 설치 후에는 작업 설명만 하거나 `@plugin`으로 특정 workflow를 직접 호출하는 방식이 좋습니다.</p>
+                        <p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="s7_pb_plugin_d">skills, app integrations, MCP server를 묶어 배포하는 단위입니다. 반복 프롬프트가 안정화된 뒤 팀에 공유할 때 plugin으로 올리고, 설치 후에는 작업 설명만 하거나 `@plugin`으로 특정 workflow를 직접 호출하는 방식이 좋습니다. Apple Messages는 이번 릴리스의 Apple Silicon(arm64)용 macOS ChatGPT desktop app에서 Codex 또는 ChatGPT Work로 쓸 수 있으므로, 필요한 macOS 권한을 준 뒤 메시지와 수신자를 검토하고 전송을 승인하세요. Full access에서는 전송 확인이 막힐 수 있어 Ask for approval 또는 Approve for me가 필요합니다.</p>
                     </div>
                 </div>
                 <p class="command-refs" data-i18n-html="s7_refs">출처: <a href="https://developers.openai.com/codex/app" target="_blank">Codex app</a> · <a href="https://developers.openai.com/codex/app/features" target="_blank">App features</a> · <a href="https://developers.openai.com/codex/app/browser" target="_blank">In-app browser</a> · <a href="https://learn.chatgpt.com/docs/chrome-extension" target="_blank">Browser extension</a> · <a href="https://learn.chatgpt.com/docs/webmcp" target="_blank">Site tools (WebMCP)</a> · <a href="https://developers.openai.com/codex/app/automations" target="_blank">App automations</a> · <a href="https://learn.chatgpt.com/docs/plugins#app-use-apple-messages-from-codex" target="_blank">Apple Messages plugin</a> · <a href="https://learn.chatgpt.com/docs/use-chatgpt#share-a-read-only-snapshot-of-a-codex-thread" target="_blank">읽기 전용 thread snapshot</a> · <a href="https://openai.com/index/codex-for-almost-everything/" target="_blank">Codex for (almost) everything</a></p>
@@ -2366,7 +2342,7 @@ codex --search "optimize with Next.js 15"
                     </details>
                     <details>
                         <summary data-i18n="faq4_q">GPT-5.3-Codex-Spark는 뭔가요?</summary>
-                        <p data-i18n="faq4_a">2026년 2월 12일 공개된 텍스트 중심 초고속 코딩 모델입니다. ChatGPT Pro용 research preview가 기본 경로이고, Pricing 문서도 API launch 시점에는 제공되지 않는다고 설명합니다. 발표문은 소수 디자인 파트너 대상 제한적 API 테스트와 별도 사용 한도를 함께 언급합니다. Tibo의 2026년 9월 11일 발표에 따르면 Spark는 다음 주 종료 예정이며 정확한 날짜는 미정입니다.</p>
+                        <p data-i18n="faq4_a">2026년 2월 12일 공개된 텍스트 중심 코딩 research preview로, 9월 14일 종료되었습니다. ChatGPT 데스크톱 앱·Codex CLI·IDE에서 더 이상 제공되지 않습니다. 기존 Spark 설정은 현재 추천 모델로 변경하세요. 발표 당시의 제한적 API 테스트 안내를 현재 API 제공 근거로 쓰지 마세요.</p>
                     </details>
                     <details>
                         <summary data-i18n="faq5_q">오프라인에서 사용 가능한가요?</summary>
@@ -2386,6 +2362,7 @@ codex --search "optimize with Next.js 15"
                 <p data-i18n="field_tips_intro">OpenAI Codex, Developer Experience, 데이터/보안/제품 담당자들이 공개적으로 공유한 실전 사용법을 사람별 원글 링크와 함께 정리했습니다. 제품의 사용 가능 여부와 설정 절차는 아래 공식 문서 링크를 함께 확인하세요.</p>
                 <p class="command-refs"><a href="https://x.com/pvncher/status/2098488444443939186" target="_blank" rel="noopener noreferrer">Eric · /feedback</a> · <a href="https://learn.chatgpt.com/docs/reference/troubleshooting#feedback-and-logs" target="_blank" rel="noopener noreferrer">Feedback &amp; logs</a></p>
 <div class="field-tip-grid">
+<article id="plugin-accounts" class="field-tip-card" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><span class="field-tip-person">VB Srivastav · 2026-09-19 KST</span><h3 data-i18n="multi_account_t">플러그인 계정은 작업 요청에 명시</h3><p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="multi_account_d">VB는 ChatGPT 플러그인에 여러 계정을 연결하는 기능을 소개했습니다. 플러그인 설정에서 추가 계정을 연결한 뒤 사용할 계정을 요청에 적으세요. 편집 예시: “회사 Gmail 계정의 오늘 받은 메일만 요약하고, 사용한 계정을 결과에 표시해 주세요.” 공식 문서상 모델은 요청에 따라 연결된 계정을 선택하며, 각 호출은 해당 계정의 인증·권한으로 실행됩니다. 플러그인·계정의 실제 연결 옵션을 확인하세요. 이는 ChatGPT 로그인 계정 전환 기능을 뜻하지 않습니다.</p><p class="command-refs"><a href="https://x.com/reach_vb/status/2100989529465188597" target="_blank" rel="noopener noreferrer">VB</a> <a href="https://developers.openai.com/plugins/build/auth#support-multiple-accounts" target="_blank" rel="noopener noreferrer">OpenAI Docs</a></p></article>
 <article id="appshot-scope" class="field-tip-card" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><span class="field-tip-person">VB Srivastav · 2026-09-18 KST</span><h3 data-i18n="appshot_scope_t">Appshot은 맨 앞 창과 제공되는 텍스트를 함께 전달</h3><p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="appshot_scope_d">VB는 Windows Appshots를 소개하며 이미지 외에 앱이 제공하는 텍스트도 맥락으로 쓴다고 설명했습니다. 공유할 창을 맨 앞으로 가져오고 Windows는 양쪽 Alt, macOS는 양쪽 Command를 누른 뒤 필요한 작업을 적으세요. 공식 문서상 맨 앞 창만 캡처하지만 앱이 노출한 스크롤 밖 텍스트도 포함될 수 있습니다. Google Docs·Gmail·Sheets·Slides는 화면 이미지만 전달될 수 있으므로 전체 내용이 필요하면 연결된 plugin이나 원본 파일로 확인하세요.</p><p class="command-refs"><a href="https://x.com/reach_vb/status/2100729426077999245" target="_blank" rel="noopener noreferrer">VB</a> <a href="https://learn.chatgpt.com/docs/appshots" target="_blank" rel="noopener noreferrer">Appshots</a></p></article>
 <article id="speed-prompt" class="field-tip-card" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><span class="field-tip-person">VB Srivastav · 2026-09-16 KST</span><h3 data-i18n="speed_prompt_t">빠르게 진행해 달라는 요청과 Fast 설정 구분</h3><p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="speed_prompt_d">VB는 Astra에 말로 빠른 진행을 요청한 경험을 공유하며 /fast를 뜻하는 것이 아니라고 설명했습니다. 편집 예시: “빠르게 진행해 주세요. 요청한 범위와 완료 기준을 지키고, 관련 검증이 통과하면 결과를 알려주세요.” 같은 작업에서 결과·소요 시간·사용량을 비교하세요. 개인 경험이며 속도·정확도·비용 절감 보장은 아닙니다. CLI의 /fast status로 실제 설정을 확인하세요. Astra Fast는 제공되는 환경에서 Standard 대비 2.5배의 ChatGPT 크레딧을 소비하며, API 요금은 별도입니다.</p><p class="command-refs"><a href="https://x.com/reach_vb/status/2100076208239067377" target="_blank" rel="noopener noreferrer">VB</a> <a href="https://x.com/reach_vb/status/2100127257075265687" target="_blank" rel="noopener noreferrer">VB · /fast</a> <a href="https://learn.chatgpt.com/docs/agent-configuration/speed" target="_blank" rel="noopener noreferrer">Speed</a></p></article>
 <article id="one-reviewer" class="field-tip-card" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><span class="field-tip-person">VB Srivastav · Eric Provencher · 2026-09-16 KST</span><h3 data-i18n="one_reviewer_t">직접 구성한 병렬 작업은 검토 한 명부터</h3><p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="one_reviewer_d">VB는 직접 만드는 프롬프트·워크플로에서 메인 에이전트가 구현하는 동안 서브에이전트 한 명에게 검토를 맡긴다고 설명했습니다. Eric은 에이전트끼리 재검토하면서 사용량이 늘 수 있다고 지적했습니다. 편집 예시: “검토 에이전트 한 명에게 범위가 정해진 변경을 읽고 근거가 있는 문제만 보고하게 하세요. 메인은 독립적인 작업을 계속하세요.” 개인 경험이며 보편적인 인원 제한이나 품질·절감 보장이 아닙니다. VB는 Ultra에는 기본 설정을 권했습니다.</p><p class="command-refs"><a href="https://x.com/reach_vb/status/2100000637291205055" target="_blank" rel="noopener noreferrer">VB</a> <a href="https://x.com/pvncher/status/2099995741036933505" target="_blank" rel="noopener noreferrer">Eric</a> <a href="https://x.com/reach_vb/status/2100010914757947557" target="_blank" rel="noopener noreferrer">VB · Ultra</a></p></article>
@@ -2604,10 +2581,11 @@ codex --search "optimize with Next.js 15"
                     </div>
                     <p class="overview-fact-date">
                         <span data-i18n="overview_fact_date_prefix">업데이트 기준일</span>
-                        <span class="live-date" data-date-format="long">2026년 9월 18일</span>
+                        <span class="live-date" data-date-format="long">2026년 9월 19일</span>
                     </p>
                 </div>
                 <ol class="changelog-list" aria-label="Recent update summary">
+<li><strong data-i18n="changelog_sep19_t">9월 19일 · Spark 종료와 플러그인 계정 선택</strong><span data-i18n="changelog_sep19_d">공식 9월 14일 Spark 종료에 맞춰 모델·요금·FAQ·실행 안내를 정정하고, VB의 다중 계정 팁과 Apple Messages의 Apple Silicon 빌드 조건을 반영했습니다.</span></li>
 <li><strong data-i18n="changelog_sep18_t">9월 18일 · CLI 0.155와 Appshot 범위</strong><span data-i18n="changelog_sep18_d">실험적 CLI 음성 대화, 작업·worktree 관리, MCP 인증 안내와 VB 원문을 바탕으로 Appshot 캡처 범위·텍스트 한계를 정리했습니다.</span></li>
 <li><strong data-i18n="changelog_sep17_t">9월 17일 · 빠른 진행 요청과 Fast 설정</strong><span data-i18n="changelog_sep17_d">VB의 원문·후속 설명을 바탕으로 빠른 진행을 요청하는 예시와 /fast 설정·크레딧의 차이를 정리했습니다.</span></li>
 <li><strong data-i18n="changelog_sep16_t">9월 16일 · GPT-5.5 전환과 서브에이전트 검토</strong><span data-i18n="changelog_sep16_d">10월 14일 GPT-5.5 종료 범위와 Sol 전환 체크리스트, 로컬·웹 위임 조건, VB·Eric의 검토 에이전트 운영 팁을 반영했습니다.</span></li>
@@ -2680,14 +2658,14 @@ codex --search "optimize with Next.js 15"
                     href="https://github.com/swhan0329/codex-101" target="_blank">PR을 환영합니다</a>.</p>
             <p class="footer-meta">
                 <span data-i18n="footer_date_prefix">최종 업데이트</span>:
-                        <span class="live-date" data-date-format="long">2026년 9월 18일</span>
+                        <span class="live-date" data-date-format="long">2026년 9월 19일</span>
             </p>
             <p class="footer-meta">Made by <a href="https://github.com/swhan0329" target="_blank">@swhan0329</a></p>
         </div>
     </footer>
 
-    <script src="i18n.js?v=20260918-cli155-appshots"></script>
-    <script src="app.js?v=20260906-astra-facts"></script>
+    <script src="i18n.js?v=20260919-spark-accounts"></script>
+    <script src="app.js?v=20260919-mobile-reveal"></script>
 </body>
 
 </html>

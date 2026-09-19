@@ -10,12 +10,20 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: September 18, 2026</strong><br/>
+  <strong>Last updated: September 19, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
 
 ---
+
+## September 19 · Spark retirement and plugin account selection
+
+- The OpenAI changelog confirms that GPT-5.3-Codex-Spark was deprecated on September 14, 2026. Its research preview is no longer available in the ChatGPT desktop app, Codex CLI, or IDE extension. Replace gpt-5.3-codex-spark in saved configurations, custom agents, and scripts with a recommended model available to your account. For faster responses, check Fast mode and credit usage on a supported model.
+- VB highlighted connecting multiple accounts to ChatGPT plugins. Add another account in the plugin settings, then name the account to use in your request. Edited example: “Summarize only today’s incoming mail from my work Gmail account and identify the account used in the result.” Official docs say the model selects connected accounts based on the request, and each call uses that account’s credentials and permissions. Check the actual connection options for your plugin and account. This is not a ChatGPT sign-in account switcher.
+- For this release, Apple Messages requires the Apple Silicon (arm64) macOS desktop build. Existing send-approval requirements still apply.
+
+[OpenAI changelog](https://learn.chatgpt.com/docs/changelog#codex-2026-09-14-codex-spark-deprecation) · [Plugin accounts](https://developers.openai.com/plugins/build/auth#support-multiple-accounts) · [VB](https://x.com/reach_vb/status/2100989529465188597) · [Apple Messages](https://learn.chatgpt.com/docs/plugins#app-use-apple-messages-from-codex)
 
 ## September 18 · CLI 0.155 and Appshot scope
 
@@ -66,7 +74,7 @@ VB shared his experience asking Astra to work quickly and clarified that he mean
 - Choose a pet or Mini in Settings > Pets. Open Quick Chat with Option+Space on macOS or Windows+Alt+P on Windows, type a request, and press Enter. Add context with @, choose a skill with $, and follow progress with the bell. These chats start outside a project; use the project in the main app when you need its context.
 - Bring the window to the front, then press both Alt keys on Windows or both Command keys on macOS. An Appshot includes the window image and available app text. Check the shortcut and Appshot destination in settings, then describe the task for the attachment. Apps such as Google Docs and Gmail may provide only the screenshot.
 - Windows Appshots open in the main app. On macOS, Automatic starts a new chat in the floating controls when they are open and the main window is in the background. Complete permissions in the main app first.
-- On September 11, 2026, Tibo announced plans to retire GPT-5.3-Codex-Spark the following week, without an exact date. Models still lists the Pro research preview, so this is not confirmation that retirement has happened. Check the picker before saving a new default and review Spark references in existing configurations.
+- Historical note: Tibo announced planned retirement on September 11. The official changelog now confirms retirement on September 14; see the September 19 update above.
 - Eric’s September 11 developer blog recommends precise skill descriptions and a short entry point linking to relevant references. Replace blanket AGENTS.md reading rules with task-specific pointers, and define execution, verification, and stopping criteria in the prompt. Retain guidance needed by Sol or Luna when they share the repository.
 - Eric and VB asked users to submit /feedback from a conversation showing the problem. Describe expected and actual behavior and review whether to include the session or logs. Eric said an X reply with the ID is unnecessary; VB added that if you discuss the issue publicly, include the ID. Submission does not guarantee an individual reply or a resolution date.
 - [Pets](https://learn.chatgpt.com/docs/pets) · [Appshots](https://learn.chatgpt.com/docs/appshots) · [Spark](https://x.com/thsottiaux/status/2098300998968357218) · [Eric](https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra) · [VB](https://x.com/reach_vb/status/2098509751776620654)

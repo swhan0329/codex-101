@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 9월 18일</strong><br/>
+  <strong>최종 업데이트: 2026년 9월 19일</strong><br/>
   페이지의 실제 수정일을 표시하며, 모델 안내에는 공식 출처와 확인 범위를 함께 제공합니다.
 </p>
 
@@ -20,6 +20,14 @@
 </p>
 
 ---
+
+## 9월 19일 · Spark 종료와 플러그인 계정 선택
+
+- OpenAI 변경 기록은 GPT-5.3-Codex-Spark가 2026년 9월 14일 종료되었다고 명시합니다. ChatGPT 데스크톱 앱·Codex CLI·IDE에서 research preview를 더 이상 사용할 수 없습니다. 저장된 설정·custom agent·스크립트의 gpt-5.3-codex-spark를 현재 계정에서 사용할 수 있는 추천 모델로 바꾸세요. 빠른 응답이 필요하면 지원 모델의 Fast 설정과 크레딧을 확인하세요.
+- VB는 ChatGPT 플러그인에 여러 계정을 연결하는 기능을 소개했습니다. 플러그인 설정에서 추가 계정을 연결한 뒤 사용할 계정을 요청에 적으세요. 편집 예시: “회사 Gmail 계정의 오늘 받은 메일만 요약하고, 사용한 계정을 결과에 표시해 주세요.” 공식 문서상 모델은 요청에 따라 연결된 계정을 선택하며, 각 호출은 해당 계정의 인증·권한으로 실행됩니다. 플러그인·계정의 실제 연결 옵션을 확인하세요. 이는 ChatGPT 로그인 계정 전환 기능을 뜻하지 않습니다.
+- 이번 릴리스의 Apple Messages는 Apple Silicon(arm64)용 macOS 데스크톱 앱에서 지원됩니다. 기존 전송 승인 조건도 적용됩니다.
+
+[OpenAI changelog](https://learn.chatgpt.com/docs/changelog#codex-2026-09-14-codex-spark-deprecation) · [Plugin accounts](https://developers.openai.com/plugins/build/auth#support-multiple-accounts) · [VB](https://x.com/reach_vb/status/2100989529465188597) · [Apple Messages](https://learn.chatgpt.com/docs/plugins#app-use-apple-messages-from-codex)
 
 ## 9월 18일 · CLI 0.155와 Appshot 범위
 
@@ -70,7 +78,7 @@ VB는 Astra에 말로 빠른 진행을 요청한 경험을 공유하며 /fast를
 - Settings > Pets에서 펫 또는 Mini를 선택하세요. macOS는 Option+Space, Windows는 Windows+Alt+P로 Quick Chat을 열고 입력 후 Enter로 보냅니다. @로 맥락, $로 스킬을 추가하고 벨 아이콘에서 진행 상황을 확인하세요. 여기서 시작한 대화는 프로젝트 밖에 있으므로 프로젝트 자료가 필요하면 메인 앱의 해당 프로젝트에서 시작하세요.
 - 공유할 창을 맨 앞으로 가져온 뒤 Windows는 양쪽 Alt, macOS는 양쪽 Command를 누르세요. Appshot에는 창 이미지와 앱이 제공하는 텍스트가 포함됩니다. 설정에서 단축키와 Appshot destination을 확인하고 첨부 내용에 필요한 작업을 함께 적으세요. Google Docs·Gmail 등은 화면 이미지만 전달될 수 있습니다.
 - Windows Appshot은 메인 앱에서 열립니다. macOS는 플로팅 컨트롤이 열려 있고 메인 창이 뒤에 있을 때 destination이 Automatic이면 그 컨트롤에서 새 대화를 시작합니다. 권한 설정은 메인 앱에서 먼저 완료하세요.
-- Tibo는 2026년 9월 11일 GPT-5.3-Codex-Spark를 다음 주에 종료할 예정이라고 발표했습니다. 정확한 종료일은 명시하지 않았습니다. 현재 Models 문서에는 Pro용 research preview로 남아 있으므로 종료 완료로 읽지 마세요. 새 기본값으로 저장하기 전 선택기를 확인하고 기존 설정의 Spark 참조를 점검하세요.
+- 이전 기록: Tibo는 9월 11일 종료 계획을 발표했습니다. 이후 공식 변경 기록에서 9월 14일 종료를 확인했습니다. 현재 안내는 위의 9월 19일 갱신을 참고하세요.
 - Eric의 9월 11일 공식 블로그는 스킬 설명에 정확한 적용 조건을 쓰고, 본문은 필요한 문서로 안내하는 짧은 진입점으로 만들라고 제안합니다. AGENTS.md의 매번 전체 문서 읽기 규칙을 작업별로 좁히고, 프롬프트에는 실행·검증·종료 기준을 명시하세요. 함께 쓰는 Sol·Luna에도 필요한 지침은 유지하세요.
 - Eric과 VB는 문제가 나타난 대화에서 /feedback을 보내 달라고 안내했습니다. 기대한 결과와 실제 동작을 적고 세션·로그 포함 여부를 확인하세요. Eric은 X에 ID를 답글로 남길 필요가 없다고 했고, VB는 공개적으로 문제를 설명할 경우 ID도 함께 적으라고 보완했습니다. 제출은 개별 답변이나 해결 시점을 보장하지 않습니다.
 - [Pets](https://learn.chatgpt.com/docs/pets) · [Appshots](https://learn.chatgpt.com/docs/appshots) · [Spark](https://x.com/thsottiaux/status/2098300998968357218) · [Eric](https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra) · [VB](https://x.com/reach_vb/status/2098509751776620654)
