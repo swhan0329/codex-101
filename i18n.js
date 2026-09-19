@@ -1,6 +1,7 @@
 // i18n translation data
 const translations = {
     ko: {
+        spark_status_t: "Spark · 종료됨",
         changelog_sep19_d: "공식 9월 14일 Spark 종료에 맞춰 모델·요금·FAQ·실행 안내를 정정하고, VB의 다중 계정 팁과 Apple Messages의 Apple Silicon 빌드 조건을 반영했습니다.",
         changelog_sep19_t: "9월 19일 · Spark 종료와 플러그인 계정 선택",
         multi_account_d: "VB는 ChatGPT 플러그인에 여러 계정을 연결하는 기능을 소개했습니다. 플러그인 설정에서 추가 계정을 연결한 뒤 사용할 계정을 요청에 적으세요. 편집 예시: “회사 Gmail 계정의 오늘 받은 메일만 요약하고, 사용한 계정을 결과에 표시해 주세요.” 공식 문서상 모델은 요청에 따라 연결된 계정을 선택하며, 각 호출은 해당 계정의 인증·권한으로 실행됩니다. 플러그인·계정의 실제 연결 옵션을 확인하세요. 이는 ChatGPT 로그인 계정 전환 기능을 뜻하지 않습니다.",
@@ -1028,6 +1029,7 @@ const translations = {
     },
 
     en: {
+        spark_status_t: "Spark · Retired",
         changelog_sep19_d: "Corrected model, pricing, FAQ, and launch guidance for the official September 14 Spark retirement; added VB’s multi-account tip and the Apple Silicon build requirement for Apple Messages.",
         changelog_sep19_t: "September 19 · Spark retirement and plugin account selection",
         multi_account_d: "VB highlighted connecting multiple accounts to ChatGPT plugins. Add another account in the plugin settings, then name the account to use in your request. Edited example: “Summarize only today’s incoming mail from my work Gmail account and identify the account used in the result.” Official docs say the model selects connected accounts based on the request, and each call uses that account’s credentials and permissions. Check the actual connection options for your plugin and account. This is not a ChatGPT sign-in account switcher.",
