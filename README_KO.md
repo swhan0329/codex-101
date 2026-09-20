@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 9월 19일</strong><br/>
+  <strong>최종 업데이트: 2026년 9월 20일</strong><br/>
   페이지의 실제 수정일을 표시하며, 모델 안내에는 공식 출처와 확인 범위를 함께 제공합니다.
 </p>
 
@@ -21,6 +21,14 @@
 
 ---
 
+## 9월 20일 · CLI 요약 기본값과 iOS 작업 확인
+
+- 9월 18일 패치로 업데이트하려면 npm install -g @openai/codex@0.155.1을 실행하고 codex --version으로 확인하세요. 0.155.0에서 추가된 실험적 음성 대화는 지원 빌드의 /experimental에서 켠 뒤 /voice로 시작합니다. 실시간 전사와 마이크 제어가 포함되며, 모든 플랫폼·계정에서 제공된다는 뜻은 아닙니다.
+- 0.155.1의 새 로컬 TUI 세션은 추론 요약을 기본으로 끕니다. 요약을 지원하지 않는 제공자의 요청 거절을 막기 위한 수정이며, 명시한 요약 설정은 유지됩니다. 추론 요약 설정과 모델의 추론 강도는 별개입니다. agents overview의 작업 숨기기·보관·삭제와 관리되는 깨끗한 worktree 삭제 확인 절차는 유지됩니다. 삭제 전에 대상 작업과 checkout을 확인하세요.
+- 9월 18일 업데이트부터 새 작업은 프로젝트별 worktree 모드와 설정 환경을 기억합니다. 작업 시작 전 연결 컴퓨터·프로젝트·환경을 확인하세요. 파일 선택기에서 폴더를 만들고, 작성 블록에서 초안 대안을 살펴본 뒤 필요한 내용을 복사할 수 있습니다. 긴 대기 프롬프트는 눌러 펼쳐 확인하세요. 작업을 다시 열었을 때 대기 내용이 누락되거나 오래된 상태로 보이던 문제도 수정됐습니다. 저장소와 실행은 연결된 컴퓨터에 남습니다.
+
+[OpenAI changelog](https://learn.chatgpt.com/docs/changelog#github-release-391752266) · [iOS 1.2026.251](https://learn.chatgpt.com/docs/changelog#codex-2026-09-18-mobile)
+
 ## 9월 19일 · Spark 종료와 플러그인 계정 선택
 
 - OpenAI 변경 기록은 GPT-5.3-Codex-Spark가 2026년 9월 14일 종료되었다고 명시합니다. ChatGPT 데스크톱 앱·Codex CLI·IDE에서 research preview를 더 이상 사용할 수 없습니다. 저장된 설정·custom agent·스크립트의 gpt-5.3-codex-spark를 현재 계정에서 사용할 수 있는 추천 모델로 바꾸세요. 빠른 응답이 필요하면 지원 모델의 Fast 설정과 크레딧을 확인하세요.
@@ -29,7 +37,7 @@
 
 [OpenAI changelog](https://learn.chatgpt.com/docs/changelog#codex-2026-09-14-codex-spark-deprecation) · [Plugin accounts](https://developers.openai.com/plugins/build/auth#support-multiple-accounts) · [VB](https://x.com/reach_vb/status/2100989529465188597) · [Apple Messages](https://learn.chatgpt.com/docs/plugins#app-use-apple-messages-from-codex)
 
-## 9월 18일 · CLI 0.155와 Appshot 범위
+## 9월 18일 · CLI 0.155.0 발표 기록과 Appshot 범위
 
 - 9월 17일 릴리스입니다. npm install -g @openai/codex@0.155.0으로 업데이트하고 codex --version으로 확인하세요. 지원 빌드에서는 /experimental에서 음성 기능을 켠 뒤 /voice로 대화를 시작할 수 있습니다. 실시간 전사와 마이크 제어가 포함되며, 모든 플랫폼·계정에서 제공된다는 뜻은 아닙니다.
 - 터미널 상태 줄에 진행 중 추론 요약과 성공한 turn의 완료 시각이 표시됩니다. agents overview에서 작업 숨기기·보관·삭제를 지원하며, 관리되는 깨끗한 worktree는 소유 정보를 확인하고 삭제를 확인하는 절차가 추가됐습니다. 삭제 전에 대상 작업과 checkout을 확인하세요.

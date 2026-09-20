@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="style.css?v=20260906-astra-facts" />
 </head>
 
-<body data-page="home" data-updated="2026-09-19">
+<body data-page="home" data-updated="2026-09-20">
     <!-- Language Toggle -->
     <nav class="top-bar">
         <div class="top-bar-inner">
@@ -51,7 +51,7 @@
                     <p class="hero-badge">
                         <span data-i18n="hero_badge_prefix">공식 문서 기반 · 실무 실행 가이드</span>
                         <span aria-hidden="true"> · </span>
-                        <span class="live-date" data-date-format="long">2026년 9월 19일</span>
+                        <span class="live-date" data-date-format="long">2026년 9월 20일</span>
                     </p>
                     <h1 class="hero-title" data-i18n="hero_title"><span class="hero-title-lead">OpenAI Codex를</span><span class="hero-title-focus">실무에 바로 붙이는 가이드</span></h1>
                     <p class="hero-sub" data-i18n="hero_sub"><span class="hero-sub-lead">CLI부터 데스크톱 앱·IDE·Web·Mobile까지, 한 흐름으로.</span><span class="hero-sub-detail">설치·권한·Git·자동화·프롬프팅을 최신 공식 문서 기준의 실행 순서로 정리했습니다.</span></p>
@@ -975,11 +975,11 @@ codex --cd /path/to/project
 
 
 <div class="callout" id="cli155" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere">
-<h3 data-i18n="cli155_t">CLI 0.155 · 실험적 음성 대화와 작업 관리</h3>
-<p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="cli155_voice">9월 17일 릴리스입니다. npm install -g @openai/codex@0.155.0으로 업데이트하고 codex --version으로 확인하세요. 지원 빌드에서는 /experimental에서 음성 기능을 켠 뒤 /voice로 대화를 시작할 수 있습니다. 실시간 전사와 마이크 제어가 포함되며, 모든 플랫폼·계정에서 제공된다는 뜻은 아닙니다.</p>
-<p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="cli155_tasks">터미널 상태 줄에 진행 중 추론 요약과 성공한 turn의 완료 시각이 표시됩니다. agents overview에서 작업 숨기기·보관·삭제를 지원하며, 관리되는 깨끗한 worktree는 소유 정보를 확인하고 삭제를 확인하는 절차가 추가됐습니다. 삭제 전에 대상 작업과 checkout을 확인하세요.</p>
+<h3 data-i18n="cli155_t">CLI 0.155.1 · 음성 대화와 추론 요약 기본값</h3>
+<p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="cli155_voice">9월 18일 패치로 업데이트하려면 npm install -g @openai/codex@0.155.1을 실행하고 codex --version으로 확인하세요. 0.155.0에서 추가된 실험적 음성 대화는 지원 빌드의 /experimental에서 켠 뒤 /voice로 시작합니다. 실시간 전사와 마이크 제어가 포함되며, 모든 플랫폼·계정에서 제공된다는 뜻은 아닙니다.</p>
+<p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="cli155_tasks">0.155.1의 새 로컬 TUI 세션은 추론 요약을 기본으로 끕니다. 요약을 지원하지 않는 제공자의 요청 거절을 막기 위한 수정이며, 명시한 요약 설정은 유지됩니다. 추론 요약 설정과 모델의 추론 강도는 별개입니다. agents overview의 작업 숨기기·보관·삭제와 관리되는 깨끗한 worktree 삭제 확인 절차는 유지됩니다. 삭제 전에 대상 작업과 checkout을 확인하세요.</p>
 <p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="cli155_auth">지원되는 Mac의 로컬 TUI 세션에서는 MCP 요청에 Touch ID 확인을 사용할 수 있습니다. OAuth 토큰 갱신이 실패하면 MCP 재연결 안내를 따르세요. 계정을 전환하면 이전 계정의 원격 세션·WebSocket 상태·모델 카탈로그 캐시가 무효화됩니다.</p>
-<p class="command-refs"><a href="https://learn.chatgpt.com/docs/changelog" target="_blank" rel="noopener noreferrer">Codex CLI 0.155.0 · 2026-09-17</a></p>
+<p class="command-refs"><a href="https://learn.chatgpt.com/docs/changelog" target="_blank" rel="noopener noreferrer">Codex CLI 0.155.1 · 2026-09-18</a></p>
 </div>
                 <div class="callout">
                 <h3 data-i18n="cli154_t">CLI 0.154 · 격리 작업과 실행 중 응답</h3>
@@ -1395,6 +1395,11 @@ then verify the page again and attach the screenshot result.</code></pre>
                     <p data-i18n="s9_auto_desc">Codex Web에서 GitHub 연결 후 리뷰 대상 저장소를 선택하고 "Automatic reviews"를 활성화하면 새
                         PR마다 자동 리뷰됩니다. AGENTS.md 규칙 기반 커스터마이징 가능.</p>
                 </div>
+<div class="callout" id="ios251" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere">
+<h3 data-i18n="ios251_t">iOS 1.2026.251 · 프로젝트 설정과 초안 확인</h3>
+<p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="ios251_d">9월 18일 업데이트부터 새 작업은 프로젝트별 worktree 모드와 설정 환경을 기억합니다. 작업 시작 전 연결 컴퓨터·프로젝트·환경을 확인하세요. 파일 선택기에서 폴더를 만들고, 작성 블록에서 초안 대안을 살펴본 뒤 필요한 내용을 복사할 수 있습니다. 긴 대기 프롬프트는 눌러 펼쳐 확인하세요. 작업을 다시 열었을 때 대기 내용이 누락되거나 오래된 상태로 보이던 문제도 수정됐습니다. 저장소와 실행은 연결된 컴퓨터에 남습니다.</p>
+<p class="command-refs"><a href="https://learn.chatgpt.com/docs/changelog#codex-2026-09-18-mobile" target="_blank" rel="noopener noreferrer">ChatGPT for iOS 1.2026.251 · 2026-09-18</a></p>
+</div>
                 <div class="callout"><p data-i18n="ios244_worktree">iOS 1.2026.244에서는 @로 다른 task를 참고하고, 작업 중 질문에 답하며, 새 worktree의 기준 브랜치나 현재 로컬 변경 포함 여부를 선택할 수 있습니다. iOS 26은 백그라운드 설정 진행을 Live Activity로 표시합니다. 저장소와 실행은 연결된 컴퓨터에 남습니다.</p></div>
                 <p class="command-refs" data-i18n-html="s9_refs">출처: <a href="https://learn.chatgpt.com/docs/quickstart" target="_blank">Quickstart</a> · <a href="https://learn.chatgpt.com/docs/cloud" target="_blank">Codex cloud</a> · <a href="https://learn.chatgpt.com/docs/remote-connections" target="_blank">Remote connections</a> · <a href="https://learn.chatgpt.com/docs/third-party/github" target="_blank">GitHub integration</a></p>
             </section>
@@ -2581,10 +2586,11 @@ codex --search "optimize with Next.js 15"
                     </div>
                     <p class="overview-fact-date">
                         <span data-i18n="overview_fact_date_prefix">업데이트 기준일</span>
-                        <span class="live-date" data-date-format="long">2026년 9월 19일</span>
+                        <span class="live-date" data-date-format="long">2026년 9월 20일</span>
                     </p>
                 </div>
                 <ol class="changelog-list" aria-label="Recent update summary">
+<li><strong data-i18n="changelog_sep20_t">9월 20일 · CLI 요약 기본값과 iOS 작업 확인</strong><span data-i18n="changelog_sep20_d">CLI 0.155.1의 추론 요약 기본값을 정정하고, iOS 1.2026.251의 프로젝트 설정 기억·작성 블록·대기 프롬프트 확인 절차를 추가했습니다.</span></li>
 <li><strong data-i18n="changelog_sep19_t">9월 19일 · Spark 종료와 플러그인 계정 선택</strong><span data-i18n="changelog_sep19_d">공식 9월 14일 Spark 종료에 맞춰 모델·요금·FAQ·실행 안내를 정정하고, VB의 다중 계정 팁과 Apple Messages의 Apple Silicon 빌드 조건을 반영했습니다.</span></li>
 <li><strong data-i18n="changelog_sep18_t">9월 18일 · CLI 0.155와 Appshot 범위</strong><span data-i18n="changelog_sep18_d">실험적 CLI 음성 대화, 작업·worktree 관리, MCP 인증 안내와 VB 원문을 바탕으로 Appshot 캡처 범위·텍스트 한계를 정리했습니다.</span></li>
 <li><strong data-i18n="changelog_sep17_t">9월 17일 · 빠른 진행 요청과 Fast 설정</strong><span data-i18n="changelog_sep17_d">VB의 원문·후속 설명을 바탕으로 빠른 진행을 요청하는 예시와 /fast 설정·크레딧의 차이를 정리했습니다.</span></li>
@@ -2658,13 +2664,13 @@ codex --search "optimize with Next.js 15"
                     href="https://github.com/swhan0329/codex-101" target="_blank">PR을 환영합니다</a>.</p>
             <p class="footer-meta">
                 <span data-i18n="footer_date_prefix">최종 업데이트</span>:
-                        <span class="live-date" data-date-format="long">2026년 9월 19일</span>
+                        <span class="live-date" data-date-format="long">2026년 9월 20일</span>
             </p>
             <p class="footer-meta">Made by <a href="https://github.com/swhan0329" target="_blank">@swhan0329</a></p>
         </div>
     </footer>
 
-    <script src="i18n.js?v=20260919-spark-accounts-v2"></script>
+    <script src="i18n.js?v=20260920-cli1551-ios251"></script>
     <script src="app.js?v=20260919-mobile-reveal"></script>
 </body>
 

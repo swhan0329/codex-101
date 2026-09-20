@@ -10,12 +10,20 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: September 19, 2026</strong><br/>
+  <strong>Last updated: September 20, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
 
 ---
+
+## September 20 · CLI summary defaults and iOS task checks
+
+- To install the September 18 patch, run npm install -g @openai/codex@0.155.1 and check codex --version. Experimental voice, added in 0.155.0, can be enabled through /experimental on supported builds and started with /voice. Live transcripts and microphone controls are included; availability is not established for every platform or account.
+- New local TUI sessions in 0.155.1 disable reasoning summaries by default to prevent request rejection by providers that do not support them. Explicit summary settings remain respected; summary settings are separate from model reasoning effort. The agents overview still supports hiding, archiving, and deleting tasks, with confirmation for deleting clean managed worktrees. Check the target task and checkout before deleting.
+- The September 18 update remembers worktree mode and setup environment per project for new tasks. Check the connected computer, project, and environment before starting. Create folders in the file picker, review draft alternatives in writing blocks, and copy the content you need. Tap a long queued prompt to expand and check it. The update also fixes missing or stale queued prompts after reopening a task. The repository and execution stay on the connected computer.
+
+[OpenAI changelog](https://learn.chatgpt.com/docs/changelog#github-release-391752266) · [iOS 1.2026.251](https://learn.chatgpt.com/docs/changelog#codex-2026-09-18-mobile)
 
 ## September 19 · Spark retirement and plugin account selection
 
@@ -25,7 +33,7 @@
 
 [OpenAI changelog](https://learn.chatgpt.com/docs/changelog#codex-2026-09-14-codex-spark-deprecation) · [Plugin accounts](https://developers.openai.com/plugins/build/auth#support-multiple-accounts) · [VB](https://x.com/reach_vb/status/2100989529465188597) · [Apple Messages](https://learn.chatgpt.com/docs/plugins#app-use-apple-messages-from-codex)
 
-## September 18 · CLI 0.155 and Appshot scope
+## September 18 · CLI 0.155.0 release record and Appshot scope
 
 - Released September 17. Update with npm install -g @openai/codex@0.155.0 and check codex --version. On supported builds, enable voice through /experimental, then start a conversation with /voice. Live transcripts and microphone controls are included; this does not establish availability on every platform or account.
 - The terminal status row shows live reasoning summaries and completion timestamps after successful turns. The agents overview supports hiding, archiving, and deleting tasks. Clean managed worktrees now show ownership details and require deletion confirmation. Check the target task and checkout before deleting.
