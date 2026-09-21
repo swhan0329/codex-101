@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 9월 20일</strong><br/>
+  <strong>최종 업데이트: 2026년 9월 21일</strong><br/>
   페이지의 실제 수정일을 표시하며, 모델 안내에는 공식 출처와 확인 범위를 함께 제공합니다.
 </p>
 
@@ -20,6 +20,13 @@
 </p>
 
 ---
+
+## 9월 21일 · Computer Use 재시도와 원문 링크
+
+- VB는 Computer Use가 막힐 때 다른 접근을 요청하는 방식을 공유했습니다. 편집 예시: “현재 창과 실패한 단계를 다시 확인하고, 같은 목표를 다른 접근으로 진행해 주세요. 완료 후 실제 화면에서 결과를 확인해 주세요.” 개인 경험이며 성공률 보장은 아닙니다. 지원되는 macOS·Windows 환경에서 사용하고, 기존 앱 접근 권한과 승인 조건을 유지하세요.
+- Brent의 기존 /goal 원문에서 현재 계정 @chefbrent를 확인하고 프로필·원문 링크를 갱신했습니다.
+
+[VB](https://x.com/reach_vb/status/2101799938547962072) · [Computer Use](https://learn.chatgpt.com/docs/computer-use) · [Brent](https://x.com/chefbrent/status/2062651567413637441)
 
 ## 9월 20일 · CLI 요약 기본값과 iOS 작업 확인
 

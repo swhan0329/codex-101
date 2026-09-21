@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="style.css?v=20260906-astra-facts" />
 </head>
 
-<body data-page="home" data-updated="2026-09-20">
+<body data-page="home" data-updated="2026-09-21">
     <!-- Language Toggle -->
     <nav class="top-bar">
         <div class="top-bar-inner">
@@ -51,7 +51,7 @@
                     <p class="hero-badge">
                         <span data-i18n="hero_badge_prefix">공식 문서 기반 · 실무 실행 가이드</span>
                         <span aria-hidden="true"> · </span>
-                        <span class="live-date" data-date-format="long">2026년 9월 20일</span>
+                        <span class="live-date" data-date-format="long">2026년 9월 21일</span>
                     </p>
                     <h1 class="hero-title" data-i18n="hero_title"><span class="hero-title-lead">OpenAI Codex를</span><span class="hero-title-focus">실무에 바로 붙이는 가이드</span></h1>
                     <p class="hero-sub" data-i18n="hero_sub"><span class="hero-sub-lead">CLI부터 데스크톱 앱·IDE·Web·Mobile까지, 한 흐름으로.</span><span class="hero-sub-detail">설치·권한·Git·자동화·프롬프팅을 최신 공식 문서 기준의 실행 순서로 정리했습니다.</span></p>
@@ -2367,6 +2367,7 @@ codex --search "optimize with Next.js 15"
                 <p data-i18n="field_tips_intro">OpenAI Codex, Developer Experience, 데이터/보안/제품 담당자들이 공개적으로 공유한 실전 사용법을 사람별 원글 링크와 함께 정리했습니다. 제품의 사용 가능 여부와 설정 절차는 아래 공식 문서 링크를 함께 확인하세요.</p>
                 <p class="command-refs"><a href="https://x.com/pvncher/status/2098488444443939186" target="_blank" rel="noopener noreferrer">Eric · /feedback</a> · <a href="https://learn.chatgpt.com/docs/reference/troubleshooting#feedback-and-logs" target="_blank" rel="noopener noreferrer">Feedback &amp; logs</a></p>
 <div class="field-tip-grid">
+<article id="computer-retry" class="field-tip-card" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><span class="field-tip-person">VB Srivastav · 2026-09-21 KST</span><h3 data-i18n="computer_retry_t">Computer Use가 막히면 다른 접근 요청</h3><p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="computer_retry_d">VB는 Computer Use가 막힐 때 다른 접근을 요청하는 방식을 공유했습니다. 편집 예시: “현재 창과 실패한 단계를 다시 확인하고, 같은 목표를 다른 접근으로 진행해 주세요. 완료 후 실제 화면에서 결과를 확인해 주세요.” 개인 경험이며 성공률 보장은 아닙니다. 지원되는 macOS·Windows 환경에서 사용하고, 기존 앱 접근 권한과 승인 조건을 유지하세요.</p><p class="command-refs"><a href="https://x.com/reach_vb/status/2101799938547962072" target="_blank" rel="noopener noreferrer">VB</a> <a href="https://learn.chatgpt.com/docs/computer-use" target="_blank" rel="noopener noreferrer">Computer Use</a></p></article>
 <article id="plugin-accounts" class="field-tip-card" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><span class="field-tip-person">VB Srivastav · 2026-09-19 KST</span><h3 data-i18n="multi_account_t">플러그인 계정은 작업 요청에 명시</h3><p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="multi_account_d">VB는 ChatGPT 플러그인에 여러 계정을 연결하는 기능을 소개했습니다. 플러그인 설정에서 추가 계정을 연결한 뒤 사용할 계정을 요청에 적으세요. 편집 예시: “회사 Gmail 계정의 오늘 받은 메일만 요약하고, 사용한 계정을 결과에 표시해 주세요.” 공식 문서상 모델은 요청에 따라 연결된 계정을 선택하며, 각 호출은 해당 계정의 인증·권한으로 실행됩니다. 플러그인·계정의 실제 연결 옵션을 확인하세요. 이는 ChatGPT 로그인 계정 전환 기능을 뜻하지 않습니다.</p><p class="command-refs"><a href="https://x.com/reach_vb/status/2100989529465188597" target="_blank" rel="noopener noreferrer">VB</a> <a href="https://developers.openai.com/plugins/build/auth#support-multiple-accounts" target="_blank" rel="noopener noreferrer">OpenAI Docs</a></p></article>
 <article id="appshot-scope" class="field-tip-card" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><span class="field-tip-person">VB Srivastav · 2026-09-18 KST</span><h3 data-i18n="appshot_scope_t">Appshot은 맨 앞 창과 제공되는 텍스트를 함께 전달</h3><p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="appshot_scope_d">VB는 Windows Appshots를 소개하며 이미지 외에 앱이 제공하는 텍스트도 맥락으로 쓴다고 설명했습니다. 공유할 창을 맨 앞으로 가져오고 Windows는 양쪽 Alt, macOS는 양쪽 Command를 누른 뒤 필요한 작업을 적으세요. 공식 문서상 맨 앞 창만 캡처하지만 앱이 노출한 스크롤 밖 텍스트도 포함될 수 있습니다. Google Docs·Gmail·Sheets·Slides는 화면 이미지만 전달될 수 있으므로 전체 내용이 필요하면 연결된 plugin이나 원본 파일로 확인하세요.</p><p class="command-refs"><a href="https://x.com/reach_vb/status/2100729426077999245" target="_blank" rel="noopener noreferrer">VB</a> <a href="https://learn.chatgpt.com/docs/appshots" target="_blank" rel="noopener noreferrer">Appshots</a></p></article>
 <article id="speed-prompt" class="field-tip-card" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><span class="field-tip-person">VB Srivastav · 2026-09-16 KST</span><h3 data-i18n="speed_prompt_t">빠르게 진행해 달라는 요청과 Fast 설정 구분</h3><p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="speed_prompt_d">VB는 Astra에 말로 빠른 진행을 요청한 경험을 공유하며 /fast를 뜻하는 것이 아니라고 설명했습니다. 편집 예시: “빠르게 진행해 주세요. 요청한 범위와 완료 기준을 지키고, 관련 검증이 통과하면 결과를 알려주세요.” 같은 작업에서 결과·소요 시간·사용량을 비교하세요. 개인 경험이며 속도·정확도·비용 절감 보장은 아닙니다. CLI의 /fast status로 실제 설정을 확인하세요. Astra Fast는 제공되는 환경에서 Standard 대비 2.5배의 ChatGPT 크레딧을 소비하며, API 요금은 별도입니다.</p><p class="command-refs"><a href="https://x.com/reach_vb/status/2100076208239067377" target="_blank" rel="noopener noreferrer">VB</a> <a href="https://x.com/reach_vb/status/2100127257075265687" target="_blank" rel="noopener noreferrer">VB · /fast</a> <a href="https://learn.chatgpt.com/docs/agent-configuration/speed" target="_blank" rel="noopener noreferrer">Speed</a></p></article>
@@ -2509,8 +2510,8 @@ codex --search "optimize with Next.js 15"
                 <div class="field-source-block" aria-label="OpenAI practitioner sources">
                     <p class="field-source-label" data-i18n="field_tips_sources_label">원글 및 근거</p>
                     <div class="field-source-list">
-                        <a href="https://x.com/heccbrent" target="_blank" rel="noopener noreferrer">Brent Schooley X</a>
-                        <a href="https://x.com/heccbrent/status/2062651567413637441" target="_blank" rel="noopener noreferrer">Brent /goal post</a>
+                        <a href="https://x.com/chefbrent" target="_blank" rel="noopener noreferrer">Brent Schooley X</a>
+                        <a href="https://x.com/chefbrent/status/2062651567413637441" target="_blank" rel="noopener noreferrer">Brent /goal post</a>
                         <a href="https://www.linkedin.com/in/brentschooley" target="_blank" rel="noopener noreferrer">Brent Schooley LinkedIn</a>
                         <a href="https://x.com/_lopopolo/status/2064742429438198056" target="_blank" rel="noopener noreferrer">Ryan Lopopolo AGENTS.md post</a>
                         <a href="https://x.com/dkundel/status/2062650378089594955" target="_blank" rel="noopener noreferrer">dominik /goal guide</a>
@@ -2586,10 +2587,11 @@ codex --search "optimize with Next.js 15"
                     </div>
                     <p class="overview-fact-date">
                         <span data-i18n="overview_fact_date_prefix">업데이트 기준일</span>
-                        <span class="live-date" data-date-format="long">2026년 9월 20일</span>
+                        <span class="live-date" data-date-format="long">2026년 9월 21일</span>
                     </p>
                 </div>
                 <ol class="changelog-list" aria-label="Recent update summary">
+<li><strong data-i18n="changelog_sep21_t">9월 21일 · Computer Use 재시도와 원문 링크</strong><span data-i18n="changelog_sep21_d">VB의 다른 접근 요청 팁을 검증 절차와 함께 추가하고, Brent의 원문에서 확인한 현재 계정으로 출처 링크를 갱신했습니다.</span></li>
 <li><strong data-i18n="changelog_sep20_t">9월 20일 · CLI 요약 기본값과 iOS 작업 확인</strong><span data-i18n="changelog_sep20_d">CLI 0.155.1의 추론 요약 기본값을 정정하고, iOS 1.2026.251의 프로젝트 설정 기억·작성 블록·대기 프롬프트 확인 절차를 추가했습니다.</span></li>
 <li><strong data-i18n="changelog_sep19_t">9월 19일 · Spark 종료와 플러그인 계정 선택</strong><span data-i18n="changelog_sep19_d">공식 9월 14일 Spark 종료에 맞춰 모델·요금·FAQ·실행 안내를 정정하고, VB의 다중 계정 팁과 Apple Messages의 Apple Silicon 빌드 조건을 반영했습니다.</span></li>
 <li><strong data-i18n="changelog_sep18_t">9월 18일 · CLI 0.155와 Appshot 범위</strong><span data-i18n="changelog_sep18_d">실험적 CLI 음성 대화, 작업·worktree 관리, MCP 인증 안내와 VB 원문을 바탕으로 Appshot 캡처 범위·텍스트 한계를 정리했습니다.</span></li>
@@ -2664,13 +2666,13 @@ codex --search "optimize with Next.js 15"
                     href="https://github.com/swhan0329/codex-101" target="_blank">PR을 환영합니다</a>.</p>
             <p class="footer-meta">
                 <span data-i18n="footer_date_prefix">최종 업데이트</span>:
-                        <span class="live-date" data-date-format="long">2026년 9월 20일</span>
+                        <span class="live-date" data-date-format="long">2026년 9월 21일</span>
             </p>
             <p class="footer-meta">Made by <a href="https://github.com/swhan0329" target="_blank">@swhan0329</a></p>
         </div>
     </footer>
 
-    <script src="i18n.js?v=20260920-cli1551-ios251"></script>
+    <script src="i18n.js?v=20260921-computer-retry"></script>
     <script src="app.js?v=20260919-mobile-reveal"></script>
 </body>
 

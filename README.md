@@ -10,12 +10,19 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: September 20, 2026</strong><br/>
+  <strong>Last updated: September 21, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
 
 ---
+
+## September 21 · Computer Use retries and source links
+
+- VB shared a way to recover when Computer Use stalls: ask for a different approach. Edited example: “Check the current window and the failed step again, then try another approach to the same goal. Verify the result in the actual interface when finished.” This is personal experience, not a success-rate guarantee. Use it on supported macOS or Windows setups and keep existing app access and approval requirements.
+- Verified @chefbrent on Brent’s existing /goal original and updated his profile and post links.
+
+[VB](https://x.com/reach_vb/status/2101799938547962072) · [Computer Use](https://learn.chatgpt.com/docs/computer-use) · [Brent](https://x.com/chefbrent/status/2062651567413637441)
 
 ## September 20 · CLI summary defaults and iOS task checks
 
