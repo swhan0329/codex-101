@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 9월 21일</strong><br/>
+  <strong>최종 업데이트: 2026년 9월 23일</strong><br/>
   페이지의 실제 수정일을 표시하며, 모델 안내에는 공식 출처와 확인 범위를 함께 제공합니다.
 </p>
 
@@ -20,6 +20,20 @@
 </p>
 
 ---
+
+## 9월 23일 · GPT-6 Sol·Luna 배포와 CLI 0.156
+
+- Eric Provencher의 [세션 기록 분석·소규모 평가 팁](https://x.com/pvncher/status/2102080325450956865)을 편집 예시·적용 한계와 함께 추가했습니다.
+
+- 9월 22일 발표의 추천 모델은 GPT-6 Astra·Sol·Luna입니다. Sol·Luna는 Plus·Pro·Business·Enterprise·Edu에 점진 배포되며, Free·Go는 데스크톱 앱에서 Standard 속도의 Luna를 사용합니다. Work·Codex용이며 Chat에는 제공되지 않습니다. Enterprise는 관리자가 각 모델을 켜야 합니다. GPT-5.6 계열은 배포 중에도 남고 설정만 바꿔서는 접근 권한이 생기지 않습니다.
+- 선택기나 CLI /model에서 접근을 확인한 뒤 codex --model gpt-6-sol 또는 codex --model gpt-6-luna를 시험하세요. 앱·웹 Power 순서는 Luna High → Sol Light(시작 프리셋) → Sol Medium → Astra Light → Astra Medium → Astra Extra High이며 플랜·클라이언트별로 다릅니다. 모델별 추론 비교는 Sol Medium, Luna High, Astra Light부터 시작하세요. Luna는 Max까지 지원하고 Ultra는 지원하지 않습니다. 입력·완료 기준을 고정해 비교하세요. Codex cloud는 여전히 GPT-5.6 Sol을 쓰며 기본 모델을 직접 바꿀 수 없습니다.
+- 100만 토큰당 Standard 크레딧(입력 / 캐시 입력 / 출력)은 Sol 50 / 5 / 250, Luna 2.5 / 0.25 / 12.5입니다. 제공되는 환경의 Fast는 2.5배입니다. API 달러 요금이나 작업당 절감 보장이 아닙니다.
+- GPT-5.5는 10월 14일 모든 ChatGPT·Work·Codex 플랜에서 종료되며 API는 대상이 아닙니다. 유료 플랜의 GPT-6 Sol 또는 Free·Go의 데스크톱 Luna 접근을 확인한 뒤 저장된 설정·관리 설정·에이전트·예약 작업·스크립트를 전환하세요.
+- npm install -g @openai/codex@0.156.0으로 업데이트하고 codex --version으로 확인하세요. 음성은 기본 활성화(F8, /voice settings), /tui는 다음 실행의 전체 화면 UI 선택, /usage는 사용량 분석입니다. worktree 세션 기능도 기본 활성화됐습니다. 이전 friendly·pragmatic personality 값은 더 이상 응답 스타일을 고르지 않습니다.
+
+[모델](https://learn.chatgpt.com/docs/models) · [9월 22일 발표와 CLI 변경](https://learn.chatgpt.com/docs/changelog) · [크레딧](https://learn.chatgpt.com/docs/pricing#token-rates) · [워크스페이스 접근](https://learn.chatgpt.com/docs/enterprise/workspace-model-availability#gpt-6-sol-and-luna-in-enterprise)
+
+아래 이전 날짜의 기록은 당시 확인한 내용입니다. 현재 추천은 이 업데이트와 공개 가이드를 기준으로 확인하세요.
 
 ## 9월 21일 · Computer Use 재시도와 원문 링크
 

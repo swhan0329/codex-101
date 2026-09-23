@@ -10,12 +10,26 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: September 21, 2026</strong><br/>
+  <strong>Last updated: September 23, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
 
 ---
+
+## September 23 · GPT-6 Sol/Luna rollout and CLI 0.156
+
+- Added Eric Provencher’s [session-log review and mini-evaluation workflow](https://x.com/pvncher/status/2102080325450956865) with an explicitly edited prompt and limits.
+
+- The September 22 release recommends GPT-6 Astra, Sol, and Luna. Sol/Luna are rolling out to Plus, Pro, Business, Enterprise, and Edu; Free/Go get Standard-speed Luna in the desktop app. They are available in Work/Codex, not Chat. Enterprise administrators must enable each new model. GPT-5.6 models remain available during rollout; a config entry does not grant access.
+- Check the model picker or CLI /model, then try codex --model gpt-6-sol or codex --model gpt-6-luna. App/web Power presets now start at Luna High → Sol Light (starting preset) → Sol Medium → Astra Light → Astra Medium → Astra Extra High, with plan/client differences. Model-specific reasoning starting points remain Sol Medium, Luna High, and Astra Light. Luna supports Max, not Ultra. Keep test inputs and completion criteria fixed when comparing models. Codex cloud still uses GPT-5.6 Sol and does not offer a default-model override.
+- Standard credits per million tokens (input / cached input / output): Sol 50 / 5 / 250; Luna 2.5 / 0.25 / 12.5. Fast is 2.5x where available. These are ChatGPT credits, not API dollar prices or a per-task savings guarantee.
+- GPT-5.5 retires October 14 from all ChatGPT/Work/Codex plans; the API is unaffected. Confirm GPT-6 Sol access on paid plans or desktop Luna on Free/Go, then update saved settings, managed configuration, agents, scheduled tasks, and scripts.
+- Update with npm install -g @openai/codex@0.156.0 and check codex --version. Voice is enabled by default (F8, /voice settings); /tui chooses fullscreen UI for the next launch; /usage shows analytics. Worktree sessions are enabled by default. Deprecated friendly/pragmatic personality settings no longer select response styles.
+
+[Models](https://learn.chatgpt.com/docs/models) · [September 22 announcement and CLI notes](https://learn.chatgpt.com/docs/changelog) · [Credits](https://learn.chatgpt.com/docs/pricing#token-rates) · [Workspace access](https://learn.chatgpt.com/docs/enterprise/workspace-model-availability#gpt-6-sol-and-luna-in-enterprise)
+
+Earlier dated entries below record what was verified at the time. Use this update and the live guide for current recommendations.
 
 ## September 21 · Computer Use retries and source links
 

@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="style.css?v=20260906-astra-facts" />
 </head>
 
-<body data-page="home" data-updated="2026-09-21">
+<body data-page="home" data-updated="2026-09-23">
     <!-- Language Toggle -->
     <nav class="top-bar">
         <div class="top-bar-inner">
@@ -51,7 +51,7 @@
                     <p class="hero-badge">
                         <span data-i18n="hero_badge_prefix">공식 문서 기반 · 실무 실행 가이드</span>
                         <span aria-hidden="true"> · </span>
-                        <span class="live-date" data-date-format="long">2026년 9월 21일</span>
+                        <span class="live-date" data-date-format="long">2026년 9월 23일</span>
                     </p>
                     <h1 class="hero-title" data-i18n="hero_title"><span class="hero-title-lead">OpenAI Codex를</span><span class="hero-title-focus">실무에 바로 붙이는 가이드</span></h1>
                     <p class="hero-sub" data-i18n="hero_sub"><span class="hero-sub-lead">CLI부터 데스크톱 앱·IDE·Web·Mobile까지, 한 흐름으로.</span><span class="hero-sub-detail">설치·권한·Git·자동화·프롬프팅을 최신 공식 문서 기준의 실행 순서로 정리했습니다.</span></p>
@@ -224,7 +224,7 @@
                                 <tr>
                                     <td data-i18n="overview_decision_local_case">내 프로젝트에서 작은 수정</td>
                                     <td data-i18n="overview_decision_local_surface">App Local 또는 CLI</td>
-                                    <td data-i18n="overview_decision_local_model">gpt-5.6-sol, 일상 작업은 terra</td>
+                                    <td data-i18n="overview_decision_local_model">gpt-6-sol, 반복 작업은 gpt-6-luna</td>
                                     <td><a href="#s5" data-i18n="overview_decision_local_next">05-06 설치와 첫 실행</a></td>
                                 </tr>
                                 <tr>
@@ -236,7 +236,7 @@
                                 <tr>
                                     <td data-i18n="overview_decision_team_case">팀 규칙과 자동화 도입</td>
                                     <td data-i18n="overview_decision_team_surface">CLI/App + AGENTS.md + MCP</td>
-                                    <td data-i18n="overview_decision_team_model">gpt-5.6-sol/terra, 반복 작업은 luna</td>
+                                    <td data-i18n="overview_decision_team_model">gpt-6-sol / gpt-6-luna, 실제 접근 확인</td>
                                     <td><a href="#s12" data-i18n="overview_decision_team_next">12-16 운영 설정</a></td>
                                 </tr>
                                 <tr>
@@ -445,18 +445,19 @@
             <section class="section" id="s3">
                 <h2><span class="section-num">03</span> <span data-i18n="s3_title">지원 모델</span></h2>
 
-<div id="gpt55-retirement" class="callout" style="scroll-margin-top: 140px"><h4 data-i18n="retire55_t">GPT-5.5 종료 예정 · 2026년 10월 14일</h4><p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="retire55_d">OpenAI는 9월 14일 GPT-5.5를 10월 14일 ChatGPT·ChatGPT Work·Codex의 모든 플랜에서 종료한다고 공지했습니다. 개인·Business·Enterprise·Edu가 포함되며 OpenAI API는 대상이 아닙니다. ChatGPT 로그인 Codex에서는 gpt-5.5를 gpt-5.6-sol로 전환하세요.</p><p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="retire55_steps">10월 14일 전 워크스페이스 기본값, 저장된 모델 설정, 관리 설정, custom agent, 예약 작업, 모델을 지정하는 스크립트·명령을 점검하세요. 해당 사용자와 클라이언트에서 Sol을 선택할 수 있는지 확인한 뒤 같은 입력과 완료 기준으로 시험하세요. 설정 변경만으로 모델 접근 권한이 생기지는 않습니다.</p><p class="command-refs"><a href="https://learn.chatgpt.com/docs/models#gpt-55-retirement" target="_blank" rel="noopener noreferrer">Models · GPT-5.5</a> <a href="https://learn.chatgpt.com/docs/enterprise/workspace-model-availability#prepare-for-the-gpt-55-retirement" target="_blank" rel="noopener noreferrer">Workspace model availability</a></p></div>
+<div class="callout" id="sol6-rollout" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><h3 data-i18n="sol6_t">GPT-6 Sol·Luna · 점진 배포 중</h3><p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="sol6_d">9월 22일부터 GPT-6 Sol·Luna가 Plus·Pro·Business·Enterprise·Edu에 순차 제공됩니다. Free·Go는 데스크톱 앱에서 Standard 속도의 Luna를 사용할 수 있습니다. ChatGPT에서는 Work·Codex용이며 Chat에는 제공되지 않습니다. Enterprise는 관리자가 모델별로 켜야 합니다. 선택기에서 실제 접근을 확인하세요. GPT-5.6 Sol·Terra·Luna는 배포 중에도 남아 있습니다.</p><p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="sol6_steps">앱·IDE 선택기 또는 CLI의 /model에서 모델을 확인하세요. 복잡한 구현은 gpt-6-sol, 명확한 반복 작업은 gpt-6-luna부터 비교하세요. 아래 명령과 설정 예시는 접근 가능한 계정용입니다. 기존 입력·완료 기준을 유지하고 모델만 먼저 바꿔 품질·시간·사용량을 비교한 뒤 추론 강도를 조절하세요. Codex cloud의 기본 모델은 직접 바꿀 수 없습니다.</p><p class="command-refs"><a href="https://learn.chatgpt.com/docs/models" target="_blank" rel="noopener noreferrer">Models</a> <a href="https://learn.chatgpt.com/docs/pricing#token-rates" target="_blank" rel="noopener noreferrer">Pricing</a> <a href="https://learn.chatgpt.com/docs/changelog#codex-2026-09-22-gpt-6-sol-luna" target="_blank" rel="noopener noreferrer">OpenAI · 2026-09-22</a></p></div>
+<div id="gpt55-retirement" class="callout" style="scroll-margin-top: 140px"><h4 data-i18n="retire55_t">GPT-5.5 종료 예정 · 2026년 10월 14일</h4><p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="retire55_d">OpenAI는 9월 14일 GPT-5.5의 10월 14일 ChatGPT·Work·Codex 전체 플랜 종료를 공지했습니다. 현재 전환 안내는 Plus·Pro·Business·Enterprise·Edu의 GPT-6 Sol, Free·Go의 데스크톱 GPT-6 Luna입니다. 실제 접근을 확인하고 저장된 gpt-5.5 설정을 바꾸세요. OpenAI API는 대상이 아닙니다.</p><p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="retire55_steps">10월 14일 전 워크스페이스 기본값, 저장된 모델 설정, 관리 설정, custom agent, 예약 작업, 모델을 지정하는 스크립트·명령을 점검하세요. 해당 사용자와 클라이언트에서 대체 모델을 선택할 수 있는지 확인한 뒤 같은 입력과 완료 기준으로 시험하세요. 설정 변경만으로 모델 접근 권한이 생기지는 않습니다.</p><p class="command-refs"><a href="https://learn.chatgpt.com/docs/models#gpt-55-retirement" target="_blank" rel="noopener noreferrer">Models · GPT-5.5</a> <a href="https://learn.chatgpt.com/docs/enterprise/workspace-model-availability#prepare-for-the-gpt-55-retirement" target="_blank" rel="noopener noreferrer">Workspace model availability</a></p></div>
                 <h3 data-i18n="s3_models_title">현재 모델 가이드</h3>
 
                 <h4 data-i18n="s3_rec_title">⭐ 추천 모델</h4>
                 <div class="model-grid">
 <div class="model-card"><div class="model-banner">gpt-6-astra</div><div class="model-body"><p class="model-desc" data-i18n="astra_desc">여러 도구를 쓰는 어려운 코딩·앱·리서치 작업용 모델입니다. 공식 추천 모델 목록에서 확인할 수 있습니다.</p><div class="model-cmd">codex -m gpt-6-astra</div><p data-i18n="astra_access">공식 문서는 데스크톱·웹·CLI·IDE 지원을 표시하며 Codex cloud는 제외합니다. 실제 접근은 플랜·로그인 방식·배포 단계에 따라 내 계정에서 확인하세요.</p><p class="command-refs"><a href="https://learn.chatgpt.com/docs/models" target="_blank" rel="noopener noreferrer">Models</a></p></div></div>
-                    <!-- GPT-5.6 Sol -->
+                    <!-- GPT-6 Sol -->
                     <div class="model-card">
-                        <div class="model-banner">gpt-5.6-sol</div>
+                        <div class="model-banner">gpt-6-sol</div>
                         <div class="model-body">
-                            <p class="model-desc" data-i18n="m0_f">GPT-5.6 계열에서 복잡한 코딩·리서치·앱 작업을 맡기는 모델입니다. Astra와 별도로 선택할 수 있습니다.</p>
-                            <div class="model-cmd">codex -m gpt-5.6-sol</div>
+                            <p class="model-desc" data-i18n="m0_f">GPT-6 Sol은 일상 업무와 복잡한 코딩·에이전트 작업에 맞는 모델입니다. 기본 추론 비교는 Medium부터 시작하세요.</p>
+                            <div class="model-cmd">codex -m gpt-6-sol</div>
                             <div class="model-features">
                                 <div class="model-feat-row"><span class="model-feat-label"
                                         data-i18n="feat_cap">Capability</span><span class="model-feat-value"><span
@@ -465,38 +466,7 @@
                                             class="dot-filled">✦</span></span></div>
                                 <div class="model-feat-row"><span class="model-feat-label"
                                         data-i18n="feat_spd">Speed</span><span class="model-feat-value"><span
-                                            class="dot-filled">⚡</span><span class="dot-filled">⚡</span><span
-                                            class="dot-filled">⚡</span></span></div>
-                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cli">Codex
-                                        CLI & SDK</span><span class="check-yes">✅</span></div>
-                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_app">Codex
-                                        app & IDE extension</span><span class="check-yes">✅</span></div>
-                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cloud">Codex
-                                        Cloud</span><span class="check-yes">✅</span></div>
-                                <div class="model-feat-row"><span class="model-feat-label"
-                                        data-i18n="feat_credits">ChatGPT Credits</span><span class="check-yes">✅</span>
-                                </div>
-                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_api">API
-                                        Access</span><span class="check-yes">✅</span></div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- GPT-5.6 Terra -->
-                    <div class="model-card">
-                        <div class="model-banner">gpt-5.6-terra</div>
-                        <div class="model-body">
-                            <p class="model-desc" data-i18n="m1_f">GPT-5.6 Terra는 일상 작업용 균형 모델입니다. Sol만큼 깊게 쓰지 않아도 되는 반복 개발, 문서 정리, 도구 사용 작업에 적합합니다.</p>
-                            <div class="model-cmd">codex -m gpt-5.6-terra</div>
-                            <div class="model-features">
-                                <div class="model-feat-row"><span class="model-feat-label"
-                                        data-i18n="feat_cap">Capability</span><span class="model-feat-value"><span
-                                            class="dot-filled">✦</span><span class="dot-filled">✦</span><span
-                                            class="dot-filled">✦</span><span class="dot-filled">✦</span><span
-                                            class="dot-filled">✦</span></span></div>
-                                <div class="model-feat-row"><span class="model-feat-label"
-                                        data-i18n="feat_spd">Speed</span><span class="model-feat-value"><span
-                                            class="dot-filled">⚡</span><span class="dot-filled">⚡</span><span
-                                            class="dot-filled">⚡</span></span></div>
+                                            class="dot-filled">⚡</span><span class="dot-filled">⚡</span></span></div>
                                 <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cli">Codex
                                         CLI & SDK</span><span class="check-yes">✅</span></div>
                                 <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_app">Codex
@@ -511,12 +481,12 @@
                             </div>
                         </div>
                     </div>
-                    <!-- GPT-5.6 Luna -->
+                    <!-- GPT-6 Luna -->
                     <div class="model-card">
-                        <div class="model-banner">gpt-5.6-luna</div>
+                        <div class="model-banner">gpt-6-luna</div>
                         <div class="model-body">
-                            <p class="model-desc" data-i18n="m1mini_f">GPT-5.6 Luna는 가장 빠르고 비용 효율적인 추천 모델입니다. 반복적인 로컬 수정, 보조 agent, 대량 처리처럼 latency와 처리량이 중요한 작업에 적합합니다.</p>
-                            <div class="model-cmd">codex -m gpt-5.6-luna</div>
+                            <p class="model-desc" data-i18n="m1mini_f">GPT-6 Luna는 요약·추출·분류·범위가 분명한 코딩 등 반복 작업용 모델입니다. High부터 비교하며 Max까지 지원하고 Ultra는 지원하지 않습니다.</p>
+                            <div class="model-cmd">codex -m gpt-6-luna</div>
                             <div class="model-features">
                                 <div class="model-feat-row"><span class="model-feat-label"
                                         data-i18n="feat_cap">Capability</span><span class="model-feat-value"><span
@@ -553,25 +523,25 @@
                     <div class="model-guidance-head">
                         <div>
                             <span class="model-guidance-kicker" data-i18n="s3_guide_kicker">공식 가이드의 추천 시작점</span>
-                            <h4 data-i18n="s3_guide_title">Astra · Sol · Terra · Luna, 작업에 맞게 선택</h4>
+                            <h4 data-i18n="s3_guide_title">Astra · Sol · Luna, 작업에 맞게 선택</h4>
                         </div>
                         <div class="model-guidance-default">
                             <span data-i18n="s3_guide_default">내 계정의 Power부터 확인</span>
-                            <a href="https://learn.chatgpt.com/docs/models" target="_blank" rel="noopener noreferrer">Astra · Sol · Terra · Luna</a>
+                            <a href="https://learn.chatgpt.com/docs/models" target="_blank" rel="noopener noreferrer">Astra · Sol · Luna</a>
                         </div>
                     </div>
 
-                    <p data-i18n="astra_power">계정의 기본 Power에서 시작하세요. Astra 배포 대상 Pro·Business($100)·Enterprise의 앱·웹 옵션은 Terra Light → Sol Light → Sol Medium → Astra Light → Astra Medium → Astra Extra High입니다. 플랜·배포 단계에 따라 다릅니다. Luna 또는 특정 모델·추론·속도는 Advanced에서 선택하세요. 앱·웹·IDE의 Light는 CLI에서 Low로 표시됩니다.</p>
-                    <div class="model-choice-grid" aria-label="GPT-5.6 model roles">
+                    <p data-i18n="astra_power">앱·웹 문서의 Power 순서는 Luna High → Sol Light(시작 프리셋) → Sol Medium → Astra Light → Astra Medium → Astra Extra High입니다. 일부 유료 플랜에는 Astra Extra High가 없으며 실제 옵션은 플랜·클라이언트·워크스페이스·배포에 따라 다릅니다. Advanced에서 특정 모델·추론·속도를 확인하세요. 모델별 비교 시작점은 Sol Medium, Luna High, Astra Light입니다. 앱·웹·IDE의 Light는 CLI에서 Low로 표시됩니다.</p>
+                    <div class="model-choice-grid" aria-label="GPT-6 model roles">
                         <article class="model-choice-card model-choice-sol">
                             <code>Sol</code>
                             <strong data-i18n="s3_guide_sol_title">복잡하고 중요한 작업</strong>
-                            <span data-i18n="s3_guide_sol_desc">Sol: 복잡한 구현과 깊이 있는 분석</span>
+                            <span data-i18n="s3_guide_sol_desc">Sol: 일상 업무와 복잡한 구현</span>
                         </article>
                         <article class="model-choice-card model-choice-terra">
-                            <code>Terra</code>
-                            <strong data-i18n="s3_guide_terra_title">일상적인 실무 작업</strong>
-                            <span data-i18n="s3_guide_terra_desc">정의가 분명한 구현과 일반 업무</span>
+                            <code>Astra</code>
+                            <strong data-i18n="s3_guide_terra_title">가장 어려운 종합 작업</strong>
+                            <span data-i18n="s3_guide_terra_desc">Astra: 여러 도구·자료를 오가는 작업</span>
                         </article>
                         <article class="model-choice-card model-choice-luna">
                             <code>Luna</code>
@@ -591,7 +561,7 @@
                                 <code>Ultra</code>
                                 <span data-i18n="s3_guide_ultra">나눌 수 있는 큰 작업을 subagents로 처리</span>
                             </div>
-                            <p class="model-guidance-hint" data-i18n="s3_guide_ultra_tip">Ultra가 보이지 않으면 Settings &gt; Configuration에서 Ultra in model picker slider를 확인하세요.</p>
+                            <p class="model-guidance-hint" data-i18n="s3_guide_ultra_tip">Luna는 Max까지 지원하고 Ultra는 지원하지 않습니다. Ultra 지원 모델의 슬라이더에서 옵션이 없으면 Settings > Configuration의 Ultra in model picker slider를 확인하세요.</p>
                         </section>
 
                         <section class="model-guidance-block">
@@ -654,29 +624,30 @@
                     </div>
                 </div>
                 <div class="callout">
-                    <p data-i18n="s3_other_note">⚠️ Codex는 위 추천 모델들과 가장 잘 작동합니다. ChatGPT 로그인 Codex에서 은퇴한 `gpt-5.4`는 `gpt-5.6-terra`, `gpt-5.4-mini`는 `gpt-5.6-luna`로 바꾸세요. ChatGPT 로그인에서 deprecated되거나 retired되는 모델도 API-key authentication에서는 범위가 다를 수 있으므로 API models page를 별도로 확인하세요. Chat Completions API 지원은 향후 Codex에서 제거 예정입니다. GPT-5.5는 2026년 10월 14일 ChatGPT·Work·Codex의 모든 플랜에서 종료 예정입니다. ChatGPT 로그인 Codex의 저장된 gpt-5.5 설정은 gpt-5.6-sol로 전환하세요. OpenAI API는 대상이 아닙니다.</p>
+                    <p data-i18n="s3_other_note">GPT-5.6 Sol·Terra·Luna는 새 모델 배포 중에도 제공되는 이전 선택지입니다. GPT-5.4·mini의 ChatGPT 로그인 Codex 은퇴일은 2026년 8월 31일입니다. 현재 접근 가능한 GPT-6 Sol·Luna로 전환하세요. GPT-5.5는 10월 14일 종료 예정입니다. Plus·Pro·Business·Enterprise·Edu는 Sol, Free·Go는 데스크톱 Luna를 확인하세요. API 키 사용은 별도 제공 범위를 따릅니다. Chat Completions API 지원은 향후 Codex에서 제거될 예정입니다.</p>
                 </div>
 
                 <h4 data-i18n="s3_cfg_title">🛠️ 모델 설정 팁</h4>
                 <div class="callout">
                     <p data-i18n="s3_cfg_default">config.toml에서 기본 모델을 설정할 수 있습니다. 지정하지 않으면 추천 모델이 기본값입니다.</p>
                 </div>
-                <pre><code>model = "gpt-5.6-sol"</code></pre>
+                <pre><code>model = "gpt-6-sol"</code></pre>
                 <div class="callout">
                     <p data-i18n="s3_cfg_temp">CLI에서 <code>/model</code> 명령 또는 <code>codex -m 모델명</code> 플래그로 임시 변경 가능.
                         IDE에서는 입력창 아래 모델 선택기 사용.</p>
                 </div>
-                <pre><code>codex -m gpt-5.6-sol</code></pre>
+                <pre><code>codex -m gpt-6-sol</code></pre>
                 <div class="callout">
                     <p data-i18n="s3_cfg_cloud">Codex 클라우드 작업의 기본 모델은 현재 변경할 수 없습니다.</p>
                 </div>
-                <p class="command-refs" data-i18n-html="s3_refs">출처: <a href="https://developers.openai.com/codex/models/" target="_blank">Codex models</a> · <a href="https://developers.openai.com/codex/pricing/" target="_blank">Codex pricing</a> · <a href="https://developers.openai.com/api/docs/models" target="_blank">OpenAI API Models</a> · <a href="https://developers.openai.com/api/docs/guides/latest-model" target="_blank">GPT-6 Astra API guidance</a></p>
+                <p class="command-refs" data-i18n-html="s3_refs">출처: <a href="https://learn.chatgpt.com/docs/models" target="_blank">Codex models</a> · <a href="https://learn.chatgpt.com/docs/pricing" target="_blank">Codex pricing</a> · <a href="https://developers.openai.com/api/docs/models" target="_blank">OpenAI API Models</a> · <a href="https://developers.openai.com/api/docs/guides/latest-model" target="_blank">GPT-6 Astra API model guidance</a></p>
             </section>
 
             <!-- Section 3 -->
             <section class="section" id="s4">
                 <h2><span class="section-num">04</span> <span data-i18n="s4_title">시스템 요구사항 & 가격</span></h2>
-                <div class="callout"><p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="retire55_short">GPT-5.5는 2026년 10월 14일 ChatGPT·Work·Codex의 모든 플랜에서 종료 예정입니다. ChatGPT 로그인 Codex의 저장된 gpt-5.5 설정은 gpt-5.6-sol로 전환하세요. OpenAI API는 대상이 아닙니다.</p><a href="#gpt55-retirement">GPT-5.5 → Sol</a></div>
+                <div class="callout" id="sol6-pricing" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><h3 data-i18n="sol6_cost_t">Standard 크레딧 · 100만 토큰 기준</h3><p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="sol6_cost">GPT-6 Sol: 입력 50 / 캐시 입력 5 / 출력 250. GPT-6 Luna: 입력 2.5 / 캐시 입력 0.25 / 출력 12.5. 제공되는 환경의 Fast는 2.5배입니다. API 달러 요금과 다르며, 단가만으로 구독 포함 사용량이나 작업당 절감률을 계산하지 마세요. Work·Codex는 사용량을 공유합니다.</p><p class="command-refs"><a href="https://learn.chatgpt.com/docs/models" target="_blank" rel="noopener noreferrer">Models</a> <a href="https://learn.chatgpt.com/docs/pricing#token-rates" target="_blank" rel="noopener noreferrer">Pricing</a> <a href="https://learn.chatgpt.com/docs/changelog#codex-2026-09-22-gpt-6-sol-luna" target="_blank" rel="noopener noreferrer">OpenAI · 2026-09-22</a></p></div>
+<div class="callout"><p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="retire55_short">GPT-5.5는 2026년 10월 14일 ChatGPT·Work·Codex의 모든 플랜에서 종료 예정입니다. 유료 플랜은 GPT-6 Sol, Free·Go는 데스크톱 GPT-6 Luna의 접근을 확인해 전환하세요. OpenAI API는 대상이 아닙니다.</p><a href="#gpt55-retirement">GPT-5.5 → Sol / Luna</a></div>
                 <div class="two-col">
                     <div>
                         <h3 data-i18n="s4_req_title">시스템 요구사항</h3>
@@ -718,17 +689,17 @@
                                     <tr>
                                         <td>Free</td>
                                         <td>$0</td>
-                                        <td data-i18n="s4_codex_free">빠른 코딩 작업 위주의 Codex 탐색</td>
+                                        <td data-i18n="s4_codex_free">점진 배포되는 데스크톱 GPT-6 Luna · Standard</td>
                                     </tr>
                                     <tr>
                                         <td>Go</td>
                                         <td>$8/mo</td>
-                                        <td data-i18n="s4_codex_go">가벼운 코딩 작업을 위한 저가형 Codex 사용</td>
+                                        <td data-i18n="s4_codex_go">점진 배포되는 데스크톱 GPT-6 Luna · Standard</td>
                                     </tr>
                                     <tr>
                                         <td>Plus</td>
                                         <td>$20/mo</td>
-                                        <td data-i18n="s4_codex_plus">웹·CLI·IDE·모바일, 클라우드 리뷰와 크레딧. Astra 등 모델 접근은 현재 계정에서 확인</td>
+                                        <td data-i18n="s4_codex_plus">GPT-6 Sol·Luna 점진 배포, 웹·CLI·IDE·모바일, 클라우드 리뷰와 크레딧. 실제 접근은 선택기 확인</td>
                                     </tr>
                                     <tr>
                                         <td>Pro</td>
@@ -806,7 +777,7 @@
                             <ul class="model-guidance-list">
                                 <li data-i18n="s4_guide_table_plans">Plus · Pro 5x · Pro 20x · Business · API Key 표</li>
                                 <li data-i18n="s4_guide_five_hours">모델별 5시간 한도</li>
-                                <li data-i18n="s4_guide_models">Astra · Sol · Terra · Luna 사용량 확인</li>
+                                <li data-i18n="s4_guide_models">GPT-6 Astra · Sol · Luna 사용량 확인</li>
                             </ul>
                         </section>
 
@@ -825,7 +796,7 @@
 
                     <div class="model-guidance-alert plan-fast-alert">
                         <strong>Fast mode</strong>
-                        <span data-i18n="s4_guide_fast">Astra Fast는 Standard의 2.5배 ChatGPT 크레딧입니다. API Fast 가격 배수와는 별도입니다.</span>
+                        <span data-i18n="s4_guide_fast">GPT-6 Astra·Sol·Luna의 Fast는 제공되는 환경에서 Standard의 2.5배 ChatGPT 크레딧입니다. API 요금은 별도입니다.</span>
                     </div>
                 </div>
 
@@ -975,11 +946,11 @@ codex --cd /path/to/project
 
 
 <div class="callout" id="cli155" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere">
-<h3 data-i18n="cli155_t">CLI 0.155.1 · 음성 대화와 추론 요약 기본값</h3>
-<p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="cli155_voice">9월 18일 패치로 업데이트하려면 npm install -g @openai/codex@0.155.1을 실행하고 codex --version으로 확인하세요. 0.155.0에서 추가된 실험적 음성 대화는 지원 빌드의 /experimental에서 켠 뒤 /voice로 시작합니다. 실시간 전사와 마이크 제어가 포함되며, 모든 플랫폼·계정에서 제공된다는 뜻은 아닙니다.</p>
-<p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="cli155_tasks">0.155.1의 새 로컬 TUI 세션은 추론 요약을 기본으로 끕니다. 요약을 지원하지 않는 제공자의 요청 거절을 막기 위한 수정이며, 명시한 요약 설정은 유지됩니다. 추론 요약 설정과 모델의 추론 강도는 별개입니다. agents overview의 작업 숨기기·보관·삭제와 관리되는 깨끗한 worktree 삭제 확인 절차는 유지됩니다. 삭제 전에 대상 작업과 checkout을 확인하세요.</p>
-<p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="cli155_auth">지원되는 Mac의 로컬 TUI 세션에서는 MCP 요청에 Touch ID 확인을 사용할 수 있습니다. OAuth 토큰 갱신이 실패하면 MCP 재연결 안내를 따르세요. 계정을 전환하면 이전 계정의 원격 세션·WebSocket 상태·모델 카탈로그 캐시가 무효화됩니다.</p>
-<p class="command-refs"><a href="https://learn.chatgpt.com/docs/changelog" target="_blank" rel="noopener noreferrer">Codex CLI 0.155.1 · 2026-09-18</a></p>
+<h3 data-i18n="cli155_t">CLI 0.156.0 · 음성·전체 화면·사용량</h3>
+<p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="cli155_voice">9월 22일 릴리스: npm install -g @openai/codex@0.156.0으로 업데이트하고 codex --version으로 확인하세요. 음성 대화가 기본 활성화됐으며 F8로 전환하고 /voice settings에서 음성을 고릅니다. Linux·Windows용 오디오 런타임이 포함됩니다. 실제 클라이언트 지원과 마이크 권한을 확인하세요.</p>
+<p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="cli155_tasks">다음 실행에서 전체 화면 UI를 쓰려면 /tui로 선택하세요. 대화 검색·마우스 선택·우클릭 복사를 지원합니다. /usage에서 계정 사용량·토큰 합계·플러그인·스킬 활동을 확인하세요. agent command center는 상태 필터와 worktree 세션 생성을 지원하며 worktree 기능이 기본 활성화됐습니다. 대상 프로젝트와 checkout을 확인하세요.</p>
+<p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="cli155_auth">세션 재개 시 Plan 모드 복구, tmux·SSH 클립보드 전달, 시스템 프록시 로그인·MCP 인증 복구와 샌드박스 격리 수정이 포함됩니다. 이전 friendly·pragmatic personality 설정은 더 이상 응답 스타일을 선택하지 않습니다. 0.155.1의 추론 요약 기본값과 모델 추론 강도는 별개입니다.</p>
+<p class="command-refs"><a href="https://learn.chatgpt.com/docs/changelog" target="_blank" rel="noopener noreferrer">Codex CLI 0.156.0 · 2026-09-22</a></p>
 </div>
                 <div class="callout">
                 <h3 data-i18n="cli154_t">CLI 0.154 · 격리 작업과 실행 중 응답</h3>
@@ -1076,7 +1047,8 @@ codex --cd /path/to/project
                     </div>
                 </div>
 
-                <div class="field-tip-grid"><a id="arch-install" class="field-tip-card" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere" href="https://learn.chatgpt.com/docs/linux/linux-app#install-on-arch-linux" target="_blank" rel="noopener noreferrer"><span class="field-tip-person">OpenAI Docs · Linux preview</span><h3 data-i18n="arch_t">Arch Linux · 공식 설치 스크립트</h3><p data-i18n="arch_d">Linux preview가 최신 상태의 Arch Linux rolling release를 x64·ARM64에서 지원합니다. uname -m으로 아키텍처를 확인한 뒤 공식 문서의 install-arch.sh를 내려받아 실행하세요. 스크립트는 서명된 OpenAI 저장소를 설정하며, 확인을 거쳐 전체 시스템 업그레이드를 수행합니다. 이후 업데이트는 sudo pacman -Syu로 진행합니다. Computer Use는 아직 Linux에서 지원되지 않습니다.</p></a></div>
+                <div class="field-tip-grid">
+<a id="arch-install" class="field-tip-card" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere" href="https://learn.chatgpt.com/docs/linux/linux-app#install-on-arch-linux" target="_blank" rel="noopener noreferrer"><span class="field-tip-person">OpenAI Docs · Linux preview</span><h3 data-i18n="arch_t">Arch Linux · 공식 설치 스크립트</h3><p data-i18n="arch_d">Linux preview가 최신 상태의 Arch Linux rolling release를 x64·ARM64에서 지원합니다. uname -m으로 아키텍처를 확인한 뒤 공식 문서의 install-arch.sh를 내려받아 실행하세요. 스크립트는 서명된 OpenAI 저장소를 설정하며, 확인을 거쳐 전체 시스템 업그레이드를 수행합니다. 이후 업데이트는 sudo pacman -Syu로 진행합니다. Computer Use는 아직 Linux에서 지원되지 않습니다.</p></a></div>
 
                 <h3 data-i18n="s7_modes_title">쓰레드 모드</h3>
                 <div class="table-wrap">
@@ -1671,7 +1643,7 @@ AGENTS.override.md  → 최우선
                 <h2><span class="section-num">13</span> <span data-i18n="s13_title">config.toml 설정</span></h2>
                 <pre data-i18n-html="code_s13_config"><code><span class="c">#:schema https://developers.openai.com/codex/config-schema.json</span>
 <span class="c"># ~/.codex/config.toml — permission profile 방식</span>
-model = "gpt-5.6-sol"
+model = "gpt-6-sol"
 review_model = "gpt-5.6-terra"
 model_reasoning_effort = "medium"
 plan_mode_reasoning_effort = "medium"
@@ -1679,7 +1651,6 @@ approval_policy = "on-request"
 approvals_reviewer = "user"
 default_permissions = "project_safe"
 web_search = "cached"
-personality = "friendly"
 
 <span class="c"># sandbox_mode / sandbox_workspace_write와 함께 쓰지 않습니다</span>
 [permissions.project_safe]
@@ -1708,7 +1679,7 @@ codex --profile deep</code></pre>
                 </div>
                 <div class="callout">
                     <strong data-i18n="s13_beginner_t">처음 사용자라면 이렇게 이해하면 됩니다</strong>
-                    <p data-i18n="s13_beginner_d"><code>model</code>은 기본 두뇌, <code>review_model</code>은 리뷰 전용 두뇌, <code>default_permissions</code>는 파일·네트워크 경계, <code>approval_policy</code>는 언제 멈춰서 묻는지입니다. 예전 <code>sandbox_mode</code>를 쓰는 구성에서는 permission profile과 섞지 않습니다.</p>
+                    <p data-i18n="s13_beginner_d"><code>model</code>은 기본 두뇌, <code>review_model</code>은 리뷰 전용 두뇌, <code>default_permissions</code>는 파일·네트워크 경계, <code>approval_policy</code>는 언제 멈춰서 묻는지, <code>web_search</code>는 웹 최신성 모드, <code>service_tier</code>는 속도 우선 경로, <code>model_instructions_file</code>은 항상 따라야 할 개인 기본 지침입니다. 예전 <code>sandbox_mode</code>를 쓰는 구성에서는 permission profile과 섞지 않습니다.</p>
                 </div>
                 <div class="tip-grid">
                     <div class="tip-card">
@@ -1994,7 +1965,7 @@ codex exec --sandbox workspace-write "Run the documented checks and report the d
                         </div>
                         <p data-i18n="s17_intro_desc">원하는 결과·참고자료·제약·완료 기준을 먼저 주세요. Astra로 바꿀 때는 오래된 AGENTS.md와 스킬의 충돌도 점검하세요. 작은 작업은 낮은 추론 강도부터 결과를 비교하고, 필요한 검증 범위를 명시하세요.</p>
                         <p class="prompt-inline-ref" data-i18n-html="s17_intro_ref">레퍼런스: <a href="https://learn.chatgpt.com/docs/prompting" target="_blank">Prompting</a> · <a href="https://learn.chatgpt.com/guides/best-practices" target="_blank">Best practices</a> · <a href="https://learn.chatgpt.com/docs/long-running-work" target="_blank">Long-running work</a> · <a href="https://developers.openai.com/api/docs/guides/latest-model" target="_blank">GPT-6 Astra Prompt guidance</a></p>
-                        <p data-i18n="pg_s1_intro">GPT-5.6 프롬프팅은 모든 단계를 과하게 지정하는 방식보다, 원하는 결과와 성공 기준을 선명하게 두고 필요한 도구·추론·검증 경로를 모델이 고르게 하는 쪽에 가깝습니다.</p>
+                        <p data-i18n="pg_s1_intro">Codex에는 원하는 결과와 성공 기준, 필요한 자료·제약을 먼저 알려주세요. 모델이 작업에 맞는 도구·추론·검증 경로를 선택할 수 있도록 단계별 지시는 필요한 만큼만 적습니다.</p>
                         <div class="two-col">
                             <div class="callout">
                                 <strong data-i18n="s17_first_use_t">Strong first use: 결과와 멈춤 기준을 먼저 주세요</strong>
@@ -2211,7 +2182,7 @@ codex exec --sandbox workspace-write "Run the documented checks and report the d
                         <div class="feature-list">
                             <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="pg_s5_f1">Responses API의 <code>phase</code>는 preamble 같은 중간 업데이트와 final answer를 구분합니다. assistant item을 수동 재전송한다면 기존 <code>phase</code> 값을 그대로 보존해야 합니다.</span></div>
                             <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="pg_s5_f2">Compaction을 쓸 때는 milestone 이후에만 압축하고, 압축 전후 프롬프트의 기능적 의미를 바꾸지 않는 편이 안전합니다.</span></div>
-                            <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="pg_s5_f3">GPT-5.6 family로 옮길 때는 모델만 먼저 바꾸고 reasoning을 고정한 뒤 eval로 차이를 보는 one-change-at-a-time 방식이 낫습니다.</span></div>
+                            <div class="feature-item"><span class="feature-icon">—</span><span data-i18n="pg_s5_f3">새 모델로 옮길 때는 모델만 먼저 바꾸고 같은 입력·완료 기준으로 비교한 뒤 추론 강도 등 한 가지씩 조절하세요.</span></div>
                         </div>
                         <div class="callout">
                             <strong data-i18n="pg_s5_callout_t">먼저 요청 방식, 그 다음 reasoning</strong>
@@ -2275,8 +2246,8 @@ Research rules:
                     <article class="product-card prompt-guide-card">
                         <div class="product-icon" data-i18n="s17_link2_kicker">Official</div>
                         <h3 data-i18n="s17_link2_title">OpenAI Prompt Guidance</h3>
-                        <p data-i18n="s17_link2_desc">GPT-5.6 시대의 outcome-first prompting, reasoning effort, phase, compaction, validation, research/citation 규칙까지 포함한 공식 기준 문서를 같이 보세요.</p>
-                        <a href="https://developers.openai.com/api/docs/guides/prompt-guidance-gpt-5p6" target="_blank" class="btn btn-ghost" data-i18n="s17_link2_cta">공식 문서 보기</a>
+                        <p data-i18n="s17_link2_desc">목표·맥락·출력·경계와 후속 수정, CLI·IDE별 예시를 공식 Prompting 문서에서 확인하세요.</p>
+                        <a href="https://learn.chatgpt.com/docs/prompting" target="_blank" class="btn btn-ghost" data-i18n="s17_link2_cta">공식 문서 보기</a>
                     </article>
                 </div>
             </section>
@@ -2286,9 +2257,8 @@ Research rules:
                 <h2><span class="section-num">18</span> <span data-i18n="s18_title">고급 활용 기법</span></h2>
                 <p data-i18n="s18_intro">최신 best practices와 customization 문서를 같이 보면 장기적으로 잘 쓰는 사용자는 반복 작업을 skill로 만들고, 팀에 공유할 때는 plugin으로 묶고, 외부 시스템 연결은 MCP로 붙이고, 장기 작업은 bounded delegation으로 나눕니다.</p>
                 <pre data-i18n-html="code_s18_adv"><code><span class="c"># 모델 선택</span>
-/model gpt-5.6-sol     <span class="c"># 복잡하고 중요한 작업</span>
-/model gpt-5.6-terra   <span class="c"># 일상 작업</span>
-/model gpt-5.6-luna    <span class="c"># 빠른 반복 작업 / subagent</span>
+/model gpt-6-sol     <span class="c"># flagship / 복잡한 작업</span>
+/model gpt-6-luna    <span class="c"># 빠른 반복 작업</span>
 
 <span class="c"># 플러그인 디렉터리 (CLI)</span>
 /plugins
@@ -2367,6 +2337,7 @@ codex --search "optimize with Next.js 15"
                 <p data-i18n="field_tips_intro">OpenAI Codex, Developer Experience, 데이터/보안/제품 담당자들이 공개적으로 공유한 실전 사용법을 사람별 원글 링크와 함께 정리했습니다. 제품의 사용 가능 여부와 설정 절차는 아래 공식 문서 링크를 함께 확인하세요.</p>
                 <p class="command-refs"><a href="https://x.com/pvncher/status/2098488444443939186" target="_blank" rel="noopener noreferrer">Eric · /feedback</a> · <a href="https://learn.chatgpt.com/docs/reference/troubleshooting#feedback-and-logs" target="_blank" rel="noopener noreferrer">Feedback &amp; logs</a></p>
 <div class="field-tip-grid">
+<article id="session-evals" class="field-tip-card" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><span class="field-tip-person">Eric Provencher · 2026-09-22 KST</span><h3 data-i18n="session_eval_t">작업 기록에서 스킬 개선점 찾기</h3><p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="session_eval_d">Eric은 긴 작업 뒤 세션 기록에서 프롬프트가 만든 혼동·불필요한 작업을 찾아 개선하고, 작은 평가 사례를 구성하라고 제안합니다. 편집 예시: “이 기록에서 지시 때문에 생긴 혼동과 추가 작업을 근거와 함께 찾고, 스킬 수정안과 재현 가능한 작은 평가 사례를 제안해 주세요.” 개인 작업 방식이며 모든 작업의 품질 향상을 보장하지 않습니다.</p><p class="command-refs"><a href="https://x.com/pvncher/status/2102080325450956865" target="_blank" rel="noopener noreferrer">Eric</a> <a href="https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra" target="_blank" rel="noopener noreferrer">OpenAI Developers</a></p></article>
 <article id="computer-retry" class="field-tip-card" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><span class="field-tip-person">VB Srivastav · 2026-09-21 KST</span><h3 data-i18n="computer_retry_t">Computer Use가 막히면 다른 접근 요청</h3><p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="computer_retry_d">VB는 Computer Use가 막힐 때 다른 접근을 요청하는 방식을 공유했습니다. 편집 예시: “현재 창과 실패한 단계를 다시 확인하고, 같은 목표를 다른 접근으로 진행해 주세요. 완료 후 실제 화면에서 결과를 확인해 주세요.” 개인 경험이며 성공률 보장은 아닙니다. 지원되는 macOS·Windows 환경에서 사용하고, 기존 앱 접근 권한과 승인 조건을 유지하세요.</p><p class="command-refs"><a href="https://x.com/reach_vb/status/2101799938547962072" target="_blank" rel="noopener noreferrer">VB</a> <a href="https://learn.chatgpt.com/docs/computer-use" target="_blank" rel="noopener noreferrer">Computer Use</a></p></article>
 <article id="plugin-accounts" class="field-tip-card" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><span class="field-tip-person">VB Srivastav · 2026-09-19 KST</span><h3 data-i18n="multi_account_t">플러그인 계정은 작업 요청에 명시</h3><p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="multi_account_d">VB는 ChatGPT 플러그인에 여러 계정을 연결하는 기능을 소개했습니다. 플러그인 설정에서 추가 계정을 연결한 뒤 사용할 계정을 요청에 적으세요. 편집 예시: “회사 Gmail 계정의 오늘 받은 메일만 요약하고, 사용한 계정을 결과에 표시해 주세요.” 공식 문서상 모델은 요청에 따라 연결된 계정을 선택하며, 각 호출은 해당 계정의 인증·권한으로 실행됩니다. 플러그인·계정의 실제 연결 옵션을 확인하세요. 이는 ChatGPT 로그인 계정 전환 기능을 뜻하지 않습니다.</p><p class="command-refs"><a href="https://x.com/reach_vb/status/2100989529465188597" target="_blank" rel="noopener noreferrer">VB</a> <a href="https://developers.openai.com/plugins/build/auth#support-multiple-accounts" target="_blank" rel="noopener noreferrer">OpenAI Docs</a></p></article>
 <article id="appshot-scope" class="field-tip-card" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><span class="field-tip-person">VB Srivastav · 2026-09-18 KST</span><h3 data-i18n="appshot_scope_t">Appshot은 맨 앞 창과 제공되는 텍스트를 함께 전달</h3><p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="appshot_scope_d">VB는 Windows Appshots를 소개하며 이미지 외에 앱이 제공하는 텍스트도 맥락으로 쓴다고 설명했습니다. 공유할 창을 맨 앞으로 가져오고 Windows는 양쪽 Alt, macOS는 양쪽 Command를 누른 뒤 필요한 작업을 적으세요. 공식 문서상 맨 앞 창만 캡처하지만 앱이 노출한 스크롤 밖 텍스트도 포함될 수 있습니다. Google Docs·Gmail·Sheets·Slides는 화면 이미지만 전달될 수 있으므로 전체 내용이 필요하면 연결된 plugin이나 원본 파일로 확인하세요.</p><p class="command-refs"><a href="https://x.com/reach_vb/status/2100729426077999245" target="_blank" rel="noopener noreferrer">VB</a> <a href="https://learn.chatgpt.com/docs/appshots" target="_blank" rel="noopener noreferrer">Appshots</a></p></article>
@@ -2587,10 +2558,11 @@ codex --search "optimize with Next.js 15"
                     </div>
                     <p class="overview-fact-date">
                         <span data-i18n="overview_fact_date_prefix">업데이트 기준일</span>
-                        <span class="live-date" data-date-format="long">2026년 9월 21일</span>
+                        <span class="live-date" data-date-format="long">2026년 9월 23일</span>
                     </p>
                 </div>
                 <ol class="changelog-list" aria-label="Recent update summary">
+<li><strong data-i18n="changelog_sep23_t">9월 23일 · GPT-6 Sol·Luna와 CLI 0.156</strong><span data-i18n="changelog_sep23_d">9월 22일 발표를 반영해 추천 모델·Power·플랜별 전환·크레딧·설정 예시를 갱신하고 CLI 음성·전체 화면·사용량 확인 절차를 정리했습니다.</span></li>
 <li><strong data-i18n="changelog_sep21_t">9월 21일 · Computer Use 재시도와 원문 링크</strong><span data-i18n="changelog_sep21_d">VB의 다른 접근 요청 팁을 검증 절차와 함께 추가하고, Brent의 원문에서 확인한 현재 계정으로 출처 링크를 갱신했습니다.</span></li>
 <li><strong data-i18n="changelog_sep20_t">9월 20일 · CLI 요약 기본값과 iOS 작업 확인</strong><span data-i18n="changelog_sep20_d">CLI 0.155.1의 추론 요약 기본값을 정정하고, iOS 1.2026.251의 프로젝트 설정 기억·작성 블록·대기 프롬프트 확인 절차를 추가했습니다.</span></li>
 <li><strong data-i18n="changelog_sep19_t">9월 19일 · Spark 종료와 플러그인 계정 선택</strong><span data-i18n="changelog_sep19_d">공식 9월 14일 Spark 종료에 맞춰 모델·요금·FAQ·실행 안내를 정정하고, VB의 다중 계정 팁과 Apple Messages의 Apple Silicon 빌드 조건을 반영했습니다.</span></li>
@@ -2666,13 +2638,13 @@ codex --search "optimize with Next.js 15"
                     href="https://github.com/swhan0329/codex-101" target="_blank">PR을 환영합니다</a>.</p>
             <p class="footer-meta">
                 <span data-i18n="footer_date_prefix">최종 업데이트</span>:
-                        <span class="live-date" data-date-format="long">2026년 9월 21일</span>
+                        <span class="live-date" data-date-format="long">2026년 9월 23일</span>
             </p>
             <p class="footer-meta">Made by <a href="https://github.com/swhan0329" target="_blank">@swhan0329</a></p>
         </div>
     </footer>
 
-    <script src="i18n.js?v=20260921-computer-retry"></script>
+    <script src="i18n.js?v=20260923-sol-luna"></script>
     <script src="app.js?v=20260919-mobile-reveal"></script>
 </body>
 
