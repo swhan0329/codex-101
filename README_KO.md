@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 9월 23일</strong><br/>
+  <strong>최종 업데이트: 2026년 9월 24일</strong><br/>
   페이지의 실제 수정일을 표시하며, 모델 안내에는 공식 출처와 확인 범위를 함께 제공합니다.
 </p>
 
@@ -20,6 +20,14 @@
 </p>
 
 ---
+
+## 9월 24일 · CLI 모델 선택·Voice 배포·작업 맥락
+
+- `npm install -g @openai/codex@0.156.1`로 업데이트하고 `codex --version`과 `/model`을 확인하세요. 9월 23일 패치는 Sol·Luna를 선택기에 추가하고 한도 전환 안내에서 GPT-6 Luna를 추천합니다. 계정·워크스페이스 접근 조건은 그대로 적용됩니다.
+- Eric의 짧은 작업 로그 팁과 Sid Rampally의 대화 맥락 전달 사례를 추가했습니다. 편집 예시를 구분하고 LED 사례의 API 사용은 Codex 구독과 별개임을 명시했습니다.
+- 공식 Voice 확장 발표를 전 세계 배포 중으로 반영하고 계정·워크스페이스 확인과 기존 플러그인 권한 조건을 함께 적었습니다.
+
+[CLI changelog](https://learn.chatgpt.com/docs/changelog) · [Eric](https://x.com/pvncher/status/2102783470942683228) · [Sid Rampally](https://developers.openai.com/blog/bringing-my-led-display-to-life) · [Voice announcement](https://x.com/OpenAI/status/2102808325742322002)
 
 ## 9월 23일 · GPT-6 Sol·Luna 배포와 CLI 0.156
 

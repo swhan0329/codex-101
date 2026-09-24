@@ -10,12 +10,20 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: September 23, 2026</strong><br/>
+  <strong>Last updated: September 24, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
 
 ---
+
+## September 24 · CLI model picker, Voice rollout, and context
+
+- Install `npm install -g @openai/codex@0.156.1`, check `codex --version`, and open `/model`. The September 23 patch adds Sol/Luna to the picker and recommends GPT-6 Luna when suggesting a switch at usage limits. Account and workspace access still apply.
+- Added Eric’s compact worklog tip and Sid Rampally’s conversation-context handoff example. Edited prompts are labeled; the LED project uses the API separately from Codex subscriptions.
+- Added the official Voice expansion announcement as a global rollout, with account/workspace checks and existing plugin permissions.
+
+[CLI changelog](https://learn.chatgpt.com/docs/changelog) · [Eric](https://x.com/pvncher/status/2102783470942683228) · [Sid Rampally](https://developers.openai.com/blog/bringing-my-led-display-to-life) · [Voice announcement](https://x.com/OpenAI/status/2102808325742322002)
 
 ## September 23 · GPT-6 Sol/Luna rollout and CLI 0.156
 

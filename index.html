@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="style.css?v=20260906-astra-facts" />
 </head>
 
-<body data-page="home" data-updated="2026-09-23">
+<body data-page="home" data-updated="2026-09-24">
     <!-- Language Toggle -->
     <nav class="top-bar">
         <div class="top-bar-inner">
@@ -51,7 +51,7 @@
                     <p class="hero-badge">
                         <span data-i18n="hero_badge_prefix">공식 문서 기반 · 실무 실행 가이드</span>
                         <span aria-hidden="true"> · </span>
-                        <span class="live-date" data-date-format="long">2026년 9월 23일</span>
+                        <span class="live-date" data-date-format="long">2026년 9월 24일</span>
                     </p>
                     <h1 class="hero-title" data-i18n="hero_title"><span class="hero-title-lead">OpenAI Codex를</span><span class="hero-title-focus">실무에 바로 붙이는 가이드</span></h1>
                     <p class="hero-sub" data-i18n="hero_sub"><span class="hero-sub-lead">CLI부터 데스크톱 앱·IDE·Web·Mobile까지, 한 흐름으로.</span><span class="hero-sub-detail">설치·권한·Git·자동화·프롬프팅을 최신 공식 문서 기준의 실행 순서로 정리했습니다.</span></p>
@@ -946,11 +946,11 @@ codex --cd /path/to/project
 
 
 <div class="callout" id="cli155" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere">
-<h3 data-i18n="cli155_t">CLI 0.156.0 · 음성·전체 화면·사용량</h3>
-<p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="cli155_voice">9월 22일 릴리스: npm install -g @openai/codex@0.156.0으로 업데이트하고 codex --version으로 확인하세요. 음성 대화가 기본 활성화됐으며 F8로 전환하고 /voice settings에서 음성을 고릅니다. Linux·Windows용 오디오 런타임이 포함됩니다. 실제 클라이언트 지원과 마이크 권한을 확인하세요.</p>
+<h3 data-i18n="cli155_t">CLI 0.156.1 · 음성·전체 화면·사용량</h3>
+<p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="cli155_voice">9월 23일 패치로 업데이트하세요. /model에 GPT-6 Sol·Luna가 추가됐고, 한도 도달 시 모델 전환 안내가 GPT-6 Luna를 추천합니다. npm install -g @openai/codex@0.156.1으로 업데이트하고 codex --version으로 확인하세요. 9월 22일 추가된 음성 대화는 기본 활성화 상태이며 F8로 전환하고 /voice settings에서 음성을 고릅니다. Linux·Windows용 오디오 런타임이 포함됩니다. 실제 클라이언트 지원과 마이크 권한을 확인하세요.</p>
 <p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="cli155_tasks">다음 실행에서 전체 화면 UI를 쓰려면 /tui로 선택하세요. 대화 검색·마우스 선택·우클릭 복사를 지원합니다. /usage에서 계정 사용량·토큰 합계·플러그인·스킬 활동을 확인하세요. agent command center는 상태 필터와 worktree 세션 생성을 지원하며 worktree 기능이 기본 활성화됐습니다. 대상 프로젝트와 checkout을 확인하세요.</p>
-<p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="cli155_auth">세션 재개 시 Plan 모드 복구, tmux·SSH 클립보드 전달, 시스템 프록시 로그인·MCP 인증 복구와 샌드박스 격리 수정이 포함됩니다. 이전 friendly·pragmatic personality 설정은 더 이상 응답 스타일을 선택하지 않습니다. 0.155.1의 추론 요약 기본값과 모델 추론 강도는 별개입니다.</p>
-<p class="command-refs"><a href="https://learn.chatgpt.com/docs/changelog" target="_blank" rel="noopener noreferrer">Codex CLI 0.156.0 · 2026-09-22</a></p>
+<p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="cli155_auth">9월 22일 릴리스에는 세션 재개 시 Plan 모드 복구, tmux·SSH 클립보드 전달, 시스템 프록시 로그인·MCP 인증 복구와 샌드박스 격리 수정이 포함됩니다. 이전 friendly·pragmatic personality 설정은 더 이상 응답 스타일을 선택하지 않습니다. 0.155.1의 추론 요약 기본값과 모델 추론 강도는 별개입니다.</p>
+<p class="command-refs"><a href="https://learn.chatgpt.com/docs/changelog" target="_blank" rel="noopener noreferrer">Codex CLI 0.156.1 · 2026-09-23</a></p>
 </div>
                 <div class="callout">
                 <h3 data-i18n="cli154_t">CLI 0.154 · 격리 작업과 실행 중 응답</h3>
@@ -2337,6 +2337,9 @@ codex --search "optimize with Next.js 15"
                 <p data-i18n="field_tips_intro">OpenAI Codex, Developer Experience, 데이터/보안/제품 담당자들이 공개적으로 공유한 실전 사용법을 사람별 원글 링크와 함께 정리했습니다. 제품의 사용 가능 여부와 설정 절차는 아래 공식 문서 링크를 함께 확인하세요.</p>
                 <p class="command-refs"><a href="https://x.com/pvncher/status/2098488444443939186" target="_blank" rel="noopener noreferrer">Eric · /feedback</a> · <a href="https://learn.chatgpt.com/docs/reference/troubleshooting#feedback-and-logs" target="_blank" rel="noopener noreferrer">Feedback &amp; logs</a></p>
 <div class="field-tip-grid">
+<article id="steering-worklog" class="field-tip-card" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><span class="field-tip-person">Eric Provencher · 2026-09-24 KST</span><h3 data-i18n="worklog_t">방향을 자주 바꿀 때는 짧은 작업 로그</h3><p data-i18n="worklog_d">Eric은 작업 중 방향을 자주 수정한다면 목표와 변경 사항을 짧은 로그에 남기고, 마지막 요청만 보지 말고 누적된 목표를 참고하도록 AGENTS.md에 적는 방식을 제안합니다. 편집 예시: “목표·제약·합의된 변경·다음 단계를 짧게 기록하고, 새 지시를 반영할 때 기존 완료 기준도 함께 확인해 주세요.” 개인 사용 팁이며 최신 명시적 변경을 무시하라는 뜻은 아닙니다.</p><p class="command-refs"><a href="https://x.com/pvncher/status/2102783470942683228" target="_blank" rel="noopener noreferrer">Eric</a> <a href="https://learn.chatgpt.com/docs/agent-configuration/agents-md" target="_blank" rel="noopener noreferrer">AGENTS.md</a></p></article>
+<article id="handoff-context" class="field-tip-card" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><span class="field-tip-person">Sid Rampally · 2026-09-23</span><h3 data-i18n="handoff_context_t">“그 결과”를 전달할 때 맥락도 함께</h3><p data-i18n="handoff_context_d">Sid Rampally는 LED 음성 비서가 “그걸 화면에 보여 줘”를 이해하지 못하자, 다음 모델에 최근 대화와 앞선 결과를 함께 전달해 해결했습니다. 내 앱에서도 앞선 질문 → 결과 → 대명사로 이어지는 요청을 시험하고, 전달되는 맥락과 결과를 확인하세요. GPT-Live-1·Responses API·Raspberry Pi를 사용한 개발 사례이며 Codex의 기본 기능이나 구독 포함 API 사용을 뜻하지 않습니다.</p><p class="command-refs"><a href="https://developers.openai.com/blog/bringing-my-led-display-to-life" target="_blank" rel="noopener noreferrer">OpenAI Developers</a></p></article>
+<article id="voice-work-rollout" class="field-tip-card" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><span class="field-tip-person">OpenAI · Tibo · 2026-09-24 KST</span><h3 data-i18n="voice_rollout_t">Voice · 웹·모바일 Work로 확장 중</h3><p data-i18n="voice_rollout_d">9월 24일(KST) OpenAI는 Voice의 이메일·캘린더·Slack 등 플러그인 사용, GPT-6 Astra·Sol·Luna, 웹·모바일 ChatGPT Work 지원을 발표했습니다. 최신 앱으로 업데이트하고 내 계정의 Work에서 음성·모델·연결된 플러그인을 확인하세요. 전 세계 배포 중이며 플랜·워크스페이스별 접근을 별도로 확인해야 합니다. Tibo는 음성으로 업무·이메일·일정을 조율한다고 공유했습니다. 기존 연결 권한과 작업 승인 조건을 유지하세요.</p><p class="command-refs"><a href="https://x.com/OpenAI/status/2102808325742322002" target="_blank" rel="noopener noreferrer">OpenAI</a> <a href="https://x.com/thsottiaux/status/2102814202117411196" target="_blank" rel="noopener noreferrer">Tibo</a> <a href="https://learn.chatgpt.com/docs/features/voice" target="_blank" rel="noopener noreferrer">Voice</a></p></article>
 <article id="session-evals" class="field-tip-card" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><span class="field-tip-person">Eric Provencher · 2026-09-22 KST</span><h3 data-i18n="session_eval_t">작업 기록에서 스킬 개선점 찾기</h3><p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="session_eval_d">Eric은 긴 작업 뒤 세션 기록에서 프롬프트가 만든 혼동·불필요한 작업을 찾아 개선하고, 작은 평가 사례를 구성하라고 제안합니다. 편집 예시: “이 기록에서 지시 때문에 생긴 혼동과 추가 작업을 근거와 함께 찾고, 스킬 수정안과 재현 가능한 작은 평가 사례를 제안해 주세요.” 개인 작업 방식이며 모든 작업의 품질 향상을 보장하지 않습니다.</p><p class="command-refs"><a href="https://x.com/pvncher/status/2102080325450956865" target="_blank" rel="noopener noreferrer">Eric</a> <a href="https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra" target="_blank" rel="noopener noreferrer">OpenAI Developers</a></p></article>
 <article id="computer-retry" class="field-tip-card" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><span class="field-tip-person">VB Srivastav · 2026-09-21 KST</span><h3 data-i18n="computer_retry_t">Computer Use가 막히면 다른 접근 요청</h3><p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="computer_retry_d">VB는 Computer Use가 막힐 때 다른 접근을 요청하는 방식을 공유했습니다. 편집 예시: “현재 창과 실패한 단계를 다시 확인하고, 같은 목표를 다른 접근으로 진행해 주세요. 완료 후 실제 화면에서 결과를 확인해 주세요.” 개인 경험이며 성공률 보장은 아닙니다. 지원되는 macOS·Windows 환경에서 사용하고, 기존 앱 접근 권한과 승인 조건을 유지하세요.</p><p class="command-refs"><a href="https://x.com/reach_vb/status/2101799938547962072" target="_blank" rel="noopener noreferrer">VB</a> <a href="https://learn.chatgpt.com/docs/computer-use" target="_blank" rel="noopener noreferrer">Computer Use</a></p></article>
 <article id="plugin-accounts" class="field-tip-card" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><span class="field-tip-person">VB Srivastav · 2026-09-19 KST</span><h3 data-i18n="multi_account_t">플러그인 계정은 작업 요청에 명시</h3><p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="multi_account_d">VB는 ChatGPT 플러그인에 여러 계정을 연결하는 기능을 소개했습니다. 플러그인 설정에서 추가 계정을 연결한 뒤 사용할 계정을 요청에 적으세요. 편집 예시: “회사 Gmail 계정의 오늘 받은 메일만 요약하고, 사용한 계정을 결과에 표시해 주세요.” 공식 문서상 모델은 요청에 따라 연결된 계정을 선택하며, 각 호출은 해당 계정의 인증·권한으로 실행됩니다. 플러그인·계정의 실제 연결 옵션을 확인하세요. 이는 ChatGPT 로그인 계정 전환 기능을 뜻하지 않습니다.</p><p class="command-refs"><a href="https://x.com/reach_vb/status/2100989529465188597" target="_blank" rel="noopener noreferrer">VB</a> <a href="https://developers.openai.com/plugins/build/auth#support-multiple-accounts" target="_blank" rel="noopener noreferrer">OpenAI Docs</a></p></article>
@@ -2558,10 +2561,11 @@ codex --search "optimize with Next.js 15"
                     </div>
                     <p class="overview-fact-date">
                         <span data-i18n="overview_fact_date_prefix">업데이트 기준일</span>
-                        <span class="live-date" data-date-format="long">2026년 9월 23일</span>
+                        <span class="live-date" data-date-format="long">2026년 9월 24일</span>
                     </p>
                 </div>
                 <ol class="changelog-list" aria-label="Recent update summary">
+<li><strong data-i18n="changelog_sep24_t">9월 24일 · CLI 모델 선택과 작업 맥락</strong><span data-i18n="changelog_sep24_d">CLI 0.156.1의 Sol·Luna 선택기와 한도 전환 안내, Voice 확장 발표, 작업 로그·대화 맥락 전달 팁을 반영했습니다.</span></li>
 <li><strong data-i18n="changelog_sep23_t">9월 23일 · GPT-6 Sol·Luna와 CLI 0.156</strong><span data-i18n="changelog_sep23_d">9월 22일 발표를 반영해 추천 모델·Power·플랜별 전환·크레딧·설정 예시를 갱신하고 CLI 음성·전체 화면·사용량 확인 절차를 정리했습니다.</span></li>
 <li><strong data-i18n="changelog_sep21_t">9월 21일 · Computer Use 재시도와 원문 링크</strong><span data-i18n="changelog_sep21_d">VB의 다른 접근 요청 팁을 검증 절차와 함께 추가하고, Brent의 원문에서 확인한 현재 계정으로 출처 링크를 갱신했습니다.</span></li>
 <li><strong data-i18n="changelog_sep20_t">9월 20일 · CLI 요약 기본값과 iOS 작업 확인</strong><span data-i18n="changelog_sep20_d">CLI 0.155.1의 추론 요약 기본값을 정정하고, iOS 1.2026.251의 프로젝트 설정 기억·작성 블록·대기 프롬프트 확인 절차를 추가했습니다.</span></li>
@@ -2638,13 +2642,13 @@ codex --search "optimize with Next.js 15"
                     href="https://github.com/swhan0329/codex-101" target="_blank">PR을 환영합니다</a>.</p>
             <p class="footer-meta">
                 <span data-i18n="footer_date_prefix">최종 업데이트</span>:
-                        <span class="live-date" data-date-format="long">2026년 9월 23일</span>
+                        <span class="live-date" data-date-format="long">2026년 9월 24일</span>
             </p>
             <p class="footer-meta">Made by <a href="https://github.com/swhan0329" target="_blank">@swhan0329</a></p>
         </div>
     </footer>
 
-    <script src="i18n.js?v=20260923-sol-luna"></script>
+    <script src="i18n.js?v=20260924-cli-context"></script>
     <script src="app.js?v=20260919-mobile-reveal"></script>
 </body>
 
