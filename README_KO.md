@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 9월 24일</strong><br/>
+  <strong>최종 업데이트: 2026년 9월 26일</strong><br/>
   페이지의 실제 수정일을 표시하며, 모델 안내에는 공식 출처와 확인 범위를 함께 제공합니다.
 </p>
 
@@ -20,6 +20,18 @@
 </p>
 
 ---
+
+## 9월 26일 · CLI 0.157과 실무 모델 평가
+
+- `npm install -g @openai/codex@0.157.0`으로 업데이트하고 `codex --version`을 확인하세요. 전체 화면 대화 기록이 기본값이며 Shift-click으로 선택 범위를 늘립니다. `f`로 다른 앱의 대화를 fork해 초안·대기 프롬프트를 보존하고, 원격·로컬 background-server 세션에서도 `/import`를 사용하세요.
+- 지원 대화형 세션은 background server를 자동 시작하며 설정 불일치 시 복구 선택지를 제공합니다. 대상 프로젝트·checkout·권한·계정 접근을 확인하세요. Bedrock 모델 접근과 AWS 과금은 별도입니다.
+- VB의 Luna Max 자동화 사용 원문을 확인해 개인 경험 카드로 추가했습니다. 같은 입력으로 비교하는 절차와 편집 예시를 제공하며 벤치마크·비용 절감 보장은 포함하지 않았습니다.
+
+- Eric의 긴 작업 평가 관점을 추가했습니다. 대표 작업에서 완료 품질·시간·사용량·개입 횟수를 함께 비교하며 별도 벤치마크 점수를 일반화하지 않습니다.
+
+[CLI changelog](https://learn.chatgpt.com/docs/changelog) · [VB](https://x.com/reach_vb/status/2102771245783925069) · [Eric](https://x.com/pvncher/status/2103859274883748048) · [Models](https://learn.chatgpt.com/docs/models)
+
+아래 날짜별 항목은 당시의 발표 기록입니다. 설치 버전과 기본값은 현재 가이드를 따르세요.
 
 ## 9월 24일 · CLI 모델 선택·Voice 배포·작업 맥락
 

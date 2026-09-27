@@ -10,12 +10,24 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: September 24, 2026</strong><br/>
+  <strong>Last updated: September 26, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
 
 ---
+
+## September 26 · CLI 0.157 and practical model evaluation
+
+- Install `npm install -g @openai/codex@0.157.0` and verify `codex --version`. Fullscreen transcripts are now the default; Shift-click extends selections. Use `f` to fork a conversation open in another app while retaining drafts/queued prompts, and `/import` in remote or local background-server sessions.
+- Eligible interactive sessions start the background server automatically with recovery choices for incompatible settings. Confirm the target project, checkout, permissions, and account access. Bedrock model access and AWS billing remain separate.
+- Added VB’s directly verified Luna Max automation workflow as personal experience, with a fixed-input comparison and an edited example prompt. No benchmark or savings guarantee.
+
+- Added Eric’s long-workflow evaluation perspective: compare quality, time, usage, and steering on a representative task, without importing unrelated benchmark scores.
+
+[CLI changelog](https://learn.chatgpt.com/docs/changelog) · [VB](https://x.com/reach_vb/status/2102771245783925069) · [Eric](https://x.com/pvncher/status/2103859274883748048) · [Models](https://learn.chatgpt.com/docs/models)
+
+Earlier dated entries are historical release notes; use the current guide for installation and defaults.
 
 ## September 24 · CLI model picker, Voice rollout, and context
 
