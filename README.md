@@ -10,12 +10,20 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: September 26, 2026</strong><br/>
+  <strong>Last updated: September 27, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
 
 ---
+
+## September 27 · Visual reevaluation and CLI/iOS updates
+
+- OpenAI Developers announced a GPT-6 Sol/Luna image-understanding fix for API and Codex visual tasks, including computer use. VB recommends trying again; compare the same image and request, without treating the fix as a success guarantee.
+- Install `npm install -g @openai/codex@0.157.1` and check `codex --version`. The September 26 patch has no specific published highlights; fullscreen/fork/import features come from 0.157.0.
+- iOS 1.2026.258 adds iPad landscape split view and nested-repository review, preserves side-chat context and selected hosts, and fixes pairing/queued-reply issues. Verify the selected computer and worktree.
+
+[OpenAI Developers](https://x.com/OpenAIDevs/status/2104252306447544447) · [VB](https://x.com/reach_vb/status/2104263679445434370) · [CLI 0.157.1](https://learn.chatgpt.com/docs/changelog#github-release-397006677) · [iOS 1.2026.258](https://learn.chatgpt.com/docs/changelog#codex-2026-09-23-mobile)
 
 ## September 26 · CLI 0.157 and practical model evaluation
 

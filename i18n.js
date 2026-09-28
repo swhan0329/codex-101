@@ -1,6 +1,10 @@
 // i18n translation data
 const translations = {
     ko: {
+        changelog_sep27_t: "9월 27일 · 이미지 재평가와 CLI·iOS 갱신",
+        changelog_sep27_d: "Sol·Luna 이미지 이해 수정 발표와 재평가 절차, CLI 0.157.1 설치 및 iOS 1.2026.258 작업 맥락 안내를 반영했습니다.",
+        vision_fix_t: "Sol·Luna 이미지 작업을 같은 입력으로 재평가",
+        vision_fix_d: "9월 27일 OpenAI Developers는 GPT-6 Sol·Luna의 이미지 이해를 저하시키던 오류를 수정했다고 발표했습니다. API와 Codex의 시각 작업·Computer Use가 대상입니다. VB도 이 발표를 인용하며 다시 사용해 보라고 권했습니다. 이전에 실패한 이미지와 요청을 그대로 사용해 결과를 비교하세요. 편집 예시: “이 화면에서 확인할 항목을 표로 정리하고, 읽기 어려운 부분은 추측하지 말고 표시해 주세요.” 개별 작업의 성공을 보장하지 않으며, 계정의 모델 접근·앱 권한·승인 조건은 그대로 확인해야 합니다.",
         workflow_eval_t: "작은 문제 점수와 실제 작업을 함께 비교하기",
         workflow_eval_d: "Eric은 짧고 분리된 문제의 점수만으로는 모호한 요청·저장소 탐색·반복 수정·맥락 압축·사용자 방향 수정을 거치는 긴 작업을 평가하기 어렵다고 지적했습니다. 내 프로젝트의 대표 작업 하나로 모델을 비교하고 완료 품질·소요 시간·사용량·개입 횟수를 함께 기록해 보세요. 편집 예시: “같은 입력과 완료 기준으로 이 작업을 수행하고, 검증 결과와 내가 방향을 수정한 지점을 정리해 주세요.” 개인의 평가 관점이며 특정 모델의 우위나 성공률을 입증하는 벤치마크가 아닙니다.",
 
@@ -33,15 +37,15 @@ const translations = {
 
         changelog_sep20_d: "CLI 0.155.1의 추론 요약 기본값을 정정하고, iOS 1.2026.251의 프로젝트 설정 기억·작성 블록·대기 프롬프트 확인 절차를 추가했습니다.",
         changelog_sep20_t: "9월 20일 · CLI 요약 기본값과 iOS 작업 확인",
-        ios251_d: "9월 18일 업데이트부터 새 작업은 프로젝트별 worktree 모드와 설정 환경을 기억합니다. 작업 시작 전 연결 컴퓨터·프로젝트·환경을 확인하세요. 파일 선택기에서 폴더를 만들고, 작성 블록에서 초안 대안을 살펴본 뒤 필요한 내용을 복사할 수 있습니다. 긴 대기 프롬프트는 눌러 펼쳐 확인하세요. 작업을 다시 열었을 때 대기 내용이 누락되거나 오래된 상태로 보이던 문제도 수정됐습니다. 저장소와 실행은 연결된 컴퓨터에 남습니다.",
-        ios251_t: "iOS 1.2026.251 · 프로젝트 설정과 초안 확인",
+        ios251_d: "9월 23일 업데이트는 홈을 새로 구성하고 iPad 가로 화면에서 작업 목록과 열린 작업을 나란히 보여 줍니다. 중첩 Git 저장소의 변경도 탐색할 수 있습니다. 사이드 채팅으로 옮긴 첨부·선택 텍스트·리뷰 댓글과 새 작업의 연결 컴퓨터·checkout을 확인하세요. 대기 프롬프트 시작 시 응답 누락, 잘못된 기기 시계와 Mac·Linux SSH 연결로 인한 페어링 문제도 수정됐습니다. 저장소와 실행은 연결된 컴퓨터에 남습니다.",
+        ios251_t: "iOS 1.2026.258 · 분할 화면과 작업 맥락",
         spark_status_t: "Spark · 종료됨",
         changelog_sep19_d: "공식 9월 14일 Spark 종료에 맞춰 모델·요금·FAQ·실행 안내를 정정하고, VB의 다중 계정 팁과 Apple Messages의 Apple Silicon 빌드 조건을 반영했습니다.",
         changelog_sep19_t: "9월 19일 · Spark 종료와 플러그인 계정 선택",
         multi_account_d: "VB는 ChatGPT 플러그인에 여러 계정을 연결하는 기능을 소개했습니다. 플러그인 설정에서 추가 계정을 연결한 뒤 사용할 계정을 요청에 적으세요. 편집 예시: “회사 Gmail 계정의 오늘 받은 메일만 요약하고, 사용한 계정을 결과에 표시해 주세요.” 공식 문서상 모델은 요청에 따라 연결된 계정을 선택하며, 각 호출은 해당 계정의 인증·권한으로 실행됩니다. 플러그인·계정의 실제 연결 옵션을 확인하세요. 이는 ChatGPT 로그인 계정 전환 기능을 뜻하지 않습니다.",
         multi_account_t: "플러그인 계정은 작업 요청에 명시",
-        cli155_t: "CLI 0.157.0 · 전체 화면과 세션 이어가기",
-        cli155_voice: "npm install -g @openai/codex@0.157.0으로 업데이트하고 codex --version과 /model을 확인하세요. GPT-6 Sol·Luna와 이전 모델의 전환 안내가 포함됩니다. Bedrock 지원도 추가됐지만 AWS의 모델 접근·인증·과금 조건은 별도로 확인하세요. 음성은 F8로 전환하고 /voice settings에서 고릅니다. 지원 클라이언트와 마이크 권한을 확인하세요.",
+        cli155_t: "CLI 0.157.1 · 전체 화면과 세션 이어가기",
+        cli155_voice: "9월 26일 0.157.1은 공개됐지만 공식 기록에 세부 변경 설명은 없습니다. 아래 기능은 0.157.0에서 추가됐습니다. npm install -g @openai/codex@0.157.1으로 업데이트하고 codex --version과 /model을 확인하세요. GPT-6 Sol·Luna와 이전 모델의 전환 안내가 포함됩니다. Bedrock 지원도 추가됐지만 AWS의 모델 접근·인증·과금 조건은 별도로 확인하세요. 음성은 F8로 전환하고 /voice settings에서 고릅니다. 지원 클라이언트와 마이크 권한을 확인하세요.",
         cli155_tasks: "9월 25일부터 전체 화면 대화 기록이 기본값이며 Shift-click으로 선택 범위를 늘릴 수 있습니다. 다른 앱에서 열린 대화를 fork하는 f 단축키는 초안과 대기 중인 프롬프트를 보존합니다. /import는 원격 세션과 로컬 background-server 세션에서도 사용할 수 있습니다. 이어갈 프로젝트·checkout·세션을 확인하고 /usage에서 사용량을 살펴보세요.",
         cli155_auth: "지원되는 대화형 세션은 background server를 자동 시작하며 설정이 맞지 않으면 복구 선택지를 제공합니다. 스레드 전환 중 음성 유지, 전송되지 않은 질문 답변 복구, tmux·SSH 스크롤 동작도 개선됐습니다. 네트워크 정책이 접근을 철회하면 진행 중인 HTTP·WebSocket 연결에도 적용됩니다. 기존 권한을 확인하고 이어가세요.",
         appshot_scope_t: "Appshot은 맨 앞 창과 제공되는 텍스트를 함께 전달",
@@ -1063,6 +1067,10 @@ const translations = {
     },
 
     en: {
+        changelog_sep27_t: "September 27 · Visual reevaluation and CLI/iOS updates",
+        changelog_sep27_d: "Added the Sol/Luna image-understanding fix and reevaluation steps, CLI 0.157.1 installation, and iOS 1.2026.258 task-context guidance.",
+        vision_fix_t: "Reevaluate Sol/Luna visual tasks with the same input",
+        vision_fix_d: "On September 27, OpenAI Developers announced a fix for degraded image understanding in GPT-6 Sol and Luna, covering visual tasks in the API and Codex, including computer use. VB quoted the announcement and encouraged trying them again. Reuse a previously failed image and request to compare results. Edited example: “List the items to check in this screen as a table; flag anything hard to read instead of guessing.” This does not guarantee success on each task. Check your account’s model access, app permissions, and approval requirements.",
         workflow_eval_t: "Compare small-task scores with real workflows",
         workflow_eval_d: "Eric argues that isolated short tasks miss the ambiguity, repository exploration, iteration, compaction, and user steering involved in longer work. Compare models on a representative task from your project, recording completion quality, elapsed time, usage, and interventions. Edited example: “Complete this task with the same inputs and acceptance criteria, then summarize the checks and where I steered the work.” This is an evaluation perspective, not a benchmark proving a model’s superiority or success rate.",
 
@@ -1095,15 +1103,15 @@ const translations = {
 
         changelog_sep20_d: "Corrected the CLI 0.155.1 reasoning-summary default and added iOS 1.2026.251 steps for remembered project settings, writing blocks, and queued prompts.",
         changelog_sep20_t: "September 20 · CLI summary defaults and iOS task checks",
-        ios251_d: "The September 18 update remembers worktree mode and setup environment per project for new tasks. Check the connected computer, project, and environment before starting. Create folders in the file picker, review draft alternatives in writing blocks, and copy the content you need. Tap a long queued prompt to expand and check it. The update also fixes missing or stale queued prompts after reopening a task. The repository and execution stay on the connected computer.",
-        ios251_t: "iOS 1.2026.251 · Project settings and drafts",
+        ios251_d: "The September 23 update redesigns Home and keeps the task list beside the open task on iPad in landscape. You can browse changes in nested Git repositories. Check attachments, selected text, and review comments carried into side chats, plus the connected computer and checkout for new tasks. Fixes address incomplete replies when queued prompts start and pairing failures involving device clocks or Mac/Linux SSH connections. The repository and execution remain on the connected computer.",
+        ios251_t: "iOS 1.2026.258 · Split view and task context",
         spark_status_t: "Spark · Retired",
         changelog_sep19_d: "Corrected model, pricing, FAQ, and launch guidance for the official September 14 Spark retirement; added VB’s multi-account tip and the Apple Silicon build requirement for Apple Messages.",
         changelog_sep19_t: "September 19 · Spark retirement and plugin account selection",
         multi_account_d: "VB highlighted connecting multiple accounts to ChatGPT plugins. Add another account in the plugin settings, then name the account to use in your request. Edited example: “Summarize only today’s incoming mail from my work Gmail account and identify the account used in the result.” Official docs say the model selects connected accounts based on the request, and each call uses that account’s credentials and permissions. Check the actual connection options for your plugin and account. This is not a ChatGPT sign-in account switcher.",
         multi_account_t: "Name the plugin account in your task",
-        cli155_t: "CLI 0.157.0 · Fullscreen and session continuity",
-        cli155_voice: "Update with npm install -g @openai/codex@0.157.0, then check codex --version and /model. This release includes GPT-6 Sol/Luna and migration prompts for older models. Bedrock support is also added; check AWS model access, authentication, and billing separately. Toggle voice with F8 and choose a voice in /voice settings. Check client support and microphone permission.",
+        cli155_t: "CLI 0.157.1 · Fullscreen and session continuity",
+        cli155_voice: "Version 0.157.1 was released on September 26 without specific change details in its official notes. The features below were added in 0.157.0. Update with npm install -g @openai/codex@0.157.1, then check codex --version and /model. This release includes GPT-6 Sol/Luna and migration prompts for older models. Bedrock support is also added; check AWS model access, authentication, and billing separately. Toggle voice with F8 and choose a voice in /voice settings. Check client support and microphone permission.",
         cli155_tasks: "As of September 25, fullscreen transcripts are the default, and Shift-click extends text selections. The f shortcut forks a conversation open in another app while preserving drafts and queued prompts. /import also works in remote and local background-server sessions. Check the project, checkout, and session you intend to continue; inspect usage with /usage.",
         cli155_auth: "Eligible interactive sessions start the background server automatically and offer recovery choices for incompatible settings. The release also preserves voice across thread switches, recovers unsent question answers, and improves tmux/SSH scrolling. Network-policy revocation applies to ongoing HTTP/WebSocket traffic. Check existing permissions before continuing.",
         appshot_scope_t: "Share the frontmost window and its available text",

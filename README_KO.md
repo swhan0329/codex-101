@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 9월 26일</strong><br/>
+  <strong>최종 업데이트: 2026년 9월 27일</strong><br/>
   페이지의 실제 수정일을 표시하며, 모델 안내에는 공식 출처와 확인 범위를 함께 제공합니다.
 </p>
 
@@ -20,6 +20,14 @@
 </p>
 
 ---
+
+## 9월 27일 · 이미지 재평가와 CLI·iOS 갱신
+
+- OpenAI Developers의 GPT-6 Sol·Luna 이미지 이해 수정 발표를 반영했습니다. API·Codex의 시각 작업과 Computer Use가 대상입니다. VB의 재시도 권유에 따라 같은 이미지·요청으로 비교하되 성공 보장으로 해석하지 마세요.
+- `npm install -g @openai/codex@0.157.1`로 업데이트하고 `codex --version`을 확인하세요. 9월 26일 패치는 세부 변경 설명이 없으며, 전체 화면·분기·가져오기는 0.157.0의 기능입니다.
+- iOS 1.2026.258의 iPad 가로 분할 화면·중첩 저장소 검토, side chat 맥락·선택 컴퓨터 유지, 페어링·대기 답변 수정을 반영했습니다. 연결 컴퓨터와 worktree를 확인하세요.
+
+[OpenAI Developers](https://x.com/OpenAIDevs/status/2104252306447544447) · [VB](https://x.com/reach_vb/status/2104263679445434370) · [CLI 0.157.1](https://learn.chatgpt.com/docs/changelog#github-release-397006677) · [iOS 1.2026.258](https://learn.chatgpt.com/docs/changelog#codex-2026-09-23-mobile)
 
 ## 9월 26일 · CLI 0.157과 실무 모델 평가
 
