@@ -1,6 +1,10 @@
 // i18n translation data
 const translations = {
     ko: {
+        cli157_sessions: "0.157부터 전체 화면이 기본이며 Shift-click으로 선택 범위를 확장합니다. f는 다른 앱에서 열린 대화를 fork하며 초안·대기 프롬프트를 보존합니다. /import는 원격·로컬 background-server 세션도 지원합니다. 이어갈 프로젝트·checkout을 확인하고 /usage로 사용량을 확인하세요.",
+        changelog_sep28_t: "9월 28일 · CLI 0.158 실무 절차",
+        changelog_sep28_d: "Markdown 복사, 투명 배경 이미지 요청, 터미널 입력 승인과 MCP·실행 서버 인증 안내를 갱신했습니다.",
+
         changelog_sep27_t: "9월 27일 · 이미지 재평가와 CLI·iOS 갱신",
         changelog_sep27_d: "Sol·Luna 이미지 이해 수정 발표와 재평가 절차, CLI 0.157.1 설치 및 iOS 1.2026.258 작업 맥락 안내를 반영했습니다.",
         vision_fix_t: "Sol·Luna 이미지 작업을 같은 입력으로 재평가",
@@ -44,10 +48,10 @@ const translations = {
         changelog_sep19_t: "9월 19일 · Spark 종료와 플러그인 계정 선택",
         multi_account_d: "VB는 ChatGPT 플러그인에 여러 계정을 연결하는 기능을 소개했습니다. 플러그인 설정에서 추가 계정을 연결한 뒤 사용할 계정을 요청에 적으세요. 편집 예시: “회사 Gmail 계정의 오늘 받은 메일만 요약하고, 사용한 계정을 결과에 표시해 주세요.” 공식 문서상 모델은 요청에 따라 연결된 계정을 선택하며, 각 호출은 해당 계정의 인증·권한으로 실행됩니다. 플러그인·계정의 실제 연결 옵션을 확인하세요. 이는 ChatGPT 로그인 계정 전환 기능을 뜻하지 않습니다.",
         multi_account_t: "플러그인 계정은 작업 요청에 명시",
-        cli155_t: "CLI 0.157.1 · 전체 화면과 세션 이어가기",
-        cli155_voice: "9월 26일 0.157.1은 공개됐지만 공식 기록에 세부 변경 설명은 없습니다. 아래 기능은 0.157.0에서 추가됐습니다. npm install -g @openai/codex@0.157.1으로 업데이트하고 codex --version과 /model을 확인하세요. GPT-6 Sol·Luna와 이전 모델의 전환 안내가 포함됩니다. Bedrock 지원도 추가됐지만 AWS의 모델 접근·인증·과금 조건은 별도로 확인하세요. 음성은 F8로 전환하고 /voice settings에서 고릅니다. 지원 클라이언트와 마이크 권한을 확인하세요.",
-        cli155_tasks: "9월 25일부터 전체 화면 대화 기록이 기본값이며 Shift-click으로 선택 범위를 늘릴 수 있습니다. 다른 앱에서 열린 대화를 fork하는 f 단축키는 초안과 대기 중인 프롬프트를 보존합니다. /import는 원격 세션과 로컬 background-server 세션에서도 사용할 수 있습니다. 이어갈 프로젝트·checkout·세션을 확인하고 /usage에서 사용량을 살펴보세요.",
-        cli155_auth: "지원되는 대화형 세션은 background server를 자동 시작하며 설정이 맞지 않으면 복구 선택지를 제공합니다. 스레드 전환 중 음성 유지, 전송되지 않은 질문 답변 복구, tmux·SSH 스크롤 동작도 개선됐습니다. 네트워크 정책이 접근을 철회하면 진행 중인 HTTP·WebSocket 연결에도 적용됩니다. 기존 권한을 확인하고 이어가세요.",
+        cli155_t: "CLI 0.158 · 복사·이미지·입력 승인",
+        cli155_voice: "9월 28일 공개된 0.158.0으로 업데이트하세요: npm install -g @openai/codex@0.158.0. codex --version과 /model로 설치 버전과 계정에서 사용 가능한 모델을 확인하세요. 전체 화면에서 선택 시 복사와 우클릭 붙여넣기를 설정할 수 있으며, 선택한 대화 기록을 복사하면 Markdown 형식을 보존합니다. 짧은 목록을 복사해 편집기에 붙여넣고 형식을 확인하세요.",
+        cli155_tasks: "이미지 생성·편집에서 투명 배경을 명시적으로 요청할 수 있고, 대화의 파일 기반 이미지도 편집 입력으로 사용할 수 있습니다. 편집 예시: “첨부한 로고의 모양은 유지하고 배경을 투명하게 바꿔 주세요.” 결과 파일을 열어 투명도와 가장자리를 확인하세요. 모델·도구 접근 조건은 별도로 적용됩니다.",
+        cli155_auth: "높은 권한으로 실행 중인 명령에 터미널 입력을 보낼 때 승인을 받는 동작이 기본 활성화됐습니다. 입력 대상 명령과 내용을 확인하세요. MCP는 사전 등록된 OAuth client secret을 지원하며, 직접 exec-server WebSocket 연결에는 bearer token 인증을 설정할 수 있습니다. 기존 인증·권한 정책에 맞게 구성하세요.",
         appshot_scope_t: "Appshot은 맨 앞 창과 제공되는 텍스트를 함께 전달",
         appshot_scope_d: "VB는 Windows Appshots를 소개하며 이미지 외에 앱이 제공하는 텍스트도 맥락으로 쓴다고 설명했습니다. 공유할 창을 맨 앞으로 가져오고 Windows는 양쪽 Alt, macOS는 양쪽 Command를 누른 뒤 필요한 작업을 적으세요. 공식 문서상 맨 앞 창만 캡처하지만 앱이 노출한 스크롤 밖 텍스트도 포함될 수 있습니다. Google Docs·Gmail·Sheets·Slides는 화면 이미지만 전달될 수 있으므로 전체 내용이 필요하면 연결된 plugin이나 원본 파일로 확인하세요.",
         changelog_sep18_t: "9월 18일 · CLI 0.155와 Appshot 범위",
@@ -1067,6 +1071,10 @@ const translations = {
     },
 
     en: {
+        cli157_sessions: "Since 0.157, fullscreen is the default and Shift-click extends selections. The f shortcut forks a conversation open in another app while preserving drafts and queued prompts. /import supports remote and local background-server sessions. Check the project and checkout you intend to continue; inspect usage with /usage.",
+        changelog_sep28_t: "September 28 · CLI 0.158 workflow guidance",
+        changelog_sep28_d: "Updated Markdown copying, transparent-background image requests, terminal input approval, and MCP/exec-server authentication guidance.",
+
         changelog_sep27_t: "September 27 · Visual reevaluation and CLI/iOS updates",
         changelog_sep27_d: "Added the Sol/Luna image-understanding fix and reevaluation steps, CLI 0.157.1 installation, and iOS 1.2026.258 task-context guidance.",
         vision_fix_t: "Reevaluate Sol/Luna visual tasks with the same input",
@@ -1110,10 +1118,10 @@ const translations = {
         changelog_sep19_t: "September 19 · Spark retirement and plugin account selection",
         multi_account_d: "VB highlighted connecting multiple accounts to ChatGPT plugins. Add another account in the plugin settings, then name the account to use in your request. Edited example: “Summarize only today’s incoming mail from my work Gmail account and identify the account used in the result.” Official docs say the model selects connected accounts based on the request, and each call uses that account’s credentials and permissions. Check the actual connection options for your plugin and account. This is not a ChatGPT sign-in account switcher.",
         multi_account_t: "Name the plugin account in your task",
-        cli155_t: "CLI 0.157.1 · Fullscreen and session continuity",
-        cli155_voice: "Version 0.157.1 was released on September 26 without specific change details in its official notes. The features below were added in 0.157.0. Update with npm install -g @openai/codex@0.157.1, then check codex --version and /model. This release includes GPT-6 Sol/Luna and migration prompts for older models. Bedrock support is also added; check AWS model access, authentication, and billing separately. Toggle voice with F8 and choose a voice in /voice settings. Check client support and microphone permission.",
-        cli155_tasks: "As of September 25, fullscreen transcripts are the default, and Shift-click extends text selections. The f shortcut forks a conversation open in another app while preserving drafts and queued prompts. /import also works in remote and local background-server sessions. Check the project, checkout, and session you intend to continue; inspect usage with /usage.",
-        cli155_auth: "Eligible interactive sessions start the background server automatically and offer recovery choices for incompatible settings. The release also preserves voice across thread switches, recovers unsent question answers, and improves tmux/SSH scrolling. Network-policy revocation applies to ongoing HTTP/WebSocket traffic. Check existing permissions before continuing.",
+        cli155_t: "CLI 0.158 · Copy, images, and input approval",
+        cli155_voice: "Update to 0.158.0, released September 28: npm install -g @openai/codex@0.158.0. Check codex --version and /model for the installed version and models available to your account. Fullscreen mode supports configurable copy-on-select and right-click paste; copied transcript selections preserve Markdown. Copy a short list into an editor and check its formatting.",
+        cli155_tasks: "Image generation and editing can explicitly request transparent backgrounds, and edits can use file-backed conversation images. Edited example: “Keep the attached logo’s shape and make its background transparent.” Open the result to check transparency and edges. Model and tool access requirements still apply.",
+        cli155_auth: "Approval for terminal input to commands running with elevated permissions is enabled by default. Check the target command and the input. MCP supports pre-registered OAuth client secrets, and direct exec-server WebSocket connections can use bearer-token authentication. Configure these within your existing authentication and permission policies.",
         appshot_scope_t: "Share the frontmost window and its available text",
         appshot_scope_d: "VB highlighted Windows Appshots and the app text they can supply alongside the image. Bring the relevant window to the front, press both Alt keys on Windows or both Command keys on macOS, then describe the task. Official docs limit capture to the frontmost window, but text exposed outside the visible scroll area may be included. Google Docs, Gmail, Sheets, and Slides may supply only a screenshot; use a connected plugin or the source file when the full content matters.",
         changelog_sep18_t: "September 18 · CLI 0.155 and Appshot scope",

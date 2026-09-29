@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="style.css?v=20260906-astra-facts" />
 </head>
 
-<body data-page="home" data-updated="2026-09-27">
+<body data-page="home" data-updated="2026-09-28">
     <!-- Language Toggle -->
     <nav class="top-bar">
         <div class="top-bar-inner">
@@ -51,7 +51,7 @@
                     <p class="hero-badge">
                         <span data-i18n="hero_badge_prefix">공식 문서 기반 · 실무 실행 가이드</span>
                         <span aria-hidden="true"> · </span>
-                        <span class="live-date" data-date-format="long">2026년 9월 27일</span>
+                        <span class="live-date" data-date-format="long">2026년 9월 28일</span>
                     </p>
                     <h1 class="hero-title" data-i18n="hero_title"><span class="hero-title-lead">OpenAI Codex를</span><span class="hero-title-focus">실무에 바로 붙이는 가이드</span></h1>
                     <p class="hero-sub" data-i18n="hero_sub"><span class="hero-sub-lead">CLI부터 데스크톱 앱·IDE·Web·Mobile까지, 한 흐름으로.</span><span class="hero-sub-detail">설치·권한·Git·자동화·프롬프팅을 최신 공식 문서 기준의 실행 순서로 정리했습니다.</span></p>
@@ -946,11 +946,12 @@ codex --cd /path/to/project
 
 
 <div class="callout" id="cli155" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere">
-<h3 data-i18n="cli155_t">CLI 0.157.1 · 전체 화면과 세션 이어가기</h3>
-<p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="cli155_voice">9월 26일 0.157.1은 공개됐지만 공식 기록에 세부 변경 설명은 없습니다. 아래 기능은 0.157.0에서 추가됐습니다. npm install -g @openai/codex@0.157.1으로 업데이트하고 codex --version과 /model을 확인하세요. GPT-6 Sol·Luna와 이전 모델의 전환 안내가 포함됩니다. Bedrock 지원도 추가됐지만 AWS의 모델 접근·인증·과금 조건은 별도로 확인하세요. 음성은 F8로 전환하고 /voice settings에서 고릅니다. 지원 클라이언트와 마이크 권한을 확인하세요.</p>
-<p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="cli155_tasks">9월 25일부터 전체 화면 대화 기록이 기본값이며 Shift-click으로 선택 범위를 늘릴 수 있습니다. 다른 앱에서 열린 대화를 fork하는 f 단축키는 초안과 대기 중인 프롬프트를 보존합니다. /import는 원격 세션과 로컬 background-server 세션에서도 사용할 수 있습니다. 이어갈 프로젝트·checkout·세션을 확인하고 /usage에서 사용량을 살펴보세요.</p>
-<p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="cli155_auth">지원되는 대화형 세션은 background server를 자동 시작하며 설정이 맞지 않으면 복구 선택지를 제공합니다. 스레드 전환 중 음성 유지, 전송되지 않은 질문 답변 복구, tmux·SSH 스크롤 동작도 개선됐습니다. 네트워크 정책이 접근을 철회하면 진행 중인 HTTP·WebSocket 연결에도 적용됩니다. 기존 권한을 확인하고 이어가세요.</p>
-<p class="command-refs"><a href="https://learn.chatgpt.com/docs/changelog" target="_blank" rel="noopener noreferrer">Codex CLI 0.157.0 · 2026-09-25</a> · <a href="https://learn.chatgpt.com/docs/changelog#github-release-397006677" target="_blank" rel="noopener noreferrer">0.157.1 · 2026-09-26</a></p>
+<h3 data-i18n="cli155_t">CLI 0.158 · 복사·이미지·입력 승인</h3>
+<p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="cli155_voice">9월 28일 공개된 0.158.0으로 업데이트하세요: npm install -g @openai/codex@0.158.0. codex --version과 /model로 설치 버전과 계정에서 사용 가능한 모델을 확인하세요. 전체 화면에서 선택 시 복사와 우클릭 붙여넣기를 설정할 수 있으며, 선택한 대화 기록을 복사하면 Markdown 형식을 보존합니다. 짧은 목록을 복사해 편집기에 붙여넣고 형식을 확인하세요.</p>
+<p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="cli155_tasks">이미지 생성·편집에서 투명 배경을 명시적으로 요청할 수 있고, 대화의 파일 기반 이미지도 편집 입력으로 사용할 수 있습니다. 편집 예시: “첨부한 로고의 모양은 유지하고 배경을 투명하게 바꿔 주세요.” 결과 파일을 열어 투명도와 가장자리를 확인하세요. 모델·도구 접근 조건은 별도로 적용됩니다.</p>
+<p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="cli155_auth">높은 권한으로 실행 중인 명령에 터미널 입력을 보낼 때 승인을 받는 동작이 기본 활성화됐습니다. 입력 대상 명령과 내용을 확인하세요. MCP는 사전 등록된 OAuth client secret을 지원하며, 직접 exec-server WebSocket 연결에는 bearer token 인증을 설정할 수 있습니다. 기존 인증·권한 정책에 맞게 구성하세요.</p>
+<p data-i18n="cli157_sessions">0.157부터 전체 화면이 기본이며 Shift-click으로 선택 범위를 확장합니다. f는 다른 앱에서 열린 대화를 fork하며 초안·대기 프롬프트를 보존합니다. /import는 원격·로컬 background-server 세션도 지원합니다. 이어갈 프로젝트·checkout을 확인하고 /usage로 사용량을 확인하세요.</p>
+<p class="command-refs"><a href="https://learn.chatgpt.com/docs/changelog" target="_blank" rel="noopener noreferrer">Codex CLI 0.158.0 · 2026-09-28</a></p>
 </div>
                 <div class="callout">
                 <h3 data-i18n="cli154_t">CLI 0.154 · 격리 작업과 실행 중 응답</h3>
@@ -2565,10 +2566,11 @@ codex --search "optimize with Next.js 15"
                     </div>
                     <p class="overview-fact-date">
                         <span data-i18n="overview_fact_date_prefix">업데이트 기준일</span>
-                        <span class="live-date" data-date-format="long">2026년 9월 27일</span>
+                        <span class="live-date" data-date-format="long">2026년 9월 28일</span>
                     </p>
                 </div>
                 <ol class="changelog-list" aria-label="Recent update summary">
+<li><strong data-i18n="changelog_sep28_t">9월 28일 · CLI 0.158 실무 절차</strong><span data-i18n="changelog_sep28_d">Markdown 복사, 투명 배경 이미지 요청, 터미널 입력 승인과 MCP·실행 서버 인증 안내를 갱신했습니다.</span></li>
 <li><strong data-i18n="changelog_sep27_t">9월 27일 · 이미지 재평가와 CLI·iOS 갱신</strong><span data-i18n="changelog_sep27_d">Sol·Luna 이미지 이해 수정 발표와 재평가 절차, CLI 0.157.1 설치 및 iOS 1.2026.258 작업 맥락 안내를 반영했습니다.</span></li>
 <li><strong data-i18n="changelog_sep26_t">9월 26일 · CLI 세션 연결과 실무 평가</strong><span data-i18n="changelog_sep26_d">CLI 0.157.0의 기본 화면·세션 연결 절차, VB의 Luna Max 자동화 경험과 Eric의 실제 작업 평가 팁을 반영했습니다.</span></li>
 <li><strong data-i18n="changelog_sep24_t">9월 24일 · CLI 모델 선택과 작업 맥락</strong><span data-i18n="changelog_sep24_d">CLI 0.156.1의 Sol·Luna 선택기와 한도 전환 안내, Voice 확장 발표, 작업 로그·대화 맥락 전달 팁을 반영했습니다.</span></li>
@@ -2648,13 +2650,13 @@ codex --search "optimize with Next.js 15"
                     href="https://github.com/swhan0329/codex-101" target="_blank">PR을 환영합니다</a>.</p>
             <p class="footer-meta">
                 <span data-i18n="footer_date_prefix">최종 업데이트</span>:
-                        <span class="live-date" data-date-format="long">2026년 9월 27일</span>
+                        <span class="live-date" data-date-format="long">2026년 9월 28일</span>
             </p>
             <p class="footer-meta">Made by <a href="https://github.com/swhan0329" target="_blank">@swhan0329</a></p>
         </div>
     </footer>
 
-    <script src="i18n.js?v=20260927-vision-ios"></script>
+    <script src="i18n.js?v=20260928-cli158"></script>
     <script src="app.js?v=20260919-mobile-reveal"></script>
 </body>
 

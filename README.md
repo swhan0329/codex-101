@@ -10,12 +10,18 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: September 27, 2026</strong><br/>
+  <strong>Last updated: September 28, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
 
 ---
+
+## September 28 · CLI 0.158 workflow guidance
+
+Update with `npm install -g @openai/codex@0.158.0`, then check `codex --version` and `/model`. Test Markdown-preserving transcript copies in an editor. Request transparent backgrounds explicitly and inspect the image result. Terminal input to elevated commands now requires approval by default; MCP client secrets and direct exec-server bearer-token authentication follow existing access policies.
+
+[Codex CLI changelog](https://learn.chatgpt.com/docs/changelog)
 
 ## September 27 · Visual reevaluation and CLI/iOS updates
 

@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 9월 27일</strong><br/>
+  <strong>최종 업데이트: 2026년 9월 28일</strong><br/>
   페이지의 실제 수정일을 표시하며, 모델 안내에는 공식 출처와 확인 범위를 함께 제공합니다.
 </p>
 
@@ -20,6 +20,12 @@
 </p>
 
 ---
+
+## 9월 28일 · CLI 0.158 실무 절차
+
+`npm install -g @openai/codex@0.158.0`으로 갱신하고 `codex --version`과 `/model`을 확인하세요. 대화 기록의 Markdown 복사를 편집기에서 확인하고, 투명 배경은 명시적으로 요청한 뒤 이미지 결과를 검사하세요. 높은 권한의 명령에 터미널 입력을 보낼 때 승인이 기본 적용됩니다. MCP client secret·직접 exec-server bearer token 인증은 기존 접근 정책에 맞게 구성하세요.
+
+[Codex CLI changelog](https://learn.chatgpt.com/docs/changelog)
 
 ## 9월 27일 · 이미지 재평가와 CLI·iOS 갱신
 
