@@ -1,6 +1,12 @@
 // i18n translation data
 const translations = {
     ko: {
+        parallel30_t: "서브에이전트는 이득을 비교한 뒤 사용",
+        parallel30_d: "Eric은 서브에이전트가 토큰을 더 쓰면서 시간 단축은 작을 수 있고, Luna로 위임하면 적합한 작업에서는 효과적이지만 강한 조율 모델이 있어도 전체 품질이 낮아질 수 있다고 설명했습니다. 독립적으로 나눌 수 있는 작업 하나에서 단일 실행과 위임 실행의 완료 품질·총사용량·소요 시간을 비교하세요. 개인 경험이며 보편적인 성능 수치나 비용 절감 보장이 아닙니다.",
+        parallel30_prompt: "편집 예시: “같은 입력과 완료 기준으로 먼저 단일 에이전트 결과를 기록해 주세요. 비교 실행에서는 독립적인 자료 탐색만 Luna에 맡기고, 메인이 결과를 검증하세요. 두 실행의 품질·총사용량·소요 시간을 비교하고 확인할 수 없는 수치는 표시해 주세요.” 모델 접근과 실행 환경별 위임 조건을 먼저 확인하세요.",
+        changelog_sep30_t: "9월 30일 · 서브에이전트 사용량과 품질 비교",
+        changelog_sep30_d: "Eric의 서브에이전트·Luna 위임 경험을 원문에 연결하고, 단일 실행과 품질·총사용량·시간을 비교하는 절차를 한영으로 보완했습니다.",
+
         alex29_d: "Alexander는 제품 업무에서 지속적인 위임은 dots, 직접 진행할 작업은 Codex로 나눈다고 설명했습니다. 내 업무 하나를 골라 dot에는 목표·자료·알림 조건을 주고, 직접 검토하며 구현할 일은 Codex에서 진행해 보세요. 그의 개인 사용 방식이며 모든 업무에 맞는 규칙은 아닙니다. Dots의 플랜·지역·권한 조건과 로컬 연결 필요 여부를 먼저 확인하세요.",
         alex29_t: "위임할 책임과 직접 진행할 작업 구분",
         changelog_sep29_d: "6.1 Sol 접근·기본값, CLI 0.159.2, Fast·Ultrafast 사용량과 Pro 200 재개, 새 Cloud 환경과 Dots·팀 자동화의 제공 범위를 한영으로 갱신했습니다.",
@@ -814,7 +820,7 @@ const translations = {
         s15_c2_t: "컨텍스트는 milestone 기준으로 정리",
         s15_c2_d: "resume으로 이어가고, compact는 milestone 이후에만 쓰세요. 너무 이른 요약은 추론 흔적과 결정 근거를 지워 품질을 떨어뜨릴 수 있습니다.",
         s15_c3_t: "병렬 agent는 범위가 잘린 일에만",
-        s15_c3_d: "메인 스레드는 요구사항과 최종 결정을 맡기고, 탐색·테스트·트리아지처럼 읽기 중심의 bounded work만 병렬 agent나 subagent로 분리하세요. 쓰기 충돌이 나는 병렬 편집은 더 조심해야 합니다.",
+        s15_c3_d: "메인 스레드는 요구사항과 최종 결정을 맡기고, 독립적으로 진행할 수 있는 탐색·테스트·트리아지부터 병렬 작업을 검토하세요. 각 서브에이전트도 토큰을 소비하므로 단일 실행과 품질·총사용량·시간을 비교하세요. 같은 파일을 동시에 편집할 때는 충돌과 조율 비용을 확인하세요.",
         s15_refs: '출처: <a href="https://learn.chatgpt.com/guides/best-practices" target="_blank">Best practices</a> · <a href="https://learn.chatgpt.com/docs/developer-commands?surface=cli" target="_blank">CLI commands</a> · <a href="https://learn.chatgpt.com/docs/agent-configuration/subagents" target="_blank">Subagents</a> · <a href="https://learn.chatgpt.com/docs/long-running-work" target="_blank">Long-running work</a>',
         // Section 15
         s16_title: "로컬 Scheduled task & Git 자동화",
@@ -1086,6 +1092,12 @@ const translations = {
     },
 
     en: {
+        parallel30_t: "Compare the benefit before adding subagents",
+        parallel30_d: "Eric noted that subagents can spend more tokens for little time saved, and that delegating to Luna can work for suitable tasks but may reduce overall quality even with a strong orchestrator. On one task with independent parts, compare completion quality, total usage, and elapsed time for a single-agent run and a delegated run. This is personal experience, not a universal performance figure or a savings guarantee.",
+        parallel30_prompt: "Edited example: “Record a single-agent result using the same inputs and completion criteria first. In a comparison run, delegate only independent research to Luna and have the main agent verify its findings. Compare quality, total usage, and elapsed time across both runs, and flag unavailable measurements.” Check model access and the delegation rules for your client first.",
+        changelog_sep30_t: "September 30 · Subagent usage and quality tradeoffs",
+        changelog_sep30_d: "Linked Eric’s original subagent and Luna delegation observations, and added a bilingual procedure to compare quality, total usage, and time against a single-agent run.",
+
         alex29_d: "Alexander describes using dots for ongoing delegation in his product role and Codex for work he wants to do hands-on. Choose one responsibility, give a dot the goal, sources, and notification conditions, and keep work you actively implement and review in Codex. This is his personal workflow, not a rule for every task. Check Dots plan, region, permission, and local-connection requirements first.",
         alex29_t: "Separate delegated responsibility from hands-on tasks",
         changelog_sep29_d: "Updated 6.1 Sol access and defaults, CLI 0.159.2, Fast/Ultrafast usage and reopened Pro 200, plus new Cloud environments, Dots, and team automation boundaries in both languages.",
@@ -1857,7 +1869,7 @@ const translations = {
         s15_c2_t: "Compact after milestones",
         s15_c2_d: "Resume threads when the reasoning trail still matters, and compact only after meaningful milestones. Over-compacting too early can erase why earlier decisions were made.",
         s15_c3_t: "Use parallel agents only for bounded work",
-        s15_c3_d: "Keep the main thread on requirements and final decisions, and split only bounded read-heavy work such as exploration, tests, or triage into parallel agents or subagents. Be more careful with write-heavy parallel editing.",
+        s15_c3_d: "Keep the main thread on requirements and final decisions. Consider parallel work for independent exploration, tests, or triage. Each subagent consumes tokens, so compare quality, total usage, and time against a single-agent run. Check for conflicts and coordination overhead when agents edit the same files.",
         s15_refs: 'Sources: <a href="https://learn.chatgpt.com/guides/best-practices" target="_blank">Best practices</a> · <a href="https://learn.chatgpt.com/docs/developer-commands?surface=cli" target="_blank">CLI commands</a> · <a href="https://learn.chatgpt.com/docs/agent-configuration/subagents" target="_blank">Subagents</a> · <a href="https://learn.chatgpt.com/docs/long-running-work" target="_blank">Long-running work</a>',
         s16_title: "Local Scheduled Tasks & Git Automation",
         s16_intro: "Recurring work does not require a GitHub integration. In the ChatGPT desktop app, Scheduled can run against a local project in the current checkout or an isolated worktree while the computer is on, the app is running, and the project remains available on disk.",

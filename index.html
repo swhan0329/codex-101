@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="style.css?v=20260906-astra-facts" />
 </head>
 
-<body data-page="home" data-updated="2026-09-29">
+<body data-page="home" data-updated="2026-09-30">
     <!-- Language Toggle -->
     <nav class="top-bar">
         <div class="top-bar-inner">
@@ -51,7 +51,7 @@
                     <p class="hero-badge">
                         <span data-i18n="hero_badge_prefix">공식 문서 기반 · 실무 실행 가이드</span>
                         <span aria-hidden="true"> · </span>
-                        <span class="live-date" data-date-format="long">2026년 9월 29일</span>
+                        <span class="live-date" data-date-format="long">2026년 9월 30일</span>
                     </p>
                     <h1 class="hero-title" data-i18n="hero_title"><span class="hero-title-lead">OpenAI Codex를</span><span class="hero-title-focus">실무에 바로 붙이는 가이드</span></h1>
                     <p class="hero-sub" data-i18n="hero_sub"><span class="hero-sub-lead">CLI부터 데스크톱 앱·IDE·Web·Mobile까지, 한 흐름으로.</span><span class="hero-sub-detail">설치·권한·Git·자동화·프롬프팅을 최신 공식 문서 기준의 실행 순서로 정리했습니다.</span></p>
@@ -1826,7 +1826,7 @@ codex resume &lt;ID&gt;       <span class="c"># 특정 세션</span>
                     </div>
                     <div class="tip-card">
                         <h4 data-i18n="s15_c3_t">병렬 agent는 범위가 잘린 일에만</h4>
-                        <p data-i18n="s15_c3_d">메인 스레드는 요구사항과 최종 결정을 맡기고, 탐색·테스트·트리아지처럼 읽기 중심의 bounded work만 병렬 agent나 subagent로 분리하세요. 쓰기 충돌이 나는 병렬 편집은 더 조심해야 합니다.</p>
+                        <p data-i18n="s15_c3_d">메인 스레드는 요구사항과 최종 결정을 맡기고, 독립적으로 진행할 수 있는 탐색·테스트·트리아지부터 병렬 작업을 검토하세요. 각 서브에이전트도 토큰을 소비하므로 단일 실행과 품질·총사용량·시간을 비교하세요. 같은 파일을 동시에 편집할 때는 충돌과 조율 비용을 확인하세요.</p>
                     </div>
                 </div>
                 <p class="command-refs" data-i18n-html="s15_refs">출처: <a href="https://learn.chatgpt.com/guides/best-practices" target="_blank">Best practices</a> · <a href="https://learn.chatgpt.com/docs/developer-commands?surface=cli" target="_blank">CLI commands</a> · <a href="https://learn.chatgpt.com/docs/agent-configuration/subagents" target="_blank">Subagents</a> · <a href="https://learn.chatgpt.com/docs/long-running-work" target="_blank">Long-running work</a></p>
@@ -2342,6 +2342,7 @@ codex --search "optimize with Next.js 15"
                 <p data-i18n="field_tips_intro">OpenAI Codex, Developer Experience, 데이터/보안/제품 담당자들이 공개적으로 공유한 실전 사용법을 사람별 원글 링크와 함께 정리했습니다. 제품의 사용 가능 여부와 설정 절차는 아래 공식 문서 링크를 함께 확인하세요.</p>
                 <p class="command-refs"><a href="https://x.com/pvncher/status/2098488444443939186" target="_blank" rel="noopener noreferrer">Eric · /feedback</a> · <a href="https://learn.chatgpt.com/docs/reference/troubleshooting#feedback-and-logs" target="_blank" rel="noopener noreferrer">Feedback &amp; logs</a></p>
 <div class="field-tip-grid">
+<article id="subagent-tradeoffs" class="field-tip-card" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><span class="field-tip-person">Eric Provencher · 2026-09-30</span><h3 data-i18n="parallel30_t">서브에이전트는 이득을 비교한 뒤 사용</h3><p data-i18n="parallel30_d">Eric은 서브에이전트가 토큰을 더 쓰면서 시간 단축은 작을 수 있고, Luna로 위임하면 적합한 작업에서는 효과적이지만 강한 조율 모델이 있어도 전체 품질이 낮아질 수 있다고 설명했습니다. 독립적으로 나눌 수 있는 작업 하나에서 단일 실행과 위임 실행의 완료 품질·총사용량·소요 시간을 비교하세요. 개인 경험이며 보편적인 성능 수치나 비용 절감 보장이 아닙니다.</p><p data-i18n="parallel30_prompt">편집 예시: “같은 입력과 완료 기준으로 먼저 단일 에이전트 결과를 기록해 주세요. 비교 실행에서는 독립적인 자료 탐색만 Luna에 맡기고, 메인이 결과를 검증하세요. 두 실행의 품질·총사용량·소요 시간을 비교하고 확인할 수 없는 수치는 표시해 주세요.” 모델 접근과 실행 환경별 위임 조건을 먼저 확인하세요.</p><p class="command-refs"><a href="https://x.com/pvncher/status/2105335126066639197" target="_blank" rel="noopener noreferrer">Eric · Subagents</a> · <a href="https://x.com/pvncher/status/2105341031252369680" target="_blank" rel="noopener noreferrer">Eric · Luna</a> · <a href="https://learn.chatgpt.com/docs/agent-configuration/subagents" target="_blank" rel="noopener noreferrer">Subagents</a></p></article>
 <article id="vision-fix" class="field-tip-card" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><span class="field-tip-person">OpenAI Developers · VB · 2026-09-27</span><h3 data-i18n="vision_fix_t">Sol·Luna 이미지 작업을 같은 입력으로 재평가</h3><p data-i18n="vision_fix_d">9월 27일 OpenAI Developers는 GPT-6 Sol·Luna의 이미지 이해를 저하시키던 오류를 수정했다고 발표했습니다. API와 Codex의 시각 작업·Computer Use가 대상입니다. VB도 이 발표를 인용하며 다시 사용해 보라고 권했습니다. 이전에 실패한 이미지와 요청을 그대로 사용해 결과를 비교하세요. 편집 예시: “이 화면에서 확인할 항목을 표로 정리하고, 읽기 어려운 부분은 추측하지 말고 표시해 주세요.” 개별 작업의 성공을 보장하지 않으며, 계정의 모델 접근·앱 권한·승인 조건은 그대로 확인해야 합니다.</p><p class="command-refs"><a href="https://x.com/OpenAIDevs/status/2104252306447544447" target="_blank" rel="noopener noreferrer">OpenAI Developers</a> <a href="https://x.com/reach_vb/status/2104263679445434370" target="_blank" rel="noopener noreferrer">VB</a> <a href="https://learn.chatgpt.com/docs/prompting" target="_blank" rel="noopener noreferrer">Prompting</a></p></article>
 <article id="workflow-evaluation" class="field-tip-card" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><span class="field-tip-person">Eric Provencher · 2026-09-26</span><h3 data-i18n="workflow_eval_t">작은 문제 점수와 실제 작업을 함께 비교하기</h3><p data-i18n="workflow_eval_d">Eric은 짧고 분리된 문제의 점수만으로는 모호한 요청·저장소 탐색·반복 수정·맥락 압축·사용자 방향 수정을 거치는 긴 작업을 평가하기 어렵다고 지적했습니다. 내 프로젝트의 대표 작업 하나로 모델을 비교하고 완료 품질·소요 시간·사용량·개입 횟수를 함께 기록해 보세요. 편집 예시: “같은 입력과 완료 기준으로 이 작업을 수행하고, 검증 결과와 내가 방향을 수정한 지점을 정리해 주세요.” 개인의 평가 관점이며 특정 모델의 우위나 성공률을 입증하는 벤치마크가 아닙니다.</p><p class="command-refs"><a href="https://x.com/pvncher/status/2103859274883748048" target="_blank" rel="noopener noreferrer">Eric</a> <a href="https://learn.chatgpt.com/docs/model-selection" target="_blank" rel="noopener noreferrer">Model selection</a></p></article>
 <article id="luna-automation" class="field-tip-card" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><span class="field-tip-person">VB Srivastav · 2026-09-23 KST</span><h3 data-i18n="luna_automation_t">반복 자동화에 Luna Max를 비교해 보기</h3><p data-i18n="luna_automation_d">VB는 GPT-6 Luna Max를 여러 자동화와 코드·디자인 아이디어 탐색의 기본값으로 사용한다고 공유했습니다. 내 계정에서 Luna와 Max를 선택할 수 있는지 확인한 뒤, 같은 입력·완료 기준으로 기존 모델과 비교해 보세요. 편집 예시: “이 반복 작업을 실행하고 결과·실패 사례·사용량을 기록해 주세요.” 개인 사용 경험이며 모든 자동화의 품질이나 비용 절감을 보장하지 않습니다.</p><p class="command-refs"><a href="https://x.com/reach_vb/status/2102771245783925069" target="_blank" rel="noopener noreferrer">VB</a> <a href="https://learn.chatgpt.com/docs/models" target="_blank" rel="noopener noreferrer">Models</a></p></article>
@@ -2570,10 +2571,11 @@ codex --search "optimize with Next.js 15"
                     </div>
                     <p class="overview-fact-date">
                         <span data-i18n="overview_fact_date_prefix">업데이트 기준일</span>
-                        <span class="live-date" data-date-format="long">2026년 9월 29일</span>
+                        <span class="live-date" data-date-format="long">2026년 9월 30일</span>
                     </p>
                 </div>
                 <ol class="changelog-list" aria-label="Recent update summary">
+<li><strong data-i18n="changelog_sep30_t">9월 30일 · 서브에이전트 사용량과 품질 비교</strong><span data-i18n="changelog_sep30_d">Eric의 서브에이전트·Luna 위임 경험을 원문에 연결하고, 단일 실행과 품질·총사용량·시간을 비교하는 절차를 한영으로 보완했습니다.</span></li>
 <li><strong data-i18n="changelog_sep29_t">9월 29일 · 6.1 Sol·요금·Cloud·Dots</strong><span data-i18n="changelog_sep29_d">6.1 Sol 접근·기본값, CLI 0.159.2, Fast·Ultrafast 사용량과 Pro 200 재개, 새 Cloud 환경과 Dots·팀 자동화의 제공 범위를 한영으로 갱신했습니다.</span></li>
 <li><strong data-i18n="changelog_sep28_t">9월 28일 · CLI 0.158 실무 절차</strong><span data-i18n="changelog_sep28_d">Markdown 복사, 투명 배경 이미지 요청, 터미널 입력 승인과 MCP·실행 서버 인증 안내를 갱신했습니다.</span></li>
 <li><strong data-i18n="changelog_sep27_t">9월 27일 · 이미지 재평가와 CLI·iOS 갱신</strong><span data-i18n="changelog_sep27_d">Sol·Luna 이미지 이해 수정 발표와 재평가 절차, CLI 0.157.1 설치 및 iOS 1.2026.258 작업 맥락 안내를 반영했습니다.</span></li>
@@ -2655,13 +2657,13 @@ codex --search "optimize with Next.js 15"
                     href="https://github.com/swhan0329/codex-101" target="_blank">PR을 환영합니다</a>.</p>
             <p class="footer-meta">
                 <span data-i18n="footer_date_prefix">최종 업데이트</span>:
-                        <span class="live-date" data-date-format="long">2026년 9월 29일</span>
+                        <span class="live-date" data-date-format="long">2026년 9월 30일</span>
             </p>
             <p class="footer-meta">Made by <a href="https://github.com/swhan0329" target="_blank">@swhan0329</a></p>
         </div>
     </footer>
 
-    <script src="i18n.js?v=20260929-sol61-cloud"></script>
+    <script src="i18n.js?v=20260930-subagent-tradeoffs"></script>
     <script src="app.js?v=20260919-mobile-reveal"></script>
 </body>
 

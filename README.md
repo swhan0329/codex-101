@@ -10,12 +10,18 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: September 29, 2026</strong><br/>
+  <strong>Last updated: September 30, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
 
 ---
+
+## September 30 · Compare subagent tradeoffs
+
+Eric Provencher notes that subagents can increase token use for little time saved, and that Luna delegation can reduce overall quality even with a strong orchestrator. Compare one bounded task with the same inputs and completion criteria: single-agent versus delegated execution, recording quality, total usage, and elapsed time. The guide includes an edited comparison prompt and preserves client-specific delegation and model-access limits. These are personal observations, not benchmark or savings guarantees.
+
+[Eric · Subagents](https://x.com/pvncher/status/2105335126066639197) · [Eric · Luna](https://x.com/pvncher/status/2105341031252369680) · [Subagents](https://learn.chatgpt.com/docs/agent-configuration/subagents)
 
 ## September 29 · GPT-6.1 Sol, usage, and cloud workflows
 

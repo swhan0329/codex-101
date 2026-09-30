@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 9월 29일</strong><br/>
+  <strong>최종 업데이트: 2026년 9월 30일</strong><br/>
   페이지의 실제 수정일을 표시하며, 모델 안내에는 공식 출처와 확인 범위를 함께 제공합니다.
 </p>
 
@@ -20,6 +20,12 @@
 </p>
 
 ---
+
+## 9월 30일 · 서브에이전트의 이득 비교
+
+Eric Provencher는 서브에이전트가 토큰을 더 쓰면서 시간 단축은 작을 수 있고, Luna 위임은 강한 조율 모델이 있어도 전체 품질이 낮아질 수 있다고 설명했습니다. 범위가 정해진 작업 하나에서 같은 입력·완료 기준으로 단일 실행과 위임 실행의 품질·총사용량·소요 시간을 비교하세요. 가이드에 편집한 비교 프롬프트를 넣고 실행 환경별 위임·모델 접근 조건을 유지했습니다. 개인 경험이며 벤치마크나 비용 절감 보장이 아닙니다.
+
+[Eric · Subagents](https://x.com/pvncher/status/2105335126066639197) · [Eric · Luna](https://x.com/pvncher/status/2105341031252369680) · [Subagents](https://learn.chatgpt.com/docs/agent-configuration/subagents)
 
 ## 9월 29일 · GPT-6.1 Sol·사용량·클라우드 절차
 
