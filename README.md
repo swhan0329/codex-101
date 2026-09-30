@@ -10,12 +10,24 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: September 28, 2026</strong><br/>
+  <strong>Last updated: September 29, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
 
 ---
+
+## September 29 · GPT-6.1 Sol, usage, and cloud workflows
+
+- Confirm `gpt-6.1-sol` in the picker before changing local defaults. Launch rollout covers eligible paid plans; Enterprise/Edu require enablement and Free/Go are excluded. Start with the client default effort; the documented GPT-6 Sol Power preview is illustrative.
+- Update to CLI `0.159.2`, check `codex --version` and `/model`, and review opt-in steering, Markdown copying, and removed prompt suggestions.
+- Standard GPT-6.1 Sol credits per million tokens: 50 input / 2.5 cached input / 250 output. Fast uses included limits at 2.5x and purchased credits at 2x. Astra Ultrafast uses 8x/6x on eligible plans; API billing is separate.
+- Pro 200 subscriptions reopened with updated allowance rules; Pro 500 includes Astra Ultrafast. Check account-specific eligibility and the October 29 grandfathering deadline.
+- Prepare, test, and publish a new Codex Cloud environment before starting isolated tasks. Keep Legacy Code Review and connected-computer requirements separate. Added Dots rollout limits and Team Tasks/plugin extension boundaries.
+
+- Added Alexander’s [delegation versus hands-on workflow](https://x.com/embirico/status/2105100531983356269) as personal experience with Dots availability limits.
+
+[Models](https://learn.chatgpt.com/docs/models) · [Changelog](https://learn.chatgpt.com/docs/changelog) · [Pricing](https://learn.chatgpt.com/docs/pricing) · [Pro tiers](https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers) · [Cloud](https://learn.chatgpt.com/docs/cloud) · [Dots](https://learn.chatgpt.com/docs/dots)
 
 ## September 28 · CLI 0.158 workflow guidance
 

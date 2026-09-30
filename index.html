@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="style.css?v=20260906-astra-facts" />
 </head>
 
-<body data-page="home" data-updated="2026-09-28">
+<body data-page="home" data-updated="2026-09-29">
     <!-- Language Toggle -->
     <nav class="top-bar">
         <div class="top-bar-inner">
@@ -51,7 +51,7 @@
                     <p class="hero-badge">
                         <span data-i18n="hero_badge_prefix">공식 문서 기반 · 실무 실행 가이드</span>
                         <span aria-hidden="true"> · </span>
-                        <span class="live-date" data-date-format="long">2026년 9월 28일</span>
+                        <span class="live-date" data-date-format="long">2026년 9월 29일</span>
                     </p>
                     <h1 class="hero-title" data-i18n="hero_title"><span class="hero-title-lead">OpenAI Codex를</span><span class="hero-title-focus">실무에 바로 붙이는 가이드</span></h1>
                     <p class="hero-sub" data-i18n="hero_sub"><span class="hero-sub-lead">CLI부터 데스크톱 앱·IDE·Web·Mobile까지, 한 흐름으로.</span><span class="hero-sub-detail">설치·권한·Git·자동화·프롬프팅을 최신 공식 문서 기준의 실행 순서로 정리했습니다.</span></p>
@@ -224,7 +224,7 @@
                                 <tr>
                                     <td data-i18n="overview_decision_local_case">내 프로젝트에서 작은 수정</td>
                                     <td data-i18n="overview_decision_local_surface">App Local 또는 CLI</td>
-                                    <td data-i18n="overview_decision_local_model">gpt-6-sol, 반복 작업은 gpt-6-luna</td>
+                                    <td data-i18n="overview_decision_local_model">gpt-6.1-sol, 반복 작업은 gpt-6-luna</td>
                                     <td><a href="#s5" data-i18n="overview_decision_local_next">05-06 설치와 첫 실행</a></td>
                                 </tr>
                                 <tr>
@@ -236,7 +236,7 @@
                                 <tr>
                                     <td data-i18n="overview_decision_team_case">팀 규칙과 자동화 도입</td>
                                     <td data-i18n="overview_decision_team_surface">CLI/App + AGENTS.md + MCP</td>
-                                    <td data-i18n="overview_decision_team_model">gpt-6-sol / gpt-6-luna, 실제 접근 확인</td>
+                                    <td data-i18n="overview_decision_team_model">gpt-6.1-sol / gpt-6-luna, 실제 접근 확인</td>
                                     <td><a href="#s12" data-i18n="overview_decision_team_next">12-16 운영 설정</a></td>
                                 </tr>
                                 <tr>
@@ -434,7 +434,7 @@
                     <div class="product-card">
                         <div class="product-icon">Web</div>
                         <h3>Codex Web</h3>
-                        <p data-i18n="s2_cloud">ChatGPT 웹/모바일 표면. GitHub 연동, 자동 PR/코드 리뷰, Slack·Linear발 클라우드 작업, 모바일 preview 조율까지 연결합니다.</p>
+                        <p data-i18n="s2_cloud">새 Codex Cloud는 웹·데스크톱에서 환경을 준비·게시하고 작업을 시작하며 모바일에서도 이어갈 수 있습니다. 노트북이 꺼져도 클라우드 작업은 계속됩니다. Code Review와 GitHub·Linear 연동의 Legacy Cloud, 연결된 컴퓨터가 온라인이어야 하는 Remote 경로를 구분하세요.</p>
                     </div>
                 </div>
                 <p class="command-refs" data-i18n-html="s2_refs">출처: <a href="https://developers.openai.com/codex/quickstart/" target="_blank">Quickstart</a> · <a href="https://developers.openai.com/codex/app" target="_blank">Codex app</a> · <a href="https://developers.openai.com/codex/ide" target="_blank">IDE extension</a> · <a href="https://developers.openai.com/codex/cli" target="_blank">Codex CLI</a></p>
@@ -445,19 +445,19 @@
             <section class="section" id="s3">
                 <h2><span class="section-num">03</span> <span data-i18n="s3_title">지원 모델</span></h2>
 
-<div class="callout" id="sol6-rollout" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><h3 data-i18n="sol6_t">GPT-6 Sol·Luna · 점진 배포 중</h3><p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="sol6_d">9월 22일부터 GPT-6 Sol·Luna가 Plus·Pro·Business·Enterprise·Edu에 순차 제공됩니다. Free·Go는 데스크톱 앱에서 Standard 속도의 Luna를 사용할 수 있습니다. ChatGPT에서는 Work·Codex용이며 Chat에는 제공되지 않습니다. Enterprise는 관리자가 모델별로 켜야 합니다. 선택기에서 실제 접근을 확인하세요. GPT-5.6 Sol·Terra·Luna는 배포 중에도 남아 있습니다.</p><p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="sol6_steps">앱·IDE 선택기 또는 CLI의 /model에서 모델을 확인하세요. 복잡한 구현은 gpt-6-sol, 명확한 반복 작업은 gpt-6-luna부터 비교하세요. 아래 명령과 설정 예시는 접근 가능한 계정용입니다. 기존 입력·완료 기준을 유지하고 모델만 먼저 바꿔 품질·시간·사용량을 비교한 뒤 추론 강도를 조절하세요. Codex cloud의 기본 모델은 직접 바꿀 수 없습니다.</p><p class="command-refs"><a href="https://learn.chatgpt.com/docs/models" target="_blank" rel="noopener noreferrer">Models</a> <a href="https://learn.chatgpt.com/docs/pricing#token-rates" target="_blank" rel="noopener noreferrer">Pricing</a> <a href="https://learn.chatgpt.com/docs/changelog#codex-2026-09-22-gpt-6-sol-luna" target="_blank" rel="noopener noreferrer">OpenAI · 2026-09-22</a></p></div>
+<div class="callout" id="sol6-rollout" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><h3 data-i18n="sol6_t">GPT-6.1 Sol · 9월 29일 출시 배포</h3><p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="sol6_d">복잡한 코딩·에이전트 작업은 접근 가능한 GPT-6.1 Sol부터 비교하세요. 출시 배포 대상은 Plus·Pro·Business·Enterprise·Edu의 데스크톱 Codex·CLI와 웹·모바일 ChatGPT Work입니다. Enterprise·Edu는 관리자가 활성화해야 하며 Free·Go는 출시 대상이 아닙니다. Standard·Fast를 지원하고 Ultrafast는 추후 예정입니다. Work·Codex용이며 Chat 모델이 아닙니다. Free·Go의 데스크톱 Luna와 기존 GPT-6 Sol·GPT-5.6 계열의 제공 범위는 별도로 확인하세요.</p><p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="sol6_steps">선택기 또는 CLI /model에서 gpt-6.1-sol 접근을 확인하세요. 같은 입력·완료 기준으로 품질·시간·사용량을 비교한 뒤 추론 강도를 조절하세요. 반복 작업은 gpt-6-luna, 가장 어려운 종합 작업은 Astra도 비교하세요. 6.1 Sol은 클라이언트의 기본 추론 강도에서 시작하며 Light~Ultra 중 표시되는 옵션을 사용합니다. Max·Ultra는 설정에 따라 다릅니다. 설정 파일만 바꿔서는 접근 권한이 생기지 않습니다.</p><p class="command-refs"><a href="https://learn.chatgpt.com/docs/models" target="_blank" rel="noopener noreferrer">Models</a> <a href="https://learn.chatgpt.com/docs/pricing#token-rates" target="_blank" rel="noopener noreferrer">Pricing</a> <a href="https://learn.chatgpt.com/docs/changelog#codex-2026-09-29-gpt-61-sol" target="_blank" rel="noopener noreferrer">OpenAI · 2026-09-29</a></p></div>
 <div id="gpt55-retirement" class="callout" style="scroll-margin-top: 140px"><h4 data-i18n="retire55_t">GPT-5.5 종료 예정 · 2026년 10월 14일</h4><p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="retire55_d">OpenAI는 9월 14일 GPT-5.5의 10월 14일 ChatGPT·Work·Codex 전체 플랜 종료를 공지했습니다. 현재 전환 안내는 Plus·Pro·Business·Enterprise·Edu의 GPT-6 Sol, Free·Go의 데스크톱 GPT-6 Luna입니다. 실제 접근을 확인하고 저장된 gpt-5.5 설정을 바꾸세요. OpenAI API는 대상이 아닙니다.</p><p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="retire55_steps">10월 14일 전 워크스페이스 기본값, 저장된 모델 설정, 관리 설정, custom agent, 예약 작업, 모델을 지정하는 스크립트·명령을 점검하세요. 해당 사용자와 클라이언트에서 대체 모델을 선택할 수 있는지 확인한 뒤 같은 입력과 완료 기준으로 시험하세요. 설정 변경만으로 모델 접근 권한이 생기지는 않습니다.</p><p class="command-refs"><a href="https://learn.chatgpt.com/docs/models#gpt-55-retirement" target="_blank" rel="noopener noreferrer">Models · GPT-5.5</a> <a href="https://learn.chatgpt.com/docs/enterprise/workspace-model-availability#prepare-for-the-gpt-55-retirement" target="_blank" rel="noopener noreferrer">Workspace model availability</a></p></div>
                 <h3 data-i18n="s3_models_title">현재 모델 가이드</h3>
 
                 <h4 data-i18n="s3_rec_title">⭐ 추천 모델</h4>
                 <div class="model-grid">
-<div class="model-card"><div class="model-banner">gpt-6-astra</div><div class="model-body"><p class="model-desc" data-i18n="astra_desc">여러 도구를 쓰는 어려운 코딩·앱·리서치 작업용 모델입니다. 공식 추천 모델 목록에서 확인할 수 있습니다.</p><div class="model-cmd">codex -m gpt-6-astra</div><p data-i18n="astra_access">공식 문서는 데스크톱·웹·CLI·IDE 지원을 표시하며 Codex cloud는 제외합니다. 실제 접근은 플랜·로그인 방식·배포 단계에 따라 내 계정에서 확인하세요.</p><p class="command-refs"><a href="https://learn.chatgpt.com/docs/models" target="_blank" rel="noopener noreferrer">Models</a></p></div></div>
-                    <!-- GPT-6 Sol -->
+<div class="model-card"><div class="model-banner">gpt-6-astra</div><div class="model-body"><p class="model-desc" data-i18n="astra_desc">여러 도구를 쓰는 어려운 코딩·앱·리서치 작업용 모델입니다. 공식 추천 모델 목록에서 확인할 수 있습니다.</p><div class="model-cmd">codex -m gpt-6-astra</div><p data-i18n="astra_access">공식 모델 표는 데스크톱·웹 Work·CLI·IDE를 표시합니다. 실제 접근은 플랜·로그인 방식·워크스페이스·배포에 따라 확인하세요.</p><p class="command-refs"><a href="https://learn.chatgpt.com/docs/models" target="_blank" rel="noopener noreferrer">Models</a></p></div></div>
+                    <!-- GPT-6.1 Sol -->
                     <div class="model-card">
-                        <div class="model-banner">gpt-6-sol</div>
+                        <div class="model-banner">gpt-6.1-sol</div>
                         <div class="model-body">
-                            <p class="model-desc" data-i18n="m0_f">GPT-6 Sol은 일상 업무와 복잡한 코딩·에이전트 작업에 맞는 모델입니다. 기본 추론 비교는 Medium부터 시작하세요.</p>
-                            <div class="model-cmd">codex -m gpt-6-sol</div>
+                            <p class="model-desc" data-i18n="m0_f">GPT-6.1 Sol은 코드·앱·문서를 오가는 반복적이고 긴 작업에 고려할 모델입니다. 계정과 클라이언트의 기본 추론 강도에서 시작하세요.</p>
+                            <div class="model-cmd">codex -m gpt-6.1-sol</div>
                             <div class="model-features">
                                 <div class="model-feat-row"><span class="model-feat-label"
                                         data-i18n="feat_cap">Capability</span><span class="model-feat-value"><span
@@ -466,13 +466,11 @@
                                             class="dot-filled">✦</span></span></div>
                                 <div class="model-feat-row"><span class="model-feat-label"
                                         data-i18n="feat_spd">Speed</span><span class="model-feat-value"><span
-                                            class="dot-filled">⚡</span><span class="dot-filled">⚡</span></span></div>
+                                            class="dot-filled">⚡</span><span class="dot-filled">⚡</span><span class="dot-filled">⚡</span></span></div>
                                 <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cli">Codex
                                         CLI & SDK</span><span class="check-yes">✅</span></div>
                                 <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_app">Codex
                                         app & IDE extension</span><span class="check-yes">✅</span></div>
-                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cloud">Codex
-                                        Cloud</span><span class="check-no">❌</span></div>
                                 <div class="model-feat-row"><span class="model-feat-label"
                                         data-i18n="feat_credits">ChatGPT Credits</span><span class="check-yes">✅</span>
                                 </div>
@@ -500,8 +498,6 @@
                                         CLI & SDK</span><span class="check-yes">✅</span></div>
                                 <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_app">Codex
                                         app & IDE extension</span><span class="check-yes">✅</span></div>
-                                <div class="model-feat-row"><span class="model-feat-label" data-i18n="feat_cloud">Codex
-                                        Cloud</span><span class="check-no">❌</span></div>
                                 <div class="model-feat-row"><span class="model-feat-label"
                                         data-i18n="feat_credits">ChatGPT Credits</span><span class="check-yes">✅</span>
                                 </div>
@@ -523,20 +519,20 @@
                     <div class="model-guidance-head">
                         <div>
                             <span class="model-guidance-kicker" data-i18n="s3_guide_kicker">공식 가이드의 추천 시작점</span>
-                            <h4 data-i18n="s3_guide_title">Astra · Sol · Luna, 작업에 맞게 선택</h4>
+                            <h4 data-i18n="s3_guide_title">Astra · 6.1 Sol · Luna, 작업에 맞게 선택</h4>
                         </div>
                         <div class="model-guidance-default">
                             <span data-i18n="s3_guide_default">내 계정의 Power부터 확인</span>
-                            <a href="https://learn.chatgpt.com/docs/models" target="_blank" rel="noopener noreferrer">Astra · Sol · Luna</a>
+                            <a href="https://learn.chatgpt.com/docs/models" target="_blank" rel="noopener noreferrer">Astra · 6.1 Sol · Luna</a>
                         </div>
                     </div>
 
-                    <p data-i18n="astra_power">앱·웹 문서의 Power 순서는 Luna High → Sol Light(시작 프리셋) → Sol Medium → Astra Light → Astra Medium → Astra Extra High입니다. 일부 유료 플랜에는 Astra Extra High가 없으며 실제 옵션은 플랜·클라이언트·워크스페이스·배포에 따라 다릅니다. Advanced에서 특정 모델·추론·속도를 확인하세요. 모델별 비교 시작점은 Sol Medium, Luna High, Astra Light입니다. 앱·웹·IDE의 Light는 CLI에서 Low로 표시됩니다.</p>
+                    <p data-i18n="astra_power">공식 Power 예시는 Luna High → GPT-6 Sol Light(예시 선택값) → GPT-6 Sol Medium → Astra Light → Astra Medium → Astra Extra High입니다. 이것이 모든 계정의 기본값이나 6.1 Sol 선택을 뜻하지는 않습니다. 계정의 기본 Power에서 시작하고 Advanced에서 실제 모델·추론·속도를 확인하세요. 6.1 Sol은 클라이언트 기본 추론, Luna는 High, Astra는 Light부터 비교합니다. 앱·웹·IDE의 Light는 CLI에서 Low입니다.</p>
                     <div class="model-choice-grid" aria-label="GPT-6 model roles">
                         <article class="model-choice-card model-choice-sol">
-                            <code>Sol</code>
+                            <code>6.1 Sol</code>
                             <strong data-i18n="s3_guide_sol_title">복잡하고 중요한 작업</strong>
-                            <span data-i18n="s3_guide_sol_desc">Sol: 일상 업무와 복잡한 구현</span>
+                            <span data-i18n="s3_guide_sol_desc">6.1 Sol: 반복적이고 긴 코드·앱·문서 작업</span>
                         </article>
                         <article class="model-choice-card model-choice-terra">
                             <code>Astra</code>
@@ -589,7 +585,7 @@
 
 <div class="callout"><h4 data-i18n="agent_scope_t">서브에이전트 위임 조건은 실행 환경별로 확인</h4><p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="agent_scope_d">현재 로컬 Codex 앱·CLI·IDE는 사용자의 직접 요청 또는 적용되는 프로젝트·스킬 지침에 따라 서브에이전트를 시작합니다. ChatGPT Work 웹의 Ultra는 지원 모델·계정에서 적합한 작업을 자율적으로 위임할 수 있고, 다른 강도에서는 직접 요청하세요. 각 에이전트의 모델·도구 작업도 토큰을 소비합니다.</p><p class="command-refs"><a href="https://learn.chatgpt.com/docs/agent-configuration/subagents#triggering-subagent-workflows" target="_blank" rel="noopener noreferrer">Subagents</a></p></div>
 <h4 data-i18n="astra_start_title">Astra로 첫 작업 시작하기</h4><p data-i18n="astra_start">앱의 모델 선택기에서 Astra를 고르거나 CLI에서 아래 명령으로 시작하세요. 기존 작업과 같은 입력·완료 기준으로 비교하세요.</p><div class="model-cmd">codex -m gpt-6-astra</div><details class="model-guidance-card"><summary data-i18n="astra_context_title">맥락 관리 실험 · 비활성화 발표</summary><p data-i18n="astra_context">Tibo는 2026년 9월 12일 조기 중단이나 이전 메시지에 답하는 문제를 일으킬 수 있던 opt-in 맥락 관리 실험을 비활성화했다고 발표했습니다. 이 가이드는 현재 활성화를 권하지 않습니다.</p><p data-i18n="astra_context_detail">9월 13일 확인한 Models 문서에는 Plus/Pro 대상의 기존 활성화 안내가 남아 있습니다. 발표와 문서가 일치하지 않으므로 아래 원문에서 재개 여부를 확인하세요. 일반적인 맥락 압축이나 Memories 전체가 종료됐다는 뜻은 아닙니다.</p><p class="command-refs"><a href="https://learn.chatgpt.com/docs/models#experimental-context-management" target="_blank" rel="noopener noreferrer">Models</a> · <a href="https://x.com/thsottiaux/status/2098612714704891959" target="_blank" rel="noopener noreferrer">Tibo · 2026-09-12</a></p></details>
-<h4 data-i18n="astra_cost_title">사용량 확인: ChatGPT 크레딧과 API는 별도</h4><p data-i18n="astra_cost">2026-09-06 공식 요금표: Astra는 100만 토큰당 입력 250·캐시 입력 25·출력 1,250 ChatGPT 크레딧입니다. Fast는 Standard 사용량의 2.5배입니다. API Standard는 입력 $10·출력 $50이며 캐시는 별도 요율, API Fast는 최대 2배 속도·2배 가격입니다. 월 구독료와 작업당 비용을 혼동하지 마세요.</p><p class="command-refs"><a href="https://learn.chatgpt.com/docs/pricing" target="_blank" rel="noopener noreferrer">ChatGPT credits</a> · <a href="https://openai.com/index/gpt-6-astra/#availability" target="_blank" rel="noopener noreferrer">Astra API pricing</a></p>
+<h4 data-i18n="astra_cost_title">사용량 확인: ChatGPT 크레딧과 API는 별도</h4><p data-i18n="astra_cost">Astra Standard는 100만 토큰당 입력 250·캐시 입력 25·출력 1,250 ChatGPT 크레딧입니다. Fast는 구독 포함 한도 2.5배·구매 크레딧 및 Enterprise 종량제 2배, Astra Ultrafast는 각각 8배·6배를 사용합니다. API는 별도 토큰 요금표를 따릅니다. 이 배율은 작업 완료 속도나 월 구독료를 뜻하지 않습니다.</p><p class="command-refs"><a href="https://learn.chatgpt.com/docs/pricing" target="_blank" rel="noopener noreferrer">ChatGPT credits</a> · <a href="https://openai.com/index/gpt-6-astra/#availability" target="_blank" rel="noopener noreferrer">Astra API pricing</a></p>
                 <h4 data-i18n="s3_alt_title">🔄 대안 모델</h4>
                 <div class="model-grid">
                     <!-- GPT-5.2 -->
@@ -631,14 +627,14 @@
                 <div class="callout">
                     <p data-i18n="s3_cfg_default">config.toml에서 기본 모델을 설정할 수 있습니다. 지정하지 않으면 추천 모델이 기본값입니다.</p>
                 </div>
-                <pre><code>model = "gpt-6-sol"</code></pre>
+                <pre><code>model = "gpt-6.1-sol"</code></pre>
                 <div class="callout">
                     <p data-i18n="s3_cfg_temp">CLI에서 <code>/model</code> 명령 또는 <code>codex -m 모델명</code> 플래그로 임시 변경 가능.
                         IDE에서는 입력창 아래 모델 선택기 사용.</p>
                 </div>
-                <pre><code>codex -m gpt-6-sol</code></pre>
+                <pre><code>codex -m gpt-6.1-sol</code></pre>
                 <div class="callout">
-                    <p data-i18n="s3_cfg_cloud">Codex 클라우드 작업의 기본 모델은 현재 변경할 수 없습니다.</p>
+                    <p data-i18n="s3_cfg_cloud">위 config.toml 예시는 로컬 클라이언트용입니다. 새 Cloud는 게시된 환경을 선택하며 실제 모델·접근은 해당 클라우드 화면에서 확인하세요. Legacy Cloud의 제한을 새 Cloud에 그대로 적용하지 마세요.</p>
                 </div>
                 <p class="command-refs" data-i18n-html="s3_refs">출처: <a href="https://learn.chatgpt.com/docs/models" target="_blank">Codex models</a> · <a href="https://learn.chatgpt.com/docs/pricing" target="_blank">Codex pricing</a> · <a href="https://developers.openai.com/api/docs/models" target="_blank">OpenAI API Models</a> · <a href="https://developers.openai.com/api/docs/guides/latest-model" target="_blank">GPT-6 Astra API model guidance</a></p>
             </section>
@@ -646,7 +642,9 @@
             <!-- Section 3 -->
             <section class="section" id="s4">
                 <h2><span class="section-num">04</span> <span data-i18n="s4_title">시스템 요구사항 & 가격</span></h2>
-                <div class="callout" id="sol6-pricing" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><h3 data-i18n="sol6_cost_t">Standard 크레딧 · 100만 토큰 기준</h3><p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="sol6_cost">GPT-6 Sol: 입력 50 / 캐시 입력 5 / 출력 250. GPT-6 Luna: 입력 2.5 / 캐시 입력 0.25 / 출력 12.5. 제공되는 환경의 Fast는 2.5배입니다. API 달러 요금과 다르며, 단가만으로 구독 포함 사용량이나 작업당 절감률을 계산하지 마세요. Work·Codex는 사용량을 공유합니다.</p><p class="command-refs"><a href="https://learn.chatgpt.com/docs/models" target="_blank" rel="noopener noreferrer">Models</a> <a href="https://learn.chatgpt.com/docs/pricing#token-rates" target="_blank" rel="noopener noreferrer">Pricing</a> <a href="https://learn.chatgpt.com/docs/changelog#codex-2026-09-22-gpt-6-sol-luna" target="_blank" rel="noopener noreferrer">OpenAI · 2026-09-22</a></p></div>
+
+<div class="callout" id="ultrafast29" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><h3 data-i18n="ultrafast29_t">Astra Ultrafast · 플랜·처리 지역 확인</h3><p data-i18n="ultrafast29_d">Pro $500과 적격 Enterprise·Edu에서 제공됩니다. Enterprise는 기본 비활성이며 관리자가 활성화해야 합니다. 미국 밖 추론 지역 고정이 필요한 워크스페이스에는 제공되지 않습니다. Standard 대비 토큰 생성 속도 개선은 작업 전체 완료 시간이나 사용량 배율과 다릅니다. 6.1 Sol의 Ultrafast는 추후 예정입니다.</p><p class="command-refs"><a href="https://learn.chatgpt.com/docs/agent-configuration/speed#ultrafast-mode" target="_blank" rel="noopener noreferrer">Speed</a></p></div>
+<div class="callout" id="sol6-pricing" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><h3 data-i18n="sol6_cost_t">Standard 크레딧 · 100만 토큰 기준</h3><p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="sol6_cost">100만 토큰당 입력 / 캐시 입력 / 출력: GPT-6.1 Sol 50 / 2.5 / 250, GPT-6 Sol 50 / 5 / 250, GPT-6 Luna 2.5 / 0.25 / 12.5 ChatGPT 크레딧입니다. 별도 캐시 쓰기 요금은 없습니다. API 달러 요금과 다르며 단가만으로 구독 포함 사용량이나 작업당 절감률을 계산하지 마세요. Work·Codex는 사용량을 공유합니다.</p><p class="command-refs"><a href="https://learn.chatgpt.com/docs/models" target="_blank" rel="noopener noreferrer">Models</a> <a href="https://learn.chatgpt.com/docs/pricing#token-rates" target="_blank" rel="noopener noreferrer">Pricing</a> <a href="https://learn.chatgpt.com/docs/changelog#codex-2026-09-29-gpt-61-sol" target="_blank" rel="noopener noreferrer">OpenAI · 2026-09-29</a></p></div>
 <div class="callout"><p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="retire55_short">GPT-5.5는 2026년 10월 14일 ChatGPT·Work·Codex의 모든 플랜에서 종료 예정입니다. 유료 플랜은 GPT-6 Sol, Free·Go는 데스크톱 GPT-6 Luna의 접근을 확인해 전환하세요. OpenAI API는 대상이 아닙니다.</p><a href="#gpt55-retirement">GPT-5.5 → Sol / Luna</a></div>
                 <div class="two-col">
                     <div>
@@ -699,12 +697,12 @@
                                     <tr>
                                         <td>Plus</td>
                                         <td>$20/mo</td>
-                                        <td data-i18n="s4_codex_plus">GPT-6 Sol·Luna 점진 배포, 웹·CLI·IDE·모바일, 클라우드 리뷰와 크레딧. 실제 접근은 선택기 확인</td>
+                                        <td data-i18n="s4_codex_plus">6.1 Sol 출시 배포 포함. 모델·기능별 플랜과 선택기의 실제 접근을 확인하세요.</td>
                                     </tr>
                                     <tr>
                                         <td>Pro</td>
                                         <td>From $100/mo</td>
-                                        <td data-i18n="s4_codex_pro">Pro 5x / Pro 20x 사용량. Spark research preview는 2026년 9월 14일 종료되었습니다.</td>
+                                        <td data-i18n="s4_codex_pro">Pro 100 / 200 / 500. Astra Ultrafast는 Pro 500에 포함되며 Pro 100·200의 크레딧 구매로 열리지 않습니다. 현재 Pro에는 5시간 한도가 없지만 다른 사용량 한도는 대시보드에서 확인하세요.</td>
                                     </tr>
                                     <tr>
                                         <td>Business</td>
@@ -775,9 +773,9 @@
                         <section class="model-guidance-block">
                             <span class="model-guidance-label" data-i18n="s4_guide_pricing_table">Pricing 페이지에서 확인</span>
                             <ul class="model-guidance-list">
-                                <li data-i18n="s4_guide_table_plans">Plus · Pro 5x · Pro 20x · Business · API Key 표</li>
-                                <li data-i18n="s4_guide_five_hours">모델별 5시간 한도</li>
-                                <li data-i18n="s4_guide_models">GPT-6 Astra · Sol · Luna 사용량 확인</li>
+                                <li data-i18n="s4_guide_table_plans">Plus · Pro 100/200/500 · Business · API Key</li>
+                                <li data-i18n="s4_guide_five_hours">Plus·표준 Business의 5시간 추정치</li>
+                                <li data-i18n="s4_guide_models">Astra · 6.1 Sol · Sol · Luna 사용량 확인</li>
                             </ul>
                         </section>
 
@@ -796,12 +794,12 @@
 
                     <div class="model-guidance-alert plan-fast-alert">
                         <strong>Fast mode</strong>
-                        <span data-i18n="s4_guide_fast">GPT-6 Astra·Sol·Luna의 Fast는 제공되는 환경에서 Standard의 2.5배 ChatGPT 크레딧입니다. API 요금은 별도입니다.</span>
+                        <span data-i18n="s4_guide_fast">Fast: 구독 포함 한도 2.5배, 구매 크레딧·Enterprise 종량제 2배. Astra Ultrafast: 각각 8배·6배. 같은 모델의 Standard 대비 사용량 배율이며 작업 속도 배율은 아닙니다. API 요금은 별도입니다.</span>
                     </div>
                 </div>
 
 <div class="callout" id="spark-retirement" style="word-break: keep-all; overflow-wrap: anywhere"><h3 data-i18n="spark_retire_t">Spark 종료 · 2026년 9월 14일</h3><p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="spark_retire_d">OpenAI 변경 기록은 GPT-5.3-Codex-Spark가 2026년 9월 14일 종료되었다고 명시합니다. ChatGPT 데스크톱 앱·Codex CLI·IDE에서 research preview를 더 이상 사용할 수 없습니다. 저장된 설정·custom agent·스크립트의 gpt-5.3-codex-spark를 현재 계정에서 사용할 수 있는 추천 모델로 바꾸세요. 빠른 응답이 필요하면 지원 모델의 Fast 설정과 크레딧을 확인하세요.</p><p class="command-refs"><a href="https://learn.chatgpt.com/docs/changelog#codex-2026-09-14-codex-spark-deprecation" target="_blank" rel="noopener noreferrer">OpenAI · 2026-09-14</a></p></div>
-<div class="callout" style="word-break: keep-all; overflow-wrap: anywhere"><h3 data-i18n="pro_pause_t">9월 11일 KST · Pro $200 신규 가입 안내</h3><p data-i18n="pro_pause_d">Tibo는 기존 사용자의 Astra 이용을 유지하기 위해 월 $200 Pro 신규 구독을 일시 중단한다고 발표했습니다. 기존 계정에는 영향이 없고 다른 플랜·API는 계속 제공한다고 설명했습니다. 가입 가능 여부는 결제 화면에서 다시 확인하세요.</p><p class="command-refs"><a href="https://x.com/thsottiaux/status/2098113585683808624" target="_blank" rel="noopener noreferrer">Tibo · X · 2026-09-11 KST</a></p></div>
+<div class="callout" style="word-break: keep-all; overflow-wrap: anywhere"><h3 data-i18n="pro_pause_t">9월 29일 · Pro 200 신규 가입 재개</h3><p data-i18n="pro_pause_d">Pro 200 신규 가입이 재개됐으며 이전 사용량 유지 대상이 아닌 신규 구독에는 낮아진 포함 사용량이 적용됩니다. 공식 도움말의 기준 시점 또는 그 전 7일 동안 활성 상태였던 적격 Pro 200 구독은 활성 구독을 유지하면 10월 29일까지 이전 사용량을 유지하고 이후 새 한도로 전환됩니다. 가격은 월 $200이며 Pro 500이나 Ultrafast로 자동 변경되지 않습니다. 계정 안내 메일과 결제 화면의 적용 조건을 확인하세요.</p><p class="command-refs"><a href="https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers" target="_blank" rel="noopener noreferrer">OpenAI · Pro tiers</a></p></div>
                 <p class="command-refs" data-i18n-html="s4_refs">출처: <a href="https://developers.openai.com/codex/quickstart/" target="_blank">Quickstart</a> · <a href="https://developers.openai.com/codex/pricing/" target="_blank">Codex pricing</a> · <a href="https://help.openai.com/en/articles/20001106-codex-rate-card" target="_blank">Codex rate card</a> · <a href="https://developers.openai.com/codex/speed" target="_blank">Speed</a> · <a href="https://openai.com/index/codex-flexible-pricing-for-teams/" target="_blank">Pay-as-you-go pricing for teams</a></p>
             </section>
 
@@ -946,12 +944,13 @@ codex --cd /path/to/project
 
 
 <div class="callout" id="cli155" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere">
-<h3 data-i18n="cli155_t">CLI 0.158 · 복사·이미지·입력 승인</h3>
-<p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="cli155_voice">9월 28일 공개된 0.158.0으로 업데이트하세요: npm install -g @openai/codex@0.158.0. codex --version과 /model로 설치 버전과 계정에서 사용 가능한 모델을 확인하세요. 전체 화면에서 선택 시 복사와 우클릭 붙여넣기를 설정할 수 있으며, 선택한 대화 기록을 복사하면 Markdown 형식을 보존합니다. 짧은 목록을 복사해 편집기에 붙여넣고 형식을 확인하세요.</p>
+<h3 data-i18n="cli155_t">CLI 0.159.2 · 모델·방향 수정·복사</h3>
+<p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="cli155_voice">npm install -g @openai/codex@0.159.2로 업데이트하고 codex --version과 /model을 확인하세요. 0.159.1은 기본 모델 카탈로그에 GPT-6.1 Sol을 추가했고 0.159.2는 Windows의 불필요한 콘솔 창 표시를 수정했습니다. 카탈로그 기본값은 계정 접근을 보장하지 않습니다.</p>
+<p data-i18n="cli159_d">0.159.0의 instant_interrupt는 응답·긴 code-mode 호출 중 새 입력으로 방향을 바꾸는 선택적 기능입니다. 현재 설정 지원을 확인한 뒤 사용하세요. Markdown 표·공백을 포함한 복사 결과를 편집기에 붙여넣어 확인하고, 경고 창에서 남길 경고는 k로 보존하세요. 자동 후속 프롬프트 제안과 tui.prompt_suggestions, 번들 plugin-creator 스킬은 제거됐습니다. 승인된 명령도 명시적 파일 접근 거부를 유지합니다.</p>
 <p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="cli155_tasks">이미지 생성·편집에서 투명 배경을 명시적으로 요청할 수 있고, 대화의 파일 기반 이미지도 편집 입력으로 사용할 수 있습니다. 편집 예시: “첨부한 로고의 모양은 유지하고 배경을 투명하게 바꿔 주세요.” 결과 파일을 열어 투명도와 가장자리를 확인하세요. 모델·도구 접근 조건은 별도로 적용됩니다.</p>
 <p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="cli155_auth">높은 권한으로 실행 중인 명령에 터미널 입력을 보낼 때 승인을 받는 동작이 기본 활성화됐습니다. 입력 대상 명령과 내용을 확인하세요. MCP는 사전 등록된 OAuth client secret을 지원하며, 직접 exec-server WebSocket 연결에는 bearer token 인증을 설정할 수 있습니다. 기존 인증·권한 정책에 맞게 구성하세요.</p>
 <p data-i18n="cli157_sessions">0.157부터 전체 화면이 기본이며 Shift-click으로 선택 범위를 확장합니다. f는 다른 앱에서 열린 대화를 fork하며 초안·대기 프롬프트를 보존합니다. /import는 원격·로컬 background-server 세션도 지원합니다. 이어갈 프로젝트·checkout을 확인하고 /usage로 사용량을 확인하세요.</p>
-<p class="command-refs"><a href="https://learn.chatgpt.com/docs/changelog" target="_blank" rel="noopener noreferrer">Codex CLI 0.158.0 · 2026-09-28</a></p>
+<p class="command-refs"><a href="https://learn.chatgpt.com/docs/changelog" target="_blank" rel="noopener noreferrer">Codex CLI 0.159.2 · 2026-09-29</a></p>
 </div>
                 <div class="callout">
                 <h3 data-i18n="cli154_t">CLI 0.154 · 격리 작업과 실행 중 응답</h3>
@@ -1269,9 +1268,11 @@ then verify the page again and attach the screenshot result.</code></pre>
 
             <section class="section" id="s9">
                 <h2><span class="section-num">09</span> <span data-i18n="s9_title">Codex Web/Mobile (ChatGPT)</span></h2>
-                <figure class="screenshot">
+
+<div class="callout" id="cloud29" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><h3 data-i18n="cloud29_t">새 Codex Cloud · 준비 → 게시 → 작업</h3><p data-i18n="cloud29_d">웹·데스크톱의 새 작업에서 Work in → Cloud → Select environment → Create environment를 선택하고 GitHub 저장소를 연결하세요. Codex가 의존성과 도구를 설치·시험하면 결과와 접근 설정을 검토하고 Save → Publish를 선택합니다. Environment published 확인 후 Start a new task로 시작하세요. 기존 작업은 자기 상태를 유지하며 변경한 공통 환경은 Republish 후 새 작업에 적용됩니다.</p><p data-i18n="cloud29_limits">저장은 설정, 게시는 준비된 파일 시스템, 공유는 환경 이용 권한을 다룹니다. Code Review·GitHub·Linear 연동은 Legacy Cloud 문서를 확인하세요. 로컬 컴퓨터의 파일·앱을 쓰는 Work Cloud는 별도 연결과 온라인 상태가 필요합니다.</p><p class="command-refs"><a href="https://learn.chatgpt.com/docs/cloud" target="_blank" rel="noopener noreferrer">Codex Cloud</a> · <a href="https://learn.chatgpt.com/docs/environments/cloud-environments" target="_blank" rel="noopener noreferrer">Cloud environments</a></p></div>
+<figure class="screenshot">
                     <img src="images/codex_cloud.png" alt="Codex cloud in ChatGPT with repository and branch selection plus task and review tabs" loading="lazy" />
-                    <figcaption data-i18n="img_cloud">현재 Codex cloud — 저장소·브랜치 선택과 작업·코드 리뷰·보안 리뷰</figcaption>
+                    <figcaption data-i18n="img_cloud">Codex Cloud Legacy 화면 · 새 환경 절차는 위 안내 참고</figcaption>
                 </figure>
                 <div class="model-guidance-panel connection-path-panel">
                     <div class="model-guidance-head">
@@ -1287,8 +1288,8 @@ then verify the page again and attach the screenshot result.</code></pre>
                                 <span class="install-step">01</span>
                                 <code>Cloud</code>
                             </div>
-                            <strong data-i18n="s9_cloud_title">웹에서 클라우드 작업</strong>
-                            <p data-i18n="s9_cloud_desc">chatgpt.com/codex에 GitHub 환경을 연결하고 코딩 작업과 리뷰를 실행합니다.</p>
+                            <strong data-i18n="s9_cloud_title">게시된 환경에서 클라우드 작업</strong>
+                            <p data-i18n="s9_cloud_desc">Work in → Cloud에서 게시된 환경을 선택하세요. 각 작업은 별도 작업 공간을 사용하며 컴퓨터가 꺼져도 진행할 수 있습니다.</p>
                             <div class="connection-chip-row">
                                 <span>GitHub</span>
                                 <span>chatgpt.com/codex</span>
@@ -1355,7 +1356,7 @@ then verify the page again and attach the screenshot result.</code></pre>
                     </div>
                 </div>
                 <div class="steps">
-                    <div class="step"><span class="step-num">1</span><span data-i18n="s9_s1">GitHub 계정 연결 → 레포 선택</span>
+                    <div class="step"><span class="step-num">1</span><span data-i18n="s9_s1">Cloud 환경 준비·게시 → 게시된 환경 선택</span>
                     </div>
                     <div class="step"><span class="step-num">2</span><span data-i18n="s9_s2">작업 설명 입력</span></div>
                     <div class="step"><span class="step-num">3</span><span data-i18n="s9_s3">클라우드 샌드박스에서 자동 작업</span>
@@ -1365,7 +1366,7 @@ then verify the page again and attach the screenshot result.</code></pre>
                     </div>
                 </div>
                 <div class="callout">
-                    <strong data-i18n="s9_auto_title">자동 코드 리뷰</strong>
+                    <strong data-i18n="s9_auto_title">Legacy Cloud · 자동 코드 리뷰</strong>
                     <p data-i18n="s9_auto_desc">Codex Web에서 GitHub 연결 후 리뷰 대상 저장소를 선택하고 "Automatic reviews"를 활성화하면 새
                         PR마다 자동 리뷰됩니다. AGENTS.md 규칙 기반 커스터마이징 가능.</p>
                 </div>
@@ -1645,10 +1646,8 @@ AGENTS.override.md  → 최우선
                 <h2><span class="section-num">13</span> <span data-i18n="s13_title">config.toml 설정</span></h2>
                 <pre data-i18n-html="code_s13_config"><code><span class="c">#:schema https://developers.openai.com/codex/config-schema.json</span>
 <span class="c"># ~/.codex/config.toml — permission profile 방식</span>
-model = "gpt-6-sol"
+model = "gpt-6.1-sol"
 review_model = "gpt-5.6-terra"
-model_reasoning_effort = "medium"
-plan_mode_reasoning_effort = "medium"
 approval_policy = "on-request"
 approvals_reviewer = "user"
 default_permissions = "project_safe"
@@ -1836,6 +1835,10 @@ codex resume &lt;ID&gt;       <span class="c"># 특정 세션</span>
             <!-- Section 16 -->
             <section class="section" id="s16">
                 <h2><span class="section-num">16</span> <span data-i18n="s16_title">로컬 Scheduled task & Git 자동화</span></h2>
+<div class="callout" id="dots29" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><h3 data-i18n="dots29_t">Dots · 지속 업무를 맡기기</h3><p data-i18n="dots29_d">Dots는 Astra 기반의 상시 클라우드 에이전트로 점진 배포 중입니다. Pro 100·200·500은 18세 초과이며 EEA·영국·스위스 밖인 사용자, Business Premium·Enterprise는 전 세계 배포 대상입니다. Enterprise는 관리자 활성화가 필요합니다. 데스크톱 앱·브라우저에서 먼저 생성하고 지원 업데이트가 있는 모바일 앱에서 이어가세요. 모바일 웹은 지원하지 않습니다.</p><p data-i18n="dots29_steps">맡길 책임·자료·자율 실행 범위·알림 조건을 정하고 첫 결과를 검토하세요. 편집 예시: “이 프로젝트의 변경과 미결정을 추적하고, 결정이 필요할 때 알려주세요. 답장은 초안으로 준비해 주세요.” dot 대화와 위임한 Work·Codex 작업의 사용량은 구분됩니다. 로컬 도구를 쓰려면 연결한 컴퓨터와 앱이 켜져 있어야 합니다.</p><p class="command-refs"><a href="https://learn.chatgpt.com/docs/dots#access" target="_blank" rel="noopener noreferrer">Dots</a></p></div>
+
+<div class="callout" id="devday29" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><h3 data-i18n="devday29_t">팀 자동화·플러그인 확장 확인</h3><p data-i18n="devday29_d">Team Tasks는 팀 서비스 계정과 승인된 앱 연결로 클라우드에서 실행됩니다. 개인 로컬 예약 작업과 분리하고 관리자 설정부터 확인하세요. Plugin Extensions는 사이드바 앱·대화 패널·파일 뷰어·폼을 추가합니다. composer mention은 데스크톱 전용이며 Free·Go 웹 확장은 추후 예정입니다. MCP Events는 MCP 2.0의 webhook 방식을 사용하고 polling·streaming은 지원하지 않습니다.</p><p class="command-refs"><a href="https://learn.chatgpt.com/docs/enterprise/teams" target="_blank" rel="noopener noreferrer">Team Tasks</a> · <a href="https://learn.chatgpt.com/docs/whats-new/september-28-october-2-2026" target="_blank" rel="noopener noreferrer">DevDay guide</a></p></div>
+
                 <p data-i18n="s16_intro">반복 작업은 GitHub 연동이 없어도 실행할 수 있습니다. ChatGPT 데스크톱 앱의 Scheduled에서 로컬 프로젝트와 실행 환경을 고르면, 앱이 켜져 있고 프로젝트가 디스크에 있는 동안 현재 체크아웃 또는 격리된 worktree에서 작업합니다.</p>
                 <div class="table-wrap">
                     <table>
@@ -2259,7 +2262,7 @@ Research rules:
                 <h2><span class="section-num">18</span> <span data-i18n="s18_title">고급 활용 기법</span></h2>
                 <p data-i18n="s18_intro">최신 best practices와 customization 문서를 같이 보면 장기적으로 잘 쓰는 사용자는 반복 작업을 skill로 만들고, 팀에 공유할 때는 plugin으로 묶고, 외부 시스템 연결은 MCP로 붙이고, 장기 작업은 bounded delegation으로 나눕니다.</p>
                 <pre data-i18n-html="code_s18_adv"><code><span class="c"># 모델 선택</span>
-/model gpt-6-sol     <span class="c"># flagship / 복잡한 작업</span>
+/model gpt-6.1-sol     <span class="c"># flagship / 복잡한 작업</span>
 /model gpt-6-luna    <span class="c"># 빠른 반복 작업</span>
 
 <span class="c"># 플러그인 디렉터리 (CLI)</span>
@@ -2344,12 +2347,13 @@ codex --search "optimize with Next.js 15"
 <article id="luna-automation" class="field-tip-card" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><span class="field-tip-person">VB Srivastav · 2026-09-23 KST</span><h3 data-i18n="luna_automation_t">반복 자동화에 Luna Max를 비교해 보기</h3><p data-i18n="luna_automation_d">VB는 GPT-6 Luna Max를 여러 자동화와 코드·디자인 아이디어 탐색의 기본값으로 사용한다고 공유했습니다. 내 계정에서 Luna와 Max를 선택할 수 있는지 확인한 뒤, 같은 입력·완료 기준으로 기존 모델과 비교해 보세요. 편집 예시: “이 반복 작업을 실행하고 결과·실패 사례·사용량을 기록해 주세요.” 개인 사용 경험이며 모든 자동화의 품질이나 비용 절감을 보장하지 않습니다.</p><p class="command-refs"><a href="https://x.com/reach_vb/status/2102771245783925069" target="_blank" rel="noopener noreferrer">VB</a> <a href="https://learn.chatgpt.com/docs/models" target="_blank" rel="noopener noreferrer">Models</a></p></article>
 <article id="steering-worklog" class="field-tip-card" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><span class="field-tip-person">Eric Provencher · 2026-09-24 KST</span><h3 data-i18n="worklog_t">방향을 자주 바꿀 때는 짧은 작업 로그</h3><p data-i18n="worklog_d">Eric은 작업 중 방향을 자주 수정한다면 목표와 변경 사항을 짧은 로그에 남기고, 마지막 요청만 보지 말고 누적된 목표를 참고하도록 AGENTS.md에 적는 방식을 제안합니다. 편집 예시: “목표·제약·합의된 변경·다음 단계를 짧게 기록하고, 새 지시를 반영할 때 기존 완료 기준도 함께 확인해 주세요.” 개인 사용 팁이며 최신 명시적 변경을 무시하라는 뜻은 아닙니다.</p><p class="command-refs"><a href="https://x.com/pvncher/status/2102783470942683228" target="_blank" rel="noopener noreferrer">Eric</a> <a href="https://learn.chatgpt.com/docs/agent-configuration/agents-md" target="_blank" rel="noopener noreferrer">AGENTS.md</a></p></article>
 <article id="handoff-context" class="field-tip-card" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><span class="field-tip-person">Sid Rampally · 2026-09-23</span><h3 data-i18n="handoff_context_t">“그 결과”를 전달할 때 맥락도 함께</h3><p data-i18n="handoff_context_d">Sid Rampally는 LED 음성 비서가 “그걸 화면에 보여 줘”를 이해하지 못하자, 다음 모델에 최근 대화와 앞선 결과를 함께 전달해 해결했습니다. 내 앱에서도 앞선 질문 → 결과 → 대명사로 이어지는 요청을 시험하고, 전달되는 맥락과 결과를 확인하세요. GPT-Live-1·Responses API·Raspberry Pi를 사용한 개발 사례이며 Codex의 기본 기능이나 구독 포함 API 사용을 뜻하지 않습니다.</p><p class="command-refs"><a href="https://developers.openai.com/blog/bringing-my-led-display-to-life" target="_blank" rel="noopener noreferrer">OpenAI Developers</a></p></article>
+<article id="alex29" class="field-tip-card" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><span class="field-tip-person">Alexander Embiricos · 2026-09-29</span><h3 data-i18n="alex29_t">위임할 책임과 직접 진행할 작업 구분</h3><p data-i18n="alex29_d">Alexander는 제품 업무에서 지속적인 위임은 dots, 직접 진행할 작업은 Codex로 나눈다고 설명했습니다. 내 업무 하나를 골라 dot에는 목표·자료·알림 조건을 주고, 직접 검토하며 구현할 일은 Codex에서 진행해 보세요. 그의 개인 사용 방식이며 모든 업무에 맞는 규칙은 아닙니다. Dots의 플랜·지역·권한 조건과 로컬 연결 필요 여부를 먼저 확인하세요.</p><p class="command-refs"><a href="https://x.com/embirico/status/2105100531983356269" target="_blank" rel="noopener noreferrer">Alexander · X</a> · <a href="https://learn.chatgpt.com/docs/dots#access" target="_blank" rel="noopener noreferrer">Dots</a></p></article>
 <article id="voice-work-rollout" class="field-tip-card" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><span class="field-tip-person">OpenAI · Tibo · 2026-09-24 KST</span><h3 data-i18n="voice_rollout_t">Voice · 웹·모바일 Work로 확장 중</h3><p data-i18n="voice_rollout_d">9월 24일(KST) OpenAI는 Voice의 이메일·캘린더·Slack 등 플러그인 사용, GPT-6 Astra·Sol·Luna, 웹·모바일 ChatGPT Work 지원을 발표했습니다. 최신 앱으로 업데이트하고 내 계정의 Work에서 음성·모델·연결된 플러그인을 확인하세요. 전 세계 배포 중이며 플랜·워크스페이스별 접근을 별도로 확인해야 합니다. Tibo는 음성으로 업무·이메일·일정을 조율한다고 공유했습니다. 기존 연결 권한과 작업 승인 조건을 유지하세요.</p><p class="command-refs"><a href="https://x.com/OpenAI/status/2102808325742322002" target="_blank" rel="noopener noreferrer">OpenAI</a> <a href="https://x.com/thsottiaux/status/2102814202117411196" target="_blank" rel="noopener noreferrer">Tibo</a> <a href="https://learn.chatgpt.com/docs/features/voice" target="_blank" rel="noopener noreferrer">Voice</a></p></article>
 <article id="session-evals" class="field-tip-card" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><span class="field-tip-person">Eric Provencher · 2026-09-22 KST</span><h3 data-i18n="session_eval_t">작업 기록에서 스킬 개선점 찾기</h3><p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="session_eval_d">Eric은 긴 작업 뒤 세션 기록에서 프롬프트가 만든 혼동·불필요한 작업을 찾아 개선하고, 작은 평가 사례를 구성하라고 제안합니다. 편집 예시: “이 기록에서 지시 때문에 생긴 혼동과 추가 작업을 근거와 함께 찾고, 스킬 수정안과 재현 가능한 작은 평가 사례를 제안해 주세요.” 개인 작업 방식이며 모든 작업의 품질 향상을 보장하지 않습니다.</p><p class="command-refs"><a href="https://x.com/pvncher/status/2102080325450956865" target="_blank" rel="noopener noreferrer">Eric</a> <a href="https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra" target="_blank" rel="noopener noreferrer">OpenAI Developers</a></p></article>
 <article id="computer-retry" class="field-tip-card" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><span class="field-tip-person">VB Srivastav · 2026-09-21 KST</span><h3 data-i18n="computer_retry_t">Computer Use가 막히면 다른 접근 요청</h3><p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="computer_retry_d">VB는 Computer Use가 막힐 때 다른 접근을 요청하는 방식을 공유했습니다. 편집 예시: “현재 창과 실패한 단계를 다시 확인하고, 같은 목표를 다른 접근으로 진행해 주세요. 완료 후 실제 화면에서 결과를 확인해 주세요.” 개인 경험이며 성공률 보장은 아닙니다. 지원되는 macOS·Windows 환경에서 사용하고, 기존 앱 접근 권한과 승인 조건을 유지하세요.</p><p class="command-refs"><a href="https://x.com/reach_vb/status/2101799938547962072" target="_blank" rel="noopener noreferrer">VB</a> <a href="https://learn.chatgpt.com/docs/computer-use" target="_blank" rel="noopener noreferrer">Computer Use</a></p></article>
 <article id="plugin-accounts" class="field-tip-card" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><span class="field-tip-person">VB Srivastav · 2026-09-19 KST</span><h3 data-i18n="multi_account_t">플러그인 계정은 작업 요청에 명시</h3><p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="multi_account_d">VB는 ChatGPT 플러그인에 여러 계정을 연결하는 기능을 소개했습니다. 플러그인 설정에서 추가 계정을 연결한 뒤 사용할 계정을 요청에 적으세요. 편집 예시: “회사 Gmail 계정의 오늘 받은 메일만 요약하고, 사용한 계정을 결과에 표시해 주세요.” 공식 문서상 모델은 요청에 따라 연결된 계정을 선택하며, 각 호출은 해당 계정의 인증·권한으로 실행됩니다. 플러그인·계정의 실제 연결 옵션을 확인하세요. 이는 ChatGPT 로그인 계정 전환 기능을 뜻하지 않습니다.</p><p class="command-refs"><a href="https://x.com/reach_vb/status/2100989529465188597" target="_blank" rel="noopener noreferrer">VB</a> <a href="https://developers.openai.com/plugins/build/auth#support-multiple-accounts" target="_blank" rel="noopener noreferrer">OpenAI Docs</a></p></article>
 <article id="appshot-scope" class="field-tip-card" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><span class="field-tip-person">VB Srivastav · 2026-09-18 KST</span><h3 data-i18n="appshot_scope_t">Appshot은 맨 앞 창과 제공되는 텍스트를 함께 전달</h3><p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="appshot_scope_d">VB는 Windows Appshots를 소개하며 이미지 외에 앱이 제공하는 텍스트도 맥락으로 쓴다고 설명했습니다. 공유할 창을 맨 앞으로 가져오고 Windows는 양쪽 Alt, macOS는 양쪽 Command를 누른 뒤 필요한 작업을 적으세요. 공식 문서상 맨 앞 창만 캡처하지만 앱이 노출한 스크롤 밖 텍스트도 포함될 수 있습니다. Google Docs·Gmail·Sheets·Slides는 화면 이미지만 전달될 수 있으므로 전체 내용이 필요하면 연결된 plugin이나 원본 파일로 확인하세요.</p><p class="command-refs"><a href="https://x.com/reach_vb/status/2100729426077999245" target="_blank" rel="noopener noreferrer">VB</a> <a href="https://learn.chatgpt.com/docs/appshots" target="_blank" rel="noopener noreferrer">Appshots</a></p></article>
-<article id="speed-prompt" class="field-tip-card" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><span class="field-tip-person">VB Srivastav · 2026-09-16 KST</span><h3 data-i18n="speed_prompt_t">빠르게 진행해 달라는 요청과 Fast 설정 구분</h3><p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="speed_prompt_d">VB는 Astra에 말로 빠른 진행을 요청한 경험을 공유하며 /fast를 뜻하는 것이 아니라고 설명했습니다. 편집 예시: “빠르게 진행해 주세요. 요청한 범위와 완료 기준을 지키고, 관련 검증이 통과하면 결과를 알려주세요.” 같은 작업에서 결과·소요 시간·사용량을 비교하세요. 개인 경험이며 속도·정확도·비용 절감 보장은 아닙니다. CLI의 /fast status로 실제 설정을 확인하세요. Astra Fast는 제공되는 환경에서 Standard 대비 2.5배의 ChatGPT 크레딧을 소비하며, API 요금은 별도입니다.</p><p class="command-refs"><a href="https://x.com/reach_vb/status/2100076208239067377" target="_blank" rel="noopener noreferrer">VB</a> <a href="https://x.com/reach_vb/status/2100127257075265687" target="_blank" rel="noopener noreferrer">VB · /fast</a> <a href="https://learn.chatgpt.com/docs/agent-configuration/speed" target="_blank" rel="noopener noreferrer">Speed</a></p></article>
+<article id="speed-prompt" class="field-tip-card" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><span class="field-tip-person">VB Srivastav · 2026-09-16 KST</span><h3 data-i18n="speed_prompt_t">빠르게 진행해 달라는 요청과 Fast 설정 구분</h3><p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="speed_prompt_d">VB는 Astra에 말로 빠른 진행을 요청한 경험을 공유하며 /fast를 뜻하는 것이 아니라고 설명했습니다. 편집 예시: “빠르게 진행해 주세요. 요청한 범위와 완료 기준을 지키고, 관련 검증이 통과하면 결과를 알려주세요.” 같은 작업에서 결과·소요 시간·사용량을 비교하세요. 개인 경험이며 속도·정확도·비용 절감 보장은 아닙니다. CLI의 /fast status로 실제 설정을 확인하세요. 현재 Fast는 구독 포함 한도 2.5배·구매 크레딧 2배를 사용하며 API 요금은 별도입니다.</p><p class="command-refs"><a href="https://x.com/reach_vb/status/2100076208239067377" target="_blank" rel="noopener noreferrer">VB</a> <a href="https://x.com/reach_vb/status/2100127257075265687" target="_blank" rel="noopener noreferrer">VB · /fast</a> <a href="https://learn.chatgpt.com/docs/agent-configuration/speed" target="_blank" rel="noopener noreferrer">Speed</a></p></article>
 <article id="one-reviewer" class="field-tip-card" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><span class="field-tip-person">VB Srivastav · Eric Provencher · 2026-09-16 KST</span><h3 data-i18n="one_reviewer_t">직접 구성한 병렬 작업은 검토 한 명부터</h3><p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="one_reviewer_d">VB는 직접 만드는 프롬프트·워크플로에서 메인 에이전트가 구현하는 동안 서브에이전트 한 명에게 검토를 맡긴다고 설명했습니다. Eric은 에이전트끼리 재검토하면서 사용량이 늘 수 있다고 지적했습니다. 편집 예시: “검토 에이전트 한 명에게 범위가 정해진 변경을 읽고 근거가 있는 문제만 보고하게 하세요. 메인은 독립적인 작업을 계속하세요.” 개인 경험이며 보편적인 인원 제한이나 품질·절감 보장이 아닙니다. VB는 Ultra에는 기본 설정을 권했습니다.</p><p class="command-refs"><a href="https://x.com/reach_vb/status/2100000637291205055" target="_blank" rel="noopener noreferrer">VB</a> <a href="https://x.com/pvncher/status/2099995741036933505" target="_blank" rel="noopener noreferrer">Eric</a> <a href="https://x.com/reach_vb/status/2100010914757947557" target="_blank" rel="noopener noreferrer">VB · Ultra</a></p></article>
 <a id="heartbeat-review" class="field-tip-card" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere" href="https://x.com/reach_vb/status/2099630906772222068" target="_blank" rel="noopener noreferrer"><span class="field-tip-person">VB Srivastav · 2026-09-15 KST</span><h3 data-i18n="heartbeat_t">긴 작업은 간격을 정해 진행 중 결과 검토</h3><p data-i18n="heartbeat_d">VB는 Astra가 Sol·Luna의 별도 작업을 조율하고 15분 간격의 heartbeat로 중간 결과를 검토하는 방식을 제안했습니다. 편집 예시: “15분마다 해당 작업의 결과와 완료 기준을 비교하고 필요할 때 방향을 수정하세요. 변화가 없으면 알리지 말고 완료되면 점검을 종료하세요.” 작업 간 메시지와 대화 내 예약 작업을 지원하는 환경에서 사용하세요. 로컬 작업은 컴퓨터와 앱이 켜져 있어야 하며, 주기적 검토도 사용량을 소비합니다.</p></a>
 <a class="field-tip-card" style="word-break: keep-all; overflow-wrap: anywhere" href="https://x.com/_lopopolo/status/2099339717976478086" target="_blank" rel="noopener noreferrer"><span class="field-tip-person">Ryan Lopopolo · 2026-09-14 KST</span><h3 data-i18n="simplify_t">프레임워크와 충돌하는 복잡도 찾기</h3><p data-i18n="simplify_d">Ryan은 프레임워크 관례와 충돌하는 구현, 불필요한 재구현, 폐기 예정 동작과 복잡도를 찾아 달라는 프롬프트를 공유했습니다. 편집 예시: “현재 공급망 보안 조건을 지키면서 단순화 후보와 근거를 제시하세요. 테스트는 보호하는 동작과 중복 여부를 확인한 뒤 변경안을 제안하세요.” 개인 검토 팁이며, 복잡해 보인다는 이유만으로 테스트를 삭제하지 마세요.</p></a>
@@ -2566,10 +2570,11 @@ codex --search "optimize with Next.js 15"
                     </div>
                     <p class="overview-fact-date">
                         <span data-i18n="overview_fact_date_prefix">업데이트 기준일</span>
-                        <span class="live-date" data-date-format="long">2026년 9월 28일</span>
+                        <span class="live-date" data-date-format="long">2026년 9월 29일</span>
                     </p>
                 </div>
                 <ol class="changelog-list" aria-label="Recent update summary">
+<li><strong data-i18n="changelog_sep29_t">9월 29일 · 6.1 Sol·요금·Cloud·Dots</strong><span data-i18n="changelog_sep29_d">6.1 Sol 접근·기본값, CLI 0.159.2, Fast·Ultrafast 사용량과 Pro 200 재개, 새 Cloud 환경과 Dots·팀 자동화의 제공 범위를 한영으로 갱신했습니다.</span></li>
 <li><strong data-i18n="changelog_sep28_t">9월 28일 · CLI 0.158 실무 절차</strong><span data-i18n="changelog_sep28_d">Markdown 복사, 투명 배경 이미지 요청, 터미널 입력 승인과 MCP·실행 서버 인증 안내를 갱신했습니다.</span></li>
 <li><strong data-i18n="changelog_sep27_t">9월 27일 · 이미지 재평가와 CLI·iOS 갱신</strong><span data-i18n="changelog_sep27_d">Sol·Luna 이미지 이해 수정 발표와 재평가 절차, CLI 0.157.1 설치 및 iOS 1.2026.258 작업 맥락 안내를 반영했습니다.</span></li>
 <li><strong data-i18n="changelog_sep26_t">9월 26일 · CLI 세션 연결과 실무 평가</strong><span data-i18n="changelog_sep26_d">CLI 0.157.0의 기본 화면·세션 연결 절차, VB의 Luna Max 자동화 경험과 Eric의 실제 작업 평가 팁을 반영했습니다.</span></li>
@@ -2650,13 +2655,13 @@ codex --search "optimize with Next.js 15"
                     href="https://github.com/swhan0329/codex-101" target="_blank">PR을 환영합니다</a>.</p>
             <p class="footer-meta">
                 <span data-i18n="footer_date_prefix">최종 업데이트</span>:
-                        <span class="live-date" data-date-format="long">2026년 9월 28일</span>
+                        <span class="live-date" data-date-format="long">2026년 9월 29일</span>
             </p>
             <p class="footer-meta">Made by <a href="https://github.com/swhan0329" target="_blank">@swhan0329</a></p>
         </div>
     </footer>
 
-    <script src="i18n.js?v=20260928-cli158"></script>
+    <script src="i18n.js?v=20260929-sol61-cloud"></script>
     <script src="app.js?v=20260919-mobile-reveal"></script>
 </body>
 

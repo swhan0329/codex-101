@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 9월 28일</strong><br/>
+  <strong>최종 업데이트: 2026년 9월 29일</strong><br/>
   페이지의 실제 수정일을 표시하며, 모델 안내에는 공식 출처와 확인 범위를 함께 제공합니다.
 </p>
 
@@ -20,6 +20,18 @@
 </p>
 
 ---
+
+## 9월 29일 · GPT-6.1 Sol·사용량·클라우드 절차
+
+- 로컬 기본값을 바꾸기 전에 선택기에서 `gpt-6.1-sol` 접근을 확인하세요. 출시 배포는 적격 유료 플랜 대상이며 Enterprise·Edu는 관리자 활성화가 필요하고 Free·Go는 제외됩니다. 추론은 클라이언트 기본값에서 시작하며 문서의 GPT-6 Sol Power 화면은 예시입니다.
+- CLI `0.159.2`로 업데이트하고 `codex --version`·`/model`, 선택적 방향 수정·Markdown 복사·후속 제안 제거를 확인하세요.
+- 6.1 Sol Standard 100만 토큰당 크레딧은 입력 50 / 캐시 입력 2.5 / 출력 250입니다. Fast는 구독 포함 한도 2.5배·구매 크레딧 2배, Astra Ultrafast는 적격 플랜에서 8배·6배입니다. API 과금은 별도입니다.
+- Pro 200 신규 가입이 변경된 사용량 조건으로 재개됐고 Pro 500에는 Astra Ultrafast가 포함됩니다. 계정별 자격과 10월 29일 이전 사용량 유지 기한을 확인하세요.
+- 새 Codex Cloud 환경을 준비·시험·게시한 뒤 격리된 작업을 시작하세요. Legacy Code Review와 연결된 컴퓨터의 실행 조건을 구분했습니다. Dots 배포 조건과 Team Tasks·플러그인 확장 범위도 추가했습니다.
+
+- Alexander의 [지속 위임과 직접 작업 구분](https://x.com/embirico/status/2105100531983356269)을 개인 경험으로 소개하고 Dots 제공 조건을 함께 표시했습니다.
+
+[Models](https://learn.chatgpt.com/docs/models) · [Changelog](https://learn.chatgpt.com/docs/changelog) · [Pricing](https://learn.chatgpt.com/docs/pricing) · [Pro tiers](https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers) · [Cloud](https://learn.chatgpt.com/docs/cloud) · [Dots](https://learn.chatgpt.com/docs/dots)
 
 ## 9월 28일 · CLI 0.158 실무 절차
 
