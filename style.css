@@ -5676,7 +5676,7 @@ body[data-page="home"] .changelog-section {
     scroll-margin-top: 96px;
 }
 
-body[data-page="home"] .changelog-section > :where(.changelog-head, .changelog-list, .changelog-sources) {
+body[data-page="home"] .changelog-section > :where(.changelog-head, .changelog-list, .changelog-sources, .changelog-history) {
     max-width: 980px;
     margin-left: auto;
     margin-right: auto;
@@ -7162,3 +7162,28 @@ body[data-page="home"] .update-history { max-width: 980px; margin: 20px auto 0; 
 .linux-install-content pre { white-space: pre-wrap; overflow-wrap: anywhere; }
 .app-signin-step { margin-top: 16px; }
 .app-signin-step .install-path-note { margin-top: 10px; }
+
+/* Keep the expanded archive aligned with the current changelog. */
+body[data-page="home"] .changelog-history { margin-top: 24px; overflow: hidden; }
+.changelog-history summary { padding: 18px 20px; line-height: 1.5; }
+.changelog-history summary:hover { background: var(--bg-hover); }
+.changelog-history summary:focus-visible { outline: 2px solid var(--accent-light); outline-offset: -4px; }
+.changelog-history[open] summary { border-bottom: 1px solid var(--line-soft); }
+.changelog-history .changelog-list { padding: 0 20px 8px; }
+.changelog-history .changelog-list li:last-child { border-bottom: 0; }
+body[data-page="home"] .changelog-section .changelog-list :is(strong, span) {
+    min-width: 0;
+    font-size: .875rem;
+    line-height: 1.65;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+}
+@media (max-width: 900px) {
+    body[data-page="home"] .changelog-list li {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 8px;
+        padding: 16px 0;
+    }
+    .changelog-history summary { padding: 16px; }
+    .changelog-history .changelog-list { padding: 0 16px 4px; }
+}
