@@ -10,12 +10,22 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: September 30, 2026</strong><br/>
+  <strong>Last updated: October 1, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
 
 ---
+
+## October 1 · macOS security fix and Dots execution
+
+Check the macOS app build: OpenAI identifies 26.924.20706 as fixing CVE-2026-100754. Apply official updates and confirm the installed build. Added Eric’s Dots app coordination example with a small-workflow check, separate cloud browser logins, explicit local computer access, and plugin permissions.
+
+Individual Daybreak users must meet the paid-plan, Advanced Account Security, and FIDO2 hardware-key requirements by October 1; check Your eligibility. Custom providers must use compatible Responses API endpoints: Chat Completions-only endpoints are already unsupported.
+
+[Daybreak requirements](https://help.openai.com/en/articles/20001258-trusted-access-for-cyber) · [Models](https://learn.chatgpt.com/docs/models)
+
+[macOS release note](https://learn.chatgpt.com/docs/changelog#codex-2026-09-25-app) · [Eric](https://x.com/pvncher/status/2105682372524138541) · [Dots computers and apps](https://learn.chatgpt.com/docs/dots/computers-and-apps)
 
 ## September 30 · Compare subagent tradeoffs
 

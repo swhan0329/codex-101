@@ -1,6 +1,13 @@
 // i18n translation data
 const translations = {
     ko: {
+        macfix_t: "macOS 보안 수정 · 앱 버전 확인",
+        macfix_d: "OpenAI의 9월 25일 공지는 macOS 앱 26.924.20706에서 CVE-2026-100754를 수정했다고 명시합니다. 앱의 버전 정보와 업데이트 제공 여부를 확인하고, 이전 빌드라면 공식 업데이트를 적용한 뒤 다시 버전을 확인하세요. 조직에서 업데이트를 관리한다면 관리자 배포 정책을 따르세요.",
+        dotapps_t: "Dots에 맡길 앱과 실행 위치 지정",
+        dotapps_d: "Eric은 dot으로 여러 앱의 작업을 병렬로 조율하는 사용 방식을 소개했습니다. 먼저 작은 업무 하나에서 사용할 앱·계정·실행 위치를 지정하고 결과를 확인하세요. dot의 클라우드 컴퓨터는 내 기기가 꺼져도 작동하지만 내 브라우저 로그인은 이어받지 않습니다. 로컬 컴퓨터 접근은 별도로 허용해야 하며, 연결한 컴퓨터와 앱이 켜져 있어야 합니다. 플러그인 권한과 Dots 제공 조건을 확인하세요. 개인 사용 사례이며 모든 앱의 작동을 보장하지 않습니다.",
+        changelog_oct1_t: "10월 1일 · macOS 보안 수정과 Dots 실행 위치",
+        changelog_oct1_d: "macOS 수정 빌드·개인 Daybreak 키 조건·Responses API 호환성을 정정하고 Eric의 Dots 앱 조율 및 클라우드·로컬 로그인 범위를 추가했습니다.",
+
         parallel30_t: "서브에이전트는 이득을 비교한 뒤 사용",
         parallel30_d: "Eric은 서브에이전트가 토큰을 더 쓰면서 시간 단축은 작을 수 있고, Luna로 위임하면 적합한 작업에서는 효과적이지만 강한 조율 모델이 있어도 전체 품질이 낮아질 수 있다고 설명했습니다. 독립적으로 나눌 수 있는 작업 하나에서 단일 실행과 위임 실행의 완료 품질·총사용량·소요 시간을 비교하세요. 개인 경험이며 보편적인 성능 수치나 비용 절감 보장이 아닙니다.",
         parallel30_prompt: "편집 예시: “같은 입력과 완료 기준으로 먼저 단일 에이전트 결과를 기록해 주세요. 비교 실행에서는 독립적인 자료 탐색만 Luna에 맡기고, 메인이 결과를 검증하세요. 두 실행의 품질·총사용량·소요 시간을 비교하고 확인할 수 없는 수치는 표시해 주세요.” 모델 접근과 실행 환경별 위임 조건을 먼저 확인하세요.",
@@ -511,7 +518,7 @@ const translations = {
         s3_guide_fast: "Fast는 사용량이 늘어나는 속도 옵션입니다. 모델별 현재 요율을 확인하세요.",
         s3_guide_api: "API-key Codex는 API token pricing 적용",
         s3_guide_retire: "GPT-5.4·GPT-5.4 mini는 ChatGPT 로그인 Codex에서 2026년 8월 31일 은퇴",
-        s3_guide_daybreak: "승인된 defender 계정의 defensive cybersecurity 작업용 선택지입니다. 일반 코딩 기본값으로 사용하지 않습니다.",
+        s3_guide_daybreak: "승인된 방어 보안 작업용입니다. 개인 Daybreak 접근에는 적격 유료 플랜·Advanced Account Security·호환 FIDO2 하드웨어 키가 필요하며 기존 개인 사용자의 충족 기한은 2026년 10월 1일입니다. 소프트웨어·동기화 passkey만으로는 충족되지 않습니다. chatgpt.com/cyber의 Your eligibility에서 확인하세요. 조직 접근과 별도 승인된 Red는 각자의 온보딩 조건을 따릅니다.",
         s3_guide_scope_title: "Astra가 선택기에 없다면",
         s3_guide_scope: "앱을 업데이트하고 계정·워크스페이스의 모델 제공 범위를 확인하세요. CLI 0.153.4는 Astra 선택기 표시를 수정했습니다. 명시적으로 저장한 model 설정도 확인하세요.",
         computer_use_kicker: "Computer use",
@@ -530,7 +537,7 @@ const translations = {
         computer_flow_3_t: "결과 재확인", computer_flow_3_d: "screenshot · test · diff",
         computer_flow_4_t: "필요할 때 승인", computer_flow_4_d: "경계 밖 행동만 확인",
         m4_f: "ChatGPT 로그인으로 쓰는 Codex에서는 deprecated로 표시된 이전 범용 모델입니다. API에서는 별도 제공 여부를 API models page에서 확인하세요.", m4_u: "기존 설정 정리/마이그레이션",
-        s3_other_note: "GPT-5.6 Sol·Terra·Luna는 새 모델 배포 중에도 제공되는 이전 선택지입니다. GPT-5.4·mini의 ChatGPT 로그인 Codex 은퇴일은 2026년 8월 31일입니다. 현재 접근 가능한 GPT-6 Sol·Luna로 전환하세요. GPT-5.5는 10월 14일 종료 예정입니다. Plus·Pro·Business·Enterprise·Edu는 Sol, Free·Go는 데스크톱 Luna를 확인하세요. API 키 사용은 별도 제공 범위를 따릅니다. Chat Completions API 지원은 향후 Codex에서 제거될 예정입니다.",
+        s3_other_note: "GPT-5.6 Sol·Terra·Luna는 새 모델 배포 중에도 제공되는 이전 선택지입니다. GPT-5.4·mini의 ChatGPT 로그인 Codex 은퇴일은 2026년 8월 31일입니다. 현재 접근 가능한 GPT-6 Sol·Luna로 전환하세요. GPT-5.5는 10월 14일 종료 예정입니다. Plus·Pro·Business·Enterprise·Edu는 Sol, Free·Go는 데스크톱 Luna를 확인하세요. API 키 사용은 별도 제공 범위를 따릅니다. 현재 Codex는 wire_api = 'chat' 또는 Chat Completions 전용 endpoint를 지원하지 않습니다. custom provider·gateway에는 호환되는 Responses API endpoint를 사용하세요.",
         model_show: "상세 보기", model_hide: "접기",
         feat_cap: "성능", feat_spd: "속도",
         feat_cli: "Codex CLI & SDK", feat_app: "Codex 앱 & IDE 확장",
@@ -1092,6 +1099,13 @@ const translations = {
     },
 
     en: {
+        macfix_t: "macOS security fix · Check the app build",
+        macfix_d: "OpenAI’s September 25 notice identifies macOS app version 26.924.20706 as fixing CVE-2026-100754. Check the app’s version information and available updates. If you use an earlier build, apply the official update and check the version again. Follow your administrator’s rollout policy on managed devices.",
+        dotapps_t: "Specify apps and execution location for Dots",
+        dotapps_d: "Eric describes using a dot to coordinate work across several apps in parallel. Start with one small workflow, specify the apps, accounts, and execution location, then inspect the result. A dot’s cloud computer works while your devices are off, but does not inherit your browser logins. Local computer access requires a separate permission, and the connected computer and app must stay on. Check plugin permissions and Dots availability. This is a personal use case, not a guarantee that every app will work.",
+        changelog_oct1_t: "October 1 · macOS security fix and Dots execution",
+        changelog_oct1_d: "Updated macOS fixed-build checks, individual Daybreak key requirements, and Responses API compatibility; added Eric’s Dots coordination tip and cloud/local sign-in boundaries.",
+
         parallel30_t: "Compare the benefit before adding subagents",
         parallel30_d: "Eric noted that subagents can spend more tokens for little time saved, and that delegating to Luna can work for suitable tasks but may reduce overall quality even with a strong orchestrator. On one task with independent parts, compare completion quality, total usage, and elapsed time for a single-agent run and a delegated run. This is personal experience, not a universal performance figure or a savings guarantee.",
         parallel30_prompt: "Edited example: “Record a single-agent result using the same inputs and completion criteria first. In a comparison run, delegate only independent research to Luna and have the main agent verify its findings. Compare quality, total usage, and elapsed time across both runs, and flag unavailable measurements.” Check model access and the delegation rules for your client first.",
@@ -1599,7 +1613,7 @@ const translations = {
         s3_guide_fast: "Fast trades increased usage for speed. Check the current rate for your model.",
         s3_guide_api: "API-key Codex follows API token pricing",
         s3_guide_retire: "GPT-5.4 and GPT-5.4 mini retired from ChatGPT-authenticated Codex on August 31, 2026",
-        s3_guide_daybreak: "A defensive cybersecurity option for approved defender accounts, not the default for ordinary coding.",
+        s3_guide_daybreak: "For approved defensive security work. Individual Daybreak access requires an eligible paid plan, Advanced Account Security, and a compatible FIDO2 hardware key; existing individual users must meet these requirements by October 1, 2026. A software or synced passkey alone does not qualify. Check Your eligibility at chatgpt.com/cyber. Organization access and separately approved Red access follow their own onboarding requirements.",
         s3_guide_scope_title: "If Astra is missing from the picker",
         s3_guide_scope: "Update the app and check model access for your account and workspace. CLI 0.153.4 fixes Astra visibility in the picker. Also check any explicitly saved model setting.",
         computer_use_kicker: "Computer use",
@@ -1618,7 +1632,7 @@ const translations = {
         computer_flow_3_t: "Check again", computer_flow_3_d: "screenshot · test · diff",
         computer_flow_4_t: "Approve when needed", computer_flow_4_d: "Confirm boundary-crossing work",
         m4_f: "Deprecated for Codex when you sign in with ChatGPT. Check the API models page separately if an API-key workflow still depends on it.", m4_u: "Legacy config cleanup",
-        s3_other_note: "GPT-5.6 Sol, Terra, and Luna remain available as older choices during rollout. GPT-5.4 and mini retired from ChatGPT-authenticated Codex on August 31, 2026; migrate to available GPT-6 Sol and Luna. GPT-5.5 retires October 14. Plus, Pro, Business, Enterprise, and Edu should check Sol; Free and Go should check desktop Luna. API-key availability is separate. Chat Completions API support will be removed from Codex in a future release.",
+        s3_other_note: "GPT-5.6 Sol, Terra, and Luna remain available as older choices during rollout. GPT-5.4 and mini retired from ChatGPT-authenticated Codex on August 31, 2026; migrate to available GPT-6 Sol and Luna. GPT-5.5 retires October 14. Plus, Pro, Business, Enterprise, and Edu should check Sol; Free and Go should check desktop Luna. API-key availability is separate. Current Codex releases do not support wire_api = 'chat' or Chat Completions-only endpoints. Use a compatible Responses API endpoint for custom providers and gateways.",
         model_show: "Show details", model_hide: "Hide details",
         feat_cap: "Capability", feat_spd: "Speed",
         feat_cli: "Codex CLI & SDK", feat_app: "Codex app & IDE extension",

@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 9월 30일</strong><br/>
+  <strong>최종 업데이트: 2026년 10월 1일</strong><br/>
   페이지의 실제 수정일을 표시하며, 모델 안내에는 공식 출처와 확인 범위를 함께 제공합니다.
 </p>
 
@@ -20,6 +20,16 @@
 </p>
 
 ---
+
+## 10월 1일 · macOS 보안 수정과 Dots 실행 위치
+
+macOS 앱 빌드를 확인하세요. OpenAI는 26.924.20706에서 CVE-2026-100754를 수정했다고 명시합니다. 공식 업데이트를 적용한 뒤 설치 버전을 확인하세요. Eric의 Dots 앱 조율 사례에 작은 업무부터 결과 확인, 별도 클라우드 로그인, 로컬 컴퓨터 접근과 플러그인 권한 조건을 추가했습니다.
+
+개인 Daybreak 사용자는 10월 1일까지 적격 유료 플랜·Advanced Account Security·FIDO2 하드웨어 키 조건을 충족해야 합니다. Your eligibility에서 확인하세요. custom provider에는 호환 Responses API endpoint가 필요하며 Chat Completions 전용 endpoint는 이미 미지원입니다.
+
+[Daybreak requirements](https://help.openai.com/en/articles/20001258-trusted-access-for-cyber) · [Models](https://learn.chatgpt.com/docs/models)
+
+[macOS release note](https://learn.chatgpt.com/docs/changelog#codex-2026-09-25-app) · [Eric](https://x.com/pvncher/status/2105682372524138541) · [Dots computers and apps](https://learn.chatgpt.com/docs/dots/computers-and-apps)
 
 ## 9월 30일 · 서브에이전트의 이득 비교
 
