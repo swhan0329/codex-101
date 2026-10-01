@@ -32,6 +32,8 @@ The desktop, Dots, and Scheduled chapters now reuse seven sanitized images from 
 
 The opening “What to check now” section shows only three actionable changes with checked dates and official sources: GPT-6.1 Sol access, the planned October 14 GPT-5.5 retirement, and the macOS security fix. Earlier milestones are collapsed; detailed guide edits remain in Changelog.
 
+Installation now includes a Linux preview card, distribution-specific packages and commands, and a shared app sign-in step for all three operating systems.
+
 ## September 30 · Compare subagent tradeoffs
 
 Eric Provencher notes that subagents can increase token use for little time saved, and that Luna delegation can reduce overall quality even with a strong orchestrator. Compare one bounded task with the same inputs and completion criteria: single-agent versus delegated execution, recording quality, total usage, and elapsed time. The guide includes an edited comparison prompt and preserves client-specific delegation and model-access limits. These are personal observations, not benchmark or savings guarantees.

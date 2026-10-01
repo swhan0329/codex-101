@@ -7153,3 +7153,12 @@ body[data-page="home"] .screenshot-evidence a:focus-visible {
 body[data-page="home"] .update-history { max-width: 980px; margin: 20px auto 0; }
 .update-history .table-wrap { margin: 0 18px 14px; }
 @media (min-width: 960px) { #current-updates { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+/* Linux package commands are available without expanding the installation overview. */
+.linux-install-details { margin-top: 16px; }
+.linux-install-content { padding: 0 18px 16px; }
+.linux-install-content > p { padding: 0; }
+.linux-install-content .two-col { margin: 12px 0; }
+.linux-install-content pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+.app-signin-step { margin-top: 16px; }
+.app-signin-step .install-path-note { margin-top: 10px; }

@@ -17,7 +17,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=20261001-current-highlights" />
+    <link rel="stylesheet" href="style.css?v=20261001-linux-install" />
 </head>
 
 <body data-page="home" data-updated="2026-10-01">
@@ -836,10 +836,10 @@
                 <div class="code-tabs">
                     <article class="setup-block">
                         <h3 data-i18n="s5_app_install">ChatGPT 데스크톱 앱 설치 (macOS/Windows/Linux preview)</h3>
+                        <p data-i18n="s5_install_choose">운영체제에 맞는 설치 경로 하나를 선택하세요.</p>
                         <div class="install-path-grid">
                             <article class="install-path-card">
                                 <div class="install-path-head">
-                                    <span class="install-step">01</span>
                                     <strong>macOS</strong>
                                 </div>
                                 <p data-i18n="s5_install_macos">공식 Quickstart의 Download ChatGPT 버튼에서 macOS 앱을 받습니다.</p>
@@ -847,20 +847,36 @@
                             </article>
                             <article class="install-path-card">
                                 <div class="install-path-head">
-                                    <span class="install-step">02</span>
                                     <strong>Windows</strong>
                                 </div>
                                 <p data-i18n="s5_install_windows">공식 다운로드 또는 Microsoft Store를 사용합니다.</p>
                                 <code>winget install Codex -s msstore</code>
                             </article>
-                            <article class="install-path-card">
-                                <div class="install-path-head">
-                                    <span class="install-step">03</span>
-                                    <strong data-i18n="s5_install_signin">로그인·프로젝트</strong>
-                                </div>
-                                <p data-i18n="s5_install_signin_desc">ChatGPT 계정으로 로그인한 뒤 프로젝트를 만들거나 폴더를 엽니다.</p>
-                                <span class="install-path-note" data-i18n="s5_install_api_note">API 키 로그인은 일부 workspace·cloud 기능이 제한될 수 있습니다.</span>
+                            <article class="install-path-card" id="linux-app-path">
+                                <div class="install-path-head"><strong>Linux preview</strong></div>
+                                <p data-i18n="s5_install_linux">배포판·CPU에 맞는 .deb, .rpm 또는 Arch 설치 스크립트를 공식 문서에서 선택합니다.</p>
+                                <a class="install-path-action" href="https://learn.chatgpt.com/docs/linux/linux-app" target="_blank" rel="noopener noreferrer" data-i18n="s5_linux_docs">Linux 앱 공식 문서</a>
                             </article>
+                        </div>
+                        <details class="linux-install-details" id="linux-app-install">
+                            <summary data-i18n="s5_linux_details">Linux preview · 배포판별 설치 방법</summary>
+                            <div class="linux-install-content">
+                                <p data-i18n="s5_linux_support">지원: Ubuntu 24.04/26.04, Debian 13, Fedora 43/44, 최신 Arch Linux · x64/ARM64. uname -m으로 CPU를 확인하세요.</p>
+                                <p data-i18n="s5_linux_commands">다운로드한 패키지가 있는 폴더에서 실행하는 x64 예시입니다.</p>
+                                <div class="two-col">
+                                    <div><h4>Ubuntu / Debian · .deb</h4><pre><code>sudo apt install ./chatgpt_amd64.deb</code></pre></div>
+                                    <div><h4>Fedora · .rpm</h4><pre><code>sudo dnf install ./chatgpt.x86_64.rpm</code></pre></div>
+                                </div>
+                                <p data-i18n="s5_linux_files">ARM64 파일명: chatgpt_arm64.deb 또는 chatgpt.aarch64.rpm.</p>
+                                <p data-i18n="s5_linux_arch">Arch는 공식 install-arch.sh를 사용합니다. 설치 시 전체 시스템 업그레이드 확인이 포함됩니다.</p>
+                                <p class="command-refs"><a href="https://learn.chatgpt.com/docs/linux/linux-app#install-on-arch-linux" target="_blank" rel="noopener noreferrer">Arch Linux · install-arch.sh</a></p>
+                                <p data-i18n="s5_linux_update">앱 업데이트는 배포판의 패키지 관리자를 사용합니다. Linux preview는 Computer Use를 아직 지원하지 않습니다.</p>
+                            </div>
+                        </details>
+                        <div class="callout app-signin-step">
+                            <h4 data-i18n="s5_install_signin">공통 · 로그인과 프로젝트</h4>
+                            <p data-i18n="s5_install_signin_desc">설치한 앱을 실행해 ChatGPT 계정으로 로그인한 뒤 Codex에서 프로젝트를 만들거나 폴더를 엽니다.</p>
+                            <p class="install-path-note" data-i18n="s5_install_api_note">API 키 로그인은 일부 workspace·cloud 기능이 제한될 수 있습니다.</p>
                         </div>
 
                         <div class="windows-runtime-panel">
@@ -942,7 +958,7 @@ export OPENAI_API_KEY="your-api-key-here"</code></pre>
                         </ol>
                     </article>
                 </div>
-                <p class="command-refs" data-i18n-html="s5_refs">출처: <a href="https://learn.chatgpt.com/docs/quickstart?setup=app" target="_blank">Quickstart</a> · <a href="https://learn.chatgpt.com/docs/codex/cli" target="_blank">Codex CLI</a> · <a href="https://learn.chatgpt.com/docs/windows/windows-app" target="_blank">Windows app</a> · <a href="https://learn.chatgpt.com/docs/codex/ide" target="_blank">IDE integrations</a> · <a href="https://learn.chatgpt.com/docs/auth" target="_blank">Authentication</a></p>
+                <p class="command-refs" data-i18n-html="s5_refs">출처: <a href="https://learn.chatgpt.com/docs/quickstart?setup=app" target="_blank">Quickstart</a> · <a href="https://learn.chatgpt.com/docs/codex/cli" target="_blank">Codex CLI</a> · <a href="https://learn.chatgpt.com/docs/windows/windows-app" target="_blank">Windows app</a> · <a href="https://learn.chatgpt.com/docs/linux/linux-app" target="_blank">Linux app preview</a> · <a href="https://learn.chatgpt.com/docs/codex/ide" target="_blank">IDE integrations</a> · <a href="https://learn.chatgpt.com/docs/auth" target="_blank">Authentication</a></p>
             </section>
 
             <!-- Section 5 -->
@@ -2597,6 +2613,7 @@ codex --search "optimize with Next.js 15"
                     </p>
                 </div>
                 <ol class="changelog-list" aria-label="Recent update summary">
+<li><strong data-i18n="changelog_oct1_linux_t">10월 1일 · Linux 앱 설치 경로 보완</strong><span data-i18n="changelog_oct1_linux_d">설치 장에 Linux 카드·배포판별 패키지와 명령을 추가하고 macOS·Windows·Linux의 공통 로그인 단계를 분리했습니다.</span></li>
 <li><strong data-i18n="changelog_oct1_t">10월 1일 · macOS 보안 수정과 Dots 실행 위치</strong><span data-i18n="changelog_oct1_d">macOS 수정 빌드·개인 Daybreak 키 조건·Responses API 호환성을 정정하고 Eric의 Dots 앱 조율 및 클라우드·로컬 로그인 범위를 추가했습니다.</span></li>
 <li><strong data-i18n="changelog_oct1_screens_t">10월 1일 · 실제 한국어 화면으로 앱 안내 갱신</strong><span data-i18n="changelog_oct1_screens_d">사용자 녹화에서 Chat·Work, Codex, 닷 프로필·꾸미기, Space, Scheduled, Plugins 화면을 확인했습니다. 개인 정보를 가린 같은 이미지를 한영으로 사용하고 클릭 경로와 화면 확인 범위를 보완했습니다.</span></li>
 <li><strong data-i18n="changelog_sep30_t">9월 30일 · 서브에이전트 사용량과 품질 비교</strong><span data-i18n="changelog_sep30_d">Eric의 서브에이전트·Luna 위임 경험을 원문에 연결하고, 단일 실행과 품질·총사용량·시간을 비교하는 절차를 한영으로 보완했습니다.</span></li>
@@ -2687,8 +2704,8 @@ codex --search "optimize with Next.js 15"
         </div>
     </footer>
 
-    <script src="i18n.js?v=20261001-current-highlights"></script>
-    <script src="app.js?v=20261001-current-highlights"></script>
+    <script src="i18n.js?v=20261001-linux-install"></script>
+    <script src="app.js?v=20261001-linux-install"></script>
 </body>
 
 </html>
