@@ -1,12 +1,13 @@
 <p align="center">
-  <img src="images/codex_cli.png" alt="Codex 101" width="600" />
+  <img src="images/2026-10-01/chat-work-ko.webp" alt="ChatGPT desktop app — Korean UI recording" width="600" />
 </p>
 
-<h1 align="center">Codex 101 — OpenAI Codex Guide</h1>
+<h1 align="center">Codex 101 — Desktop App Guide</h1>
 
 <p align="center">
-  <strong>A bilingual guide to using OpenAI Codex in real projects</strong><br/>
-  CLI (macOS/Linux/Windows) · Desktop App (macOS/Windows/Linux preview) · IDE Extension · Web/Mobile
+  <strong>A bilingual guide to Codex in the ChatGPT desktop app</strong><br/>
+  Desktop app: macOS · Windows · Linux preview<br/>
+  CLI, IDE, and plugins: basic concepts and starting points, with official links for detailed usage and development.
 </p>
 
 <p align="center">
@@ -262,10 +263,10 @@ These are historical verification notes. For current model and availability guid
 
 | Section | Topic |
 | --- | --- |
-| Start Here | Quick paths for beginners and teams |
+| Start Here | App setup → screens → requests and review |
 | 01-03 | Codex ecosystem, product surfaces, supported models |
 | 04-05 | Requirements, pricing, installation, authentication |
-| 06-09 | CLI, Desktop App, IDE Extension, Web/Mobile |
+| 06-09 | App usage; optional CLI/IDE basics and Web/Mobile context |
 | 10-14 | Approvals, sandboxing, slash commands, `AGENTS.md`, `config.toml`, MCP |
 | 15-17 | Session strategy, local scheduled tasks, Git automation, prompt contracts |
 | 18-21 | Advanced usage, FAQ, references, practitioner tips |

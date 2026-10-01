@@ -5652,7 +5652,7 @@ body[data-page="home"] .home-main > .section:nth-of-type(4n) {
     background: #2a2a2c;
 }
 
-body[data-page="home"] .home-main > .section > :where(h2, h3, h4, p, blockquote, .table-wrap, pre, .card-grid, .model-grid, .two-col, .feature-list, .feature-chips, .tip-grid, .link-grid, .code-tabs, .steps, .faq-list, .callout, .command-guide, .prompt-inline-guide, .overview-lens-grid, .showcase-card, .overview-decision-card, .overview-visual-card, .overview-bridge-grid, .overview-track-grid, .overview-fact-panel, .field-tip-grid, .pet-recording-card, .field-source-block) {
+body[data-page="home"] .home-main > .section > :where(h2, h3, h4, p, blockquote, .table-wrap, pre, .card-grid, .model-grid, .two-col, .feature-list, .feature-chips, .tip-grid, .link-grid, .code-tabs, .steps, .faq-list, .callout, .command-guide, .prompt-inline-guide, .overview-lens-grid, .showcase-card, .overview-decision-card, .overview-visual-card, .overview-bridge-grid, .overview-track-grid, .overview-fact-panel, .field-tip-grid, .pet-recording-card, .field-source-block, .app-guide-extras) {
     max-width: 980px;
     margin-left: auto;
     margin-right: auto;
@@ -6800,7 +6800,7 @@ body[data-page="home"] .home-nav-empty {
         padding-left: clamp(28px, 3vw, 56px);
     }
 
-    body[data-page="home"] .home-main > .section > :where(h2, h3, h4, p, blockquote, .table-wrap, pre, .card-grid, .model-grid, .two-col, .feature-list, .feature-chips, .tip-grid, .link-grid, .code-tabs, .steps, .faq-list, .callout, .command-guide, .prompt-inline-guide, .overview-lens-grid, .showcase-card, .overview-decision-card, .overview-visual-card, .overview-bridge-grid, .overview-track-grid, .overview-fact-panel, .field-tip-grid, .pet-recording-card, .field-source-block),
+    body[data-page="home"] .home-main > .section > :where(h2, h3, h4, p, blockquote, .table-wrap, pre, .card-grid, .model-grid, .two-col, .feature-list, .feature-chips, .tip-grid, .link-grid, .code-tabs, .steps, .faq-list, .callout, .command-guide, .prompt-inline-guide, .overview-lens-grid, .showcase-card, .overview-decision-card, .overview-visual-card, .overview-bridge-grid, .overview-track-grid, .overview-fact-panel, .field-tip-grid, .pet-recording-card, .field-source-block, .app-guide-extras),
     body[data-page="home"] .model-guidance-panel,
     body[data-page="home"] .app-ui-detail-grid,
     body[data-page="home"] .app-overview-panel {
@@ -7186,4 +7186,17 @@ body[data-page="home"] .changelog-section .changelog-list :is(strong, span) {
     }
     .changelog-history summary { padding: 16px; }
     .changelog-history .changelog-list { padding: 0 16px 4px; }
+}
+
+/* Keep terminal and editor references outside the main app setup sequence. */
+.app-guide-extras { margin-top: 16px; }
+.app-guide-extras > summary { padding: 18px 20px; line-height: 1.5; }
+.app-guide-extras > summary:focus-visible { outline: 2px solid var(--accent-light); outline-offset: -4px; }
+.app-guide-extras[open] > summary { border-bottom: 1px solid var(--line-soft); }
+.app-guide-extra-content { min-width: 0; padding: 20px; }
+.app-guide-extra-content > p { padding: 0; }
+body[data-page="home"] .guide-scope-note h3 { margin-bottom: 10px; font-size: 1rem; }
+@media (max-width: 760px) {
+    .app-guide-extras > summary { padding: 16px; }
+    .app-guide-extra-content { padding: 16px; }
 }

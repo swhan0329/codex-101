@@ -145,6 +145,12 @@
         updateModelToggleLabels(lang);
         renderLiveDates(lang);
         document.documentElement.lang = lang === 'ko' ? 'ko' : 'en';
+        if (document.body.dataset.page === 'home' && t.home_document_title) {
+            document.title = t.home_document_title;
+            document.querySelector('meta[name="description"]').content = t.home_description;
+            document.querySelector('meta[property="og:title"]').content = t.home_document_title;
+            document.querySelector('meta[property="og:description"]').content = t.home_description;
+        }
         if (document.body.dataset.page === 'use-cases' && t.use_cases_document_title) {
             document.title = t.use_cases_document_title;
         }

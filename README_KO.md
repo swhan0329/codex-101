@@ -1,12 +1,13 @@
 <p align="center">
-  <img src="images/codex_cli.png" alt="Codex 101" width="600" />
+  <img src="images/2026-10-01/chat-work-ko.webp" alt="ChatGPT 데스크톱 앱 — 실제 한국어 녹화 화면" width="600" />
 </p>
 
-<h1 align="center">Codex 101 — OpenAI Codex 완벽 가이드</h1>
+<h1 align="center">Codex 101 — 데스크톱 앱 사용 가이드</h1>
 
 <p align="center">
-  <strong>다국어(🇰🇷 한국어 / 🇺🇸 English) OpenAI Codex 종합 가이드</strong><br/>
-  CLI (macOS/Linux/Windows) · Desktop App (macOS/Windows/Linux preview) · IDE Extension · Web/Mobile
+  <strong>ChatGPT 데스크톱 앱의 Codex를 익히는 한국어·영어 가이드</strong><br/>
+  데스크톱 앱: macOS · Windows · Linux preview<br/>
+  CLI·IDE·플러그인은 기본 개념과 시작점을 소개하며, 상세 사용·개발 방법은 공식 문서로 연결합니다.
 </p>
 
 <p align="center">
@@ -313,10 +314,10 @@ VB는 Astra에 말로 빠른 진행을 요청한 경험을 공유하며 /fast를
 
 | 섹션 | 주제 |
 |------|------|
-| Start Here | 처음 사용자용 빠른 시작 경로와 실무 운영 경로 |
+| Start Here | 앱 설치 → 화면 → 요청과 결과 검토 |
 | 01–03 | 에코시스템 개요, 제품군, 지원 모델 |
 | 04–05 | 시스템 요구사항 & 가격, 설치 및 인증 |
-| 06–09 | CLI, App, IDE Extension, Web 사용법 |
+| 06–09 | 앱 사용법, CLI·IDE 기본 참고와 Web/모바일 맥락 |
 | 10–14 | 승인 모드, 슬래시 명령어, AGENTS.md, config.toml, MCP |
 | 15–16 | 세션 관리, 로컬 Scheduled task, Git 자동화 |
 | 17 | Prompting Codex agents 개요, 요청·검증 규칙, 워크플로, 플레이북 |
