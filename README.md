@@ -26,6 +26,11 @@ Individual Daybreak users must meet the paid-plan, Advanced Account Security, an
 [Daybreak requirements](https://help.openai.com/en/articles/20001258-trusted-access-for-cyber) · [Models](https://learn.chatgpt.com/docs/models)
 
 [macOS release note](https://learn.chatgpt.com/docs/changelog#codex-2026-09-25-app) · [Eric](https://x.com/pvncher/status/2105682372524138541) · [Dots computers and apps](https://learn.chatgpt.com/docs/dots/computers-and-apps)
+## October 1 · Actual Korean-language desktop screens
+
+The desktop, Dots, and Scheduled chapters now reuse seven sanitized images from the user’s October 1 recording in both languages. English captions explain the Korean source; original Korean names and visible English UI labels remain intact. Click paths cover Chat/Work, Codex → New chat, dot profile/customization, Space, Scheduled → New task, and Customize → Plugins. The screenshots do not establish unseen task settings or access permissions. [Screen provenance](content/screenshots-2026-10-01.md) records timestamps, crops, and redactions.
+
+The opening “What to check now” section shows only three actionable changes with checked dates and official sources: GPT-6.1 Sol access, the planned October 14 GPT-5.5 retirement, and the macOS security fix. Earlier milestones are collapsed; detailed guide edits remain in Changelog.
 
 ## September 30 · Compare subagent tradeoffs
 

@@ -7132,3 +7132,24 @@ html[data-theme="light"] body[data-page="home"] .connection-path-ssh {
     word-break: keep-all;
     overflow-wrap: break-word;
 }
+
+/* Actual exported screens: retain the source aspect ratio and allow full-size viewing. */
+body[data-page="home"] .screenshot-evidence-grid { align-items: start; }
+body[data-page="home"] .screenshot-evidence a { display: block; min-width: 0; }
+body[data-page="home"] .screenshot-evidence img {
+    width: 100%; height: auto; aspect-ratio: auto; max-height: 620px;
+    object-fit: contain; margin: 0 auto; box-shadow: none;
+}
+body[data-page="home"] .screenshot-evidence:hover img { transform: none; }
+body[data-page="home"] .screenshot-evidence a:focus-visible {
+    outline: 3px solid var(--accent); outline-offset: -3px;
+}
+
+/* Current changes stay short; the historical timeline is opt-in. */
+.current-updates .tip-card { display: flex; flex-direction: column; }
+.current-updates .update-date { margin: 0 0 8px; color: var(--text-dim); font-size: .8rem; }
+#current-updates .command-refs { display: flex; flex-wrap: wrap; gap: 8px; margin: auto 0 0; padding-top: 14px; }
+#current-updates > .tip-card { grid-column: auto; }
+body[data-page="home"] .update-history { max-width: 980px; margin: 20px auto 0; }
+.update-history .table-wrap { margin: 0 18px 14px; }
+@media (min-width: 960px) { #current-updates { grid-template-columns: repeat(3, minmax(0, 1fr)); } }

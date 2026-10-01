@@ -30,6 +30,11 @@ macOS 앱 빌드를 확인하세요. OpenAI는 26.924.20706에서 CVE-2026-10075
 [Daybreak requirements](https://help.openai.com/en/articles/20001258-trusted-access-for-cyber) · [Models](https://learn.chatgpt.com/docs/models)
 
 [macOS release note](https://learn.chatgpt.com/docs/changelog#codex-2026-09-25-app) · [Eric](https://x.com/pvncher/status/2105682372524138541) · [Dots computers and apps](https://learn.chatgpt.com/docs/dots/computers-and-apps)
+## 10월 1일 · 실제 한국어 데스크톱 화면
+
+사용자의 10월 1일 녹화에서 개인 정보를 가린 실제 이미지 7개를 앱·Dots·Scheduled 장에 반영했습니다. 한영 모두 같은 한국어 화면을 사용하며 영어판에는 영어 캡션을 제공합니다. Chat/Work, Codex → New chat, 닷 프로필·꾸미기, Space, Scheduled → New task, Customize → Plugins 경로를 보완하고, 화면에 열리지 않은 설정·권한은 단정하지 않습니다. [화면 출처](content/screenshots-2026-10-01.md)에 시각·잘라내기·가림 처리를 기록했습니다.
+
+첫 화면은 “지금 확인할 변화” 세 항목으로 줄였습니다. GPT-6.1 Sol 제공, 10월 14일 GPT-5.5 종료 예정, macOS 보안 수정에 확인 날짜·할 일·공식 출처를 붙였습니다. 이전 연혁은 접어 두고 가이드 수정 기록은 Changelog에 유지합니다.
 
 ## 9월 30일 · 서브에이전트의 이득 비교
 

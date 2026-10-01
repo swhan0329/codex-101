@@ -17,7 +17,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=20260906-astra-facts" />
+    <link rel="stylesheet" href="style.css?v=20261001-current-highlights" />
 </head>
 
 <body data-page="home" data-updated="2026-10-01">
@@ -323,8 +323,34 @@
                 <h2><span class="section-num">01</span> <span data-i18n="s1_title">Codex 한눈에 보기</span></h2>
                 <p data-i18n="s1_intro">OpenAI Codex는 코드를 읽고, 고치고, 테스트하고, 결과를 설명하는 코딩 에이전트입니다.</p>
                 <blockquote data-i18n="s1_philosophy">"코드를 쓰는 도구 → 작업을 끝내는 에이전트"</blockquote>
-                <p data-i18n="s1_desc">모델, 요금, 설정은 뒤에서 자세히 보고, 여기서는 Codex가 어떤 표면으로 확장되어 왔는지만 빠르게 잡습니다.</p>
-                <h3 data-i18n="s1_timeline_title">핵심 업데이트</h3>
+                <p data-i18n="s1_desc">지금 사용 방식에 영향을 주는 변화 세 가지만 먼저 확인하세요. 모델·요금·설정의 자세한 설명은 각 장에서 볼 수 있습니다.</p>
+                <h3 data-i18n="s1_timeline_title">지금 확인할 변화</h3>
+                <p class="command-refs" data-i18n="s1_checked">공식 문서 확인 · 2026년 10월 1일</p>
+                <!-- Keep at most three current, actionable highlights. Replace rather than append;
+                     verify official sources and the checked date. Preserve earlier milestones below. -->
+                <div class="tip-grid current-updates" id="current-updates">
+                    <article class="tip-card">
+                        <p class="update-date" data-i18n="s1_sol_date">9월 29일 · 모델 제공</p>
+                        <h4 data-i18n="s1_sol_title">GPT-6.1 Sol 선택 확인</h4>
+                        <p data-i18n="s1_sol_desc">복잡한 작업의 새 선택지입니다. 앱 모델 선택기나 CLI /model에서 제공 여부를 확인하세요. 플랜·클라이언트·워크스페이스에 따라 접근이 다릅니다.</p>
+                        <p class="command-refs"><a href="#s3" data-i18n="s1_guide_link">가이드에서 보기</a> <a href="https://learn.chatgpt.com/docs/models#gpt-61-sol" target="_blank" rel="noopener noreferrer" data-i18n="s1_official_link">공식 출처</a></p>
+                    </article>
+                    <article class="tip-card">
+                        <p class="update-date" data-i18n="s1_retire_date">10월 14일 예정 · 모델 전환</p>
+                        <h4 data-i18n="s1_retire_title">GPT-5.5 설정 점검</h4>
+                        <p data-i18n="s1_retire_desc">ChatGPT·Work·Codex에서 종료 예정입니다. 저장된 모델 설정과 예약 작업을 점검하고 대체 모델로 시험하세요. OpenAI API는 계속 제공됩니다.</p>
+                        <p class="command-refs"><a href="#gpt55-retirement" data-i18n="s1_guide_link">가이드에서 보기</a> <a href="https://learn.chatgpt.com/docs/models" target="_blank" rel="noopener noreferrer" data-i18n="s1_official_link">공식 출처</a></p>
+                    </article>
+                    <article class="tip-card">
+                        <p class="update-date" data-i18n="s1_security_date">9월 25일 · macOS 보안</p>
+                        <h4 data-i18n="s1_security_title">앱 업데이트와 빌드 확인</h4>
+                        <p data-i18n="s1_security_desc">26.924.20706에 보안 취약점 수정이 포함됐습니다. 이전 빌드라면 공식 업데이트를 적용하고 설치 버전을 다시 확인하세요.</p>
+                        <p class="command-refs"><a href="#macos-security" data-i18n="s1_guide_link">가이드에서 보기</a> <a href="https://learn.chatgpt.com/docs/changelog#codex-2026-09-25-app" target="_blank" rel="noopener noreferrer" data-i18n="s1_official_link">공식 출처</a></p>
+                    </article>
+                </div>
+                <details class="update-history" id="update-history">
+                    <summary data-i18n="s1_history_title">이전 주요 연혁 보기</summary>
+                    <p data-i18n="s1_history_note">2025년 4월–2026년 8월의 주요 연혁입니다. 이후 릴리스 전체는 공식 Changelog에서 확인하세요.</p>
                 <div class="table-wrap">
                     <table>
                         <thead>
@@ -410,6 +436,7 @@
                     </table>
                 </div>
                 <p class="command-refs" data-i18n-html="s1_refs">출처: <a href="https://learn.chatgpt.com/docs/changelog" target="_blank">Codex changelog</a> · <a href="https://developers.openai.com/codex/models/" target="_blank">Codex models</a> · <a href="https://developers.openai.com/codex/linux/linux-app" target="_blank">Linux app preview</a> · <a href="https://openai.com/index/previewing-gpt-5-6-sol/" target="_blank">GPT-5.6 preview</a> · <a href="https://openai.com/index/gpt-5-6/" target="_blank">GPT-5.6 GA</a> · <a href="https://openai.com/index/work-with-codex-from-anywhere/" target="_blank">Work with Codex from anywhere</a> · <a href="https://openai.com/index/wasmer/" target="_blank">Wasmer customer story</a> · <a href="https://openai.com/index/a-scorecard-for-the-ai-age/" target="_blank">AI scorecard</a></p>
+                </details>
             </section>
 
             <!-- Section 2 -->
@@ -971,16 +998,8 @@ codex --cd /path/to/project
             <!-- Section 6 -->
             <section class="section" id="s7">
                 <h2><span class="section-num">07</span> <span data-i18n="s7_title">ChatGPT 데스크톱 앱의 Codex</span></h2>
-                <div class="app-ui-detail-grid" aria-label="ChatGPT desktop app Codex interface details">
-                    <figure class="screenshot app-ui-detail-card app-ui-detail-card-switch">
-                        <img src="images/codex_work_switch.png?v=20260823-chatgpt-codex-menu" alt="ChatGPT desktop app menu switching between ChatGPT and Codex" loading="lazy" />
-                        <figcaption data-i18n="img_app_switch">좌상단 전환 메뉴 — ChatGPT 대화와 Codex 개발 작업 공간을 같은 앱에서 선택</figcaption>
-                    </figure>
-                    <figure class="screenshot app-ui-detail-card">
-                        <img src="images/codex_chat_overlay.png" alt="ChatGPT desktop app showing the Chat and Work switcher with the sidebar" loading="lazy" />
-                        <figcaption data-i18n="img_app_chat">현재 ChatGPT 데스크톱 앱 — 상단 Chat·Work 전환과 사이드바</figcaption>
-                    </figure>
-                </div>
+<p data-i18n="screen_oct1_note">2026년 10월 1일 사용자 녹화에서 확인한 실제 화면입니다. 한국어 대화·닷 이름과 화면에 표시된 영어 UI 라벨을 그대로 보존했습니다. 개인 정보는 잘라내거나 불투명하게 가렸으며, 이미지를 누르면 크게 볼 수 있습니다. 계정·버전에 따라 메뉴와 제공 범위가 다를 수 있습니다.</p>
+<div class="app-ui-detail-grid screenshot-evidence-grid"><figure class="screenshot screenshot-evidence"><a href="images/2026-10-01/chat-work-ko.webp" target="_blank" rel="noopener noreferrer"><img src="images/2026-10-01/chat-work-ko.webp" width="3548" height="1206" data-i18n-alt="screen_chat_alt" alt="ChatGPT 홈의 Chat와 Work 전환 및 입력창" loading="lazy" /></a><figcaption data-i18n="img_app_chat">ChatGPT 홈의 Chat·Work 전환 — 한국어 녹화의 실제 화면, 개인 사이드바 항목 가림</figcaption></figure><figure class="screenshot screenshot-evidence"><a href="images/2026-10-01/codex-sidebar-ko.webp" target="_blank" rel="noopener noreferrer"><img src="images/2026-10-01/codex-sidebar-ko.webp" width="614" height="313" data-i18n-alt="screen_sidebar_alt" alt="Codex 사이드바의 New chat과 닷닷" loading="lazy" /></a><figcaption data-i18n="img_app_switch">Codex 사이드바 확대 — New chat과 한국어 닷 이름이 표시된 실제 화면</figcaption></figure></div>
                 <div class="model-guidance-panel app-overview-panel">
                     <div class="model-guidance-head">
                         <div>
@@ -998,12 +1017,12 @@ codex --cd /path/to/project
                         <article class="app-start-card">
                             <span class="install-step">01</span>
                             <strong data-i18n="s7_overview_switch_title">공간 전환</strong>
-                            <p data-i18n="s7_overview_switch_desc">좌상단 메뉴에서 ChatGPT 대화와 Codex 개발 작업 공간을 전환합니다.</p>
+                            <p data-i18n="s7_overview_switch_desc">좌상단 ChatGPT·Codex 메뉴로 작업 공간을 확인하고, ChatGPT 홈의 상단 Chat·Work 전환으로 대화와 작업 모드를 선택합니다.</p>
                         </article>
                         <article class="app-start-card">
                             <span class="install-step">02</span>
-                            <strong><code>New task</code></strong>
-                            <p data-i18n="s7_overview_task_desc">프로젝트를 고르고 모델과 reasoning effort를 확인한 뒤 시작합니다.</p>
+                            <strong><code>New chat</code></strong>
+                            <p data-i18n="s7_overview_task_desc">녹화의 Codex 사이드바에는 New chat이 표시됩니다. 새 대화를 시작할 때 사용할 프로젝트·실행 위치·모델을 확인하세요.</p>
                         </article>
                         <article class="app-start-card">
                             <span class="install-step">03</span>
@@ -1200,6 +1219,7 @@ then verify the page again and attach the screenshot result.</code></pre>
                         <p style="word-break: keep-all; overflow-wrap: anywhere" data-i18n="s7_pb_plugin_d">skills, app integrations, MCP server를 묶어 배포하는 단위입니다. 반복 프롬프트가 안정화된 뒤 팀에 공유할 때 plugin으로 올리고, 설치 후에는 작업 설명만 하거나 `@plugin`으로 특정 workflow를 직접 호출하는 방식이 좋습니다. Apple Messages는 이번 릴리스의 Apple Silicon(arm64)용 macOS ChatGPT desktop app에서 Codex 또는 ChatGPT Work로 쓸 수 있으므로, 필요한 macOS 권한을 준 뒤 메시지와 수신자를 검토하고 전송을 승인하세요. Full access에서는 전송 확인이 막힐 수 있어 Ask for approval 또는 Approve for me가 필요합니다.</p>
                     </div>
                 </div>
+<div id="desktop-screen-tour" class="desktop-screen-tour"><h3 data-i18n="screen_space_title">Space에서 자료 찾기</h3><p data-i18n="screen_space_path">왼쪽 세로 탐색 막대의 문서 모양 아이콘 → Space. New page로 새 페이지를 시작하거나 All·Pages·Sites·Images·Google Drive를 선택합니다. 이 화면의 All → Shared with you는 빈 목록이므로, 공유 자료가 있다고 가정하지 마세요.</p><figure class="screenshot screenshot-evidence"><a href="images/2026-10-01/space-ko.webp" target="_blank" rel="noopener noreferrer"><img src="images/2026-10-01/space-ko.webp" width="3548" height="1618" data-i18n-alt="screen_space_alt" alt="Space의 All, Pages, Sites, Images, Google Drive와 빈 Shared with you 목록" loading="lazy" /></a><figcaption data-i18n="screen_space_caption">Space → All → Shared with you — 한국어 녹화 화면, 개인 최근 자료 제목 가림</figcaption></figure><h3 data-i18n="s7_pb_plugin_t">Plugins</h3><p data-i18n="screen_plugins_path">왼쪽 세로 탐색 막대의 원형 아이콘 → Customize → Plugins. Search plugins로 검색하고 Public·Personal 탭과 Add 메뉴를 확인하세요. 설치된 항목은 왼쪽 Installed에 나타나며 Skills는 별도 탭입니다. 목록에 보이는 것과 계정 연결·실제 접근 허용은 별개입니다.</p><figure class="screenshot screenshot-evidence"><a href="images/2026-10-01/plugins-ko.webp" target="_blank" rel="noopener noreferrer"><img src="images/2026-10-01/plugins-ko.webp" width="3548" height="1143" data-i18n-alt="screen_plugins_alt" alt="Customize의 Plugins, Skills, 검색창, Public과 Personal 탭, Add 메뉴" loading="lazy" /></a><figcaption data-i18n="screen_plugins_caption">Customize → Plugins — 한국어 녹화의 실제 목록, 개인 설치 목록 가림</figcaption></figure></div>
                 <p class="command-refs" data-i18n-html="s7_refs">출처: <a href="https://developers.openai.com/codex/app" target="_blank">Codex app</a> · <a href="https://developers.openai.com/codex/app/features" target="_blank">App features</a> · <a href="https://developers.openai.com/codex/app/browser" target="_blank">In-app browser</a> · <a href="https://learn.chatgpt.com/docs/chrome-extension" target="_blank">Browser extension</a> · <a href="https://learn.chatgpt.com/docs/webmcp" target="_blank">Site tools (WebMCP)</a> · <a href="https://developers.openai.com/codex/app/automations" target="_blank">App automations</a> · <a href="https://learn.chatgpt.com/docs/plugins#app-use-apple-messages-from-codex" target="_blank">Apple Messages plugin</a> · <a href="https://learn.chatgpt.com/docs/use-chatgpt#share-a-read-only-snapshot-of-a-codex-thread" target="_blank">읽기 전용 thread snapshot</a> · <a href="https://openai.com/index/codex-for-almost-everything/" target="_blank">Codex for (almost) everything</a></p>
             </section>
 
@@ -1836,11 +1856,11 @@ codex resume &lt;ID&gt;       <span class="c"># 특정 세션</span>
             <!-- Section 16 -->
             <section class="section" id="s16">
                 <h2><span class="section-num">16</span> <span data-i18n="s16_title">로컬 Scheduled task & Git 자동화</span></h2>
-<div class="callout" id="dots29" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><h3 data-i18n="dots29_t">Dots · 지속 업무를 맡기기</h3><p data-i18n="dots29_d">Dots는 Astra 기반의 상시 클라우드 에이전트로 점진 배포 중입니다. Pro 100·200·500은 18세 초과이며 EEA·영국·스위스 밖인 사용자, Business Premium·Enterprise는 전 세계 배포 대상입니다. Enterprise는 관리자 활성화가 필요합니다. 데스크톱 앱·브라우저에서 먼저 생성하고 지원 업데이트가 있는 모바일 앱에서 이어가세요. 모바일 웹은 지원하지 않습니다.</p><p data-i18n="dots29_steps">맡길 책임·자료·자율 실행 범위·알림 조건을 정하고 첫 결과를 검토하세요. 편집 예시: “이 프로젝트의 변경과 미결정을 추적하고, 결정이 필요할 때 알려주세요. 답장은 초안으로 준비해 주세요.” dot 대화와 위임한 Work·Codex 작업의 사용량은 구분됩니다. 로컬 도구를 쓰려면 연결한 컴퓨터와 앱이 켜져 있어야 합니다.</p><p class="command-refs"><a href="https://learn.chatgpt.com/docs/dots#access" target="_blank" rel="noopener noreferrer">Dots</a></p></div>
+<div class="callout" id="dots29" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><h3 data-i18n="dots29_t">Dots · 지속 업무를 맡기기</h3><p data-i18n="dots29_d">Dots는 Astra 기반의 상시 클라우드 에이전트로 점진 배포 중입니다. Pro 100·200·500은 18세 초과이며 EEA·영국·스위스 밖인 사용자, Business Premium·Enterprise는 전 세계 배포 대상입니다. Enterprise는 관리자 활성화가 필요합니다. 데스크톱 앱·브라우저에서 먼저 생성하고 지원 업데이트가 있는 모바일 앱에서 이어가세요. 모바일 웹은 지원하지 않습니다.</p><p data-i18n="dots29_steps">맡길 책임·자료·자율 실행 범위·알림 조건을 정하고 첫 결과를 검토하세요. 편집 예시: “이 프로젝트의 변경과 미결정을 추적하고, 결정이 필요할 때 알려주세요. 답장은 초안으로 준비해 주세요.” dot 대화와 위임한 Work·Codex 작업의 사용량은 구분됩니다. 로컬 도구를 쓰려면 연결한 컴퓨터와 앱이 켜져 있어야 합니다.</p><p data-i18n="screen_dot_path">사이드바의 닷 이름 → 닷 프로필. Call, Desktop notifications, Computers, Recent activity, Outputs가 보입니다. 캐릭터 옆 연필 → Customize your dot에서 Colors·Characters·Pets와 이름을 고르고 Save를 누릅니다. 닷 꾸미기와 Settings → Pets의 Quick Chat 설정은 서로 다른 화면입니다.</p><p data-i18n="screen_dot_access">Computers의 닷 클라우드 컴퓨터와 Your computer를 구분하세요. 로컬 컴퓨터 연결은 별도 권한이며, 다른 앱이나 모든 대화에 대한 접근을 뜻하지 않습니다.</p><div class="app-ui-detail-grid screenshot-evidence-grid"><figure class="screenshot screenshot-evidence"><a href="images/2026-10-01/dot-profile-ko.webp" target="_blank" rel="noopener noreferrer"><img src="images/2026-10-01/dot-profile-ko.webp" width="761" height="1639" data-i18n-alt="screen_dot_profile_alt" alt="닷 프로필의 Call, 알림, Computers, Recent activity, Outputs, 개인 정보는 가림" loading="lazy" /></a><figcaption data-i18n="screen_dot_profile_caption">닷 프로필 — 한국어 닷 이름 유지, 연락처·기기 이름·활동·결과 제목 가림</figcaption></figure><figure class="screenshot screenshot-evidence"><a href="images/2026-10-01/dot-customize-ko.webp" target="_blank" rel="noopener noreferrer"><img src="images/2026-10-01/dot-customize-ko.webp" width="2047" height="1223" data-i18n-alt="screen_dot_customize_alt" alt="한국어 닷 이름 닷닷과 Colors, Characters, Pets, Save가 있는 꾸미기 창" loading="lazy" /></a><figcaption data-i18n="screen_dot_customize_caption">Customize your dot 확대 — 한국어 이름과 실제 Colors·Characters·Pets·Save 화면</figcaption></figure></div><p class="command-refs"><a href="https://learn.chatgpt.com/docs/dots#access" target="_blank" rel="noopener noreferrer">Dots</a></p></div>
 
 <div class="callout" id="devday29" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><h3 data-i18n="devday29_t">팀 자동화·플러그인 확장 확인</h3><p data-i18n="devday29_d">Team Tasks는 팀 서비스 계정과 승인된 앱 연결로 클라우드에서 실행됩니다. 개인 로컬 예약 작업과 분리하고 관리자 설정부터 확인하세요. Plugin Extensions는 사이드바 앱·대화 패널·파일 뷰어·폼을 추가합니다. composer mention은 데스크톱 전용이며 Free·Go 웹 확장은 추후 예정입니다. MCP Events는 MCP 2.0의 webhook 방식을 사용하고 polling·streaming은 지원하지 않습니다.</p><p class="command-refs"><a href="https://learn.chatgpt.com/docs/enterprise/teams" target="_blank" rel="noopener noreferrer">Team Tasks</a> · <a href="https://learn.chatgpt.com/docs/whats-new/september-28-october-2-2026" target="_blank" rel="noopener noreferrer">DevDay guide</a></p></div>
 
-                <p data-i18n="s16_intro">반복 작업은 GitHub 연동이 없어도 실행할 수 있습니다. ChatGPT 데스크톱 앱의 Scheduled에서 로컬 프로젝트와 실행 환경을 고르면, 앱이 켜져 있고 프로젝트가 디스크에 있는 동안 현재 체크아웃 또는 격리된 worktree에서 작업합니다.</p>
+                <p data-i18n="s16_intro">반복 작업은 GitHub 연동이 없어도 실행할 수 있습니다. ChatGPT 데스크톱 앱의 Scheduled에서 로컬 프로젝트와 실행 환경을 고르면, 앱이 켜져 있고 프로젝트가 디스크에 있는 동안 현재 체크아웃 또는 격리된 worktree에서 작업합니다.</p><p data-i18n="screen_scheduled_path">왼쪽 세로 탐색 막대의 시계 아이콘 → Scheduled → New task. Upcoming에서 기존 작업과 다음 실행 시각을 확인합니다. 녹화에는 “Codex-101 최신화”가 보이지만 설정 창·실행 환경은 열리지 않았으므로, 이 목록만으로 Local 또는 Worktree 실행을 판단할 수 없습니다.</p><figure class="screenshot screenshot-evidence"><a href="images/2026-10-01/scheduled-ko.webp" target="_blank" rel="noopener noreferrer"><img src="images/2026-10-01/scheduled-ko.webp" width="3548" height="1852" data-i18n-alt="screen_scheduled_alt" alt="Scheduled의 New task, Upcoming, 한국어 Codex-101 최신화 작업과 예약 예시" loading="lazy" /></a><figcaption data-i18n="screen_scheduled_caption">Scheduled → Upcoming — 한국어 예약 작업 이름 유지, 다른 개인 작업 가림</figcaption></figure>
                 <div class="table-wrap">
                     <table>
                         <thead>
@@ -2578,6 +2598,7 @@ codex --search "optimize with Next.js 15"
                 </div>
                 <ol class="changelog-list" aria-label="Recent update summary">
 <li><strong data-i18n="changelog_oct1_t">10월 1일 · macOS 보안 수정과 Dots 실행 위치</strong><span data-i18n="changelog_oct1_d">macOS 수정 빌드·개인 Daybreak 키 조건·Responses API 호환성을 정정하고 Eric의 Dots 앱 조율 및 클라우드·로컬 로그인 범위를 추가했습니다.</span></li>
+<li><strong data-i18n="changelog_oct1_screens_t">10월 1일 · 실제 한국어 화면으로 앱 안내 갱신</strong><span data-i18n="changelog_oct1_screens_d">사용자 녹화에서 Chat·Work, Codex, 닷 프로필·꾸미기, Space, Scheduled, Plugins 화면을 확인했습니다. 개인 정보를 가린 같은 이미지를 한영으로 사용하고 클릭 경로와 화면 확인 범위를 보완했습니다.</span></li>
 <li><strong data-i18n="changelog_sep30_t">9월 30일 · 서브에이전트 사용량과 품질 비교</strong><span data-i18n="changelog_sep30_d">Eric의 서브에이전트·Luna 위임 경험을 원문에 연결하고, 단일 실행과 품질·총사용량·시간을 비교하는 절차를 한영으로 보완했습니다.</span></li>
 <li><strong data-i18n="changelog_sep29_t">9월 29일 · 6.1 Sol·요금·Cloud·Dots</strong><span data-i18n="changelog_sep29_d">6.1 Sol 접근·기본값, CLI 0.159.2, Fast·Ultrafast 사용량과 Pro 200 재개, 새 Cloud 환경과 Dots·팀 자동화의 제공 범위를 한영으로 갱신했습니다.</span></li>
 <li><strong data-i18n="changelog_sep28_t">9월 28일 · CLI 0.158 실무 절차</strong><span data-i18n="changelog_sep28_d">Markdown 복사, 투명 배경 이미지 요청, 터미널 입력 승인과 MCP·실행 서버 인증 안내를 갱신했습니다.</span></li>
@@ -2666,8 +2687,8 @@ codex --search "optimize with Next.js 15"
         </div>
     </footer>
 
-    <script src="i18n.js?v=20261001-macos-dots"></script>
-    <script src="app.js?v=20260919-mobile-reveal"></script>
+    <script src="i18n.js?v=20261001-current-highlights"></script>
+    <script src="app.js?v=20261001-current-highlights"></script>
 </body>
 
 </html>

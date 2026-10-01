@@ -138,6 +138,10 @@
                 el.innerHTML = t[key];
             }
         });
+        document.querySelectorAll('[data-i18n-alt]').forEach(el => {
+            const key = el.getAttribute('data-i18n-alt');
+            if (t[key] !== undefined) el.alt = t[key];
+        });
         updateModelToggleLabels(lang);
         renderLiveDates(lang);
         document.documentElement.lang = lang === 'ko' ? 'ko' : 'en';
