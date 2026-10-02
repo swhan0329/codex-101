@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 10월 1일</strong><br/>
+  <strong>최종 업데이트: 2026년 10월 2일</strong><br/>
   페이지의 실제 수정일을 표시하며, 모델 안내에는 공식 출처와 확인 범위를 함께 제공합니다.
 </p>
 
@@ -21,6 +21,12 @@
 </p>
 
 ---
+
+## 10월 2일 · dot으로 Slack 후속 확인
+
+중요한 Slack 메시지를 연결된 dot에 전달하고 확인 대상·알림 조건을 지정한 뒤 반복 작업 설정을 확인하세요. Alexander의 개인 활용법에 공식 권한·일정 조건을 함께 정리했습니다. 짧은 CLI 참고는 0.160.0(10월 1일)로 갱신했으며 모델·Power 추천은 유지했습니다.
+
+[Alexander](https://x.com/embirico/status/2106057138074501181) · [Dots · Slack](https://learn.chatgpt.com/docs/dots/channels#slack) · [CLI changelog](https://learn.chatgpt.com/docs/changelog)
 
 ## 10월 1일 · macOS 보안 수정과 Dots 실행 위치
 

@@ -11,12 +11,18 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: October 1, 2026</strong><br/>
+  <strong>Last updated: October 2, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
 
 ---
+
+## October 2 · Slack follow-up with your dot
+
+Forward an important Slack message to your connected dot, specify what to monitor and when to notify you, and confirm the recurring task. Added Alexander’s personal workflow with official permission and scheduling boundaries. The compact CLI reference now points to 0.160.0 (October 1); model and Power recommendations remain unchanged.
+
+[Alexander](https://x.com/embirico/status/2106057138074501181) · [Dots · Slack](https://learn.chatgpt.com/docs/dots/channels#slack) · [CLI changelog](https://learn.chatgpt.com/docs/changelog)
 
 ## October 1 · macOS security fix and Dots execution
 

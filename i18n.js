@@ -1,8 +1,12 @@
 // i18n translation data
 const translations = {
     ko: {
+        changelog_oct2_d: "Alexander의 Slack 후속 확인 팁에 감시 범위·알림·반복 작업 확인 절차를 추가했습니다. CLI 참고는 0.160.0 안내로 짧게 갱신했습니다.",
+        changelog_oct2_t: "10월 2일 · Dots 후속 확인과 CLI 참고 갱신",
+        dotwatch_d: "Alexander는 중요한 Slack 메시지를 자신의 dot에 전달하고 “계속 챙겨 줘”라고 요청하는 방식을 공유했습니다. dot 프로필에서 Slack을 연결한 뒤, 확인할 채널·대상·변화 조건과 알림 시점을 지정하세요. 반복 작업이 설정됐는지 dot에 확인하고 첫 결과를 검토하세요. 채널에 추가하거나 메시지를 전달하는 것만으로 감시 일정이 생기지는 않습니다. 개인 사용 방식이며 연결된 앱의 접근 권한과 공유·작업 승인 조건이 적용됩니다.",
+        dotwatch_t: "Slack 메시지를 dot에 전달해 후속 확인 맡기기",
         s6_updates_t: "CLI·SDK 업데이트는 공식 문서에서",
-        s6_updates_d: "CLI를 쓴다면 codex --version으로 설치 버전을 확인하세요. 버전별 변경 사항과 SDK 개발 방법은 공식 문서에서 필요한 항목만 찾아보세요.",
+        s6_updates_d: "CLI를 쓴다면 codex --version으로 설치 버전을 확인하세요. 10월 1일 공개된 0.160.0은 이전 작업 탐색과 재연결·권한 복원을 개선했습니다. 업데이트는 npm install -g @openai/codex@0.160.0을 사용하고 /model을 확인하세요. 플랫폼별 변경과 SDK 개발 방법은 공식 문서에서 확인하세요.",
         home_document_title: "Codex 101 — 데스크톱 앱 사용 가이드",
         home_description: "ChatGPT 데스크톱 앱의 Codex를 설치하고 프로젝트·모델·권한·결과 검토·예약 작업을 익히는 한영 가이드입니다. CLI·IDE·플러그인은 기본 개념과 공식 문서 연결로 소개합니다.",
         guide_scope_title: "이 가이드의 범위",
@@ -1159,8 +1163,12 @@ const translations = {
     },
 
     en: {
+        changelog_oct2_d: "Added Alexander’s Slack follow-up tip with monitoring scope, notifications, and recurring-task confirmation. Briefly refreshed the CLI reference for 0.160.0.",
+        changelog_oct2_t: "October 2 · Dots follow-up and CLI reference",
+        dotwatch_d: "Alexander shares a workflow of forwarding an important Slack message to his dot and asking it to “Stay on top of this.” Connect Slack in your dot’s profile, then specify the channels, items, changes to watch for, and when to notify you. Ask your dot to confirm the recurring task and review its first result. Adding it to a channel or forwarding a message alone does not establish a monitoring schedule. This is a personal workflow; connected-app access, sharing permissions, and action approvals still apply.",
+        dotwatch_t: "Forward a Slack message to your dot for follow-up",
         s6_updates_t: "Check CLI and SDK updates in the official docs",
-        s6_updates_d: "If you use the CLI, check your installed version with codex --version. Look up the release changes and SDK development guidance you need in the official docs.",
+        s6_updates_d: "If you use the CLI, check codex --version. Version 0.160.0, released October 1, improves older-task browsing, reconnection, and permission restoration. Update with npm install -g @openai/codex@0.160.0 and check /model. See the official documentation for platform-specific changes and SDK development.",
         home_document_title: "Codex 101 — Desktop App Guide",
         home_description: "A bilingual guide to Codex in the ChatGPT desktop app: installation, projects, models, permissions, review, and scheduled tasks. CLI, IDE, and plugins are introduced with basic concepts and links to official docs.",
         guide_scope_title: "What this guide covers",
