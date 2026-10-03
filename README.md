@@ -11,12 +11,18 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: October 2, 2026</strong><br/>
+  <strong>Last updated: October 3, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
 
 ---
+
+## October 3 · Delegate to your dot, review in Codex
+
+Start with one recurring workflow, provide sources and completion criteria, and define execution location and review boundaries. Added Dominik’s personal workflow and official Activity review steps. Autonomous follow-up and saved recurring schedules are distinct; model, Power, and pricing guidance are unchanged.
+
+[Dominik](https://x.com/dkundel/status/2106141525306397099) · [Dots · Tasks & memory](https://learn.chatgpt.com/docs/dots/tasks-and-memory) · [Dots · Controls](https://learn.chatgpt.com/docs/dots/controls)
 
 ## October 2 · Slack follow-up with your dot
 

@@ -1,6 +1,12 @@
 // i18n translation data
 const translations = {
     ko: {
+        dotcoord_t: "반복 업무 하나를 dot에 맡기고 Codex에서 검토",
+        dotcoord_d: "Dominik은 dot에 업무 조율을 맡기고 직접 함께 풀 문제는 Codex에서 진행하는 방식을 공유했습니다. 결과를 판단할 수 있는 반복 업무 하나를 골라 기존 처리 방식·자료·완료 기준을 알려주고 첫 결과를 함께 다듬으세요. 실행 위치와 스스로 처리할 범위, 검토받을 결정을 지정한 뒤 dot 프로필의 Activity에서 위임한 작업과 결과를 여세요. 로컬 작업은 연결한 컴퓨터와 앱이 켜져 있어야 하며, 클라우드 코딩 작업은 미리 만든 저장소 환경이 필요합니다. 개인 사용 경험이며 앱 권한과 승인 조건이 적용됩니다.",
+        dotcoord_note: "진행 중인 업무는 dot이 스스로 멈췄다가 이어갈 수 있어 모든 후속 확인에 고정 일정이 필요한 것은 아닙니다. 정해진 시각에 반복할 일은 저장된 일정을 확인하세요. 사전 조사는 읽기와 제안이며, 메시지 발송·앱 수정 권한을 자동으로 부여하지 않습니다.",
+        changelog_oct3_t: "10월 3일 · dot 위임과 Codex 검토",
+        changelog_oct3_d: "Dominik의 기사에서 반복 업무를 작게 시작하는 절차를 추가했습니다. 실행 위치·Activity 검토와 자율 후속 확인·저장된 반복 일정의 차이를 공식 문서에 맞춰 정리했습니다.",
+
         changelog_oct2_d: "Alexander의 Slack 후속 확인 팁에 감시 범위·알림·반복 작업 확인 절차를 추가했습니다. CLI 참고는 0.160.0 안내로 짧게 갱신했습니다.",
         changelog_oct2_t: "10월 2일 · Dots 후속 확인과 CLI 참고 갱신",
         dotwatch_d: "Alexander는 중요한 Slack 메시지를 자신의 dot에 전달하고 “계속 챙겨 줘”라고 요청하는 방식을 공유했습니다. dot 프로필에서 Slack을 연결한 뒤, 확인할 채널·대상·변화 조건과 알림 시점을 지정하세요. 반복 작업이 설정됐는지 dot에 확인하고 첫 결과를 검토하세요. 채널에 추가하거나 메시지를 전달하는 것만으로 감시 일정이 생기지는 않습니다. 개인 사용 방식이며 연결된 앱의 접근 권한과 공유·작업 승인 조건이 적용됩니다.",
@@ -1163,6 +1169,12 @@ const translations = {
     },
 
     en: {
+        dotcoord_t: "Delegate one recurring workflow, review it in Codex",
+        dotcoord_d: "Dominik describes letting his dot coordinate work while using Codex for problems he wants to work through directly. Pick one recurring workflow whose results you can judge. Show how you handle it, provide sources and completion criteria, and refine the first result together. Specify where it should run, what it may handle, and which decisions need review; open delegated tasks and results in Activity in your dot’s profile. Local work requires the connected computer and app to stay on; cloud coding needs a repository environment set up beforehand. This is a personal workflow; app permissions and action approvals still apply.",
+        dotcoord_note: "For ongoing work, a dot can pause and wake up to continue, so every follow-up does not need a fixed schedule. Confirm a saved schedule for work at recurring times. Proactive research reads and suggests; it does not automatically authorize sending messages or changing apps.",
+        changelog_oct3_t: "October 3 · Dot delegation and Codex review",
+        changelog_oct3_d: "Added a small recurring-workflow starting point from Dominik’s article. Clarified execution location, Activity review, and autonomous follow-up versus saved recurring schedules using official docs.",
+
         changelog_oct2_d: "Added Alexander’s Slack follow-up tip with monitoring scope, notifications, and recurring-task confirmation. Briefly refreshed the CLI reference for 0.160.0.",
         changelog_oct2_t: "October 2 · Dots follow-up and CLI reference",
         dotwatch_d: "Alexander shares a workflow of forwarding an important Slack message to his dot and asking it to “Stay on top of this.” Connect Slack in your dot’s profile, then specify the channels, items, changes to watch for, and when to notify you. Ask your dot to confirm the recurring task and review its first result. Adding it to a channel or forwarding a message alone does not establish a monitoring schedule. This is a personal workflow; connected-app access, sharing permissions, and action approvals still apply.",

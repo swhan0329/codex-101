@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 10월 2일</strong><br/>
+  <strong>최종 업데이트: 2026년 10월 3일</strong><br/>
   페이지의 실제 수정일을 표시하며, 모델 안내에는 공식 출처와 확인 범위를 함께 제공합니다.
 </p>
 
@@ -21,6 +21,12 @@
 </p>
 
 ---
+
+## 10월 3일 · dot에 맡기고 Codex에서 검토
+
+반복 업무 하나에서 자료·완료 기준·실행 위치·검토 범위를 정하세요. Dominik의 개인 활용법과 공식 Activity 검토 절차를 추가했습니다. 자율 후속 확인과 저장된 반복 일정은 구분하며 모델·Power·요금 안내는 유지했습니다.
+
+[Dominik](https://x.com/dkundel/status/2106141525306397099) · [Dots · Tasks & memory](https://learn.chatgpt.com/docs/dots/tasks-and-memory) · [Dots · Controls](https://learn.chatgpt.com/docs/dots/controls)
 
 ## 10월 2일 · dot으로 Slack 후속 확인
 
