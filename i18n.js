@@ -1,6 +1,12 @@
 // i18n translation data
 const translations = {
     ko: {
+        changelog_oct6_d: "VB·Tibo의 Auto-review 무료 발표와 실제 선택 절차·검토 범위를 추가했습니다. iOS 작업·사용량 위젯과 CLI 0.160.1의 Windows 원격 MCP 수정도 반영했습니다. 모델·Power 추천은 유지합니다.",
+        changelog_oct6_t: "10월 6일 · Auto-review와 모바일 작업 확인",
+        auto6_tip_d: "VB는 긴 작업의 승인 대기를 줄이기 위해 Approve for me를 사용한다고 설명했습니다. 먼저 작업 범위와 완료 기준을 정하고 입력창 아래 권한 메뉴에서 실제 선택을 확인하세요. VB와 Tibo의 10월 6일 발표에 따르면 ChatGPT 로그인 사용자의 Auto-review 검토는 무료이며 플랜 사용량을 차감하지 않습니다. 주 작업의 사용량은 별도이며 API 키 과금으로 일반화하지 마세요. 검토 대상은 승인이 필요한 요청이고, 모든 동작을 검사하거나 위험을 없애는 기능은 아닙니다.",
+        auto6_tip_t: "긴 작업 전에 Approve for me 선택 확인",
+        auto6_d: "앱 입력창 아래 권한 메뉴에서 Approve for me를 선택하세요. 보이지 않으면 Settings > General > Permissions에서 Auto-review를 켠 뒤 해당 채팅에서 선택하세요. 설정에서 켜기만 하면 기존 채팅은 바뀌지 않습니다. sandbox 안의 일반 작업은 그대로 실행되고, 승인이 필요한 경계 밖 요청을 별도 에이전트가 검토합니다. 조직 정책과 Computer Use 앱 승인 조건은 유지됩니다. 거부되면 사유를 확인하고 더 안전한 대안이나 필요한 사용자 판단으로 이어가세요. 보안 보장은 아닙니다.",
+        auto6_t: "Auto-review · 승인 요청을 별도 에이전트가 검토",
         dotcoord_t: "반복 업무 하나를 dot에 맡기고 Codex에서 검토",
         dotcoord_d: "Dominik은 dot에 업무 조율을 맡기고 직접 함께 풀 문제는 Codex에서 진행하는 방식을 공유했습니다. 결과를 판단할 수 있는 반복 업무 하나를 골라 기존 처리 방식·자료·완료 기준을 알려주고 첫 결과를 함께 다듬으세요. 실행 위치와 스스로 처리할 범위, 검토받을 결정을 지정한 뒤 dot 프로필의 Activity에서 위임한 작업과 결과를 여세요. 로컬 작업은 연결한 컴퓨터와 앱이 켜져 있어야 하며, 클라우드 코딩 작업은 미리 만든 저장소 환경이 필요합니다. 개인 사용 경험이며 앱 권한과 승인 조건이 적용됩니다.",
         dotcoord_note: "진행 중인 업무는 dot이 스스로 멈췄다가 이어갈 수 있어 모든 후속 확인에 고정 일정이 필요한 것은 아닙니다. 정해진 시각에 반복할 일은 저장된 일정을 확인하세요. 사전 조사는 읽기와 제안이며, 메시지 발송·앱 수정 권한을 자동으로 부여하지 않습니다.",
@@ -12,7 +18,7 @@ const translations = {
         dotwatch_d: "Alexander는 중요한 Slack 메시지를 자신의 dot에 전달하고 “계속 챙겨 줘”라고 요청하는 방식을 공유했습니다. dot 프로필에서 Slack을 연결한 뒤, 확인할 채널·대상·변화 조건과 알림 시점을 지정하세요. 반복 작업이 설정됐는지 dot에 확인하고 첫 결과를 검토하세요. 채널에 추가하거나 메시지를 전달하는 것만으로 감시 일정이 생기지는 않습니다. 개인 사용 방식이며 연결된 앱의 접근 권한과 공유·작업 승인 조건이 적용됩니다.",
         dotwatch_t: "Slack 메시지를 dot에 전달해 후속 확인 맡기기",
         s6_updates_t: "CLI·SDK 업데이트는 공식 문서에서",
-        s6_updates_d: "CLI를 쓴다면 codex --version으로 설치 버전을 확인하세요. 10월 1일 공개된 0.160.0은 이전 작업 탐색과 재연결·권한 복원을 개선했습니다. 업데이트는 npm install -g @openai/codex@0.160.0을 사용하고 /model을 확인하세요. 플랫폼별 변경과 SDK 개발 방법은 공식 문서에서 확인하세요.",
+        s6_updates_d: "CLI를 쓴다면 codex --version으로 설치 버전을 확인하세요. 10월 5일 공개된 0.160.1은 원격 환경 변수를 지정한 stdio MCP 실행에서 Windows 실행기의 SYSTEMROOT·TEMP·TMP를 유지하도록 수정했습니다. 해당 구성이 필요하면 npm install -g @openai/codex@0.160.1로 업데이트한 뒤 MCP 연결을 다시 확인하세요. 플랫폼별 상세 변경은 공식 문서에서 확인하세요.",
         home_document_title: "Codex 101 — 데스크톱 앱 사용 가이드",
         home_description: "ChatGPT 데스크톱 앱의 Codex를 설치하고 프로젝트·모델·권한·결과 검토·예약 작업을 익히는 한영 가이드입니다. CLI·IDE·플러그인은 기본 개념과 공식 문서 연결로 소개합니다.",
         guide_scope_title: "이 가이드의 범위",
@@ -141,8 +147,8 @@ const translations = {
 
         changelog_sep20_d: "CLI 0.155.1의 추론 요약 기본값을 정정하고, iOS 1.2026.251의 프로젝트 설정 기억·작성 블록·대기 프롬프트 확인 절차를 추가했습니다.",
         changelog_sep20_t: "9월 20일 · CLI 요약 기본값과 iOS 작업 확인",
-        ios251_d: "9월 23일 업데이트는 홈을 새로 구성하고 iPad 가로 화면에서 작업 목록과 열린 작업을 나란히 보여 줍니다. 중첩 Git 저장소의 변경도 탐색할 수 있습니다. 사이드 채팅으로 옮긴 첨부·선택 텍스트·리뷰 댓글과 새 작업의 연결 컴퓨터·checkout을 확인하세요. 대기 프롬프트 시작 시 응답 누락, 잘못된 기기 시계와 Mac·Linux SSH 연결로 인한 페어링 문제도 수정됐습니다. 저장소와 실행은 연결된 컴퓨터에 남습니다.",
-        ios251_t: "iOS 1.2026.258 · 분할 화면과 작업 맥락",
+        ios251_d: "10월 2일 업데이트는 홈 화면에 선택한 컴퓨터의 최근 작업 위젯, 홈·잠금 화면에 잔여 사용량과 초기화 시각 위젯을 추가했습니다. 위젯을 추가한 뒤 대상 컴퓨터와 작업을 확인하세요. 대기 프롬프트를 취소하면 복구 가능한 텍스트·첨부가 입력창으로 돌아옵니다. 다시 보내기 전에 내용을 검토하세요. 새 worktree는 컴퓨터에 설정된 저장 위치를 따릅니다. 저장소와 실행은 연결된 컴퓨터에 남습니다.",
+        ios251_t: "iOS 1.2026.267 · 작업·사용량 위젯",
         spark_status_t: "Spark · 종료됨",
         changelog_sep19_d: "공식 9월 14일 Spark 종료에 맞춰 모델·요금·FAQ·실행 안내를 정정하고, VB의 다중 계정 팁과 Apple Messages의 Apple Silicon 빌드 조건을 반영했습니다.",
         changelog_sep19_t: "9월 19일 · Spark 종료와 플러그인 계정 선택",
@@ -1169,6 +1175,12 @@ const translations = {
     },
 
     en: {
+        changelog_oct6_d: "Added VB and Tibo’s free Auto-review announcement, selection steps, and review scope. Updated iOS task/usage widgets and the CLI 0.160.1 Windows remote MCP fix. Model and Power recommendations are unchanged.",
+        changelog_oct6_t: "October 6 · Auto-review and mobile task checks",
+        auto6_tip_d: "VB describes using Approve for me to reduce approval interruptions during long tasks. Define the scope and completion criteria, then check the actual selection below the composer. According to VB and Tibo’s October 6 announcement, Auto-review reviews are free with ChatGPT sign-in and do not draw from plan usage. The main task still uses its applicable allowance; do not extend this claim to API-key billing. Review covers requests that need approval, not every action, and does not eliminate risk.",
+        auto6_tip_t: "Check Approve for me before a long task",
+        auto6_d: "Choose Approve for me in the permissions menu below the composer. If it is missing, enable Auto-review in Settings > General > Permissions, then select it in the chat. Enabling its visibility does not change existing chats. Routine sandboxed work continues normally; a separate agent reviews boundary-crossing requests that need approval. Organization policy and Computer Use app approvals still apply. After a denial, review the reason and use a safer alternative or obtain the necessary user decision. It is not a security guarantee.",
+        auto6_t: "Auto-review · A separate agent reviews approval requests",
         dotcoord_t: "Delegate one recurring workflow, review it in Codex",
         dotcoord_d: "Dominik describes letting his dot coordinate work while using Codex for problems he wants to work through directly. Pick one recurring workflow whose results you can judge. Show how you handle it, provide sources and completion criteria, and refine the first result together. Specify where it should run, what it may handle, and which decisions need review; open delegated tasks and results in Activity in your dot’s profile. Local work requires the connected computer and app to stay on; cloud coding needs a repository environment set up beforehand. This is a personal workflow; app permissions and action approvals still apply.",
         dotcoord_note: "For ongoing work, a dot can pause and wake up to continue, so every follow-up does not need a fixed schedule. Confirm a saved schedule for work at recurring times. Proactive research reads and suggests; it does not automatically authorize sending messages or changing apps.",
@@ -1180,7 +1192,7 @@ const translations = {
         dotwatch_d: "Alexander shares a workflow of forwarding an important Slack message to his dot and asking it to “Stay on top of this.” Connect Slack in your dot’s profile, then specify the channels, items, changes to watch for, and when to notify you. Ask your dot to confirm the recurring task and review its first result. Adding it to a channel or forwarding a message alone does not establish a monitoring schedule. This is a personal workflow; connected-app access, sharing permissions, and action approvals still apply.",
         dotwatch_t: "Forward a Slack message to your dot for follow-up",
         s6_updates_t: "Check CLI and SDK updates in the official docs",
-        s6_updates_d: "If you use the CLI, check codex --version. Version 0.160.0, released October 1, improves older-task browsing, reconnection, and permission restoration. Update with npm install -g @openai/codex@0.160.0 and check /model. See the official documentation for platform-specific changes and SDK development.",
+        s6_updates_d: "If you use the CLI, check codex --version. Version 0.160.1, released October 5, preserves the Windows executor’s SYSTEMROOT, TEMP, and TMP when launching remote stdio MCP servers with explicit remote environment variables. For that setup, update with npm install -g @openai/codex@0.160.1 and recheck the MCP connection. See the official notes for platform-specific details.",
         home_document_title: "Codex 101 — Desktop App Guide",
         home_description: "A bilingual guide to Codex in the ChatGPT desktop app: installation, projects, models, permissions, review, and scheduled tasks. CLI, IDE, and plugins are introduced with basic concepts and links to official docs.",
         guide_scope_title: "What this guide covers",
@@ -1308,8 +1320,8 @@ const translations = {
 
         changelog_sep20_d: "Corrected the CLI 0.155.1 reasoning-summary default and added iOS 1.2026.251 steps for remembered project settings, writing blocks, and queued prompts.",
         changelog_sep20_t: "September 20 · CLI summary defaults and iOS task checks",
-        ios251_d: "The September 23 update redesigns Home and keeps the task list beside the open task on iPad in landscape. You can browse changes in nested Git repositories. Check attachments, selected text, and review comments carried into side chats, plus the connected computer and checkout for new tasks. Fixes address incomplete replies when queued prompts start and pairing failures involving device clocks or Mac/Linux SSH connections. The repository and execution remain on the connected computer.",
-        ios251_t: "iOS 1.2026.258 · Split view and task context",
+        ios251_d: "The October 2 update adds Home Screen widgets for recent tasks on selected computers, plus Home and Lock Screen widgets for remaining usage and reset times. After adding a widget, check its computer and task. Canceling a queued prompt returns recoverable text and attachments to the composer; review them before resending. New worktrees follow the computer’s configured storage location. The repository and execution remain on the connected computer.",
+        ios251_t: "iOS 1.2026.267 · Task and usage widgets",
         spark_status_t: "Spark · Retired",
         changelog_sep19_d: "Corrected model, pricing, FAQ, and launch guidance for the official September 14 Spark retirement; added VB’s multi-account tip and the Apple Silicon build requirement for Apple Messages.",
         changelog_sep19_t: "September 19 · Spark retirement and plugin account selection",

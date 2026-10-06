@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 10월 3일</strong><br/>
+  <strong>최종 업데이트: 2026년 10월 6일</strong><br/>
   페이지의 실제 수정일을 표시하며, 모델 안내에는 공식 출처와 확인 범위를 함께 제공합니다.
 </p>
 
@@ -21,6 +21,14 @@
 </p>
 
 ---
+
+## 10월 6일 · Auto-review와 모바일 작업 확인
+
+입력창 아래에서 Approve for me를 선택하세요. 필요하면 Settings > General > Permissions에서 Auto-review를 먼저 켜세요. VB·Tibo는 ChatGPT 로그인 사용자의 검토가 무료이며 플랜 사용량을 차감하지 않는다고 발표했습니다. 주 작업 사용량은 별도입니다. 공식 문서에 따라 sandbox 경계·승인 요청·조직 정책·앱 승인 조건을 함께 정리했습니다.
+
+iOS 1.2026.267의 작업·사용량 위젯, 대기 프롬프트 복구와 worktree 저장 위치를 반영했습니다. 짧은 CLI 참고는 0.160.1의 Windows 원격 MCP 환경 수정으로 갱신했으며 모델·Power 추천은 유지했습니다.
+
+[VB](https://x.com/reach_vb/status/2107495364760609158) · [Tibo](https://x.com/thsottiaux/status/2107368734981517634) · [Auto-review](https://learn.chatgpt.com/docs/sandboxing/auto-review) · [Changelog](https://learn.chatgpt.com/docs/changelog)
 
 ## 10월 3일 · dot에 맡기고 Codex에서 검토
 

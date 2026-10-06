@@ -11,12 +11,20 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: October 3, 2026</strong><br/>
+  <strong>Last updated: October 6, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
 
 ---
+
+## October 6 · Auto-review and mobile task checks
+
+Choose Approve for me below the composer; if needed, enable Auto-review in Settings > General > Permissions first. VB and Tibo announced that reviews are free with ChatGPT sign-in and do not draw from plan usage. Main-task usage remains separate. Official docs clarify the sandbox boundary, eligible approval requests, organization policy, and app-level approval limits.
+
+Updated iOS 1.2026.267 task/usage widgets, queued-prompt recovery, and worktree storage guidance; the compact CLI reference now covers 0.160.1’s Windows remote MCP environment fix. Model and Power recommendations are unchanged.
+
+[VB](https://x.com/reach_vb/status/2107495364760609158) · [Tibo](https://x.com/thsottiaux/status/2107368734981517634) · [Auto-review](https://learn.chatgpt.com/docs/sandboxing/auto-review) · [Changelog](https://learn.chatgpt.com/docs/changelog)
 
 ## October 3 · Delegate to your dot, review in Codex
 
