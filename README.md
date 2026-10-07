@@ -11,12 +11,18 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: October 6, 2026</strong><br/>
+  <strong>Last updated: October 7, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
 
 ---
+
+## October 7 · CLI, iOS, and meeting follow-ups
+
+CLI 0.161.0 updates Sol 6.1 catalog defaults, in-session MCP login, and Daybreak opt-in. iOS 1.2026.272 improves task links and worktree consistency. Added Alexander’s Meetings workflow: review notes and next steps in Space before requesting follow-up drafts. The official announcement limits the beta to Pro and Business on macOS; Enterprise is coming later. Power and credit guidance are unchanged.
+
+[Changelog](https://learn.chatgpt.com/docs/changelog) · [Alexander](https://x.com/embirico/status/2107588722539823342) · [Meetings beta](https://x.com/ChatGPT/status/2107567930557026653)
 
 ## October 6 · Auto-review and mobile task checks
 

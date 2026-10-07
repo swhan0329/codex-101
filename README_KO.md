@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 10월 6일</strong><br/>
+  <strong>최종 업데이트: 2026년 10월 7일</strong><br/>
   페이지의 실제 수정일을 표시하며, 모델 안내에는 공식 출처와 확인 범위를 함께 제공합니다.
 </p>
 
@@ -21,6 +21,12 @@
 </p>
 
 ---
+
+## 10월 7일 · CLI·iOS와 회의 후속 작업
+
+CLI 0.161.0의 Sol 6.1 카탈로그 기본값·세션 내 MCP 로그인·Daybreak opt-in과 iOS 1.2026.272의 작업 링크·worktree 개선을 반영했습니다. Alexander의 Meetings 활용법은 Space의 요약·다음 단계를 검토하고 후속 초안을 요청하는 절차로 정리했습니다. 공식 발표 기준 macOS Pro·Business 베타이며 Enterprise는 예정입니다. Power·크레딧 안내는 유지했습니다.
+
+[Changelog](https://learn.chatgpt.com/docs/changelog) · [Alexander](https://x.com/embirico/status/2107588722539823342) · [Meetings beta](https://x.com/ChatGPT/status/2107567930557026653)
 
 ## 10월 6일 · Auto-review와 모바일 작업 확인
 
