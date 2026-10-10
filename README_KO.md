@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 10월 7일</strong><br/>
+  <strong>최종 업데이트: 2026년 10월 10일</strong><br/>
   페이지의 실제 수정일을 표시하며, 모델 안내에는 공식 출처와 확인 범위를 함께 제공합니다.
 </p>
 
@@ -21,6 +21,14 @@
 </p>
 
 ---
+
+## 10월 10일 · Sol Ultrafast·모바일 dot·입력 예측
+
+6.1 Sol Ultrafast의 플랜·지역·사용량을 반영하고 모바일 dot 생성·Codex 후속 작업 안내를 갱신했습니다. Pro 입력 예측 베타와 Windows MXC 조건을 추가했습니다.
+
+Sol 6.1 Ultrafast는 Standard 대비 구독 포함 한도 8배·구매 크레딧 및 Enterprise 종량제 6배를 사용합니다. 추론 지역 고정은 Sol의 미국·유럽, Astra의 미국 지원을 구분합니다. 추천 모델과 Power 안내는 유지합니다.
+
+[Speed](https://learn.chatgpt.com/docs/agent-configuration/speed#ultrafast-mode) · [Mobile dots](https://learn.chatgpt.com/docs/whats-new/dots-october-9-2026) · [Tibo](https://x.com/thsottiaux/status/2108645667451318747) · [Windows sandbox](https://learn.chatgpt.com/docs/windows/windows-sandbox)
 
 ## 10월 7일 · CLI·iOS와 회의 후속 작업
 

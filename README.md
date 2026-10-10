@@ -11,12 +11,20 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: October 7, 2026</strong><br/>
+  <strong>Last updated: October 10, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
 
 ---
+
+## October 10 · Sol Ultrafast, mobile dots, and composer predictions
+
+Updated Sol 6.1 Ultrafast plans, regions, and usage; mobile dot setup and Codex follow-ups; Pro composer predictions beta; and Windows MXC requirements.
+
+Sol 6.1 Ultrafast uses included limits at 8x and purchased credits/Enterprise pay-as-you-go at 6x Standard. Sol supports US and Europe inference residency; Astra remains US-only. Model recommendations and Power presets are unchanged.
+
+[Speed](https://learn.chatgpt.com/docs/agent-configuration/speed#ultrafast-mode) · [Mobile dots](https://learn.chatgpt.com/docs/whats-new/dots-october-9-2026) · [Tibo](https://x.com/thsottiaux/status/2108645667451318747) · [Windows sandbox](https://learn.chatgpt.com/docs/windows/windows-sandbox)
 
 ## October 7 · CLI, iOS, and meeting follow-ups
 
