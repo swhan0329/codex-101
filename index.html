@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="style.css?v=20261001-app-guide-compact" />
 </head>
 
-<body data-page="home" data-updated="2026-10-10">
+<body data-page="home" data-updated="2026-10-12">
     <!-- Language Toggle -->
     <nav class="top-bar">
         <div class="top-bar-inner">
@@ -51,7 +51,7 @@
                     <p class="hero-badge">
                         <span data-i18n="hero_badge_prefix">앱 사용법 중심 · 공식 문서 기반</span>
                         <span aria-hidden="true"> · </span>
-                        <span class="live-date" data-date-format="long">2026년 10월 10일</span>
+                        <span class="live-date" data-date-format="long">2026년 10월 12일</span>
                     </p>
                     <h1 class="hero-title" data-i18n="hero_title"><span class="hero-title-lead">앱으로 시작하는</span><span class="hero-title-focus">Codex 실무 가이드</span></h1>
                     <p class="hero-sub" data-i18n="hero_sub"><span class="hero-sub-lead">ChatGPT 데스크톱 앱에서 설치부터 첫 작업, 검토와 예약 실행까지.</span><span class="hero-sub-detail">CLI·IDE·플러그인은 기본 개념과 시작점을 소개하고, 상세 명령과 개발 방법은 공식 문서로 연결합니다.</span></p>
@@ -326,7 +326,7 @@
                 <blockquote data-i18n="s1_philosophy">"코드를 쓰는 도구 → 작업을 끝내는 에이전트"</blockquote>
                 <p data-i18n="s1_desc">지금 사용 방식에 영향을 주는 변화 세 가지만 먼저 확인하세요. 모델·요금·설정의 자세한 설명은 각 장에서 볼 수 있습니다.</p>
                 <h3 data-i18n="s1_timeline_title">지금 확인할 변화</h3>
-                <p class="command-refs" data-i18n="s1_checked">공식 문서 확인 · 2026년 10월 10일</p>
+                <p class="command-refs" data-i18n="s1_checked">공식 문서 확인 · 2026년 10월 12일</p>
                 <!-- Keep at most three current, actionable highlights. Replace rather than append;
                      verify official sources and the checked date. Preserve earlier milestones below. -->
                 <div class="tip-grid current-updates" id="current-updates">
@@ -648,6 +648,7 @@
                     </div>
                 </div>
                 <div class="callout">
+                    <p class="command-refs"><a href="#context12" data-i18n="context12_short">10월 12일 Tibo 발표: Codex·Work의 GPT-6.1 Sol 기본 컨텍스트 500k. 긴 작업 전 기존 컨텍스트 설정과 실제 모델을 확인하세요.</a></p>
                     <p data-i18n="s3_other_note">GPT-5.6 Sol·Terra·Luna는 새 모델 배포 중에도 제공되는 이전 선택지입니다. GPT-5.4·mini의 ChatGPT 로그인 Codex 은퇴일은 2026년 8월 31일입니다. 현재 접근 가능한 GPT-6 Sol·Luna로 전환하세요. GPT-5.5는 10월 14일 종료 예정입니다. Plus·Pro·Business·Enterprise·Edu는 Sol, Free·Go는 데스크톱 Luna를 확인하세요. API 키 사용은 별도 제공 범위를 따릅니다. 현재 Codex는 wire_api = 'chat' 또는 Chat Completions 전용 endpoint를 지원하지 않습니다. custom provider·gateway에는 호환되는 Responses API endpoint를 사용하세요.</p>
                 </div>
 
@@ -994,7 +995,7 @@ codex --cd /path/to/project
 
 <div class="callout" id="cli155">
                     <h3 data-i18n="s6_updates_t">CLI·SDK 업데이트는 공식 문서에서</h3>
-                    <p data-i18n="s6_updates_d">CLI는 codex --version으로 확인하고 npm install -g @openai/codex@0.161.0로 업데이트하세요. 10월 7일 버전은 기본·Amazon Bedrock 카탈로그에서 GPT-6.1 Sol을 기본값으로 사용합니다. /model에서 실제 선택과 접근 가능 여부를 확인하고, 활성 세션에서 /mcp login &lt;name&gt;으로 MCP 서버에 로그인할 수 있습니다. 카탈로그 기본값은 계정·조직 접근 권한을 부여하지 않습니다.</p>
+                    <p data-i18n="s6_updates_d">CLI는 codex --version으로 확인하고 npm install -g @openai/codex@0.162.1로 업데이트하세요. 10월 9일 패치는 여러 줄 질문의 TUI 충돌과 background server의 기능 설정 차이로 인한 시작 실패를 수정했습니다. 0.162.0부터 /copy로 대화 블록을 탐색·복사할 수 있고 tui.mouse_scroll_speed로 스크롤을 조절합니다. /model에서 실제 모델·접근을 확인하고, 활성 세션의 MCP 로그인은 /mcp login &lt;name&gt;을 사용하세요.</p>
                     <p data-i18n="cli161_daybreak">CLI 0.161.0의 Daybreak는 별도 opt-in입니다. 승인된 작업에서 codex --enable cli_daybreak 또는 features.cli_daybreak=true를 사용해야 하며 daybreak=true만으로는 켜지지 않습니다. 기본 상태에서는 /daybreak와 자동 Cyber 라우팅이 숨겨집니다. 활성화해도 적격 ChatGPT 로그인·OpenAI provider·모델/프로그램 지원이 필요합니다. codex exec --cyber-access-program의 명시적 실행별 선택은 이 기능이 꺼져 있어도 별도로 가능하며 저장된 선택은 바꾸지 않습니다.</p>
                     <p class="command-refs"><a href="https://learn.chatgpt.com/docs/changelog" target="_blank" rel="noopener noreferrer">CLI Changelog</a> · <a href="https://learn.chatgpt.com/docs/codex-sdk" target="_blank" rel="noopener noreferrer">Codex SDK</a></p>
                 </div>
@@ -2374,6 +2375,7 @@ codex --search "optimize with Next.js 15"
                 <p data-i18n="field_tips_intro">OpenAI Codex, Developer Experience, 데이터/보안/제품 담당자들이 공개적으로 공유한 실전 사용법을 사람별 원글 링크와 함께 정리했습니다. 제품의 사용 가능 여부와 설정 절차는 아래 공식 문서 링크를 함께 확인하세요.</p>
                 <p class="command-refs"><a href="https://x.com/pvncher/status/2098488444443939186" target="_blank" rel="noopener noreferrer">Eric · /feedback</a> · <a href="https://learn.chatgpt.com/docs/reference/troubleshooting#feedback-and-logs" target="_blank" rel="noopener noreferrer">Feedback &amp; logs</a></p>
 <div class="field-tip-grid">
+<article id="context12" class="field-tip-card" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><span class="field-tip-person">Tibo · 2026-10-12</span><h3 data-i18n="context12_t">긴 Sol 작업 전에 컨텍스트 설정 확인</h3><p data-i18n="context12_d">Tibo는 10월 12일 Codex·Work의 GPT-6.1 Sol 기본 컨텍스트를 272k에서 500k 토큰으로 늘렸다고 발표했습니다. 긴 작업의 맥락 유지와 compaction 감소를 위한 변경이라는 설명입니다. 새 작업에서 Advanced 또는 /model로 gpt-6.1-sol 선택을 확인하고, 기존 model_context_window·model_auto_compact_token_limit 사용자 설정이 남아 있는지 점검하세요. 먼저 기본값으로 같은 작업을 비교하고 필요한 자료·완료 기준을 분명히 제공하세요. 발표만으로 모든 계정·클라이언트의 실제 적용을 확인한 것은 아닙니다.</p><p data-i18n="context12_cost">Tibo의 후속 설명은 구독 사용량에서 GPT-6.1 Sol의 장문 추가 요금을 부과하지 않는다는 범위입니다. 작업 전체가 무료라는 뜻은 아니며 API·구매 크레딧 요율로 확대하지 마세요. 실제 사용량은 대시보드에서 확인하세요.</p><p class="command-refs"><a href="https://x.com/thsottiaux/status/2109430343346581527" target="_blank" rel="noopener noreferrer">Tibo · 500k</a> · <a href="https://x.com/thsottiaux/status/2109430894604026039" target="_blank" rel="noopener noreferrer">Tibo · Subscription</a> · <a href="https://learn.chatgpt.com/docs/config-file/config-reference" target="_blank" rel="noopener noreferrer">OpenAI · Config</a></p></article>
 <article id="predict10" class="field-tip-card" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><span class="field-tip-person">Tibo · 2026-10-09</span><h3 data-i18n="predict10_t">입력 예측은 다음 요청의 초안으로 검토</h3><p data-i18n="predict10_d">Tibo는 10월 9일 데스크톱 입력 예측이 Pro에 포함되며 사용량을 소모하지 않는다고 설명했습니다. OpenAI Developers는 Pro 대상 베타로 발표했습니다. 제안이 보이면 대상 파일·실행 범위·완료 기준을 확인하고 필요한 부분을 고친 뒤 보내세요. 대화와 말투를 바탕으로 한 제안이며, 제안 기능의 사용량 설명을 실제 작업 실행의 무료 제공으로 해석하지 마세요.</p><p class="command-refs"><a href="https://x.com/thsottiaux/status/2108645667451318747" target="_blank" rel="noopener noreferrer">X · 2026-10-09</a> · <a href="https://x.com/OpenAIDevs/status/2108624138369929725" target="_blank" rel="noopener noreferrer">OpenAI Developers · Beta</a></p></article>
 <article id="dotmobile10" class="field-tip-card" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><span class="field-tip-person">Dominik Kundel · 2026-10-09</span><h3 data-i18n="dotmobile10_t">모바일 dot에서 기존 Codex 작업 이어가기</h3><p data-i18n="dotmobile10_d">Dominik은 모바일에서 dot을 만들고 Codex 작업 맥락을 이어가는 업데이트를 소개했습니다. 최신 ChatGPT 모바일 앱에서 이름·외형·플러그인을 설정한 뒤 이어갈 Codex 대화와 다음 할 일을 지정하세요. 공식 문서는 기존 대화·자동화 맥락 활용과 Work 자동화 읽기·수정을 지원한다고 설명합니다. 결과와 저장된 일정은 다시 확인하세요. Dots의 플랜·지역·권한 조건이 적용되며 로컬 실행에는 연결된 컴퓨터가 필요합니다.</p><p class="command-refs"><a href="https://x.com/dkundel/status/2108638806585061774" target="_blank" rel="noopener noreferrer">X · 2026-10-09</a> · <a href="https://learn.chatgpt.com/docs/whats-new/dots-october-9-2026" target="_blank" rel="noopener noreferrer">OpenAI · Mobile dots</a></p></article>
 <article id="meetings-followup" class="field-tip-card" style="scroll-margin-top: 140px; word-break: keep-all; overflow-wrap: anywhere"><span class="field-tip-person">Alexander Embiricos · 2026-10-06</span><h3 data-i18n="meet7_t">회의 요약을 dot의 후속 작업 맥락으로</h3><p data-i18n="meet7_d">Alexander는 Meetings 플러그인으로 dot에 회의 맥락을 제공하고 후속 업무를 챙긴다고 설명했습니다. 10월 6일 공식 발표 기준 macOS ChatGPT 데스크톱 앱의 Pro·Business 사용자 대상 베타이며 Enterprise는 예정입니다. 플러그인 디렉터리에서 Meetings를 찾아 사용 가능 여부를 확인하세요. ChatGPT Space에 저장된 요약·다음 단계를 검토하고, 비공개 유지 또는 팀 공유 범위를 정한 뒤 프로젝트 계획 수정이나 후속 메시지 초안을 요청하세요. 개인 활용 사례이며 요약 저장은 메시지 발송 완료를 뜻하지 않습니다.</p><p class="command-refs"><a href="https://x.com/embirico/status/2107588722539823342" target="_blank" rel="noopener noreferrer">Alexander · Meetings</a> · <a href="https://x.com/ChatGPT/status/2107567930557026653" target="_blank" rel="noopener noreferrer">ChatGPT · Meetings beta</a></p></article>
@@ -2610,10 +2612,11 @@ codex --search "optimize with Next.js 15"
                     </div>
                     <p class="overview-fact-date">
                         <span data-i18n="overview_fact_date_prefix">업데이트 기준일</span>
-                        <span class="live-date" data-date-format="long">2026년 10월 10일</span>
+                        <span class="live-date" data-date-format="long">2026년 10월 12일</span>
                     </p>
                 </div>
                 <ol class="changelog-list" aria-label="Recent update summary">
+<li><strong data-i18n="changelog_oct12_t">10월 12일 · Sol 컨텍스트 발표와 CLI 패치</strong><span data-i18n="changelog_oct12_d">Tibo의 Sol 500k 기본 컨텍스트 발표와 구독 장문 요금 설명을 출처·적용 범위와 함께 추가했습니다. CLI 업데이트 안내는 0.162.1로 갱신했습니다.</span></li>
 <li><strong data-i18n="changelog_oct10_t">10월 10일 · Sol Ultrafast·모바일 dot·입력 예측</strong><span data-i18n="changelog_oct10_d">6.1 Sol Ultrafast의 플랜·지역·사용량을 반영하고 모바일 dot 생성·Codex 후속 작업 안내를 갱신했습니다. Pro 입력 예측 베타와 Windows MXC 조건을 추가했습니다.</span></li>
 <li><strong data-i18n="changelog_oct7_t">10월 7일 · CLI·iOS와 회의 후속 작업</strong><span data-i18n="changelog_oct7_d">CLI 0.161.0의 Sol 6.1 기본값·MCP 로그인·Daybreak opt-in, iOS 1.2026.272의 작업 링크·worktree 개선을 반영했습니다. Alexander의 Meetings 활용법을 macOS Pro·Business 베타 범위와 함께 추가했습니다.</span></li>
 <li><strong data-i18n="changelog_oct6_t">10월 6일 · Auto-review와 모바일 작업 확인</strong><span data-i18n="changelog_oct6_d">VB·Tibo의 Auto-review 무료 발표와 실제 선택 절차·검토 범위를 추가했습니다. iOS 작업·사용량 위젯과 CLI 0.160.1의 Windows 원격 MCP 수정도 반영했습니다. 모델·Power 추천은 유지합니다.</span></li>
@@ -2709,13 +2712,13 @@ codex --search "optimize with Next.js 15"
                     href="https://github.com/swhan0329/codex-101" target="_blank">PR을 환영합니다</a>.</p>
             <p class="footer-meta">
                 <span data-i18n="footer_date_prefix">최종 업데이트</span>:
-                        <span class="live-date" data-date-format="long">2026년 10월 10일</span>
+                        <span class="live-date" data-date-format="long">2026년 10월 12일</span>
             </p>
             <p class="footer-meta">Made by <a href="https://github.com/swhan0329" target="_blank">@swhan0329</a></p>
         </div>
     </footer>
 
-    <script src="i18n.js?v=20261010-sol-ultrafast-dots"></script>
+    <script src="i18n.js?v=20261012-sol-context-cli162"></script>
     <script src="app.js?v=20261001-app-guide-compact"></script>
 </body>
 

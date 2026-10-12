@@ -11,12 +11,20 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: October 10, 2026</strong><br/>
+  <strong>Last updated: October 12, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
 
 ---
+
+## October 12 · Sol context announcement and CLI patch
+
+Added Tibo’s Sol 500k default-context announcement and subscription long-context clarification with attribution and scope. Updated CLI guidance to 0.162.1.
+
+Tibo’s follow-up says GPT-6.1 Sol has no long-context surcharge when drawing from subscription usage. This does not make the whole task free or establish API or purchased-credit rates. Check actual usage in the dashboard.
+
+[Context announcement](https://x.com/thsottiaux/status/2109430343346581527) · [Subscription clarification](https://x.com/thsottiaux/status/2109430894604026039) · [CLI changelog](https://learn.chatgpt.com/docs/changelog)
 
 ## October 10 · Sol Ultrafast, mobile dots, and composer predictions
 

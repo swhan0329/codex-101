@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 10월 10일</strong><br/>
+  <strong>최종 업데이트: 2026년 10월 12일</strong><br/>
   페이지의 실제 수정일을 표시하며, 모델 안내에는 공식 출처와 확인 범위를 함께 제공합니다.
 </p>
 
@@ -21,6 +21,14 @@
 </p>
 
 ---
+
+## 10월 12일 · Sol 컨텍스트 발표와 CLI 패치
+
+Tibo의 Sol 500k 기본 컨텍스트 발표와 구독 장문 요금 설명을 출처·적용 범위와 함께 추가했습니다. CLI 업데이트 안내는 0.162.1로 갱신했습니다.
+
+Tibo의 후속 설명은 구독 사용량에서 GPT-6.1 Sol의 장문 추가 요금을 부과하지 않는다는 범위입니다. 작업 전체가 무료라는 뜻은 아니며 API·구매 크레딧 요율로 확대하지 마세요. 실제 사용량은 대시보드에서 확인하세요.
+
+[Context announcement](https://x.com/thsottiaux/status/2109430343346581527) · [Subscription clarification](https://x.com/thsottiaux/status/2109430894604026039) · [CLI changelog](https://learn.chatgpt.com/docs/changelog)
 
 ## 10월 10일 · Sol Ultrafast·모바일 dot·입력 예측
 
