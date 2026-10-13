@@ -1,6 +1,13 @@
 // i18n translation data
 const translations = {
     ko: {
+        workflow13_t: "Sol·Cloud·평가를 나눠 구성하기",
+        workflow13_d: "VB는 10월 13일 자신의 구성을 Sol 6.1 High, Cloud 환경 우선, dot의 작업 조율, 평가용 codex exec, 기본 Codex 앱으로 소개했습니다. High와 Cloud 우선은 개인 선택입니다. 내 계정의 기본 추론 강도에서 시작해 같은 입력·완료 기준으로 비교하세요.",
+        workflow13_steps: "따라 하기: Work in → Cloud에서 게시된 환경을 선택하고 작은 저장소 작업 하나를 검증하세요. dot을 쓸 수 있다면 이어갈 작업과 완료 기준을 지정하세요. 반복 평가는 별도로 고정된 입력·판정 기준을 준비해 codex exec로 실행하고 --json 이벤트 기록이나 -o 최종 결과를 보관하세요. 평가 도구의 응답도 실제 테스트 결과와 대조하세요.",
+        workflow13_limits: "모델·Dots의 플랜·지역·관리자 조건은 각각 적용됩니다. Codex Cloud 환경은 현재 Computer/Browser Use를 지원하지 않고 개인 로컬 스킬도 동기화하지 않습니다. 기본 앱 구성이라는 경험담을 모든 작업에 확장이 불필요하다는 뜻으로 확대하지 마세요.",
+        changelog_oct13_t: "10월 13일 · Sol·Cloud·평가 구성 사례",
+        changelog_oct13_d: "VB의 개인 작업 구성을 따라 해 볼 절차와 Cloud 제약, 평가 기록 보관 방법으로 정리했습니다. 공식 모델·Power·요금·CLI 안내는 유지합니다.",
+
         context12_t: "긴 Sol 작업 전에 컨텍스트 설정 확인",
         context12_d: "Tibo는 10월 12일 Codex·Work의 GPT-6.1 Sol 기본 컨텍스트를 272k에서 500k 토큰으로 늘렸다고 발표했습니다. 긴 작업의 맥락 유지와 compaction 감소를 위한 변경이라는 설명입니다. 새 작업에서 Advanced 또는 /model로 gpt-6.1-sol 선택을 확인하고, 기존 model_context_window·model_auto_compact_token_limit 사용자 설정이 남아 있는지 점검하세요. 먼저 기본값으로 같은 작업을 비교하고 필요한 자료·완료 기준을 분명히 제공하세요. 발표만으로 모든 계정·클라이언트의 실제 적용을 확인한 것은 아닙니다.",
         context12_cost: "Tibo의 후속 설명은 구독 사용량에서 GPT-6.1 Sol의 장문 추가 요금을 부과하지 않는다는 범위입니다. 작업 전체가 무료라는 뜻은 아니며 API·구매 크레딧 요율로 확대하지 마세요. 실제 사용량은 대시보드에서 확인하세요.",
@@ -1194,6 +1201,13 @@ const translations = {
     },
 
     en: {
+        workflow13_t: "Separate Sol, Cloud, and evaluation work",
+        workflow13_d: "On October 13, VB shared his setup: Sol 6.1 High, a preference for Cloud environments, a dot coordinating work, codex exec for evaluations, and the standard Codex app. High and Cloud-first are his choices. Start at your account’s default reasoning effort and compare the same inputs and completion criteria.",
+        workflow13_steps: "Try it: choose a published environment under Work in → Cloud and verify one small repository task. If you have access to a dot, specify the task to continue and its completion criteria. For repeatable evaluations, prepare fixed inputs and grading criteria separately, run codex exec, and retain --json event logs or the final result with -o. Check the evaluator’s response against actual test results.",
+        workflow13_limits: "Model and Dots plan, region, and administrator conditions apply separately. Codex Cloud environments currently do not support Computer/Browser Use or sync personal local skills. His standard-app setup does not establish that extensions are unnecessary for every task.",
+        changelog_oct13_t: "October 13 · Sol, Cloud, and evaluation setup",
+        changelog_oct13_d: "Turned VB’s personal setup into steps to try, with Cloud limitations and evaluation output capture. Official model, Power, pricing, and CLI guidance are unchanged.",
+
         context12_t: "Check context settings before long Sol tasks",
         context12_d: "On October 12, Tibo announced an increase in the default GPT-6.1 Sol context in Codex and Work from 272k to 500k tokens, intended to retain context and reduce compaction during long tasks. In a new task, check gpt-6.1-sol in Advanced or /model and review any existing model_context_window or model_auto_compact_token_limit overrides. Compare the same task at the default first, with relevant sources and clear completion criteria. The announcement does not verify the effective setting in every account or client.",
         context12_cost: "Tibo’s follow-up says GPT-6.1 Sol has no long-context surcharge when drawing from subscription usage. This does not make the whole task free or establish API or purchased-credit rates. Check actual usage in the dashboard.",

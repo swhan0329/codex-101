@@ -11,12 +11,18 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: October 12, 2026</strong><br/>
+  <strong>Last updated: October 13, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
 
 ---
+
+## October 13 · Sol, Cloud, and evaluation setup
+
+Added VB’s personal setup with steps for a published Cloud environment and repeatable evaluation output. His High setting is not a universal default. Cloud environments currently lack Computer/Browser Use and do not sync personal local skills. Model, Power, pricing, and CLI guidance are unchanged.
+
+[VB](https://x.com/reach_vb/status/2109774963666526270) · [Cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environments) · [codex exec](https://learn.chatgpt.com/docs/non-interactive-mode)
 
 ## October 12 · Sol context announcement and CLI patch
 

@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 10월 12일</strong><br/>
+  <strong>최종 업데이트: 2026년 10월 13일</strong><br/>
   페이지의 실제 수정일을 표시하며, 모델 안내에는 공식 출처와 확인 범위를 함께 제공합니다.
 </p>
 
@@ -21,6 +21,12 @@
 </p>
 
 ---
+
+## 10월 13일 · Sol·Cloud·평가 구성 사례
+
+VB의 개인 구성을 게시된 Cloud 환경과 반복 평가 기록을 활용하는 절차로 정리했습니다. High를 공통 기본값으로 권하지 않습니다. Cloud 환경은 현재 Computer/Browser Use를 지원하지 않으며 개인 로컬 스킬도 동기화하지 않습니다. 모델·Power·요금·CLI 안내는 유지합니다.
+
+[VB](https://x.com/reach_vb/status/2109774963666526270) · [Cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environments) · [codex exec](https://learn.chatgpt.com/docs/non-interactive-mode)
 
 ## 10월 12일 · Sol 컨텍스트 발표와 CLI 패치
 
