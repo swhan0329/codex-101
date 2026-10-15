@@ -1,6 +1,9 @@
 // i18n translation data
 const translations = {
     ko: {
+        business_price: "표준 좌석 · 2인 이상<br>연간 결제 월 $20/인<br>월간 결제 월 $25/인",
+        business_update_t: "10월 15일 · Business 좌석 요금 구분",
+        business_update_d: "표준 Business 좌석의 연간·월간 요금과 최소 인원을 명시하고 Codex-only 종량제 좌석과 구분했습니다.",
         ui_more_tips: "이전 실무 팁 더 보기",
         ui_more_updates: "이전 업데이트 더 보기",
         ui_update_t: "10월 15일 · 화면 정렬과 모바일 탐색 개선",
@@ -1212,6 +1215,9 @@ const translations = {
     },
 
     en: {
+        business_price: "Standard · 2+ users<br>$20/user/mo (annual)<br>$25/user/mo (monthly)",
+        business_update_t: "October 15 · Business seat pricing",
+        business_update_d: "Clarified annual and monthly Standard Business seat prices and the minimum seat count, separately from Codex-only pay-as-you-go seats.",
         ui_more_tips: "More practitioner tips",
         ui_more_updates: "More previous updates",
         ui_update_t: "October 15 · Layout and mobile navigation",

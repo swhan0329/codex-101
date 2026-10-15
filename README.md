@@ -18,6 +18,10 @@
 
 ---
 
+## October 15 · Business seat pricing
+
+Standard Business costs $20/user/month billed annually or $25 billed monthly, with 2+ users. The pricing table now distinguishes this from Codex-only pay-as-you-go seats. [Official pricing](https://learn.chatgpt.com/docs/pricing).
+
 ## October 15 · UI consistency and mobile navigation
 
 Aligned content and screenshots with the handbook layout, repaired chapter search, restored mobile page navigation, enlarged touch controls, and improved Korean wrapping. Model choices and plan comparisons now precede expandable conditions; older tips and updates remain available on demand.
