@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 10월 13일</strong><br/>
+  <strong>최종 업데이트: 2026년 10월 15일</strong><br/>
   페이지의 실제 수정일을 표시하며, 모델 안내에는 공식 출처와 확인 범위를 함께 제공합니다.
 </p>
 
@@ -21,6 +21,14 @@
 </p>
 
 ---
+
+## 10월 15일 · GPT-5.5 전환과 유지보수 사례
+
+GPT-5.5의 ChatGPT 로그인 Codex 종료 시각은 2026년 10월 14일 19:00 UTC입니다. 유료 플랜은 접근 가능한 GPT-6.1 Sol, Free·Go는 데스크톱 GPT-6 Luna로 전환하세요. OpenAI API·API 키 Codex 세션은 대상이 아닙니다.
+
+Rodrigo Roim은 10월 14일 OpenAI Core Experimentation 팀의 유지보수 사례를 공개했습니다. 코드 참조뿐 아니라 실제 설정·실행 자료·Git 이력을 대조하고 운영상 필요한 안전장치는 사람의 검토로 넘겼습니다. 따라 하기: 디렉터리 하나에서 미사용 코드·오래된 실험 후보를 찾고 근거·담당자·검증 방법을 표로 요청하세요. 운영 설정은 바꾸지 말고 kill switch와 fallback을 보존하세요. 검증된 후보마다 작은 초안 PR을 만들고 테스트와 담당자 검토 후 반영하세요.
+
+[Models](https://learn.chatgpt.com/docs/models#gpt-55-retirement) · [Rodrigo Roim](https://developers.openai.com/blog/maintaining-software-with-the-gpt-6-family)
 
 ## 10월 13일 · Sol·Cloud·평가 구성 사례
 
@@ -83,7 +91,7 @@ macOS 앱 빌드를 확인하세요. OpenAI는 26.924.20706에서 CVE-2026-10075
 
 사용자의 10월 1일 녹화에서 개인 정보를 가린 실제 이미지 7개를 앱·Dots·Scheduled 장에 반영했습니다. 한영 모두 같은 한국어 화면을 사용하며 영어판에는 영어 캡션을 제공합니다. Chat/Work, Codex → New chat, 닷 프로필·꾸미기, Space, Scheduled → New task, Customize → Plugins 경로를 보완하고, 화면에 열리지 않은 설정·권한은 단정하지 않습니다. [화면 출처](content/screenshots-2026-10-01.md)에 시각·잘라내기·가림 처리를 기록했습니다.
 
-첫 화면은 “지금 확인할 변화” 세 항목으로 줄였습니다. GPT-6.1 Sol 제공, 10월 14일 GPT-5.5 종료 예정, macOS 보안 수정에 확인 날짜·할 일·공식 출처를 붙였습니다. 이전 연혁은 접어 두고 가이드 수정 기록은 Changelog에 유지합니다.
+첫 화면은 “지금 확인할 변화” 세 항목으로 줄였습니다. GPT-6.1 Sol 제공, 10월 14일 GPT-5.5 종료, macOS 보안 수정에 확인 날짜·할 일·공식 출처를 붙였습니다. 이전 연혁은 접어 두고 가이드 수정 기록은 Changelog에 유지합니다.
 
 설치 장에 Linux preview 카드·배포판별 패키지와 명령을 추가하고 세 운영체제의 공통 앱 로그인 단계를 정리했습니다.
 

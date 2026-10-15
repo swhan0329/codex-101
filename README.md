@@ -11,12 +11,20 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: October 13, 2026</strong><br/>
+  <strong>Last updated: October 15, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
 
 ---
+
+## October 15 · GPT-5.5 migration and maintenance workflow
+
+The GPT-5.5 retirement time for Codex with ChatGPT sign-in is October 14, 2026 at 19:00 UTC. Move to available GPT-6.1 Sol on paid plans or desktop GPT-6 Luna on Free and Go. The OpenAI API and API-key Codex sessions are unaffected.
+
+On October 14, Rodrigo Roim shared maintenance work from OpenAI’s Core Experimentation team. They checked code references against live configuration, runtime evidence, and Git history, and referred operational safeguards for human review. Try it: scope unused-code or stale-experiment discovery to one directory. Request a table of evidence, owners, and validation steps. Leave production settings unchanged and preserve kill switches and fallbacks. Prepare one small draft PR per verified candidate; test and obtain owner review before merging.
+
+[Models](https://learn.chatgpt.com/docs/models#gpt-55-retirement) · [Rodrigo Roim](https://developers.openai.com/blog/maintaining-software-with-the-gpt-6-family)
 
 ## October 13 · Sol, Cloud, and evaluation setup
 
@@ -79,7 +87,7 @@ Individual Daybreak users must meet the paid-plan, Advanced Account Security, an
 
 The desktop, Dots, and Scheduled chapters now reuse seven sanitized images from the user’s October 1 recording in both languages. English captions explain the Korean source; original Korean names and visible English UI labels remain intact. Click paths cover Chat/Work, Codex → New chat, dot profile/customization, Space, Scheduled → New task, and Customize → Plugins. The screenshots do not establish unseen task settings or access permissions. [Screen provenance](content/screenshots-2026-10-01.md) records timestamps, crops, and redactions.
 
-The opening “What to check now” section shows only three actionable changes with checked dates and official sources: GPT-6.1 Sol access, the planned October 14 GPT-5.5 retirement, and the macOS security fix. Earlier milestones are collapsed; detailed guide edits remain in Changelog.
+The opening “What to check now” section shows only three actionable changes with checked dates and official sources: GPT-6.1 Sol access, the October 14 GPT-5.5 retirement, and the macOS security fix. Earlier milestones are collapsed; detailed guide edits remain in Changelog.
 
 Installation now includes a Linux preview card, distribution-specific packages and commands, and a shared app sign-in step for all three operating systems.
 
