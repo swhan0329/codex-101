@@ -431,7 +431,10 @@
         });
 
         const updateFromScroll = () => {
-            const anchorOffset = Math.max(180, Math.min(240, window.innerHeight * 0.2));
+            const mobileHeaderOffset = window.innerWidth <= 900
+                ? (document.querySelector('.top-bar')?.offsetHeight || 62) + 80
+                : 0;
+            const anchorOffset = Math.max(180, mobileHeaderOffset, Math.min(240, window.innerHeight * 0.2));
             const scrollMarker = window.scrollY + anchorOffset;
             const nearBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 40;
             const orderedEntries = entries
@@ -499,7 +502,18 @@
         update();
     }
 
+    function revealHashDetails() {
+        const id = decodeURIComponent(window.location.hash.slice(1));
+        const target = id ? document.getElementById(id) : null;
+        if (!target) return;
+        for (let node = target; node; node = node.parentElement) {
+            if (node.tagName === 'DETAILS') node.open = true;
+        }
+    }
+    window.addEventListener('hashchange', revealHashDetails);
+
     function restoreInitialHashPosition() {
+        revealHashDetails();
         const hash = decodeURIComponent(window.location.hash || '');
         if (!hash || hash === '#toc') return;
         const target = document.querySelector(hash);

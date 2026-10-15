@@ -5652,7 +5652,7 @@ body[data-page="home"] .home-main > .section:nth-of-type(4n) {
     background: #2a2a2c;
 }
 
-body[data-page="home"] .home-main > .section > :where(h2, h3, h4, p, blockquote, .table-wrap, pre, .card-grid, .model-grid, .two-col, .feature-list, .feature-chips, .tip-grid, .link-grid, .code-tabs, .steps, .faq-list, .callout, .command-guide, .prompt-inline-guide, .overview-lens-grid, .showcase-card, .overview-decision-card, .overview-visual-card, .overview-bridge-grid, .overview-track-grid, .overview-fact-panel, .field-tip-grid, .pet-recording-card, .field-source-block, .app-guide-extras) {
+body[data-page="home"] .home-main > .section > * {
     max-width: 980px;
     margin-left: auto;
     margin-right: auto;
@@ -5744,7 +5744,7 @@ body[data-page="home"] .section figcaption {
 }
 
 body[data-page="home"] .overview-lead,
-body[data-page="home"] .section > p:first-of-type {
+body[data-page="home"] .section > h2 + p {
     max-width: 760px;
     text-align: center;
 }
@@ -6800,7 +6800,7 @@ body[data-page="home"] .home-nav-empty {
         padding-left: clamp(28px, 3vw, 56px);
     }
 
-    body[data-page="home"] .home-main > .section > :where(h2, h3, h4, p, blockquote, .table-wrap, pre, .card-grid, .model-grid, .two-col, .feature-list, .feature-chips, .tip-grid, .link-grid, .code-tabs, .steps, .faq-list, .callout, .command-guide, .prompt-inline-guide, .overview-lens-grid, .showcase-card, .overview-decision-card, .overview-visual-card, .overview-bridge-grid, .overview-track-grid, .overview-fact-panel, .field-tip-grid, .pet-recording-card, .field-source-block, .app-guide-extras),
+    body[data-page="home"] .home-main > .section > *,
     body[data-page="home"] .model-guidance-panel,
     body[data-page="home"] .app-ui-detail-grid,
     body[data-page="home"] .app-overview-panel {
@@ -7199,4 +7199,85 @@ body[data-page="home"] .guide-scope-note h3 { margin-bottom: 10px; font-size: 1r
 @media (max-width: 760px) {
     .app-guide-extras > summary { padding: 16px; }
     .app-guide-extra-content { padding: 16px; }
+}
+
+/* Shared handbook layout: new sections inherit the same content rail. */
+body[data-page="home"] .home-main > .section > * { min-width: 0; }
+body[data-page="home"] .home-nav [hidden] { display: none !important; }
+html[lang="ko"] :is(h1, h2, h3, h4, p, li, td, th, figcaption, summary, .use-case-card strong, .use-case-card span) {
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+}
+body[data-page="home"] .desktop-screen-tour {
+    display: grid;
+    gap: 24px;
+    margin-block: 24px;
+    scroll-margin-top: 140px;
+}
+.screen-tour-card {
+    padding: clamp(16px, 2.4vw, 28px);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--bg-card);
+    min-width: 0;
+}
+.screen-tour-card h3 { margin-top: 0; }
+body[data-page="home"] .screenshot-evidence { max-width: 980px; margin-inline: auto; }
+body[data-page="home"] .screenshot-evidence img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: none;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+}
+body[data-page="home"] .screen-tour-card .screenshot { margin: 20px auto 0; }
+body[data-page="home"] .screen-tour-card figcaption { margin-top: 12px; font-size: .875rem; }
+body[data-page="home"] .section > .model-cmd { padding: 12px 16px; text-align: left; border-radius: var(--radius-sm); }
+.guide-details {
+    margin-block: 16px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--bg-card);
+    scroll-margin-top: 150px;
+}
+.guide-details > summary { padding: 18px 20px; font-weight: 600; line-height: 1.5; cursor: pointer; }
+.guide-details > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: -4px; }
+.guide-details[open] > summary { border-bottom: 1px solid var(--border); }
+.guide-details-body { padding: 18px 20px; }
+.guide-details-body > :first-child { margin-top: 0; }
+.guide-details-body > :last-child { margin-bottom: 0; }
+body[data-page="home"] .guide-details-body > .field-tip-grid { margin: 0; }
+body[data-page="home"] .guide-details-body .changelog-list { padding: 0; }
+@media (max-width: 760px) {
+    body[data-page] .top-bar-inner {
+        height: auto;
+        min-height: 108px;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 4px 8px;
+        padding: 6px 16px;
+    }
+    body[data-page] .top-bar-actions { grid-column: 2; grid-row: 1; gap: 8px; }
+    body[data-page] .site-nav { display: flex; grid-column: 1 / -1; grid-row: 2; margin: 0; gap: 8px; }
+    body[data-page] .site-nav-link { flex: 1; justify-content: center; min-height: 44px; padding: 8px 12px; }
+    body[data-page] :is(.icon-btn, .lang-btn) { min-height: 44px; min-width: 44px; }
+    body[data-page] .lang-btn { padding-inline: 10px; }
+    body[data-page="home"] .home-sidebar { top: 108px; }
+    body[data-page="home"] .home-sidebar.tree-open .home-nav { max-height: calc(100dvh - 174px); }
+    body[data-page="home"] .home-main > .section,
+    body[data-page="home"] .home-main [id],
+    body[data-page="home"] .changelog-section { scroll-margin-top: 184px !important; }
+    body[data-page="use-cases"] .use-case-detail { scroll-margin-top: 124px; }
+    body[data-page="use-cases"] .use-case-detail-card { padding: 20px; }
+    body[data-page="use-cases"] .use-case-detail-card h2 { font-size: 1.75rem; line-height: 1.3; }
+    .guide-details > summary { padding: 16px; }
+    .guide-details-body { padding: 16px; }
+}
+
+body[data-page="home"] .recommended-models { grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); }
+body[data-page="home"] .changelog-section > .guide-details { max-width: 980px; margin-inline: auto; }
+body[data-page="home"] .changelog-section .live-date { color: var(--text); }
+@media (max-width: 760px) {
+    body[data-page] #theme-toggle { min-width: 44px; }
 }

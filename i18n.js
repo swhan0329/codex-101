@@ -1,6 +1,11 @@
 // i18n translation data
 const translations = {
     ko: {
+        ui_more_tips: "이전 실무 팁 더 보기",
+        ui_more_updates: "이전 업데이트 더 보기",
+        ui_update_t: "10월 15일 · 화면 정렬과 모바일 탐색 개선",
+        ui_update_d: "본문·이미지 폭, 목차 검색, 모바일 페이지 이동과 버튼 크기, 한국어 줄바꿈을 개선하고 긴 안내를 접어서 읽도록 정리했습니다.",
+
         changelog_oct15_d: "GPT-5.5의 정확한 Codex 종료 시각·인증 범위·6.1 Sol 대체 안내를 맞추고, Rodrigo의 근거 기반 유지보수 절차를 추가했습니다.",
         changelog_oct15_t: "10월 15일 · GPT-5.5 전환과 유지보수 사례",
         maint15_limits: "팀 내부 사례이며 절감 보장이 아닙니다. 글의 비용 비교는 API 요금 기준으로 Codex 구독 크레딧과 다릅니다. 같은 입력·완료 기준으로 모델을 비교하고 누락 유형을 확인하세요.",
@@ -1207,6 +1212,11 @@ const translations = {
     },
 
     en: {
+        ui_more_tips: "More practitioner tips",
+        ui_more_updates: "More previous updates",
+        ui_update_t: "October 15 · Layout and mobile navigation",
+        ui_update_d: "Aligned content and image widths, fixed chapter search, restored mobile page navigation, enlarged controls, improved Korean wrapping, and made lengthy guidance expandable.",
+
         changelog_oct15_d: "Aligned the exact Codex retirement time, authentication scope, and 6.1 Sol replacement for GPT-5.5; added Rodrigo’s evidence-based maintenance procedure.",
         changelog_oct15_t: "October 15 · GPT-5.5 migration and maintenance workflow",
         maint15_limits: "This is an internal team case, not a savings guarantee. Its cost comparison uses API pricing, not Codex subscription credits. Compare models using the same inputs and completion criteria, and inspect what each misses.",

@@ -18,6 +18,10 @@
 
 ---
 
+## October 15 · UI consistency and mobile navigation
+
+Aligned content and screenshots with the handbook layout, repaired chapter search, restored mobile page navigation, enlarged touch controls, and improved Korean wrapping. Model choices and plan comparisons now precede expandable conditions; older tips and updates remain available on demand.
+
 ## October 15 · GPT-5.5 migration and maintenance workflow
 
 The GPT-5.5 retirement time for Codex with ChatGPT sign-in is October 14, 2026 at 19:00 UTC. Move to available GPT-6.1 Sol on paid plans or desktop GPT-6 Luna on Free and Go. The OpenAI API and API-key Codex sessions are unaffected.
