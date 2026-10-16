@@ -102,6 +102,82 @@ img {
     padding: 0 24px;
 }
 
+/* === Ebook announcement (normal flow; the existing sticky header stays at top: 0) === */
+.ebook-banner {
+    --ebook-bg: #191a1d;
+    --ebook-text: #f0ece8;
+    --ebook-muted: #c9bdb5;
+    background: var(--ebook-bg);
+    border-bottom: 1px solid rgba(226, 100, 62, .35);
+}
+
+[data-theme="light"] .ebook-banner {
+    --ebook-bg: #faf4ef;
+    --ebook-text: #332a26;
+    --ebook-muted: #6b5145;
+}
+
+.ebook-banner-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto 28px;
+    align-items: center;
+    gap: 12px;
+    max-width: var(--max-w);
+    min-height: 43px;
+    margin-inline: auto;
+    padding: 5px 24px;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+body[data-page] .ebook-banner-paid {
+    min-width: 0;
+    color: var(--ebook-text);
+    overflow-wrap: anywhere;
+}
+
+body[data-page] .ebook-banner-free {
+    color: var(--ebook-muted);
+    font-size: 11px;
+    white-space: nowrap;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.ebook-banner-close {
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 32px;
+    padding: 0;
+    border: 0;
+    border-radius: 4px;
+    background: transparent;
+    color: var(--ebook-muted);
+    font: inherit;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.ebook-banner-close:hover {
+    background: rgba(226, 100, 62, .12);
+    color: var(--ebook-text);
+}
+
+.ebook-banner :is(a, button):focus-visible {
+    outline: 2px solid #e2643e;
+    outline-offset: 2px;
+}
+
+@media (max-width: 760px) {
+    .ebook-banner-inner {
+        gap: 8px;
+        padding: 5px 12px;
+        font-size: 11px;
+        line-height: 16px;
+    }
+}
+
 /* === Top Bar === */
 .top-bar {
     position: sticky;
