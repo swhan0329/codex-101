@@ -11,12 +11,18 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: October 15, 2026</strong><br/>
+  <strong>Last updated: October 16, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
 
 ---
+
+## October 16 · Voice rollout and event workflows
+
+Separated the GPT-Live-1.1 voice rollout announcement from actual access, and added Gabriel’s Sites→MCP Events→dot example and Tibo’s capacity-recovery guidance.
+
+[OpenAI Voice](https://x.com/OpenAI/status/2110797830361436604) · [Gabriel](https://x.com/gabrielchua/status/2110744134890017103) · [Tibo](https://x.com/thsottiaux/status/2110750421367287996) · [MCP Events](https://developers.openai.com/plugins/build/mcp-events)
 
 ## October 15 · Business seat pricing
 

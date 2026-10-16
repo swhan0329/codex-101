@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 10월 15일</strong><br/>
+  <strong>최종 업데이트: 2026년 10월 16일</strong><br/>
   페이지의 실제 수정일을 표시하며, 모델 안내에는 공식 출처와 확인 범위를 함께 제공합니다.
 </p>
 
@@ -21,6 +21,12 @@
 </p>
 
 ---
+
+## 10월 16일 · Voice 배포와 이벤트 활용
+
+GPT-Live-1.1 음성 배포 발표와 실제 접근 조건을 구분하고, Gabriel의 Sites→MCP Events→dot 사례 및 Tibo의 용량 부족 시 재개 안내를 추가했습니다.
+
+[OpenAI Voice](https://x.com/OpenAI/status/2110797830361436604) · [Gabriel](https://x.com/gabrielchua/status/2110744134890017103) · [Tibo](https://x.com/thsottiaux/status/2110750421367287996) · [MCP Events](https://developers.openai.com/plugins/build/mcp-events)
 
 ## 10월 15일 · Business 좌석 요금 구분
 

@@ -1,6 +1,16 @@
 // i18n translation data
 const translations = {
     ko: {
+        voice16_t: "GPT-Live-1.1 · 한국어 음성 배포 시작",
+        voice16_d: "OpenAI는 10월 16일(KST) ChatGPT·Codex·dots Voice에 GPT-Live-1.1 배포를 시작한다고 발표했습니다. 한국어·일본어·프랑스어·독일어·힌디어·멕시코 스페인어의 새 음성과 억양 개선을 포함하며, API는 추후 제공 예정입니다. 전체 사용자 대상 배포 발표와 내 계정의 실제 접근은 구분하세요.",
+        voice16_steps: "따라 하기: 앱을 업데이트하고 작업의 Start voice chat에서 제공되는 음성을 확인한 뒤, 한국어로 목표와 완료 기준을 말해 보세요. 데스크톱 Voice 문서는 Plus·Pro·Business·Edu·Enterprise 및 워크스페이스·배포 조건을 명시합니다. 음성 업데이트가 작업 모델·권한·요금 변경을 뜻하지는 않습니다.",
+        events16_t: "Sites의 요청을 dot 후속 작업으로 연결",
+        events16_d: "Gabriel은 10월 15일 Site의 이미지 요청 → MCP 이벤트 → dot의 이미지 생성이라는 작은 데모를 공유했습니다. 따라 하기: 요청 유형 하나와 이벤트 필터, dot이 만들 결과, 검토할 지점을 정하고 테스트 요청 하나로 결과까지 확인하세요. 개인 데모이며 모든 Site에 자동 연결되는 기능은 아닙니다.",
+        events16_limits: "MCP Events는 ChatGPT 웹 Work, 데스크톱의 Cloud Work, dots에서 지원됩니다. 이벤트를 구현한 MCP 2.0 플러그인과 webhook 전달, 워크스페이스 허용이 필요합니다. 로컬 예약 작업이나 polling과 구분하고 상세 구현은 공식 문서를 따르세요.",
+        capacity16_t: "모델 용량 부족 메시지가 뜨면 진행 상태 확인",
+        capacity16_d: "Tibo는 10월 16일(KST) 모델 용량 부족 오류를 줄이고, 발생해도 대기 후 자동으로 이어가도록 개선했다고 발표했습니다. 같은 요청을 반복 제출하기 전에 기존 작업이 재개됐는지 확인하세요. 계속 멈춰 있으면 모델·발생 시각·오류 문구를 기록해 피드백을 보내세요. 발표는 오류 소멸이나 일정한 복구 시간, 구독 한도 초기화를 보장하지 않습니다.",
+        update16_t: "10월 16일 · Voice 배포와 이벤트 활용",
+        update16_d: "GPT-Live-1.1 음성 배포 발표와 실제 접근 조건을 구분하고, Gabriel의 Sites→MCP Events→dot 사례 및 Tibo의 용량 부족 시 재개 안내를 추가했습니다.",
         business_price: "표준 좌석 · 2인 이상<br>연간 결제 월 $20/인<br>월간 결제 월 $25/인",
         business_update_t: "10월 15일 · Business 좌석 요금 구분",
         business_update_d: "표준 Business 좌석의 연간·월간 요금과 최소 인원을 명시하고 Codex-only 종량제 좌석과 구분했습니다.",
@@ -1215,6 +1225,16 @@ const translations = {
     },
 
     en: {
+        voice16_t: "GPT-Live-1.1 · new voices rolling out",
+        voice16_d: "On October 16 (KST), OpenAI announced the rollout of GPT-Live-1.1 to Voice in ChatGPT, Codex, and dots. It adds voices and accent improvements for Korean, Japanese, French, German, Hindi, and Mexican Spanish. API access is coming later. A rollout announced for all users does not confirm access on your account.",
+        voice16_steps: "Try it: update the app, check available voices through Start voice chat in your task, then state your goal and success criteria in Korean. Desktop Voice documentation lists Plus, Pro, Business, Edu, and Enterprise, subject to workspace and rollout conditions. This voice update does not establish changes to task models, permissions, or pricing.",
+        events16_t: "Connect Site requests to dot follow-up work",
+        events16_d: "On October 15, Gabriel shared a toy demo: an image request in a Site → an MCP event → image generation by his dot. Try it: define one request type, event filters, the output your dot should produce, and a review point; send one test request and verify the result. This is a personal demo, not an automatic connection for every Site.",
+        events16_limits: "MCP Events supports Work on ChatGPT web, desktop Work with Cloud selected, and dots. It requires an MCP 2.0 plugin that implements events, webhook delivery, and workspace permission. Distinguish it from local scheduled tasks or polling; follow the official documentation for implementation.",
+        capacity16_t: "Check task progress after a capacity message",
+        capacity16_d: "On October 16 (KST), Tibo announced improvements to reduce model-capacity errors and let affected tasks eventually continue automatically. Before submitting the same request again, check whether the original task has resumed. If it remains blocked, record the model, time, and error text for feedback. The announcement does not guarantee zero errors, a recovery deadline, or a subscription-limit reset.",
+        update16_t: "October 16 · Voice rollout and event workflows",
+        update16_d: "Separated the GPT-Live-1.1 voice rollout announcement from actual access, and added Gabriel’s Sites→MCP Events→dot example and Tibo’s capacity-recovery guidance.",
         business_price: "Standard · 2+ users<br>$20/user/mo (annual)<br>$25/user/mo (monthly)",
         business_update_t: "October 15 · Business seat pricing",
         business_update_d: "Clarified annual and monthly Standard Business seat prices and the minimum seat count, separately from Codex-only pay-as-you-go seats.",
