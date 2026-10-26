@@ -11,12 +11,18 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: October 16, 2026</strong><br/>
+  <strong>Last updated: October 26, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
 
 ---
+
+## October 26 · Dot shortcuts, Sites sharing, and CLI checks
+
+Added iOS dot widget and shortcut steps, clarified Sites sharing and visitor-account boundaries, and aligned CLI checks and model roles. Added an actual macOS model-picker capture.
+
+[Dot shortcuts](https://learn.chatgpt.com/docs/dots/channels#ios-widgets-and-shortcuts) · [Sites sharing](https://learn.chatgpt.com/docs/sites/publishing-and-sharing) · [CLI commands](https://learn.chatgpt.com/docs/cli/slash-commands) · [Daybreak](https://learn.chatgpt.com/docs/cyber-safety) · [Models](https://learn.chatgpt.com/docs/models)
 
 ## October 16 · Voice rollout and event workflows
 

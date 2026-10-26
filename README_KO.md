@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 10월 16일</strong><br/>
+  <strong>최종 업데이트: 2026년 10월 26일</strong><br/>
   페이지의 실제 수정일을 표시하며, 모델 안내에는 공식 출처와 확인 범위를 함께 제공합니다.
 </p>
 
@@ -21,6 +21,12 @@
 </p>
 
 ---
+
+## 10월 26일 · dot 바로가기·Sites 공유·CLI 확인
+
+iOS dot 위젯·단축어 절차와 Sites의 공유·방문자 계정 경계를 보완하고 CLI 확인 명령과 모델별 역할을 정리했습니다. 실제 macOS 모델 선택기 캡처를 추가했습니다.
+
+[Dot shortcuts](https://learn.chatgpt.com/docs/dots/channels#ios-widgets-and-shortcuts) · [Sites sharing](https://learn.chatgpt.com/docs/sites/publishing-and-sharing) · [CLI commands](https://learn.chatgpt.com/docs/cli/slash-commands) · [Daybreak](https://learn.chatgpt.com/docs/cyber-safety) · [Models](https://learn.chatgpt.com/docs/models)
 
 ## 10월 16일 · Voice 배포와 이벤트 활용
 
