@@ -5357,6 +5357,10 @@ body[data-page="home"] .hero-badge {
 }
 
 body[data-page="home"] .live-date {
+    color: var(--text);
+}
+
+body[data-page="home"] .hero-badge .live-date {
     color: #ffffff;
 }
 

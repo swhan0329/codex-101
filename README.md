@@ -11,12 +11,20 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: October 26, 2026</strong><br/>
+  <strong>Last updated: October 31, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
 
 ---
+
+## October 31 · Readable dates, Terra, and network diagnostics
+
+Fixed the final-update date color in light theme and added documented Terra selection and version-scoped CLI connectivity diagnostics.
+
+[Daily source checks and verification scope](DAILY_CHECKS.md)
+
+[Models](https://learn.chatgpt.com/docs/models) · [CLI changelog](https://learn.chatgpt.com/docs/changelog)
 
 ## October 26 · Dot shortcuts, Sites sharing, and CLI checks
 

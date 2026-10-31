@@ -2,6 +2,7 @@
 *.md
 !README.md
 !README_KO.md
+!DAILY_CHECKS.md
 # Local-only research notes
 codex-team-social-research-2026-06-13.md
 .vercel

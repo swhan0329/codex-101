@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 10월 26일</strong><br/>
+  <strong>최종 업데이트: 2026년 10월 31일</strong><br/>
   페이지의 실제 수정일을 표시하며, 모델 안내에는 공식 출처와 확인 범위를 함께 제공합니다.
 </p>
 
@@ -21,6 +21,14 @@
 </p>
 
 ---
+
+## 10월 31일 · 날짜 가독성·Terra·네트워크 진단
+
+밝은 테마의 최종 업데이트 날짜 색상을 수정하고, 공식 문서의 Terra 선택 안내와 버전별 CLI 연결 진단을 추가했습니다.
+
+[일일 출처 점검과 검증 범위](DAILY_CHECKS.md)
+
+[Models](https://learn.chatgpt.com/docs/models) · [CLI changelog](https://learn.chatgpt.com/docs/changelog)
 
 ## 10월 26일 · dot 바로가기·Sites 공유·CLI 확인
 
