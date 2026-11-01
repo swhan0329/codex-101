@@ -11,12 +11,18 @@
 </p>
 
 <p align="center">
-  <strong>Last updated: October 31, 2026</strong><br/>
+  <strong>Last updated: November 1, 2026</strong><br/>
   <a href="https://swhan0329.github.io/codex-101/">Live Site</a> ·
   <a href="README_KO.md">Korean README</a>
 </p>
 
 ---
+
+## November 1 · Terra availability clarified
+
+Clarified Terra’s documented plans, mobile Work, inference residency, and Enterprise controls.
+
+[Official release · 2026-10-26](https://learn.chatgpt.com/docs/changelog) · [Models](https://learn.chatgpt.com/docs/models)
 
 ## October 31 · Readable dates, Terra, and network diagnostics
 

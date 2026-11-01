@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <strong>최종 업데이트: 2026년 10월 31일</strong><br/>
+  <strong>최종 업데이트: 2026년 11월 1일</strong><br/>
   페이지의 실제 수정일을 표시하며, 모델 안내에는 공식 출처와 확인 범위를 함께 제공합니다.
 </p>
 
@@ -21,6 +21,12 @@
 </p>
 
 ---
+
+## 11월 1일 · Terra 제공 조건 보완
+
+Terra의 공식 플랜·모바일 Work·추론 지역과 Enterprise 관리자 조건을 구분했습니다.
+
+[Official release · 2026-10-26](https://learn.chatgpt.com/docs/changelog) · [Models](https://learn.chatgpt.com/docs/models)
 
 ## 10월 31일 · 날짜 가독성·Terra·네트워크 진단
 

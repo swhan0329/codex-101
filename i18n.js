@@ -3,6 +3,10 @@ const translations = {
     ko: {
         model26_alt: "실제 한국어 Codex 모델 선택기의 GPT-6 Astra Light 표시와 파워 슬라이더",
         model26_caption: "2026-10-26 21:51 KST · macOS · ChatGPT 26.1016.62342 (21477)의 실제 모델 선택기. 입력창의 모델 버튼을 열어 이 계정의 GPT-6 Astra Light 표시와 파워 슬라이더를 확인했습니다. 모델 변경·실행은 하지 않았으며 제공 범위는 계정마다 다릅니다.",
+        terra_scope_t: "Terra · 플랜·모바일·지역 조건",
+        terra_scope_d: "10월 26일 공식 발표는 Plus·Pro·Business·Enterprise·Edu의 Work·Codex 제공을 명시합니다. 모바일 Work에서도 지원하지만 Chat 모델은 아니며 UAE 추론 지역은 지원하지 않습니다. Enterprise는 워크스페이스 제공 여부와 관리자 설정을 확인하세요. 실제 계정의 Advanced 목록과 도구 접근을 별도로 확인하세요.",
+        update_nov1_t: "11월 1일 · Terra 제공 조건 보완",
+        update_nov1_d: "Terra의 공식 플랜·모바일 Work·추론 지역과 Enterprise 관리자 조건을 구분했습니다.",
         terra_desc: "GPT-6.1 Terra는 글쓰기·이미지 이해·컴퓨터 작업에 비교할 모델입니다.",
         terra_access: "공식 표: 데스크톱 Work·Codex, 웹 Work, CLI. CLI 0.159.0 이상이 필요합니다. Advanced 또는 /model에서 계정의 접근을 확인하세요. IDE 제공을 가정하지 마세요.",
         network31_t: "CLI 네트워크 오류 분리하기",
@@ -1243,6 +1247,10 @@ const translations = {
     en: {
         model26_alt: "Actual Korean Codex model picker showing GPT-6 Astra Light and the Power slider",
         model26_caption: "2026-10-26 21:51 KST · macOS · actual model picker in ChatGPT 26.1016.62342 (21477). Opening the composer’s model button showed GPT-6 Astra Light and the Power slider for this account. No model change or task execution was performed; availability varies by account.",
+        terra_scope_t: "Terra · Plan, mobile, and region conditions",
+        terra_scope_d: "The October 26 announcement lists Plus, Pro, Business, Enterprise, and Edu for Work/Codex. Terra also supports mobile Work; it is unavailable in Chat and does not support UAE inference residency. Enterprise availability depends on workspace and administrator controls. Check your account’s Advanced list and tool access separately.",
+        update_nov1_t: "November 1 · Terra availability clarified",
+        update_nov1_d: "Clarified Terra’s documented plans, mobile Work, inference residency, and Enterprise controls.",
         terra_desc: "Compare GPT-6.1 Terra for writing, visual understanding, and computer use.",
         terra_access: "Official table: desktop Work/Codex, web Work, and CLI. Requires CLI 0.159.0+. Check account access in Advanced or /model; do not assume IDE availability.",
         network31_t: "Separate CLI network failures",
