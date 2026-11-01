@@ -1,6 +1,11 @@
 // i18n translation data
 const translations = {
     ko: {
+        hack_update_t: "11월 1일 · 해커톤 작업·발표 계획",
+        hack_update_d: "Gabriel Chua의 해커톤 회고를 바탕으로 구현·검증·발표의 결과물과 마감을 나누는 실무 팁을 추가했습니다. 개인 관찰과 공식 기능 제공 범위를 구분합니다.",
+        hack_nov1_t: "개발·시간 관리·발표를 함께 계획하기",
+        hack_nov1_d: "Gabriel Chua는 11월 1일 호찌민 해커톤 회고에서 참가자들이 dots로 여러 작업과 시간을 관리하고 Sites·Spaces 발표 자료를 준비한 모습을 소개했습니다. 따라 하기: 구현, 검증, 발표 준비를 나누고 각 결과물과 마감 시각을 요청에 적으세요. 발표에는 실제 동작과 남은 한계를 함께 담으세요. 한 행사에서의 관찰이며 일반적인 생산성 보장이나 기능 제공 범위의 근거는 아닙니다.",
+
         model26_alt: "실제 한국어 Codex 모델 선택기의 GPT-6 Astra Light 표시와 파워 슬라이더",
         model26_caption: "2026-10-26 21:51 KST · macOS · ChatGPT 26.1016.62342 (21477)의 실제 모델 선택기. 입력창의 모델 버튼을 열어 이 계정의 GPT-6 Astra Light 표시와 파워 슬라이더를 확인했습니다. 모델 변경·실행은 하지 않았으며 제공 범위는 계정마다 다릅니다.",
         terra_scope_t: "Terra · 플랜·모바일·지역 조건",
@@ -1245,6 +1250,11 @@ const translations = {
     },
 
     en: {
+        hack_update_t: "November 1 · Hackathon work and presentation planning",
+        hack_update_d: "Added a practical tip based on Gabriel Chua’s hackathon recap: define deliverables and deadlines for implementation, validation, and presentation. Personal observations are distinguished from official feature availability.",
+        hack_nov1_t: "Plan building, time management, and presentation together",
+        hack_nov1_d: "In his November 1 Ho Chi Minh City hackathon recap, Gabriel Chua described participants using dots to manage work tracks and time, and preparing Sites and Spaces presentations. Try it: separate implementation, validation, and presentation work, and specify each deliverable and deadline in your request. Present working behavior alongside remaining limitations. This is an observation from one event, not a general productivity guarantee or evidence of feature availability.",
+
         model26_alt: "Actual Korean Codex model picker showing GPT-6 Astra Light and the Power slider",
         model26_caption: "2026-10-26 21:51 KST · macOS · actual model picker in ChatGPT 26.1016.62342 (21477). Opening the composer’s model button showed GPT-6 Astra Light and the Power slider for this account. No model change or task execution was performed; availability varies by account.",
         terra_scope_t: "Terra · Plan, mobile, and region conditions",

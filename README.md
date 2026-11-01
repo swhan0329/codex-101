@@ -18,6 +18,12 @@
 
 ---
 
+## November 1 · Hackathon work and presentation planning
+
+Added a practical tip based on Gabriel Chua’s hackathon recap: define deliverables and deadlines for implementation, validation, and presentation. Personal observations are distinguished from official feature availability.
+
+[Gabriel Chua · X · 2026-11-01](https://x.com/gabrielchua/status/2116722972153336236)
+
 ## November 1 · Terra availability clarified
 
 Clarified Terra’s documented plans, mobile Work, inference residency, and Enterprise controls.
