@@ -4,6 +4,20 @@ Check dates record the sources and scope actually reviewed. Guide modification d
 
 점검일은 실제로 확인한 출처와 범위를 기록합니다. 가이드 수정일은 내용이 바뀔 때만 갱신합니다. 점검을 완료하고 관련 변경이 없다고 확인한 날에도 날짜별 기록을 남길 수 있습니다.
 
+## 2026-11-07
+부분 확인 / Partial review
+
+확인 시각 / Reviewed at: 2026-11-07 09:58 KST (UTC+09:00).
+
+| Scope / 범위 | Result / 결과 |
+| --- | --- |
+| [Models](https://learn.chatgpt.com/docs/models) | Terra의 CLI 최소 버전 0.159.0과 Astra·Sol·Terra·Luna 추천은 이전 점검 기록과 일치합니다. / Terra's minimum CLI version 0.159.0 and the Astra, Sol, Terra, and Luna recommendations match the previous review record. |
+| [Changelog](https://learn.chatgpt.com/docs/changelog) | 11월 6일 CLI 0.167.0 공지에서 세션 선택기의 백엔드 전환 시 초안 보존을 확인했습니다. 이전 일일 기록의 CLI 0.166.0보다 새 릴리스입니다. / The November 6 CLI 0.167.0 announcement documents preserving drafts when switching backends in the session picker. This is newer than CLI 0.166.0 in the previous daily records. |
+| Social / 소셜 | 소셜 원문 확인 미완료. 아홉 작성자의 새 관련 글 유무는 판단하지 않았습니다. / Social originals not fully verified. No conclusion was reached about new relevant posts from the nine authors. |
+| Guide / 가이드 | 가이드 변경·화면 검수 보류. 실제 제품 UI와 8개 조합 검수는 수행하지 않았습니다. / Guide changes and visual review pending. Actual product UI and the eight combinations were not reviewed. |
+
+위 사실만 부분 확인했으며 가이드·이미지·수정일은 유지했습니다. / Only the facts above were partially reviewed; guide content, images, and modification dates remain unchanged.
+
 ## 2026-11-06
 부분 확인 / Partial review
 
