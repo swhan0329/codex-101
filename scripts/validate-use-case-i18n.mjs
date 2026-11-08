@@ -57,7 +57,7 @@ const countKoreanChunks = (value) => (String(value).match(/[가-힣]+/g) || []).
 const stripPreservedLiterals = (value) => String(value)
   .replace(/```[\s\S]*?```/g, ' ')
   .replace(/`[^`]+`/g, ' ')
-  .replace(/\[[^\]\n]+\]/g, ' ')
+  .replace(/\[[^\]]+\]/g, ' ')
   .replace(/[$@][A-Za-z0-9_-]+/g, ' ')
   .replace(/\b(?:[\w.-]+\/)*[\w.-]+\.(?:md|csv|pptx|xlsx|docx|json|toml|html|js|ts|py|png|jpg|jpeg|svg|pdf)\b/g, ' ')
   .replace(/\b[A-Za-z0-9]+(?:-[A-Za-z0-9]+)+\b/g, ' ');
@@ -180,7 +180,7 @@ const commonUntranslatedTerms = new Set([
 const untranslatedWords = (value) => (stripPreservedLiterals(value).match(/[A-Za-z]{3,}/g) || [])
   .filter((word) => !commonUntranslatedTerms.has(word));
 const normalizedTokens = (value) => Array.from(String(value).matchAll(
-  /\[[^\]\n]+\]|[$@][A-Za-z0-9_-]+|`[^`]+`|\b(?:[\w.-]+\/)*[\w.-]+\.(?:md|csv|pptx|xlsx|docx|json|toml|html|js|ts|py)\b/g,
+  /\[[^\]]+\]|[$@][A-Za-z0-9_-]+|`[^`]+`|\b(?:[\w.-]+\/)*[\w.-]+\.(?:md|csv|pptx|xlsx|docx|json|toml|html|js|ts|py)\b/g,
 ), (match) => match[0]).sort();
 const machineTranslationRedFlags = [
   /\bchief of staff\b/i,
@@ -198,15 +198,48 @@ const machineTranslationRedFlags = [
 for (const item of cases) {
   const promptEn = item.official?.promptEn || '';
   const promptKo = item.official?.promptKo || '';
+  const noOfficialPrompt = item.official?.promptStatus === 'not-provided';
 
-  if (!promptEn) errors.push(`${item.id}: promptEn is missing`);
-  if (!promptKo) errors.push(`${item.id}: promptKo is missing`);
-  if (promptEn === promptKo) errors.push(`${item.id}: promptKo is identical to promptEn`);
+  if (noOfficialPrompt) {
+    if (promptEn || promptKo || item.prompt) {
+      errors.push(`${item.id}: a case without an official starter prompt must not invent one`);
+    }
+    if (!/^https:\/\/learn\.chatgpt\.com\/use-cases\//.test(item.sourceUrl || '')
+      || !/^\d{4}-\d{2}-\d{2}$/.test(item.official?.sourceChecked || '')
+      || !item.official?.guideSectionsEn?.length
+      || !item.official?.guideSectionsKo?.length) {
+      errors.push(`${item.id}: prompt absence needs a checked source and bilingual workflow`);
+    }
+  } else {
+    if (!promptEn) errors.push(`${item.id}: promptEn is missing`);
+    if (!promptKo) errors.push(`${item.id}: promptKo is missing`);
+    if (promptEn === promptKo) errors.push(`${item.id}: promptKo is identical to promptEn`);
+  }
+  if (item.official?.promptStatus && !['present', 'not-provided'].includes(item.official.promptStatus)) {
+    errors.push(`${item.id}: unknown promptStatus`);
+  }
+  for (const [enKey, koKey] of [['bestForEn', 'bestForKo'], ['guideSectionsEn', 'guideSectionsKo']]) {
+    if (item.official?.[koKey]) {
+      const en = item.official[enKey] || [];
+      const ko = item.official[koKey];
+      if (!Array.isArray(ko) || en.length !== ko.length || ko.some((line) => !/[가-힣]/.test(line))) {
+        errors.push(`${item.id}: ${enKey}/${koKey} bilingual structure differs`);
+      }
+    }
+  }
 
   const enLines = promptEn.split('\n').length;
   const koLines = promptKo.split('\n').length;
   if (enLines !== koLines) {
     errors.push(`${item.id}: line structure differs (${enLines} English vs ${koLines} Korean)`);
+  }
+
+  const promptStructure = (value) => String(value).split('\n').map((line) => {
+    if (!line.trim()) return 'blank';
+    return line.match(/^\s*(?:[-*+]\s|\d+[.)]\s)/)?.[0] || 'text';
+  });
+  if (JSON.stringify(promptStructure(promptEn)) !== JSON.stringify(promptStructure(promptKo))) {
+    errors.push(`${item.id}: paragraph or list structure differs`);
   }
 
   const enTokens = normalizedTokens(promptEn);

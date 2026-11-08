@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="style.css?v=20261016-ebook-banner" />
 </head>
 
-<body data-page="use-cases" data-updated="2026-10-15">
+<body data-page="use-cases" data-updated="2026-11-08">
     <script src="ebook-banner.js?v=20261016-ebook-banner"></script>
     <nav class="top-bar">
         <div class="top-bar-inner">
@@ -49,10 +49,10 @@
                     <p class="hero-badge">
                         <span data-i18n="use_cases_hero_badge">공식 Use Cases 한국어 재분류</span>
                         <span aria-hidden="true"> · </span>
-                        <span class="live-date" data-date-format="long">2026년 10월 15일</span>
+                        <span class="live-date" data-date-format="long">2026년 11월 8일</span>
                     </p>
                     <h1 class="use-case-title" data-i18n="use_cases_hero_title">Codex에게 무엇을 맡길 수 있을까?</h1>
-                    <p class="use-case-lead" data-i18n="use_cases_hero_lead">OpenAI 공식 Codex use cases 전체를 한국 실무자가 먼저 떠올리는 업무 상황으로 다시 묶었습니다. 카드를 누르면 공식 상세 페이지의 난이도, 시간, Skills & Plugins, Starter prompt, 주의점을 한국어 모드에서 읽기 쉽게 확인할 수 있습니다.</p>
+                    <p class="use-case-lead" data-i18n="use_cases_hero_lead">확인한 OpenAI 공식 사용 사례를 실무 상황별로 묶었습니다. 카드를 열어 난이도·시간·Skills & Plugins, 제공되는 프롬프트 또는 설정 안내, 결과물·주의점과 공식 원문을 확인하세요.</p>
                     <div class="hero-cta">
                         <a href="#use-case-browser" class="btn btn-primary" data-i18n="use_cases_hero_cta">사례 둘러보기</a>
                         <a href="https://developers.openai.com/codex/use-cases" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" data-i18n="use_cases_official_cta">공식 원문 보기</a>
@@ -63,7 +63,7 @@
                     <ol class="use-case-source-list">
                         <li data-i18n="use_cases_source_1">영어 기능명이 아니라 한국 실무 상황 기준으로 먼저 고릅니다.</li>
                         <li data-i18n="use_cases_source_2">카드를 누르면 아래에서 필요한 스킬과 플러그인을 먼저 봅니다.</li>
-                        <li data-i18n="use_cases_source_3">한국어 모드에서는 한국어 프롬프트, 영어 모드에서는 공식 영어 프롬프트를 봅니다.</li>
+                        <li data-i18n="use_cases_source_3">프롬프트가 제공된 사례는 한국어 번역과 공식 영어 원문을 봅니다. 설정 안내만 있는 사례는 공식 상세로 이어집니다.</li>
                     </ol>
                 </aside>
             </div>
@@ -89,7 +89,7 @@
                         <button class="use-case-category active" type="button" data-use-case-filter="all">
                             <span class="use-case-category-main">전체 보기</span>
                             <span class="use-case-category-sub">모든 한국어 상세 사례</span>
-                            <span class="use-case-category-count" data-use-case-count="all">101</span>
+                            <span class="use-case-category-count" data-use-case-count="all">118</span>
                         </button>
                         <div id="use-case-categories" class="use-case-category-list"></div>
                     </aside>
@@ -97,8 +97,8 @@
                     <div class="use-case-workbench">
                         <section class="use-case-results" aria-label="Use case cards">
                             <div class="use-case-results-head">
-                                <p id="use-case-result-label" class="use-case-result-label" aria-live="polite">101개 사례</p>
-                                <p class="use-case-result-note" data-i18n="use_cases_result_note">사례를 먼저 고르면 아래에 프롬프트와 상세 가이드가 열립니다.</p>
+                                <p id="use-case-result-label" class="use-case-result-label" aria-live="polite">118개 사례</p>
+                                <p class="use-case-result-note" data-i18n="use_cases_result_note">사례를 고르면 프롬프트 또는 공식 설정 안내와 상세 가이드가 열립니다.</p>
                             </div>
                             <div id="use-case-grid" class="use-case-grid"></div>
                         </section>
@@ -107,7 +107,7 @@
                             <div class="use-case-detail-empty">
                                 <p class="overview-kicker" data-i18n="use_cases_empty_kicker">Detail</p>
                                 <h2 data-i18n="use_cases_empty_title">왼쪽에서 사례를 선택하세요</h2>
-                                <p data-i18n="use_cases_empty_desc">선택한 사례의 공식 태그, 필요한 Skills & Plugins, Starter prompt, 결과물, 주의점, 공식 원문 링크가 여기에 표시됩니다.</p>
+                                <p data-i18n="use_cases_empty_desc">선택한 사례의 공식 태그, Skills & Plugins, 제공되는 Starter prompt 또는 설정 안내, 결과물, 주의점과 원문 링크가 표시됩니다.</p>
                             </div>
                         </aside>
                     </div>
@@ -121,15 +121,15 @@
             <p class="footer-contrib" data-i18n="use_cases_footer_contrib">이 페이지는 OpenAI 공식 Codex use cases를 한국어 실무 맥락으로 재구성한 보조 가이드입니다. 원문과 최신 세부사항은 각 공식 링크를 함께 확인하세요.</p>
             <p class="footer-meta">
                 <span data-i18n="footer_date_prefix">최종 업데이트</span>:
-                <span class="live-date" data-date-format="long">2026년 10월 15일</span>
+                <span class="live-date" data-date-format="long">2026년 11월 8일</span>
             </p>
             <p class="footer-meta">Made by <a href="https://github.com/swhan0329" target="_blank">@swhan0329</a></p>
         </div>
     </footer>
 
-    <script src="i18n.js?v=20261015-ui-consistency"></script>
-    <script src="use-cases-data.js?v=20260819-learn-docs-local-automation"></script>
-    <script src="app.js?v=20261015-ui-consistency"></script>
+    <script src="i18n.js?v=20261108-verified-catalog"></script>
+    <script src="use-cases-data.js?v=20261108-verified-catalog"></script>
+    <script src="app.js?v=20261108-verified-catalog"></script>
 </body>
 
 </html>

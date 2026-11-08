@@ -1,5 +1,9 @@
 // Korean-first Codex use-case catalog.
 // Source baseline: https://developers.openai.com/codex/use-cases
+// Incremental source review: 2026-11-08; 19 new and 4 renamed cases reviewed.
+// Seventeen new cases included; two setup cases await direct product-UI verification.
+// Thirteen selected source prompt formats were verified; this is not a full baseline audit.
+// Prior baseline below does not imply a full current body/prompt audit.
 // Last official scrape: 2026-08-19
 window.codexUseCaseCategories = [
     {
@@ -131,107 +135,137 @@ window.codexUseCases = [
             "proactive-teammate"
         ],
         "category": "ops",
-        "title": "매일 업무 브리프 만들기",
-        "titleEn": "Create a daily work brief",
-        "sourceTitle": "Create a daily work brief",
-        "sourceUrl": "https://developers.openai.com/codex/use-cases/daily-work-brief",
-        "summary": "캘린더, 메시지, 이메일, 프로젝트 문맥을 모아 오늘의 우선순위와 준비할 일을 짧은 브리프로 정리합니다.",
-        "summaryEn": "Turn calendar, messages, email, and project context into a focused plan for the day.",
-        "when": "하루의 우선순위가 calendar, email, Slack, docs, follow-up 목록에 흩어져 있을 때 좋습니다.",
-        "prompt": "이 프로젝트의 목표, 자주 쓰는 명령, 주의할 파일, 완료 기준을 읽고 Codex용 작업 메모를 만들어줘.",
-        "output": "작업 규칙, 반복 명령, 주의점, 다음에 바로 이어갈 수 있는 운영 메모.",
-        "caution": "기억시킬 내용에는 민감 정보나 비밀키를 넣지 말고, repo에 남겨도 되는 규칙만 구분하세요.",
+        "title": "업무 비서실장 설정하기",
+        "titleEn": "Set up a work chief of staff",
+        "sourceTitle": "Set up a work chief of staff",
+        "sourceUrl": "https://learn.chatgpt.com/use-cases/daily-work-brief",
+        "summary": "연결된 메시지·메일·캘린더·문서의 변화를 매시간 확인하고 우선순위·회의 준비·답장 초안을 정리합니다.",
+        "summaryEn": "Check connected messages, email, calendars, and documents hourly for changes, priorities, meeting preparation, and draft replies.",
+        "when": "메시지·메일·캘린더·문서·프로젝트 추적기에 흩어진 우선순위와 약속을 지속적으로 정리할 때.",
+        "prompt": "내 비서실장이 되어줘.\n\nSlack 또는 Teams, Gmail 또는 Outlook, 내 캘린더, 문서, 노트, 프로젝트 추적기처럼 네가 사용할 수 있는 업무 도구와 출처를 먼저 확인해. 내가 무엇을 하고 있는지, 누구와 일하는지, 무엇을 약속했는지, 무엇에 주의해야 하는지 파악해.\n\n다음을 다루는 간결한 업데이트를 제공해:\n\n- 무엇이 바뀌었고 무엇에 결정이 필요한지;\n- 다가오는 마감, 회의, 약속;\n- 답장이 필요한 메시지;\n- 무엇이 막혔거나 누군가를 기다리는지; 그리고\n- 무엇은 기다려도 되는지.\n\n가능한 경우 원본 출처에 링크하고, 오래된 요청을 다시 올리기 전에 최신 답장을 확인하며, 중요한 출처를 사용할 수 없으면 알려줘. 확인된 사실과 가정을 분리하고 이미 해결된 항목은 반복하지 마.\n\n유용할 때는 다음 단계 제안, 답장 초안, 회의 브리프를 준비해. 데스크톱 앱에서 내가 프로젝트를 위임하라고 요청하면, 별도 프로젝트 작업을 만들거나 이어서 진행하고 필요한 맥락만 공유해.\n\n예약 작업을 사용할 수 있으면 매시간 확인을 설정해. 연결된 출처를 검토하고, 찾은 내용을 이전 업데이트와 비교하며, 우선순위, 마감, 차단 요인, 결정, 메시지가 의미 있게 바뀔 때만 나를 방해해. 새 내용이 없으면 조용히 있어. 스케줄을 만들 수 없으면 활성화된 것처럼 말하지 말고 알려줘.\n\n방금 요청한 매시간 확인을 제외하고, 새 프로젝트 작업을 만들거나, 무언가를 보내거나, 문서를 편집하거나, 일정을 바꾸거나, 약속을 만들기 전에는 먼저 물어봐.\n\n오늘 내가 알아야 할 것부터 말해줘.",
+        "output": "새 결정·마감·응답 필요 사항과 출처 링크가 있는 간결한 업데이트, 미전송 답장·회의 준비 초안.",
+        "caution": "원문 프롬프트는 매시간 확인을 요청하지만 추가 프로젝트 작업·전송·문서 수정·일정 변경은 별도 승인을 요구합니다. 웹의 연결 출처 확인과 데스크톱 로컬 작업을 구분하고 로컬 확인에는 컴퓨터·앱을 켜 두세요. 플랜·워크스페이스별 예약 지원을 확인하세요.",
         "official": {
             "difficulty": "Easy",
-            "time": "long-running",
+            "time": "Long-running",
             "tags": [
                 "Automation",
-                "Integrations",
-                "Knowledge Work",
-                "Analysis"
+                "Integrations"
             ],
             "bestForEn": [
-                "People whose priorities are spread across calendar, email, Slack, docs, and follow-up lists.",
-                "Workdays with several meetings, decisions, and reply-worthy messages to triage.",
-                "Teams that want a short source-backed brief they can refine and run on a schedule."
+                "People managing priorities and commitments across messages, email, calendars, documents, and project trackers.",
+                "Workdays with meetings to prepare for, decisions to make, and follow-ups to track."
             ],
             "skills": [
                 {
                     "name": "Google Calendar",
                     "why": "Review the day's meetings, timing, and preparation needs.",
-                    "url": "https://github.com/openai/plugins/tree/main/plugins/google-calendar"
+                    "whyKo": "회의·시간·준비할 사항을 확인합니다.",
+                    "url": "https://learn.chatgpt.com/use-cases/daily-work-brief"
                 },
                 {
                     "name": "Gmail",
-                    "why": "Find recent email that needs a reply or changes today's priorities.",
-                    "url": "https://github.com/openai/plugins/tree/main/plugins/gmail"
+                    "why": "Find Gmail messages that need a reply or change your priorities.",
+                    "whyKo": "답장이 필요하거나 우선순위를 바꾸는 Gmail 메시지를 찾습니다.",
+                    "url": "https://learn.chatgpt.com/use-cases/daily-work-brief"
+                },
+                {
+                    "name": "Outlook Email",
+                    "why": "Find Outlook messages that need a reply or change your priorities.",
+                    "whyKo": "답장이 필요하거나 우선순위를 바꾸는 Outlook 메시지를 찾습니다.",
+                    "url": "https://learn.chatgpt.com/use-cases/daily-work-brief"
                 },
                 {
                     "name": "Slack",
                     "why": "Find direct messages, mentions, decisions, and follow-ups that need attention.",
-                    "url": "https://github.com/openai/plugins/tree/main/plugins/slack"
+                    "whyKo": "확인이 필요한 DM·멘션·결정·후속 조치를 찾습니다.",
+                    "url": "https://learn.chatgpt.com/use-cases/daily-work-brief"
+                },
+                {
+                    "name": "Teams",
+                    "why": "Find Teams messages, decisions, and follow-ups that need attention.",
+                    "whyKo": "확인이 필요한 Teams 메시지·결정·후속 조치를 찾습니다.",
+                    "url": "https://learn.chatgpt.com/use-cases/daily-work-brief"
                 },
                 {
                     "name": "Google Drive",
                     "why": "Read the approved running notes, trackers, or planning docs behind the day's work.",
-                    "url": "https://github.com/openai/plugins/tree/main/plugins/google-drive"
+                    "whyKo": "업무의 근거가 되는 승인된 노트·추적 자료·계획 문서를 읽습니다.",
+                    "url": "https://learn.chatgpt.com/use-cases/daily-work-brief"
                 }
             ],
             "promptEn": "Be my chief of staff.\n\nStart by checking the work tools and sources available to you, such as Slack or Teams, Gmail or Outlook, my calendar, documents, notes, and project trackers. Figure out what I'm working on, who I work with, what I've committed to, and what needs my attention.\n\nGive me a concise update covering:\n\n- what changed and what needs a decision;\n- approaching deadlines, meetings, and commitments;\n- messages that need a response;\n- what is blocked or waiting on someone; and\n- what can wait.\n\nLink to the original sources when possible, check the latest replies before resurfacing an older request, and tell me if an important source is unavailable. Separate confirmed facts from assumptions and don't repeat items that have already been resolved.\n\nSuggest next steps, draft replies, and prepare meeting briefs when useful. In the desktop app, when I ask you to delegate a project, create or continue a separate project task and share only the context it needs.\n\nSet up an hourly check if scheduled tasks are available. Review the connected sources, compare what you find with prior updates, and interrupt me only when a priority, deadline, blocker, decision, or message meaningfully changes. Stay quiet when there's nothing new. If you can't create the schedule, tell me instead of implying that it's active.\n\nApart from the hourly check I just requested, ask before creating a new project task, sending anything, editing documents, changing a schedule, or making commitments.\n\nStart by telling me what I should know today.",
             "promptKo": "내 비서실장이 되어줘.\n\nSlack 또는 Teams, Gmail 또는 Outlook, 내 캘린더, 문서, 노트, 프로젝트 추적기처럼 네가 사용할 수 있는 업무 도구와 출처를 먼저 확인해. 내가 무엇을 하고 있는지, 누구와 일하는지, 무엇을 약속했는지, 무엇에 주의해야 하는지 파악해.\n\n다음을 다루는 간결한 업데이트를 제공해:\n\n- 무엇이 바뀌었고 무엇에 결정이 필요한지;\n- 다가오는 마감, 회의, 약속;\n- 답장이 필요한 메시지;\n- 무엇이 막혔거나 누군가를 기다리는지; 그리고\n- 무엇은 기다려도 되는지.\n\n가능한 경우 원본 출처에 링크하고, 오래된 요청을 다시 올리기 전에 최신 답장을 확인하며, 중요한 출처를 사용할 수 없으면 알려줘. 확인된 사실과 가정을 분리하고 이미 해결된 항목은 반복하지 마.\n\n유용할 때는 다음 단계 제안, 답장 초안, 회의 브리프를 준비해. 데스크톱 앱에서 내가 프로젝트를 위임하라고 요청하면, 별도 프로젝트 작업을 만들거나 이어서 진행하고 필요한 맥락만 공유해.\n\n예약 작업을 사용할 수 있으면 매시간 확인을 설정해. 연결된 출처를 검토하고, 찾은 내용을 이전 업데이트와 비교하며, 우선순위, 마감, 차단 요인, 결정, 메시지가 의미 있게 바뀔 때만 나를 방해해. 새 내용이 없으면 조용히 있어. 스케줄을 만들 수 없으면 활성화된 것처럼 말하지 말고 알려줘.\n\n방금 요청한 매시간 확인을 제외하고, 새 프로젝트 작업을 만들거나, 무언가를 보내거나, 문서를 편집하거나, 일정을 바꾸거나, 약속을 만들기 전에는 먼저 물어봐.\n\n오늘 내가 알아야 할 것부터 말해줘.",
             "guideSectionsEn": [
-                "Start with the context behind today",
-                "Make the brief recurring",
-                "Review what changed"
-            ]
-        }
+                "Choose web connected-source checks or desktop local access according to the required sources.",
+                "Connect the relevant sources, review the first update, and correct resolved or missing items.",
+                "Continue in one thread and review the hourly schedule.",
+                "On desktop, request a separate project teammate only when needed; review before sending, editing, or committing to actions."
+            ],
+            "bestForKo": [
+                "메시지·메일·캘린더·문서·프로젝트 추적기의 우선순위와 약속을 관리하는 사람.",
+                "회의 준비·의사결정·후속 조치가 있는 업무일."
+            ],
+            "guideSectionsKo": [
+                "필요 출처에 맞춰 웹의 연결 출처 확인과 데스크톱의 로컬 접근을 선택합니다.",
+                "관련 출처를 연결하고 첫 업데이트의 해결·누락 항목을 바로잡습니다.",
+                "같은 대화에서 이어가며 매시간 확인 일정을 검토합니다.",
+                "데스크톱에서는 필요할 때 별도 프로젝트 담당 작업을 요청하고 전송·수정·약속 전에 검토합니다."
+            ],
+            "sourceChecked": "2026-11-08"
+        },
+        "whenEn": "Keeping priorities and commitments current across messaging, email, calendars, documents, and project trackers.",
+        "outputEn": "A concise sourced update on decisions, deadlines, and replies needed, with unsent response drafts and meeting briefs.",
+        "cautionEn": "The source prompt requests an hourly check but requires approval for additional project tasks, sending, document edits, and schedule changes. Distinguish web connected-source checks from desktop local work, which needs the computer and app running. Scheduled-task support varies by plan and workspace."
     },
     {
         "id": "feedback-synthesis",
         "category": "ops",
-        "title": "여러 곳의 피드백을 실행 항목으로 합치기",
-        "titleEn": "Turn feedback into actions",
-        "sourceTitle": "Turn feedback into actions",
-        "sourceUrl": "https://developers.openai.com/codex/use-cases/feedback-synthesis",
-        "summary": "Slack, 이슈, 문서, 설문 피드백을 중복 제거하고 실행 가능한 항목으로 정리합니다.",
-        "summaryEn": "Synthesize feedback from multiple sources into a reviewable artifact.",
-        "when": "사용자/팀 피드백이 여러 채널에 흩어져 우선순위를 잡기 어려울 때 좋습니다.",
-        "prompt": "이 피드백들을 중복 제거하고, 제품 개선 액션으로 묶어 우선순위와 근거를 표로 만들어줘.",
-        "output": "테마별 피드백, 액션 후보, 근거 링크, 담당자/난이도 후보.",
-        "caution": "소수 의견이 사라지지 않도록 빈도와 중요도를 따로 보게 하세요.",
+        "title": "여러 도구의 제품 피드백 분석하기",
+        "titleEn": "Analyze product feedback across tools",
+        "sourceTitle": "Analyze product feedback across tools",
+        "sourceUrl": "https://learn.chatgpt.com/use-cases/feedback-synthesis",
+        "summary": "Slack·설문·이슈·지원·연구 자료를 근거가 있는 주제로 묶고 Sheet나 Doc에서 검토할 후속 초안을 준비합니다.",
+        "summaryEn": "Group feedback from Slack, surveys, issues, support, and research into sourced themes and reviewable Sheet or Doc follow-ups.",
+        "when": "여러 출처의 반복 문제·영향 사용자·설계 시사점·미해결 질문을 함께 검토해야 할 때.",
+        "prompt": "@Slack, @GitHub, @Linear, @Google Drive를 사용해 [time period] 동안의 [feature or product area] 피드백을 분석해. 관련 고객 지원 요청, 설문과 연구 노트도 포함해.\n\n피드백을 명확한 주제로 묶고, 뒷받침하는 근거를 보여 주며, 무엇에 주의가 필요한지 알려줘.\n\n내가 검토할 수 있는 Google 시트 또는 문서에 발견 내용을 넣어. 후속 조치 초안은 작성하되 게시하거나 보내지는 마.",
+        "output": "주제별 출처·영향·확신도·설계 시사점과 질문을 포함한 문서·시트, 미게시 후속 초안.",
+        "caution": "자료의 기간과 접근 범위를 지정하고 초안을 검토한 뒤 게시 여부를 결정하세요. 공식 예시의 언급 횟수는 작은 표본의 반복 언급이며 제품 전체 발생률이 아닙니다. 예약 갱신도 전송·이슈 생성의 추가 승인 범위를 넓히지 않습니다.",
         "official": {
             "difficulty": "Easy",
             "time": "30m",
             "tags": [
                 "Data",
-                "Integrations",
-                "Knowledge Work",
-                "Quality"
+                "Integrations"
             ],
             "bestForEn": [
-                "Analyzing feedback from Slack channels, issue threads, survey exports, support-ticket CSVs, or research notes.",
-                "Teams that need to turn feedback into actionable insights."
+                "Teams reviewing feedback across Slack, surveys, issues, support, and research.",
+                "Product decisions that need clear themes, supporting evidence, and follow-ups."
             ],
             "skills": [
                 {
                     "name": "Slack",
                     "why": "Read approved feedback channels or thread links.",
-                    "url": "https://github.com/openai/plugins/tree/main/plugins/slack"
+                    "url": "https://github.com/openai/plugins/tree/main/plugins/slack",
+                    "whyKo": "승인된 피드백 채널·스레드를 읽습니다."
                 },
                 {
                     "name": "GitHub",
                     "why": "Read issues, PR comments, and discussion threads.",
-                    "url": "https://github.com/openai/plugins/tree/main/plugins/github"
+                    "url": "https://github.com/openai/plugins/tree/main/plugins/github",
+                    "whyKo": "이슈·PR 댓글·토론 스레드를 읽습니다."
                 },
                 {
                     "name": "Linear",
                     "why": "Read bug or feature queues.",
-                    "url": "https://github.com/openai/plugins/tree/main/plugins/linear"
+                    "url": "https://github.com/openai/plugins/tree/main/plugins/linear",
+                    "whyKo": "버그·기능 요청 목록을 읽습니다."
                 },
                 {
                     "name": "Google Drive",
                     "why": "Read feedback docs, exports, and folders, then create a Google Doc or Sheet.",
-                    "url": "https://github.com/openai/plugins/tree/main/plugins/google-drive"
+                    "url": "https://github.com/openai/plugins/tree/main/plugins/google-drive",
+                    "whyKo": "피드백 문서·내보내기 파일·폴더를 읽고 Google 문서·시트를 만듭니다."
                 },
                 {
                     "name": "Google Sheets",
@@ -240,13 +274,30 @@ window.codexUseCases = [
                 }
             ],
             "promptEn": "Analyze feedback on [feature or product area] from [time period] using @Slack, @GitHub, @Linear, and @Google Drive. Include any relevant support tickets, surveys, and research notes.\n\nGroup the feedback into clear themes, show the supporting evidence, and tell me what needs attention.\n\nPut the findings in a Google Sheet or Doc I can review. Draft any follow-ups, but don't post or send them.",
-            "promptKo": "@Slack, @GitHub, @Linear, @Google Drive를 사용해 [time period] 동안의 [feature or product area] 피드백을 분석해. 관련 support ticket, survey, research note도 포함해.\n\n피드백을 명확한 theme으로 묶고, supporting evidence를 보여주며, 무엇에 주의가 필요한지 알려줘.\n\n내가 검토할 수 있는 Google Sheet 또는 Doc에 findings를 넣어. 후속 조치 초안은 작성하되 게시하거나 보내지는 마.",
+            "promptKo": "@Slack, @GitHub, @Linear, @Google Drive를 사용해 [time period] 동안의 [feature or product area] 피드백을 분석해. 관련 고객 지원 요청, 설문과 연구 노트도 포함해.\n\n피드백을 명확한 주제로 묶고, 뒷받침하는 근거를 보여 주며, 무엇에 주의가 필요한지 알려줘.\n\n내가 검토할 수 있는 Google 시트 또는 문서에 발견 내용을 넣어. 후속 조치 초안은 작성하되 게시하거나 보내지는 마.",
             "guideSectionsEn": [
-                "Create the first version",
-                "Turn the sheet into the next draft",
-                "Keep a feedback channel current"
-            ]
-        }
+                "Provide feedback sources, product scope, and time period.",
+                "Group repeated feedback into distinct themes with source links or IDs.",
+                "Create a Sheet or Doc with affected users, confidence, questions, and decisions needed.",
+                "Review themes, refine broad groups, and prepare unsent updates or issue drafts.",
+                "For recurring input, retain the same review boundaries when setting a schedule."
+            ],
+            "bestForKo": [
+                "Slack·설문·이슈·고객 지원·연구에 걸친 피드백을 검토하는 팀.",
+                "명확한 주제·근거·후속 조치가 필요한 제품 의사결정."
+            ],
+            "guideSectionsKo": [
+                "피드백 출처·제품 범위·기간을 제공합니다.",
+                "반복 피드백을 구별되는 주제로 묶고 출처 링크나 ID를 남깁니다.",
+                "영향 사용자·확신도·질문·필요 결정을 Sheet나 Doc에 정리합니다.",
+                "주제를 검토해 넓은 묶음을 나누고 미전송 업데이트나 이슈 초안을 준비합니다.",
+                "입력이 반복되면 같은 검토 경계를 유지하며 일정을 설정합니다."
+            ],
+            "sourceChecked": "2026-11-08"
+        },
+        "whenEn": "Reviewing recurring problems, affected users, design implications, and open questions across feedback sources.",
+        "outputEn": "A document or sheet with themes, sources, affected users, confidence, design implications, open questions, and unposted follow-up drafts.",
+        "cautionEn": "Specify the date range and source access, then review drafts before publication. Mention counts in the example describe a small sample, not product-wide incidence. Recurring checks do not expand authorization to send messages or create issues."
     },
     {
         "id": "clean-messy-data",
@@ -550,39 +601,51 @@ window.codexUseCases = [
     {
         "id": "use-your-computer-with-codex",
         "category": "today",
-        "title": "내 Mac 앱을 직접 조작해서 업무 끝내기",
-        "titleEn": "Use your computer with Codex",
-        "sourceTitle": "Use your computer with Codex",
-        "sourceUrl": "https://developers.openai.com/codex/use-cases/use-your-computer-with-codex",
-        "summary": "Codex가 브라우저나 데스크톱 앱을 열고 클릭, 입력, 확인까지 대신 수행합니다.",
-        "summaryEn": "Let Codex click, type, and navigate apps on your Mac.",
-        "when": "웹 콘솔, 폼, 내부 도구처럼 API보다 화면 조작이 빠른 업무에 적합합니다.",
-        "prompt": "Chrome에서 이 관리 페이지를 열고 신청자 정보를 확인한 뒤, 입력 가능한 필드까지 채워줘. 제출 버튼은 누르기 전에 멈춰.",
-        "output": "처리한 단계 목록, 화면에서 확인한 값, 제출 전 검토가 필요한 상태.",
-        "caution": "결제, 제출, 발송, 삭제처럼 되돌리기 어려운 버튼은 명확히 멈추는 조건을 넣어야 합니다.",
+        "title": "내 컴퓨터의 앱으로 업무 처리하기",
+        "titleEn": "Use your computer with ChatGPT",
+        "sourceTitle": "Use your computer with ChatGPT",
+        "sourceUrl": "https://learn.chatgpt.com/use-cases/use-your-computer-with-codex",
+        "summary": "ChatGPT 데스크톱 앱에서 macOS·Windows 앱과 로컬 파일의 작업을 맡기고 접근 권한과 결과를 검토합니다.",
+        "summaryEn": "Use ChatGPT desktop Computer Use for scoped work across macOS or Windows apps and local files, then review permissions and results.",
+        "when": "여러 데스크톱 앱·창·로컬 파일을 오가며 처리할 작업이 있고 대상 앱에 접근을 허용할 수 있을 때.",
+        "prompt": "@Computer [task]를 도와줘.\n\n필요하면 내 데스크톱 앱이나 파일을 사용해. 보내기, 구매, 중요한 변경 전에는 먼저 물어봐.",
+        "output": "출처가 명확한 작업 결과와 검토할 초안, 허용된 범위에서의 실행·미실행 상태.",
+        "caution": "macOS의 백그라운드 실행과 Windows의 전면 데스크톱 실행을 구분하세요. 웹·모바일 클라우드 작업은 로컬 앱·파일·로그인된 브라우저를 직접 쓸 수 없습니다. 로그인된 웹 작업은 Chrome 경로로 분리하고 같은 앱에서 병렬 Computer Use를 피하세요.",
         "official": {
             "difficulty": "Easy",
             "time": "5m",
             "tags": [
                 "Knowledge Work",
-                "Workflow",
-                "Automation"
+                "Workflow"
             ],
             "bestForEn": [
-                "Tasks that move across apps, windows, browser sessions, or local files on your Mac",
-                "Work you want to hand off and let Codex continue in the background"
+                "Tasks that move across desktop apps, windows, or local files.",
+                "Work that needs the macOS background experience or a dedicated Windows foreground session."
             ],
             "skills": [],
             "promptEn": "@Computer Help me [task].\n\nUse my desktop apps or files as needed. Ask before sending, buying, or changing anything important.",
-            "promptKo": "@Computer [task]를 도와줘.\n\n필요하면 내 desktop app이나 file을 사용해. 보내기, 구매, 중요한 변경 전에는 먼저 물어봐.",
+            "promptKo": "@Computer [task]를 도와줘.\n\n필요하면 내 데스크톱 앱이나 파일을 사용해. 보내기, 구매, 중요한 변경 전에는 먼저 물어봐.",
             "guideSectionsEn": [
-                "Introduction",
-                "How to use",
-                "Practical tips",
-                "Good follow-ups",
-                "Suggested prompt"
-            ]
-        }
+                "Choose desktop Computer Use for apps and files, or a separate Chrome task for signed-in websites.",
+                "Specify the task, allowed apps or files, and expected result.",
+                "Review access prompts and pause before sending or changing important data.",
+                "On Windows, keep the target app visible; on macOS, review supported background and locked-use requirements."
+            ],
+            "bestForKo": [
+                "데스크톱 앱·창·로컬 파일을 오가는 작업.",
+                "macOS의 백그라운드 경험이나 Windows의 전용 전면 세션이 필요한 작업."
+            ],
+            "guideSectionsKo": [
+                "앱·파일은 데스크톱 Computer Use, 로그인된 웹사이트는 별도 Chrome 작업으로 구분합니다.",
+                "작업·허용된 앱이나 파일·기대 결과를 지정합니다.",
+                "접근 요청을 검토하고 전송·중요 데이터 변경 전에 확인합니다.",
+                "Windows는 대상 앱을 보이게 두고, macOS는 지원되는 백그라운드·잠금 상태 사용 조건을 확인합니다."
+            ],
+            "sourceChecked": "2026-11-08"
+        },
+        "whenEn": "Completing scoped work across desktop apps, windows, or local files with approved app access.",
+        "outputEn": "A result and drafts with source context and a clear account of actions completed within the permitted scope.",
+        "cautionEn": "Distinguish macOS background execution from Windows foreground desktop use. Web and mobile cloud tasks cannot directly use local apps, files, or signed-in browsers. Start signed-in web work through Chrome and avoid concurrent Computer Use against the same app."
     },
     {
         "id": "automation-bug-triage",
@@ -1395,42 +1458,53 @@ window.codexUseCases = [
     {
         "id": "discover-protein-folding-architectures",
         "category": "science",
-        "title": "단백질 접힘 아키텍처 가설을 benchmark 루프로 검증하기",
-        "titleEn": "Discover protein folding architectures",
-        "sourceTitle": "Discover protein folding architectures",
-        "sourceUrl": "https://developers.openai.com/codex/use-cases/discover-protein-folding-architectures",
-        "summary": "protein-folding 아이디어를 실험 계획, 구현, benchmark, 결과 비교 루프로 바꿉니다.",
-        "summaryEn": "Turn protein-folding hypotheses into benchmarked experiment loops.",
-        "when": "새 모델 구조나 실험 가설을 논문 수준의 주장으로 바로 쓰기보다 재현 가능한 benchmark로 먼저 좁히고 싶을 때 좋습니다.",
-        "prompt": "이 protein-folding 가설을 검증 가능한 실험 루프로 만들어줘. baseline, 수정할 architecture, benchmark, metric, 실패 시 다음 후보를 분리해줘.",
-        "output": "실험 계획, 구현 후보, benchmark 명령, 결과 표, 다음 반복 가설.",
-        "caution": "과학적 결론은 실험 설정과 데이터 한계에 좌우되므로 논문/데이터 출처와 재현 조건을 반드시 남기게 하세요.",
+        "title": "단백질 접힘 모델 가설 검증하기",
+        "titleEn": "Discover protein folding models",
+        "sourceTitle": "Discover protein folding models",
+        "sourceUrl": "https://learn.chatgpt.com/use-cases/discover-protein-folding-architectures",
+        "summary": "과학자가 정한 AlphaFold2 계열 가설을 NanoFold 검증 점수와 지속적인 실험 기록으로 비교합니다.",
+        "summaryEn": "Compare a scientist-defined AlphaFold2-style hypothesis with NanoFold validation scores and durable experiment records.",
+        "when": "명확한 과학 가설·작동하는 기준 구현·자동 평가 벤치마크로 장기 실험을 반복해야 할 때.",
+        "prompt": "Goal Mode를 사용해 NanoFold 공개 벤치마크에서 이 AlphaFold2 계열 단백질 구조 모델의 검증 lDDT-Cα 점수를 개선해 줘.\n\n과학적 가설은 지속적으로 유지되는 고차 기하 상태가 제한된 데이터에서 모델이 단백질 기하를 더 효율적으로 학습하는 데 도움이 될 수 있다는 거야:\n\n- 표준 MSA와 쌍별 표현은 유지해;\n- 선택한 잔기 세 개의 조합에 학습되는 희소 2-simplex 면 상태를 추가해;\n- 선택한 잔기 네 개의 조합에 학습되는 희소 3-simplex 사면체 상태를 추가해;\n- 위상 구조는 공식 벤치마크 입력과 모델이 생성한 재순환 기하만으로 구성해;\n- NanoFold 제약 아래에서 계산적으로 실용적인 구현을 유지해.\n\n다음을 지속적으로 추적할 파일을 유지해:\n1. PLAN.md에 현재 전략, 상태와 제안된 다음 단계\n2. EXPERIMENTS.md에 실험·결과의 구조화된 기록\n3. EXPERIMENT_NOTES.md에 계속 이어지는 메모와 생각\n\n각 반복마다:\n1. 테스트할 가설을 말해;\n2. 가장 작은 일관된 코드 또는 설정 변경을 해;\n3. 관련 테스트와 벤치마크 일부를 실행해;\n4. 지표, 지연 시간, 메모리와 실패 양상을 기록해;\n5. 변경을 유지·되돌림·개선할지 결정해;\n6. 국소적인 하이퍼파라미터 조정에만 머물지 말고 주기적으로 아키텍처 수준의 탐색 방향을 재평가해.\n\n스모크 테스트나 단일 체인 과적합 진단으로 일반화 성능 향상을 주장하지 마. 조건을 맞춘 비교를 우선하고 근거가 뒷받침하는 범위를 지켜.",
+        "output": "실험 가능한 아키텍처 변경, PLAN.md·EXPERIMENTS.md·EXPERIMENT_NOTES.md와 비교 검증 근거.",
+        "caution": "스모크 테스트나 단일 체인 과적합 결과를 일반화 성능으로 주장하지 마세요. 고정된 비교와 적절한 반복 실험이 필요합니다. 원문 본문의 GPT-5.5 Pro는 해당 실험의 모델 선택 기록이며 현재 Codex 추천으로 일반화하지 않습니다.",
         "official": {
             "difficulty": "Advanced",
-            "time": "long-running",
+            "time": "Long-running",
             "tags": [
                 "Sciences",
-                "Engineering",
-                "Automation",
-                "Data"
+                "Engineering"
             ],
             "bestForEn": [
                 "Computational biologists exploring architecture, loss, or curriculum changes against an automatically scorable benchmark.",
                 "Researchers who have a scientifically motivated hypothesis and want to compress the path from idea to working experimental fork.",
-                "ML engineers running long-lived autoresearch loops that require persistent experiment tracking and iterative debugging.",
-                "MSA representation M"
+                "ML engineers running long-lived autoresearch loops that require persistent experiment tracking and iterative debugging."
             ],
             "skills": [],
             "promptEn": "Use Goal Mode to improve the validation lDDT-Cα score of this AlphaFold2-style protein-structure model on the NanoFold public benchmark.\n\nThe scientific hypothesis is that persistent higher-order geometric states may help the model learn protein geometry more efficiently from limited data:\n\n- retain the standard MSA and pairwise representations;\n- add sparse learned 2-simplex face states for selected residue triplets;\n- add sparse learned 3-simplex tetrahedral states for selected residue quadruplets;\n- construct topology only from official benchmark inputs and model-generated recycled geometry;\n- keep the implementation computationally practical under NanoFold constraints.\n\nMaintain durable tracking files for:\n1. The current strategy, status, and proposed next steps in PLAN.md\n2. A structured log of experiments and results in EXPERIMENTS.md\n3. A running scratchpad of notes and thoughts in EXPERIMENT_NOTES.md\n\nFor each iteration:\n1. state the hypothesis being tested;\n2. make the smallest coherent code or configuration change;\n3. run the relevant tests and benchmark slice;\n4. record metrics, latency, memory, and failure modes;\n5. decide whether to keep, revert, or refine the change;\n6. periodically reassess the architecture-level search direction rather than only tuning local hyperparameters.\n\nDo not claim generalization gains from smoke tests or single-chain overfit diagnostics. Prefer matched comparisons and preserve the evidence boundary.",
-            "promptKo": "Goal Mode를 사용해 NanoFold public benchmark에서 이 AlphaFold2-style 단백질 구조 모델의 validation lDDT-Cα score를 개선해줘.\n\n과학적 가설은 persistent higher-order geometric states가 제한된 데이터에서 모델이 단백질 기하를 더 효율적으로 학습하는 데 도움이 될 수 있다는 거야:\n\n- 표준 MSA와 pairwise representations는 유지해;\n- 선택한 residue triplets에 sparse learned 2-simplex face states를 추가해;\n- 선택한 residue quadruplets에 sparse learned 3-simplex tetrahedral states를 추가해;\n- topology는 공식 benchmark inputs와 model-generated recycled geometry만으로 구성해;\n- NanoFold 제약 아래에서 계산적으로 실용적인 구현을 유지해.\n\n다음을 위한 durable tracking files를 유지해:\n1. PLAN.md에 현재 전략, 상태, 제안된 다음 단계\n2. EXPERIMENTS.md에 실험과 결과의 구조화된 log\n3. EXPERIMENT_NOTES.md에 계속 이어가는 scratchpad와 생각\n\n각 iteration마다:\n1. 테스트할 가설을 말해;\n2. 가장 작은 일관된 code 또는 configuration 변경을 해;\n3. 관련 test와 benchmark slice를 실행해;\n4. metrics, latency, memory, failure modes를 기록해;\n5. 변경을 유지, 되돌림, 또는 refine할지 결정해;\n6. local hyperparameter tuning만 하지 말고 주기적으로 architecture-level search direction을 재평가해.\n\nsmoke test나 single-chain overfit diagnostic으로 generalization gains를 주장하지 마. matched comparisons를 우선하고 evidence boundary를 보존해.",
+            "promptKo": "Goal Mode를 사용해 NanoFold 공개 벤치마크에서 이 AlphaFold2 계열 단백질 구조 모델의 검증 lDDT-Cα 점수를 개선해 줘.\n\n과학적 가설은 지속적으로 유지되는 고차 기하 상태가 제한된 데이터에서 모델이 단백질 기하를 더 효율적으로 학습하는 데 도움이 될 수 있다는 거야:\n\n- 표준 MSA와 쌍별 표현은 유지해;\n- 선택한 잔기 세 개의 조합에 학습되는 희소 2-simplex 면 상태를 추가해;\n- 선택한 잔기 네 개의 조합에 학습되는 희소 3-simplex 사면체 상태를 추가해;\n- 위상 구조는 공식 벤치마크 입력과 모델이 생성한 재순환 기하만으로 구성해;\n- NanoFold 제약 아래에서 계산적으로 실용적인 구현을 유지해.\n\n다음을 지속적으로 추적할 파일을 유지해:\n1. PLAN.md에 현재 전략, 상태와 제안된 다음 단계\n2. EXPERIMENTS.md에 실험·결과의 구조화된 기록\n3. EXPERIMENT_NOTES.md에 계속 이어지는 메모와 생각\n\n각 반복마다:\n1. 테스트할 가설을 말해;\n2. 가장 작은 일관된 코드 또는 설정 변경을 해;\n3. 관련 테스트와 벤치마크 일부를 실행해;\n4. 지표, 지연 시간, 메모리와 실패 양상을 기록해;\n5. 변경을 유지·되돌림·개선할지 결정해;\n6. 국소적인 하이퍼파라미터 조정에만 머물지 말고 주기적으로 아키텍처 수준의 탐색 방향을 재평가해.\n\n스모크 테스트나 단일 체인 과적합 진단으로 일반화 성능 향상을 주장하지 마. 조건을 맞춘 비교를 우선하고 근거가 뒷받침하는 범위를 지켜.",
             "guideSectionsEn": [
-                "Explore a protein-folding architecture hypothesis",
-                "Define a bounded experiment",
-                "Run the search with Goal Mode",
-                "Example result",
-                "Resources"
-            ]
-        }
+                "Supply a falsifiable architecture hypothesis, fixed benchmark, and working baseline.",
+                "Implement the smallest coherent change and run targeted tests and microbenchmarks.",
+                "Track strategy, results, metrics, latency, memory, and failures in durable files.",
+                "Periodically reassess the scientific direction and promote claims only after matched validation and replicates."
+            ],
+            "bestForKo": [
+                "자동 평가 벤치마크로 아키텍처·손실·학습 과정 변화를 탐구하는 계산생물학자.",
+                "과학적 가설을 작동하는 실험 분기로 구현하려는 연구자.",
+                "지속적인 실험 추적과 반복 디버깅이 필요한 장기 연구 루프를 운영하는 기계학습 엔지니어."
+            ],
+            "guideSectionsKo": [
+                "반증 가능한 아키텍처 가설·고정 벤치마크·작동하는 기준 구현을 제공합니다.",
+                "최소의 일관된 변경을 구현하고 집중 테스트와 소규모 성능 검사를 실행합니다.",
+                "지속적으로 유지할 파일에 전략·결과·지표·지연·메모리·실패를 기록합니다.",
+                "과학적 방향을 주기적으로 재검토하고 비교 검증·반복 실험 후에만 성능 주장을 확대합니다."
+            ],
+            "sourceChecked": "2026-11-08"
+        },
+        "whenEn": "Iterating on a bounded scientific hypothesis with a working baseline and automatically scorable benchmark.",
+        "outputEn": "An experimental architecture change, PLAN.md, EXPERIMENTS.md, EXPERIMENT_NOTES.md, and matched validation evidence.",
+        "cautionEn": "Do not treat smoke tests or single-chain overfit diagnostics as generalization evidence. Use matched comparisons and appropriate replicates. The body's GPT-5.5 Pro reference records that experiment's model choice, not a current Codex recommendation."
     },
     {
         "id": "refactor-your-codebase",
@@ -4910,6 +4984,922 @@ window.codexUseCases = [
                 "Review the last 30 days",
                 "Set up daily monitoring",
                 "Verify financial data before acting"
+            ]
+        }
+    },
+    {
+        "id": "manage-supply-chain-risk-in-cicd",
+        "title": "CI/CD 의존성 보안 위험 검토하기",
+        "titleEn": "Manage supply chain risk in the CI/CD",
+        "summary": "Dependabot 경고의 도달·악용 가능성을 조사하고 패키지 변경 시의 스캔 근거를 검토합니다.",
+        "summaryEn": "Assess reachability and exploitability of Dependabot alerts and review scan evidence when packages change.",
+        "when": "새 의존성이나 버전 변경이 애플리케이션에 실제로 미치는 보안 위험을 판단해야 할 때.",
+        "whenEn": "Deciding how a newly introduced dependency or package update affects application security.",
+        "output": "경고별 검증 판정과 이유, 변경된 패키지에 대한 스캔 결과·보존 보고서.",
+        "outputEn": "Per-alert validation verdicts and rationale, dependency-change scan results, and retained reports.",
+        "caution": "패키지 경고만으로 실제 악용 가능성을 확정하지 마세요. 원문의 워크플로는 같은 저장소 PR 조건, 읽기 권한과 비공개 API 키 보관을 포함합니다. 예시 설치·스캔 명령은 별도 승인된 환경에서 검토하세요.",
+        "cautionEn": "A package alert alone does not establish exploitability. The example workflow restricts execution to same-repository PRs, uses read permissions, and stores the API key as a secret. Review installation and scan commands in a separately authorized environment.",
+        "category": "security",
+        "sourceTitle": "Manage supply chain risk in the CI/CD",
+        "sourceUrl": "https://learn.chatgpt.com/use-cases/manage-supply-chain-risk-in-cicd",
+        "prompt": "",
+        "official": {
+            "difficulty": "Intermediate",
+            "time": "Long-running",
+            "tags": [
+                "Security",
+                "Engineering"
+            ],
+            "bestForEn": [
+                "Application security teams deciding which dependency alerts require action.",
+                "Developers assessing newly introduced packages or dependency updates.",
+                "Platform teams adding dependency-triggered security scans to their CI/CD pipelines."
+            ],
+            "bestForKo": [
+                "대응이 필요한 의존성 경고를 판단하는 애플리케이션 보안 팀.",
+                "새 패키지·의존성 업데이트를 평가하는 개발자.",
+                "CI/CD에 의존성 변경 기반 보안 스캔을 추가하는 플랫폼 팀."
+            ],
+            "skills": [],
+            "promptEn": "",
+            "promptKo": "",
+            "promptStatus": "not-provided",
+            "sourceChecked": "2026-11-08",
+            "guideSectionsEn": [
+                "Triage dependency alerts against the repository and record why each risk is validated or rejected.",
+                "Configure an approved dependency-change trigger and trusted runner.",
+                "Run the intended scan with scoped credentials and retain reports as private artifacts.",
+                "Review findings, uncertainty, and the affected application paths."
+            ],
+            "guideSectionsKo": [
+                "저장소를 기준으로 의존성 경고를 분류하고 각 위험의 검증·기각 이유를 남깁니다.",
+                "승인된 의존성 변경 트리거와 신뢰할 수 있는 실행기를 구성합니다.",
+                "범위가 제한된 자격증명으로 해당 스캔을 실행하고 보고서를 비공개 산출물로 보존합니다.",
+                "발견 사항·불확실성과 영향을 받는 앱 경로를 검토합니다."
+            ]
+        }
+    },
+    {
+        "id": "set-up-security-context",
+        "title": "보안 검토 맥락과 정책 준비하기",
+        "titleEn": "Set up security context",
+        "summary": "위협 모델·AGENTS.md·SECURITY.md·보조 문서의 역할을 나눠 보안 스캔의 판단 근거를 준비합니다.",
+        "summaryEn": "Prepare scan context by separating the roles of threat models, AGENTS.md, SECURITY.md, and supporting documents.",
+        "when": "시스템 경계·보호 자산·보고 기준을 보안 리뷰와 스캔에 일관되게 제공해야 할 때.",
+        "whenEn": "Supplying consistent system boundaries, protected assets, and reporting criteria to reviews and scans.",
+        "output": "위협 모델, 보안 정책과 문서 연결 관계, 스캔에 제공할 지식 자료.",
+        "outputEn": "A threat model, security policy, document links, and supporting knowledge for scans.",
+        "caution": "AGENTS.md의 공통 개발 지침과 SECURITY.md의 평가·보고 정책, 실제 시스템을 설명하는 위협 모델을 혼동하지 마세요. 원문의 예시는 해당 시스템의 사실을 확인한 뒤 적용해야 합니다.",
+        "cautionEn": "Keep shared engineering instructions in AGENTS.md distinct from evaluation and reporting policy in SECURITY.md and the system facts in a threat model. Verify example assumptions against the actual system before adopting them.",
+        "category": "security",
+        "sourceTitle": "Set up security context",
+        "sourceUrl": "https://learn.chatgpt.com/use-cases/set-up-security-context",
+        "prompt": "",
+        "official": {
+            "difficulty": "Intermediate",
+            "time": "30m",
+            "tags": [
+                "Security",
+                "Engineering"
+            ],
+            "bestForEn": [
+                "Developers preparing a repository for security reviews and scans.",
+                "Application security teams documenting system risks, security requirements, and reporting criteria.",
+                "Teams making architecture, engineering, and operational knowledge available to security agents."
+            ],
+            "bestForKo": [
+                "저장소의 보안 리뷰·스캔을 준비하는 개발자.",
+                "시스템 위험·보안 요건·보고 기준을 문서화하는 애플리케이션 보안 팀.",
+                "아키텍처·개발·운영 지식을 보안 에이전트에 제공하는 팀."
+            ],
+            "skills": [
+                {
+                    "name": "Codex Security: threat-model",
+                    "why": "Describe assets, entry points, security boundaries, and assumptions.",
+                    "whyKo": "자산·진입점·보안 경계·가정을 정리합니다.",
+                    "url": "https://learn.chatgpt.com/use-cases/set-up-security-context"
+                },
+                {
+                    "name": "Codex Security: define-security-policy",
+                    "why": "Define repository security policy and reporting criteria.",
+                    "whyKo": "저장소 보안 정책과 보고 기준을 정합니다.",
+                    "url": "https://learn.chatgpt.com/use-cases/set-up-security-context"
+                }
+            ],
+            "promptEn": "",
+            "promptKo": "",
+            "promptStatus": "not-provided",
+            "sourceChecked": "2026-11-08",
+            "guideSectionsEn": [
+                "Document assets, entry points, trust boundaries, authentication assumptions, and privileged operations.",
+                "Define security invariants, reportable findings, severity context, and exclusions in SECURITY.md.",
+                "Keep shared engineering instructions in AGENTS.md and link relevant threat-model and architecture documents.",
+                "Provide the approved supporting documents to the chosen scan workflow."
+            ],
+            "guideSectionsKo": [
+                "자산·진입점·신뢰 경계·인증 가정과 권한 작업을 문서화합니다.",
+                "SECURITY.md에 보안 불변 조건·보고 대상·심각도 맥락·제외 범위를 정합니다.",
+                "AGENTS.md에 공통 개발 지침을 두고 관련 위협 모델·아키텍처 문서를 연결합니다.",
+                "선택한 스캔 흐름에 승인된 보조 문서를 제공합니다."
+            ]
+        }
+    },
+    {
+        "id": "fix-a-finding-from-your-security-scan",
+        "title": "검토한 보안 발견 사항 수정하기",
+        "titleEn": "Fix a finding from your security scan",
+        "summary": "검토한 발견 사항 하나의 패치를 살펴보고 적용한 뒤 취약 동작과 정상 동작을 함께 검증합니다.",
+        "summaryEn": "Review and apply a patch for one accepted finding, then verify the vulnerable and legitimate behaviors.",
+        "when": "스캔에서 확인하고 수정하기로 결정한 발견 사항과 근거가 있을 때.",
+        "whenEn": "Addressing a scan finding that has been reviewed and accepted for remediation.",
+        "output": "집중된 패치, 검증 명령·결과, 남은 불확실성을 담은 PR 준비 자료.",
+        "outputEn": "A focused patch, verification commands and results, and PR materials with remaining uncertainty.",
+        "caution": "패치 생성은 checkout을 수정하지 않으며 적용만으로 해결을 입증하지 못합니다. 가능하면 수정 전 실패·수정 후 통과 회귀 근거를 확인하세요. 검증은 발견 사항을 자동으로 닫지 않습니다.",
+        "cautionEn": "Generating a patch does not change the checkout, and applying it does not establish remediation. Where practical, check regression evidence that fails before and passes after the fix. Verification does not automatically close the finding.",
+        "category": "security",
+        "sourceTitle": "Fix a finding from your security scan",
+        "sourceUrl": "https://learn.chatgpt.com/use-cases/fix-a-finding-from-your-security-scan",
+        "prompt": "",
+        "official": {
+            "difficulty": "Intermediate",
+            "time": "1h",
+            "tags": [
+                "Security",
+                "Engineering"
+            ],
+            "bestForEn": [
+                "Developers ready to address a reviewed finding from a Codex Security scan.",
+                "Maintainers who want to inspect a proposed patch before applying it locally.",
+                "Reviewers who need verification evidence alongside a focused security fix."
+            ],
+            "bestForKo": [
+                "Codex Security 스캔의 검토된 발견 사항에 대응할 준비가 된 개발자.",
+                "로컬 적용 전에 제안된 패치를 살펴보고 싶은 관리자.",
+                "집중된 보안 수정과 함께 검증 근거가 필요한 검토자."
+            ],
+            "skills": [
+                {
+                    "name": "Codex Security: fix-finding",
+                    "why": "Prepare and verify a focused fix for a reviewed finding.",
+                    "whyKo": "검토한 발견 사항의 집중된 수정을 준비·검증합니다.",
+                    "url": "https://learn.chatgpt.com/use-cases/fix-a-finding-from-your-security-scan"
+                }
+            ],
+            "promptEn": "",
+            "promptKo": "",
+            "promptStatus": "not-provided",
+            "sourceChecked": "2026-11-08",
+            "guideSectionsEn": [
+                "Review the finding, affected code, impact, and evidence; resolve uncertainty before patching.",
+                "Generate a focused patch and inspect the diff, regression tests, and unrelated changes.",
+                "Apply the reviewed patch locally and inspect the resulting diff.",
+                "Verify the fix and expected legitimate behavior; report verification gaps.",
+                "Prepare a PR with evidence and update the finding status deliberately."
+            ],
+            "guideSectionsKo": [
+                "발견 사항·영향 코드·영향·근거를 검토하고 패치 전에 불확실성을 해소합니다.",
+                "집중된 패치를 생성하고 diff·회귀 테스트·무관한 변경을 살펴봅니다.",
+                "검토한 패치를 로컬에 적용하고 결과 diff를 확인합니다.",
+                "수정 효과와 정상 동작을 검증하고 부족한 검증을 명시합니다.",
+                "근거를 담은 PR을 준비하고 발견 사항 상태는 별도로 판단해 갱신합니다."
+            ]
+        }
+    },
+    {
+        "id": "scan-multiple-repositories",
+        "title": "여러 저장소의 보안 스캔 정리하기",
+        "titleEn": "Scan multiple repositories",
+        "summary": "고정된 커밋의 저장소 목록을 스캔하고 각 결과의 완료 상태·커버리지·발견 사항을 따로 검토합니다.",
+        "summaryEn": "Scan a repository inventory at fixed commits and review completion, coverage, and findings separately for each result.",
+        "when": "여러 서비스의 정확한 리비전을 반복 가능한 목록으로 평가하고 후속 조치를 배정할 때.",
+        "whenEn": "Assessing exact revisions across services with a repeatable inventory and per-repository follow-up.",
+        "output": "저장소·커밋 목록, 시도별 상태와 산출물, 커버리지·발견 사항·다음 조치.",
+        "outputEn": "A repository and commit inventory, per-attempt status and artifacts, coverage, findings, and next actions.",
+        "caution": "CLI·Git 접근과 스캔 권한이 필요하며 스캔은 로컬 권한으로 실행되고 승인 대기를 하지 않습니다. 전체 커밋 SHA를 쓰고 결과는 저장소 밖 비공개 경로에 둡니다. --max-cost는 추정 제한이며 강제 지출 상한이 아닙니다. 종료 코드 0도 취약점이 없다는 뜻은 아닙니다.",
+        "cautionEn": "CLI, Git, and scan access are required; scans use local permissions without pausing for approval. Use full commit SHAs and a private results directory outside scanned repositories. --max-cost is an estimated limit, not a hard cap. Exit code 0 does not mean there are no vulnerabilities.",
+        "category": "security",
+        "sourceTitle": "Scan multiple repositories",
+        "sourceUrl": "https://learn.chatgpt.com/use-cases/scan-multiple-repositories",
+        "prompt": "",
+        "official": {
+            "difficulty": "Intermediate",
+            "time": "Long-running",
+            "tags": [
+                "Security",
+                "Engineering"
+            ],
+            "bestForEn": [
+                "Security teams assessing a group of services at specific commits.",
+                "Engineering teams that need a repeatable repository inventory and separate scan results.",
+                "Reviewers prioritizing findings and coverage gaps across repositories."
+            ],
+            "bestForKo": [
+                "정확한 커밋의 서비스 집합을 평가하는 보안 팀.",
+                "반복 가능한 저장소 목록과 개별 스캔 결과가 필요한 개발 팀.",
+                "여러 저장소의 발견 사항·커버리지 누락을 우선순위로 정리하는 검토자."
+            ],
+            "skills": [],
+            "promptEn": "",
+            "promptKo": "",
+            "promptStatus": "not-provided",
+            "sourceChecked": "2026-11-08",
+            "guideSectionsEn": [
+                "Confirm authorized repositories, CLI access, and local scan permissions.",
+                "Prepare unique repository IDs and full commit SHAs in the inventory.",
+                "Choose concurrency, attempts, mode, estimated cost limits, and a private output directory.",
+                "Review manifest.json, results.jsonl, coverage.json, report.md, and findings.json.",
+                "Resume with the same inputs and output directory; use a new directory when scope or revisions change."
+            ],
+            "guideSectionsKo": [
+                "승인된 저장소·CLI 접근과 로컬 스캔 권한을 확인합니다.",
+                "목록에 고유 저장소 ID와 전체 커밋 SHA를 준비합니다.",
+                "동시 실행 수·시도 수·모드·추정 비용 제한·비공개 출력 경로를 정합니다.",
+                "manifest.json·results.jsonl·coverage.json·report.md·findings.json을 검토합니다.",
+                "같은 입력·출력 경로로 재개하며 범위나 리비전이 바뀌면 새 경로를 씁니다."
+            ]
+        }
+    },
+    {
+        "id": "create-custom-review-workflows-with-github-actions",
+        "title": "GitHub Actions 보안 리뷰 흐름 만들기",
+        "titleEn": "Create custom review workflows with GitHub Actions",
+        "summary": "팀이 정한 트리거에서 Codex Security를 실행하고 발견 사항과 커버리지 근거를 보존하는 워크플로를 준비합니다.",
+        "summaryEn": "Prepare a workflow that runs Codex Security on team-selected triggers and retains findings and coverage evidence.",
+        "when": "수동 실행·예약 실행 같은 자체 트리거와 스캔 범위를 GitHub Actions에서 관리하고 싶을 때.",
+        "whenEn": "Managing custom scan triggers and scope in GitHub Actions, including manual or scheduled runs.",
+        "output": "검토 가능한 Actions 설정, 저장된 보안 보고서와 커버리지 산출물.",
+        "outputEn": "A reviewable Actions configuration and retained security and coverage reports.",
+        "caution": "공식 YAML은 검토용 설정 예시이며 여기서 실행한 결과가 아닙니다. 실행기·샌드박스 요구 사항, 고정된 액션 버전과 비밀 저장소를 확인하고 결과에 맞는 접근 권한·보존 기간을 정하세요.",
+        "cautionEn": "The official YAML is a configuration example, not evidence of execution here. Review runner and sandbox requirements, pinned action versions, secret storage, and suitable artifact access and retention.",
+        "category": "security",
+        "sourceTitle": "Create custom review workflows with GitHub Actions",
+        "sourceUrl": "https://learn.chatgpt.com/use-cases/create-custom-review-workflows-with-github-actions",
+        "prompt": "",
+        "official": {
+            "difficulty": "Intermediate",
+            "time": "Long-running",
+            "tags": [
+                "Security",
+                "Engineering"
+            ],
+            "bestForEn": [
+                "Platform and application security teams adding security checks to GitHub Actions.",
+                "Repository maintainers configuring custom review triggers and scan scope.",
+                "Teams that need repeatable reviews with saved findings, evidence, and coverage reports."
+            ],
+            "bestForKo": [
+                "GitHub Actions에 보안 검사를 추가하는 플랫폼·애플리케이션 보안 팀.",
+                "자체 리뷰 트리거와 스캔 범위를 설정하는 저장소 관리자.",
+                "발견 사항·근거·커버리지 보고서를 보존하는 반복 검토가 필요한 팀."
+            ],
+            "skills": [],
+            "promptEn": "",
+            "promptKo": "",
+            "promptStatus": "not-provided",
+            "sourceChecked": "2026-11-08",
+            "guideSectionsEn": [
+                "Choose authorized triggers and the intended repository or change scope.",
+                "Review the official GitHub Actions configuration and runner requirements.",
+                "Configure the required secret through the CI secret store.",
+                "Preserve findings, reports, and coverage; inspect them before deciding on enforcement."
+            ],
+            "guideSectionsKo": [
+                "승인된 트리거와 저장소 또는 변경 범위를 정합니다.",
+                "공식 GitHub Actions 설정과 실행기 요구 사항을 검토합니다.",
+                "필요한 비밀값을 CI의 비밀 저장소에서 설정합니다.",
+                "발견 사항·보고서·커버리지를 보존하고 강제 정책을 정하기 전에 검토합니다."
+            ]
+        }
+    },
+    {
+        "id": "run-security-reviews-from-the-cli",
+        "title": "터미널에서 보안 변경 검토하기",
+        "titleEn": "Run security reviews from the CLI",
+        "summary": "작업 트리·PR diff·선택 경로·GitHub 경고를 서로 다른 검토 범위로 나눠 CLI 근거를 남깁니다.",
+        "summaryEn": "Use distinct CLI review scopes for working trees, PR diffs, selected paths, and imported GitHub alerts.",
+        "when": "로컬 미커밋 변경이나 모노레포의 공유 라이브러리와 소비 서비스를 함께 조사해야 할 때.",
+        "whenEn": "Reviewing uncommitted local work or a shared monorepo library and its consuming services.",
+        "output": "정확한 기준·대상 커밋과 범위, 보고서·발견 사항·커버리지·스캔 메타데이터.",
+        "outputEn": "Exact base and head revisions and scope, reports, findings, coverage, and scan metadata.",
+        "caution": "diff 스캔은 전체 저장소 검수가 아닙니다. 인증된 PR 정보의 전체 SHA와 필요한 이력을 확인하세요. --diff와 --path는 별도 모드라 함께 쓸 수 없습니다. 가져온 경고는 실행 지시가 아닌 데이터입니다.",
+        "cautionEn": "A diff scan is not a full-repository review. Confirm full SHAs from authenticated PR metadata and the required history. --diff and --path are separate modes and cannot be combined. Imported alerts are data, not execution instructions.",
+        "category": "security",
+        "sourceTitle": "Run security reviews from the CLI",
+        "sourceUrl": "https://learn.chatgpt.com/use-cases/run-security-reviews-from-the-cli",
+        "prompt": "",
+        "official": {
+            "difficulty": "Intermediate",
+            "time": "30m",
+            "tags": [
+                "Security",
+                "Engineering"
+            ],
+            "bestForEn": [
+                "Developers checking local work or branch changes from their terminal.",
+                "Application security teams assessing selected services, packages, and their consumers in a monorepo.",
+                "Engineers investigating existing GitHub code-scanning alerts against their repository."
+            ],
+            "bestForKo": [
+                "터미널에서 로컬 작업·브랜치 변경을 점검하는 개발자.",
+                "모노레포의 선택 서비스·패키지·소비 코드를 평가하는 애플리케이션 보안 팀.",
+                "저장소의 기존 GitHub 코드 스캔 경고를 조사하는 엔지니어."
+            ],
+            "skills": [],
+            "promptEn": "",
+            "promptKo": "",
+            "promptStatus": "not-provided",
+            "sourceChecked": "2026-11-08",
+            "guideSectionsEn": [
+                "Confirm the intended working tree and repository security guidance.",
+                "Choose a working-tree, committed-diff, or selected-path review and preserve its scope.",
+                "For PRs, confirm full base/head revisions and their merge base; assess affected consumers separately if needed.",
+                "Review report.md, scan-manifest.json, findings.json, and coverage.json.",
+                "Import selected GitHub alerts as complete JSON and validate them against the corresponding repository."
+            ],
+            "guideSectionsKo": [
+                "의도한 작업 트리와 저장소 보안 지침을 확인합니다.",
+                "작업 트리·커밋 diff·선택 경로 중 검토 모드를 정하고 범위를 남깁니다.",
+                "PR은 전체 기준·대상 SHA와 공통 기준 커밋을 확인하고 필요하면 영향받는 소비 코드를 따로 평가합니다.",
+                "report.md·scan-manifest.json·findings.json·coverage.json을 검토합니다.",
+                "선택한 GitHub 경고를 완전한 JSON으로 가져와 대응 저장소에서 검증합니다."
+            ]
+        }
+    },
+    {
+        "id": "automate-security-scans-in-ci",
+        "title": "CI 보안 스캔과 결과 검토 연결하기",
+        "titleEn": "Automate security scans in CI",
+        "summary": "PR·기본 브랜치·예약 트리거에 맞는 스캔 범위를 정하고 보고서·커버리지와 차단 정책을 검토합니다.",
+        "summaryEn": "Choose scan scope for PR, default-branch, and scheduled triggers, then review reports, coverage, and enforcement policy.",
+        "when": "코드 변경이나 일정에 따라 반복 가능한 보안 검토를 CI에 추가할 때.",
+        "whenEn": "Adding repeatable CI security checks for code changes or recurring assessments.",
+        "output": "트리거·범위·추정 예산이 명확한 파이프라인과 보존 보고서·후속 조치.",
+        "outputEn": "A pipeline with explicit triggers, scope, estimated budget, retained reports, and follow-up actions.",
+        "caution": "승인된 저장소, CI·비밀 설정 권한과 Codex Security 접근이 있는 API 키가 필요합니다. 스캔은 실행기 권한을 사용하므로 fork·비신뢰 코드 제한을 지키세요. --max-cost는 강제 상한이 아니며 실패·누락 커버리지는 발견 사항이 없어도 확인해야 합니다.",
+        "cautionEn": "Requires an authorized repository, CI and secret-configuration permissions, and an API key with Codex Security access. Scans use runner permissions, so follow fork and untrusted-code restrictions. --max-cost is not a hard cap; review failed or incomplete coverage even when there are no findings.",
+        "category": "security",
+        "sourceTitle": "Automate security scans in CI",
+        "sourceUrl": "https://learn.chatgpt.com/use-cases/automate-security-scans-in-ci",
+        "prompt": "",
+        "official": {
+            "difficulty": "Intermediate",
+            "time": "Long-running",
+            "tags": [
+                "Security",
+                "Engineering"
+            ],
+            "bestForEn": [
+                "Teams adding security checks to pull or merge requests.",
+                "Maintainers scanning their default branch after changes land.",
+                "Security teams scheduling recurring repository assessments."
+            ],
+            "bestForKo": [
+                "PR·병합 요청에 보안 검사를 추가하는 팀.",
+                "변경 반영 후 기본 브랜치를 스캔하는 관리자.",
+                "반복적인 저장소 평가를 예약하는 보안 팀."
+            ],
+            "skills": [],
+            "promptEn": "",
+            "promptKo": "",
+            "promptStatus": "not-provided",
+            "sourceChecked": "2026-11-08",
+            "guideSectionsEn": [
+                "Choose one trigger and matching scope: merge-base diff for PRs, full repository for default-branch or scheduled scans.",
+                "Prepare a trusted runner, scoped secrets, required history, and a suitable estimated budget.",
+                "Run through the normal reviewed CI configuration and retain private reports and coverage.",
+                "Start with nonblocking findings review before choosing severity-based merge enforcement.",
+                "Verify fixes before closing findings and follow up on incomplete coverage."
+            ],
+            "guideSectionsKo": [
+                "트리거 하나와 해당 범위를 정합니다. PR은 공통 기준 커밋부터의 diff, 기본 브랜치·예약은 전체 저장소를 검토합니다.",
+                "신뢰할 수 있는 실행기·제한된 비밀값·필요 이력·적절한 추정 예산을 준비합니다.",
+                "정상 검토 절차를 거친 CI 설정으로 실행하고 보고서·커버리지를 비공개로 보존합니다.",
+                "발견 사항을 검토하며 시작한 뒤 심각도별 병합 차단 여부를 정합니다.",
+                "발견 사항을 닫기 전에 수정을 검증하고 불완전한 커버리지를 후속 조사합니다."
+            ]
+        }
+    },
+    {
+        "id": "review-code-changes-in-codex-desktop",
+        "title": "데스크톱에서 코드 변경 보안 리뷰하기",
+        "titleEn": "Review code changes in Codex Desktop",
+        "summary": "로컬 변경·커밋·브랜치·PR의 보안 발견 사항을 해당 코드와 함께 검토합니다.",
+        "summaryEn": "Review security findings alongside the affected code for local changes, commits, branches, or PRs.",
+        "when": "구현 맥락이 남아 있을 때 로컬 변경이나 GitHub 변경 집합을 보안 관점에서 조사하고 싶을 때.",
+        "whenEn": "Investigating security risks in local or GitHub change sets while implementation context is fresh.",
+        "output": "변경 집합의 보안 검토와 영향 코드·발견 사항에 대한 조사 근거.",
+        "outputEn": "A security review of the change set with evidence about affected code and findings.",
+        "caution": "선택한 PR·커밋·미커밋 변경이 의도한 대상인지 확인하세요. 이 안내는 검토 시작 경로이며, 발견 사항의 타당성이나 수정 성공을 자동으로 보장하지 않습니다.",
+        "cautionEn": "Confirm that the selected PR, commit, or uncommitted changes are the intended target. This is a review entry point, not a guarantee that findings are valid or fixes succeed.",
+        "category": "security",
+        "sourceTitle": "Review code changes in Codex Desktop",
+        "sourceUrl": "https://learn.chatgpt.com/use-cases/review-code-changes-in-codex-desktop",
+        "prompt": "[Github repository URL]에 $codex-security:security-diff-scan을 실행해 줘.",
+        "official": {
+            "difficulty": "Intermediate",
+            "time": "30m",
+            "tags": [
+                "Security",
+                "Engineering"
+            ],
+            "bestForEn": [
+                "Developers checking uncommitted changes while the implementation is still fresh in their minds.",
+                "Engineers reviewing a commit, branch, or pull-request change set from a local checkout.",
+                "Reviewers who want to investigate findings alongside the affected code before deciding what to fix."
+            ],
+            "bestForKo": [
+                "구현 맥락이 생생할 때 미커밋 변경을 점검하는 개발자.",
+                "로컬 checkout에서 커밋·브랜치·PR 변경 집합을 검토하는 엔지니어.",
+                "수정 대상을 정하기 전에 해당 코드와 함께 발견 사항을 조사하는 검토자."
+            ],
+            "skills": [
+                {
+                    "name": "Codex Security: security-diff-scan",
+                    "why": "Review the intended Git-backed change set for security risks.",
+                    "whyKo": "지정한 Git 변경 집합의 보안 위험을 검토합니다.",
+                    "url": "https://learn.chatgpt.com/use-cases/review-code-changes-in-codex-desktop"
+                }
+            ],
+            "promptEn": "Please run a $codex-security:security-diff-scan on [Github repository URL]",
+            "promptKo": "[Github repository URL]에 $codex-security:security-diff-scan을 실행해 줘.",
+            "promptStatus": "present",
+            "sourceChecked": "2026-11-08",
+            "guideSectionsEn": [
+                "Select the intended local change set or GitHub repository URL.",
+                "Start a Security review through the repository project or the named skill.",
+                "Investigate findings alongside the affected code before deciding what to fix."
+            ],
+            "guideSectionsKo": [
+                "의도한 로컬 변경 집합이나 GitHub 저장소 URL을 선택합니다.",
+                "저장소 프로젝트나 지정된 스킬로 보안 리뷰를 시작합니다.",
+                "수정 대상을 정하기 전에 영향 코드와 함께 발견 사항을 조사합니다."
+            ]
+        }
+    },
+    {
+        "id": "find-vulnerabilities-in-your-code",
+        "title": "첫 보안 스캔의 근거 검토하기",
+        "summary": "승인된 로컬 저장소의 표준 스캔에서 발견 사항·검증 근거·커버리지 누락을 검토합니다.",
+        "when": "소유하거나 평가 권한이 있는 저장소·서비스를 처음 점검할 때.",
+        "output": "발견 사항과 현실적 영향, 검증 근거·불확실성, 검토·제외·미완료 범위.",
+        "caution": "먼저 한 저장소나 명확한 서비스 범위로 시작하고 플러그인·계정 접근을 확인하세요. 표준 스캔은 한 번의 평가이며 전체 검증이나 무결점 보증이 아닙니다. 이 원문 프롬프트는 수정 적용·발견 사항 닫기를 금지합니다.",
+        "category": "security",
+        "outputEn": "Findings and realistic impact, validation evidence, uncertainty, and reviewed, excluded, or incomplete coverage.",
+        "cautionEn": "Start with one authorized repository or service and confirm plugin and account access. A standard scan is one assessment, not exhaustive assurance. The source prompt prohibits applying fixes or closing findings.",
+        "sourceTitle": "Run your first security scan",
+        "titleEn": "Run your first security scan",
+        "sourceUrl": "https://learn.chatgpt.com/use-cases/find-vulnerabilities-in-your-code",
+        "summaryEn": "Find vulnerabilities in your code, review the evidence, and decide what needs attention.",
+        "prompt": "$codex-security:security-scan을 사용해 [absolute path to this repository or one scoped folder]의 표준 보안 스캔을 실행해.\n\n나는 이 코드를 평가할 권한이 있어. 선택한 범위 안에서만 검토해.\n저장소의 보안 지침과 지원되는 검증 명령을 사용해.\n수정을 적용하거나 발견 사항을 닫지 마.\n\n스캔 보고서를 반환하고 다음을 요약해:\n- 발견 사항, 영향받는 코드와 현실적인 영향.\n- 검증 근거와 남은 불확실성.\n- 검토한 영역, 제외 범위와 불완전한 커버리지.\n- 사람이 먼저 검토해야 할 발견 사항과 커버리지 누락.",
+        "official": {
+            "difficulty": "Intermediate",
+            "time": "Long-running",
+            "tags": [
+                "Security",
+                "Engineering"
+            ],
+            "bestForEn": [
+                "Developers assessing a repository or service they own or are authorized to review.",
+                "Security teams establishing an initial view of vulnerabilities and areas that need further review.",
+                "Reviewers who need code evidence and validation results before deciding what to fix."
+            ],
+            "skills": [],
+            "promptEn": "Use $codex-security:security-scan to run a standard security scan of [absolute path to this repository or one scoped folder].\n\nI am authorized to assess this code. Keep the review within the selected scope.\nUse the repository's security guidance and supported validation commands.\nDo not apply fixes or close findings.\n\nReturn the scan report and summarize:\n- Findings, affected code, and realistic impact.\n- Validation evidence and remaining uncertainty.\n- Reviewed areas, exclusions, and incomplete coverage.\n- Findings and coverage gaps that need human review first.",
+            "promptKo": "$codex-security:security-scan을 사용해 [absolute path to this repository or one scoped folder]의 표준 보안 스캔을 실행해.\n\n나는 이 코드를 평가할 권한이 있어. 선택한 범위 안에서만 검토해.\n저장소의 보안 지침과 지원되는 검증 명령을 사용해.\n수정을 적용하거나 발견 사항을 닫지 마.\n\n스캔 보고서를 반환하고 다음을 요약해:\n- 발견 사항, 영향받는 코드와 현실적인 영향.\n- 검증 근거와 남은 불확실성.\n- 검토한 영역, 제외 범위와 불완전한 커버리지.\n- 사람이 먼저 검토해야 할 발견 사항과 커버리지 누락.",
+            "promptStatus": "present",
+            "sourceChecked": "2026-11-08",
+            "guideSectionsEn": [
+                "Confirm authorized scope, plugin access, and repository security guidance.",
+                "Run one standard assessment and review its target, revision, and coverage.",
+                "Investigate findings using code, attack paths, validation evidence, and uncertainty.",
+                "Decide whether to investigate or fix each accepted finding; do not apply fixes through this prompt."
+            ],
+            "guideSectionsKo": [
+                "승인된 범위·플러그인 접근·저장소 보안 지침을 확인합니다.",
+                "표준 평가를 한 번 실행하고 대상·리비전·커버리지를 검토합니다.",
+                "코드·공격 경로·검증 근거·불확실성으로 발견 사항을 조사합니다.",
+                "발견 사항별 추가 조사·수정 여부를 정하되 이 프롬프트로 수정은 적용하지 않습니다."
+            ],
+            "bestForKo": [
+                "평가 권한이 있거나 소유한 저장소·서비스를 점검하는 개발자.",
+                "취약점과 추가 검토 영역의 초기 현황을 파악하는 보안 팀.",
+                "수정 대상을 정하기 전에 코드·검증 근거가 필요한 검토자."
+            ]
+        }
+    },
+    {
+        "id": "build-an-ai-tour-guide",
+        "title": "사용자가 직접 따라 하는 앱 투어 만들기",
+        "summary": "안정적인 UI 대상과 상태를 WebMCP로 제공해 사용자가 직접 행동하는 안내 흐름을 준비합니다.",
+        "when": "로그인·연결 서비스·열린 패널에 따라 온보딩 단계가 달라질 때.",
+        "output": "대상 강조·상태 확인·사용자 행동 대기를 포함한 투어와 상태별 검증 결과.",
+        "caution": "안내 도구와 실제 행동 도구를 분리하고 기존 인증·권한 검사를 유지합니다. 사용자가 직접 작업을 완료하며 게시·배포는 승인 전 보류합니다. WebMCP를 호출할 수 있는 환경에서 취소·숨은 대상·다른 시작 상태를 검수해야 합니다.",
+        "category": "ui",
+        "outputEn": "A tour with semantic targets, highlighting, state inspection, user-action waits, and state-specific validation.",
+        "cautionEn": "Separate guidance from action tools, preserve authentication and permission checks, and let the user complete the workflow. Test cancellation, hidden targets, and starting states in a WebMCP-capable environment; obtain approval before publication.",
+        "sourceTitle": "Build an AI tour guide",
+        "titleEn": "Build an AI tour guide",
+        "sourceUrl": "https://learn.chatgpt.com/use-cases/build-an-ai-tour-guide",
+        "summaryEn": "Help users learn your app with a tour that adapts as they go.",
+        "prompt": "[web app/repository]에 가이드 투어를 추가해서 Codex가 사용자에게 [complete one specific workflow] 방법을 보여줄 수 있게 해.\n\n먼저 앱의 기존 UI, 상태 관리와 문서를 읽어. WebMCP를 사용해 Codex가 다음을 할 수 있게 해:\n- 안정적인 의미 기반 ID, 레이블과 설명으로 투어 대상을 찾기\n- 짧은 설명과 함께 대상을 강조 표시하고 강조 표시를 해제하기\n- 다음 단계를 선택하는 데 필요한 UI 상태 읽기\n- 사용자의 행동을 기다린 뒤 갱신된 상태 읽기\n- 앱의 지침과 관련 문서 읽기\n\n워크플로는 사용자가 직접 완료해야 해. 투어 도구와 실제 작업을 수행하는 도구를 분리하고, 앱의 기존 인증과 권한 검사를 유지해.\n\n완결된 흐름 하나로 시작해. 기존 컴포넌트와 디자인 시스템을 재사용해. Codex가 WebMCP 도구를 호출할 수 있는 브라우저 환경에서 투어를 테스트하되, 서로 다른 시작 상태, 취소한 단계와 아직 보이지 않는 대상도 포함해.\n\n바뀐 내용, 검증한 사항과 아직 필요한 설정을 요약해. 내 승인 없이 배포하거나 게시하지 마.",
+        "official": {
+            "difficulty": "Advanced",
+            "time": "Long-running",
+            "tags": [
+                "Front-end",
+                "Engineering"
+            ],
+            "bestForEn": [
+                "Teams helping new users complete their first workflow in a web app.",
+                "Onboarding flows that change with sign-in status, connected services, or open panels.",
+                "Tasks where users should learn the controls and perform the actions themselves."
+            ],
+            "skills": [],
+            "promptEn": "Add a guided tour to [web app/repository] so Codex can show users how to [complete one specific workflow].\n\nRead the app's existing UI, state management, and documentation first. Use WebMCP to let Codex:\n- discover tour targets through stable, semantic IDs, labels, and descriptions\n- highlight a target with a short explanation and dismiss the highlight\n- read the UI state needed to choose the next step\n- wait for the user to act, then read the updated state\n- read the app's instructions and relevant documentation\n\nThe user should complete the workflow themselves. Keep tour tools separate from tools that perform actions, and preserve the app's existing authentication and permission checks.\n\nStart with one complete flow. Reuse the existing components and design system. Test the tour in a browser environment where Codex can call the WebMCP tools, including different starting states, a canceled step, and a target that isn't visible yet.\n\nSummarize what changed, what you verified, and any setup still needed. Do not deploy or publish without my approval.",
+            "promptKo": "[web app/repository]에 가이드 투어를 추가해서 Codex가 사용자에게 [complete one specific workflow] 방법을 보여줄 수 있게 해.\n\n먼저 앱의 기존 UI, 상태 관리와 문서를 읽어. WebMCP를 사용해 Codex가 다음을 할 수 있게 해:\n- 안정적인 의미 기반 ID, 레이블과 설명으로 투어 대상을 찾기\n- 짧은 설명과 함께 대상을 강조 표시하고 강조 표시를 해제하기\n- 다음 단계를 선택하는 데 필요한 UI 상태 읽기\n- 사용자의 행동을 기다린 뒤 갱신된 상태 읽기\n- 앱의 지침과 관련 문서 읽기\n\n워크플로는 사용자가 직접 완료해야 해. 투어 도구와 실제 작업을 수행하는 도구를 분리하고, 앱의 기존 인증과 권한 검사를 유지해.\n\n완결된 흐름 하나로 시작해. 기존 컴포넌트와 디자인 시스템을 재사용해. Codex가 WebMCP 도구를 호출할 수 있는 브라우저 환경에서 투어를 테스트하되, 서로 다른 시작 상태, 취소한 단계와 아직 보이지 않는 대상도 포함해.\n\n바뀐 내용, 검증한 사항과 아직 필요한 설정을 요약해. 내 승인 없이 배포하거나 게시하지 마.",
+            "promptStatus": "present",
+            "sourceChecked": "2026-11-08",
+            "guideSectionsEn": [
+                "Choose one complete user workflow and inspect existing UI and state.",
+                "Expose semantic tour targets, highlights, UI state, and relevant instructions through WebMCP.",
+                "Wait for the user to perform each step rather than acting on their behalf.",
+                "Test different starting states, cancellation, and initially hidden targets before requesting publication approval."
+            ],
+            "guideSectionsKo": [
+                "완전한 사용자 흐름 하나를 고르고 기존 UI·상태를 살펴봅니다.",
+                "WebMCP로 의미 있는 투어 대상·강조·UI 상태·관련 지침을 제공합니다.",
+                "대신 실행하지 않고 사용자가 각 단계를 수행하기를 기다립니다.",
+                "게시 승인을 요청하기 전에 여러 시작 상태·취소·처음에 숨은 대상을 테스트합니다."
+            ],
+            "bestForKo": [
+                "새 사용자가 웹 앱의 첫 흐름을 완료하도록 돕는 팀.",
+                "로그인·연결 서비스·열린 패널에 따라 달라지는 온보딩 흐름.",
+                "사용자가 조작 방법을 배우고 직접 행동해야 하는 작업."
+            ]
+        }
+    },
+    {
+        "id": "incident-to-tested-fix",
+        "title": "사고 근거에서 재현·수정 초안 만들기",
+        "summary": "민감정보를 제거한 사고 자료로 가설·재현·회귀 근거를 정리하고 운영 접근 없이 최소 수정 초안을 준비합니다.",
+        "when": "영향 릴리스와 기대·관찰 동작이 정리된 사고 자료와 격리 테스트 환경이 있을 때.",
+        "output": "시간순 기록, 재현·회귀 검증 근거, diff·PR 설명·test-evidence.md·배포와 롤백 인계 초안.",
+        "caution": "재현·결정적 근거가 없으면 원인 확정·추측 수정을 하지 않습니다. 원문의 중복 웹훅 예시는 이전 주문·수신 기록의 정합성과 보류된 이벤트를 검증해야 합니다. 운영 호스트·실데이터·이벤트 재실행·외부 게시·병합·배포는 금지합니다.",
+        "category": "code",
+        "outputEn": "A timeline, reproduction and regression evidence, diff, PR-description draft, test-evidence.md, and deployment/rollback handoff.",
+        "cautionEn": "Without reproduction or decisive evidence, report the next diagnostic step rather than a confirmed cause or speculative fix. The webhook example requires legacy-order/receipt reconciliation and held-event tests. No production hosts, live data, replay, external posting, merging, or deployment.",
+        "sourceTitle": "Investigate an incident and test a fix",
+        "titleEn": "Investigate an incident and test a fix",
+        "sourceUrl": "https://learn.chatgpt.com/use-cases/incident-to-tested-fix",
+        "summaryEn": "Turn an incident packet into a reproduced bug, a focused patch, and a reviewable handoff.",
+        "prompt": "[path to sanitized incident packet]을 사용해 [repository/service]의 [incident ID]를 조사해. 이 작업에 선택된 게시된 클라우드 환경에서 작업해.\n\n패킷에는 사고 시간 범위, 영향받은 릴리스 SHA, 예상 동작, 관찰된 동작, 관련 로그와 트레이스 발췌문, 안전한 재현 입력이 있어. 먼저 AGENTS.md와 저장소의 설정·테스트 지침을 읽어. checkout이 영향받은 릴리스와 일치하는지 확인하고, 다르면 결론을 내리기 전에 차이를 설명해.\n\n패킷과 소스 코드의 파일·행 참조를 포함한 짧은 타임라인을 만들어. 관찰, 가설과 근거 부족을 구분해. 격리된 테스트 환경에서 가장 유력한 가설을 테스트해. 실패를 재현할 수 없거나 결정적인 근거가 없으면 다음 진단 단계를 포함한 조사 결과를 반환해. 근본 원인을 확정했다고 주장하거나 추측에 따른 수정을 하지 마.\n\n근거가 코드 결함을 뒷받침하면 회귀 테스트를 추가하고 원래 코드에서 실행해 실패를 입증해. 최소한으로 수정하고 그 테스트를 다시 실행한 뒤, 이 저장소에서 실행 가능한 관련 확대 테스트·lint·타입 검사를 실행해. 명령, 종료 코드와 실행하지 못한 검사를 기록해.\n\n브랜치 diff, PR 설명 초안, test-evidence.md와 배포·롤백 인계를 준비해. 근거로 뒷받침되는 원인, 남은 불확실성과 바뀐 동작을 포함해. 기준마다 근거 행 하나를 작성해: 리비전과 환경 버전, 기준 명령/종료 코드/로그, 최종 명령/종료 코드/로그, 실제 결과, 제약을 포함한 통과/실패/차단/미실행 상태. PR 설명은 검토할 수 있는 로컬 초안으로 유지해.\n\n이 중복 웹훅 예제에서는 커밋 전·후 실패 지점을 명시하고, 독립적인 데이터베이스 연결로 중복 처리 경합을 입증하고, 격리 수준·수신 기록 보존·버전 혼용 배포의 가정을 밝혀.\n\n이 중복 웹훅 예제에서는 보존된 전송을 재개하자고 제안하기 전에, 이전 소비자의 처리가 끝난 뒤 대응하는 수신 기록이 없는 기존 주문을 식별해. 기존 큐나 격리 절차로 해당 이벤트 키를 보류해. 보류 중에는 두 번째 주문이나 성공 확인 응답이 발생하지 않음을 입증하는, 재시도가 대기 중인 고아 주문을 미리 넣은 테스트를 추가해. 신뢰할 수 있는 불변 이벤트 식별 정보, 정규화된 페이로드와 커밋된 주문 근거로만 대조·정합화해. 근거가 없거나 충돌하면 소유자가 검토하도록 격리를 유지해. 지문을 지어내거나 수신 기록을 삭제하거나 미해결 기존 이벤트를 재생하지 마.\n\n내가 다른 승인된 출처를 지정하지 않는 한 제공된 패킷과 저장소만 사용해. 제공된 경우 명시적으로 승인된 읽기 전용 모니터링 출처에만 접근해. 코드와 작업 산출물은 이 저장소에만 쓰고, 이 저장소의 격리된 테스트 데이터베이스만 사용해. 프로덕션 애플리케이션·데이터베이스 호스트에 직접 연결하거나 프로덕션 시스템을 수정하지 마. 프로덕션 이벤트 재생, 실제 데이터·모니터링 수정, 외부 업데이트 생성·게시, 병합이나 배포를 하지 마.",
+        "official": {
+            "difficulty": "Intermediate",
+            "time": "Long-running",
+            "tags": [
+                "Engineering",
+                "Quality"
+            ],
+            "bestForEn": [
+                "Small engineering teams investigating a stabilized incident.",
+                "Application defects with sanitized evidence and safe reproduction inputs.",
+                "Teams reviewing a focused fix in a working, isolated test environment."
+            ],
+            "skills": [],
+            "promptEn": "Investigate [incident ID] in [repository/service] using [path to sanitized incident packet]. Work in the published cloud environment selected for this task.\n\nThe packet identifies the incident time window, affected release SHA, expected behavior, observed behavior, relevant log and trace excerpts, and safe reproduction inputs. Read AGENTS.md and the repository's setup and testing instructions first. Check that the checkout matches the affected release, or explain the difference before drawing conclusions.\n\nBuild a short timeline with file and line references to the packet and source code. Separate observations, hypotheses, and evidence gaps. Test the strongest hypothesis in the isolated test environment. If you cannot reproduce the failure or lack decisive evidence, return an investigation with the next diagnostic step; do not claim a confirmed root cause or make a speculative fix.\n\nIf the evidence supports a code defect, add a regression test and run it against the original code to demonstrate the failure. Make the smallest fix, rerun that test, then run the relevant broader tests, lint, and type checks available in this repository. Record the commands, exit codes, and any checks you could not run.\n\nPrepare a branch diff, a draft pull-request description, test-evidence.md, and a deployment and rollback handoff. Include the supported cause, unresolved uncertainty, and behavior changed. Use one evidence row per criterion: revision and environment versions, baseline command/exit/log, final command/exit/log, actual result, and pass/fail/blocked/not-run status with limitations. Keep the PR description as a local draft for review.\n\nFor this duplicate-webhook example, name the before-commit and after-commit failure points, prove duplicate contention with independent database connections, and state isolation, receipt-retention, and mixed-version rollout assumptions.\n\nFor this duplicate-webhook example, before proposing that retained deliveries resume, identify legacy orders without matching receipts after old consumers have drained. Hold affected event keys using the existing queue or quarantine procedure. Add a seeded orphan-with-pending-retry test that proves no second order or success acknowledgment occurs while held. Reconcile only from trusted immutable event identity, canonical payload, and committed-order evidence; keep missing or conflicting evidence quarantined for owner review. Do not invent fingerprints, delete receipts, or replay an unresolved legacy event.\n\nUse only the supplied packet and repository unless I identify another approved source. Access only the explicitly approved read-only monitoring source, if supplied. Write code and task artifacts only in this repository; use only its isolated test database. Do not connect directly to production application or database hosts, or modify production systems. Do not replay production events, modify live data or monitoring, create or post external updates, merge, or deploy.",
+            "promptKo": "[path to sanitized incident packet]을 사용해 [repository/service]의 [incident ID]를 조사해. 이 작업에 선택된 게시된 클라우드 환경에서 작업해.\n\n패킷에는 사고 시간 범위, 영향받은 릴리스 SHA, 예상 동작, 관찰된 동작, 관련 로그와 트레이스 발췌문, 안전한 재현 입력이 있어. 먼저 AGENTS.md와 저장소의 설정·테스트 지침을 읽어. checkout이 영향받은 릴리스와 일치하는지 확인하고, 다르면 결론을 내리기 전에 차이를 설명해.\n\n패킷과 소스 코드의 파일·행 참조를 포함한 짧은 타임라인을 만들어. 관찰, 가설과 근거 부족을 구분해. 격리된 테스트 환경에서 가장 유력한 가설을 테스트해. 실패를 재현할 수 없거나 결정적인 근거가 없으면 다음 진단 단계를 포함한 조사 결과를 반환해. 근본 원인을 확정했다고 주장하거나 추측에 따른 수정을 하지 마.\n\n근거가 코드 결함을 뒷받침하면 회귀 테스트를 추가하고 원래 코드에서 실행해 실패를 입증해. 최소한으로 수정하고 그 테스트를 다시 실행한 뒤, 이 저장소에서 실행 가능한 관련 확대 테스트·lint·타입 검사를 실행해. 명령, 종료 코드와 실행하지 못한 검사를 기록해.\n\n브랜치 diff, PR 설명 초안, test-evidence.md와 배포·롤백 인계를 준비해. 근거로 뒷받침되는 원인, 남은 불확실성과 바뀐 동작을 포함해. 기준마다 근거 행 하나를 작성해: 리비전과 환경 버전, 기준 명령/종료 코드/로그, 최종 명령/종료 코드/로그, 실제 결과, 제약을 포함한 통과/실패/차단/미실행 상태. PR 설명은 검토할 수 있는 로컬 초안으로 유지해.\n\n이 중복 웹훅 예제에서는 커밋 전·후 실패 지점을 명시하고, 독립적인 데이터베이스 연결로 중복 처리 경합을 입증하고, 격리 수준·수신 기록 보존·버전 혼용 배포의 가정을 밝혀.\n\n이 중복 웹훅 예제에서는 보존된 전송을 재개하자고 제안하기 전에, 이전 소비자의 처리가 끝난 뒤 대응하는 수신 기록이 없는 기존 주문을 식별해. 기존 큐나 격리 절차로 해당 이벤트 키를 보류해. 보류 중에는 두 번째 주문이나 성공 확인 응답이 발생하지 않음을 입증하는, 재시도가 대기 중인 고아 주문을 미리 넣은 테스트를 추가해. 신뢰할 수 있는 불변 이벤트 식별 정보, 정규화된 페이로드와 커밋된 주문 근거로만 대조·정합화해. 근거가 없거나 충돌하면 소유자가 검토하도록 격리를 유지해. 지문을 지어내거나 수신 기록을 삭제하거나 미해결 기존 이벤트를 재생하지 마.\n\n내가 다른 승인된 출처를 지정하지 않는 한 제공된 패킷과 저장소만 사용해. 제공된 경우 명시적으로 승인된 읽기 전용 모니터링 출처에만 접근해. 코드와 작업 산출물은 이 저장소에만 쓰고, 이 저장소의 격리된 테스트 데이터베이스만 사용해. 프로덕션 애플리케이션·데이터베이스 호스트에 직접 연결하거나 프로덕션 시스템을 수정하지 마. 프로덕션 이벤트 재생, 실제 데이터·모니터링 수정, 외부 업데이트 생성·게시, 병합이나 배포를 하지 마.",
+            "promptStatus": "present",
+            "sourceChecked": "2026-11-08",
+            "guideSectionsEn": [
+                "Confirm the incident packet, affected revision, and isolated test environment.",
+                "Build an evidence-linked timeline and test the strongest hypothesis.",
+                "If evidence is insufficient, return the next diagnostic step without a speculative fix.",
+                "Demonstrate a regression before applying the smallest fix and rerunning required checks.",
+                "Prepare local review and rollout/rollback artifacts without production access, replay, posting, merging, or deployment."
+            ],
+            "guideSectionsKo": [
+                "사고 자료·영향 리비전·격리 테스트 환경을 확인합니다.",
+                "근거가 연결된 시간순 기록을 만들고 가장 유력한 가설을 시험합니다.",
+                "근거가 부족하면 추측 수정 없이 다음 진단 단계를 반환합니다.",
+                "회귀 실패를 보여 준 뒤 최소 수정을 적용하고 필수 검사를 재실행합니다.",
+                "운영 접근·재실행·게시·병합·배포 없이 로컬 검토·배포 및 롤백 인계 자료를 준비합니다."
+            ],
+            "bestForKo": [
+                "안정화된 사고를 조사하는 소규모 개발 팀.",
+                "민감정보를 제거한 근거와 안전한 재현 입력이 있는 앱 결함.",
+                "작동하는 격리 테스트 환경에서 집중된 수정을 검토하는 팀."
+            ]
+        }
+    },
+    {
+        "id": "migrate-a-validation-module",
+        "title": "검증 모듈을 계약 유지하며 이전하기",
+        "summary": "고정된 HTTP 계약 테스트를 실제 라우터·오류 처리·직렬화 경로에서 전후 비교하며 승인된 모듈만 이전합니다.",
+        "when": "기준·목표 버전과 공개 계약, 모듈 경계가 명확한 마이그레이션을 할 때.",
+        "output": "전후 명령·종료 코드·근거 경로, diff·의존성·잠금 파일 변경·롤백·PR 설명 초안.",
+        "caution": "공유 의존성 준비는 별도 검토합니다. 새 스냅샷 승인·공개 차이 정규화·검증 조건 약화로 통과시키지 마세요. 더 넓은 업그레이드나 공개 동작 변경은 결정 전 보류하고 다른 작업으로 확대하지 않습니다.",
+        "category": "code",
+        "outputEn": "Before/after commands, exit codes, evidence paths, diff, dependency and lockfile changes, rollback instructions, and a PR-description draft.",
+        "cautionEn": "Review shared dependency preparation separately. Do not approve snapshots, normalize public differences away, or weaken assertions. Seek a decision before broader upgrades or public behavior changes and do not start another slice.",
+        "sourceTitle": "Migrate a validation module",
+        "titleEn": "Migrate a validation module",
+        "sourceUrl": "https://learn.chatgpt.com/use-cases/migrate-a-validation-module",
+        "summaryEn": "Upgrade one module and prove that its public behavior still holds.",
+        "prompt": "이 클라우드 환경에서 [repository]의 [module]을 [current pinned version]에서 [approved target version]으로 마이그레이션해.\n\nAGENTS.md, [migration brief], [official migration guide], 의존성 lockfile, 모듈 호출부와 [contract test locations]를 읽어. 시작 커밋, 환경/설정 참조, 설치된 Python 버전, 프레임워크/Pydantic/번들 v1 버전과 lockfile 해시를 기록해. 기준/대상 버전 호환성을 확인하고, 공유 의존성/가져오기 준비는 별도로 검토할 변경으로 취급해.\n\n먼저 [baseline commands]를 실행하고 마이그레이션 범위를 목록화한 뒤 [plan file]에 짧은 계획을 써. [public contracts]를 보존해. [out-of-scope modules]는 변경하지 마. 승인된 작업 범위 안에서만 오래된 코드를 제거하고, 남겨야 하는 호환성 어댑터를 명시해.\n\n작업 범위를 격리할 수 있고 기준 상태를 사용할 수 있으면, 실제 라우터·오류 처리기·응답 직렬화를 거치는 동일하게 고정된 HTTP 계약 테스트를 변경 전후에 실행해. 상태 코드, 계약상 헤더, 허용/거부 입력, 공개 JSON 키/타입, 기본값/null과 전체 오류 응답 구조를 비교해. 영향받는 통합·lint·타입 검사도 실행해. 더 넓은 업그레이드나 공개 동작 변경이 필요하면 범위를 확대하기 전에 그 결정을 요청해. 새 스냅샷을 승인하거나 공개 차이를 정규화로 없애거나 단언을 약화하지 마. 각 검사의 리비전/환경/버전, 전후 명령, 종료 코드, 근거 경로와 제약을 포함한 통과/실패/차단/미실행 상태를 기록해.\n\ndiff, 변경 전후 근거, 미해결 차이, 의존성·lockfile 변경, 롤백 지침과 PR 설명 초안을 반환해. 연결된 저장소 도구와 내 권한이 지원하는 경우에만 초안 PR을 만들고, 그렇지 않으면 패치와 설명을 제공해. 병합·배포·프로덕션 데이터 변경이나 다음 작업 범위 착수를 하지 마.",
+        "official": {
+            "difficulty": "Advanced",
+            "time": "Long-running",
+            "tags": [
+                "Engineering",
+                "Quality"
+            ],
+            "bestForEn": [
+                "Engineering teams moving a legacy validation component.",
+                "Migrations with explicit contracts and repeatable tests.",
+                "Teams needing a small reviewed change while other modules keep working."
+            ],
+            "skills": [],
+            "promptEn": "Migrate [module] in [repository] from [current pinned version] to [approved target version] in this cloud environment.\n\nRead AGENTS.md, [migration brief], [official migration guide], the dependency lockfile, the module's callers, and [contract test locations]. Record the starting commit, environment/setup reference, installed Python version, framework/Pydantic/bundled-v1 versions, and lockfile hash. Confirm baseline/target compatibility; treat shared dependency/import preparation as a separate reviewed change.\n\nFirst run [baseline commands], inventory the migration surface, and write a short plan in [plan file]. Preserve [public contracts]. Keep [out-of-scope modules] unchanged. Remove obsolete code only inside the approved slice; name any compatibility adapter that must remain.\n\nIf the slice can be isolated and the baseline is usable, run the same frozen HTTP contract tests before and after the change through the real router, error handler, and response serialization. Compare status codes, contractual headers, accepted/rejected inputs, public JSON keys/types, defaults/nulls, and the complete error envelope. Run affected integration, lint and type checks too. If this requires broader upgrades or public behavior changes, return that decision before expanding scope. Do not approve new snapshots, normalize away public differences or weaken assertions. Record each check's revisions/environment/versions, before/after commands, exit codes, evidence paths, and pass/fail/blocked/not run with limitations.\n\nReturn the diff, before-and-after evidence, unresolved differences, dependency and lockfile changes, rollback instructions, and a draft PR description. Create a draft PR only if the connected repository tools and my permissions support it; otherwise provide the patch and description. Do not merge, deploy, change production data, or begin another slice.",
+            "promptKo": "이 클라우드 환경에서 [repository]의 [module]을 [current pinned version]에서 [approved target version]으로 마이그레이션해.\n\nAGENTS.md, [migration brief], [official migration guide], 의존성 lockfile, 모듈 호출부와 [contract test locations]를 읽어. 시작 커밋, 환경/설정 참조, 설치된 Python 버전, 프레임워크/Pydantic/번들 v1 버전과 lockfile 해시를 기록해. 기준/대상 버전 호환성을 확인하고, 공유 의존성/가져오기 준비는 별도로 검토할 변경으로 취급해.\n\n먼저 [baseline commands]를 실행하고 마이그레이션 범위를 목록화한 뒤 [plan file]에 짧은 계획을 써. [public contracts]를 보존해. [out-of-scope modules]는 변경하지 마. 승인된 작업 범위 안에서만 오래된 코드를 제거하고, 남겨야 하는 호환성 어댑터를 명시해.\n\n작업 범위를 격리할 수 있고 기준 상태를 사용할 수 있으면, 실제 라우터·오류 처리기·응답 직렬화를 거치는 동일하게 고정된 HTTP 계약 테스트를 변경 전후에 실행해. 상태 코드, 계약상 헤더, 허용/거부 입력, 공개 JSON 키/타입, 기본값/null과 전체 오류 응답 구조를 비교해. 영향받는 통합·lint·타입 검사도 실행해. 더 넓은 업그레이드나 공개 동작 변경이 필요하면 범위를 확대하기 전에 그 결정을 요청해. 새 스냅샷을 승인하거나 공개 차이를 정규화로 없애거나 단언을 약화하지 마. 각 검사의 리비전/환경/버전, 전후 명령, 종료 코드, 근거 경로와 제약을 포함한 통과/실패/차단/미실행 상태를 기록해.\n\ndiff, 변경 전후 근거, 미해결 차이, 의존성·lockfile 변경, 롤백 지침과 PR 설명 초안을 반환해. 연결된 저장소 도구와 내 권한이 지원하는 경우에만 초안 PR을 만들고, 그렇지 않으면 패치와 설명을 제공해. 병합·배포·프로덕션 데이터 변경이나 다음 작업 범위 착수를 하지 마.",
+            "promptStatus": "present",
+            "sourceChecked": "2026-11-08",
+            "guideSectionsEn": [
+                "Record baseline/target versions, revision, environment, and lockfile identity.",
+                "Confirm compatibility and isolate any shared dependency preparation as a separate change.",
+                "Run frozen contracts before and after through the real HTTP boundary.",
+                "Preserve public behavior and assertion strength, reporting blocked checks and unresolved differences.",
+                "Return evidence, rollback instructions, and an authorized PR draft or local patch."
+            ],
+            "guideSectionsKo": [
+                "기준·목표 버전, 리비전·환경·잠금 파일 식별 정보를 기록합니다.",
+                "호환성을 확인하고 공유 의존성 준비는 별도 변경으로 분리합니다.",
+                "실제 HTTP 경계를 거쳐 변경 전후의 고정된 계약 검사를 실행합니다.",
+                "공개 동작·검증 강도를 보존하고 차단된 검사·미해결 차이를 보고합니다.",
+                "근거·롤백 지침과 승인된 PR 초안 또는 로컬 패치를 반환합니다."
+            ],
+            "bestForKo": [
+                "기존 검증 컴포넌트를 이전하는 개발 팀.",
+                "명시적 계약과 반복 가능한 테스트가 있는 마이그레이션.",
+                "다른 모듈의 동작을 유지하며 작은 변경을 검토해야 하는 팀."
+            ]
+        }
+    },
+    {
+        "id": "build-workshop-practice-site",
+        "title": "해커톤 등록·제출 사이트 준비하기",
+        "summary": "제공된 행사 일정·팀 규칙·마감과 갤러리 공개 조건으로 팀 등록·프로젝트 제출 사이트를 준비합니다.",
+        "when": "워크스페이스 참가자가 행사 일정과 자기 팀 제출물을 관리해야 할 때.",
+        "output": "행사 안내, 팀 등록·저장 초안·제출·갤러리와 가상 팀 두 개의 검증 결과.",
+        "caution": "프로젝트 아이디어·행사 정보를 만들어 내지 않습니다. 로그인과 서버의 팀 소속 검사를 요구하고 입력한 이름을 신원 증거로 쓰지 마세요. 마감·공개 규칙을 확인하고 원본 수정·초대 전송 없이 비공개 미리보기를 검토합니다.",
+        "category": "ui",
+        "outputEn": "Event information, team registration, draft/submitted projects, a visibility-aware gallery, and two-team test evidence.",
+        "cautionEn": "Do not invent event details or project ideas. Require sign-in and server-enforced team membership; a typed name is not identity evidence. Confirm deadline and visibility rules, retain a private preview, and do not edit source documents or send invitations.",
+        "sourceTitle": "Build a hackathon site",
+        "titleEn": "Build a hackathon site",
+        "sourceUrl": "https://learn.chatgpt.com/use-cases/build-workshop-practice-site",
+        "summaryEn": "Give participants one place to find the agenda, register, and share what they built.",
+        "prompt": "@Sites를 사용해 아래 행사 개요와 아젠다로 [hackathon name]의 해커톤 사이트를 만들어. 참가자는 우리 워크스페이스 구성원이야.\n\n출처:\n- 행사 개요와 주최자 연락처: [attached file or document link].\n- 아젠다: [file or spreadsheet link and tab].\n- 행사 날짜와 시간대: [date and time zone].\n- 팀 규칙과 제출 요건: [document link].\n- 제출 마감과 지각 제출 규칙: [confirmed details].\n- 프로젝트 갤러리 공개 범위: [when submitted projects should appear and who can see them].\n- 심사 기준과 참가자 자료: [links or none].\n\n먼저 읽을 수 있는 출처를 확인하고 일정, 마감, 팀 규칙과 필수 제출 필드를 요약해. 빠진 정보나 상충하는 시간을 질문해. 제공된 행사 정보만 사용해. 프로젝트 선택은 참가자에게 맡기고 프로젝트 아이디어나 예시 활용 사례를 제안하지 마.\n\n행사 개요, 아젠다, 참가자 지침, 자료 목록과 주최자 연락처 섹션을 만들어. 다음 세션, 팀 등록과 프로젝트 제출을 쉽게 찾게 해. 일정과 정확한 제출 마감에 행사 날짜와 시간대를 함께 표시해. 마감과 도움받을 연락처를 제출 양식 가까이에 둬. 원본 자료를 링크하고, 이 사이트가 검토된 행사 정보 사본임을 설명해.\n\n참가자가 팀 이름과 구성원으로 팀을 등록하고, 나중에 돌아와 프로젝트 제목·짧은 설명·데모 링크를 추가할 수 있게 해. 저장한 초안과 제출된 프로젝트를 구분하고 빠진 필수 필드를 설명해. 제공된 공개 범위 규칙에 따라 제출된 프로젝트를 갤러리에 표시해. 로그인을 요구하고 서버에서 팀 구성원 여부를 검사해 구성원이 자기 팀 항목만 편집하게 해. 팀 편집을 활성화하기 전에 구성원 여부를 어떻게 확인할지 질문하고, 입력한 이름을 신원 증명으로 쓰지 마. 등록과 제출 내용을 방문 사이에 저장해.\n\n행사 정보, 팀 등록과 프로젝트 기록을 분리해 아젠다를 편집해도 제출 내용이 보존되게 해. 필수 필드와 데모 링크를 검증해. 제공된 마감 규칙을 따르고, 없으면 질문해. 원본 문서를 편집하거나 초대를 보내지 마.\n\n가상 팀 두 개로 등록·제출·편집·새로고침과 다른 팀 항목 직접 편집 시도를 테스트해. 마감 동작과 모바일 레이아웃을 확인해. 행사 전에 테스트 기록을 식별해 제거해. 사이트는 우리 워크스페이스에 비공개로 유지하고 게시 전에 저장된 미리보기, 테스트 결과와 미해결 질문을 보여줘.",
+        "official": {
+            "difficulty": "Intermediate",
+            "time": "1h",
+            "tags": [
+                "Front-end",
+                "Knowledge Work"
+            ],
+            "bestForEn": [
+                "Organizers running a hackathon for their team or organization.",
+                "Participants registering a team and submitting a demo."
+            ],
+            "skills": [],
+            "promptEn": "Use @Sites to build a hackathon site for [hackathon name] using the event brief and agenda below. The participants belong to our workspace.\n\nSources:\n- Event brief and organizer contact: [attached file or document link].\n- Agenda: [file or spreadsheet link and tab].\n- Event date and time zone: [date and time zone].\n- Team rules and submission requirements: [document link].\n- Submission deadline and late-submission rule: [confirmed details].\n- Project gallery visibility: [when submitted projects should appear and who can see them].\n- Judging criteria and participant resources: [links or none].\n\nFirst confirm which sources you can read and summarize the schedule, deadline, team rules, and required submission fields. Ask about gaps or conflicting times. Use only the supplied event details. Leave project choice to participants; don't suggest project ideas or example use cases.\n\nBuild an event overview, agenda, participant instructions, resource list, and organizer contact section. Make it easy to find the next session, team registration, and project submission. Show the event date and time zone with the schedule and exact submission deadline. Keep the deadline and help contact near the submission form. Link to original resources and explain that this is a reviewed copy of the event information.\n\nLet participants register a team with its name and members, then return to add a project title, short description, and demo link. Distinguish saved drafts from submitted projects and explain any missing required fields. Show submitted projects in a gallery according to the supplied visibility rule. Require sign-in and enforce team membership on the server so members can edit only their own team's entry. Ask how membership should be confirmed before enabling team edits; don't use a typed name as proof of identity. Save registrations and submissions between visits.\n\nKeep event information, team registrations, and project records separate so agenda edits preserve submissions. Validate required fields and demo links. Follow the supplied deadline rule; ask if it is missing. Don't edit source documents or send invitations.\n\nTest with two fictional teams: register, submit, edit, reload, and try to edit the other team's entry directly. Check the deadline behavior and mobile layout. Identify and remove test records before the event. Keep the site private to our workspace and show a saved preview, test results, and unresolved questions before publishing.",
+            "promptKo": "@Sites를 사용해 아래 행사 개요와 아젠다로 [hackathon name]의 해커톤 사이트를 만들어. 참가자는 우리 워크스페이스 구성원이야.\n\n출처:\n- 행사 개요와 주최자 연락처: [attached file or document link].\n- 아젠다: [file or spreadsheet link and tab].\n- 행사 날짜와 시간대: [date and time zone].\n- 팀 규칙과 제출 요건: [document link].\n- 제출 마감과 지각 제출 규칙: [confirmed details].\n- 프로젝트 갤러리 공개 범위: [when submitted projects should appear and who can see them].\n- 심사 기준과 참가자 자료: [links or none].\n\n먼저 읽을 수 있는 출처를 확인하고 일정, 마감, 팀 규칙과 필수 제출 필드를 요약해. 빠진 정보나 상충하는 시간을 질문해. 제공된 행사 정보만 사용해. 프로젝트 선택은 참가자에게 맡기고 프로젝트 아이디어나 예시 활용 사례를 제안하지 마.\n\n행사 개요, 아젠다, 참가자 지침, 자료 목록과 주최자 연락처 섹션을 만들어. 다음 세션, 팀 등록과 프로젝트 제출을 쉽게 찾게 해. 일정과 정확한 제출 마감에 행사 날짜와 시간대를 함께 표시해. 마감과 도움받을 연락처를 제출 양식 가까이에 둬. 원본 자료를 링크하고, 이 사이트가 검토된 행사 정보 사본임을 설명해.\n\n참가자가 팀 이름과 구성원으로 팀을 등록하고, 나중에 돌아와 프로젝트 제목·짧은 설명·데모 링크를 추가할 수 있게 해. 저장한 초안과 제출된 프로젝트를 구분하고 빠진 필수 필드를 설명해. 제공된 공개 범위 규칙에 따라 제출된 프로젝트를 갤러리에 표시해. 로그인을 요구하고 서버에서 팀 구성원 여부를 검사해 구성원이 자기 팀 항목만 편집하게 해. 팀 편집을 활성화하기 전에 구성원 여부를 어떻게 확인할지 질문하고, 입력한 이름을 신원 증명으로 쓰지 마. 등록과 제출 내용을 방문 사이에 저장해.\n\n행사 정보, 팀 등록과 프로젝트 기록을 분리해 아젠다를 편집해도 제출 내용이 보존되게 해. 필수 필드와 데모 링크를 검증해. 제공된 마감 규칙을 따르고, 없으면 질문해. 원본 문서를 편집하거나 초대를 보내지 마.\n\n가상 팀 두 개로 등록·제출·편집·새로고침과 다른 팀 항목 직접 편집 시도를 테스트해. 마감 동작과 모바일 레이아웃을 확인해. 행사 전에 테스트 기록을 식별해 제거해. 사이트는 우리 워크스페이스에 비공개로 유지하고 게시 전에 저장된 미리보기, 테스트 결과와 미해결 질문을 보여줘.",
+            "promptStatus": "present",
+            "sourceChecked": "2026-11-08",
+            "guideSectionsEn": [
+                "Confirm event sources, schedule, team rules, deadline, and gallery visibility.",
+                "Prepare registration and submission flows with stable, separately stored records.",
+                "Enforce sign-in and team membership on the server.",
+                "Test two teams, persistence, cross-team access, deadlines, and mobile layout.",
+                "Remove fictional records and review a private saved preview before publishing."
+            ],
+            "guideSectionsKo": [
+                "행사 출처·일정·팀 규칙·마감·갤러리 공개 조건을 확인합니다.",
+                "안정적이고 분리된 기록으로 등록·제출 흐름을 준비합니다.",
+                "서버에서 로그인·팀 소속을 검사합니다.",
+                "두 팀·저장 지속·다른 팀 접근·마감·모바일 레이아웃을 테스트합니다.",
+                "가상 기록을 제거하고 게시 전에 비공개 저장 미리보기를 검토합니다."
+            ],
+            "bestForKo": [
+                "팀·조직의 해커톤을 운영하는 주최자.",
+                "팀을 등록하고 데모를 제출하는 참가자."
+            ]
+        }
+    },
+    {
+        "id": "build-personal-onboarding-plan",
+        "title": "개인 진행이 비공개인 온보딩 포털 만들기",
+        "summary": "첫 주 계획의 순서·연락처·자료와 연습 과제를 연결하고 개인 완료 상태를 분리해 보존합니다.",
+        "when": "역할별 첫 주 계획을 각 입사자가 이어갈 체크리스트와 연습 과제로 바꿀 때.",
+        "output": "환영·날짜별 체크리스트·자료·연락처·연습 과제와 계정별 비공개 진행 검증.",
+        "caution": "회사 정책·과제·사람·시간을 임의로 만들지 않습니다. 완료는 업무 준비도 점수가 아닙니다. 로그인·서버 권한·안정적인 과제 ID를 쓰고 공통 내용과 개인 진행을 분리하세요. 원본 변경은 사이트 갱신이 필요하며 자료 접근은 별도 확인합니다.",
+        "category": "ui",
+        "outputEn": "Welcome pages, daily checklists, resources, contacts, practice work, and tests of private per-account progress.",
+        "cautionEn": "Do not invent company policies, tasks, people, or time estimates. Completion is activity tracking, not readiness scoring. Require sign-in, server authorization, stable task IDs, and separate shared content from private progress. Source updates and resource access require explicit review.",
+        "sourceTitle": "Build an onboarding portal",
+        "titleEn": "Build an onboarding portal",
+        "sourceUrl": "https://learn.chatgpt.com/use-cases/build-personal-onboarding-plan",
+        "summaryEn": "Help new hires find their next task and practice the work they'll be doing.",
+        "prompt": "@Sites를 사용해 첫 주 계획으로 [role or team]의 온보딩 포털을 만들어. 첫 주가 끝날 때까지의 목표는 [for example, draft a customer kickoff agenda]야.\n\n출처:\n- 첫 주 계획: [attached file or document link].\n- 제품·팀 자료: [specific document or folder links].\n- 연습 과제 지침과 예시: [links].\n- 담당자와 책임: [supplied list].\n\n먼저 읽을 수 있는 출처를 확인해. 날짜별로 과제와 출처 링크, 지침과 담당자를 나열해. 빠지거나 상충하는 내용을 질문하고, 과제·사람·회사 정책을 지어내지 마.\n\n환영 페이지, 날짜별 체크리스트, 자료 목록, 도움받을 담당자와 첫 주가 끝날 때까지의 연습 과제를 만들어. 과제마다 할 일, 중요한 이유, 완료된 과제의 모습, 자료 링크와 도울 사람을 표시해. 계획에 제공된 경우에만 예상 시간을 포함해. 연습 과제를 지침, 승인된 예시와 검토 기준에 연결해. 제공된 계획의 순서를 사용해. 진행 표시줄과 이어서 하기 섹션을 추가해. 완료는 활동 기록으로 취급하고 직무 준비도 점수로 취급하지 마.\n\n로그인을 요구하고 각 사람의 과제 완료 상태를 방문 사이에 저장해. 진행 상태는 그 사람에게만 비공개로 유지하고 서버에서 기록 접근을 검사해. 공유 과제 내용과 개인 진행 상태를 분리해. 과제에 안정적인 식별자를 부여해서 지침이나 링크가 바뀌어도 완료 기록이 지워지지 않게 해.\n\n검토된 계획 사본과 원본 자료 링크를 사용해. 원본 문서가 바뀌면 사이트를 업데이트해야 함을 설명해. 더 넓은 대상에게 공개되는 페이지에 제한된 자료 내용을 복사하거나 원본 문서에 완료 데이터를 쓰지 마. 출처를 읽을 수 없으면 접근 가능한 사본이나 링크를 요청해.\n\n새 사용자, 일부 진행 상태, 완료된 계획과 두 번째 계정을 테스트해. 새로고침 후에도 진행 상태가 유지되고 비공개이며, 지침 편집으로 초기화되지 않는지 확인해. 신규 입사자의 접근 확인이 아직 필요한 자료 링크를 표시해. 사이트는 우리 워크스페이스에 비공개로 유지해. 게시 전에 저장된 미리보기, 테스트 결과와 미해결 질문을 보여줘.",
+        "official": {
+            "difficulty": "Intermediate",
+            "time": "1h",
+            "tags": [
+                "Front-end",
+                "Knowledge Work"
+            ],
+            "bestForEn": [
+                "Managers onboarding several people into the same role.",
+                "People teams maintaining first-week plans and resources for new hires."
+            ],
+            "skills": [],
+            "promptEn": "Use @Sites to build an onboarding portal for [role or team] from our first-week plan. The end-of-week goal is [for example, draft a customer kickoff agenda].\n\nSources:\n- First-week plan: [attached file or document link].\n- Product and team resources: [specific document or folder links].\n- Practice-task instructions and example: [links].\n- Contacts and their responsibilities: [supplied list].\n\nFirst confirm which sources you can read. List the tasks by day with their source links, instructions, and contacts. Ask about missing or conflicting details; don't invent tasks, people, or company policies.\n\nBuild a welcome page, a day-by-day checklist, a resource list, helpful contacts, and the end-of-week practice task. For each task, show what to do, why it matters, what a completed task looks like, its resource link, and who can help. Include estimated times only where the plan provides them. Link the practice task to its instructions, approved example, and review criteria. Use the sequence in the supplied plan. Add a progress bar and a Continue where you left off section. Treat completion as a record of activities, not a score of job readiness.\n\nRequire sign-in and save each person's task completion between visits. Keep progress private to that person and enforce record access on the server. Keep shared task content separate from individual progress. Give tasks stable identities so an instruction or link update doesn't erase completion records.\n\nUse a reviewed copy of the plan and links to original resources. Explain that source-document changes need a site update. Don't copy restricted resource contents into a page for a broader audience or write completion data back into source documents. If a source can't be read, ask for an accessible copy or link.\n\nTest a new user, partial progress, a completed plan, and a second account. Confirm that progress survives reload, remains private, and isn't reset by an instruction edit. Flag resource links that still need a new hire's access check. Keep the site private to our workspace. Show a saved preview, test results, and open questions before publishing.",
+            "promptKo": "@Sites를 사용해 첫 주 계획으로 [role or team]의 온보딩 포털을 만들어. 첫 주가 끝날 때까지의 목표는 [for example, draft a customer kickoff agenda]야.\n\n출처:\n- 첫 주 계획: [attached file or document link].\n- 제품·팀 자료: [specific document or folder links].\n- 연습 과제 지침과 예시: [links].\n- 담당자와 책임: [supplied list].\n\n먼저 읽을 수 있는 출처를 확인해. 날짜별로 과제와 출처 링크, 지침과 담당자를 나열해. 빠지거나 상충하는 내용을 질문하고, 과제·사람·회사 정책을 지어내지 마.\n\n환영 페이지, 날짜별 체크리스트, 자료 목록, 도움받을 담당자와 첫 주가 끝날 때까지의 연습 과제를 만들어. 과제마다 할 일, 중요한 이유, 완료된 과제의 모습, 자료 링크와 도울 사람을 표시해. 계획에 제공된 경우에만 예상 시간을 포함해. 연습 과제를 지침, 승인된 예시와 검토 기준에 연결해. 제공된 계획의 순서를 사용해. 진행 표시줄과 이어서 하기 섹션을 추가해. 완료는 활동 기록으로 취급하고 직무 준비도 점수로 취급하지 마.\n\n로그인을 요구하고 각 사람의 과제 완료 상태를 방문 사이에 저장해. 진행 상태는 그 사람에게만 비공개로 유지하고 서버에서 기록 접근을 검사해. 공유 과제 내용과 개인 진행 상태를 분리해. 과제에 안정적인 식별자를 부여해서 지침이나 링크가 바뀌어도 완료 기록이 지워지지 않게 해.\n\n검토된 계획 사본과 원본 자료 링크를 사용해. 원본 문서가 바뀌면 사이트를 업데이트해야 함을 설명해. 더 넓은 대상에게 공개되는 페이지에 제한된 자료 내용을 복사하거나 원본 문서에 완료 데이터를 쓰지 마. 출처를 읽을 수 없으면 접근 가능한 사본이나 링크를 요청해.\n\n새 사용자, 일부 진행 상태, 완료된 계획과 두 번째 계정을 테스트해. 새로고침 후에도 진행 상태가 유지되고 비공개이며, 지침 편집으로 초기화되지 않는지 확인해. 신규 입사자의 접근 확인이 아직 필요한 자료 링크를 표시해. 사이트는 우리 워크스페이스에 비공개로 유지해. 게시 전에 저장된 미리보기, 테스트 결과와 미해결 질문을 보여줘.",
+            "promptStatus": "present",
+            "sourceChecked": "2026-11-08",
+            "guideSectionsEn": [
+                "Read the supplied first-week plan and resolve missing tasks, resources, and contacts.",
+                "Preserve the plan's sequence and link the practice task to its example and review criteria.",
+                "Separate stable shared task content from private, authenticated user progress.",
+                "Test new, partial, completed, and second-account states, including instruction edits.",
+                "Review private preview, inaccessible resources, and source-update requirements before publication."
+            ],
+            "guideSectionsKo": [
+                "제공된 첫 주 계획을 읽고 누락된 과제·자료·연락처를 확인합니다.",
+                "계획 순서를 보존하고 연습 과제를 예시·검토 기준과 연결합니다.",
+                "안정적인 공통 과제 내용과 인증된 사용자의 비공개 진행을 분리합니다.",
+                "지침 수정을 포함해 신규·일부 진행·완료·두 번째 계정 상태를 테스트합니다.",
+                "게시 전에 비공개 미리보기·접근 불가 자료·원본 갱신 요건을 검토합니다."
+            ],
+            "bestForKo": [
+                "같은 역할의 여러 구성원을 온보딩하는 관리자.",
+                "신규 입사자의 첫 주 계획·자료를 관리하는 인사 팀."
+            ]
+        }
+    },
+    {
+        "id": "collect-and-schedule-team-requests",
+        "title": "크리에이티브 요청부터 납품까지 정리하기",
+        "summary": "요청서·검토자·합의 납품일과 피드백·초안·최종 자료를 권한별로 관리하는 앱을 준비합니다.",
+        "when": "팀 요청을 일관된 입력 양식·대기 목록·검토 상태와 함께 관리할 때.",
+        "output": "필수 필드 검증·요청별 상세·상태별 대기 목록과 저장·권한·모바일 테스트 결과.",
+        "caution": "희망 납품일과 합의 납품일, 최신 초안과 최종 자료를 구분합니다. 요청자는 자기 요청만, 지정 팀은 전체 요청을 관리하도록 서버에서 검사하세요. 원본과 자동 동기화된다고 말하거나 연결 문서·추적기를 수정하지 않습니다.",
+        "category": "ui",
+        "outputEn": "Validated intake forms, request details, status queues, and evidence for persistence, authorization, and mobile behavior.",
+        "cautionEn": "Distinguish requested and agreed dates and draft versus delivered assets. Enforce requester-only access and named-team management on the server. Do not imply ongoing source synchronization or modify connected documents or trackers.",
+        "sourceTitle": "Manage creative requests from brief to delivery",
+        "titleEn": "Manage creative requests from brief to delivery",
+        "sourceUrl": "https://learn.chatgpt.com/use-cases/collect-and-schedule-team-requests",
+        "summaryEn": "Collect complete briefs, review drafts, and keep final assets with each request.",
+        "prompt": "@Sites를 사용해 우리 브리프 템플릿으로 [team]의 크리에이티브 요청 앱을 만들어.\n\n출처:\n- 브리프 템플릿: [attached file or document link].\n- 브랜드 지침과 승인된 자산: [document or folder links].\n- 기존 요청이 있는 경우: [spreadsheet or none].\n- 크리에이티브 팀 구성원과 검토자: [supplied list].\n\n먼저 읽을 수 있는 출처를 확인하고 필수 필드를 요약해. 빠진 담당자, 불분명한 날짜나 읽을 수 없는 출처를 질문해. 제공된 자료를 사용하고 브랜드 규칙이나 실제 요청을 지어내지 마.\n\n제목, 대상, 핵심 메시지, 형식 또는 크기, 희망 납품일, 검토자와 문안 또는 참조 링크를 받는 접수 양식을 만들어. 필드를 [request types, such as event graphics or presentations]에 맞춰 조정해. 필드 예시를 보여주고 빠지거나 잘못된 입력을 고치는 방법을 설명해. 희망 납품일과 크리에이티브 팀이 합의한 납품일을 구분해.\n\n각 요청에 브리프, 요청자, 담당자, 검토자, 합의일, 상태, 초안 링크, 피드백과 최종 자산 링크가 있는 상세 페이지를 만들어. 상태는 New, In progress, In review, Delivered를 사용해. 최신 초안과 납품된 자산을 쉽게 구분하게 해. 담당자·상태·합의된 납품일 필터가 있는 대기열을 추가해. 담당자가 없거나 합의일이 빠진 요청을 눈에 띄게 해.\n\n로그인을 요구해. 요청자는 자기 요청을 만들고 읽고 피드백을 추가할 수 있게 해. 지정된 크리에이티브 팀만 모든 요청, 담당자 배정과 납품 상태를 관리하게 해. 기록 직접 접근을 포함해 서버에서 접근을 검사해. 기록과 피드백을 방문 사이에 저장해.\n\n제공된 요청 데이터의 검토된 사본과 원본 자산 링크로 시작해. 복사한 내용과 링크로만 남는 내용을 설명해. 원본 파일이 계속 동기화된다고 암시하지 말고 연결된 문서나 작업 추적기를 수정하지 마.\n\n테스트용이라고 표시한 가상 요청을 사용해. 필수 필드, 제출, 상태 변경, 새로고침 후 저장된 피드백과 접근 권한이 다른 요청자 두 명을 테스트해. 모바일 레이아웃을 확인해. 사이트는 우리 워크스페이스에 비공개로 유지하고 게시 전에 저장된 미리보기, 테스트 결과와 미해결 질문을 보여줘.",
+        "official": {
+            "difficulty": "Intermediate",
+            "time": "1h",
+            "tags": [
+                "Front-end",
+                "Knowledge Work"
+            ],
+            "bestForEn": [
+                "Small creative teams receiving design requests through scattered messages.",
+                "Marketing teams coordinating campaign assets and review deadlines."
+            ],
+            "skills": [],
+            "promptEn": "Use @Sites to build a creative request app for [team] using our brief template.\n\nSources:\n- Brief template: [attached file or document link].\n- Brand guidelines and approved assets: [document or folder links].\n- Existing requests, if any: [spreadsheet or none].\n- Creative-team members and reviewers: [supplied list].\n\nFirst confirm which sources you can read and summarize the required fields. Ask about missing owners, unclear dates, or unavailable sources. Use the supplied materials; don't invent brand rules or real requests.\n\nBuild an intake form for title, audience, key message, format or dimensions, requested date, reviewer, and copy or reference links. Adapt the fields to [request types, such as event graphics or presentations]. Show field examples and explain how to fix missing or invalid entries. Keep the requested date separate from the delivery date agreed by the creative team.\n\nGive each request a detail page with its brief, requester, owner, reviewer, agreed date, status, draft link, feedback, and final asset link. Use New, In progress, In review, and Delivered. Make the latest draft and delivered asset easy to distinguish. Add a queue with owner, status, and agreed-delivery-date filters. Make unassigned requests and missing agreed dates visible.\n\nRequire sign-in. Let requesters create and read their own requests and add feedback. Let only the named creative team manage all requests, assignment, and delivery status. Enforce access on the server, including direct record access. Save records and feedback between visits.\n\nStart with a reviewed copy of supplied request data and links to original assets. Explain which content is copied and which remains linked. Don't imply that source files stay synchronized, and don't modify connected documents or task trackers.\n\nUse labeled fictional requests for testing. Test required fields, submission, status changes, saved feedback after reload, and two requesters with different access. Check the layout on mobile. Keep the site private to our workspace and show a saved preview, test results, and any unresolved questions before publishing.",
+            "promptKo": "@Sites를 사용해 우리 브리프 템플릿으로 [team]의 크리에이티브 요청 앱을 만들어.\n\n출처:\n- 브리프 템플릿: [attached file or document link].\n- 브랜드 지침과 승인된 자산: [document or folder links].\n- 기존 요청이 있는 경우: [spreadsheet or none].\n- 크리에이티브 팀 구성원과 검토자: [supplied list].\n\n먼저 읽을 수 있는 출처를 확인하고 필수 필드를 요약해. 빠진 담당자, 불분명한 날짜나 읽을 수 없는 출처를 질문해. 제공된 자료를 사용하고 브랜드 규칙이나 실제 요청을 지어내지 마.\n\n제목, 대상, 핵심 메시지, 형식 또는 크기, 희망 납품일, 검토자와 문안 또는 참조 링크를 받는 접수 양식을 만들어. 필드를 [request types, such as event graphics or presentations]에 맞춰 조정해. 필드 예시를 보여주고 빠지거나 잘못된 입력을 고치는 방법을 설명해. 희망 납품일과 크리에이티브 팀이 합의한 납품일을 구분해.\n\n각 요청에 브리프, 요청자, 담당자, 검토자, 합의일, 상태, 초안 링크, 피드백과 최종 자산 링크가 있는 상세 페이지를 만들어. 상태는 New, In progress, In review, Delivered를 사용해. 최신 초안과 납품된 자산을 쉽게 구분하게 해. 담당자·상태·합의된 납품일 필터가 있는 대기열을 추가해. 담당자가 없거나 합의일이 빠진 요청을 눈에 띄게 해.\n\n로그인을 요구해. 요청자는 자기 요청을 만들고 읽고 피드백을 추가할 수 있게 해. 지정된 크리에이티브 팀만 모든 요청, 담당자 배정과 납품 상태를 관리하게 해. 기록 직접 접근을 포함해 서버에서 접근을 검사해. 기록과 피드백을 방문 사이에 저장해.\n\n제공된 요청 데이터의 검토된 사본과 원본 자산 링크로 시작해. 복사한 내용과 링크로만 남는 내용을 설명해. 원본 파일이 계속 동기화된다고 암시하지 말고 연결된 문서나 작업 추적기를 수정하지 마.\n\n테스트용이라고 표시한 가상 요청을 사용해. 필수 필드, 제출, 상태 변경, 새로고침 후 저장된 피드백과 접근 권한이 다른 요청자 두 명을 테스트해. 모바일 레이아웃을 확인해. 사이트는 우리 워크스페이스에 비공개로 유지하고 게시 전에 저장된 미리보기, 테스트 결과와 미해결 질문을 보여줘.",
+            "promptStatus": "present",
+            "sourceChecked": "2026-11-08",
+            "guideSectionsEn": [
+                "Read the brief template, brand resources, team list, and existing requests.",
+                "Prepare validated intake, separate requested/agreed dates, and draft/delivered links.",
+                "Enforce requester-only records and named creative-team management on the server.",
+                "Test submission, status, persisted feedback, distinct accounts, and mobile layout.",
+                "Review a private saved preview without editing or claiming synchronization with source tools."
+            ],
+            "guideSectionsKo": [
+                "요청서 템플릿·브랜드 자료·팀 목록·기존 요청을 읽습니다.",
+                "검증된 입력 양식과 구분된 희망 납품일·합의 납품일·초안·납품 링크를 준비합니다.",
+                "서버에서 본인 요청 접근과 지정 크리에이티브 팀의 관리 권한을 검사합니다.",
+                "제출·상태·피드백 저장·서로 다른 계정·모바일 레이아웃을 테스트합니다.",
+                "원본 도구 수정·자동 동기화 주장 없이 비공개 저장 미리보기를 검토합니다."
+            ],
+            "bestForKo": [
+                "흩어진 메시지로 디자인 요청을 받는 소규모 크리에이티브 팀.",
+                "캠페인 자료와 검토 마감을 조율하는 마케팅 팀."
+            ]
+        }
+    },
+    {
+        "id": "compare-campaign-performance",
+        "title": "캠페인 지출·리드를 근거로 비교하기",
+        "summary": "출처·기간·통화·기여 배분 조건을 확인하고 같은 필터 행으로 총지출·리드·리드당 비용을 계산합니다.",
+        "when": "주별 캠페인 내보내기 자료를 검토 가능한 대시보드로 바꿀 때.",
+        "output": "원본 행까지 확인할 수 있는 카드·추세·비교 표와 원본 합계·예외·조합 필터 검증.",
+        "caution": "비용 비율은 총지출÷총리드로 계산하며 행별 비율을 평균내지 않습니다. 리드 0의 N/A·결측·중복·혼합 통화를 구분하고 표본은 실데이터에 섞지 마세요. 검증된 연결 없이 실시간이라고 하거나 리드 수에서 매출·품질을 추론하지 않습니다.",
+        "category": "data",
+        "outputEn": "Source-drillable metrics, trends, comparisons, and evidence for source totals, edge cases, and combined filters.",
+        "cautionEn": "Use total spend divided by total leads, not averaged row ratios. Distinguish zero-lead N/A, missing values, duplicates, and currencies; keep samples out of real data. Do not claim live connectivity without testing or infer revenue or quality from lead counts.",
+        "sourceTitle": "See which campaigns bring in leads",
+        "titleEn": "See which campaigns bring in leads",
+        "sourceUrl": "https://learn.chatgpt.com/use-cases/compare-campaign-performance",
+        "summaryEn": "Compare spend, lead counts, and cost per lead by campaign, channel, and week.",
+        "prompt": "@Sites를 사용해 [attached spreadsheet or exact source link and tab]에서 [team]의 캠페인 대시보드를 만들어.\n\n보고 맥락:\n- 검토 질문: [what the team wants to understand from this report].\n- 기간: [start and end dates].\n- 통화: [currency].\n- 주 경계와 시간대: [definition].\n- 리드 정의와 기여도 귀속 규칙: [team definition].\n- 필요한 경우 추가 출처와 캠페인 ID 매핑: [file or none].\n\n먼저 출처를 검사하고 열, 행 수, 날짜 범위와 샘플 행을 보여줘. 캠페인 ID 또는 이름, 채널, 지출과 리드를 포함한 캠페인별·주별 한 행을 예상해. 중복, 결측값, 혼합 통화와 매칭되지 않은 캠페인 ID를 표시해. 모호한 매핑 해결 방법을 질문하고, 행을 조용히 버리거나 데이터를 지어내지 마.\n\n총지출, 총리드와 리드당 비용을 보여줘. 캠페인·채널·주 필터, 주간 추세 차트와 캠페인 비교 표를 추가해. 검토자가 선택한 캠페인 합계의 원본 행을 살펴볼 수 있게 해. 모든 카드·차트·표가 동일하게 필터링된 행을 사용하게 해. 통화, 보고 기간, 출처와 제외된 행을 표시해. 제공된 날짜로 해당 주가 불완전함이 확인되면 부분 집계 주로 표시해.\n\n선택한 행의 총지출을 총리드로 나눠 리드당 비용을 계산하고, 행별 비율의 평균을 사용하지 마. 리드가 0인 비율은 N/A로 표시하고, 결측값과 0을 구분하고, 일치하는 행이 없으면 빈 상태를 보여줘. 내가 환산 규칙을 제공하지 않는 한 다른 통화는 분리해.\n\n제공된 데이터의 저장된 사본으로 시작해. 겹치는 주를 중복하지 않고 새 내보내기 파일로 교체하는 방법을 설명해. 지원되는 연결을 설정하고 테스트하기 전에는 실시간이라고 설명하지 마. 원본 보고서나 캠페인 예산을 편집하거나 리드 수에서 매출이나 리드 품질을 추론하지 마.\n\n출처와 합계를 대조해. 별도로 표시한 샘플로 리드 25개의 $1,000과 리드 5개의 $500을 합치면 지출 $1,500, 리드 30개, 리드당 비용 $50이 되는지 테스트하고, 이 샘플 행을 실제 보고서에 넣지 마. 리드 0, 결측값, 중복 행과 복합 필터도 테스트해. 모바일 레이아웃을 확인해. 대시보드는 우리 워크스페이스에 비공개로 유지하고 게시 전에 저장된 미리보기, 검증 결과와 미해결 데이터 질문을 보여줘.",
+        "official": {
+            "difficulty": "Easy",
+            "time": "30m",
+            "tags": [
+                "Front-end",
+                "Data"
+            ],
+            "bestForEn": [
+                "Marketers comparing lead volume and cost per lead across channels.",
+                "Teams reviewing weekly exports from ad platforms and CRM reports.",
+                "Teams replacing a static weekly report with a dashboard people can explore."
+            ],
+            "skills": [],
+            "promptEn": "Use @Sites to build a campaign dashboard for [team] from [attached spreadsheet or exact source link and tab].\n\nReporting context:\n- Review question: [what the team wants to understand from this report].\n- Period: [start and end dates].\n- Currency: [currency].\n- Week boundary and time zone: [definition].\n- Lead definition and attribution rule: [team definition].\n- Additional source and campaign-ID mapping, if needed: [file or none].\n\nFirst inspect the source and show the columns, row count, date range, and sample rows. Expect one row per campaign per week with campaign ID or name, channel, spend, and leads. Flag duplicates, missing values, mixed currencies, and unmatched campaign IDs. Ask how to resolve ambiguous mappings; don't silently drop rows or invent data.\n\nShow total spend, total leads, and cost per lead. Add campaign, channel, and week filters, a weekly trend chart, and a campaign comparison table. Let a reviewer inspect the source rows behind a selected campaign's totals. Make every card, chart, and table use the same filtered rows. Label currency, reporting period, source, and any excluded rows. Flag a partial reporting week when the supplied dates establish that it is incomplete.\n\nCalculate cost per lead as total spend divided by total leads for the selected rows, never the average of row-level ratios. Show N/A for zero-lead ratios, distinguish missing values from zero, and show an empty state when no rows match. Keep different currencies separate unless I supply a conversion rule.\n\nStart with a saved copy of the supplied data. Explain how to replace it with a new export without duplicating overlapping weeks. Don't describe it as live unless a supported connection is configured and tested. Don't edit source reports or campaign budgets, or infer revenue or lead quality from lead counts.\n\nCheck totals against the source. Use a separate, labeled sample to test that $1,000 with 25 leads plus $500 with five leads gives $1,500 spend, 30 leads, and $50 cost per lead; don't add these sample rows to the real report. Also test zero leads, missing values, duplicate rows, and combined filters. Check the mobile layout. Keep the dashboard private to our workspace and show a saved preview, validation results, and unresolved data questions before publishing.",
+            "promptKo": "@Sites를 사용해 [attached spreadsheet or exact source link and tab]에서 [team]의 캠페인 대시보드를 만들어.\n\n보고 맥락:\n- 검토 질문: [what the team wants to understand from this report].\n- 기간: [start and end dates].\n- 통화: [currency].\n- 주 경계와 시간대: [definition].\n- 리드 정의와 기여도 귀속 규칙: [team definition].\n- 필요한 경우 추가 출처와 캠페인 ID 매핑: [file or none].\n\n먼저 출처를 검사하고 열, 행 수, 날짜 범위와 샘플 행을 보여줘. 캠페인 ID 또는 이름, 채널, 지출과 리드를 포함한 캠페인별·주별 한 행을 예상해. 중복, 결측값, 혼합 통화와 매칭되지 않은 캠페인 ID를 표시해. 모호한 매핑 해결 방법을 질문하고, 행을 조용히 버리거나 데이터를 지어내지 마.\n\n총지출, 총리드와 리드당 비용을 보여줘. 캠페인·채널·주 필터, 주간 추세 차트와 캠페인 비교 표를 추가해. 검토자가 선택한 캠페인 합계의 원본 행을 살펴볼 수 있게 해. 모든 카드·차트·표가 동일하게 필터링된 행을 사용하게 해. 통화, 보고 기간, 출처와 제외된 행을 표시해. 제공된 날짜로 해당 주가 불완전함이 확인되면 부분 집계 주로 표시해.\n\n선택한 행의 총지출을 총리드로 나눠 리드당 비용을 계산하고, 행별 비율의 평균을 사용하지 마. 리드가 0인 비율은 N/A로 표시하고, 결측값과 0을 구분하고, 일치하는 행이 없으면 빈 상태를 보여줘. 내가 환산 규칙을 제공하지 않는 한 다른 통화는 분리해.\n\n제공된 데이터의 저장된 사본으로 시작해. 겹치는 주를 중복하지 않고 새 내보내기 파일로 교체하는 방법을 설명해. 지원되는 연결을 설정하고 테스트하기 전에는 실시간이라고 설명하지 마. 원본 보고서나 캠페인 예산을 편집하거나 리드 수에서 매출이나 리드 품질을 추론하지 마.\n\n출처와 합계를 대조해. 별도로 표시한 샘플로 리드 25개의 $1,000과 리드 5개의 $500을 합치면 지출 $1,500, 리드 30개, 리드당 비용 $50이 되는지 테스트하고, 이 샘플 행을 실제 보고서에 넣지 마. 리드 0, 결측값, 중복 행과 복합 필터도 테스트해. 모바일 레이아웃을 확인해. 대시보드는 우리 워크스페이스에 비공개로 유지하고 게시 전에 저장된 미리보기, 검증 결과와 미해결 데이터 질문을 보여줘.",
+            "promptStatus": "present",
+            "sourceChecked": "2026-11-08",
+            "guideSectionsEn": [
+                "Inspect exact source rows and agree period, currency, attribution, and week boundaries.",
+                "Resolve duplicates, missing values, and ambiguous campaign mappings explicitly.",
+                "Use the same filtered rows for metrics, trends, comparisons, and source drill-down.",
+                "Validate weighted cost-per-lead totals and zero/missing/duplicate/combined-filter cases using separate samples.",
+                "Review a private saved preview and data-refresh limitations before publication."
+            ],
+            "guideSectionsKo": [
+                "정확한 원본 행을 살펴보고 기간·통화·기여 배분·주 경계를 정합니다.",
+                "중복·결측·모호한 캠페인 대응을 명시적으로 해결합니다.",
+                "지표·추세·비교·원본 상세에 같은 필터 행을 사용합니다.",
+                "별도 표본으로 합계 기반 리드당 비용과 0·결측·중복·조합 필터를 검증합니다.",
+                "게시 전에 비공개 저장 미리보기와 데이터 갱신 한계를 검토합니다."
+            ],
+            "bestForKo": [
+                "채널별 리드 수와 리드당 비용을 비교하는 마케터.",
+                "광고 플랫폼·CRM 보고서의 주별 내보내기 자료를 검토하는 팀.",
+                "정적인 주간 보고서를 탐색 가능한 대시보드로 바꾸려는 팀."
+            ]
+        }
+    },
+    {
+        "id": "issue-to-tested-pr",
+        "title": "작은 이슈를 검증 근거 있는 PR 초안으로",
+        "summary": "준비된 클라우드 환경에서 기준 상태를 확인하고 인수 기준마다 테스트·문서·명령 근거를 남깁니다.",
+        "when": "공개 계약·범위·필수 검사가 명확하고 운영 접근 없이 재현 가능한 작은 이슈를 구현할 때.",
+        "output": "최소 diff·테스트·문서, 인수 기준 근거 표와 PR 설명 초안 또는 승인된 초안 PR.",
+        "caution": "기준 실패·접근 부재·필수 검사 차단은 구현 전에 보고합니다. 계약 충돌·스키마 변경은 결정을 기다리고 미실행 검사를 통과로 쓰지 마세요. 병합·배포·운영 데이터·권한 변경·새 의존성·범위 확대는 하지 않습니다.",
+        "category": "code",
+        "outputEn": "A minimal diff, tests and documentation, acceptance-criteria evidence, and a PR-description draft or an explicitly authorized draft PR.",
+        "cautionEn": "Report baseline failures, missing access, and blocked checks before implementation. Stop for contract conflicts or schema changes and never mark unrun checks as passing. Do not merge, deploy, use production data, change permissions, add dependencies, or expand scope.",
+        "sourceTitle": "Turn an issue into a tested pull request",
+        "titleEn": "Turn an issue into a tested pull request",
+        "sourceUrl": "https://learn.chatgpt.com/use-cases/issue-to-tested-pr",
+        "summaryEn": "Hand off a small feature with acceptance criteria and review the evidence.",
+        "prompt": "[repository]에서 [base branch and commit]을 기준으로 [issue ID and title]을 구현해.\n이 작업을 위해 내가 선택한 준비된 클라우드 환경을 사용해.\n\n입력 패킷: [paste or attach the issue, acceptance criteria, relevant\nfiles, public success/error schemas, authorization and pagination contract,\ntest fixtures, and approved validation commands].\n저장소 지침: [AGENTS.md and any relevant nested instructions].\n범위: [files or component boundaries].\n범위 밖: [explicit exclusions].\n필수 검사: [focused tests, relevant regression tests, type check,\nlint, and any required CI checks].\n출력: [create a draft PR in this repository if the available integration\nsupports it and I authorize it here / return a diff and draft PR description].\n\n먼저 지침과 관련 코드를 읽어. 시작 커밋을 확인하고\n이 환경에서 사용 가능한 실행 도구로 기존 기준 검사를\n실행해. 새 테스트 파일은 아직 만들어야 하는 것으로 기록해.\n기준 검사가 실패하거나 접근 권한이 없거나\n필수 검사를 실행할 수 없으면 구현 전에 정확한 차단 요인을 보고해.\n\n짧은 계획을 밝힌 뒤 인수 기준을 충족하는 최소 변경을\n구현해. 기존 인증, 오류, 페이지네이션과 테스트 패턴을\n따라. 필요한 동작과 이전 동작을 구분하는 테스트를\n추가해. 이 페이지네이션 예제에서는 페이지 경계를 사이에 둔\n동일 타임스탬프, 고정된 픽스처에서의 한정된 순회와 재실행, 일부만 찬 최종 페이지와\n정확히 가득 찬 최종 페이지, 커서 검증 전 권한 확인, 잘못된\n커서 사례와 성공/오류 스키마 검사를 요구해. 영향받는 API\n문서를 구현된 공개 응답과 정확히 일치하도록 갱신해.\n\n구현 후 필수 검사를 다시 실행해. 각 인수\n기준을 검증하는 테스트나 다른 근거를 가리켜. 명령,\n결과, 테스트한 커밋이나 작업 트리 상태와 실행하지 못한 검사를\n기록해. 기존 실패와 새 실패를 구분해.\n실행하지 않은 검사를 통과했다고 설명하지 마.\n\ndiff 또는 승인된 초안 PR, 간결한 변경 요약,\n인수 기준별 근거 표, 남은 위험과 검토자의 조치를 제공해.\n병합, 배포, 프로덕션 데이터 사용, 권한 변경, 새 의존성 추가나\n합의된 범위 확대를 하지 마. 계약이 저장소와 충돌하거나\n스키마 변경이 필요하면 결정을 받을 때까지 멈춰.",
+        "official": {
+            "difficulty": "Intermediate",
+            "time": "Long-running",
+            "tags": [
+                "Engineering",
+                "Code"
+            ],
+            "bestForEn": [
+                "Startup engineers implementing a scoped API issue.",
+                "Reviewers who need implementation and validation evidence together.",
+                "Teams with acceptance criteria and a working test environment."
+            ],
+            "skills": [],
+            "promptEn": "Implement [issue ID and title] in [repository] at [base branch and commit],\nusing the prepared cloud environment I selected for this task.\n\nInput packet: [paste or attach the issue, acceptance criteria, relevant\nfiles, public success/error schemas, authorization and pagination contract,\ntest fixtures, and approved validation commands].\nRepository instructions: [AGENTS.md and any relevant nested instructions].\nScope: [files or component boundaries].\nOut of scope: [explicit exclusions].\nRequired checks: [focused tests, relevant regression tests, type check,\nlint, and any required CI checks].\nOutput: [create a draft PR in this repository if the available integration\nsupports it and I authorize it here / return a diff and draft PR description].\n\nFirst read the instructions and relevant code. Confirm the starting commit\nand run the existing baseline checks using the execution tools available\nin this environment. Record any new test files as still to be created.\nIf the baseline fails, access is missing, or a\nrequired check cannot run, report the exact blocker before implementing.\n\nState a short plan, then implement the smallest change that meets the\nacceptance criteria. Follow existing auth, error, pagination, and testing\npatterns. Add tests that distinguish the required behavior from the old\nbehavior. For this pagination example, require tied timestamps across a\npage boundary, bounded traversal and replay on fixed fixtures, partial and\nexact-full final pages, authorization before cursor validation, invalid\ncursor cases, and success/error schema checks. Update the affected API\ndocumentation to match the implemented public response exactly.\n\nAfter implementation, run the required checks again. For every acceptance\ncriterion, point to the test or other evidence that verifies it. Record\ncommands, results, the tested commit or working-tree state, and any checks\nthat were not run. Separate pre-existing failures from new failures.\nNever describe an unrun check as passing.\n\nDeliver the diff or authorized draft PR, a concise change summary, the\nacceptance-criteria evidence table, remaining risks, and reviewer actions.\nDo not merge, deploy, use production data, change permissions, add new\ndependencies, or expand the agreed scope. Stop for a decision if the\ncontract conflicts with the repository or the work needs a schema change.",
+            "promptKo": "[repository]에서 [base branch and commit]을 기준으로 [issue ID and title]을 구현해.\n이 작업을 위해 내가 선택한 준비된 클라우드 환경을 사용해.\n\n입력 패킷: [paste or attach the issue, acceptance criteria, relevant\nfiles, public success/error schemas, authorization and pagination contract,\ntest fixtures, and approved validation commands].\n저장소 지침: [AGENTS.md and any relevant nested instructions].\n범위: [files or component boundaries].\n범위 밖: [explicit exclusions].\n필수 검사: [focused tests, relevant regression tests, type check,\nlint, and any required CI checks].\n출력: [create a draft PR in this repository if the available integration\nsupports it and I authorize it here / return a diff and draft PR description].\n\n먼저 지침과 관련 코드를 읽어. 시작 커밋을 확인하고\n이 환경에서 사용 가능한 실행 도구로 기존 기준 검사를\n실행해. 새 테스트 파일은 아직 만들어야 하는 것으로 기록해.\n기준 검사가 실패하거나 접근 권한이 없거나\n필수 검사를 실행할 수 없으면 구현 전에 정확한 차단 요인을 보고해.\n\n짧은 계획을 밝힌 뒤 인수 기준을 충족하는 최소 변경을\n구현해. 기존 인증, 오류, 페이지네이션과 테스트 패턴을\n따라. 필요한 동작과 이전 동작을 구분하는 테스트를\n추가해. 이 페이지네이션 예제에서는 페이지 경계를 사이에 둔\n동일 타임스탬프, 고정된 픽스처에서의 한정된 순회와 재실행, 일부만 찬 최종 페이지와\n정확히 가득 찬 최종 페이지, 커서 검증 전 권한 확인, 잘못된\n커서 사례와 성공/오류 스키마 검사를 요구해. 영향받는 API\n문서를 구현된 공개 응답과 정확히 일치하도록 갱신해.\n\n구현 후 필수 검사를 다시 실행해. 각 인수\n기준을 검증하는 테스트나 다른 근거를 가리켜. 명령,\n결과, 테스트한 커밋이나 작업 트리 상태와 실행하지 못한 검사를\n기록해. 기존 실패와 새 실패를 구분해.\n실행하지 않은 검사를 통과했다고 설명하지 마.\n\ndiff 또는 승인된 초안 PR, 간결한 변경 요약,\n인수 기준별 근거 표, 남은 위험과 검토자의 조치를 제공해.\n병합, 배포, 프로덕션 데이터 사용, 권한 변경, 새 의존성 추가나\n합의된 범위 확대를 하지 마. 계약이 저장소와 충돌하거나\n스키마 변경이 필요하면 결정을 받을 때까지 멈춰.",
+            "promptStatus": "present",
+            "sourceChecked": "2026-11-08",
+            "guideSectionsEn": [
+                "Confirm prepared environment, exact baseline, scope, contracts, and required checks.",
+                "Run baseline checks and report access or validation blockers before implementation.",
+                "Implement the smallest change with discriminating tests and matching public API documentation.",
+                "Rerun checks and map each acceptance criterion to command and revision evidence.",
+                "Deliver a local diff/description or authorized draft PR without merging or deployment."
+            ],
+            "guideSectionsKo": [
+                "준비된 환경·정확한 기준 상태·범위·계약·필수 검사를 확인합니다.",
+                "기준 검사를 실행하고 구현 전에 접근·검증 차단 요인을 보고합니다.",
+                "동작을 구별하는 테스트와 공개 API에 맞는 문서를 포함해 최소 변경을 구현합니다.",
+                "검사를 재실행하고 인수 기준별로 명령·리비전 근거를 연결합니다.",
+                "병합·배포 없이 로컬 diff·설명 또는 승인된 초안 PR을 제공합니다."
+            ],
+            "bestForKo": [
+                "범위가 정해진 API 이슈를 구현하는 스타트업 엔지니어.",
+                "구현과 검증 근거를 함께 확인해야 하는 검토자.",
+                "인수 기준과 작동하는 테스트 환경이 있는 팀."
             ]
         }
     }

@@ -718,6 +718,8 @@
                 skills: '필요한 Skills & Plugins',
                 noSkills: '공식 상세 페이지에 별도 skill/plugin이 지정되지 않았습니다. 현재 repo, 파일, 브라우저, 터미널 접근 범위부터 확인하세요.',
                 prompt: '공식 Starter prompt 기반 요청',
+                noPromptTitle: '공식 설정·운영 안내',
+                noPrompt: '이 공식 사례에는 Starter prompt가 없습니다. 아래 진행 흐름과 공식 상세의 설정·운영 안내를 확인하세요.',
                 copyPrompt: '프롬프트 복사',
                 copied: '복사됨',
                 copyFailed: '복사 실패',
@@ -741,6 +743,8 @@
                 skills: 'Skills & Plugins',
                 noSkills: 'The official page does not specify a separate skill or plugin. Start by checking the current repo, files, browser, and terminal access scope.',
                 prompt: 'Official starter prompt',
+                noPromptTitle: 'Official setup and workflow',
+                noPrompt: 'This official case does not provide a starter prompt. Review the workflow below and the setup instructions on the official page.',
                 copyPrompt: 'Copy prompt',
                 copied: 'Copied',
                 copyFailed: 'Copy failed',
@@ -783,6 +787,7 @@
         };
         const getSkillWhy = (skill) => {
             if (currentLang === 'en') return skill.why || '';
+            if (skill.whyKo) return skill.whyKo;
             const fallback = {
                 'Slack': 'Slack 채널, DM, 스레드에서 요청, 결정, blocker, 최신 맥락을 확인합니다.',
                 'Gmail': '관련 이메일 스레드, 첨부, 일정 변경, 외부 커뮤니케이션 맥락을 확인합니다.',
@@ -833,11 +838,13 @@
 
         const getDetailedPrompt = (item) => {
             const official = item.official || {};
+            if (official.promptStatus === 'not-provided') return '';
             if (currentLang === 'en') {
-                return formatPrompt(official.promptEn || item.prompt || '');
+                return official.promptEn || formatPrompt(item.prompt || '');
             }
 
-            const prompt = official.promptKo || item.prompt || '';
+            if (official.promptKo) return official.promptKo;
+            const prompt = item.prompt || '';
             if (prompt.includes('\n')) return formatPrompt(prompt);
 
             return [
@@ -864,6 +871,9 @@
         };
 
         const getWorkflowSteps = (item) => {
+            if (currentLang !== 'en' && item.official?.guideSectionsKo?.length) {
+                return item.official.guideSectionsKo;
+            }
             if (currentLang === 'en') {
                 const sections = item.official?.guideSectionsEn || [];
                 return sections.length ? sections : [
@@ -951,10 +961,11 @@
             const official = item.official || {};
             const title = localized(item, 'title', 'titleEn');
             const summary = localized(item, 'summary', 'summaryEn');
+            const hasPrompt = official.promptStatus !== 'not-provided';
             const promptText = getDetailedPrompt(item);
             const bestFor = currentLang === 'en'
                 ? (official.bestForEn || [])
-                : [item.when];
+                : (official.bestForKo || [item.when]);
             const skillRows = (official.skills || []).map((skill) => `
                 <li>
                     <a href="${escapeHtml(skill.url || item.sourceUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(skill.name)}</a>
@@ -976,7 +987,8 @@
                     </div>
                     <section class="use-case-detail-section use-case-prompt-spotlight">
                         <div class="use-case-section-head">
-                            <h3>${escapeHtml(l.prompt)}</h3>
+                            <h3>${escapeHtml(hasPrompt ? l.prompt : l.noPromptTitle)}</h3>
+                            ${hasPrompt ? `
                             <button class="use-case-copy-btn" type="button" data-copy-prompt data-copy-value="${escapeHtml(promptText)}" aria-label="${escapeHtml(l.copyPrompt)}" title="${escapeHtml(l.copyPrompt)}">
                                 <svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16">
                                     <path d="M8 7.5A2.5 2.5 0 0 1 10.5 5h7A2.5 2.5 0 0 1 20 7.5v7a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 8 14.5v-7Zm2.5-.5a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.5-.5h-7Z" fill="currentColor"></path>
@@ -984,8 +996,11 @@
                                 </svg>
                                 <span>${escapeHtml(l.copyPrompt)}</span>
                             </button>
+                            ` : ''}
                         </div>
-                        <pre class="use-case-prompt"><code>${escapeHtml(promptText)}</code></pre>
+                        ${hasPrompt
+                            ? `<pre class="use-case-prompt"><code>${escapeHtml(promptText)}</code></pre>`
+                            : `<p>${escapeHtml(l.noPrompt)}</p>`}
                     </section>
                     <section class="use-case-detail-section use-case-support-grid">
                         <div>
