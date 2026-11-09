@@ -1,6 +1,7 @@
 // === App Logic ===
 (function () {
     let currentLang = localStorage.getItem('codex101_lang') || 'ko';
+    let sitePublishedDate;
     let sectionNavCleanups = [];
     let homeSidebarPinCleanup = null;
     let homeTreeCleanup = null;
@@ -117,6 +118,35 @@
         });
     }
 
+    function renderSitePublishedDate(lang) {
+        if (!sitePublishedDate) return;
+        const publication = document.getElementById('site-published');
+        const date = publication.querySelector('time');
+        date.dateTime = sitePublishedDate.toISOString();
+        date.textContent = new Intl.DateTimeFormat(lang === 'ko' ? 'ko-KR' : 'en-US', {
+            year: 'numeric', month: 'long', day: 'numeric', timeZone: 'Asia/Seoul',
+        }).format(sitePublishedDate);
+        publication.hidden = false;
+        document.getElementById('site-published-separator').hidden = false;
+    }
+
+    async function loadSitePublishedDate() {
+        if (!document.getElementById('site-published')) return;
+        try {
+            const response = await fetch('index.html', { method: 'HEAD', cache: 'no-cache' });
+            const lastModified = response.headers.get('Last-Modified');
+            if (!response.ok || !lastModified) return;
+
+            const published = new Date(lastModified);
+            if (Number.isNaN(published.getTime())) return;
+
+            sitePublishedDate = published;
+            renderSitePublishedDate(currentLang);
+        } catch {
+            // The guide date remains available when the server omits deployment metadata.
+        }
+    }
+
     // Apply translations
     function applyTranslations(lang) {
         const t = translations[lang];
@@ -144,6 +174,7 @@
         });
         updateModelToggleLabels(lang);
         renderLiveDates(lang);
+        renderSitePublishedDate(lang);
         document.documentElement.lang = lang === 'ko' ? 'ko' : 'en';
         if (document.body.dataset.page === 'home' && t.home_document_title) {
             document.title = t.home_document_title;
@@ -1140,6 +1171,7 @@
     // Init
     applyTheme(theme);
     setLang(currentLang);
+    loadSitePublishedDate();
     setupUseCasesPage();
     setupHomeSidebarPin();
     setupReadingProgress();
