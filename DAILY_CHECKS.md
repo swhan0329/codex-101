@@ -4,6 +4,21 @@ Check dates record the sources and scope actually reviewed. Guide modification d
 
 점검일은 실제로 확인한 출처와 범위를 기록합니다. 가이드 수정일은 내용이 바뀔 때만 갱신합니다. 점검을 완료하고 관련 변경이 없다고 확인한 날에도 날짜별 기록을 남길 수 있습니다.
 
+## 2026-11-09
+부분 확인 / Partial review
+
+확인 시각 / Reviewed at: 2026-11-09 10:06 KST (UTC+09:00).
+
+| Scope / 범위 | Result / 결과 |
+| --- | --- |
+| [Models](https://learn.chatgpt.com/docs/models) · [Published model guide / 게시 모델 가이드](https://swhan0329.github.io/codex-101/#gpt55-retirement) | 공식 추천 순서 Astra·GPT-6.1 Sol·GPT-6.1 Terra·Luna와 Terra의 CLI 최소 버전 0.159.0은 게시 가이드와 일치합니다. GPT-5.5의 10월 14일 종료는 ChatGPT 로그인 Codex에 적용되며, OpenAI API와 API 키로 인증한 Codex는 별도 제공 범위를 따릅니다. / The documented order Astra, GPT-6.1 Sol, GPT-6.1 Terra, and Luna and Terra’s minimum CLI version of 0.159.0 match the published guide. The October 14 GPT-5.5 retirement applies to Codex with ChatGPT sign-in. The OpenAI API and API-key-authenticated Codex follow separate availability. |
+| [Changelog](https://learn.chatgpt.com/docs/changelog) · [Published CLI summary / 게시 CLI 요약](https://swhan0329.github.io/codex-101/#cli167) | 11월 6일 CLI 0.167.0 공지를 게시된 대화·초안 보존 요약과 대조했습니다. 해당 공지에는 지원 터미널에서 작성 중 로컬 이미지 첨부를 미리 볼 수 있다는 점과 같은 엔드포인트의 동시 네트워크 요청은 한 번에 하나씩 승인을 묻는다는 점도 나옵니다. / Compared the November 6 CLI 0.167.0 release notes with the published summary about preserving chats and drafts. The release notes also describe local image previews while composing in supported terminals and one approval prompt at a time for concurrent network requests to the same endpoint. |
+| [Official use cases / 공식 활용 사례](https://learn.chatgpt.com/use-cases) · [Published catalog / 게시 카탈로그](https://swhan0329.github.io/codex-101/use-cases.html) | 추천 영역의 중복과 컬렉션 링크를 제외한 공식 URL 119개를 게시 카탈로그 118개와 slug로 대조했고 117개가 대응합니다. 공식 목록의 [Daybreak Blue](https://learn.chatgpt.com/use-cases/getting-started-with-daybreak-blue)와 [GitHub 클라우드 보안 리뷰](https://learn.chatgpt.com/use-cases/automate-security-reviews-in-github-cloud)는 설정 화면 확인이 더 필요합니다. 기존 `make-granular-ui-changes`는 공식 목록에 없으며 삭제·이동 여부는 확인되지 않았습니다. 공통 사례의 본문과 Starter prompt 전체는 이번 대조 범위에 포함되지 않습니다. / Compared 119 official case URLs with 118 published cases by slug, excluding Featured duplicates and collection links. There are 117 matches. [Daybreak Blue](https://learn.chatgpt.com/use-cases/getting-started-with-daybreak-blue) and [GitHub cloud security reviews](https://learn.chatgpt.com/use-cases/automate-security-reviews-in-github-cloud) still need direct setup-screen verification. The existing `make-granular-ui-changes` is absent from the official index, with removal or relocation unconfirmed. The comparison did not cover all shared case bodies and Starter prompts. |
+| Social / 소셜 | 소셜 원문 확인 미완료. 지정된 아홉 작성자의 새 관련 글 유무는 판단하지 않았습니다. / Social originals not fully verified. No conclusion was reached about new relevant posts from the nine authors. |
+| Guide / 가이드 | 가이드 변경·화면 검수 보류. 상세 iOS 절차와 보안 설정에는 제품 UI 확인이 필요하며, 가이드의 언어·화면 폭·테마 8개 조합은 이번 점검에서 검수하지 않았습니다. / Guide changes and visual review pending. Detailed iOS procedures and security setup still need product-UI verification. The guide’s eight language, viewport, and theme combinations were outside this review. |
+
+위 범위만 부분 확인했으며 가이드·이미지·수정일은 유지했습니다. / Only the scope above was partially reviewed. The guide, images, and modification dates remain unchanged.
+
 ## 2026-11-08
 부분 확인 / Partial review
 
