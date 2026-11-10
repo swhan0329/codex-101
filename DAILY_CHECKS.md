@@ -4,6 +4,22 @@ Check dates record the sources and scope actually reviewed. Guide modification d
 
 점검일은 실제로 확인한 출처와 범위를 기록합니다. 가이드 수정일은 내용이 바뀔 때만 갱신합니다. 점검을 완료하고 관련 변경이 없다고 확인한 날에도 날짜별 기록을 남길 수 있습니다.
 
+## 2026-11-10
+부분 확인 / Partial review
+
+확인 시각 / Reviewed at: 2026-11-10 10:03 KST (UTC+09:00).
+
+| Scope / 범위 | Result / 결과 |
+| --- | --- |
+| [Models](https://learn.chatgpt.com/docs/models) · [Published model guide / 게시 모델 가이드](https://swhan0329.github.io/codex-101/#s3) | 공식 문서와 게시 가이드 모두 계정 기본 Power에서 시작하도록 안내합니다. 공식 예시의 GPT-6 Sol Light는 GPT-6.1 Sol 선택을 뜻하지 않으며, 실제 설정은 플랜·클라이언트·워크스페이스·배포 단계에 따라 달라집니다. / Both the official documentation and the published guide advise starting with your account’s default Power. The example’s GPT-6 Sol Light preset does not select GPT-6.1 Sol. Available settings vary by plan, client, workspace, and rollout. |
+| [Changelog](https://learn.chatgpt.com/docs/changelog) · [CLI 0.167.0 release / 릴리스](https://github.com/openai/codex/releases/tag/rust-v0.167.0) · [Published CLI summary / 게시 CLI 요약](https://swhan0329.github.io/codex-101/#cli167) | 11월 6일 CLI 0.167.0 공지는 에이전트 작업 센터를 `codex agents --no-daemon`으로 열 수 있고, 작업 센터와 세션 선택기에 읽지 않은 결과가 표시된다고 설명합니다. 이 내용은 게시 가이드의 대화·초안 보존 요약에 없습니다. / The November 6 CLI 0.167.0 release documents opening the agent command center with `codex agents --no-daemon` and unread indicators in the command center and session picker. These details are outside the published summary on preserving chats and drafts. |
+| [OpenAI Developers blog / 개발자 블로그](https://developers.openai.com/blog/build-a-game-with-modretro-chromatic) | Kevin Whinnery의 11월 9일 글은 ModRetro Chromatic 플러그인으로 Game Boy Color용 게임을 만들고 컴퓨터의 에뮬레이터에서 테스트하는 예를 소개합니다. 게시 가이드에는 이 플러그인 안내가 없습니다. / Kevin Whinnery’s November 9 article shows how the ModRetro Chromatic plugin can build a Game Boy Color game and test it in an emulator on the computer. The published guide does not cover this plugin. |
+| [Official use cases / 공식 활용 사례](https://learn.chatgpt.com/use-cases) · [Published catalog / 게시 카탈로그](https://swhan0329.github.io/codex-101/use-cases.html) | 공식 사례 URL 119개와 게시 사례 118개를 대조해 117개가 대응함을 확인했습니다. 11월 9일 공식 목록과 비교해 제목과 slug는 동일합니다. Daybreak Blue와 GitHub 클라우드 보안 리뷰는 설정 화면 확인이 남았으며, 목록에 없는 기존 `make-granular-ui-changes`의 삭제·이동 여부와 공통 사례 전체의 본문·Starter prompt 변경 여부는 미확인입니다. / Of 119 official case URLs and 118 published cases, 117 match. Titles and slugs are the same as in the November 9 official inventory. Daybreak Blue and GitHub cloud security reviews still need setup-screen verification. Removal or relocation of the unlisted `make-granular-ui-changes` and changes across all shared case bodies and Starter prompts remain unverified. |
+| Social / 소셜 | 소셜 원문 확인 미완료. 지정된 아홉 작성자의 새 관련 글 유무는 판단하지 않았습니다. / Social originals not fully verified. No conclusion was reached about new relevant posts from the nine authors. |
+| Guide / 가이드 | 가이드 변경·화면 검수 보류. iOS 세부 절차와 보안 설정에는 실제 제품 화면 확인이 필요하며, 가이드의 언어·화면 폭·테마 8개 조합은 이번 점검에서 검수하지 않았습니다. / Guide changes and visual review pending. Detailed iOS procedures and security setup still require direct product-UI verification. The guide’s eight language, viewport, and theme combinations were outside this review. |
+
+위 범위만 부분 확인했으며 가이드 본문·이미지·콘텐츠 수정일은 유지했습니다. / Only the scope above was partially reviewed. Guide content, images, and content modification dates remain unchanged.
+
 ## 2026-11-09
 부분 확인 / Partial review
 
