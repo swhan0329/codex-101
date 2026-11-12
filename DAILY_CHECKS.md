@@ -4,6 +4,19 @@ Check dates record the sources and scope actually reviewed. Guide modification d
 
 점검일은 실제로 확인한 출처와 범위를 기록합니다. 가이드 수정일은 내용이 바뀔 때만 갱신합니다. 점검을 완료하고 관련 변경이 없다고 확인한 날에도 날짜별 기록을 남길 수 있습니다.
 
+## 2026-11-12
+부분 확인 / Partial review
+
+확인 시각 / Reviewed at: 2026-11-12 10:04 KST (UTC+09:00).
+
+| Scope / 범위 | Result / 결과 |
+| --- | --- |
+| [Models](https://learn.chatgpt.com/docs/models) · [Published model guide / 게시 모델 가이드](https://swhan0329.github.io/codex-101/#s3) | 공식 모델 문서는 Codex와 ChatGPT Work의 GPT-6.1 Sol 기본 컨텍스트가 50만 토큰이라고 명시합니다. 게시 가이드의 10월 12일 발표 요약과 수치·적용 범위가 일치합니다. / The official model documentation states a default context window of 500,000 tokens for GPT-6.1 Sol in Codex and ChatGPT Work. The figure and scope match the published guide’s October 12 announcement summary. |
+| [Changelog](https://learn.chatgpt.com/docs/changelog) · [CLI 0.167.2 release / 릴리스](https://github.com/openai/codex/releases/tag/rust-v0.167.2) · [Published CLI summary / 게시 CLI 요약](https://swhan0329.github.io/codex-101/#cli167) | 11월 11일 공식 변경 기록의 CLI 0.167.2는 Google Cloud Vertex AI에서 도구 업데이트를 기본적으로 점진 전송합니다. GitHub 릴리스는 11월 11일 22:44 UTC(한국 11월 12일 07:44)에 게시됐습니다. 전날 점검한 버전은 0.167.1이며, 게시 가이드는 0.167.0을 설명합니다. / CLI 0.167.2 in the November 11 official changelog sends tool updates incrementally by default on Google Cloud Vertex AI. GitHub published the release at 22:44 UTC on November 11 (07:44 KST on November 12). Yesterday’s check covered 0.167.1, and the published guide describes 0.167.0. |
+| [Official use cases / 공식 활용 사례](https://learn.chatgpt.com/use-cases) · [Published catalog / 게시 카탈로그](https://swhan0329.github.io/codex-101/use-cases.html) | 공식 고유 사례 119개의 제목과 URL은 11월 11일 확인 목록과 같습니다. 게시 사례 118개 중 117개가 대응하며, 공식 목록에만 있는 보안 설정 사례 2개는 보류 중입니다. 게시 카탈로그에만 있는 `make-granular-ui-changes`의 이동 여부와 공통 사례 전체의 본문·Starter prompt 변경 여부는 미확인입니다. / Titles and URLs for the 119 unique official cases match the November 11 inventory. Of 118 published cases, 117 match, and the two security setup cases found only in the official index remain pending. Any relocation of the published-only `make-granular-ui-changes` and changes across all shared case bodies and Starter prompts remain unverified. |
+| Social / 소셜 | 소셜 원문 확인 미완료. 지정된 아홉 작성자의 새 관련 글 유무는 미확인입니다. / Social originals not fully verified. The presence of new relevant posts from the nine authors remains unverified. |
+| Guide / 가이드 | 가이드 변경·화면 검수 보류. CLI 안내 수정과 제품 절차 확인이 남았습니다. 이번 점검 범위에는 실제 제품 화면과 가이드의 한국어·영어 × 데스크톱·모바일 × 밝은·어두운 화면 8개 조합을 포함하지 않았습니다. / Guide changes and visual review pending. CLI revisions and product procedure verification remain outstanding. This review excludes the actual product UI and the guide’s eight Korean/English, desktop/mobile, and light/dark combinations. |
+
 ## 2026-11-11
 부분 확인 / Partial review
 
