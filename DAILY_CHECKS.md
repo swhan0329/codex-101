@@ -4,6 +4,21 @@ Check dates record the sources and scope actually reviewed. Guide modification d
 
 점검일은 실제로 확인한 출처와 범위를 기록합니다. 가이드 수정일은 내용이 바뀔 때만 갱신합니다. 점검을 완료하고 관련 변경이 없다고 확인한 날에도 날짜별 기록을 남길 수 있습니다.
 
+## 2026-11-13
+부분 확인 / Partial review
+
+확인 시각 / Reviewed at: 2026-11-13 10:02 KST (UTC+09:00).
+
+| Scope / 범위 | Result / 결과 |
+| --- | --- |
+| [Models](https://learn.chatgpt.com/docs/models) · [게시 모델 가이드 / Published model guide](https://swhan0329.github.io/codex-101/#s3) | 공식 추천 순서 Astra·GPT-6.1 Sol·GPT-6.1 Terra·Luna는 게시 가이드와 같습니다. GPT-5.5는 ChatGPT 로그인 Codex에서 종료됐으며 API 키 세션은 계속 지원합니다. 게시 가이드도 이 범위를 구분합니다. / The official recommendation order of Astra, GPT-6.1 Sol, GPT-6.1 Terra, and Luna matches the published guide. GPT-5.5 was retired for Codex with ChatGPT sign-in and remains available in API-key sessions. The published guide makes the same distinction. |
+| [Changelog](https://learn.chatgpt.com/docs/changelog) · [게시 iOS 요약 / Published iOS summary](https://swhan0329.github.io/codex-101/#ios300-release-note) | 11월 10일자 iOS 1.2026.307 공지는 전체 화면 작성기에 이미지와 파일을 붙여넣고 보낸 프롬프트의 첨부를 열 수 있다고 설명합니다. 수동 페어링의 VoiceOver 지원도 명시합니다. 게시 가이드는 이전 1.2026.300의 후속 지시와 첨부 개선을 다룹니다. / The November 10 entry for iOS 1.2026.307 describes pasting images and files into the full-screen composer and opening attachments from sent prompts. It also lists VoiceOver support for manual pairing. The published guide covers follow-ups and attachment improvements from the earlier 1.2026.300 release. |
+| [OpenAI Developers](https://developers.openai.com/blog/securing-persistent-agents-like-openclaw-at-openai) · [게시 권한 안내 / Published permissions guide](https://swhan0329.github.io/codex-101/#auto-review-guide) | 11월 12일 Kevin S Lin은 OpenAI의 상시 실행 에이전트 운영 사례에서 게이트웨이와 에이전트 실행을 분리하고 Codex 샌드박스로 작업 범위를 제한했다고 설명했습니다. 게시 가이드는 로컬 Codex의 권한과 자동 승인 검토를 설명합니다. 이 글은 별도의 배포 사례입니다. / On November 12, Kevin S Lin described how OpenAI runs persistent agents with the gateway separated from agent execution and Codex sandboxing applied to agent workloads. The published guide explains local Codex permissions and auto-review. The article describes a separate deployment. |
+| [공식 활용 사례 / Official use cases](https://learn.chatgpt.com/use-cases) · [게시 카탈로그 / Published catalog](https://swhan0329.github.io/codex-101/use-cases.html) | 공식 고유 사례 119개와 게시 사례 118개 중 117개가 대응하며 11월 12일 비교와 같습니다. 공식 목록에만 있는 보안 설정 사례 2개의 본문을 확인했습니다. 게시 목록에만 있는 `make-granular-ui-changes`의 기존 원문 주소는 페이지를 찾을 수 없다고 표시합니다. 대체 주소와 전체 한영 내용 검수는 미완료입니다. / Of 119 unique official cases and 118 published cases, 117 match, as in the November 12 comparison. We read the two security setup cases found only in the official index. The existing source URL for the published-only `make-granular-ui-changes` shows a page-not-found message. A replacement URL and the complete bilingual content review remain unverified. |
+| [공식 Slack 사례 / Official Slack case](https://learn.chatgpt.com/use-cases/slack-coding-tasks) | 공통 사례 117개 중 영어 Starter prompt 109개가 게시본과 일치했고, 7개는 양쪽에 Starter prompt가 없었습니다. Slack 사례 1개는 기존 `@Codex` 요청에서 `@ChatGPT`로 바뀌었고, 워크스페이스 공유 Cloud 환경과 검사 결과 보고를 명시합니다. 한국어 번역과 절차 수정은 보류했습니다. / Across the 117 shared cases, 109 English Starter prompts matched the published catalog, and seven cases had no Starter prompt in either version. The Slack case changed its mention from `@Codex` to `@ChatGPT` and now specifies a workspace-shared Cloud environment and reporting check results. The Korean translation and procedure updates remain pending. |
+| Social / 소셜 | 소셜 원문 확인 미완료. 지정된 아홉 작성자의 전체 기간은 확인하지 못했습니다. / Social originals not fully verified. The full review period for the nine authors remains unverified. |
+| Guide / 가이드 | 가이드 변경·화면 검수 보류. iOS·CLI 안내와 활용 사례를 검토했으며, 실제 제품 화면과 한국어·영어 × 데스크톱·모바일 × 밝은·어두운 화면 8개 조합은 확인하지 않았습니다. / Guide changes and visual review pending. We reviewed the iOS and CLI guidance and use cases. This review excludes direct product UI checks and the eight Korean/English, desktop/mobile, and light/dark combinations. |
+
 ## 2026-11-12
 부분 확인 / Partial review
 
