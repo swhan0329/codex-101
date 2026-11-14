@@ -4,6 +4,19 @@ Check dates record the sources and scope actually reviewed. Guide modification d
 
 점검일은 실제로 확인한 출처와 범위를 기록합니다. 가이드 수정일은 내용이 바뀔 때만 갱신합니다. 점검을 완료하고 관련 변경이 없다고 확인한 날에도 날짜별 기록을 남길 수 있습니다.
 
+## 2026-11-14
+부분 확인 / Partial review
+
+확인 시각 / Reviewed at: 2026-11-14 10:05 KST (UTC+09:00).
+
+| Scope / 범위 | Result / 결과 |
+| --- | --- |
+| [Models](https://learn.chatgpt.com/docs/models) · [게시 모델 가이드 / Published model guide](https://swhan0329.github.io/codex-101/#s3) | 공식 추천 순서 Astra·GPT-6.1 Sol·GPT-6.1 Terra·Luna는 게시 가이드와 같습니다. GPT-5.5는 ChatGPT 로그인 Codex에서 지원이 종료됐으며 API 키 세션은 계속 지원합니다. 게시 가이드도 이 범위를 구분합니다. / The official recommendation order of Astra, GPT-6.1 Sol, GPT-6.1 Terra, and Luna matches the published guide. GPT-5.5 was retired for Codex with ChatGPT sign-in and remains available in API-key sessions. The published guide makes the same distinction. |
+| [Changelog](https://learn.chatgpt.com/docs/changelog) · [CLI 0.168.0](https://github.com/openai/codex/releases/tag/rust-v0.168.0) · [CLI 0.169.0](https://github.com/openai/codex/releases/tag/rust-v0.169.0) · [게시 CLI 요약 / Published CLI summary](https://swhan0329.github.io/codex-101/#cli167) | 11월 13일 CLI 릴리스에 따르면 0.168.0은 선택 기능인 터미널 워크스페이스에서 주 대화 옆에 보조 대화를 표시할 수 있습니다. 0.169.0은 이 기능에 보조 대화 탭 여러 개와 재시작 후 저장된 로컬 보조 대화 다시 열기를 추가했습니다. 게시 가이드는 11월 6일자 0.167.0을 설명합니다. / The November 13 CLI releases say that 0.168.0 can display a conversation beside the main chat in the opt-in terminal workspace. Version 0.169.0 adds multiple side-chat tabs and the ability to reopen saved local side chats after restarting. The published guide describes the November 6 release, 0.167.0. |
+| [공식 활용 사례 / Official use cases](https://learn.chatgpt.com/use-cases) · [게시 카탈로그 / Published catalog](https://swhan0329.github.io/codex-101/use-cases.html) | 공식 목록의 고유 사례 119개와 게시 사례 118개 중 117개가 대응합니다. 게시 목록에만 있는 `make-granular-ui-changes`의 공식 주소는 페이지를 찾을 수 없다고 표시합니다. 대체 주소와 전체 한영 검수는 미완료입니다. / Of 119 unique official cases and 118 published cases, 117 match. The official URL for the published-only `make-granular-ui-changes` shows a page-not-found message. A replacement URL and the complete bilingual review remain unverified. |
+| Social / 소셜 | 소셜 원문 확인 미완료. 지정된 아홉 작성자의 전체 기간을 확인하지 못했습니다. / Social originals not fully verified. The full review period for the nine authors remains unverified. |
+| Guide / 가이드 | 가이드 변경·화면 검수 보류. 실제 제품 화면과 한국어·영어 × 데스크톱·모바일 × 밝은·어두운 화면 8개 조합 검수가 남았습니다. / Guide changes and visual review pending. Direct product UI checks and review of the eight Korean/English, desktop/mobile, and light/dark combinations remain outstanding. |
+
 ## 2026-11-13
 부분 확인 / Partial review
 
