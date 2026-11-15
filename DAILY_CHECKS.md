@@ -4,6 +4,20 @@ Check dates record the sources and scope actually reviewed. Guide modification d
 
 점검일은 실제로 확인한 출처와 범위를 기록합니다. 가이드 수정일은 내용이 바뀔 때만 갱신합니다. 점검을 완료하고 관련 변경이 없다고 확인한 날에도 날짜별 기록을 남길 수 있습니다.
 
+## 2026-11-15
+부분 확인 / Partial review
+
+확인 시각 / Reviewed at: 2026-11-15 10:08 KST (UTC+09:00).
+
+| Scope / 범위 | Result / 결과 |
+| --- | --- |
+| [Models](https://learn.chatgpt.com/docs/models) · [게시 모델 가이드 / Published model guide](https://swhan0329.github.io/codex-101/#s3) | 공식 추천 순서 Astra·GPT-6.1 Sol·GPT-6.1 Terra·Luna는 게시 가이드와 같습니다. 공식 문서의 여섯 가지 Power 프리셋은 예시이며, 실제 선택지는 플랜·클라이언트·워크스페이스 설정·배포 상태에 따라 달라집니다. 게시 가이드도 계정의 기본 Power에서 시작하도록 안내합니다. / The official recommendation order of Astra, GPT-6.1 Sol, GPT-6.1 Terra, and Luna matches the published guide. The six Power presets in the docs are illustrative, and available choices vary by plan, client, workspace settings, and rollout. The published guide also directs readers to start with their account's default Power. |
+| [Changelog](https://learn.chatgpt.com/docs/changelog) · [CLI 0.169.0](https://github.com/openai/codex/releases/tag/rust-v0.169.0) · [게시 CLI 요약 / Published CLI summary](https://swhan0329.github.io/codex-101/#cli167) | 11월 13일자 CLI 0.169.0 릴리스는 에이전트 명령 센터에서 작업 이름·프롬프트 미리보기·작업 디렉터리로 이전 작업을 검색할 수 있다고 설명합니다. 전체 화면 대화 기록에서 완료된 활동을 접어도 도구 출력을 검색할 수 있습니다. 게시 가이드의 릴리스 요약은 0.167.0을 다룹니다. / The November 13 release of CLI 0.169.0 describes searching older tasks by name, prompt preview, or working directory in the agent command center. Tool output stays searchable when completed activity is collapsed in the full-screen transcript. The published guide's release summary covers 0.167.0. |
+| [OpenAI Developers](https://developers.openai.com/blog/build-a-game-with-modretro-chromatic) · [게시 가이드 / Published guide](https://swhan0329.github.io/codex-101/) | 11월 9일 Kevin Whinnery는 ModRetro Chromatic 플러그인으로 Game Boy Color 게임을 만들고 컴퓨터에서 먼저 실행하는 예를 설명했습니다. 게시 가이드에는 이 플러그인 예제가 없습니다. / On November 9, Kevin Whinnery described building a Game Boy Color game with the ModRetro Chromatic plugin and playing it on a computer first. The published guide does not include this plugin example. |
+| [공식 활용 사례 / Official use cases](https://learn.chatgpt.com/use-cases) · [게시 카탈로그 / Published catalog](https://swhan0329.github.io/codex-101/use-cases.html) · [Slack 사례 / Slack case](https://learn.chatgpt.com/use-cases/slack-coding-tasks) | 공식 목록의 고유 사례 119개와 게시 사례 118개 중 117개가 대응합니다. 공통 사례의 영어 Starter prompt 대조에서 게시본과 다른 항목은 Slack 사례였습니다. 공식 프롬프트는 `@ChatGPT`를 호출하고 워크스페이스 공유 Cloud 환경을 사용하도록 요청합니다. 전체 한영 내용과 복사 동작 검수는 남았습니다. / Of 119 unique official cases and 118 published cases, 117 match. In the English Starter prompt comparison for the shared cases, the Slack case was the one difference from the published version. The official prompt invokes `@ChatGPT` and asks to use a workspace-shared Cloud environment. Full bilingual content and copy behavior checks remain pending. |
+| Social / 소셜 | 소셜 원문 확인 미완료. 지정된 아홉 작성자의 전체 기간을 확인하지 못했습니다. / Social originals not fully verified. The full review period for the nine authors remains unverified. |
+| Guide / 가이드 | 가이드 변경·화면 검수 보류. 실제 제품 화면과 한국어·영어 × 데스크톱·모바일 × 밝은·어두운 화면 8개 조합 검수가 남았습니다. / Guide changes and visual review pending. Direct product UI checks and review of the eight Korean/English, desktop/mobile, and light/dark combinations remain outstanding. |
+
 ## 2026-11-14
 부분 확인 / Partial review
 
