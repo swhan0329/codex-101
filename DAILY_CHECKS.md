@@ -4,6 +4,19 @@ Check dates record the sources and scope actually reviewed. Guide modification d
 
 점검일은 실제로 확인한 출처와 범위를 기록합니다. 가이드 수정일은 내용이 바뀔 때만 갱신합니다. 점검을 완료하고 관련 변경이 없다고 확인한 날에도 날짜별 기록을 남길 수 있습니다.
 
+## 2026-11-16
+부분 확인 / Partial review
+
+확인 시각 / Reviewed at: 2026-11-16 10:07 KST (UTC+09:00).
+
+| Scope / 범위 | Result / 결과 |
+| --- | --- |
+| [Models](https://learn.chatgpt.com/docs/models) · [게시 모델 가이드 / Published model guide](https://swhan0329.github.io/codex-101/#s3) | 공식 추천 순서 Astra·GPT-6.1 Sol·GPT-6.1 Terra·Luna는 게시 가이드와 같습니다. GPT-5.5 지원 종료 범위도 일치합니다. ChatGPT 로그인 Codex에서는 종료됐고, API 키 세션에서는 계속 사용할 수 있습니다. / The official recommendation order of Astra, GPT-6.1 Sol, GPT-6.1 Terra, and Luna matches the published guide. The GPT-5.5 retirement scope also matches. It was retired for Codex with ChatGPT sign-in and remains available in API-key sessions. |
+| [Changelog](https://learn.chatgpt.com/docs/changelog) · [CLI 0.169.0](https://github.com/openai/codex/releases/tag/rust-v0.169.0) · [게시 CLI 요약 / Published CLI summary](https://swhan0329.github.io/codex-101/#cli167) | 11월 13일자 CLI 0.169.0은 계획을 승인한 뒤 새 세션에서 구현을 시작할 때 승인된 계획 전체를 넘기도록 수정했습니다. 인계가 실패하면 현재 세션이 열린 상태로 유지됩니다. 게시 가이드의 릴리스 요약은 0.167.0을 다룹니다. / The November 13 CLI 0.169.0 release fixes the handoff when implementation starts in a fresh session after plan approval. The entire approved plan is passed to the fresh session, and the current session stays open if handoff fails. The published guide's release summary covers 0.167.0. |
+| [공식 전체 목록 / Full official catalog](https://learn.chatgpt.com/use-cases/all) · [게시 카탈로그 / Published catalog](https://swhan0329.github.io/codex-101/use-cases.html) · [경비 보고서 / Expense report](https://learn.chatgpt.com/use-cases/fill-out-an-expense-report) · [맞춤 전단지 / Custom flyer](https://learn.chatgpt.com/use-cases/make-a-custom-flyer) | 12개 공식 컬렉션의 중복 링크를 합쳐 고유 사례 121개를 확인했습니다. 게시 사례 118개 중 117개가 공식 목록과 대응합니다. 전날 목록에 없던 경비 보고서와 맞춤 전단지 사례의 본문과 Starter prompt를 확인했습니다. 경비 보고서 프롬프트는 제출 전에 사람이 검토하도록 작성한 양식을 열어 두라고 합니다. 전체 한영 내용과 복사 동작 검수는 남았습니다. / Deduplicating links across the 12 official collections yields 121 unique cases. Of 118 published cases, 117 match the official catalog. We reviewed the bodies and Starter prompts for the expense report and custom flyer cases, which were absent from the previous day's inventory. The expense report prompt leaves the completed form open for human review before submission. Full bilingual content and copy behavior checks remain pending. |
+| Social / 소셜 | 소셜 원문 확인 미완료. 지정된 아홉 작성자의 전체 기간을 확인하지 못했습니다. / Social originals not fully verified. The full review period for the nine authors remains unverified. |
+| Guide / 가이드 | 가이드 변경·화면 검수 보류. 실제 제품 화면과 한국어·영어 × 데스크톱·모바일 × 밝은·어두운 화면 8개 조합 검수가 남았습니다. / Guide changes and visual review pending. Direct product UI checks and review of the eight Korean/English, desktop/mobile, and light/dark combinations remain outstanding. |
+
 ## 2026-11-15
 부분 확인 / Partial review
 
