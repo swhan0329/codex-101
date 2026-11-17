@@ -4,6 +4,23 @@ Check dates record the sources and scope actually reviewed. Guide modification d
 
 점검일은 실제로 확인한 출처와 범위를 기록합니다. 가이드 수정일은 내용이 바뀔 때만 갱신합니다. 점검을 완료하고 관련 변경이 없다고 확인한 날에도 날짜별 기록을 남길 수 있습니다.
 
+## 2026-11-17
+부분 확인 / Partial review
+
+확인 시각 / Reviewed at: 2026-11-17 10:04 KST (UTC+09:00).
+
+| Scope / 범위 | Result / 결과 |
+| --- | --- |
+| [Models](https://learn.chatgpt.com/docs/models) | 추천 순서 Astra·GPT-6.1 Sol·GPT-6.1 Terra·Luna와 GPT-6.1 Sol의 기본 컨텍스트 500,000토큰을 확인했습니다. 게시 가이드의 추천 순서와 Sol 컨텍스트 안내에 부합합니다. / Confirmed the recommended order Astra, GPT-6.1 Sol, GPT-6.1 Terra, and Luna, and GPT-6.1 Sol's default context of 500,000 tokens. These agree with the published guide's recommendation order and Sol context guidance. |
+| [Changelog](https://learn.chatgpt.com/docs/changelog) · [CLI 0.169.0](https://github.com/openai/codex/releases/tag/rust-v0.169.0) · [게시 CLI 요약 / Published CLI summary](https://swhan0329.github.io/codex-101/#cli167) | 11월 13일자 CLI 0.169.0 릴리스에서 업로드가 꺼져 있어도 터미널 보고서 편집기의 Ctrl+S로 진단 ZIP을 로컬에 저장할 수 있다는 내용을 추가 확인했습니다. 게시 가이드의 CLI 릴리스 요약은 0.167.0이며 이 안내는 아직 없습니다. 실제 키 조작은 검증하지 않았습니다. / Additionally verified that the November 13 CLI 0.169.0 release documents saving a diagnostic ZIP locally with Ctrl+S in the terminal report editor even when uploads are disabled. The published guide's CLI release summary covers 0.167.0 and does not yet include this guidance. The key action was not tested in the product. |
+| [Use cases](https://learn.chatgpt.com/use-cases) · [All](https://learn.chatgpt.com/use-cases/all) · [게시 카탈로그 / Published catalog](https://swhan0329.github.io/codex-101/use-cases.html) | 공식 12개 컬렉션에서 중복을 제거한 121개 사례 URL과 개별 본문을 게시 118개와 대조했습니다. 공통 117개 중 영어 Starter prompt 109개는 바깥 공백을 제외하면 같고, 7개는 양쪽에 없으며 Slack 1개는 다릅니다. 공식에만 있는 4개와 게시본에만 있는 1개도 전일과 같습니다. 수집된 121개 본문 텍스트는 전일 수집본과 같지만 전체 한영 설명·실제 복사·화면 검수 완료를 뜻하지 않습니다. / Compared 121 deduplicated case URLs from the 12 official collections and their individual bodies with the 118 published cases. Of 117 shared cases, 109 English Starter prompts match after trimming outer whitespace, seven have no prompt on either side, and one Slack prompt differs. The four official-only cases and one published-only case are unchanged from yesterday. The 121 extracted body texts match yesterday's captures; this does not establish complete bilingual prose, actual copy, or visual verification. |
+| [Developer blog](https://developers.openai.com/blog/securing-persistent-agents-like-openclaw-at-openai) | Kevin S Lin의 11월 12일 글은 지속 실행 에이전트에서 신뢰하는 제어 영역과 에이전트 실행을 분리하고 샌드박스·별도 신원·관측을 결합한 OpenAI의 운영 사례를 설명합니다. 이 운영 사례를 모든 사용자의 기본 설정으로 일반화하지 않았습니다. / Kevin S Lin's November 12 article describes OpenAI's deployment pattern separating a trusted control plane from agent execution and combining sandboxing, separate identity, and observability for persistent agents. This deployment example was not generalized to every user's default configuration. |
+| [Tibo 원문 / Tibo original](https://x.com/thsottiaux/status/2122206990101536852) | 11월 16일 Tibo는 모델 용량 부족 오류를 해결했을 수도 있다고 썼습니다. 게시 가이드의 10월 16일 개선 안내보다 나중의 글이지만 확정적인 해결 발표가 아닙니다. 모든 계정의 복구나 오류 소멸은 확인하지 않았습니다. / On November 16, Tibo wrote that the team might have fixed model-capacity errors. This post is later than the published guide's October 16 improvement guidance, but is tentative. Recovery across all accounts or elimination of errors was not verified. |
+| Social / 소셜 | 소셜 원문 확인 미완료. 아홉 작성자의 프로필과 선택한 개별 원문을 확인했지만 사람별 전체 기간을 확인하지 않았으므로 새 관련 글이 없다고 판단하지 않았습니다. / Social originals not fully verified. Profiles and selected individual originals from the nine authors were checked, but complete per-author intervals were not reviewed, so no conclusion of no new relevant posts was reached. |
+| Guide / 가이드 | 가이드 변경·화면 검수 보류. CLI 진단 저장·용량 안내와 기존 카탈로그·프롬프트 초안은 보존했으며 제품 UI·8개 언어/테마/화면 조합·전체 한영 설명과 복사 검수는 보류입니다. / Guide changes and visual review pending. CLI diagnostic-saving and capacity guidance and existing catalog/prompt drafts were preserved; product UI, the eight language/theme/viewport combinations, and complete bilingual prose and copy checks remain pending. |
+
+위 범위의 부분 확인 기록이며 가이드·이미지·수정일은 변경하지 않았습니다. / This is a partial record of the scope above; guide content, images, and modification dates remain unchanged.
+
 ## 2026-11-16
 부분 확인 / Partial review
 
