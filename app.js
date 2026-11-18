@@ -478,7 +478,11 @@
                 const top = getSectionTop(entry.section);
                 const isLast = index === orderedEntries.length - 1;
 
-                if (scrollMarker >= top || (nearBottom && isLast)) {
+                // Match the anchor's CSS clearance so a landed chapter is active immediately.
+                const anchorClearance = (parseFloat(window.getComputedStyle(entry.section).scrollMarginTop) || 0)
+                    + (parseFloat(window.getComputedStyle(document.documentElement).scrollPaddingTop) || 0);
+                const sectionMarker = Math.max(scrollMarker, window.scrollY + anchorClearance + 1);
+                if (sectionMarker >= top || (nearBottom && isLast)) {
                     currentId = entry.section.id;
                 }
             });
@@ -948,6 +952,7 @@
 
         const renderCards = () => {
             const visibleItems = getVisibleItems();
+            detail.hidden = visibleItems.length === 0;
             const l = getLabels();
             resultLabel.textContent = query
                 ? `${visibleItems.length}${l.searchCases}`
@@ -1067,7 +1072,10 @@
             if (updateHash) {
                 history.replaceState(null, '', `#${item.id}`);
                 window.requestAnimationFrame(() => {
-                    detail.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    detail.scrollIntoView({
+                        behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+                        block: 'start',
+                    });
                 });
             }
         };
