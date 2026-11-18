@@ -17,7 +17,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=20261118-ui-consistency-2" />
+    <link rel="stylesheet" href="style.css?v=20261118-mobile-reading" />
 </head>
 
 <body data-page="use-cases" data-updated="2026-11-18">
@@ -26,12 +26,14 @@
     <nav class="top-bar">
         <div class="top-bar-inner">
             <a href="index.html" class="logo">Codex 101</a>
-            <nav class="site-nav" aria-label="Codex 101 pages">
+            <nav class="site-nav" id="site-page-nav" aria-label="Codex 101 pages">
                 <a href="index.html" class="site-nav-link" data-i18n="nav_guide">앱 가이드</a>
-                <a href="use-cases.html" class="site-nav-link active" aria-current="page" data-i18n="nav_use_cases">Use cases</a>
+                <a href="use-cases.html" class="site-nav-link active" aria-current="page" data-i18n="nav_use_cases">활용 사례</a>
             </nav>
             <div class="top-bar-actions">
                 <button id="theme-toggle" class="icon-btn" title="Toggle theme" aria-label="Toggle theme">🌙</button>
+                <label class="mobile-language"><span class="sr-only" data-i18n="mobile_language">언어</span><select id="mobile-language"><option value="ko">KO</option><option value="en">EN</option></select></label>
+                <button class="mobile-page-menu" type="button" aria-expanded="false" aria-controls="site-page-nav" data-i18n="mobile_page_menu">메뉴</button>
                 <div class="lang-switch">
                     <button class="lang-btn active" data-lang="ko">한국어</button>
                     <button class="lang-btn" data-lang="en">English</button>
@@ -50,10 +52,11 @@
                     <p class="hero-badge">
                         <span data-i18n="use_cases_hero_badge">공식 Use Cases 한국어 재분류</span>
                         <span aria-hidden="true"> · </span>
-                        <span class="live-date" data-date-format="long">2026년 11월 8일</span>
+                        <span class="live-date" data-date-format="long">2026년 11월 18일</span>
                     </p>
                     <h1 class="use-case-title" data-i18n="use_cases_hero_title">Codex에게 무엇을 맡길 수 있을까?</h1>
                     <p class="use-case-lead" data-i18n="use_cases_hero_lead">확인한 OpenAI 공식 사용 사례를 실무 상황별로 묶었습니다. 카드를 열어 난이도·시간·Skills & Plugins, 제공되는 프롬프트 또는 설정 안내, 결과물·주의점과 공식 원문을 확인하세요.</p>
+                    <p class="use-case-lead-mobile" data-i18n="mobile_cases_lead">업무에 맞는 사례를 검색하세요. 프롬프트·도구·주의점은 상세에서 확인합니다.</p>
                     <div class="hero-cta">
                         <a href="#use-case-browser" class="btn btn-primary" data-i18n="use_cases_hero_cta">사례 둘러보기</a>
                         <a href="https://developers.openai.com/codex/use-cases" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" data-i18n="use_cases_official_cta">공식 원문 보기</a>
@@ -85,6 +88,7 @@
                     </label>
                 </div>
 
+                <label class="mobile-category-picker"><span class="sr-only" data-i18n="mobile_category">카테고리</span><select id="mobile-category"></select></label>
                 <div class="use-case-layout">
                     <aside class="use-case-category-rail" aria-label="Use case categories">
                         <button class="use-case-category active" type="button" data-use-case-filter="all">
@@ -122,15 +126,15 @@
             <p class="footer-contrib" data-i18n="use_cases_footer_contrib">이 페이지는 OpenAI 공식 Codex use cases를 한국어 실무 맥락으로 재구성한 보조 가이드입니다. 원문과 최신 세부사항은 각 공식 링크를 함께 확인하세요.</p>
             <p class="footer-meta">
                 <span data-i18n="footer_date_prefix">최종 업데이트</span>:
-                <span class="live-date" data-date-format="long">2026년 11월 8일</span>
+                <span class="live-date" data-date-format="long">2026년 11월 18일</span>
             </p>
             <p class="footer-meta">Made by <a href="https://github.com/swhan0329" target="_blank">@swhan0329</a></p>
         </div>
     </footer>
 
-    <script src="i18n.js?v=20261118-ui-consistency"></script>
+    <script src="i18n.js?v=20261118-mobile-reading"></script>
     <script src="use-cases-data.js?v=20261118-prompt-fidelity"></script>
-    <script src="app.js?v=20261118-ui-consistency"></script>
+    <script src="app.js?v=20261118-mobile-reading"></script>
 </body>
 
 </html>

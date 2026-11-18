@@ -1,6 +1,15 @@
 // i18n translation data
 const translations = {
     ko: {
+        mobile_cta_start: "설치 시작",
+        mobile_cta_screens: "앱 화면",
+        mobile_cases_lead: "업무에 맞는 사례를 검색하세요. 프롬프트·도구·주의점은 상세에서 확인합니다.",
+        mobile_page_menu: "메뉴",
+        mobile_language: "언어",
+        mobile_start_path: "처음 쓰는 순서 보기",
+        mobile_introduction: "가이드 소개·예시 더 보기",
+        mobile_category: "카테고리",
+        mobile_back_results: "목록으로 돌아가기",
         skip_to_content: "본문으로 바로가기",
         nov8_update_t: "11월 8일 · 11월 초 공식 변경과 활용 사례",
         nov8_update_d: "11월 2일 iOS·11월 4일 닷·11월 6일 CLI 공지를 각 장에 정리하고, 신규 17개·기존 4개 수정이 반영된 118개 활용 사례로 연결했습니다. 아래 날짜는 실제 가이드 수정일이며, 본문의 발표일과 구분합니다.",
@@ -1249,6 +1258,15 @@ const translations = {
     },
 
     en: {
+        mobile_cta_start: "Install app",
+        mobile_cta_screens: "App screens",
+        mobile_cases_lead: "Find a use case for your work. Open it for prompts, tools, and caveats.",
+        mobile_page_menu: "Menu",
+        mobile_language: "Language",
+        mobile_start_path: "How to start",
+        mobile_introduction: "About this guide and examples",
+        mobile_category: "Category",
+        mobile_back_results: "Back to results",
         skip_to_content: "Skip to content",
         nov8_update_t: "November 8 · Early-November product notes and use cases",
         nov8_update_d: "Added the November 2 iOS, November 4 dots, and November 6 CLI announcements to their relevant chapters, alongside the 118-case catalog with 17 additions and four revised cases. Guide modification dates are distinct from announcement dates.",

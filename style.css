@@ -7447,3 +7447,147 @@ body[data-page="home"] #s4 :is(th, td) {
         scroll-behavior: auto !important;
     }
 }
+
+/* Mobile reading: one compact bar, less decoration, optional introductory detail. */
+.mobile-page-menu, .mobile-language, .mobile-category-picker,
+.mobile-disclosure-toggle, .mobile-back-results { display: none; }
+.overview-disclosure, .mobile-disclosure-body { display: contents; }
+.use-case-lead-mobile, .mobile-label { display: none; }
+@media (max-width: 760px) {
+    html { scroll-padding-top: 56px; }
+    .desktop-label { display: none; }
+    .mobile-label { display: inline; }
+    body[data-page] .top-bar-inner {
+        display: flex; align-items: center; justify-content: space-between;
+        min-height: 56px; padding: 4px 12px; gap: 8px;
+    }
+    body[data-page] .top-bar-inner .logo { font-size: 1rem; }
+    body[data-page] .top-bar-actions { display: flex; gap: 4px; }
+    body[data-page] .lang-switch { display: none; }
+    body[data-page] .mobile-page-menu, body[data-page] .mobile-language { display: block; }
+    body[data-page] .mobile-page-menu, body[data-page] .mobile-language select {
+        min-height: 44px; padding: 0 8px; border: 0; border-radius: 6px;
+        background: transparent; color: var(--text); font: 500 .8rem var(--font);
+    }
+    body[data-page] .mobile-language select { width: 60px; }
+    body[data-page] .mobile-page-menu { min-width: 44px; order: 3; }
+    body[data-page] .mobile-language { order: 2; }
+    body[data-page] #theme-toggle { order: 1; border: 0; background: transparent; }
+    body[data-page] .site-nav { display: none; }
+    body[data-page] .top-bar.page-menu-open .site-nav {
+        display: flex; position: absolute; top: 100%; left: 0; right: 0;
+        padding: 4px 12px; margin: 0; border-bottom: 1px solid var(--border);
+        background: var(--bg-card); box-shadow: none;
+    }
+    body[data-page] .site-nav-link { min-height: 44px; border-radius: 6px; }
+    .ebook-banner-inner { grid-template-columns: minmax(0, 1fr) auto 44px; min-height: 44px; padding: 0 12px; gap: 8px; }
+    body[data-page] .ebook-banner-paid { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+    .ebook-banner-close { min-width: 44px; min-height: 44px; }
+    .mobile-disclosure { display: block; }
+    .mobile-disclosure-body { display: block; }
+    .mobile-disclosure.is-collapsed > .mobile-disclosure-body { display: none; }
+    .mobile-disclosure-toggle, .mobile-back-results {
+        display: flex; align-items: center; min-height: 44px; width: 100%;
+        padding: 10px 0; border: 0; border-radius: 0; border-bottom: 1px solid var(--border);
+        background: transparent; color: var(--accent-light); text-align: left;
+        font: 600 .875rem var(--font);
+    }
+    .mobile-disclosure-toggle::after { content: '−'; margin-left: auto; }
+    .mobile-disclosure.is-collapsed > .mobile-disclosure-toggle::after { content: '+'; }
+    body[data-page] .section.fade-in { opacity: 1; transform: none; transition: none; }
+    body[data-page="home"] .hero { padding: 16px 0 0; }
+    body[data-page="home"] .hero-layout { gap: 8px; }
+    body[data-page="home"] .hero-copy {
+        padding: 24px 20px 20px; border-radius: 18px; box-shadow: none;
+        justify-items: start; text-align: left;
+        background: linear-gradient(135deg, #102d4d, #111827 75%);
+    }
+    body[data-page="home"] .hero-badge {
+        display: block; padding: 0; margin: 0 0 16px; min-height: 0;
+        border: 0; border-radius: 0; background: none; backdrop-filter: none;
+        font-size: .6875rem; line-height: 1.5; text-align: left;
+    }
+    body[data-page="home"] .hero-title {
+        margin: 0 0 14px; font-size: 28px; line-height: 1.12; text-align: left;
+    }
+    body[data-page="home"] .hero-title-lead { font-size: .72em; }
+    body[data-page="home"] .hero-sub { margin: 0 0 18px; font-size: 14px; line-height: 1.5; text-align: left; }
+    body[data-page="home"] .hero-sub-lead { font-size: 1em; font-weight: 400; }
+    body[data-page="home"] .hero-sub-detail { display: none; }
+    body[data-page="home"] .hero-cta {
+        display: flex; flex-direction: row; flex-wrap: wrap; justify-content: flex-start; gap: 8px;
+    }
+    body[data-page="home"] .hero-cta .btn { width: auto; padding: 10px 12px; font-size: .8125rem; }
+    body[data-page="home"] .hero-jump-wrap { display: block; width: 100%; min-width: 0; margin-top: 18px; }
+    body[data-page="home"] .hero-jump-kicker { margin: 0 0 4px; font-size: .6875rem; }
+    body[data-page="home"] .hero-jump-list {
+        display: flex; flex-wrap: nowrap; justify-content: flex-start;
+        overflow-x: auto; width: 100%; gap: 12px; scrollbar-width: thin;
+    }
+    body[data-page="home"] .hero-jump {
+        flex: 0 0 auto; padding: 8px 0; min-height: 44px; border: 0; border-radius: 0;
+        background: none; backdrop-filter: none; font-size: .75rem;
+    }
+    html:not([data-theme="light"]) body[data-page="home"] :is(.hero-badge, .hero-jump, .hero-path-card) { background: transparent; }
+    body[data-page="home"] .hero-rail { width: 100%; margin: 0; }
+    body[data-page="home"] .hero-rail-intro { padding-top: 16px; text-align: left; }
+    body[data-page="home"] .hero-rail-title { font-size: 20px; }
+    body[data-page="home"] .hero-path-grid { display: block; }
+    body[data-page="home"] :is(.hero-path-card, .showcase-card, .overview-lens-card, .overview-bridge-card, .track-card) {
+        padding: 16px 0; border: 0; border-bottom: 1px solid var(--border);
+        border-radius: 0; background: none; box-shadow: none;
+    }
+    body[data-page="home"] .hero-signal-row { margin-top: 12px; }
+    body[data-page="home"] .home-sidebar { top: 56px; box-shadow: none; }
+    body[data-page="home"] .home-sidebar .guide-sidebar-inner { padding: 4px 12px; }
+    body[data-page="home"] .home-nav-mobile-toggle { border: 0; background: none; padding: 8px 4px; border-radius: 0; }
+    body[data-page="home"] .home-sidebar.tree-open .home-nav { max-height: calc(100dvh - 112px); box-shadow: none; }
+    body[data-page="home"] .home-main > .section { padding: 28px 16px; }
+    body[data-page="home"] .home-main > .section,
+    body[data-page="home"] .home-main [id] { scroll-margin-top: 112px !important; }
+    body[data-page="home"] .section h2 { justify-content: flex-start; font-size: 24px; line-height: 1.3; text-align: left; margin-bottom: 18px; }
+    body[data-page="home"] .section h3 { font-size: 19px; line-height: 1.4; }
+    body[data-page="home"] .home-main .overview-lead { font-size: 15px; line-height: 1.6; text-align: left; margin-bottom: 12px; }
+    body[data-page="use-cases"] .use-case-hero { padding: 24px 0 16px; text-align: left; }
+    body[data-page="use-cases"] .use-case-title { margin: 12px 0; font-size: 28px; line-height: 1.2; text-align: left; }
+    body[data-page="use-cases"] .use-case-hero .hero-badge {
+        justify-content: flex-start; padding: 0; border: 0; border-radius: 0; background: none;
+        font-size: .6875rem; text-align: left; gap: 2px 6px;
+    }
+    body[data-page="use-cases"] .hero-badge .live-date { flex-basis: auto; }
+    body[data-page="home"] .section > h2 + p { text-align: left; }
+    body[data-page="use-cases"] .use-case-lead { display: none; }
+    body[data-page="use-cases"] .use-case-lead-mobile { display: block; margin: 0; font-size: 15px; line-height: 1.55; text-align: left; }
+    body[data-page="use-cases"] .use-case-lead { margin: 0; font-size: 15px; line-height: 1.55; text-align: left; }
+    body[data-page="use-cases"] .hero-cta { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: flex-start; gap: 16px; margin-top: 8px; }
+    body[data-page="use-cases"] .hero-cta .btn { width: auto; min-height: 44px; padding: 8px 0; border: 0; border-radius: 0; background: none; color: var(--accent-light); box-shadow: none; font-size: .8125rem; }
+    body[data-page="use-cases"] .use-case-controls { margin-bottom: 10px; }
+    body[data-page="use-cases"] .use-case-controls > div { display: none; }
+    body[data-page="use-cases"] .use-case-section { padding-top: 8px; }
+    body[data-page="use-cases"] .use-case-category-rail { display: none; }
+    .mobile-category-picker { display: block; margin-bottom: 16px; }
+    .mobile-category-picker select {
+        width: 100%; min-height: 44px; padding: 8px 12px; border: 1px solid var(--border);
+        border-radius: 8px; background: var(--bg-card); color: var(--text); font: 500 .875rem var(--font);
+    }
+    body[data-page="use-cases"] .use-case-results-head { margin-bottom: 8px; }
+    body[data-page="use-cases"] .use-case-result-note { display: none; }
+    body[data-page="use-cases"] .use-case-grid { gap: 0; }
+    body[data-page="use-cases"] .use-case-page .use-case-card {
+        gap: 6px; min-height: 0; padding: 16px 0; border: 0; border-bottom: 1px solid var(--border);
+        border-radius: 0; background: transparent; box-shadow: none; transform: none;
+    }
+    body[data-page="use-cases"] .use-case-card::before { display: none; }
+    body[data-page="use-cases"] .use-case-card strong { font-size: 16px; line-height: 1.4; }
+    body[data-page="use-cases"] .use-case-card-category,
+    body[data-page="use-cases"] .use-case-card-source { display: none; }
+    body[data-page="use-cases"] .use-case-card-summary { font-size: 14px; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    body[data-page="use-cases"] .use-case-card-meta { margin-top: 2px; font-size: 12px; }
+    body[data-page="use-cases"] .use-case-detail { display: none; scroll-margin-top: 64px; }
+    body[data-page="use-cases"].case-detail-open :is(.use-case-hero, .use-case-controls, .mobile-category-picker, .use-case-results) { display: none; }
+    body[data-page="use-cases"].case-detail-open .use-case-detail:not([hidden]) { display: block; }
+    body[data-page="use-cases"] .use-case-detail-card { border: 0; border-radius: 0; background: none; box-shadow: none; padding: 0; }
+    body[data-page="use-cases"] .use-case-detail-card::before { display: none; }
+    body[data-page="use-cases"] .use-case-detail-card h2 { font-size: 24px; line-height: 1.3; }
+    body[data-page="use-cases"] .mobile-back-results { margin-bottom: 20px; }
+}

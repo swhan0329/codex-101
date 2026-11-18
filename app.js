@@ -543,6 +543,10 @@
         if (!target) return;
         for (let node = target; node; node = node.parentElement) {
             if (node.tagName === 'DETAILS') node.open = true;
+            if (node.classList?.contains('mobile-disclosure')) {
+                node.classList.remove('is-collapsed');
+                node.querySelector('.mobile-disclosure-toggle')?.setAttribute('aria-expanded', 'true');
+            }
         }
     }
     window.addEventListener('hashchange', revealHashDetails);
@@ -580,6 +584,8 @@
         document.querySelectorAll('.lang-btn').forEach(btn => {
             btn.classList.toggle('active', btn.dataset.lang === lang);
         });
+        const mobileLanguage = document.getElementById('mobile-language');
+        if (mobileLanguage) mobileLanguage.value = lang;
         applyTranslations(lang);
         buildTOC(lang);
         buildHomeNav(lang);
@@ -596,6 +602,35 @@
 
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.addEventListener('click', () => setLang(btn.dataset.lang));
+    });
+
+    const pageMenu = document.querySelector('.mobile-page-menu');
+    const topBar = document.querySelector('.top-bar');
+    const closePageMenu = () => {
+        topBar?.classList.remove('page-menu-open');
+        pageMenu?.setAttribute('aria-expanded', 'false');
+    };
+    pageMenu?.addEventListener('click', () => {
+        const open = topBar.classList.toggle('page-menu-open');
+        pageMenu.setAttribute('aria-expanded', String(open));
+        if (open) topBar.querySelector('.site-nav a')?.focus();
+    });
+    document.getElementById('mobile-language')?.addEventListener('change', event => setLang(event.target.value));
+    document.querySelectorAll('.site-nav a').forEach(link => link.addEventListener('click', closePageMenu));
+    document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && topBar?.classList.contains('page-menu-open')) {
+            closePageMenu();
+            pageMenu.focus();
+        }
+    });
+    document.querySelectorAll('.mobile-disclosure').forEach(panel => {
+        const toggle = panel.querySelector('.mobile-disclosure-toggle');
+        panel.classList.add('is-collapsed');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.addEventListener('click', () => {
+            const collapsed = panel.classList.toggle('is-collapsed');
+            toggle.setAttribute('aria-expanded', String(!collapsed));
+        });
     });
 
     document.addEventListener('click', async (event) => {
@@ -696,6 +731,7 @@
         const detail = document.getElementById('use-case-detail');
         const categoryList = document.getElementById('use-case-categories');
         const searchInput = document.getElementById('use-case-search');
+        const mobileCategory = document.getElementById('mobile-category');
         const resultLabel = document.getElementById('use-case-result-label');
         const allCount = document.querySelector('[data-use-case-count="all"]');
         if (!grid || !detail || !categoryList || !searchInput || !resultLabel) return;
@@ -793,6 +829,11 @@
 
         const getLabels = () => labels[currentLang === 'en' ? 'en' : 'ko'];
         const updateUseCaseStaticLabels = () => {
+            if (mobileCategory) {
+                mobileCategory.innerHTML = `<option value="all">${escapeHtml(getLabels().all)} · ${items.length}</option>`
+                    + categories.map(category => `<option value="${escapeHtml(category.id)}">${escapeHtml(categoryLabel(category))} · ${categoryCounts[category.id] || 0}</option>`).join('');
+                mobileCategory.value = activeCategory;
+            }
             const l = getLabels();
             const allButton = document.querySelector('[data-use-case-filter="all"]');
             if (allButton) {
@@ -1015,6 +1056,7 @@
             ].filter(Boolean);
             detail.innerHTML = `
                 <article class="use-case-detail-card" style="--case-accent: ${escapeHtml(category.accent || '#ffffff')}">
+                    <button class="mobile-back-results" type="button" data-back-results>${escapeHtml(translations[currentLang].mobile_back_results)}</button>
                     <p class="overview-kicker">${escapeHtml(categoryLabel(category) || item.category)}</p>
                     <h2>${escapeHtml(title)}</h2>
                     <p class="use-case-detail-summary">${escapeHtml(summary)}</p>
@@ -1070,8 +1112,16 @@
             renderCards();
 
             if (updateHash) {
-                history.replaceState(null, '', `#${item.id}`);
+                if (window.matchMedia('(max-width: 760px)').matches) {
+                    history.pushState({ codex101Case: true }, '', `#${item.id}`);
+                    document.body.classList.add('case-detail-open');
+                } else {
+                    history.replaceState(null, '', `#${item.id}`);
+                }
                 window.requestAnimationFrame(() => {
+                    if (window.matchMedia('(max-width: 760px)').matches) {
+                        detail.querySelector('[data-back-results]')?.focus({ preventScroll: true });
+                    }
                     detail.scrollIntoView({
                         behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
                         block: 'start',
@@ -1082,6 +1132,7 @@
 
         const setCategory = (categoryId) => {
             activeCategory = categoryId;
+            if (mobileCategory) mobileCategory.value = categoryId;
             filterButtons.forEach((button) => {
                 const active = button.dataset.useCaseFilter === activeCategory;
                 button.classList.toggle('active', active);
@@ -1104,6 +1155,8 @@
             button.addEventListener('click', () => setCategory(button.dataset.useCaseFilter));
         });
 
+        mobileCategory?.addEventListener('change', () => setCategory(mobileCategory.value));
+
         searchInput.addEventListener('input', () => {
             query = searchInput.value.trim().toLowerCase();
             const visibleItems = getVisibleItems();
@@ -1121,6 +1174,15 @@
         });
 
         detail.addEventListener('click', async (event) => {
+            if (event.target.closest('[data-back-results]')) {
+                if (history.state?.codex101Case) history.back();
+                else {
+                    document.body.classList.remove('case-detail-open');
+                    history.replaceState(null, '', location.pathname + location.search);
+                    grid.querySelector(`[data-use-case-id="${activeId}"]`)?.focus();
+                }
+                return;
+            }
             const button = event.target.closest('[data-copy-prompt]');
             if (!button) return;
             const l = getLabels();
@@ -1157,16 +1219,23 @@
             const initialId = decodeURIComponent(window.location.hash.replace('#', ''));
             const initialItem = items.find((item) => item.id === initialId || (item.aliases || []).includes(initialId));
             if (initialItem) {
+                document.body.classList.toggle('case-detail-open', window.matchMedia('(max-width: 760px)').matches);
                 activeCategory = initialItem.category;
                 setCategory(activeCategory);
                 selectCase(initialItem.id, false);
             } else {
-                setCategory('all');
-                selectCase(items[0].id, false);
+                document.body.classList.remove('case-detail-open');
+                setCategory(activeCategory);
+                if (activeId) selectCase(activeId, false);
             }
         };
 
-        window.addEventListener('hashchange', selectFromHash);
+        window.addEventListener('hashchange', () => {
+            selectFromHash();
+            if (!document.body.classList.contains('case-detail-open')) {
+                window.requestAnimationFrame(() => grid.querySelector(`[data-use-case-id="${activeId}"]`)?.focus());
+            }
+        });
         document.addEventListener('codex101:langchange', () => {
             updateUseCaseStaticLabels();
             renderCards();
