@@ -24,3 +24,9 @@ These rules apply to the entire repository.
 - Render representative desktop and mobile widths in both themes and both languages when layout or typography changes.
 - Confirm zero browser console errors and no horizontal overflow before calling visual work complete.
 - Keep local screenshots, browser traces, and `.playwright-*` artifacts out of commits unless the user explicitly asks to publish them.
+
+## Current-guide freshness
+
+- Run `node scripts/validate-current-guide.mjs` on each maintenance pass, even when only DAILY_CHECKS.md changes. A stale failure means the visible guide still needs official-source review; never silence it by changing only the check date.
+- Report source-check status and guide-publication status separately. A deployed daily record is not a deployed guide update. If guide publication is blocked, name the blocker in the private handoff rather than reporting overall maintenance success.
+- Keep the three current highlights, recommended models, command examples, access conditions and speed/pricing copy consistent in both languages. Preserve dated historical notices and captures as history.

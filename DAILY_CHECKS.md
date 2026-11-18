@@ -4,6 +4,16 @@ Check dates record the sources and scope actually reviewed. Guide modification d
 
 점검일은 실제로 확인한 출처와 범위를 기록합니다. 가이드 수정일은 내용이 바뀔 때만 갱신합니다. 점검을 완료하고 관련 변경이 없다고 확인한 날에도 날짜별 기록을 남길 수 있습니다.
 
+## 2026-11-18 · Model-guide correction / 모델 안내 정정
+
+확인 시각 / Reviewed at: 2026-11-18 17:42 KST (UTC+09:00).
+
+[Models](https://learn.chatgpt.com/docs/models), [GPT-6.2 announcement](https://learn.chatgpt.com/docs/whats-new/gpt-62-astra-sol), [Pricing](https://learn.chatgpt.com/docs/pricing), [Speed](https://learn.chatgpt.com/docs/agent-configuration/speed)를 다시 읽고 개요 3개 카드·추천 모델·명령 예시·접근 조건·관련 속도와 요금 설명을 한영으로 정정했습니다. 요약 확인일은 이 범위에만 적용합니다. 이전 모델·종료 공지와 실제 UI 캡처는 날짜가 있는 과거 자료와 구분합니다.
+
+Re-read these official sources and corrected the three overview cards, recommended models, command examples, availability and related speed/pricing guidance in Korean and English. The summary check date applies only to this scope. Earlier models, retirement notices and actual UI captures retain their historical context.
+
+검증 범위 / Validation scope: JavaScript syntax, existing hero and 118-case translation checks, HTML nesting and current-guide bilingual/freshness regression checks. No new product UI screenshots, account-access tests or eight-combination browser rendering are claimed.
+
 ## 2026-11-18
 부분 확인 / Partial review
 
