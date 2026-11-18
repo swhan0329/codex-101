@@ -782,8 +782,8 @@ window.codexUseCases = [
                 "Teams that want quick issue triage, bug fixes, or scoped implementation work without context switching"
             ],
             "skills": [],
-            "promptEn": "@Codex analyze the issue mentioned in this thread and implement a fix in <name of your environment>.",
-            "promptKo": "@Codex 이 스레드에서 언급된 이슈를 분석하고 <name of your environment>에서 수정 사항을 구현해줘.",
+            "promptEn": "@ChatGPT investigate the issue described in this thread for [repository].\nUse the workspace-shared Cloud environment for [project or environment].\nMake the smallest useful fix, run the relevant checks, and report the result here.",
+            "promptKo": "@ChatGPT [repository]에 대해 이 스레드에 설명된 이슈를 조사해줘.\n[project or environment]의 워크스페이스 공유 Cloud 환경을 사용해.\n유용한 최소한의 수정을 하고, 관련 검사를 실행한 뒤, 결과를 여기에 보고해줘.",
             "guideSectionsEn": [
                 "How to use",
                 "Tips"
@@ -797,8 +797,8 @@ window.codexUseCases = [
         "titleEn": "Make granular UI changes",
         "sourceTitle": "Make granular UI changes",
         "sourceUrl": "https://developers.openai.com/codex/use-cases/make-granular-ui-changes",
-        "summary": "간격, 문구, 버튼 상태, 작은 컴포넌트 수정처럼 좁은 UI 변경을 빠르게 반영합니다.",
-        "summaryEn": "Use Codex-Spark for fast, focused UI iteration in an existing app.",
+        "summary": "계정에서 현재 사용할 수 있는 모델로 기존 앱의 간격·문구·컴포넌트 상태를 좁은 범위에서 수정합니다.",
+        "summaryEn": "Make focused UI adjustments in an existing app using a model currently available to your account.",
         "when": "큰 리디자인이 아니라 지금 보이는 한 화면의 디테일을 다듬고 싶을 때 맞습니다.",
         "prompt": "이 화면에서 카드 간격과 버튼 상태만 다듬어줘. 다른 레이아웃이나 색상 체계는 바꾸지 마.",
         "output": "작은 diff, 수정 전후 확인, 모바일 영향 여부.",

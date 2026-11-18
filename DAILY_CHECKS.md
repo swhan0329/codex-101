@@ -4,6 +4,21 @@ Check dates record the sources and scope actually reviewed. Guide modification d
 
 점검일은 실제로 확인한 출처와 범위를 기록합니다. 가이드 수정일은 내용이 바뀔 때만 갱신합니다. 점검을 완료하고 관련 변경이 없다고 확인한 날에도 날짜별 기록을 남길 수 있습니다.
 
+## 2026-11-18 · CLI and prompt correction / CLI·프롬프트 정정
+부분 확인 / Partial review
+
+확인 시각 / Reviewed at: 2026-11-18 18:29 KST (UTC+09:00).
+
+| Scope / 범위 | Result / 결과 |
+| --- | --- |
+| [Models](https://learn.chatgpt.com/docs/models) · [Pricing](https://learn.chatgpt.com/docs/pricing) · [Speed](https://learn.chatgpt.com/docs/agent-configuration/speed) | 오늘 앞서 정정된 추천 순서 6.2 Astra·6.2 Sol·6.1 Terra·Luna, Astra/Sol 기본 컨텍스트 272,000/500,000토큰과 Pro $200의 Sol Ultrafast 제공을 원문과 대조했습니다. 이 범위의 모델·요금 안내는 유지했습니다. / Compared the earlier correction with the originals: recommendation order 6.2 Astra, 6.2 Sol, 6.1 Terra, Luna; Astra/Sol default context of 272,000/500,000 tokens; and Sol Ultrafast on Pro $200. Model and pricing guidance in this scope remains unchanged. |
+| [Changelog](https://learn.chatgpt.com/docs/changelog) · [CLI 0.170.0](https://github.com/openai/codex/releases/tag/rust-v0.170.0) | 11월 18일 릴리스의 Cloud 재연결·복구 턴·샌드박스 제한 보존, MCP OAuth 경합·중복 검색 수정과 환경 간 같은 이름의 MCP 서버에 대한 실험적 지원을 기존 CLI 소개에 한영으로 반영하고 날짜가 있는 이전 릴리스 공지는 보존했습니다. 실제 제품 실행은 검증하지 않았습니다. / Preserved dated earlier release notes and updated the existing bilingual CLI introduction with the November 18 release: Cloud reconnection, recovery-turn and sandbox restriction preservation, MCP OAuth race and duplicate search fixes, and experimental support for same-named MCP servers across environments. Product execution was not tested. |
+| [Slack official case](https://learn.chatgpt.com/use-cases/slack-coding-tasks) · [Models retirement](https://learn.chatgpt.com/docs/models#deprecated-codex-models) | 기존 @Codex 공식 프롬프트를 현재 @ChatGPT 원문으로 교정하고 저장소·워크스페이스 공유 Cloud 환경·최소 수정·검사·결과 보고의 세 줄 구조와 한국어 번역을 맞췄습니다. 공식 영어 복사 데이터와 정확히 대조했습니다. 기존 UI 수정 사례의 편집 요약에서는 종료된 Spark 권장을 제거했습니다. / Replaced the old @Codex official prompt with the current @ChatGPT original, preserving its three lines covering repository, workspace-shared Cloud environment, minimal fix, checks, and reporting, with equivalent Korean. Exact English source copy data was compared. Removed the retired Spark recommendation from the edited summary of the existing UI adjustment case. |
+| [Use cases](https://learn.chatgpt.com/use-cases) | 12개 컬렉션의 고유 사례 URL 121개와 게시 118개를 대조했습니다. 공통 117개·공식에만 4개·게시본에만 1개로 앞선 점검과 같습니다. 전체 한영 본문·프롬프트 감사와 실제 복사 검증은 미완료입니다. / Compared 121 unique case URLs from 12 collections with 118 published cases. The 117 shared, four official-only, and one published-only cases match the earlier review. Full bilingual body/prompt audit and actual clipboard validation remain incomplete. |
+| Review / 검수 | 사실·문구 변경을 정적 검증 경로로 반영했습니다. 제품 UI·이미지 변경은 보류 상태이며 이번 변경에는 해당하지 않습니다. 소셜 원문 확인 미완료. 아홉 작성자의 원문·전체 기간과 블로그 개별 글 감사는 미완료이며 새 글이 없다고 판단하지 않았습니다. / Applied factual copy changes through static verification. Product UI/image work remains pending and is outside these changes. Social originals not fully verified. Originals and full intervals for all nine authors and individual blog article review remain incomplete; no absence of new posts is claimed. |
+
+검증 범위 / Validation scope: current-guide freshness, three JavaScript syntax checks, 118-case i18n checks, HTML tag structure, changed Korean fallback/English parity, exact official English prompt data and diff checks. Product UI/captures and eight-combination rendering are not applicable to this factual-copy change; browser console/overflow and actual account access are not claimed.
+
 ## 2026-11-18 · Model-guide correction / 모델 안내 정정
 
 확인 시각 / Reviewed at: 2026-11-18 17:42 KST (UTC+09:00).
