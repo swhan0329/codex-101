@@ -7415,6 +7415,7 @@ body[data-page="use-cases"] .use-case-detail-card h2 {
 body[data-page="use-cases"] :is(.use-case-card, .use-case-source-panel) {
     border-radius: var(--radius);
 }
+body[data-page="home"] .section-num { flex: 0 0 auto; white-space: nowrap; }
 body[data-page="home"] #s4 table { width: 100%; table-layout: fixed; }
 body[data-page="home"] #s4 :is(th, td) {
     white-space: normal;
