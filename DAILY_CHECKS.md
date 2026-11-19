@@ -4,6 +4,19 @@ Check dates record the sources and scope actually reviewed. Guide modification d
 
 점검일은 실제로 확인한 출처와 범위를 기록합니다. 가이드 수정일은 내용이 바뀔 때만 갱신합니다. 점검을 완료하고 관련 변경이 없다고 확인한 날에도 날짜별 기록을 남길 수 있습니다.
 
+## 2026-11-19
+부분 확인 / Partial review
+
+확인 시각 / Reviewed at: 2026-11-19 10:02 KST (UTC+09:00).
+
+| Scope / 범위 | Result / 결과 |
+| --- | --- |
+| [Models](https://learn.chatgpt.com/docs/models) · [GPT-6.2 launch](https://learn.chatgpt.com/docs/whats-new/gpt-62-astra-sol) · [Workspace model availability](https://learn.chatgpt.com/docs/enterprise/workspace-model-availability) | 기존 6.2 Astra·6.2 Sol·6.1 Terra·Luna 추천 순서와 모델 ID를 확인했습니다. Astra/Sol의 Codex 기본 컨텍스트는 각각 272,000/500,000토큰이며 두 모델 모두 최대 100만 토큰을 지원한다고 안내했습니다. 지원 플랜과 Enterprise·Edu의 모델 활성화 조건도 개요에 명시했습니다. / Confirmed the existing recommendation order and IDs for 6.2 Astra, 6.2 Sol, 6.1 Terra, and Luna. The guide now distinguishes Astra and Sol's default Codex context of 272,000 and 500,000 tokens from the one-million-token maximum for both. The overview now lists supported plans and the Enterprise/Edu model enablement requirement. |
+| [Speed](https://learn.chatgpt.com/docs/agent-configuration/speed) · [Pricing](https://learn.chatgpt.com/docs/pricing) | Pro $200의 Sol Ultrafast, Pro $500의 두 6.2 모델 지원과 기존 요율을 대조했습니다. 적격 Enterprise·Edu의 별도 Ultrafast 권한, 미국 추론 상주 조건, 같은 모델 Standard 대비 최대 4.5배 토큰 생성 속도를 명시했습니다. / Rechecked Sol Ultrafast on Pro $200, both 6.2 models on Pro $500, and existing rates. Clarified the separate Ultrafast permission for eligible Enterprise/Edu workspaces, US inference residency, and token generation up to 4.5 times as fast as Standard on the same model. |
+| [Changelog](https://learn.chatgpt.com/docs/changelog) · [Config reference](https://learn.chatgpt.com/docs/config-file/config-reference) · [Prompting GPT-6.2 in Codex](https://learn.chatgpt.com/guides/prompting-gpt-6-2-astra) | 11월 18일 CLI 0.170.0이 공식 변경 기록의 최신 CLI 항목이며 기존 요약과 일치했습니다. 설정 예시에는 IDE와 공유할 때 모든 클라이언트가 지원하는 모델을 선택해야 한다는 조건을 적었습니다. 프롬프트 안내에는 시각 결과물을 실제 표시 크기로 검토하라는 공식 팁을 반영했습니다. / The latest CLI entry in the changelog, November 18's CLI 0.170.0, matches the existing guide summary. The config example now explains that shared IDE configuration requires a model supported by every client. Prompting guidance now includes the official tip to check visual assets at their actual display size. |
+| [Official use cases](https://learn.chatgpt.com/use-cases/all) · [Published catalog](https://swhan0329.github.io/codex-101/use-cases.html) | 필터 링크를 제외한 공식 고유 사례 121개와 게시본 118개를 비교했습니다. 공통 117개 중 게시된 영어 Starter prompt 110개는 원문 복사 값과 정확히 일치했고 7개는 양쪽에 없었습니다. 원문에서 6.2 Astra를 권하는 기존 사례 7개의 한영 요약을 갱신했습니다. 공식 목록에만 4개, 게시본에만 1개가 있으며 게시본에만 있는 [UI 미세 수정 사례의 원문 주소](https://learn.chatgpt.com/use-cases/make-granular-ui-changes)는 404였습니다. / Compared 121 unique official cases, excluding filter links, with 118 published cases. Of 117 shared cases, 110 published English Starter prompts exactly matched the official copy values, and seven had no Starter prompt on either side. Updated bilingual summaries for seven existing cases whose originals recommend 6.2 Astra. Four cases appear only in the official listing, and one only in the published catalog. The original URL for that granular UI case returned 404. |
+| Review / 검수 | 사실·문구 변경은 한영 정적 검증을 거쳐 반영했습니다. 제품 UI·화면 변경은 보류입니다. 전체 한영 사례 본문과 실제 복사 동작은 확인 중입니다. / Factual copy changes were applied after bilingual static checks. Product UI and visual changes remain pending. Full bilingual catalog prose and actual clipboard behavior remain under review. 소셜 원문 확인 미완료 / Social originals not fully verified. |
+
 ## 2026-11-18 · CLI and prompt correction / CLI·프롬프트 정정
 부분 확인 / Partial review
 
