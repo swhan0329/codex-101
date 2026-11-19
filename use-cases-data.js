@@ -791,51 +791,6 @@ window.codexUseCases = [
         }
     },
     {
-        "id": "make-granular-ui-changes",
-        "category": "ui",
-        "title": "기존 화면의 작은 UI 수정 빠르게 반복하기",
-        "titleEn": "Make granular UI changes",
-        "sourceTitle": "Make granular UI changes",
-        "sourceUrl": "https://developers.openai.com/codex/use-cases/make-granular-ui-changes",
-        "summary": "계정에서 현재 사용할 수 있는 모델로 기존 앱의 간격·문구·컴포넌트 상태를 좁은 범위에서 수정합니다.",
-        "summaryEn": "Make focused UI adjustments in an existing app using a model currently available to your account.",
-        "when": "큰 리디자인이 아니라 지금 보이는 한 화면의 디테일을 다듬고 싶을 때 맞습니다.",
-        "prompt": "이 화면에서 카드 간격과 버튼 상태만 다듬어줘. 다른 레이아웃이나 색상 체계는 바꾸지 마.",
-        "output": "작은 diff, 수정 전후 확인, 모바일 영향 여부.",
-        "caution": "작은 수정일수록 범위를 명확히 하지 않으면 불필요한 리디자인으로 번질 수 있습니다.",
-        "official": {
-            "difficulty": "Easy",
-            "time": "5m",
-            "tags": [
-                "Front End",
-                "Design",
-                "Engineering",
-                "Code"
-            ],
-            "bestForEn": [
-                "Existing apps where the main structure is already built and you need small visual adjustments",
-                "Fast product or design review loops where each note should become one focused code change",
-                "UI polish passes that need browser verification but should not turn into a broad redesign"
-            ],
-            "skills": [
-                {
-                    "name": "Playwright",
-                    "why": "Open the running app in a real browser, inspect the changed route, and verify each small UI adjustment before the next iteration.",
-                    "url": "https://github.com/openai/skills/tree/main/skills/.curated/playwright-interactive"
-                }
-            ],
-            "promptEn": "Make this UI change in the existing app:\n[describe the exact spacing, alignment, color, copy, responsive, or component-state adjustment]\n\nConstraints:\n- Change only the files needed for this UI adjustment.\n- Reuse existing components, tokens, icons, and layout patterns.\n- Keep behavior, data flow, and routing unchanged unless I explicitly ask for it.\n- Start or reuse the dev server, inspect the current UI in the browser, make the smallest patch, and verify the result visually.\n\nStop after this one change and summarize the files changed plus the browser check you ran.",
-            "promptKo": "기존 앱에서 이 UI 변경을 해줘:\n[describe the exact spacing, alignment, color, copy, responsive, or component-state adjustment]\n\n제약 조건:\n- 이 UI 조정에 필요한 파일만 변경해.\n- 기존 컴포넌트, 토큰, 아이콘, 레이아웃 패턴을 재사용해.\n- 내가 명시적으로 요청하지 않는 한 동작, 데이터 흐름, 라우팅은 변경하지 마.\n- 개발 서버를 시작하거나 재사용하고, 브라우저에서 현재 UI를 살펴본 뒤, 가장 작은 패치를 만들고 결과를 시각적으로 검증해.\n\n이 변경 하나만 마친 뒤, 변경한 파일과 실행한 브라우저 검사를 요약해.",
-            "guideSectionsEn": [
-                "Introduction",
-                "Pick your model",
-                "Development flow",
-                "Write small prompts",
-                "When to slow down"
-            ]
-        }
-    },
-    {
         "id": "new-hire-onboarding",
         "category": "ops",
         "title": "신규 입사자 온보딩 자료 준비하기",
