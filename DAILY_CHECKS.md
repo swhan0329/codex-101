@@ -4,6 +4,18 @@ Check dates record the sources and scope actually reviewed. Guide modification d
 
 점검일은 실제로 확인한 출처와 범위를 기록합니다. 가이드 수정일은 내용이 바뀔 때만 갱신합니다. 점검을 완료하고 관련 변경이 없다고 확인한 날에도 날짜별 기록을 남길 수 있습니다.
 
+## 2026-11-20
+부분 확인 / Partial review
+
+확인 시각 / Reviewed at: 2026-11-20 10:07 KST (UTC+09:00).
+
+| Scope / 범위 | Result / 결과 |
+| --- | --- |
+| [iOS 1.2026.314](https://learn.chatgpt.com/docs/changelog#codex-2026-11-18-mobile) · [Remote connections](https://learn.chatgpt.com/docs/remote-connections) | 전날 확인한 Changelog에 없던 11월 18일자 iOS 릴리스가 추가됐습니다. 호환되는 연결 컴퓨터에 사이드 채팅을 저장해 원래 작업에서 다시 열 수 있으며, 새 프로젝트 선택기는 Cloud 또는 연결 컴퓨터와 프로젝트를 지원합니다. 이 내용을 기존 원격 작업 안내에 한영으로 반영했습니다. / A November 18 iOS release entry appeared since the previous Changelog review. Compatible paired computers save side chats so they can be reopened from the original task, and the new project picker supports Cloud or a paired computer and project. The existing remote-work guidance now summarizes these facts in Korean and English. |
+| [Models](https://learn.chatgpt.com/docs/models) · [Pricing](https://learn.chatgpt.com/docs/pricing) · [Speed](https://learn.chatgpt.com/docs/agent-configuration/speed) · [Changelog](https://learn.chatgpt.com/docs/changelog) | 6.2 Astra·6.2 Sol·6.1 Terra·Luna 권장 순서와 6.2 두 모델의 기본 컨텍스트 272k·500k 및 최대 100만 토큰을 재확인했습니다. 6.2 Fast의 2배 사용량과 Pro 플랜별 Ultrafast 안내는 기존 가이드와 일치했습니다. 공식 변경 기록의 최신 CLI 항목은 11월 18일자 0.170.0입니다. / Rechecked the 6.2 Astra, 6.2 Sol, 6.1 Terra, and Luna recommendations and the two 6.2 default context sizes of 272k and 500k with support for up to one million tokens. The 2× Fast usage multiplier for 6.2 and Pro Ultrafast plan eligibility match the guide. The latest CLI entry in the official Changelog is 0.170.0, dated November 18. |
+| [Official use cases](https://learn.chatgpt.com/use-cases/all) · [Published catalog](https://swhan0329.github.io/codex-101/use-cases.html) | 공식 고유 사례 121개와 게시 117개를 대조했습니다. 이전 기록에서 원문이 404였던 UI 미세 수정 사례는 현재 게시 목록에서 빠졌습니다. 공통 117개 중 영어 Starter prompt 110개는 공식 복사 값과 정확히 일치하고 나머지 7개에는 양쪽 모두 프롬프트가 없습니다. 공식에만 있는 사례는 4개입니다. / Compared 121 unique official cases with 117 published cases. The granular UI case whose original returned 404 in the previous review is now out of the published catalog. Of the 117 shared cases, 110 English Starter prompts exactly match the official copy values and seven are absent on both sides. Four cases appear only in the official catalog. |
+| Review / 검수 | 공식 릴리스 사실을 정적 검증으로 대조했습니다. 실제 제품 UI·화면 변경은 보류입니다. 카탈로그 전체 한영 문구와 실제 복사 동작은 확인 중입니다. 소셜 원문 확인 미완료. / Checked official release facts through static verification. Product UI and visual changes remain pending. Full bilingual catalog prose and actual clipboard behavior remain under review. Social originals not fully verified. |
+
 ## 2026-11-19
 부분 확인 / Partial review
 
