@@ -4,6 +4,19 @@ Check dates record the sources and scope actually reviewed. Guide modification d
 
 점검일은 실제로 확인한 출처와 범위를 기록합니다. 가이드 수정일은 내용이 바뀔 때만 갱신합니다. 점검을 완료하고 관련 변경이 없다고 확인한 날에도 날짜별 기록을 남길 수 있습니다.
 
+## 2026-11-21
+부분 확인 / Partial review
+
+확인 시각 / Reviewed at: 2026-11-21 10:08 KST (UTC+09:00).
+
+| Scope / 범위 | Result / 결과 |
+| --- | --- |
+| [Changelog](https://learn.chatgpt.com/docs/changelog) · [Codex CLI 0.171.0](https://github.com/openai/codex/releases/tag/rust-v0.171.0) | 전날 확인한 0.170.0 이후 11월 20일자 0.171.0이 나왔습니다. 터미널 작업공간 기본 활성화, 문서 검색·이미지 미리보기·서브에이전트 기록, 모델 목록에 6.2 Sol과 Astra 추가 및 Sol 기본 선택을 CLI 소개에 한영으로 반영했습니다. / The November 20 release, 0.171.0, follows 0.170.0 from the previous review. Updated the bilingual CLI overview with the workspace enabled by default, searchable document previews, image previews, subagent transcripts, and the addition of 6.2 Sol and Astra to the catalog with Sol selected by default. |
+| [Models](https://learn.chatgpt.com/docs/models) · [Pricing](https://learn.chatgpt.com/docs/pricing) · [Speed](https://learn.chatgpt.com/docs/agent-configuration/speed) · [Config reference](https://learn.chatgpt.com/docs/config-file/config-reference) · [Site tools](https://learn.chatgpt.com/docs/webmcp) | 기존 6.2 Astra·6.2 Sol·6.1 Terra·Luna 추천 순서, 6.2 기본 컨텍스트 272k·500k 및 Fast 사용량 2배를 재확인했습니다. 두 6.2 모델에 접근할 수 있는 경우의 리뷰 설정 예시와 Site tools의 지원 모델·페이지·브라우저 정책 조건을 한영으로 갱신했습니다. / Rechecked the recommendation order of 6.2 Astra, 6.2 Sol, 6.1 Terra, and Luna, the 272k and 500k default context sizes for GPT-6.2, and the 2× Fast usage multiplier. Updated the bilingual review configuration example for clients with access to both 6.2 models and the supported model, page, and browser policy requirements for Site tools. |
+| [ChatGPT release notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes) · [Dominik Kundel’s Ultrafast article](https://developers.openai.com/blog/how-i-stay-in-the-flow-with-ultrafast) | 11월 20일 Space의 만 18세 이상 Plus 대상 글로벌 순차 배포가 시작됐습니다. 11월 19일 별도 모바일 디자인 배포에는 한국이 포함되지 않습니다. Dominik은 작은 UI 변경을 한 번씩 요청하고 브라우저에서 직접 확인하는 개인 사용 사례를 소개했습니다. 빌드나 테스트 대기가 길면 작업 전체의 속도 향상은 작을 수 있다고 설명합니다. / On November 20, Space began rolling out globally to Plus users aged 18 and over. The separate November 19 mobile design rollout excludes Korea. Dominik described his own workflow of requesting small UI edits individually and reviewing them in the browser. He notes that long build or test waits can limit the end-to-end speedup. |
+| [Official use cases](https://learn.chatgpt.com/use-cases/all) · [Published catalog](https://swhan0329.github.io/codex-101/use-cases.html) | 공식 원문 121개와 게시 117개를 대조했습니다. 공통 117개 중 영어 Starter prompt 110개는 공식 복사 값과 일치하고 7개는 양쪽에 없습니다. 전날과 같은 결과입니다. / Compared 121 official case originals with 117 published cases. Of the 117 shared cases, 110 English Starter prompts match the official copy values, and seven are absent on both sides. This matches the previous day’s comparison. |
+| Review / 검수 | 사실 설명은 한영 정적 검증을 거쳐 반영했습니다. 제품 UI와 화면 변경은 보류입니다. 카탈로그 전체 한영 문구와 실제 복사 동작은 확인 중입니다. 소셜 원문 확인 미완료. / Published factual copy after bilingual static checks. Product UI and visual changes remain pending. Full bilingual catalog copy and clipboard behavior remain under review. Social originals not fully verified. |
+
 ## 2026-11-20
 부분 확인 / Partial review
 

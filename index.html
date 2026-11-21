@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="style.css?v=20261118-mobile-reading" />
 </head>
 
-<body data-page="home" data-updated="2026-11-20">
+<body data-page="home" data-updated="2026-11-21">
     <a class="skip-link" href="#toc" data-i18n="skip_to_content">본문으로 바로가기</a>
     <script src="ebook-banner.js?v=20261016-ebook-banner"></script>
     <!-- Language Toggle -->
@@ -896,7 +896,7 @@ export OPENAI_API_KEY="your-api-key-here"</code></pre>
             <!-- Section 5 -->
             <section class="section" id="s6">
                 <h2><span class="section-num">06</span> <span data-i18n="s6_title">추가 참고 · CLI 기본 사용</span></h2>
-                <p class="section-scope" data-i18n="s6_scope">터미널에서 Codex를 쓰려는 사용자를 위한 기본 명령과 앱과의 차이입니다. 상세 옵션과 운영 방법은 공식 CLI 문서에서 확인하세요. 11월 18일 CLI 0.170.0은 Cloud 대화 재연결·복구 턴과 하위 대화의 샌드박스 제한 보존을 개선하고 MCP OAuth 경합·중복 검색을 수정했습니다. 환경 간 같은 이름의 MCP 서버 지원은 실험적입니다.</p>
+                <p class="section-scope" data-i18n="s6_scope">터미널에서 Codex를 쓰려는 사용자를 위한 기본 명령과 앱과의 차이입니다. 상세 옵션과 운영 방법은 공식 CLI 문서에서 확인하세요. 11월 20일 CLI 0.171.0은 터미널 작업공간을 기본으로 켜고, 대화 옆에 검색 가능한 문서 미리보기, 이미지 미리보기, 서브에이전트 대화 기록을 제공합니다. 모델 목록에 6.2 Sol과 Astra가 추가됐으며 목록의 기본 선택은 Sol입니다.</p>
                 <details class="app-guide-extras" id="s6-reference"><summary data-i18n="s6_summary">CLI 기본 명령과 사용 예시 펼치기</summary><div class="app-guide-extra-content">
 
                 <figure class="screenshot">
@@ -1100,7 +1100,7 @@ codex doctor --network-only</code></pre><p class="command-refs"><a href="https:/
                         <ul class="overview-list">
                             <li data-i18n="browser_use_p1">In-app browser는 함께 보는 화면이고, Browser use는 Codex가 그 화면을 직접 다루는 실행 모드입니다.</li>
                             <li data-i18n="browser_use_p2">ChatGPT desktop app의 Settings &gt; Computer Use에서 Chrome·Edge·Brave·Opera·Vivaldi용 브라우저 확장을 설정하세요. 다섯 브라우저 모두 tab mention과 browser control을 지원하지만 Opera에는 side chat이 없습니다.</li>
-                            <li data-i18n="browser_use_p3">Site tools(WebMCP)는 최신 desktop app의 In-app browser에서 사이트가 제공하는 도구를 쓰는 별도 경로입니다. GPT-5.6 Sol 또는 Terra에서만 쓸 수 있고 Luna 및 Enterprise/Edu workspace에서는 제공되지 않습니다.</li>
+                            <li data-i18n="browser_use_p3">Site tools(WebMCP)는 ChatGPT 데스크톱 앱의 내장 브라우저에서 사이트가 제공하는 도구를 쓰는 기능입니다. 지원 모델과 도구를 제공하는 페이지가 필요하며, 계정 또는 워크스페이스의 브라우저 정책과 사이트 권한이 적용됩니다.</li>
                             <li data-i18n="browser_use_p4">요청에는 URL, 관심 상태(loading/empty/error/success), 고칠 요소, 검증할 화면 크기를 같이 적는 것이 좋습니다.</li>
                         </ul>
                         <a href="https://developers.openai.com/codex/app/browser" target="_blank" class="btn btn-secondary" data-i18n="browser_use_cta">공식 Browser use 문서 보기</a>
@@ -1626,7 +1626,7 @@ AGENTS.override.md  → 최우선
                 <pre data-i18n-html="code_s13_config"><code><span class="c">#:schema https://developers.openai.com/codex/config-schema.json</span>
 <span class="c"># ~/.codex/config.toml — permission profile 방식</span>
 model = "gpt-6.2-sol"
-review_model = "gpt-5.6-terra"
+review_model = "gpt-6.2-astra"
 approval_policy = "on-request"
 approvals_reviewer = "user"
 default_permissions = "project_safe"
@@ -1664,7 +1664,7 @@ codex --profile deep</code></pre>
                 <div class="tip-grid">
                     <div class="tip-card">
                         <h4 data-i18n="s13_c1_t">공유 설정의 모델 선택</h4>
-                        <p data-i18n="s13_c1_d">예시는 Codex 앱·CLI용입니다. IDE와 설정을 공유한다면 모든 클라이언트에서 지원하는 모델을 사용하세요. 공식 예시는 gpt-6.1-sol입니다. review_model을 생략하면 /review는 현재 모델을 사용합니다.</p>
+                        <p data-i18n="s13_c1_d">예시는 두 6.2 모델에 접근할 수 있는 Codex 앱·CLI용입니다. IDE와 설정을 공유한다면 모든 클라이언트에서 지원하는 모델을 사용하세요. review_model을 생략하면 /review는 현재 모델을 사용합니다.</p>
                     </div>
                     <div class="tip-card">
                         <h4 data-i18n="s13_c2_t">권한은 좁게 시작</h4>
@@ -2570,7 +2570,7 @@ codex --search "optimize with Next.js 15"
                     </div>
                     <p class="overview-fact-date">
                         <span data-i18n="home_guide_updated_label">가이드 수정일</span>
-                        <span class="live-date" data-date-format="long">2026년 11월 20일</span>
+                        <span class="live-date" data-date-format="long">2026년 11월 21일</span>
                     </p>
                 </div>
                 <ol class="changelog-list" aria-label="Recent update summary"><li><strong data-i18n="nov12_tips_update_t">11월 12일 · 컴퓨터 지정·결과 검토·공개 데모</strong><span data-i18n="nov12_tips_update_d">닷에 빌드·테스트용 컴퓨터를 지정하는 예시와 에이전트 결과를 검토하기 쉽게 만드는 요청을 보완했습니다. 공개 데모용으로 대화를 재구성하는 팁을 추가했습니다.</span></li><li><strong data-i18n="nov8_update_t">11월 8일 · 11월 초 공식 변경과 활용 사례</strong><span data-i18n="nov8_update_d">11월 2일 iOS·11월 4일 닷·11월 6일 CLI 공지를 각 장에 정리하고, 신규 17개·기존 4개 수정이 반영된 118개 활용 사례로 연결했습니다. 아래 날짜는 실제 가이드 수정일이며, 본문의 발표일과 구분합니다.</span></li><li><strong data-i18n="hack_update_t">11월 1일 · 해커톤 작업·발표 계획</strong><span data-i18n="hack_update_d">Gabriel Chua의 해커톤 회고를 바탕으로 구현·검증·발표의 결과물과 마감을 나누는 실무 팁을 추가했습니다. 개인 관찰과 공식 기능 제공 범위를 구분합니다.</span></li><li><strong data-i18n="update_nov1_t">11월 1일 · Terra 제공 조건 보완</strong><span data-i18n="update_nov1_d">Terra의 공식 플랜·모바일 Work·추론 지역과 Enterprise 관리자 조건을 구분했습니다.</span></li><li><strong data-i18n="update31_t">10월 31일 · 날짜 가독성·Terra·네트워크 진단</strong><span data-i18n="update31_d">밝은 테마의 최종 업데이트 날짜 색상을 수정하고, 공식 문서의 Terra 선택 안내와 버전별 CLI 연결 진단을 추가했습니다.</span></li><li><strong data-i18n="update26_t">10월 26일 · dot 바로가기·Sites 공유·CLI 확인</strong><span data-i18n="update26_d">iOS dot 위젯·단축어 절차와 Sites의 공유·방문자 계정 경계를 보완하고 CLI 확인 명령과 모델별 역할을 정리했습니다. 실제 macOS 모델 선택기 캡처를 추가했습니다.</span></li><li><strong data-i18n="update16_t">10월 16일 · Voice 배포와 이벤트 활용</strong><span data-i18n="update16_d">GPT-Live-1.1 음성 배포 발표와 실제 접근 조건을 구분하고, Gabriel의 Sites→MCP Events→dot 사례 및 Tibo의 용량 부족 시 재개 안내를 추가했습니다.</span></li><li><strong data-i18n="business_update_t">10월 15일 · Business 좌석 요금 구분</strong><span data-i18n="business_update_d">표준 Business 좌석의 연간·월간 요금과 최소 인원을 명시하고 Codex-only 종량제 좌석과 구분했습니다.</span></li><li><strong data-i18n="ui_update_t">10월 15일 · 화면 정렬과 모바일 탐색 개선</strong><span data-i18n="ui_update_d">본문·이미지 폭, 목차 검색, 모바일 페이지 이동과 버튼 크기, 한국어 줄바꿈을 개선하고 긴 안내를 접어서 읽도록 정리했습니다.</span></li>
@@ -2672,13 +2672,13 @@ codex --search "optimize with Next.js 15"
                     href="https://github.com/swhan0329/codex-101" target="_blank">PR을 보내 주세요</a>.</p>
             <p class="footer-meta">
                 <span data-i18n="home_guide_updated_label">가이드 수정일</span>:
-                        <span class="live-date" data-date-format="long">2026년 11월 20일</span>
+                        <span class="live-date" data-date-format="long">2026년 11월 21일</span>
             </p>
             <p class="footer-meta">Made by <a href="https://github.com/swhan0329" target="_blank">@swhan0329</a></p>
         </div>
     </footer>
 
-    <script src="i18n.js?v=20261120-ios-release"></script>
+    <script src="i18n.js?v=20261121-cli-release"></script>
     <script src="app.js?v=20261118-mobile-reading"></script>
 </body>
 
