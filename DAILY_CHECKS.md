@@ -4,6 +4,18 @@ Check dates record the sources and scope actually reviewed. Guide modification d
 
 점검일은 실제로 확인한 출처와 범위를 기록합니다. 가이드 수정일은 내용이 바뀔 때만 갱신합니다. 점검을 완료하고 관련 변경이 없다고 확인한 날에도 날짜별 기록을 남길 수 있습니다.
 
+## 2026-11-22
+부분 확인 / Partial review
+
+확인 시각 / Reviewed at: 2026-11-22 10:03 KST (UTC+09:00).
+
+| Scope / 범위 | Result / 결과 |
+| --- | --- |
+| [Models](https://learn.chatgpt.com/docs/models) · [Changelog](https://learn.chatgpt.com/docs/changelog) · [CLI 0.171.0](https://github.com/openai/codex/releases/tag/rust-v0.171.0) | 6.2 Astra·6.2 Sol·6.1 Terra·Luna 추천 순서와 Codex의 6.2 기본 컨텍스트 272k·500k를 재확인했습니다. 11월 20일자 0.171.0이 변경 기록의 최신 CLI 항목이며, 모델 목록의 Sol 기본 선택과 터미널 작업공간 기본 활성화는 전날 반영한 안내와 일치합니다. / Rechecked the recommendation order of 6.2 Astra, 6.2 Sol, 6.1 Terra and Luna, and the 272k and 500k default Codex context sizes for 6.2. The November 20 release, 0.171.0, remains the latest CLI entry in the Changelog. Its Sol catalog default and enabled-by-default terminal workspace match yesterday’s guide update. |
+| [Pricing](https://learn.chatgpt.com/docs/pricing) · [Speed](https://learn.chatgpt.com/docs/agent-configuration/speed) | 기존 6.2 Ultrafast 안내에 할인 적용 범위와 계약 조건을 명시했습니다. 포함 사용량은 계속 6배입니다. 구매 크레딧으로 결제하는 적격 초과분과 적격 Enterprise 종량제는 태평양 시간 2027년 2월 28일까지 3배, 3월 1일부터 6배입니다. Enterprise는 크레딧 또는 USD 사용량 기반 계약, Edu는 크레딧 기반 플랜이 필요하고 Ultrafast 권한은 기본적으로 꺼져 있습니다. / Clarified the discount and agreement requirements in the existing 6.2 Ultrafast guide. Included usage stays at 6×. Eligible overages paid with purchased credits and eligible Enterprise pay-as-you-go usage cost 3× through February 28, 2027, and 6× from March 1, Pacific time. Enterprise requires a credit-based or USD usage-based agreement, Edu requires a credit-based plan, and Ultrafast is off by default. |
+| [Official use cases](https://learn.chatgpt.com/use-cases/all) · [Published catalog](https://swhan0329.github.io/codex-101/use-cases.html) | 공식 목록의 표시 수 121개와 고유 원문 주소 121개가 일치합니다. 게시 117개는 모두 공식 목록에 있으며 영어 Starter prompt 110개는 원문 복사 값과 일치하고 7개는 양쪽에 없습니다. 공식에만 있는 4개의 원문도 확인했습니다. 전일과 같은 결과입니다. / The displayed official count of 121 matches the number of unique original case URLs. All 117 published cases appear in the official listing. Of these, 110 English Starter prompts match the official copy values and seven are absent on both sides. We also checked the four official-only originals. This matches yesterday’s comparison. |
+| Review / 검수 | 가이드의 사실 문구를 한영 정적 검증 후 반영했습니다. 제품 UI와 화면 변경은 보류입니다. 카탈로그 전체 한영 문구와 실제 복사 동작은 확인 중입니다. 소셜 원문 확인 미완료. / Published bilingual factual guide changes after static checks. Product UI and visual changes remain pending. Full bilingual catalog copy and actual clipboard behavior remain under review. Social originals not fully verified. |
+
 ## 2026-11-21
 부분 확인 / Partial review
 
