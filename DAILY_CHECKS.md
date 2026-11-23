@@ -4,6 +4,18 @@ Check dates record the sources and scope actually reviewed. Guide modification d
 
 점검일은 실제로 확인한 출처와 범위를 기록합니다. 가이드 수정일은 내용이 바뀔 때만 갱신합니다. 점검을 완료하고 관련 변경이 없다고 확인한 날에도 날짜별 기록을 남길 수 있습니다.
 
+## 2026-11-23
+부분 확인 / Partial review
+
+확인 시각 / Reviewed at: 2026-11-23 10:05 KST (UTC+09:00).
+
+| Scope / 범위 | Result / 결과 |
+| --- | --- |
+| [Models](https://learn.chatgpt.com/docs/models) · [Workspace model availability](https://learn.chatgpt.com/docs/enterprise/workspace-model-availability) · [Changelog](https://learn.chatgpt.com/docs/changelog) · [CLI 0.171.0](https://github.com/openai/codex/releases/tag/rust-v0.171.0) | 전날 추천 순서인 6.2 Astra·6.2 Sol·6.1 Terra·Luna와 두 6.2 모델의 Codex 기본 컨텍스트 272k·500k를 재확인했습니다. Enterprise·Edu에서 두 6.2 모델이 기본 비활성화 상태임을 요약에 명시했습니다. 11월 20일자 0.171.0은 여전히 변경 기록의 최신 CLI 릴리스이며 Sol이 모델 목록의 기본 선택입니다. / Rechecked yesterday’s order of 6.2 Astra, 6.2 Sol, 6.1 Terra, and Luna and the two 6.2 models’ default Codex contexts of 272k and 500k. Clarified in the summary that both 6.2 models are off by default in Enterprise and Edu. The November 20 release, 0.171.0, remains the latest CLI release in the Changelog and selects Sol by default in the catalog. |
+| [Speed](https://learn.chatgpt.com/docs/agent-configuration/speed) · [Pricing](https://learn.chatgpt.com/docs/pricing) | 전날 안내한 두 6.2 모델의 Fast 사용량 2배에 Enterprise 종량제도 포함된다고 명시했습니다. Speed가 약 1.5배로 안내하는 6.2 Astra Fast의 토큰 생성 속도는 같은 모델의 Standard 기준입니다. 6.2 Ultrafast의 포함 사용량 6배와 기존 할인 조건은 유지했습니다. / Clarified that yesterday’s 2× Fast usage multiplier for both 6.2 models also covers Enterprise pay-as-you-go. Speed documents approximately 1.5× token generation for 6.2 Astra Fast relative to Standard on the same model. The 6× included-usage multiplier and existing discount terms for 6.2 Ultrafast still apply. |
+| [Official use cases](https://learn.chatgpt.com/use-cases/all) · [Published catalog](https://swhan0329.github.io/codex-101/use-cases.html) | 12개 컬렉션과 전체 목록을 대조하고 고유 원문 121개를 확인했습니다. 게시 사례 117개가 모두 공식 목록에 있으며, 영어 Starter prompt 110개는 공식 복사 값과 일치하고 7개는 양쪽에 없습니다. 공식에만 있는 4개를 포함해 원문 본문 비교 결과는 전날과 같습니다. / Checked the 12 collections and full listing and read 121 distinct case originals. All 117 published cases appear in the official list. Of these, 110 English Starter prompts match the official copy values and seven are absent on both sides. The visible body comparison, including the four official-only cases, matches yesterday’s result. |
+| Review / 검수 | 사실 설명을 한영 정적 검증 후 가이드에 반영했습니다. 제품 UI와 화면 변경은 보류입니다. 카탈로그 전체 한영 본문과 실제 복사 동작은 확인 중입니다. 소셜 원문 확인 미완료. / Published bilingual factual guidance after static checks. Product UI and visual changes remain pending. Full bilingual catalog prose and actual clipboard behavior remain under review. Social originals not fully verified. |
+
 ## 2026-11-22
 부분 확인 / Partial review
 
