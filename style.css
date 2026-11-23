@@ -7243,14 +7243,55 @@ body[data-page="home"] .update-history { max-width: 980px; margin: 20px auto 0; 
 .app-signin-step { margin-top: 16px; }
 .app-signin-step .install-path-note { margin-top: 10px; }
 
-/* Keep the expanded archive aligned with the current changelog. */
-body[data-page="home"] .changelog-history { margin-top: 24px; overflow: hidden; }
-.changelog-history summary { padding: 18px 20px; line-height: 1.5; }
+/* Give recent updates their own date column and keep the archive secondary. */
+body[data-page="home"] .changelog-head {
+    flex-wrap: wrap;
+    align-items: baseline;
+    row-gap: 6px;
+}
+
+body[data-page="home"] .changelog-recent li {
+    grid-template-columns: 7rem minmax(0, 1fr);
+    gap: 16px;
+    align-items: baseline;
+}
+
+.changelog-recent time {
+    color: var(--text-dim);
+    font-size: .875rem;
+    font-variant-numeric: tabular-nums;
+}
+
+.changelog-recent h3,
+.changelog-history h3 {
+    margin: 0;
+    color: var(--text);
+    font-size: 1rem;
+    line-height: 1.45;
+}
+
+.changelog-recent h3 a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: var(--text-dim);
+    text-underline-offset: .18em;
+}
+
+.changelog-recent h3 a:hover { color: var(--accent-light); }
+
+.changelog-recent p {
+    margin: 4px 0 0;
+    color: var(--text-dim);
+    font-size: .9rem;
+    line-height: 1.6;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+}
+
+body[data-page="home"] .changelog-history { margin-block: 20px 0; }
 .changelog-history summary:hover { background: var(--bg-hover); }
-.changelog-history summary:focus-visible { outline: 2px solid var(--accent-light); outline-offset: -4px; }
-.changelog-history[open] summary { border-bottom: 1px solid var(--line-soft); }
-.changelog-history .changelog-list { padding: 0 20px 8px; }
 .changelog-history .changelog-list li:last-child { border-bottom: 0; }
+.changelog-history .changelog-list + h3 { margin-top: 20px; }
 body[data-page="home"] .changelog-section .changelog-list :is(strong, span) {
     min-width: 0;
     font-size: .875rem;
@@ -7259,13 +7300,11 @@ body[data-page="home"] .changelog-section .changelog-list :is(strong, span) {
     overflow-wrap: anywhere;
 }
 @media (max-width: 900px) {
-    body[data-page="home"] .changelog-list li {
+    body[data-page="home"] :is(.changelog-list, .changelog-recent) li {
         grid-template-columns: minmax(0, 1fr);
-        gap: 8px;
-        padding: 16px 0;
+        gap: 6px;
+        padding: 12px 0;
     }
-    .changelog-history summary { padding: 16px; }
-    .changelog-history .changelog-list { padding: 0 16px 4px; }
 }
 
 /* Keep terminal and editor references outside the main app setup sequence. */
