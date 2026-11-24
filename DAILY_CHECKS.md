@@ -4,6 +4,19 @@ Check dates record the sources and scope actually reviewed. Guide modification d
 
 점검일은 실제로 확인한 출처와 범위를 기록합니다. 가이드 수정일은 내용이 바뀔 때만 갱신합니다. 점검을 완료하고 관련 변경이 없다고 확인한 날에도 날짜별 기록을 남길 수 있습니다.
 
+## 2026-11-24
+부분 확인 / Partial review
+
+확인 시각 / Reviewed at: 2026-11-24 10:02 KST (UTC+09:00).
+
+| Scope / 범위 | Result / 결과 |
+| --- | --- |
+| [Changelog](https://learn.chatgpt.com/docs/changelog) · [CLI 0.172.0 release](https://github.com/openai/codex/releases/tag/rust-v0.172.0) | 전날 확인한 0.171.0 이후 11월 24일자 0.172.0이 나왔습니다. 검색 결과와 대화 기록의 스레드 링크, 지원되는 슬래시 명령 인수 자동 완성을 CLI 장에 반영했습니다. / The November 24 release, 0.172.0, follows 0.171.0 from the previous review. The CLI chapter now covers thread links in search results and transcripts and argument completion for supported slash commands. |
+| [Models](https://learn.chatgpt.com/docs/models) · [Pricing](https://learn.chatgpt.com/docs/pricing) · [Speed](https://learn.chatgpt.com/docs/agent-configuration/speed) · [Advanced configuration](https://learn.chatgpt.com/docs/config-file/config-advanced) | 6.2 Astra·6.2 Sol·6.1 Terra·Luna 추천 순서, 6.2 기본 컨텍스트 272k·500k, 두 6.2 모델의 Fast 사용량 2배를 재확인했습니다. 고급 설정과 모델 컨텍스트 안내는 열리는 공식 문서로 연결했습니다. / Rechecked the 6.2 Astra, 6.2 Sol, 6.1 Terra, and Luna recommendation order, 272k and 500k default contexts for GPT-6.2, and 2× Fast usage for both 6.2 models. Advanced configuration and model-context references now point to an accessible official guide. |
+| [Official use cases](https://learn.chatgpt.com/use-cases/all) · [Dashboard](https://learn.chatgpt.com/use-cases/analyze-data-export) · [Analysis and reports](https://learn.chatgpt.com/use-cases/datasets-and-reports) | 공식 고유 사례 121개 중 게시된 117개를 대조했습니다. 대시보드와 분석·보고서 사례의 Starter prompt가 제품 도입 추적과 주간 활성 사용자 변동 분석을 요청하는 `@Data` 예시로 바뀌었습니다. 두 사례의 공식 영어 복사 값과 한국어 번역·요약을 갱신했습니다. 대조 후 영어 복사 값 110개가 원문에 일치하며 7개는 양쪽에 없습니다. / Compared the 117 published cases with the 121 distinct official cases. The dashboard and analysis/reporting Starter prompts now use `@Data` to track product adoption and diagnose a change in weekly active users, respectively. Updated both cases’ exact English copy values, Korean translations, and summaries. After the update, 110 English copy values match their originals and seven are absent on both sides. |
+| [OpenAI Developers Blog](https://developers.openai.com/blog/building-security-review-into-your-sdlc-with-codex-security) | 11월 23일 Vanessa Sauter의 글에서 시스템의 보안 맥락 제공, 개발 과정에 리뷰 통합, 검토 범위와 보고 기준 설정, 결과의 근거 공개를 권하는 내용을 확인했습니다. / Vanessa Sauter’s November 23 article recommends providing system-specific security context, integrating review into development, defining review scope and reporting thresholds, and making findings inspectable. |
+| Review / 검수 | CLI와 활용 사례의 사실·문구를 한영 정적 검증 후 반영했습니다. 제품 UI·화면 변경은 보류입니다. 카탈로그 전체 한영 본문과 실제 복사 동작은 확인 중입니다. 소셜 원문 확인 미완료. / Applied bilingual factual CLI and catalog updates after static checks. Product UI and visual changes remain pending. Full bilingual catalog prose and actual clipboard behavior remain under review. Social originals not fully verified. |
+
 ## 2026-11-23
 부분 확인 / Partial review
 

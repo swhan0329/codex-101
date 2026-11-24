@@ -340,13 +340,13 @@ window.codexUseCases = [
         "title": "계속 최신화되는 대시보드 만들기",
         "titleEn": "Build a dashboard that stays up to date",
         "sourceTitle": "Build a dashboard that stays up to date",
-        "sourceUrl": "https://developers.openai.com/codex/use-cases/analyze-data-export",
-        "summary": "스프레드시트나 CSV를 비공개 인터랙티브 대시보드로 만들고, 승인된 원본이 바뀌면 필요한 변화만 알립니다.",
-        "summaryEn": "Turn your data into a private dashboard and keep it up to date.",
-        "when": "매출, 세그먼트, 시간별 변화처럼 반복 확인하는 지표를 매번 수동으로 열어보지 않고 추적하고 싶을 때 좋습니다.",
-        "prompt": "@Sites와 @google-drive로 최신 매출 데이터를 비공개 대시보드로 만들고, 평일 아침마다 승인된 원본 변화를 확인해줘.",
-        "output": "비공개 대시보드, 차트와 필터, 계산 근거, 데이터 품질 경고, 의미 있는 변화 알림.",
-        "caution": "파일이나 URL이 없으면 추측하지 말고 요청하게 하고, 게시·공유·권한 변경은 승인 전 금지하세요.",
+        "sourceUrl": "https://learn.chatgpt.com/use-cases/analyze-data-export",
+        "summary": "ChatGPT의 Data 플러그인으로 분석 결과를 인터랙티브 대시보드로 만들고 Site로 공유합니다.",
+        "summaryEn": "Use the Data plugin in ChatGPT to turn analysis into an interactive dashboard you can share as a Site.",
+        "when": "기업 데이터에서 지표를 추적하고 원본을 일일이 열어보지 않고 대시보드를 최신 상태로 유지하고 싶을 때 좋습니다.",
+        "prompt": "@Data로 제품 도입 대시보드를 만들고, 설치·첫 사용·지속 사용·유지율 중 고객이 막히는 단계를 찾아줘.",
+        "output": "제품 도입 단계별 차트와 필터, 이탈이 큰 구간, 팀과 공유할 수 있는 대시보드.",
+        "caution": "Site에 복사된 데이터까지 검토한 뒤, 해당 내용을 볼 권한이 있는 대상에게만 공유하세요.",
         "official": {
             "difficulty": "Easy",
             "time": "30m",
@@ -357,31 +357,42 @@ window.codexUseCases = [
                 "Engineering"
             ],
             "bestForEn": [
-                "Building an interactive dashboard from spreadsheets or sales exports.",
+                "Building an interactive dashboard from your enterprise data.",
                 "Keeping the dashboard current without manually checking the source data."
             ],
             "skills": [
                 {
-                    "name": "Sites",
-                    "why": "Build and preview a private, interactive dashboard.",
-                    "url": "https://developers.openai.com/codex/sites"
+                    "name": "Data Warehouse Plugins",
+                    "why": "Connect to enterprise data warehouses such as Databricks, Snowflake, and Google BigQuery.",
+                    "whyKo": "Databricks, Snowflake, Google BigQuery 등 기업용 데이터 웨어하우스에 연결합니다.",
+                    "url": "https://help.openai.com/en/articles/20001518-using-the-data-plugin-in-chatgpt-work-and-codex"
                 },
                 {
-                    "name": "Google Drive",
-                    "why": "Read the approved spreadsheets and source files behind the dashboard.",
-                    "url": "https://github.com/openai/plugins/tree/main/plugins/google-drive"
-                },
-                {
-                    "name": "Spreadsheets",
-                    "handle": "$spreadsheets",
-                    "why": "Check source data, calculate changes, and verify the dashboard."
+                    "name": "Data",
+                    "why": "Gather source context, analyze and validate data, and build reusable reports, dashboards, charts, or notebooks.",
+                    "whyKo": "출처를 파악하고 데이터를 분석·검증해 재사용 가능한 보고서, 대시보드, 차트 또는 노트북을 만듭니다.",
+                    "url": "https://openai.com/business/plugins/data/"
                 }
             ],
-            "promptEn": "Use @Sites and @google-drive to turn my latest sales data into a private, interactive dashboard. Use the spreadsheets or CSVs I attach, or the exact Google Drive or Google Sheets URL I paste into this chat. If I have not attached a file or provided a source URL, ask me for one instead of guessing.\n\nShow revenue, customer segments, changes over time, and anything unusual. Include clear charts, date and segment filters, when the source was last updated, and the calculations behind the results. Check for missing rows, unmatched records, and inconsistent dates, and explain anything that could change the answer.\n\nCheck the approved source every weekday morning. Update the dashboard when the data changes, and notify me only when there is a meaningful change, a data-quality problem, or something I need to review. If nothing important has changed, do not send an update.\n\nShow me the dashboard for review. Keep it private, and do not publish it, share it, change its permissions, or contact anyone without my approval.",
-            "promptKo": "@Sites와 @google-drive를 사용해 내 최신 매출 데이터를 비공개 인터랙티브 대시보드로 바꿔줘. 내가 첨부하는 spreadsheet나 CSV, 또는 이 채팅에 붙여넣는 정확한 Google Drive나 Google Sheets URL을 사용해. 내가 파일을 첨부하지 않았거나 source URL을 제공하지 않았다면 추측하지 말고 나에게 요청해.\n\n매출, 고객 세그먼트, 시간에 따른 변화, 이상한 점을 보여줘. 명확한 차트, 날짜와 세그먼트 필터, 원본이 마지막으로 업데이트된 시점, 결과 뒤의 계산식을 포함해. 누락된 행, 매칭되지 않은 records, 일관되지 않은 날짜를 확인하고, 답을 바꿀 수 있는 모든 사항을 설명해.\n\n승인된 원본을 평일 아침마다 확인해. 데이터가 바뀌면 대시보드를 업데이트하고, 의미 있는 변화, 데이터 품질 문제, 또는 내가 검토해야 할 일이 있을 때만 알려줘. 중요한 변화가 없으면 업데이트를 보내지 마.\n\n검토할 수 있도록 대시보드를 보여줘. 비공개로 유지하고, 내 승인 없이 게시하거나, 공유하거나, 권한을 변경하거나, 누구에게도 연락하지 마.",
+            "promptEn": "@Data Create a dashboard tracking adoption of our product from installation and first use to ongoing activity and retention. Help us find where customers get stuck.",
+            "promptKo": "@Data 제품의 설치와 첫 사용부터 지속적인 활동과 유지율까지, 제품 도입을 추적하는 대시보드를 만들어줘. 고객이 어디서 막히는지 찾을 수 있게 도와줘.",
             "guideSectionsEn": [
-                "Analyze the data",
-                "Follow-up analysis"
+                "Introduction",
+                "Get started with Data",
+                "Build the dashboard",
+                "Share the dashboard",
+                "Take it further"
+            ],
+            "bestForKo": [
+                "기업 데이터로 인터랙티브 대시보드 만들기",
+                "원본을 직접 확인하지 않고 대시보드를 최신 상태로 유지하기"
+            ],
+            "guideSectionsKo": [
+                "분석할 질문 정하기",
+                "Data와 사용 가능한 원본 확인하기",
+                "대시보드 만들기",
+                "공유 전 Site의 데이터와 열람 대상 확인하기",
+                "필요한 수정이나 갱신 요청하기"
             ]
         }
     },
@@ -1062,13 +1073,13 @@ window.codexUseCases = [
         "title": "데이터셋을 분석해 보고서와 시각화로 만들기",
         "titleEn": "Analyze datasets and ship reports",
         "sourceTitle": "Analyze datasets and ship reports",
-        "sourceUrl": "https://developers.openai.com/codex/use-cases/datasets-and-reports",
-        "summary": "지저분한 파일을 정리·조인·분석해 차트와 주의사항이 있는 검토 가능한 보고서로 만듭니다.",
-        "summaryEn": "Turn messy data into clear analysis and visualizations.",
-        "when": "정리, reliable join, 해석 가능한 모델, 재현 가능한 분석을 거쳐 차트·메모·대시보드·보고서가 필요할 때 좋습니다.",
-        "prompt": "@Data Analytics로 부동산 매매와 고속도로 거리 데이터셋을 분석해 고속도로 근처 주택의 가치가 더 낮은지 확인해줘.",
-        "output": "출처 기반 보고서, 차트, 노트북이나 스프레드시트, 데이터 품질 이슈와 불확실성.",
-        "caution": "원본 파일을 덮어쓰거나 누락 값을 지어내지 말고, 상관관계와 해석·불확실성을 분리하게 하세요.",
+        "sourceUrl": "https://learn.chatgpt.com/use-cases/datasets-and-reports",
+        "summary": "ChatGPT의 Data 플러그인으로 연결된 데이터에서 업무 질문에 답하고, 근거 차트가 포함된 보고서나 대시보드를 만듭니다.",
+        "summaryEn": "Use the Data plugin in ChatGPT to answer business questions with connected data and create reports or dashboards with supporting charts.",
+        "when": "기업 데이터로 지표 변화의 원인을 살피거나 팀에서 검토할 보고서와 대시보드가 필요할 때 좋습니다.",
+        "prompt": "@Data로 지난주 주간 활성 사용자 수가 변한 이유를 분석하고, 이전 기간과 비교해 추가로 확인할 항목을 제안해줘.",
+        "output": "주요 변화와 가능한 원인, 이전 기간 비교, 근거 차트, 출처와 후속 확인 항목.",
+        "caution": "같은 날짜와 필터를 적용해 원본 수치를 대조하고, 공유 대상이 연결된 출처에도 접근할 수 있는지 확인하세요.",
         "official": {
             "difficulty": "Intermediate",
             "time": "1h",
@@ -1077,34 +1088,48 @@ window.codexUseCases = [
                 "Analysis"
             ],
             "bestForEn": [
-                "Data analysis that starts with messy files and ends with a chart, memo, dashboard, or report.",
-                "Questions that require cleaning, reliable joins, interpretable models, or reproducible analysis.",
-                "Teams that need artifacts others can review and reuse."
+                "Ground business answers in company data across connected warehouses, BI tools, and business apps.",
+                "Build interactive dashboards to monitor performance, explore trends, and investigate changes.",
+                "Turn findings into reviews, reports, and presentations with clear takeaways and evidence."
             ],
             "skills": [
                 {
+                    "name": "Data Warehouse Plugins",
+                    "why": "Connect to enterprise data warehouses such as Databricks, Snowflake, and Google BigQuery.",
+                    "whyKo": "Databricks, Snowflake, Google BigQuery 등 기업용 데이터 웨어하우스에 연결합니다.",
+                    "url": "https://help.openai.com/en/articles/20001518-using-the-data-plugin-in-chatgpt-work-and-codex"
+                },
+                {
+                    "name": "Data",
+                    "why": "Gather source context, analyze and validate data, and build reusable reports, dashboards, charts, or notebooks.",
+                    "whyKo": "출처를 파악하고 데이터를 분석·검증해 재사용 가능한 보고서, 대시보드, 차트 또는 노트북을 만듭니다.",
+                    "url": "https://openai.com/business/plugins/data/"
+                },
+                {
                     "name": "Spreadsheets",
                     "handle": "$spreadsheets",
-                    "why": "Inspect CSV, TSV, and Excel files, check formulas and joins, and create reviewable tables or charts."
-                },
-                {
-                    "name": "Google Drive",
-                    "why": "Read the approved Google Sheets and source files you name in Drive.",
-                    "url": "https://github.com/openai/plugins/tree/main/plugins/google-drive"
-                },
-                {
-                    "name": "Data Analytics",
-                    "why": "Gather source context, analyze and validate data, and build reusable reports, dashboards, charts, or notebooks."
+                    "why": "Inspect CSV, TSV, and Excel files, check formulas and joins, and create reviewable tables or charts.",
+                    "whyKo": "CSV, TSV, Excel 파일을 확인하고 수식과 조인을 검토해 살펴볼 수 있는 표나 차트를 만듭니다."
                 }
             ],
-            "promptEn": "Use @Data Analytics to inspect the attached property-sales and highway-distance datasets and determine whether homes near the highway have lower property values.\n\nExplain what each source contains, identify the relevant columns and likely join keys, and check for missing values, duplicates, unmatched records, and incomplete data. Clean and join the inputs without overwriting the source files or inventing values.\n\nExplore the question with clear supporting charts, start with an interpretable model when modeling is useful, and explain the result, assumptions, and uncertainty in plain language. Return a concise report, notebook, or spreadsheet with the answer first, name the files you create, and flag any data issue that could change the conclusion.",
-            "promptKo": "@Data Analytics를 사용해 첨부된 property-sales와 highway-distance 데이터셋을 검사하고, 고속도로 근처 주택의 property values가 더 낮은지 판단해줘.\n\n각 source에 무엇이 들어 있는지 설명하고, 관련 columns와 가능성 높은 join keys를 파악하고, missing values, duplicates, unmatched records, incomplete data를 확인해. source files를 덮어쓰거나 값을 지어내지 말고 입력을 정리하고 조인해.\n\n명확한 보조 차트로 질문을 탐색하고, 모델링이 유용할 때는 해석 가능한 모델부터 시작하고, 결과, assumptions, uncertainty를 쉬운 말로 설명해. 답을 먼저 제시하는 간결한 report, notebook, 또는 spreadsheet를 반환하고, 만든 files의 이름을 적고, 결론을 바꿀 수 있는 data issue를 표시해.",
+            "promptEn": "@Data Diagnose why weekly active users changed last week. Identify likely drivers, compare against prior periods, and recommend the next checks.",
+            "promptKo": "@Data 지난주 주간 활성 사용자 수가 왜 변했는지 진단해줘. 가능한 주요 원인을 파악하고, 이전 기간과 비교해 다음으로 확인할 항목을 추천해줘.",
             "guideSectionsEn": [
                 "Introduction",
+                "Get started with Data",
                 "Define your use case",
-                "Set up the environment",
-                "Import the data",
-                "Tidy and merge the inputs"
+                "Create and share a report"
+            ],
+            "bestForKo": [
+                "연결된 웨어하우스·BI 도구·업무 앱의 기업 데이터를 근거로 질문에 답하기",
+                "성과를 모니터링하고 추세와 변화를 살펴볼 대시보드 만들기",
+                "핵심 결론과 근거를 담아 업무 리뷰, 보고서, 발표 자료로 정리하기"
+            ],
+            "guideSectionsKo": [
+                "업무 질문 정하기",
+                "Data와 사용 가능한 원본 확인하기",
+                "팀이 내려야 할 결정과 분석 범위 정하기",
+                "수치와 출처를 검토하고 보고서 공유하기"
             ]
         }
     },
