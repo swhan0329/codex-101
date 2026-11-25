@@ -4,6 +4,19 @@ Check dates record the sources and scope actually reviewed. Guide modification d
 
 점검일은 실제로 확인한 출처와 범위를 기록합니다. 가이드 수정일은 내용이 바뀔 때만 갱신합니다. 점검을 완료하고 관련 변경이 없다고 확인한 날에도 날짜별 기록을 남길 수 있습니다.
 
+## 2026-11-25
+부분 확인 / Partial review
+
+확인 시각 / Reviewed at: 2026-11-25 10:03 KST (UTC+09:00).
+
+| Scope / 범위 | Result / 결과 |
+| --- | --- |
+| [Models](https://learn.chatgpt.com/docs/models) · [ChatGPT release notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes) · [Work and Codex](https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex) · [Changelog](https://learn.chatgpt.com/docs/changelog) | Work·Codex의 추천 순서와 11월 24일자 최신 CLI 0.172.0을 재확인했습니다. 두 6.2 모델의 CLI 최소 버전 0.166.0을 명시했습니다. 11월 23일부터 Plus·Pro·Business·Enterprise의 Chat에 대화용 6.2 Sol 변형이 순차 배포 중이며 Enterprise는 관리자 설정에 따릅니다. 이 배포로 Work·Codex 모델은 바뀌지 않습니다. / Rechecked the Work and Codex recommendations and the latest CLI release, 0.172.0 from November 24. The guide now specifies CLI 0.166.0 as the minimum for both 6.2 models. A chat-tuned 6.2 Sol variant has been rolling out in Chat since November 23 to Plus, Pro, Business and Enterprise, subject to Enterprise admin settings. The rollout leaves Work and Codex models unchanged. |
+| [Pricing](https://learn.chatgpt.com/docs/pricing#speed-multipliers) · [Business models and limits](https://help.openai.com/en/articles/12003714-chatgpt-business-models-and-limits) | Fast 팁의 기본 포함 사용량 배율을 6.2 두 모델 2배와 6 Astra 2.5배로 구분했습니다. 11월 23~30일에 만든 Business 워크스페이스의 Standard·Premium 좌석은 2026년 12월 31일까지 Work·Codex 주간 포함 사용량이 2배입니다. Standard의 5시간 한도와 기존·재활성화 워크스페이스의 일반 주간 한도 조건을 함께 반영했습니다. / Corrected the Fast tip to distinguish the standard included-usage multipliers of 2× for both 6.2 models and 2.5× for 6 Astra. Standard and Premium seats in Business workspaces created November 23–30 receive double the weekly Work and Codex allowance through December 31, 2026. The guide also records the Standard five-hour limit and ordinary weekly allowance rules for existing and reactivated workspaces. |
+| [Official use cases](https://learn.chatgpt.com/use-cases/all) · [Published catalog](https://swhan0329.github.io/codex-101/use-cases.html) | 공식 12개 컬렉션과 고유 사례 원문 121개를 확인했습니다. 게시 117개가 모두 공식 목록에 있고, 영어 Starter prompt 110개는 정확히 일치하며 7개는 양쪽에 없습니다. 11월 24일 반영한 Data 사례 2개도 계속 일치합니다. / Checked the 12 official collections and 121 distinct case originals. All 117 published cases are in the official listing. The 110 English Starter prompts match exactly, and seven are absent on both sides. This includes the two Data cases updated on November 24. |
+| [OpenAI Developers Blog](https://developers.openai.com/blog/production-monitoring-with-codex) | 11월 24일 Anke Hao·Tony Loehr·Tony Alaniz의 글은 읽기 전용 운영 데이터로 장애 원인을 조사하고, 사람이 제한된 변경을 승인한 뒤 복구 지표를 확인하는 흐름을 소개합니다. / Anke Hao, Tony Loehr and Tony Alaniz’s November 24 article describes investigating an incident using read-only production evidence, getting human approval for a bounded change, and checking recovery signals. |
+| Review / 검수 | 모델 제공 범위와 사용량 설명을 한영 정적 검증 후 가이드에 반영했습니다. 제품 UI·화면 변경은 보류입니다. 전체 사례 한영 본문과 실제 복사 동작은 확인 중입니다. 소셜 원문 확인 미완료. / Applied bilingual model availability and usage updates after static checks. Product UI and visual changes remain pending. Full bilingual catalog prose and actual clipboard behavior remain under review. Social originals not fully verified. |
+
 ## 2026-11-24
 부분 확인 / Partial review
 
