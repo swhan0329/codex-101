@@ -4,6 +4,19 @@ Check dates record the sources and scope actually reviewed. Guide modification d
 
 점검일은 실제로 확인한 출처와 범위를 기록합니다. 가이드 수정일은 내용이 바뀔 때만 갱신합니다. 점검을 완료하고 관련 변경이 없다고 확인한 날에도 날짜별 기록을 남길 수 있습니다.
 
+## 2026-11-26
+부분 확인 / Partial review
+
+확인 시각 / Reviewed at: 2026-11-26 10:05 KST (UTC+09:00).
+
+| Scope / 범위 | Result / 결과 |
+| --- | --- |
+| [Models](https://learn.chatgpt.com/docs/models) · [Changelog](https://learn.chatgpt.com/docs/changelog) | 11월 25일과 추천 순서 및 최신 정식 CLI 0.172.0이 같습니다. 기존 GPT-5.5 설정의 공식 대체 모델은 Plus·Pro·Business·Enterprise·Edu의 GPT-6.1 Sol과 Free·Go 데스크톱의 GPT-6 Luna입니다. 앱·CLI의 6.2 Sol 설정을 IDE 확장과 공유할 경우 모든 클라이언트에서 이용 가능한 모델을 선택하는 예시로 6.1 Sol을 명시했습니다. / The recommendation order and latest stable CLI, 0.172.0, match November 25. The official replacements for existing GPT-5.5 settings are GPT-6.1 Sol on Plus, Pro, Business, Enterprise, and Edu, and GPT-6 Luna in the desktop app on Free and Go. The guide now names 6.1 Sol as an example of choosing a model available across clients when sharing configuration with the IDE extension. |
+| [Work and Codex](https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex) · [Speed](https://learn.chatgpt.com/docs/agent-configuration/speed) · [Credit rate card](https://help.openai.com/en/articles/11481834-chatgpt-rate-card-business-enterpriseedu-credit-based-pricing) | Ultrafast는 Plus·Pro 100달러·Business에서 구매 크레딧으로도 사용할 수 없습니다. 기존 메시지당 크레딧 요율을 쓰는 일부 Enterprise의 6.2 Ultrafast는 6배이며, 토큰 기반 종량제의 3배 할인 대상에서 제외됩니다. / Ultrafast is unavailable on Plus, Pro $100, and Business, including through purchased credits. For Enterprise workspaces that still use legacy per-message credit billing, 6.2 Ultrafast remains at 6× and is excluded from the 3× token-based pay-as-you-go promotion. |
+| [Official use cases](https://learn.chatgpt.com/use-cases/all) · [Incident investigation](https://learn.chatgpt.com/use-cases/incident-to-tested-fix) | 12개 컬렉션과 고유 사례 원문 121개를 대조했습니다. 사고 조사 사례 원문에 C# 샘플 코드가 추가됐고 Starter prompt는 그대로입니다. 게시 117개에서 영어 Starter prompt 110개가 공식 복사 값과 일치하며 7개에는 양쪽 모두 프롬프트가 없습니다. / Compared all 12 collections and 121 distinct case originals. The incident investigation original adds C# sample code and retains its Starter prompt. Of the 117 published cases, 110 English Starter prompts match the official copy values and seven have no prompt on either side. |
+| [Gabriel Chua](https://x.com/gabrielchua/status/2125476177062355115) · [VB Srivastav](https://x.com/reach_vb/status/2125665954495336764) | Gabriel은 11월 25일 휴대폰에서 dot에 말해 Codex Cloud 작업을 시작하고 Mac에서 버그를 재현한 사례를 소개했습니다. VB는 11월 26일 ModRetro에서 같은 프롬프트로 두 모델의 게임 결과를 비교했다고 설명했습니다(KST). 두 글은 작성자의 사례이며 일반 성능이나 계정 제공 범위를 입증하지 않습니다. / On November 25, Gabriel described using his dot from his phone to start a Codex Cloud task and reproduce a bug on his Mac. On November 26, VB described comparing game results from two models with identical prompts in ModRetro (dates in KST). These are the authors’ examples, with no general performance or account-availability finding. |
+| Review / 검수 | 모델 전환·공유 설정·Ultrafast 자격 및 요율을 한영 정적 검증 후 가이드에 반영했습니다. 제품 UI·화면 변경은 보류입니다. 카탈로그 전체 한영 본문 및 실제 복사 동작 확인은 진행 중입니다. 소셜 원문 확인 미완료. / Applied bilingual guidance on model migration, shared configuration, and Ultrafast eligibility and billing after static checks. Product UI and visual changes remain pending. Full bilingual catalog prose and actual clipboard behavior remain under review. Social originals not fully verified. |
+
 ## 2026-11-25
 부분 확인 / Partial review
 
