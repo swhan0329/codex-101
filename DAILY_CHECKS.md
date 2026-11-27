@@ -4,6 +4,19 @@ Check dates record the sources and scope actually reviewed. Guide modification d
 
 점검일은 실제로 확인한 출처와 범위를 기록합니다. 가이드 수정일은 내용이 바뀔 때만 갱신합니다. 점검을 완료하고 관련 변경이 없다고 확인한 날에도 날짜별 기록을 남길 수 있습니다.
 
+## 2026-11-27
+부분 확인 / Partial review
+
+확인 시각 / Reviewed at: 2026-11-27 09:58 KST (UTC+09:00).
+
+| Scope / 범위 | Result / 결과 |
+| --- | --- |
+| [Models](https://learn.chatgpt.com/docs/models) · [Changelog](https://learn.chatgpt.com/docs/changelog) · [CLI 0.172.0](https://github.com/openai/codex/releases/tag/rust-v0.172.0) | 11월 26일 가이드와 같은 추천 순서인 6.2 Astra·6.2 Sol·6.1 Terra·Luna를 확인했습니다. 두 6.2 모델은 CLI 0.166.0 이상에서 지원되며, 11월 24일 공개된 0.172.0이 최신 정식 CLI입니다. / Confirmed the November 26 guide's recommendation order of 6.2 Astra, 6.2 Sol, 6.1 Terra, and Luna. Both 6.2 models require CLI 0.166.0 or later. The November 24 release, 0.172.0, remains the latest stable CLI. |
+| [Pricing](https://learn.chatgpt.com/docs/pricing#speed-multipliers) · [Speed](https://learn.chatgpt.com/docs/agent-configuration/speed) · [Business models and limits](https://help.openai.com/en/articles/12003714-chatgpt-business-models-and-limits) | 11월 26일 가이드의 6.2 기본 요율을 재확인했습니다. 동일 모델의 Standard 대비 Fast는 포함 사용량·구매 크레딧·Enterprise 종량제 모두 2배이고, Ultrafast는 포함 사용량 6배입니다. 기존 메시지당 요율을 쓰는 일부 Enterprise는 3배 할인 대상에서 제외됩니다. 11월 23~30일에 만든 Business 워크스페이스의 주간 사용량 2배 혜택과 Standard 5시간 한도도 재확인했습니다. / Rechecked the standard 6.2 multipliers in the November 26 guide. Relative to Standard on the same model, Fast is 2× for included usage, purchased credits, and Enterprise pay-as-you-go. Ultrafast is 6× for included usage. Enterprise workspaces on legacy per-message rates are excluded from the 3× promotion. The double weekly allowance for Business workspaces created November 23–30 and the Standard five-hour limit also remain documented. |
+| [Official use cases](https://learn.chatgpt.com/use-cases/all) · [Incident investigation](https://learn.chatgpt.com/use-cases/incident-to-tested-fix) · [Issue to tested PR](https://learn.chatgpt.com/use-cases/issue-to-tested-pr) | 11월 26일과 비교해 사고 조사와 이슈 구현 원문에 Python·Go 실행 예제가 추가됐습니다. 두 사례의 작업 요약과 Starter prompt는 바뀌지 않았습니다. 공식 12개 컬렉션의 고유 사례 121개 중 게시 사례 117개를 대조했습니다. 영어 Starter prompt 110개는 공식 복사 값과 정확히 일치하고, 7개는 양쪽 모두 프롬프트가 없습니다. / Since November 26, the incident investigation and issue-to-PR originals have added Python and Go examples. The workflow summaries and Starter prompts are unchanged. Compared the 117 published cases against 121 distinct originals across 12 official collections. The 110 English Starter prompts match the official copy values exactly, and seven have no prompt on either side. |
+| [Advanced configuration](https://learn.chatgpt.com/docs/config-file/config-advanced#notifications) · [Gabriel Chua](https://x.com/gabrielchua/status/2125831156142883232) | 공식 고급 설정 문서의 macOS 완료 알림 예제에 Go·Java·C#·Ruby가 추가됐습니다. Gabriel은 11월 26일(KST) 에이전트 비용을 비교할 때 단가와 함께 토큰 수·시도 횟수·소요 시간을 보라고 제안했습니다. 작성자의 비교 방법입니다. / The official advanced configuration page added Go, Java, C#, and Ruby examples for macOS completion notifications. On November 26 (KST), Gabriel suggested comparing agent costs using token counts, number of attempts, and elapsed time alongside unit rates. This is the author's comparison method. |
+| Review / 검수 | 위 범위를 대조한 결과 가이드와 사례 데이터의 변경이 필요하지 않아 일일 기록만 갱신했습니다. 제품 UI·화면 확인은 보류이며, 카탈로그 전체 한영 본문과 실제 복사 동작은 확인 중입니다. 소셜 원문 확인 미완료. / This review found no required changes to the guide or case data, so only the daily record was updated. Product UI and visual checks remain pending. Full bilingual catalog prose and actual clipboard behavior remain under review. Social originals not fully verified. |
+
 ## 2026-11-26
 부분 확인 / Partial review
 
