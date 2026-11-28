@@ -4,6 +4,20 @@ Check dates record the sources and scope actually reviewed. Guide modification d
 
 점검일은 실제로 확인한 출처와 범위를 기록합니다. 가이드 수정일은 내용이 바뀔 때만 갱신합니다. 점검을 완료하고 관련 변경이 없다고 확인한 날에도 날짜별 기록을 남길 수 있습니다.
 
+## 2026-11-28
+부분 확인 / Partial review
+
+확인 시각 / Reviewed at: 2026-11-28 10:06 KST (UTC+09:00).
+
+| Scope / 범위 | Result / 결과 |
+| --- | --- |
+| [Models](https://learn.chatgpt.com/docs/models) · [Changelog](https://learn.chatgpt.com/docs/changelog) · [CLI 0.172.0](https://github.com/openai/codex/releases/tag/rust-v0.172.0) | 11월 27일과 같은 추천 순서인 6.2 Astra·6.2 Sol·6.1 Terra·Luna를 확인했습니다. 11월 24일 공개된 0.172.0이 최신 정식 CLI입니다. 릴리스 원문은 연결된 앱의 개별 도구마다 승인 검토자를 지정할 수 있다고 설명합니다. / Confirmed the same recommendation order as November 27: 6.2 Astra, 6.2 Sol, 6.1 Terra, and Luna. The November 24 release, 0.172.0, remains the latest stable CLI. The release notes document support for setting an approval reviewer per connected app tool. |
+| [Models](https://learn.chatgpt.com/docs/models) · [Tibo의 9월 12일 발표 / Tibo’s September 12 announcement](https://x.com/thsottiaux/status/2098612714704891959) | 현재 Models 문서에서 선택형 맥락 관리 실험 섹션을 찾을 수 없어 가이드의 연결과 설명을 고쳤습니다. Tibo가 비활성화를 알린 9월 12일(KST) 발표는 보존했습니다. 실험 재개 여부는 확인되지 않았습니다. / The opt-in context-management section is absent from the current Models page, so the guide’s link and description were corrected. Tibo’s September 12 (KST) announcement that the experiment was disabled is retained. Its resumption remains unconfirmed. |
+| [Pricing](https://learn.chatgpt.com/docs/pricing#speed-multipliers) · [Speed](https://learn.chatgpt.com/docs/agent-configuration/speed) · [Business models and limits](https://help.openai.com/en/articles/12003714-chatgpt-business-models-and-limits) | 11월 27일에 기록한 6.2 Fast 2배와 Ultrafast 포함 사용량 6배는 그대로입니다. Business 주간 포함 사용량 2배 혜택은 11월 23~30일에 만든 워크스페이스에서 12월 31일까지 적용됩니다. 기존·재활성화 워크스페이스는 좌석 추가·갱신 시 일반 한도를 적용받습니다. / The 6.2 Fast multiplier of 2× and Ultrafast included-usage multiplier of 6× match November 27. The doubled Business weekly allowance runs through December 31 for workspaces created November 23–30. Existing and reactivated workspaces keep their usual allowance when adding seats or renewing. |
+| [Official use cases](https://learn.chatgpt.com/use-cases/all) · [Published catalog](https://swhan0329.github.io/codex-101/use-cases.html) | 공식 12개 컬렉션과 고유 원문 121개를 확인했습니다. 11월 27일 점검본과 비교해 본문 차이를 찾지 못했습니다. 게시 117개 중 영어 Starter prompt 110개는 공식 복사 값과 정확히 일치하고, 나머지 7개는 양쪽 모두 프롬프트가 없습니다. / Checked the 12 official collections and 121 distinct originals. Their bodies matched the November 27 review. Of 117 published cases, 110 English Starter prompts match the official copy values exactly, and seven have no prompt on either side. |
+| [Gabriel Chua](https://x.com/gabrielchua/status/2126138625020830021) | Gabriel은 11월 27일(KST) 자신이 Codex와 dot을 함께 쓰는 다섯 가지 방법을 소개하는 영상을 공유했습니다. 작성자의 사용 사례입니다. / On November 27 (KST), Gabriel shared a video introducing five ways he uses Codex and dots together. These are the author’s own examples. |
+| Review / 검수 | 맥락 관리 실험의 출처와 한영 설명을 정적 검증 후 가이드에 반영했습니다. 제품 UI·화면 변경은 보류이며, 카탈로그 전체 한영 본문과 실제 복사 동작은 확인 중입니다. 소셜 원문 확인 미완료. / Updated the guide’s bilingual context-management note and source after static checks. Product UI and visual changes remain pending. Full bilingual catalog prose and actual clipboard behavior remain under review. Social originals not fully verified. |
+
 ## 2026-11-27
 부분 확인 / Partial review
 
